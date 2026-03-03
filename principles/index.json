@@ -588,5 +588,37 @@
     "relatedCodeSections": [
       "general-cop-s10"
     ]
+  },
+  {
+    "id": "data-portability",
+    "section": 41,
+    "name": "Right to Data Portability",
+    "file": "principles/data-portability.json",
+    "insertedBy": "A1699",
+    "effectiveDate": "2025-04-01"
+  },
+  {
+    "id": "withdrawal-of-consent",
+    "section": 42,
+    "name": "Right to Withdraw Consent",
+    "file": "principles/withdrawal-of-consent.json",
+    "insertedBy": "A1699",
+    "effectiveDate": "2025-04-01"
+  },
+  {
+    "id": "erasure",
+    "section": 43,
+    "name": "Right to Erasure",
+    "file": "principles/erasure.json",
+    "insertedBy": "A1699",
+    "effectiveDate": "2025-04-01"
+  },
+  {
+    "id": "restriction",
+    "section": 44,
+    "name": "Right to Restriction of Processing",
+    "file": "principles/restriction.json",
+    "insertedBy": "A1699",
+    "effectiveDate": "2025-04-01"
   }
 ]

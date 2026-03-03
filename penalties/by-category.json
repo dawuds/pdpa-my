@@ -21,8 +21,8 @@
   },
   "processing": {
     "label": "Processing of Personal Data",
-    "description": "Offences related to unlawful or improper processing, including failure to comply with data subject rights and failure to appoint a Data Protection Officer",
-    "offenceIds": ["pen-s29", "pen-s44", "pen-dpo"],
+    "description": "Offences related to unlawful or improper processing, including failure to comply with data subject rights, failure to appoint a Data Protection Officer, failure to conduct DPIA, and failure to maintain ROPA",
+    "offenceIds": ["pen-s29", "pen-s44", "pen-dpo", "pen-s137", "pen-s138-ropa"],
     "primarySection": "s17-44",
     "maxPenalty": {
       "fine": "RM1,000,000",
@@ -55,8 +55,8 @@
     "offenceIds": ["pen-s143A-5"],
     "primarySection": "s143A",
     "maxPenalty": {
-      "fine": "RM250,000",
-      "imprisonment": "2 years"
+      "fine": "RM500,000",
+      "imprisonment": "3 years"
     }
   },
   "cross-border": {
@@ -69,11 +69,31 @@
       "imprisonment": "3 years"
     }
   },
+  "corporate-liability": {
+    "label": "Body Corporate Turnover-Based Liability",
+    "description": "Turnover-based penalties applicable to body corporates under s130 (as amended by A1699). Calculated as the greater of RM3M or 10% of annual Malaysian gross turnover.",
+    "offenceIds": ["pen-s130-turnover"],
+    "primarySection": "s130",
+    "maxPenalty": {
+      "fine": "Greater of RM3,000,000 or 10% annual Malaysian turnover",
+      "imprisonment": null
+    }
+  },
+  "officer-liability": {
+    "label": "Officer Personal Liability for Body Corporate Offences",
+    "description": "Personal liability of directors, CEOs, managers, secretaries and other officers of a body corporate where the body corporate commits a PDPA offence and the officer consented to, connived in, or whose neglect contributed to the offence (s133A, inserted by A1699).",
+    "offenceIds": ["pen-s133A"],
+    "primarySection": "s133A",
+    "maxPenalty": {
+      "fine": "Same as the underlying body corporate offence",
+      "imprisonment": "Same as the underlying body corporate offence"
+    }
+  },
   "general": {
     "label": "General and Miscellaneous Penalties",
-    "description": "General penalty provisions, continuing offence provisions, and body corporate liability provisions that apply across all categories of offences",
-    "offenceIds": ["pen-s136", "pen-s138", "pen-s133A"],
-    "primarySection": "s133A-138",
+    "description": "General penalty provisions and continuing offence provisions that apply across all categories of offences",
+    "offenceIds": ["pen-s136", "pen-s138"],
+    "primarySection": "s136-138",
     "maxPenalty": {
       "fine": "RM250,000 (general); RM5,000/day (continuing)",
       "imprisonment": "2 years"

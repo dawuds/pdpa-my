@@ -1,0 +1,77 @@
+{
+  "id": "withdrawal-of-consent",
+  "section": 42,
+  "name": "Right to Withdraw Consent",
+  "summary": "Section 42, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), grants data subjects an explicit right to withdraw consent to the processing of their personal data at any time without detriment. Upon withdrawal of consent, the data user must cease processing the personal data for the purposes to which consent related. This right is distinct from the general consent withdrawal mechanism in s38 (which existed pre-A1699) in that s42 creates a stronger, more specific withdrawal right with express non-detriment protections for data subjects.",
+  "obligations": [
+    {
+      "id": "withdrawal-O1",
+      "obligation": "Facilitate the withdrawal of consent by data subjects — the withdrawal mechanism must be as easy to use as the mechanism for giving consent",
+      "basis": "Section 42(1)",
+      "type": "mandatory"
+    },
+    {
+      "id": "withdrawal-O2",
+      "obligation": "Upon receiving a consent withdrawal, cease processing the personal data for the purposes to which consent related as soon as practicable",
+      "basis": "Section 42(2)",
+      "type": "mandatory"
+    },
+    {
+      "id": "withdrawal-O3",
+      "obligation": "Inform data subjects of the consequences of withdrawal before they withdraw consent, but the withdrawal must not be conditional on those consequences being acceptable to the data user",
+      "basis": "Section 42",
+      "type": "mandatory"
+    },
+    {
+      "id": "withdrawal-O4",
+      "obligation": "Do not penalise, disadvantage, or treat the data subject detrimentally solely because they exercised the right to withdraw consent",
+      "basis": "Section 42 (non-detriment principle)",
+      "type": "mandatory"
+    },
+    {
+      "id": "withdrawal-O5",
+      "obligation": "Where processing was based on consent and consent is withdrawn, assess whether another lawful basis exists for continued processing; if not, delete or anonymise the personal data unless a statutory retention obligation applies",
+      "basis": "Section 42(2); Retention Principle (s11)",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "withdrawal-X1",
+      "exception": "Withdrawal of consent does not affect the lawfulness of processing carried out on the basis of consent before its withdrawal",
+      "basis": "Section 42; general PDPA consent framework",
+      "conditions": "Processing carried out while consent was validly in force remains lawful; only future processing must cease"
+    },
+    {
+      "id": "withdrawal-X2",
+      "exception": "Where another lawful basis (other than consent) applies, the data user may continue to process the personal data after consent withdrawal on that alternative basis",
+      "basis": "Section 6(2); Section 42",
+      "conditions": "The alternative lawful basis must genuinely apply and must have been identified prior to or at the time of consent withdrawal; it cannot be retrospectively fabricated to avoid compliance with a withdrawal"
+    },
+    {
+      "id": "withdrawal-X3",
+      "exception": "A data user may retain personal data after consent withdrawal where retention is required by a legal obligation (e.g., tax records, employment records under employment law)",
+      "basis": "Section 11 (Retention Principle); applicable written laws",
+      "conditions": "Retention must be limited to the period required by the specific legal obligation; the data must be access-restricted during the retention period and not used for any purpose other than satisfying the legal obligation"
+    }
+  ],
+  "practicalGuidance": "Data users should implement a clear and prominent withdrawal mechanism in all consent-based processing flows. Where consent is collected online (e.g., marketing emails, cookies, app permissions), a one-click or similarly simple withdrawal mechanism must be available. Data users should maintain a consent register that records the date and method of consent, and updates the record upon withdrawal. Upon receiving a withdrawal, the data user should trigger an automated process to: (1) cease all processing for which consent was the sole basis; (2) flag the record as consent-withdrawn; (3) assess whether an alternative lawful basis applies; (4) if no alternative basis, schedule deletion or anonymisation within a reasonable period consistent with the Retention Principle. Note: s42 creates a distinct, stronger withdrawal right compared to the pre-A1699 s38 withdrawal right. Data users should review their consent management systems to ensure s42 compliance is implemented as a dedicated capability.",
+  "commonViolations": [
+    "Making the withdrawal mechanism harder to use than the consent mechanism (e.g., requiring a written letter to withdraw consent given by clicking a checkbox)",
+    "Continuing to process personal data after consent withdrawal on the basis that 'the system hasn't been updated yet'",
+    "Treating consent withdrawal as grounds to withdraw a service that does not require the personal data in question",
+    "Failing to inform data subjects of their withdrawal right in the data protection notice",
+    "Not maintaining records of consent withdrawal, making it impossible to demonstrate compliance"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-consent-2023"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s5"
+  ],
+  "insertedBy": "A1699",
+  "effectiveDate": "2025-04-01"
+}

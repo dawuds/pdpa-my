@@ -17,7 +17,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "principles",
     "compoundable": true,
@@ -43,7 +43,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "registration",
     "compoundable": true,
@@ -88,7 +88,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "cross-border",
     "compoundable": true,
@@ -133,7 +133,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "enforcement",
     "compoundable": false,
@@ -159,7 +159,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "disclosure",
     "compoundable": true,
@@ -185,7 +185,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "enforcement",
     "compoundable": false,
@@ -197,7 +197,7 @@
     "id": "pen-s133A",
     "section": "s133A",
     "part": "X",
-    "offence": "Body Corporate Liability for Failure to Comply",
+    "offence": "Officer Personal Liability for Body Corporate Offences",
     "description": "Where a body corporate commits an offence under the Act, any director, chief executive officer, chief operating officer, manager, secretary or other similar officer, or any person purporting to act in that capacity, who consented to, connived in, or whose neglect contributed to the commission of the offence, is also guilty of the offence",
     "originalPenalty": {
       "fine": "Same penalty as body corporate",
@@ -205,11 +205,11 @@
       "or_both": true
     },
     "amendedPenalty": null,
-    "category": "general",
+    "category": "officer-liability",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "This provision ensures individual accountability within organizations. Directors and senior officers cannot shelter behind corporate structures where they are responsible for or aware of PDPA violations. Introduced by A1699."
+    "notes": "This is personal liability of directors and senior officers — distinct from the body corporate's own liability under s130 (turnover penalty). Officers cannot shelter behind corporate structures where they consented to, connived in, or whose neglect contributed to PDPA violations. Introduced by A1699."
   },
   {
     "id": "pen-s134",
@@ -229,7 +229,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "enforcement",
     "compoundable": false,
@@ -250,7 +250,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "disclosure",
     "compoundable": false,
@@ -266,12 +266,12 @@
     "description": "Failure by a data user to notify the Commissioner of a notifiable data breach within the prescribed period (72 hours), or failure to notify affected data subjects where required, or failure to maintain records of data breaches as required by the data breach notification guidelines",
     "originalPenalty": null,
     "amendedPenalty": {
-      "fine": "RM250,000",
-      "fineNumeric": 250000,
-      "imprisonment": "2 years",
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "data-breach",
     "compoundable": true,
@@ -292,7 +292,7 @@
       "imprisonment": "2 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "processing",
     "compoundable": true,
@@ -318,7 +318,7 @@
       "imprisonment": "2 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "processing",
     "compoundable": true,
@@ -344,7 +344,7 @@
       "imprisonment": "3 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "processing",
     "compoundable": true,
@@ -370,7 +370,7 @@
       "imprisonment": "2 years",
       "or_both": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "general",
     "compoundable": true,
@@ -398,13 +398,83 @@
       "or_both": false,
       "perDay": true,
       "amendedBy": "A1699",
-      "effectiveDate": "2025-06-01"
+      "effectiveDate": "2025-04-01"
     },
     "category": "general",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "The continuing offence provision is critical for compelling compliance. Where a data user refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly."
+    "notes": "The continuing offence provision is critical for compelling compliance. Where a data user refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly.",
+    "note": "If Act A1699 renumbered the original Continuing Offence provision to s139 or similar, the section reference in this entry should be updated accordingly. Verify against the gazetted amended Act text."
+  },
+  {
+    "id": "pen-s130-turnover",
+    "section": "s130",
+    "part": "X",
+    "offence": "Body Corporate Contravention — Turnover-Based Penalty",
+    "description": "Where a body corporate commits an offence under the Act, the body corporate is liable to a penalty calculated on the basis of annual Malaysian turnover. This is the primary corporate liability provision and applies in addition to any fine imposed on individual officers under s133A.",
+    "originalPenalty": null,
+    "amendedPenalty": {
+      "fine": "Greater of RM3,000,000 or 10% of annual gross turnover in Malaysia",
+      "fineNumeric": 3000000,
+      "imprisonment": null,
+      "or_both": false,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-04-01",
+      "notes": "Turnover-based penalty — the RM3M floor ensures a minimum sanction even for smaller organisations"
+    },
+    "category": "corporate-liability",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "Inserted by A1699. Applies to body corporates only. Individual officers may additionally be liable under s133A. The 10% annual Malaysian turnover cap applies only to Malaysian-derived revenue, not global turnover."
+  },
+  {
+    "id": "pen-s137",
+    "section": "s137",
+    "part": "X",
+    "offence": "Failure to Conduct Data Protection Impact Assessment",
+    "description": "Failure by a data user to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities as required under s137. High-risk processing includes large-scale processing of sensitive personal data, systematic monitoring of publicly accessible areas, and automated decision-making with significant effects on data subjects.",
+    "originalPenalty": null,
+    "amendedPenalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-04-01",
+      "transitionPeriod": "18 months from commencement (i.e., by 1 October 2026)",
+      "notes": "New section inserted by A1699"
+    },
+    "category": "processing",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "New obligation inserted by A1699. High-risk processing includes large-scale processing of sensitive data, systematic monitoring, and automated decision-making with significant effects on data subjects. 18-month transition period applies."
+  },
+  {
+    "id": "pen-s138-ropa",
+    "section": "s138",
+    "part": "X",
+    "offence": "Failure to Maintain Records of Processing Activities (ROPA)",
+    "description": "Failure by a data user to maintain Records of Processing Activities as required for prescribed classes of data users. ROPA must record identity and contact details of the data user, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures.",
+    "originalPenalty": null,
+    "amendedPenalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-04-01",
+      "transitionPeriod": "12 months from commencement (i.e., by 1 April 2026)",
+      "complianceDeadline": "2026-04-01",
+      "notes": "New section inserted by A1699"
+    },
+    "category": "processing",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "ROPA must record: identity and contact details of data user, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures."
   },
   {
     "id": "pen-s109",

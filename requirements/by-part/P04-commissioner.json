@@ -1,1 +1,241 @@
-{}
+{
+  "s101_to_s109": {
+    "sectionId": "s101-s109",
+    "part": "VIII",
+    "title": "Cooperation with Commissioner Inspections and Investigations (Part VIII)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Part VIII of the PDPA (sections 101–109) confers on the Commissioner broad powers of inspection, complaint handling, and investigation. Data users are subject to corresponding duties to cooperate with the Commissioner's exercise of these powers, including duties to produce documents, facilitate access to premises, and respond to questions from authorised officers. Failure to cooperate is an offence under s131 (obstruction) and s109 (failure to cooperate with investigation), both carrying significant penalties.",
+      "requirements": [
+        {
+          "id": "s101-L1",
+          "requirement": "Cooperate fully with any inspection or audit conducted by the Commissioner or an authorised officer under Part VIII, including facilitating access to premises, systems, and records as required",
+          "rationale": "Section 101 empowers the Commissioner to conduct inspections; s131 makes obstruction an offence; cooperation is not optional",
+          "owner": "DPO / Legal Counsel / Management",
+          "frequency": "On Commissioner inspection; typically with reasonable advance notice except in urgent circumstances",
+          "priority": "Critical",
+          "source": "s101",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s101-L2",
+          "requirement": "Upon receipt of a complaint referral from the Commissioner, acknowledge receipt and cooperate with the Commissioner's complaint investigation, providing all requested information and documentation within the timeframes specified",
+          "rationale": "Section 103 requires the Commissioner to investigate complaints; the data user must cooperate with this process; failure to respond to complaint referrals is likely to result in an adverse finding",
+          "owner": "DPO / Legal Counsel",
+          "frequency": "On complaint referral",
+          "priority": "Critical",
+          "source": "s103",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s101-L3",
+          "requirement": "Produce all documents, records, and data requested by the Commissioner or an authorised officer in the course of an investigation under s107–s109, within the specified timeframe and in the requested format",
+          "rationale": "Section 107 empowers the Commissioner to require production of documents; failure to produce is an offence under s109; legal professional privilege may be claimed for legitimately privileged documents",
+          "owner": "DPO / Legal Counsel",
+          "frequency": "On production request",
+          "priority": "Critical",
+          "source": "s107",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s101-L4",
+          "requirement": "Where persons are required to attend for examination under the Commissioner's investigation powers, ensure the relevant persons attend, are truthful, and do not obstruct the examination process",
+          "rationale": "Section 108 empowers the Commissioner to examine persons under oath or affirmation; providing false information is an offence under s134; obstruction is an offence under s131",
+          "owner": "DPO / Legal Counsel / HR",
+          "frequency": "On examination notice",
+          "priority": "Critical",
+          "source": "s108",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical infrastructure must support the rapid retrieval and production of personal data processing records, audit logs, and system configurations required during Commissioner inspections and investigations.",
+      "requirements": [
+        {
+          "id": "s101-T1",
+          "requirement": "Maintain an up-to-date data inventory and ROPA that can be produced to the Commissioner within 5 working days of a request during an inspection or investigation",
+          "rationale": "The Commissioner's inspection powers under Part VIII are only effective if data users can produce accurate records; an incomplete or outdated inventory will impede the inspection and may be treated as non-cooperation",
+          "owner": "DPO / IT",
+          "frequency": "Maintained continuously; producible within 5 working days",
+          "priority": "High",
+          "source": "s101",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s101-T2",
+          "requirement": "Maintain audit logs of access to and processing of personal data that can be extracted and provided to the Commissioner on request as part of an investigation",
+          "rationale": "Audit logs provide the Commissioner with the evidence needed to assess whether processing has complied with the Act; logs must be retained for a period sufficient to cover the Commissioner's investigative timeframes",
+          "owner": "IT Security / DPO",
+          "frequency": "Logs maintained continuously; retained for minimum 3 years",
+          "priority": "High",
+          "source": "s101",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Data users must designate a point of contact for Commissioner interactions, establish an internal inspection response process, and brief senior management on Commissioner powers and the organisation's cooperation obligations.",
+      "requirements": [
+        {
+          "id": "s101-G1",
+          "requirement": "Designate the DPO as the primary point of contact for all Commissioner communications, inspections, and investigations; ensure the DPO has authority to commit the organisation to compliance actions and to coordinate the organisation's response",
+          "rationale": "A single designated contact ensures that Commissioner communications are not lost or fragmented across the organisation; the DPO's role under s129B includes Commissioner cooperation",
+          "owner": "Board / DPO",
+          "frequency": "Designated at DPO appointment; reviewed annually",
+          "priority": "Critical",
+          "source": "s129B",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s101-G2",
+          "requirement": "Establish a documented Inspection Response Procedure covering: (a) Commissioner notification receipt and acknowledgement; (b) internal escalation to DPO, Legal, and Management; (c) document preservation and legal hold procedures; (d) staff briefing on cooperation obligations; (e) record-keeping of all Commissioner interactions",
+          "rationale": "An inspection by the Commissioner is a significant regulatory event; an unprepared response risks non-cooperation findings, delays, and reputational damage",
+          "owner": "DPO / Legal Counsel",
+          "frequency": "Established; reviewed annually and after each Commissioner interaction",
+          "priority": "High",
+          "source": "s101",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    }
+  },
+  "s133": {
+    "sectionId": "s133",
+    "part": "X",
+    "title": "Compliance with Enforcement Notices (s133)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 133 requires data users to comply with any enforcement notice issued by the Commissioner. An enforcement notice sets out specific actions the data user must take or cease, within a specified timeframe, to remedy a contravention of the Act. Failure to comply with an enforcement notice is a criminal offence under s133 carrying up to RM1,000,000 fine and/or 3 years imprisonment (as amended by A1699).",
+      "requirements": [
+        {
+          "id": "s133-L1",
+          "requirement": "Upon receipt of an enforcement notice from the Commissioner, immediately escalate to DPO, Legal Counsel, and senior management; assess the notice requirements and formulate a compliance plan within 7 days",
+          "rationale": "Enforcement notices specify remediation timeframes that begin on receipt; delayed escalation risks non-compliance with the notice deadline",
+          "owner": "DPO / Legal Counsel / Management",
+          "frequency": "On receipt of enforcement notice",
+          "priority": "Critical",
+          "source": "s133",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s133-L2",
+          "requirement": "Comply with all requirements specified in the enforcement notice within the timeframe stated; document all remediation actions taken and maintain evidence of compliance",
+          "rationale": "Full and timely compliance with enforcement notices is mandatory; partial or late compliance is also an offence and may result in further enforcement action including prosecution",
+          "owner": "DPO / Legal Counsel / Relevant Business Units",
+          "frequency": "Per enforcement notice; within specified timeframe",
+          "priority": "Critical",
+          "source": "s133",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s133-L3",
+          "requirement": "Where the data user disputes the enforcement notice, seek legal advice immediately and consider whether to appeal; an appeal does not automatically stay the enforcement notice unless the Commissioner or court orders otherwise",
+          "rationale": "Enforcement notices remain binding pending appeal unless a stay is granted; data users who ignore enforcement notices while pursuing an appeal risk offence liability",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "On enforcement notice receipt if dispute arises",
+          "priority": "Critical",
+          "source": "s133",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Enforcement notice compliance must be tracked and reported at board level. The remediation plan must be agreed by senior management and its implementation monitored by the DPO.",
+      "requirements": [
+        {
+          "id": "s133-G1",
+          "requirement": "Report receipt of any enforcement notice to the Board of Directors or equivalent governing body within 5 working days; provide regular compliance status updates until the notice requirements are fulfilled",
+          "rationale": "Enforcement notices represent a significant regulatory risk requiring board-level oversight; board reporting ensures that adequate resources are allocated to compliance",
+          "owner": "DPO / Legal Counsel / Company Secretary",
+          "frequency": "On notice receipt; status updates as required",
+          "priority": "Critical",
+          "source": "s133",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    }
+  },
+  "s135": {
+    "sectionId": "s135",
+    "part": "X",
+    "title": "Commissioner Enforcement Powers and Data User Response Obligations (s135)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 135 confers on the Commissioner powers to issue enforcement directions, require remediation of non-compliant processing, and take enforcement action against data users. Data users must respond to Commissioner enforcement powers by ceasing unlawful processing, implementing required safeguards, and cooperating with enforcement procedures. The Commissioner may require a data user to cease processing, correct or destroy data, or impose conditions on processing. Failure to comply with Commissioner enforcement actions constitutes an offence.",
+      "requirements": [
+        {
+          "id": "s135-L1",
+          "requirement": "Upon receiving a direction from the Commissioner under s135 to cease, modify, or restrict processing activities, comply with the direction promptly and within any timeframe specified",
+          "rationale": "Commissioner enforcement directions under s135 are legally binding; non-compliance is an offence and may trigger escalated enforcement including criminal prosecution",
+          "owner": "DPO / Legal Counsel / Management",
+          "frequency": "On Commissioner direction",
+          "priority": "Critical",
+          "source": "s135",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s135-L2",
+          "requirement": "Where required by the Commissioner, implement specific technical, organisational, or procedural safeguards as a condition of continuing processing activities",
+          "rationale": "The Commissioner may impose conditions on processing as a proportionate enforcement measure; compliance with conditions is mandatory and must be evidenced and reported back to the Commissioner",
+          "owner": "DPO / IT / Legal",
+          "frequency": "On Commissioner direction; monitored ongoing",
+          "priority": "Critical",
+          "source": "s135",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    }
+  },
+  "s47_to_s60": {
+    "sectionId": "s47-s60",
+    "part": "IV",
+    "title": "Commissioner Appointment, Functions, and Powers — Reference (Part IV)",
+    "obligationType": "informational",
+    "legal": {
+      "summary": "Part IV of the PDPA (sections 47–60) establishes the Personal Data Protection Commissioner, sets out the Commissioner's functions and powers, and provides for the appointment of Deputy Commissioners and authorised officers. This Part does not directly impose obligations on data users but provides the legal basis for the Commissioner's regulatory authority. Data users should be familiar with these provisions to understand the scope of the Commissioner's investigative and enforcement powers.",
+      "requirements": [
+        {
+          "id": "s47-R1",
+          "requirement": "Familiarise senior management and the DPO with the Commissioner's functions under s48 (including registration, enforcement, promotion, and guidance), powers under s49 (including inspection, investigation, and enforcement direction), and authorised officer powers under s52",
+          "rationale": "Understanding the Commissioner's authority enables data users to respond appropriately to regulatory engagement; organisations that misunderstand the scope of Commissioner powers may inadvertently obstruct lawful regulatory activity",
+          "owner": "DPO / Legal Counsel / Management",
+          "frequency": "Induction; updated when Commissioner powers change",
+          "priority": "Medium",
+          "source": "s47-s60",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    }
+  }
+}

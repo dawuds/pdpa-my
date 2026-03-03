@@ -1,0 +1,71 @@
+{
+  "id": "data-portability",
+  "section": 41,
+  "name": "Right to Data Portability",
+  "summary": "Section 41, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), grants data subjects the right to receive their personal data in a structured, commonly used, and machine-readable format, and to transmit that data to another data user. The right applies where processing is based on consent or contract and is carried out by automated means. This right enables data subjects to move, copy, or transfer personal data from one data user to another, promoting competition and data subject autonomy.",
+  "obligations": [
+    {
+      "id": "portability-O1",
+      "obligation": "Upon request by a data subject, provide the data subject's personal data in a structured, commonly used, and machine-readable format (e.g., JSON, CSV, XML)",
+      "basis": "Section 41(1)",
+      "type": "mandatory"
+    },
+    {
+      "id": "portability-O2",
+      "obligation": "Where technically feasible and upon data subject request, transmit the personal data directly to another data user nominated by the data subject",
+      "basis": "Section 41(2)",
+      "type": "mandatory"
+    },
+    {
+      "id": "portability-O3",
+      "obligation": "Respond to data portability requests within the prescribed period; do not charge excessive fees that would discourage data subjects from exercising the right",
+      "basis": "Section 41; subsidiary legislation pending",
+      "type": "mandatory"
+    },
+    {
+      "id": "portability-O4",
+      "obligation": "Assess whether portability applies to the specific data requested — the right applies only to data provided by the data subject and processed by automated means on consent or contractual grounds",
+      "basis": "Section 41(1)",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "portability-X1",
+      "exception": "The right to data portability does not apply to processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority",
+      "basis": "Section 41; general PDPA exception framework",
+      "conditions": "The data user must demonstrate that the processing falls within public interest or official authority grounds; this exception is narrow and cannot be used as a blanket shield"
+    },
+    {
+      "id": "portability-X2",
+      "exception": "The right does not apply where the data is not processed by automated means (i.e., purely manual, paper-based processing)",
+      "basis": "Section 41(1)",
+      "conditions": "If any automated processing of the data occurs, the right likely applies even if records are also maintained manually"
+    },
+    {
+      "id": "portability-X3",
+      "exception": "The right does not adversely affect the rights of third parties — data users need not include personal data of third parties in a portability response",
+      "basis": "Section 41; general data subject rights framework",
+      "conditions": "Where data is inextricably mixed with third-party personal data, the data user should redact third-party data or provide only the data subject's own data"
+    }
+  ],
+  "practicalGuidance": "Data users should begin building technical infrastructure to support data portability before subsidiary legislation prescribes the exact format and timeframes. Common formats include JSON and CSV for structured data, and PDF for document-based data. Data users should map the personal data they hold for each data subject and identify which data sets are subject to portability (i.e., provided by the data subject, processed by automated means, on consent or contract grounds). Data portability requests should be handled through the same rights fulfilment process as access requests. Where the data user is unable to directly transmit to another data user, it should provide the data in a downloadable format. Note: subsidiary legislation under s41 has not yet been gazetted as at April 2025 — monitor the JPDP website for prescribed formats and timeframes.",
+  "commonViolations": [
+    "Refusing portability requests on the basis that the right is 'not yet implemented' without a documented legitimate ground",
+    "Providing data in non-machine-readable formats (e.g., scanned PDFs) when structured formats are available",
+    "Failing to distinguish between data subject-provided data (subject to portability) and inferred or derived data (not subject to portability)",
+    "Charging disproportionate fees that effectively deny the right",
+    "Failing to implement technical capability to extract data in a structured format prior to subsidiary legislation commencement"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-data-portability-2024"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s10"
+  ],
+  "insertedBy": "A1699",
+  "effectiveDate": "2025-04-01"
+}

@@ -84,5 +84,6 @@
   ],
   "relatedCodeSections": [
     "general-cop-s5"
-  ]
+  ],
+  "ageThresholdNote": "s40 of the PDPA (as amended by A1699) defines a child as a person under 18 years of age. The General Code of Practice 2022 references age 13 in the context of simplified notice requirements for online services. These are separate thresholds serving different purposes — s40 sets the general child definition for purposes of the Act (including consent by or on behalf of minors), while the General Code provides operational guidance for specific notice formats applicable to online services targeting younger users. Organisations collecting personal data from minors should apply both: the s40 child definition for determining when parental consent is required, and the General Code age-13 notice simplification for online service notice format decisions."
 }

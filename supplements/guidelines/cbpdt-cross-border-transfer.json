@@ -28,7 +28,8 @@
         "Adequacy determinations can be revoked — data users must monitor the list for changes",
         "Transfer to a non-listed country requires an alternative transfer mechanism",
         "Current adequate countries include: UK, EU/EEA member states (post-Brexit UK adequacy), Japan, South Korea, New Zealand, Canada (PIPEDA-covered organizations)"
-      ]
+      ],
+      "adequacyListCaveat": "The list of adequate countries indicated in this guideline reflects the Commissioner's published guidance at the date of issue. It has not been independently verified against a current Malaysian Gazette adequacy order. Consult the PDPC official website for the authoritative current list, which may differ from this guideline."
     },
     {
       "id": "cbpdt-3",

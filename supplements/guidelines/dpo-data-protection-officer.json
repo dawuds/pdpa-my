@@ -17,7 +17,8 @@
         "Data users meeting thresholds must appoint a DPO before the effective date or within 6 months of meeting a threshold for the first time",
         "The Commissioner may at any time direct a data user to appoint a DPO",
         "Voluntary DPO appointments must meet the same standards as mandatory appointments"
-      ]
+      ],
+      "mandatoryAppointmentStatus": "The mandatory appointment criteria set out in this guideline are based on the Commissioner's 2023 DPO Guideline and represent the PDPC's current interpretation pending formal subsidiary legislation under s129B(2) of the PDPA (as amended by A1699). These criteria are not yet codified in subsidiary legislation and may be revised."
     },
     {
       "id": "dpo-2",

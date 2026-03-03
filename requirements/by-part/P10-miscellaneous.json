@@ -305,6 +305,205 @@
       ]
     }
   },
+  "s137": {
+    "sectionId": "s137",
+    "part": "X",
+    "title": "Data Protection Impact Assessment — DPIA (2024 Amendment)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 137, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), requires data users to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities. High-risk processing includes: large-scale processing of sensitive personal data; systematic monitoring of publicly accessible areas on a large scale; automated decision-making with significant effects on data subjects; processing personal data of vulnerable groups; and processing involving new technologies with uncertain privacy implications. An 18-month transition period applies (compliance required by 1 October 2026). Failure to conduct a required DPIA is an offence under s137 carrying a fine of up to RM500,000 and/or 3 years imprisonment.",
+      "requirements": [
+        {
+          "id": "s137-L1",
+          "requirement": "Before commencing any high-risk processing activity, conduct a documented DPIA assessing the necessity and proportionality of the processing, the risks to data subject rights, and the measures to mitigate those risks",
+          "rationale": "Section 137 makes DPIA mandatory for high-risk processing; conducting a DPIA after processing has commenced does not satisfy the pre-processing requirement",
+          "owner": "DPO / Project Owner",
+          "frequency": "Before each new high-risk processing activity; updated on material changes",
+          "priority": "Critical",
+          "source": "s137",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s137-L2",
+          "requirement": "Where the DPIA identifies high residual risks that cannot be mitigated, consult the Commissioner before commencing the processing activity",
+          "rationale": "Prior consultation with the Commissioner is required where DPIA reveals risks that cannot be mitigated — this prevents high-risk processing that the regulatory framework cannot adequately address from proceeding unchecked",
+          "owner": "DPO / Legal",
+          "frequency": "Per high-residual-risk DPIA",
+          "priority": "Critical",
+          "source": "s137",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s137-L3",
+          "requirement": "Classify each processing activity against DPIA trigger criteria: (a) large-scale sensitive data processing; (b) systematic monitoring of public areas; (c) automated decision-making with significant effects; (d) processing of vulnerable groups; (e) new technologies with uncertain privacy implications",
+          "rationale": "Accurate classification determines DPIA necessity; over-broad or under-broad application both create compliance risk — under-application risks offence liability, over-application creates unnecessary compliance burden",
+          "owner": "DPO / Privacy Team",
+          "frequency": "Per new processing activity; annual review of existing activities",
+          "priority": "High",
+          "source": "s137",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "technical": {
+      "summary": "DPIA processes must be embedded in project governance, system design, and change management workflows to ensure DPIAs are triggered automatically for high-risk processing and are completed before processing commences.",
+      "requirements": [
+        {
+          "id": "s137-T1",
+          "requirement": "Implement a DPIA screening tool or questionnaire in the project initiation process that automatically identifies processing activities requiring a DPIA and routes them to the DPO for assessment",
+          "rationale": "Automated DPIA screening prevents high-risk projects from proceeding without DPIAs due to oversight or lack of awareness; the screening must be part of every new system, process, or vendor onboarding",
+          "owner": "DPO / IT / Project Management Office",
+          "frequency": "Per new project or material system change",
+          "priority": "High",
+          "source": "s137",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s137-T2",
+          "requirement": "Maintain a DPIA register documenting all DPIAs conducted, their findings, the mitigation measures implemented, residual risk assessments, and Commissioner consultation outcomes where applicable; retain DPIA records for at least 5 years",
+          "rationale": "The DPIA register is a key accountability document; it enables the data user to demonstrate compliance with s137 and provides the Commissioner with the evidence needed during inspections",
+          "owner": "DPO",
+          "frequency": "Maintained continuously; reviewed annually",
+          "priority": "High",
+          "source": "s137",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "governance": {
+      "summary": "DPIA governance requires board-level endorsement of the DPIA policy, DPO involvement from the earliest project stage, and clear escalation paths for high residual risk findings.",
+      "requirements": [
+        {
+          "id": "s137-G1",
+          "requirement": "Adopt and publish a DPIA Policy approved by senior management, defining the trigger criteria, DPIA methodology, DPO role, escalation process for high residual risk, and Commissioner consultation procedure",
+          "rationale": "A documented DPIA Policy ensures consistent application across the organisation and provides evidence of the data user's commitment to privacy by design",
+          "owner": "DPO / Board",
+          "frequency": "Adopted; reviewed annually",
+          "priority": "High",
+          "source": "s137",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "transitionNote": "18-month transition period from A1699 commencement (2025-04-01). Compliance deadline: 1 October 2026. Data users should begin DPIA capacity building immediately."
+  },
+  "s138": {
+    "sectionId": "s138",
+    "part": "X",
+    "title": "Records of Processing Activities — ROPA (2024 Amendment)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 138, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), requires prescribed classes of data users to maintain Records of Processing Activities (ROPA). ROPA must document: the identity and contact details of the data user and DPO; the purposes of processing; the categories of data subjects and personal data; the recipients of personal data; cross-border transfer details; retention periods; and security measures. A 12-month transition period applies — compliance deadline is 1 April 2026. Failure to maintain ROPA is an offence carrying a fine of up to RM300,000 and/or 2 years imprisonment. Note: if Act A1699 renumbered the Continuing Offence provision (formerly s138) to s139, the section reference for ROPA in this entry should be verified against the gazetted amended Act text.",
+      "requirements": [
+        {
+          "id": "s138-L1",
+          "requirement": "Maintain a Record of Processing Activities (ROPA) documenting all personal data processing activities carried out by or on behalf of the data user",
+          "rationale": "ROPA is the foundational accountability document under the PDPA; it enables the data user to demonstrate compliance with the Act and provides the Commissioner with a comprehensive view of the data user's processing activities during inspections",
+          "owner": "DPO",
+          "frequency": "Maintained continuously; updated within 30 days of any material change",
+          "priority": "Critical",
+          "source": "s138",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s138-L2",
+          "requirement": "Ensure ROPA contains for each processing activity: (a) identity and contact details of data user and DPO; (b) purposes of processing; (c) categories of data subjects; (d) categories of personal data; (e) recipients and processors; (f) cross-border transfer details and mechanisms; (g) retention periods; (h) description of security measures",
+          "rationale": "These are the prescribed ROPA fields under s138; an incomplete ROPA does not satisfy the statutory obligation and may attract a penalty",
+          "owner": "DPO / Legal / IT",
+          "frequency": "Per processing activity entry; reviewed annually",
+          "priority": "Critical",
+          "source": "s138",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s138-L3",
+          "requirement": "Make the ROPA available to the Commissioner on request; the ROPA must be in writing (paper or electronic) and must be producible within 5 working days of a Commissioner request",
+          "rationale": "The ROPA is a key regulatory document; failure to produce it promptly during an inspection is likely to be treated as an aggravating factor in any enforcement action",
+          "owner": "DPO",
+          "frequency": "On Commissioner request",
+          "priority": "Critical",
+          "source": "s138",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "technical": {
+      "summary": "ROPA must be maintained in a format that is accessible, searchable, and updatable. Purpose-built ROPA tools or structured spreadsheets are acceptable; the format must enable production to the Commissioner within 5 working days.",
+      "requirements": [
+        {
+          "id": "s138-T1",
+          "requirement": "Implement a ROPA system (purpose-built tool or structured spreadsheet) that enables the data user to record, update, and produce ROPA entries for all processing activities; the system must support version control and audit logging",
+          "rationale": "A structured ROPA system prevents omissions and enables accurate, timely production to the Commissioner; unstructured or undocumented ROPA is a compliance risk",
+          "owner": "DPO / IT",
+          "frequency": "Implemented; updated on material changes",
+          "priority": "High",
+          "source": "s138",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "governance": {
+      "summary": "ROPA governance requires a designated ROPA owner (typically the DPO), a defined update process for new or changed processing activities, and annual ROPA review.",
+      "requirements": [
+        {
+          "id": "s138-G1",
+          "requirement": "Designate the DPO as ROPA owner; require all business units to notify the DPO of new or changed processing activities within 14 days of commencement; conduct an annual ROPA accuracy review",
+          "rationale": "ROPA accuracy depends on timely information flows from the business to the DPO; without a formal notification process, ROPA will quickly become outdated and non-compliant",
+          "owner": "DPO / All Business Units",
+          "frequency": "Notification: per new/changed activity. Review: annual",
+          "priority": "High",
+          "source": "s138",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    },
+    "transitionNote": "12-month transition period from A1699 commencement (2025-04-01). Compliance deadline: 1 April 2026. Data users should begin ROPA population immediately."
+  },
+  "s129B_s136_dpo_note": {
+    "sectionId": "s129B_s136_note",
+    "part": "X",
+    "title": "DPO Penalty Provision — s129B(5) vs s136 Clarification Note",
+    "obligationType": "informational",
+    "legal": {
+      "summary": "The criminal penalty for failure to appoint a DPO is set out in s129B(5) of the PDPA (as inserted by A1699). Some references in legislative tracking materials refer to 's136 DPO' — this likely refers to the detailed DPO obligation provisions contained within s136 of the amended Act (dealing with the substantive DPO duties), which is separate from the criminal penalty for non-appointment in s129B(5). There is a potential Act numbering ambiguity: s136 in the pre-A1699 Act contained the General Penalty provision. If A1699 inserted a new s136 for DPO obligations, the original General Penalty provision may have been renumbered. Data users and legal practitioners should verify the section numbering against the gazetted amended Act text (Act A1699 as published in the Federal Gazette) rather than relying solely on secondary sources. The penalty entry 'pen-dpo' in this repository correctly references s129B(5) as the source of the criminal penalty.",
+      "requirements": [
+        {
+          "id": "dpo-note-1",
+          "requirement": "Verify DPO penalty section references against the gazetted Act A1699 text; do not rely solely on amendment trackers or secondary legislative summaries for section numbers",
+          "rationale": "Amendment acts can cause section renumbering; discrepancies between secondary sources and the gazetted Act text must be resolved in favour of the gazetted text",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "One-time verification; update if new gazetted version is published",
+          "priority": "Medium",
+          "source": "s129B",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    }
+  },
   "s143A": {
     "sectionId": "s143A",
     "part": "X",

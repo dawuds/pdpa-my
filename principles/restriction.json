@@ -1,0 +1,83 @@
+{
+  "id": "restriction",
+  "section": 44,
+  "name": "Right to Restriction of Processing",
+  "summary": "Section 44, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), grants data subjects the right to obtain from a data user the restriction of processing of their personal data in specified circumstances. Where processing is restricted, the data user may store the personal data but must not actively process it — the data is effectively placed in a hold state. The right to restriction arises where: (a) the accuracy of the data is contested and pending verification; (b) the data subject has objected to processing and a determination is pending; (c) the processing is unlawful but the data subject opposes erasure and requests restriction instead; or (d) the data is no longer needed by the data user but the data subject requires it for legal claims.",
+  "obligations": [
+    {
+      "id": "restriction-O1",
+      "obligation": "Upon a valid restriction request, restrict processing of the personal data without undue delay — the data may be retained but must not be actively processed",
+      "basis": "Section 44(1)",
+      "type": "mandatory"
+    },
+    {
+      "id": "restriction-O2",
+      "obligation": "Implement technical measures to enforce restriction — data under restriction must be segregated or flagged so that it cannot be used for active processing (e.g., in automated decisions, marketing, analytics)",
+      "basis": "Section 44",
+      "type": "mandatory"
+    },
+    {
+      "id": "restriction-O3",
+      "obligation": "Inform the data subject before lifting any restriction, so that the data subject has the opportunity to object or seek further legal protection",
+      "basis": "Section 44",
+      "type": "mandatory"
+    },
+    {
+      "id": "restriction-O4",
+      "obligation": "During the restriction period, only process the restricted data for the following purposes: storage; with the data subject's consent; for legal claims; to protect the rights of another person; or for important public interest reasons",
+      "basis": "Section 44(2)",
+      "type": "mandatory"
+    },
+    {
+      "id": "restriction-O5",
+      "obligation": "Notify third parties (processors and other recipients) to whom the data was disclosed of the restriction, so that they also restrict processing",
+      "basis": "Section 44",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "restriction-X1",
+      "exception": "Storage of restricted data remains lawful — restriction prohibits active use, not storage",
+      "basis": "Section 44(1)",
+      "conditions": "Storage must be in a form that prevents active processing; unrestricted access to restricted data by operational systems defeats the purpose of restriction"
+    },
+    {
+      "id": "restriction-X2",
+      "exception": "Processing of restricted data is permitted with the data subject's consent even during the restriction period",
+      "basis": "Section 44(2)(a)",
+      "conditions": "Consent for processing during restriction must be separate from and additional to any pre-existing consent; it must specifically authorise the processing despite the restriction"
+    },
+    {
+      "id": "restriction-X3",
+      "exception": "Processing of restricted data is permitted for the establishment, exercise, or defence of legal claims",
+      "basis": "Section 44(2)(b)",
+      "conditions": "The legal claim must be real and specific; processing must be limited to what is necessary for the claim"
+    },
+    {
+      "id": "restriction-X4",
+      "exception": "Processing of restricted data is permitted to protect the rights of another person or for reasons of important public interest",
+      "basis": "Section 44(2)(c)",
+      "conditions": "The rights or public interest must be genuine and must outweigh the data subject's restriction right; this exception is narrow and should not be used routinely"
+    }
+  ],
+  "practicalGuidance": "Data users should implement a 'restriction flag' capability in their data management systems that enables specific records to be placed in a restriction state. During restriction, the flagged records should be: (1) excluded from all active processing workflows (analytics, marketing, automated decisions, profiling); (2) accessible to authorised staff only for the limited permitted purposes; (3) retained in their current state (no further modification or supplementation). Data users should track the duration and grounds of restriction and review whether the grounds have been resolved — for example, if a restriction was placed pending verification of accuracy, the data user should verify the accuracy, then lift the restriction or proceed with correction/erasure as appropriate. In practice, the right to restriction is often an intermediate step before erasure or correction and may be used by data subjects who wish to preserve evidence for legal proceedings while preventing the data user from further using the disputed data.",
+  "commonViolations": [
+    "Failing to implement technical controls that actually prevent active processing of restricted data",
+    "Treating a restriction request as an erasure request and deleting data that the data subject wanted to preserve for legal claims",
+    "Lifting a restriction without informing the data subject first",
+    "Allowing restricted data to continue flowing through automated processing systems due to failure to propagate the restriction flag",
+    "Failing to notify third-party processors and recipients of the restriction"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-data-subject-rights-2024"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s10"
+  ],
+  "insertedBy": "A1699",
+  "effectiveDate": "2025-04-01"
+}

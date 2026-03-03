@@ -34,7 +34,14 @@
         "The lawful basis relied upon must be identified and documented in the data user's records",
         "Where consent is the basis, it must be freely given, specific, and informed",
         "Where legitimate interests is the basis, a documented legitimate interest assessment must be completed"
-      ]
+      ],
+      "provisions": {
+        "reg3f": {
+          "text": "The processing is necessary for the purposes of the legitimate interests pursued by the data user or by any third party to which the data is disclosed, except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject.",
+          "insertedBy": "A1699",
+          "note": "This lawful basis (legitimate interests) was not in the original PDPA Regulations 2013. It was inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), effective 2025-04-01."
+        }
+      }
     },
     {
       "id": "pdpa-reg-4",
