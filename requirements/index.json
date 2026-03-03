@@ -818,10 +818,10 @@
         },
         {
           "id": "s9-ST1",
-          "requirement": "Implement unique user credentials with role-based access control; enforce MFA for systems processing 1,000+ data subjects or sensitive personal data",
-          "rationale": "Electronic Security Standard 2015, esec-2 — mandatory minimum under s9",
+          "requirement": "Implement unique user credentials with role-based access control; enforce MFA for systems processing 1,000+ data subjects or sensitive personal data; enforce automated session timeouts; conduct quarterly access reviews for high-privilege accounts",
+          "rationale": "Electronic Security Standard 2015, esec-2 — mandatory minimum under s9; quarterly cadence for high-privilege accounts and session timeouts per standard requirements",
           "owner": "IT Security / CISO",
-          "frequency": "Ongoing; annual access reviews",
+          "frequency": "Ongoing; quarterly reviews for high-privilege accounts; annual for standard accounts",
           "priority": "Critical",
           "source": "esec-2",
           "sourceType": "standard",
@@ -842,10 +842,10 @@
         },
         {
           "id": "s9-ST3",
-          "requirement": "Implement firewalls, IDS/IPS, and network segmentation for systems processing sensitive data; conduct quarterly vulnerability scans; apply critical patches within 14 days",
-          "rationale": "Electronic Security Standard 2015, esec-4 — mandatory minimum under s9",
+          "requirement": "Implement firewalls, IDS/IPS, and network segmentation for systems processing sensitive data; review firewall configuration at least annually; conduct quarterly vulnerability scans; apply critical patches within 14 days and standard patches within 30 days",
+          "rationale": "Electronic Security Standard 2015, esec-4 — mandatory minimum under s9; annual firewall review and 30-day standard patch timeline per standard requirements",
           "owner": "IT Security / Network Operations",
-          "frequency": "Quarterly scans; patches per schedule",
+          "frequency": "Annual firewall review; quarterly scans; patches per schedule",
           "priority": "Critical",
           "source": "esec-4",
           "sourceType": "standard",
@@ -866,8 +866,8 @@
         },
         {
           "id": "s9-ST5",
-          "requirement": "Conduct due diligence on cloud/third-party processors for ISO 27001 or SOC 2; include security clauses and audit rights in contracts; ensure end-of-contract data deletion",
-          "rationale": "Electronic Security Standard 2015, esec-6 — mandatory minimum under s9",
+          "requirement": "Conduct due diligence on cloud/third-party processors for ISO 27001 or SOC 2; verify and document the location of personal data in cloud environments; include security clauses and audit rights in contracts; ensure end-of-contract data deletion",
+          "rationale": "Electronic Security Standard 2015, esec-6 — mandatory minimum under s9; cloud data location verification required per standard",
           "owner": "Procurement / IT Security",
           "frequency": "At onboarding; annual review",
           "priority": "High",
@@ -890,7 +890,7 @@
         },
         {
           "id": "s9-ST7",
-          "requirement": "Secure physical records in lockable cabinets/access-controlled rooms; implement visitor management and clean desk policy",
+          "requirement": "Secure physical records in lockable cabinets/access-controlled rooms; log all access to records rooms; implement visitor management with supervised access and clean desk policy",
           "rationale": "Non-Electronic Security Standard 2015, nesec-2 — mandatory minimum under s9",
           "owner": "Facilities / Office Management",
           "frequency": "Ongoing; quarterly checks",
@@ -902,7 +902,7 @@
         },
         {
           "id": "s9-ST8",
-          "requirement": "Apply sensitivity labeling to physical documents; log all removals; use tamper-evident packaging for transport",
+          "requirement": "Apply sensitivity labeling to physical documents; log all removals; use tamper-evident packaging for transport; address prohibition of unauthorised copying in employment agreements",
           "rationale": "Non-Electronic Security Standard 2015, nesec-3 — mandatory minimum under s9",
           "owner": "Records Management",
           "frequency": "Ongoing",
@@ -914,7 +914,7 @@
         },
         {
           "id": "s9-ST9",
-          "requirement": "Dispose of physical records via cross-cut shredding (DIN 66399 P-4+) or certified destruction; retain disposal certificates for 3 years",
+          "requirement": "Dispose of physical records via cross-cut shredding (DIN 66399 P-4+) or NAID AAA-certified destruction providers; retain disposal certificates for 3 years; make disposal records available for Commissioner inspection on request",
           "rationale": "Non-Electronic Security Standard 2015, nesec-4 — mandatory minimum under s9",
           "owner": "Records Management / Facilities",
           "frequency": "Per retention schedule",
@@ -1175,8 +1175,8 @@
         },
         {
           "id": "s10-ST1",
-          "requirement": "Establish a documented retention schedule per data category specifying retention period, legal basis, trigger event, and disposal method; review annually",
-          "rationale": "Retention Standard 2015, ret-2 — mandatory minimum under s10",
+          "requirement": "Establish a documented retention schedule per data category specifying retention period, legal basis, trigger event, and disposal method; tie each retention period to a specific legitimate purpose; unlimited or indefinite retention is not permitted; review annually",
+          "rationale": "Retention Standard 2015, ret-2 — mandatory minimum under s10; explicit prohibition on unlimited retention per standard",
           "owner": "DPO / Records Management",
           "frequency": "Annual review",
           "priority": "Critical",
@@ -1187,8 +1187,8 @@
         },
         {
           "id": "s10-ST2",
-          "requirement": "Apply sector-specific retention periods (banking 6yr, healthcare 7-25yr, employment 6yr, financial 7yr) where statutory minimums apply",
-          "rationale": "Retention Standard 2015, ret-3 — sector-specific periods under s10",
+          "requirement": "Apply sector-specific retention periods (banking 6yr, healthcare 7-25yr, employment 6yr, financial 7yr) where statutory minimums apply; where PDPA purpose-based retention would be shorter than a statutory minimum, the statutory minimum prevails; document conflicts in the retention schedule; sector Codes of Practice may specify additional periods",
+          "rationale": "Retention Standard 2015, ret-3 — sector-specific periods under s10; conflict resolution principle per standard",
           "owner": "Legal / Records Management",
           "frequency": "Per retention schedule",
           "priority": "High",
@@ -1199,8 +1199,8 @@
         },
         {
           "id": "s10-ST3",
-          "requirement": "Implement secure electronic deletion using NIST 800-88 methods (cryptographic erasure or secure overwriting); maintain deletion logs with date, data description, method, and responsible officer",
-          "rationale": "Retention Standard 2015, ret-4 — secure deletion mandatory under s10",
+          "requirement": "Implement secure electronic deletion using NIST 800-88 methods (cryptographic erasure or secure overwriting); obtain deletion certification from cloud providers; securely wipe personal data from media being redeployed or decommissioned; maintain deletion logs with date, data description, method, and responsible officer",
+          "rationale": "Retention Standard 2015, ret-4 — secure deletion mandatory under s10; cloud deletion certification and media sanitisation per standard",
           "owner": "IT Operations / Records Management",
           "frequency": "Per retention schedule",
           "priority": "Critical",
@@ -1400,8 +1400,8 @@
         },
         {
           "id": "s11-ST1",
-          "requirement": "Implement data validation rules at collection points; verify identity documents where accuracy is critical; provide data subjects opportunity to review before submission",
-          "rationale": "Data Integrity Standard 2015, di-2 — accuracy at collection under s11",
+          "requirement": "Implement data validation rules at collection points; design collection forms to avoid ambiguity; verify identity documents where accuracy is critical; provide data subjects opportunity to review and confirm personal data before submission",
+          "rationale": "Data Integrity Standard 2015, di-2 — accuracy at collection under s11; form design clarity per standard",
           "owner": "IT Development / Operations",
           "frequency": "At each collection point; reviewed annually",
           "priority": "High",
@@ -1412,8 +1412,8 @@
         },
         {
           "id": "s11-ST2",
-          "requirement": "Conduct annual data quality audits; maintain change logs for minimum 12 months; implement multi-system reconciliation processes",
-          "rationale": "Data Integrity Standard 2015, di-3 — ongoing quality management under s11",
+          "requirement": "Conduct annual data quality audits; maintain change logs for minimum 12 months; implement multi-system reconciliation processes; treat unauthorised modifications to personal data as security incidents and escalate per the Incident Response Plan",
+          "rationale": "Data Integrity Standard 2015, di-3 — ongoing quality management under s11; unauthorised modifications trigger IRP per standard cross-reference to esec-5",
           "owner": "Data Governance / IT",
           "frequency": "Annual audits; ongoing monitoring",
           "priority": "High",
@@ -1436,8 +1436,8 @@
         },
         {
           "id": "s11-ST4",
-          "requirement": "Test automated processing systems for accuracy and bias; maintain audit trails for automated decisions for minimum 12 months; provide mechanism for human review",
-          "rationale": "Data Integrity Standard 2015, di-5 — automated processing integrity under s11",
+          "requirement": "Test automated processing systems for accuracy and bias; implement input data quality controls for automated processing; maintain audit trails for automated decisions for minimum 12 months; provide mechanism for human review of automated decisions",
+          "rationale": "Data Integrity Standard 2015, di-5 — automated processing integrity under s11; input quality controls per standard",
           "owner": "IT Development / Data Science",
           "frequency": "Before deployment; ongoing monitoring",
           "priority": "High",
@@ -2890,6 +2890,18 @@
           "sourceType": "guideline",
           "sector": null,
           "tightens": null
+        },
+        {
+          "id": "s143A-ST1",
+          "requirement": "Maintain a documented Incident Response Plan with escalation procedures specifically addressing notifiable data breaches under s143A; maintain a security incident register capable of reconstructing breach timelines for Commissioner reporting; test IRP annually including breach notification scenarios",
+          "rationale": "Electronic Security Standard 2015, esec-5 — incident management standard directly supports s143A breach notification; the incident register and IRP testing are prerequisites to effective breach detection and timely notification",
+          "owner": "CISO / DPO / Incident Response Team",
+          "frequency": "IRP reviewed annually; incident register maintained continuously; annual testing",
+          "priority": "Critical",
+          "source": "esec-5",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s143A-T1"
         }
       ]
     },

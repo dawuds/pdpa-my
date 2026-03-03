@@ -1,73 +1,4 @@
 {
-  "s110": {
-    "sectionId": "s110",
-    "part": "IX",
-    "title": "Enforcement Notices",
-    "obligationType": "mandatory",
-    "legal": {
-      "summary": "Section 110 empowers the Commissioner to issue enforcement notices requiring a data user to take specified steps to comply with the PDPA within a prescribed period. Non-compliance with an enforcement notice is a criminal offence. Data users have the right to appeal enforcement notices to the Appeal Tribunal under Part VII.",
-      "requirements": [
-        {
-          "id": "s110-L1",
-          "requirement": "Upon receipt of a Commissioner enforcement notice, immediately engage Legal counsel, acknowledge receipt, and prepare a detailed compliance plan addressing each requirement specified in the notice within the prescribed timeframe",
-          "rationale": "Non-compliance with an enforcement notice is a separate criminal offence from the underlying violation; time is critical — the organisation must demonstrate it is taking remedial action from the moment the notice is received",
-          "owner": "DPO / Legal Counsel / Senior Management",
-          "frequency": "As required",
-          "priority": "Critical",
-          "source": "s110",
-          "sourceType": "act",
-          "sector": null,
-          "tightens": null
-        },
-        {
-          "id": "s110-L2",
-          "requirement": "Where the organisation intends to appeal an enforcement notice to the Appeal Tribunal, file the appeal within the prescribed appeal period while simultaneously progressing compliance with the notice to the extent practicable, and obtain Legal counsel's advice on the grounds of appeal",
-          "rationale": "Filing an appeal does not automatically suspend the enforcement notice unless the Tribunal grants a stay; the organisation must pursue both compliance and appeal simultaneously to avoid the additional offence of non-compliance",
-          "owner": "Legal Counsel / DPO",
-          "frequency": "As required",
-          "priority": "Critical",
-          "source": "s110",
-          "sourceType": "act",
-          "sector": null,
-          "tightens": null
-        }
-      ]
-    },
-    "technical": {
-      "summary": "The organisation must be able to rapidly assess and remediate technical non-compliance identified in enforcement notices, including implementing new controls, modifying systems, or altering processing activities.",
-      "requirements": [
-        {
-          "id": "s110-T1",
-          "requirement": "Establish a rapid remediation protocol that can be activated upon receipt of an enforcement notice, assigning technical resources and a project timeline to implement required changes within the enforcement notice deadline",
-          "rationale": "Enforcement notice deadlines may be short; having a pre-established rapid response protocol avoids the organisation being caught without a plan when a notice arrives",
-          "owner": "DPO / IT / CISO",
-          "frequency": "Protocol established in advance; activated as required",
-          "priority": "High",
-          "source": "s110",
-          "sourceType": "act",
-          "sector": null,
-          "tightens": null
-        }
-      ]
-    },
-    "governance": {
-      "summary": "Enforcement notice response must be managed at the most senior level of the organisation, with Board awareness and adequate resourcing for rapid compliance.",
-      "requirements": [
-        {
-          "id": "s110-G1",
-          "requirement": "Escalate receipt of any enforcement notice to the Board or equivalent governing body within 24 hours, and provide regular updates on compliance progress; treat enforcement notice remediation as a priority project with dedicated resourcing",
-          "rationale": "Enforcement notices represent the highest level of regulatory escalation short of prosecution; Board-level awareness ensures adequate resources are allocated for rapid compliance",
-          "owner": "CEO / DPO / Legal",
-          "frequency": "Per enforcement notice",
-          "priority": "Critical",
-          "source": "s110",
-          "sourceType": "act",
-          "sector": null,
-          "tightens": null
-        }
-      ]
-    }
-  },
   "s129A": {
     "sectionId": "s129A",
     "part": "X",
@@ -156,7 +87,7 @@
         {
           "id": "s129A-GL1",
           "requirement": "Map all cross-border personal data flows in ROPA including transfer mechanisms used; review regularly for new or changed transfers",
-          "rationale": "CBPDT Guideline 2025, cbpdt-1 — scope and mapping under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-1 \u2014 scope and mapping under s129A",
           "owner": "DPO / IT",
           "frequency": "Ongoing; quarterly review",
           "priority": "Critical",
@@ -168,7 +99,7 @@
         {
           "id": "s129A-GL2",
           "requirement": "Verify receiving country is on Commissioner's adequacy list before each transfer to new destination (UK, EU/EEA, Japan, Korea, NZ, Canada)",
-          "rationale": "CBPDT Guideline 2025, cbpdt-2 — adequacy determinations under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-2 \u2014 adequacy determinations under s129A",
           "owner": "DPO / Legal",
           "frequency": "Before each new transfer destination",
           "priority": "High",
@@ -180,7 +111,7 @@
         {
           "id": "s129A-GL3",
           "requirement": "Execute Commissioner-approved Standard Contractual Clauses before transfer commences; conduct Transfer Impact Assessment; suspend if local law prevents compliance",
-          "rationale": "CBPDT Guideline 2025, cbpdt-3 — SCCs under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-3 \u2014 SCCs under s129A",
           "owner": "Legal / Procurement",
           "frequency": "Per transfer relationship",
           "priority": "Critical",
@@ -192,7 +123,7 @@
         {
           "id": "s129A-GL4",
           "requirement": "For intra-group transfers: submit BCR application to Commissioner; ensure board endorsement by all entities; renew every 3 years; submit annual compliance reports",
-          "rationale": "CBPDT Guideline 2025, cbpdt-4 — BCRs under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-4 \u2014 BCRs under s129A",
           "owner": "Group Legal / DPO",
           "frequency": "3-year renewal; annual reports",
           "priority": "High",
@@ -204,7 +135,7 @@
         {
           "id": "s129A-GL5",
           "requirement": "Verify recipient holds valid certification (ISO 27701, APEC CBPR, GCBPR); monitor for lapsing; plan data repatriation if certification lost",
-          "rationale": "CBPDT Guideline 2025, cbpdt-5 — certification schemes under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-5 \u2014 certification schemes under s129A",
           "owner": "DPO / Procurement",
           "frequency": "Before transfer; ongoing monitoring",
           "priority": "High",
@@ -216,7 +147,7 @@
         {
           "id": "s129A-GL6",
           "requirement": "Conduct Transfer Impact Assessment evaluating receiving country legal framework, state access powers, and practical supplementary measures before relying on SCCs or BCRs",
-          "rationale": "CBPDT Guideline 2025, cbpdt-7 — TIA under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-7 \u2014 TIA under s129A",
           "owner": "DPO / Legal",
           "frequency": "Before transfer; update on material legal changes",
           "priority": "Critical",
@@ -228,7 +159,7 @@
         {
           "id": "s129A-GL7",
           "requirement": "Execute written DPA with overseas processors before processing begins; require processing only on instructions, equivalent security, breach notification, and end-of-engagement deletion",
-          "rationale": "CBPDT Guideline 2025, cbpdt-8 — overseas processor requirements under s129A",
+          "rationale": "CBPDT Guideline 2025, cbpdt-8 \u2014 overseas processor requirements under s129A",
           "owner": "Legal / Procurement",
           "frequency": "Per processor relationship",
           "priority": "Critical",
@@ -280,7 +211,7 @@
         {
           "id": "s129B-GL1",
           "requirement": "Assess whether DPO appointment is mandatory (large-scale monitoring, sensitive data, 200K+ subjects, vulnerable groups, Commissioner direction); document self-assessment",
-          "rationale": "DPO Guideline 2025, dpo-1 — mandatory appointment criteria under s129B",
+          "rationale": "DPO Guideline 2025, dpo-1 \u2014 mandatory appointment criteria under s129B",
           "owner": "Board / Legal Counsel",
           "frequency": "Initial assessment; annual review",
           "priority": "Critical",
@@ -292,7 +223,7 @@
         {
           "id": "s129B-GL2",
           "requirement": "Appoint DPO with expert PDPA knowledge and relevant certifications (CIPM/CIPP recommended); document qualifications; ensure ongoing professional development",
-          "rationale": "DPO Guideline 2025, dpo-2 — qualifications under s129B",
+          "rationale": "DPO Guideline 2025, dpo-2 \u2014 qualifications under s129B",
           "owner": "HR / Board",
           "frequency": "At appointment; ongoing CPD",
           "priority": "High",
@@ -309,7 +240,7 @@
         {
           "id": "s129B-GL5",
           "requirement": "Register DPO with Commissioner within 30 days of appointment using prescribed form; notify Commissioner within 30 days of any DPO change; fill vacancy within 60 days",
-          "rationale": "DPO Guideline 2025, dpo-6 — registration requirements under s129B",
+          "rationale": "DPO Guideline 2025, dpo-6 \u2014 registration requirements under s129B",
           "owner": "DPO / Company Secretary",
           "frequency": "Within 30 days of appointment/change",
           "priority": "Critical",
@@ -321,7 +252,7 @@
         {
           "id": "s129B-GL6",
           "requirement": "Conduct DPIA before high-risk processing (profiling, large-scale sensitive data, systematic monitoring, vulnerable groups); DPO advises and monitors; consult Commissioner if high residual risk",
-          "rationale": "DPO Guideline 2025, dpo-7 — DPIA role under s129B",
+          "rationale": "DPO Guideline 2025, dpo-7 \u2014 DPIA role under s129B",
           "owner": "DPO / Project Owners",
           "frequency": "Before each high-risk processing activity",
           "priority": "High",
@@ -333,7 +264,7 @@
         {
           "id": "s129B-GL7",
           "requirement": "Facilitate Commissioner cooperation: respond to audits/inspections, respond to enquiries within specified timeframes, coordinate enforcement notice responses, maintain Commissioner interaction log",
-          "rationale": "DPO Guideline 2025, dpo-8 — Commissioner cooperation under s129B",
+          "rationale": "DPO Guideline 2025, dpo-8 \u2014 Commissioner cooperation under s129B",
           "owner": "DPO",
           "frequency": "As required; log maintained ongoing",
           "priority": "High",
@@ -350,7 +281,7 @@
         {
           "id": "s129B-GL3",
           "requirement": "Ensure DPO independence: no instructions on DPO tasks, no dismissal for performing duties, resolve conflicts of interest (CEO/CTO/CFO/HR Head cannot be DPO)",
-          "rationale": "DPO Guideline 2025, dpo-5 — independence requirements under s129B",
+          "rationale": "DPO Guideline 2025, dpo-5 \u2014 independence requirements under s129B",
           "owner": "Board / HR",
           "frequency": "Ongoing; reviewed at appointment and annually",
           "priority": "Critical",
@@ -362,7 +293,7 @@
         {
           "id": "s129B-GL4",
           "requirement": "DPO responsibilities: advise on PDPA compliance, monitor compliance, advise on DPIAs, act as Commissioner contact, manage data subject queries, maintain ROPA, advise on breach notification",
-          "rationale": "DPO Guideline 2025, dpo-4 — tasks and responsibilities under s129B",
+          "rationale": "DPO Guideline 2025, dpo-4 \u2014 tasks and responsibilities under s129B",
           "owner": "DPO",
           "frequency": "Ongoing",
           "priority": "Critical",
@@ -462,7 +393,7 @@
         {
           "id": "s143A-GL1",
           "requirement": "Maintain security measures sufficient to detect breaches promptly; log all security incidents to establish breach timelines",
-          "rationale": "DBN Guideline 2025, dbn-1 — breach detection under s143A",
+          "rationale": "DBN Guideline 2025, dbn-1 \u2014 breach detection under s143A",
           "owner": "IT Security / SOC",
           "frequency": "Ongoing",
           "priority": "Critical",
@@ -474,7 +405,7 @@
         {
           "id": "s143A-GL2",
           "requirement": "Conduct documented risk assessment for every personal data breach to determine notifiability; retain assessment for 5 years",
-          "rationale": "DBN Guideline 2025, dbn-2 — notifiability assessment under s143A",
+          "rationale": "DBN Guideline 2025, dbn-2 \u2014 notifiability assessment under s143A",
           "owner": "DPO / Incident Response Team",
           "frequency": "Per breach event",
           "priority": "Critical",
@@ -486,7 +417,7 @@
         {
           "id": "s143A-GL3",
           "requirement": "Notify Commissioner within 72 hours of becoming aware of notifiable breach using prescribed JPDP form; phased notifications acceptable",
-          "rationale": "DBN Guideline 2025, dbn-3 — 72-hour notification under s143A",
+          "rationale": "DBN Guideline 2025, dbn-3 \u2014 72-hour notification under s143A",
           "owner": "DPO / Legal",
           "frequency": "Per notifiable breach",
           "priority": "Critical",
@@ -498,7 +429,7 @@
         {
           "id": "s143A-GL4",
           "requirement": "Submit complete notification to Commissioner using prescribed form with all mandatory fields; attach supporting evidence",
-          "rationale": "DBN Guideline 2025, dbn-4 — notification content under s143A",
+          "rationale": "DBN Guideline 2025, dbn-4 \u2014 notification content under s143A",
           "owner": "DPO / Incident Response Team",
           "frequency": "Per notifiable breach",
           "priority": "Critical",
@@ -510,7 +441,7 @@
         {
           "id": "s143A-GL5",
           "requirement": "Notify affected data subjects within 7 days of determining high-risk breach; use direct communication in plain language (BM/EN); include protective recommendations",
-          "rationale": "DBN Guideline 2025, dbn-5/6 — data subject notification under s143A",
+          "rationale": "DBN Guideline 2025, dbn-5/6 \u2014 data subject notification under s143A",
           "owner": "DPO / Communications",
           "frequency": "Per high-risk breach",
           "priority": "Critical",
@@ -522,7 +453,7 @@
         {
           "id": "s143A-GL6",
           "requirement": "Maintain Data Breach Register recording all breaches (notifiable and non-notifiable); retain for 5 years; produce to Commissioner within 5 working days on request",
-          "rationale": "DBN Guideline 2025, dbn-7 — record-keeping under s143A",
+          "rationale": "DBN Guideline 2025, dbn-7 \u2014 record-keeping under s143A",
           "owner": "DPO / Incident Response Team",
           "frequency": "Ongoing; updated within 24 hours of each breach",
           "priority": "Critical",
@@ -534,7 +465,7 @@
         {
           "id": "s143A-GL7",
           "requirement": "Implement immediate containment measures; conduct root cause analysis within 60 days; implement systemic remediation; submit post-breach report to Commissioner",
-          "rationale": "DBN Guideline 2025, dbn-8 — post-breach remediation under s143A",
+          "rationale": "DBN Guideline 2025, dbn-8 \u2014 post-breach remediation under s143A",
           "owner": "CISO / Incident Response Team",
           "frequency": "Per breach; 60-day report deadline",
           "priority": "Critical",
@@ -542,6 +473,18 @@
           "sourceType": "guideline",
           "sector": null,
           "tightens": null
+        },
+        {
+          "id": "s143A-ST1",
+          "requirement": "Maintain a documented Incident Response Plan with escalation procedures specifically addressing notifiable data breaches under s143A; maintain a security incident register capable of reconstructing breach timelines for Commissioner reporting; test IRP annually including breach notification scenarios",
+          "rationale": "Electronic Security Standard 2015, esec-5 \u2014 incident management standard directly supports s143A breach notification; the incident register and IRP testing are prerequisites to effective breach detection and timely notification",
+          "owner": "CISO / DPO / Incident Response Team",
+          "frequency": "IRP reviewed annually; incident register maintained continuously; annual testing",
+          "priority": "Critical",
+          "source": "esec-5",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s143A-T1"
         }
       ]
     },
