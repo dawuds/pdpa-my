@@ -1,0 +1,299 @@
+{
+  "s129A": {
+    "sectionId": "s129A",
+    "part": "X",
+    "title": "Cross-Border Transfer of Personal Data (2024 Amendment)",
+    "obligationType": "mandatory",
+    "auditorFocus": "Following the 2024 Amendment, JPDP inspectors will specifically assess cross-border data transfer compliance under s129A. The most common finding is inadvertent cross-border transfer through cloud services and SaaS platforms without a transfer mechanism. Data flow maps and transfer registers are the primary documents requested.",
+    "evidenceItems": [
+      {
+        "id": "s129A-E1",
+        "name": "Data flow map showing cross-border transfers",
+        "description": "A visual or tabular map of all personal data flows, specifically identifying any flows that cross Malaysia's borders, including cloud service provider data centres and SaaS platform data storage locations",
+        "whatGoodLooksLike": [
+          "Data flow map identifies every system that stores or processes personal data and the country where data is stored",
+          "All cloud service providers are identified with their specific data centre locations",
+          "Map distinguishes between data stored in Malaysia, data in Transfer Order-approved countries, and data in non-approved countries requiring a separate transfer mechanism",
+          "Each cross-border flow is annotated with the s129A mechanism relied on (e.g., adequacy, SCC, consent, BCR)",
+          "Map is updated whenever new systems are deployed or cloud service providers change their data centre configurations",
+          "Data flow map was reviewed and updated after the 2024 Amendment came into force"
+        ],
+        "commonGaps": [
+          "No data flow map exists — the organisation has no visibility of where its personal data is stored or processed",
+          "Data flow map covers only on-premises systems and does not capture cloud service or SaaS platform data locations",
+          "Map was prepared at a point in time and has not been updated as new SaaS platforms were adopted",
+          "Organisation is not aware that commonly used SaaS platforms (e.g., CRM, email marketing, video conferencing, HR systems) store data in non-Malaysian data centres",
+          "Map identifies overseas data centres but does not annotate the applicable s129A transfer mechanism for each"
+        ],
+        "suggestedSources": [
+          "Data flow map (current version with date)",
+          "Cloud service provider Terms of Service or Data Processing Addenda showing data centre locations",
+          "IT asset and SaaS inventory showing all cloud services in use",
+          "Network architecture diagrams showing data flows",
+          "Cloud service provider data processing addenda or sub-processor lists"
+        ],
+        "format": "Visio / PDF / Spreadsheet",
+        "retentionPeriod": "Current version plus prior 3 years"
+      },
+      {
+        "id": "s129A-E2",
+        "name": "Cross-border transfer register with applicable mechanisms",
+        "description": "A register documenting all transfers of personal data outside Malaysia, the destination country, the transfer mechanism relied on, and supporting documentation",
+        "whatGoodLooksLike": [
+          "Register lists all cross-border transfers with: destination country, recipient/processor, data categories transferred, approximate volume, transfer mechanism under s129A, date of first transfer, and supporting document reference",
+          "For each transfer relying on SCCs: the executed SCC documents are referenced and on file",
+          "For each transfer relying on adequacy: the Transfer Order listing is referenced",
+          "For each transfer relying on consent: specific consent records are referenced",
+          "For each intra-group transfer relying on BCRs: the approved BCR documents are referenced",
+          "Register is reviewed annually and updated when new transfers commence or mechanisms change"
+        ],
+        "commonGaps": [
+          "No cross-border transfer register — the organisation has not identified its cross-border transfers as a distinct compliance category",
+          "Register lists transfers but does not specify the s129A mechanism relied on for each",
+          "SCCs are referenced in the register but the executed SCC documents cannot be produced",
+          "Transfers to non-approved countries are listed but the mechanism column is blank",
+          "Register does not cover transfers through cloud-based SaaS platforms used by staff"
+        ],
+        "suggestedSources": [
+          "Cross-border transfer register (current version)",
+          "Executed Standard Contractual Clauses (SCCs) with overseas processors",
+          "Executed Binding Corporate Rules (BCRs) for intra-group transfers",
+          "Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order (annotated with applicable transfers)",
+          "Consent records specifically covering cross-border transfer consent"
+        ],
+        "format": "Spreadsheet / PDF register / Signed agreements",
+        "retentionPeriod": "Duration of transfer + 7 years"
+      },
+      {
+        "id": "s129A-E3",
+        "name": "Executed Standard Contractual Clauses (SCCs) with overseas recipients",
+        "description": "Signed SCC agreements with all overseas processors and recipients where no adequacy basis exists, covering all mandatory clauses and executed before the transfer commenced",
+        "whatGoodLooksLike": [
+          "SCCs are executed with all overseas recipients listed in the transfer register who are not in Transfer Order-approved countries",
+          "SCCs are dated before the commencement of the transfer to the relevant recipient",
+          "SCCs use the Commissioner-approved form (or an equivalent approved form) rather than customised or weakened versions",
+          "SCCs are reviewed annually and re-executed where significant changes to the processing arrangement have occurred",
+          "Where the overseas recipient appoints sub-processors, the SCCs include flow-down requirements or the sub-processors execute separate SCCs"
+        ],
+        "commonGaps": [
+          "No SCCs have been executed — the organisation is transferring personal data to non-approved countries without any contractual safeguard",
+          "SCCs were executed but only after the transfer had already been in place for months or years",
+          "SCCs were modified from the approved form in ways that dilute the protections, undermining their validity as a transfer mechanism",
+          "SCCs were executed with the data processor but do not cover sub-processors engaged by that processor",
+          "The executed SCCs address data protection in general but do not specifically address the s129A cross-border transfer mechanism requirements"
+        ],
+        "suggestedSources": [
+          "Executed SCC documents for all overseas recipients (signed by both parties)",
+          "Dates of execution cross-referenced with dates of first transfer",
+          "Legal counsel review confirming SCCs use the approved form",
+          "Sub-processor SCC flow-down agreements"
+        ],
+        "format": "Signed PDF agreements",
+        "retentionPeriod": "Duration of transfer relationship + 7 years"
+      }
+    ],
+    "auditTips": [
+      "Ask whether the organisation uses Google Workspace, Microsoft 365, Salesforce, or other major cloud platforms — then ask where the data is stored and what the transfer mechanism is",
+      "Request the executed SCCs for the top 5 overseas data processors — when were they executed relative to when processing commenced?",
+      "Ask the DPO to identify the destination country of the cloud hosting provider — if they cannot answer immediately, the cross-border transfer mapping has not been completed",
+      "Review the IT procurement records for the past 2 years and identify any new SaaS platforms adopted — verify each has been assessed for cross-border transfer implications"
+    ]
+  },
+  "s143A": {
+    "sectionId": "s143A",
+    "part": "X",
+    "title": "Data Breach Notification (2024 Amendment)",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors will assess whether the organisation has the capability and documented procedures to notify the Commissioner of data breaches as required by s143A. The Incident Response Plan, breach log, tabletop exercise records, and any actual breach notification records are the primary evidence items. Absence of an IRP or any breach log is treated as a significant finding.",
+    "evidenceItems": [
+      {
+        "id": "s143A-E1",
+        "name": "Incident Response Plan (IRP) with s143A notification procedures",
+        "description": "A documented Incident Response Plan specifically addressing data breach detection, assessment, containment, and notification obligations under s143A",
+        "whatGoodLooksLike": [
+          "IRP specifically addresses s143A Commissioner notification requirements with a defined internal escalation timeline (e.g., internal confirmation within 24 hours, Commissioner notification within 72 hours of confirmation)",
+          "IRP assigns named roles: DPO (notification decision), CISO (technical response), Legal (legal assessment), Communications (data subject notification), CEO (board escalation)",
+          "IRP includes a breach severity assessment matrix to determine whether Commissioner and/or data subject notification is required",
+          "IRP contains pre-drafted notification templates for Commissioner and data subject communications",
+          "IRP has been reviewed and updated after the 2024 Amendment came into force (April 2025 commencement)",
+          "IRP includes escalation contact list with names, roles, and out-of-hours contact details"
+        ],
+        "commonGaps": [
+          "No IRP exists — the organisation has no documented plan for responding to data breaches",
+          "IRP exists but pre-dates the 2024 Amendment and does not reference s143A notification obligations",
+          "IRP assigns notification responsibility but named persons have left the organisation and the IRP has not been updated",
+          "IRP contains a notification procedure but no templates — staff would need to draft notifications from scratch during a breach",
+          "IRP has never been tested and may not be operationally effective"
+        ],
+        "suggestedSources": [
+          "Incident Response Plan document (current version with approval date)",
+          "IRP review and update records post-2024 Amendment",
+          "Pre-drafted breach notification templates (Commissioner and data subject versions)",
+          "Named role assignments in the IRP with current incumbents confirmed",
+          "IRP version history showing it has been reviewed and updated"
+        ],
+        "format": "PDF / Word document",
+        "retentionPeriod": "Current version plus all prior versions"
+      },
+      {
+        "id": "s143A-E2",
+        "name": "Tabletop exercise records and after-action reports",
+        "description": "Records of annual tabletop breach simulation exercises testing the IRP, notification process, and communication templates",
+        "whatGoodLooksLike": [
+          "At least one tabletop exercise conducted in the past 12 months, simulating a significant personal data breach scenario",
+          "Exercise involves all key IRP roles: DPO, CISO, Legal, Communications, senior management",
+          "Exercise scenario tests the full notification chain: detection, internal escalation, breach assessment, Commissioner notification, data subject communication",
+          "After-action report documents gaps identified during the exercise and remediation actions assigned with owners and target dates",
+          "Remediation actions from prior exercises are tracked to completion before the next exercise",
+          "Exercise scenarios vary year-on-year (ransomware, accidental disclosure, insider threat, third-party breach)"
+        ],
+        "commonGaps": [
+          "No tabletop exercise has ever been conducted",
+          "Exercise was conducted but only with the IT team, without the DPO, Legal, or Communications teams",
+          "After-action report was produced but the remediation actions were never followed up or completed",
+          "Exercise tested only the technical response and did not test the regulatory notification process or the data subject communication",
+          "Last exercise was conducted more than 2 years ago"
+        ],
+        "suggestedSources": [
+          "Tabletop exercise scenario documents (last 2 years)",
+          "Attendance records showing which roles participated",
+          "After-action reports (last 2 years)",
+          "Remediation tracker showing status of post-exercise actions"
+        ],
+        "format": "PDF / Word document",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "s143A-E3",
+        "name": "Breach log and actual breach notification records",
+        "description": "A centralised log of all actual data breaches and security incidents, including the assessments made, notification decisions, and copies of any notifications sent to the Commissioner or data subjects",
+        "whatGoodLooksLike": [
+          "Breach log records all incidents (including near-misses and minor incidents) with date of discovery, date breach occurred (if known), nature, data categories affected, approximate number of data subjects, and s143A notification assessment",
+          "For any notifiable breach: Commissioner notification is on file (copy of the notification and confirmation of receipt), and the notification was made within the required timeframe",
+          "For any breach where data subject notification was required: notification evidence is on file (copy of communication and distribution records)",
+          "For any incident assessed as not requiring notification: the assessment rationale is documented and approved by the DPO and Legal",
+          "Breach log is reviewed at the quarterly compliance report to management",
+          "Log is maintained for at least 7 years in accordance with the retention schedule"
+        ],
+        "commonGaps": [
+          "No breach log exists — the organisation cannot demonstrate whether it has experienced any data breaches",
+          "Breach log exists but is incomplete — only major incidents are logged; minor incidents and near-misses are not recorded",
+          "A breach occurred but no Commissioner notification was made — the breach was classified as not requiring notification without a documented assessment",
+          "Commissioner notification was made but the notification was incomplete (missing prescribed information such as categories of data affected or approximate number of data subjects)",
+          "Data subject notification was required but was not sent, or was sent significantly later than practicable"
+        ],
+        "suggestedSources": [
+          "Breach log (all incidents since the 2024 Amendment came into force, at minimum)",
+          "Copies of Commissioner breach notifications submitted",
+          "Copies of data subject breach notifications issued",
+          "Assessment memoranda for incidents determined not to require notification",
+          "Commissioner acknowledgement of receipt of breach notifications",
+          "Post-breach remediation reports"
+        ],
+        "format": "Spreadsheet / PDF log / PDF notifications",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "s143A-E4",
+        "name": "Security monitoring and intrusion detection evidence",
+        "description": "Technical evidence that the organisation has implemented monitoring and detection capabilities that would enable it to become aware of data breaches promptly, as a prerequisite for timely notification",
+        "whatGoodLooksLike": [
+          "Security information and event management (SIEM) system or equivalent is deployed and monitoring all systems containing personal data",
+          "Alert rules are configured to detect indicators of breach (large data exports, unauthorised access, ransomware encryption patterns, credential stuffing)",
+          "Mean time to detect (MTTD) for security incidents is measured and is within an acceptable range",
+          "Security operations centre (SOC) or equivalent function is responsible for 24/7 monitoring or at minimum business hours monitoring with after-hours alerting",
+          "Detection capability is tested in the tabletop exercise and any gaps are remediated"
+        ],
+        "commonGaps": [
+          "No security monitoring is in place — the organisation has no mechanism to detect breaches other than visible ransomware or user reports",
+          "SIEM is deployed but alert rules are not tuned to detect personal data-specific breach patterns",
+          "Security monitoring covers only the perimeter firewall and does not extend to internal systems and databases containing personal data",
+          "Alerting exists but goes to an unmonitered inbox, meaning alerts are not actioned",
+          "The organisation discovers breaches only through external notifications (e.g., customer reports, media coverage, law enforcement) rather than internal detection"
+        ],
+        "suggestedSources": [
+          "SIEM configuration and alert rule documentation",
+          "Security monitoring SLA or coverage documentation",
+          "Mean time to detect metrics (last 12 months)",
+          "Sample security alert reports showing alerts were investigated and actioned",
+          "SOC coverage documentation"
+        ],
+        "format": "Configuration documents / Dashboard screenshots / PDF reports",
+        "retentionPeriod": "3 years (monitoring evidence)"
+      }
+    ],
+    "auditTips": [
+      "Ask: 'Has the organisation experienced any data breaches or security incidents in the past 2 years?' — then ask to see the breach log and Commissioner notifications for each",
+      "Request the IRP and check the last-revised date — was it updated after the 2024 Amendment came into force (April 2025)?",
+      "Ask whether a tabletop exercise has been conducted in the past 12 months and request the after-action report",
+      "Identify the most recent entry in the breach log and trace through the IRP process — was the s143A assessment conducted within the required timeframe?",
+      "Ask the CISO: 'How long does it typically take to detect an unauthorised access event?' — the answer reveals the adequacy of detection capability"
+    ]
+  },
+  "s128": {
+    "sectionId": "s128",
+    "part": "X",
+    "title": "General Offences and Penalties",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors will assess whether the organisation's regulatory communications are accurate, truthful, and not misleading. The integrity of compliance records and the organisation's approach to regulatory interactions are indirect indicators of overall compliance culture.",
+    "evidenceItems": [
+      {
+        "id": "s128-E1",
+        "name": "Regulatory communication review policy and records",
+        "description": "A policy requiring legal counsel review of all regulatory communications before despatch, and a file of all regulatory correspondence demonstrating the organisation has been truthful and consistent in its dealings with the Commissioner",
+        "whatGoodLooksLike": [
+          "All written communications to the Commissioner, JPDP, or the Appeal Tribunal have been reviewed and approved by Legal counsel before despatch",
+          "A complete chronological file of all regulatory correspondence is maintained and immediately accessible",
+          "No inconsistencies exist between statements made to the Commissioner in different communications",
+          "Communications are factually accurate — statements of fact can be verified against supporting documents",
+          "Legal counsel engagement records show ongoing legal oversight of the organisation's regulatory interactions"
+        ],
+        "commonGaps": [
+          "Regulatory communications have been sent without legal review, resulting in inaccurate or inconsistent statements",
+          "No file of regulatory correspondence is maintained — communications cannot be retrieved for review",
+          "Inconsistencies exist between statements made in different regulatory communications, suggesting errors or misrepresentation",
+          "Staff have made informal verbal statements to JPDP officers that contradict the organisation's formal written positions"
+        ],
+        "suggestedSources": [
+          "Regulatory communication review policy",
+          "File of all regulatory correspondence (chronological)",
+          "Legal counsel review records for regulatory communications",
+          "Summary of all regulatory interactions since the organisation's establishment"
+        ],
+        "format": "Policy document / PDF correspondence file",
+        "retentionPeriod": "Permanently (regulatory correspondence)"
+      },
+      {
+        "id": "s128-E2",
+        "name": "Compliance records integrity controls",
+        "description": "Technical evidence that compliance records are protected against unauthorised alteration or deletion, ensuring they accurately reflect historical compliance status",
+        "whatGoodLooksLike": [
+          "Compliance records (breach log, consent records, access request log, training records) are stored in write-protected or audit-logged repositories",
+          "Changes to compliance records require approval and are logged with the user who made the change and the reason",
+          "Regular integrity checks are conducted on compliance records to detect unauthorised modifications",
+          "Backup and recovery procedures ensure compliance records cannot be permanently deleted without multiple levels of authorisation",
+          "DPO is notified of any attempt to modify historical compliance records"
+        ],
+        "commonGaps": [
+          "Compliance records are stored in shared spreadsheets with no access controls or change logging — anyone could modify historical records",
+          "Breach log entries have been edited or deleted after the fact to remove evidence of incidents",
+          "No integrity controls exist on consent records — they could be created or modified retrospectively to falsely evidence consent",
+          "Training completion records can be modified by HR staff without audit trail, enabling falsification of training status"
+        ],
+        "suggestedSources": [
+          "Access control configuration for compliance record repositories",
+          "Audit log coverage documentation showing which systems apply change logging to compliance records",
+          "Integrity check procedure documentation",
+          "Sample audit log entries showing change history for compliance records"
+        ],
+        "format": "Configuration documentation / System screenshots",
+        "retentionPeriod": "Current configuration documentation"
+      }
+    ],
+    "auditTips": [
+      "Review a sample of regulatory correspondence and cross-reference key factual statements against supporting documents — are the statements accurate and consistent?",
+      "Ask to see the access control settings for the breach log and consent records system — who has write access and are changes logged?",
+      "Ask whether any regulatory correspondence has been sent without legal review — if the answer is 'yes', assess the accuracy of those communications"
+    ]
+  }
+}

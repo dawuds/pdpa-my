@@ -1,0 +1,62 @@
+{
+  "consent-management": {
+    "name": "Consent Management",
+    "description": "Controls for obtaining, recording, managing, and withdrawing consent for personal data processing. Covers consent design, collection mechanisms, consent records, preference management, and withdrawal handling across all channels and data subject touchpoints",
+    "relatedSections": ["s6", "s7", "s38"],
+    "relatedPrinciples": ["general", "notice-and-choice"]
+  },
+  "data-subject-rights": {
+    "name": "Data Subject Rights",
+    "description": "Controls for identifying, receiving, verifying, processing, and fulfilling data subject rights requests, including the right of access (s30), right to correction (s34), right to opt out of direct marketing (s43), and right to withdraw consent (s38). Ensures timely responses within statutory periods and accurate record-keeping of all requests",
+    "relatedSections": ["s30", "s31", "s32", "s33", "s34", "s35", "s36", "s38", "s43", "s44"],
+    "relatedPrinciples": ["access"]
+  },
+  "notice-transparency": {
+    "name": "Notice and Transparency",
+    "description": "Controls for ensuring data subjects are provided with clear, accurate, and timely information about the organization's personal data processing practices. Covers the design, delivery, maintenance, and accessibility of data protection notices, privacy policies, and disclosures required under PDPA s7 (Notice and Choice Principle)",
+    "relatedSections": ["s7"],
+    "relatedPrinciples": ["notice-and-choice"]
+  },
+  "data-security": {
+    "name": "Data Security",
+    "description": "Technical and organizational controls protecting personal data against unauthorized access, loss, destruction, alteration, or disclosure. Encompasses information security governance, access control, encryption, network security, physical security, vulnerability management, and security monitoring aligned with PDPA s9 (Security Principle) and the Personal Data Protection Standards 2015",
+    "relatedSections": ["s9"],
+    "relatedPrinciples": ["security"]
+  },
+  "data-lifecycle": {
+    "name": "Data Lifecycle Management",
+    "description": "Controls governing personal data from collection through to secure disposal, ensuring data is accurate, kept only as long as necessary, processed only for specified purposes, and disposed of securely when no longer required. Aligned with PDPA Retention Principle (s10) and Data Integrity Principle (s11)",
+    "relatedSections": ["s10", "s11"],
+    "relatedPrinciples": ["retention", "data-integrity"]
+  },
+  "breach-response": {
+    "name": "Breach Response",
+    "description": "Controls for the detection, assessment, containment, investigation, notification, and remediation of personal data breaches. Includes the mandatory 72-hour breach notification obligation to the Commissioner under PDPA s143A (inserted by Amendment Act A1699) and data subject notification where required",
+    "relatedSections": ["s9", "s143A"],
+    "relatedPrinciples": ["security"]
+  },
+  "cross-border-transfer": {
+    "name": "Cross-Border Data Transfer",
+    "description": "Controls for managing, assessing, and safeguarding transfers of personal data to recipients outside Malaysia. Covers adequacy assessments, transfer mechanism selection and implementation (standard contractual clauses, binding corporate rules, consent, certification), Transfer Impact Assessments, and ongoing monitoring of cross-border transfer arrangements under PDPA s129A",
+    "relatedSections": ["s129A"],
+    "relatedPrinciples": []
+  },
+  "third-party-management": {
+    "name": "Third-Party and Processor Management",
+    "description": "Controls for the selection, due diligence, contracting, oversight, and offboarding of data processors and third parties who process personal data on behalf of the organization. Ensures processors are contractually bound and operationally capable of meeting the organization's PDPA obligations, and that processor risk is identified and managed",
+    "relatedSections": ["s9", "s129A"],
+    "relatedPrinciples": ["security"]
+  },
+  "governance-accountability": {
+    "name": "Governance and Accountability",
+    "description": "Controls establishing the organizational framework for data protection governance, including DPO appointment and functions, policy and procedure management, staff training and awareness, privacy by design, compliance monitoring and audit, board reporting, and management of regulatory relationships. Implements the accountability principle underlying PDPA compliance",
+    "relatedSections": ["s5", "s9", "s129B"],
+    "relatedPrinciples": ["general", "security"]
+  },
+  "registration-compliance": {
+    "name": "Registration and Regulatory Compliance",
+    "description": "Controls for maintaining and renewing the organization's data user registration with the Personal Data Protection Commissioner, responding to regulatory inspections and enforcement actions, managing Commissioner correspondence, and monitoring regulatory developments including amendments, codes of practice, and guidelines",
+    "relatedSections": ["s13", "s14", "s15", "s16", "s101", "s102", "s110", "s111"],
+    "relatedPrinciples": []
+  }
+}

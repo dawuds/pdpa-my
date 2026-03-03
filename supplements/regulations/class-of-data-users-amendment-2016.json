@@ -1,0 +1,68 @@
+{
+  "id": "class-of-data-users-amendment-2016",
+  "title": "Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+  "type": "order",
+  "reference": "P.U.(A) 27/2016",
+  "gazetteDate": "2016-01-28",
+  "effectiveDate": "2016-01-29",
+  "issuedBy": "Minister charged with responsibility for Personal Data Protection",
+  "enablingSection": "s13(3)",
+  "parentAct": "Act 709",
+  "parentInstrument": "class-of-data-users-order-2013",
+  "summary": "This Order amends the Personal Data Protection (Class of Data Users) Order 2013 to clarify the descriptions of certain prescribed classes of data users and to ensure consistency with developments in sector-specific licensing regimes. The amendments do not add or remove any of the 13 classes but provide additional precision in the class descriptions to reduce uncertainty about the scope of mandatory registration obligations.",
+  "provisions": [
+    {
+      "id": "cdu-amend-1",
+      "article": "art1",
+      "title": "Citation and Commencement",
+      "content": "This Order may be cited as the Personal Data Protection (Class of Data Users) (Amendment) Order 2016 and shall come into force on 29 January 2016.",
+      "requirements": []
+    },
+    {
+      "id": "cdu-amend-2",
+      "article": "art2",
+      "title": "Amendment to First Schedule — Class 2 (Banking and Financial Institutions)",
+      "content": "The description of Class 2 (Banking and Financial Institutions) in the First Schedule to the principal Order is amended to expressly include licensed payment system operators under the Financial Services Act 2013 and the Islamic Financial Services Act 2013, reflecting the enactment of those Acts in 2013 after the original Order was made.",
+      "requirements": [
+        "Payment system operators licensed by Bank Negara Malaysia after 2013 are now expressly within Class 2",
+        "Operators who commenced processing before 29 January 2016 have a 6-month transitional period to apply for registration"
+      ]
+    },
+    {
+      "id": "cdu-amend-3",
+      "article": "art3",
+      "title": "Amendment to First Schedule — Class 6 (Transport)",
+      "content": "The description of Class 6 (Transport) is amended to clarify that it includes all scheduled public transport operators licensed under the Land Public Transport Act 2010, including stage bus services, express bus services, and taxi services. The amendment also clarifies that e-hailing platform operators who are licensed as transport network companies fall within this class.",
+      "requirements": [
+        "E-hailing operators with land public transport licences are now expressly within Class 6",
+        "Unlicensed transport providers (e.g., peer-to-peer arrangements) remain subject to PDPA but not to the registration requirement"
+      ]
+    },
+    {
+      "id": "cdu-amend-4",
+      "article": "art4",
+      "title": "Amendment to First Schedule — Class 9 (Services)",
+      "content": "The description of Class 9 (Services) is amended to include licensed valuers registered under the Valuers, Appraisers, Estate Agents and Property Managers Act 1981, reflecting the role of valuers in processing significant personal and financial data in the course of property and asset valuations.",
+      "requirements": [
+        "Licensed valuers are now expressly within Class 9",
+        "Valuation reports containing personal data must comply with all PDPA principles",
+        "Existing valuation firms have a 6-month transitional period to apply for registration"
+      ]
+    },
+    {
+      "id": "cdu-amend-5",
+      "article": "art5",
+      "title": "Transitional Provisions",
+      "content": "Any data user who falls within a class of data users by reason of the amendments made by this Order shall have 6 months from the commencement of this Order to apply for registration with the Commissioner. During the transitional period, such a data user may continue to process personal data without being registered, provided that it is otherwise in compliance with the Act.",
+      "requirements": [
+        "Transitional period: 29 January 2016 to 29 July 2016",
+        "Processing during the transitional period does not constitute an offence under s5(2)",
+        "Data users newly captured by the amendments must comply with the Act's principles immediately — only the registration obligation is deferred"
+      ]
+    }
+  ],
+  "keywords": [
+    "amendment", "class of data users", "payment system operators", "e-hailing", "transport",
+    "licensed valuers", "transitional provisions", "registration"
+  ]
+}

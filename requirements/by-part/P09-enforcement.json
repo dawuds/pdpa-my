@@ -1,0 +1,169 @@
+{
+  "s110": {
+    "sectionId": "s110",
+    "part": "IX",
+    "title": "Enforcement Notices",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 110 empowers the Commissioner to issue enforcement notices requiring a data user to take specified steps to comply with the PDPA within a prescribed period. Non-compliance with an enforcement notice is a criminal offence. Data users have the right to appeal enforcement notices to the Appeal Tribunal under Part VII.",
+      "requirements": [
+        {
+          "id": "s110-L1",
+          "requirement": "Upon receipt of a Commissioner enforcement notice, immediately engage Legal counsel, acknowledge receipt, and prepare a detailed compliance plan addressing each requirement specified in the notice within the prescribed timeframe",
+          "rationale": "Non-compliance with an enforcement notice is a separate criminal offence from the underlying violation; time is critical — the organisation must demonstrate it is taking remedial action from the moment the notice is received",
+          "owner": "DPO / Legal Counsel / Senior Management",
+          "frequency": "As required",
+          "priority": "Critical"
+        },
+        {
+          "id": "s110-L2",
+          "requirement": "Where the organisation intends to appeal an enforcement notice to the Appeal Tribunal, file the appeal within the prescribed appeal period while simultaneously progressing compliance with the notice to the extent practicable, and obtain Legal counsel's advice on the grounds of appeal",
+          "rationale": "Filing an appeal does not automatically suspend the enforcement notice unless the Tribunal grants a stay; the organisation must pursue both compliance and appeal simultaneously",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "As required",
+          "priority": "Critical"
+        },
+        {
+          "id": "s110-L3",
+          "requirement": "Upon completing the remedial steps required by an enforcement notice, provide written confirmation to the Commissioner of compliance with evidence of the steps taken, and retain copies of all correspondence and compliance evidence for at least 7 years",
+          "rationale": "Formal confirmation of compliance closes the enforcement cycle; retained records demonstrate compliance in the event of future investigations or disputes about whether the notice was addressed",
+          "owner": "DPO / Legal",
+          "frequency": "Upon completion of enforcement notice requirements",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The organisation must be able to rapidly assess and remediate technical non-compliance identified in enforcement notices.",
+      "requirements": [
+        {
+          "id": "s110-T1",
+          "requirement": "Establish a rapid remediation protocol that can be activated upon receipt of an enforcement notice, assigning technical resources and a project timeline to implement required changes within the enforcement notice deadline",
+          "rationale": "Enforcement notice deadlines may be short; having a pre-established rapid response protocol avoids the organisation being caught without a plan when a notice arrives",
+          "owner": "DPO / IT / CISO",
+          "frequency": "Protocol established in advance; activated as required",
+          "priority": "High"
+        },
+        {
+          "id": "s110-T2",
+          "requirement": "Maintain a change management process that can prioritise and fast-track technical remediation items required by an enforcement notice, with weekly progress reporting to the DPO and senior management until the notice deadline is met",
+          "rationale": "Technical remediation under enforcement notice pressure requires structured project management to ensure deadlines are met; ad hoc remediation without project discipline frequently misses deadlines",
+          "owner": "IT / DPO",
+          "frequency": "Activated per enforcement notice",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Enforcement notice response must be managed at the most senior level of the organisation, with Board awareness and adequate resourcing for rapid compliance.",
+      "requirements": [
+        {
+          "id": "s110-G1",
+          "requirement": "Escalate receipt of any enforcement notice to the Board or equivalent governing body within 24 hours, and provide regular updates on compliance progress; treat enforcement notice remediation as a priority project with dedicated resourcing",
+          "rationale": "Enforcement notices represent the highest level of regulatory escalation short of prosecution; Board-level awareness ensures adequate resources are allocated for rapid compliance",
+          "owner": "CEO / DPO / Legal",
+          "frequency": "Per enforcement notice",
+          "priority": "Critical"
+        }
+      ]
+    }
+  },
+  "s113": {
+    "sectionId": "s113",
+    "part": "IX",
+    "title": "Failure to Comply with Enforcement Notice",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 113 makes it a criminal offence to fail to comply with an enforcement notice issued by the Commissioner under s110. This is a separate and additional offence to the underlying PDPA violation that triggered the enforcement notice. Penalties include fines and imprisonment.",
+      "requirements": [
+        {
+          "id": "s113-L1",
+          "requirement": "Treat compliance with an enforcement notice as a non-negotiable legal obligation; document every step taken towards compliance, and where full compliance by the deadline is impossible, notify the Commissioner proactively with a revised timetable supported by evidence of good faith efforts",
+          "rationale": "Section 113 creates a separate criminal liability for non-compliance; proactive communication with the Commissioner about progress may avoid prosecution under s113 even if the deadline is missed in good faith",
+          "owner": "Legal Counsel / DPO / CEO",
+          "frequency": "Per enforcement notice",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical evidence of compliance steps taken must be compiled and retained to demonstrate progress against enforcement notice requirements.",
+      "requirements": [
+        {
+          "id": "s113-T1",
+          "requirement": "Create and maintain a compliance evidence package for each enforcement notice, documenting each remedial step taken with timestamps, screenshots, test results, and sign-off records, to evidence compliance to the Commissioner",
+          "rationale": "The organisation bears the burden of demonstrating compliance with an enforcement notice; a documented evidence package prevents disputes about whether required steps were taken",
+          "owner": "DPO / IT / Legal",
+          "frequency": "Per enforcement notice",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Senior management accountability for enforcement notice compliance must be unambiguous, with a designated compliance owner and board-level oversight.",
+      "requirements": [
+        {
+          "id": "s113-G1",
+          "requirement": "Designate a named senior manager as the accountable owner for compliance with each enforcement notice, with authority to direct resources and make operational decisions required for compliance, and reporting directly to the CEO",
+          "rationale": "Enforcement notice compliance requires rapid decision-making and resource allocation; naming a senior accountable owner prevents the diffusion of responsibility that leads to missed deadlines",
+          "owner": "CEO / Board",
+          "frequency": "Per enforcement notice",
+          "priority": "Critical"
+        }
+      ]
+    }
+  },
+  "s114": {
+    "sectionId": "s114",
+    "part": "IX",
+    "title": "Powers of Enforcement Officers",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 114 confers enforcement powers on authorised officers of the Commissioner, including powers of search and seizure. Data users must not obstruct enforcement officers in the exercise of their powers. Obstruction is a criminal offence.",
+      "requirements": [
+        {
+          "id": "s114-L1",
+          "requirement": "Train all staff who may encounter JPDP enforcement officers on their legal obligations to cooperate with and not obstruct enforcement officers, and on the procedure for notifying the DPO and Legal counsel immediately when enforcement officers attend the premises",
+          "rationale": "Uninformed staff may inadvertently obstruct enforcement officers or make statements prejudicial to the organisation; trained staff who know to cooperate and immediately notify the DPO protect the organisation's legal position",
+          "owner": "DPO / HR / Legal",
+          "frequency": "At onboarding; refreshed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s114-L2",
+          "requirement": "Do not instruct, encourage, or permit any person to conceal, destroy, alter, or remove documents or records when JPDP enforcement officers are attending or expected to attend the premises; document all documents produced to enforcement officers",
+          "rationale": "Concealment or destruction of documents in the face of enforcement is a separate offence; documenting what was produced protects the organisation against allegations of withholding",
+          "owner": "Legal Counsel / DPO / Senior Management",
+          "frequency": "During enforcement visits",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "During enforcement visits, the organisation must be able to produce requested electronic records and provide appropriate system access to enforcement officers where legally required.",
+      "requirements": [
+        {
+          "id": "s114-T1",
+          "requirement": "Maintain the ability to create read-only exports or forensic copies of specified data sets to provide to enforcement officers in a controlled manner that does not grant them unmonitored live system access",
+          "rationale": "Providing controlled exports rather than direct system access protects the integrity of the production process and ensures the organisation can document exactly what was provided",
+          "owner": "IT Security / CISO / Legal",
+          "frequency": "Capability maintained; activated as required",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The organisation must be prepared to manage enforcement visits in a controlled and legally sound manner.",
+      "requirements": [
+        {
+          "id": "s114-G1",
+          "requirement": "Establish a documented enforcement visit protocol specifying: who to notify immediately (DPO, Legal, CEO), where enforcement officers should be received, how document production should be managed, and what records should be kept of the visit",
+          "rationale": "An enforcement visit without a protocol leads to confusion, inconsistent responses, and potential inadvertent obstruction; a protocol ensures a professional and legally defensible response",
+          "owner": "DPO / Legal / Facilities",
+          "frequency": "Established; reviewed annually",
+          "priority": "High"
+        }
+      ]
+    }
+  }
+}

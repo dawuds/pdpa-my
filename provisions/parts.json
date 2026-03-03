@@ -1,0 +1,100 @@
+[
+  {
+    "id": "I",
+    "name": "Preliminary",
+    "sections": "1-4",
+    "description": "Short title, commencement, interpretation of definitions, scope of application, and non-application of the Act",
+    "divisions": null
+  },
+  {
+    "id": "II",
+    "name": "Personal Data Protection",
+    "sections": "5-44",
+    "description": "Core data protection framework comprising the seven Personal Data Protection Principles (General, Notice and Choice, Disclosure, Security, Retention, Data Integrity, Access), consent requirements, sensitive personal data, registration of data users, processing requirements, and rights of data subjects",
+    "divisions": [
+      {
+        "id": "II-1",
+        "name": "Personal Data Protection Principles",
+        "sections": "5-12"
+      },
+      {
+        "id": "II-2",
+        "name": "Registration of Data Users",
+        "sections": "13-16"
+      },
+      {
+        "id": "II-3",
+        "name": "Processing of Personal Data",
+        "sections": "17-29"
+      },
+      {
+        "id": "II-4",
+        "name": "Rights of Data Subject",
+        "sections": "30-44"
+      }
+    ]
+  },
+  {
+    "id": "III",
+    "name": "Exemption",
+    "sections": "45-46",
+    "description": "Exemptions from the Act including exemptions for Federal and State Government, and exemptions granted by the Minister",
+    "divisions": null
+  },
+  {
+    "id": "IV",
+    "name": "Commissioner",
+    "sections": "47-60",
+    "description": "Appointment, tenure, powers, duties and functions of the Personal Data Protection Commissioner, including power to issue codes of practice and conduct audits",
+    "divisions": null
+  },
+  {
+    "id": "V",
+    "name": "Fund",
+    "sections": "61-69",
+    "description": "Establishment and administration of the Personal Data Protection Fund, including sources of funding, application of funds, and financial reporting requirements",
+    "divisions": null
+  },
+  {
+    "id": "VI",
+    "name": "Advisory Committee",
+    "sections": "70-82",
+    "description": "Establishment, composition, functions and procedures of the Personal Data Protection Advisory Committee",
+    "divisions": null
+  },
+  {
+    "id": "VII",
+    "name": "Appeal Tribunal",
+    "sections": "83-100",
+    "description": "Establishment, composition, jurisdiction and procedures of the Personal Data Protection Appeal Tribunal for hearing appeals against decisions of the Commissioner",
+    "divisions": null
+  },
+  {
+    "id": "VIII",
+    "name": "Inspection, Complaint and Investigation",
+    "sections": "101-109",
+    "description": "Powers of inspection, procedures for lodging complaints, and investigation powers of the Commissioner and authorised officers",
+    "divisions": null
+  },
+  {
+    "id": "IX",
+    "name": "Enforcement",
+    "sections": "110-127",
+    "description": "Appointment of enforcement officers, powers of search and seizure, powers of arrest, production orders, and related enforcement mechanisms",
+    "divisions": null
+  },
+  {
+    "id": "X",
+    "name": "Miscellaneous",
+    "sections": "128-144",
+    "description": "General offences and penalties, liability of body corporate, compounding of offences, protection of officers, service of notices, evidence, and general provisions. Includes s129A on cross-border data transfer mechanisms and s143A on mandatory data breach notification, both inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699)",
+    "divisions": null
+  },
+  {
+    "id": "XI",
+    "name": "Savings and Transitional",
+    "sections": "145-146",
+    "description": "Savings provisions and transitional arrangements for existing data users and ongoing proceedings upon commencement of the Act",
+    "divisions": null
+  }
+]

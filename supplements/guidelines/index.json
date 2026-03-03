@@ -1,0 +1,56 @@
+{
+  "description": "Index of all guidelines issued by the Personal Data Protection Commissioner / Jabatan Perlindungan Data Peribadi (JPDP) under the Personal Data Protection Act 2010 (Act 709)",
+  "issuingBody": "Jabatan Perlindungan Data Peribadi (JPDP)",
+  "parentAct": "Act 709",
+  "lastUpdated": "2025-06-01",
+  "guidelines": [
+    {
+      "id": "dbn-guideline-2025",
+      "title": "Guideline on Data Breach Notification 2025",
+      "shortTitle": "DBN Guideline 2025",
+      "effectiveDate": "2025-06-01",
+      "enablingSection": "s143A",
+      "status": "in-force",
+      "subject": "Mandatory notification of notifiable data breaches to the Commissioner and affected data subjects",
+      "filePath": "supplements/guidelines/dbn-data-breach-notification.json",
+      "relatedPenalty": "pen-s143A-5",
+      "supersedes": null
+    },
+    {
+      "id": "dpo-guideline-2025",
+      "title": "Guideline on Data Protection Officer 2025",
+      "shortTitle": "DPO Guideline 2025",
+      "effectiveDate": "2025-06-01",
+      "enablingSection": "s129B",
+      "status": "in-force",
+      "subject": "Mandatory appointment, qualifications, responsibilities, and registration of Data Protection Officers",
+      "filePath": "supplements/guidelines/dpo-data-protection-officer.json",
+      "relatedPenalty": "pen-dpo",
+      "supersedes": null
+    },
+    {
+      "id": "cbpdt-guideline-2025",
+      "title": "Guideline on Cross-Border Personal Data Transfer 2025",
+      "shortTitle": "CBPDT Guideline 2025",
+      "effectiveDate": "2025-06-01",
+      "enablingSection": "s129A",
+      "status": "in-force",
+      "subject": "Transfer mechanisms, adequacy determinations, appropriate safeguards, and derogations for cross-border personal data transfers",
+      "filePath": "supplements/guidelines/cbpdt-cross-border-transfer.json",
+      "relatedPenalty": "pen-s129A",
+      "supersedes": "cbpdt-guideline-2013"
+    },
+    {
+      "id": "data-protection-notices-guideline",
+      "title": "Guideline on Personal Data Protection Notices",
+      "shortTitle": "DPN Guideline",
+      "effectiveDate": "2013-11-15",
+      "enablingSection": "s7",
+      "status": "in-force",
+      "subject": "Content, format, language, and delivery of data protection notices under the Notice and Choice Principle",
+      "filePath": "supplements/guidelines/data-protection-notices.json",
+      "relatedPenalty": "pen-s5-3",
+      "supersedes": null
+    }
+  ]
+}

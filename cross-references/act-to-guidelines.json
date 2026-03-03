@@ -1,0 +1,136 @@
+{
+  "description": "Mapping of PDPA 2010 (Act 709) sections to guidelines issued by the Commissioner / Jabatan Perlindungan Data Peribadi (JPDP)",
+  "lastUpdated": "2025-06-01",
+  "guidelines": [
+    {
+      "id": "dbn-guideline-2025",
+      "title": "Guideline on Data Breach Notification 2025",
+      "shortTitle": "DBN Guideline 2025",
+      "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
+      "effectiveDate": "2025-06-01",
+      "supplementFilePath": "supplements/guidelines/dbn-data-breach-notification.json"
+    },
+    {
+      "id": "dpo-guideline-2025",
+      "title": "Guideline on Data Protection Officer 2025",
+      "shortTitle": "DPO Guideline 2025",
+      "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
+      "effectiveDate": "2025-06-01",
+      "supplementFilePath": "supplements/guidelines/dpo-data-protection-officer.json"
+    },
+    {
+      "id": "cbpdt-guideline-2025",
+      "title": "Guideline on Cross-Border Personal Data Transfer 2025",
+      "shortTitle": "CBPDT Guideline 2025",
+      "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
+      "effectiveDate": "2025-06-01",
+      "supplementFilePath": "supplements/guidelines/cbpdt-cross-border-transfer.json"
+    },
+    {
+      "id": "data-protection-notices-guideline",
+      "title": "Guideline on Data Protection Notices",
+      "shortTitle": "DPN Guideline",
+      "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
+      "effectiveDate": "2013-11-15",
+      "supplementFilePath": "supplements/guidelines/data-protection-notices.json"
+    }
+  ],
+  "mappings": [
+    {
+      "section": "s2",
+      "sectionTitle": "Interpretation (Definition of Data Protection Officer)",
+      "part": "I",
+      "guidelines": [
+        {
+          "guidelineId": "dpo-guideline-2025",
+          "relevantProvisions": ["dpo-1", "dpo-2"],
+          "notes": "The 2024 Amendment inserted the definition of 'data protection officer' into s2. The DPO Guideline elaborates on this definition, specifying the qualifications, role scope, and attributes that constitute a DPO for the purposes of the Act."
+        }
+      ]
+    },
+    {
+      "section": "s7",
+      "sectionTitle": "Notice and Choice Principle",
+      "part": "II",
+      "guidelines": [
+        {
+          "guidelineId": "data-protection-notices-guideline",
+          "relevantProvisions": ["dpn-1", "dpn-2", "dpn-3", "dpn-4", "dpn-5"],
+          "notes": "The Notice and Choice Principle requires data users to provide data subjects with written notice of prescribed information. The DPN Guideline sets out the format, content, language, timing, and method of delivery of data protection notices."
+        }
+      ]
+    },
+    {
+      "section": "s8",
+      "sectionTitle": "Disclosure Principle",
+      "part": "II",
+      "guidelines": [
+        {
+          "guidelineId": "data-protection-notices-guideline",
+          "relevantProvisions": ["dpn-3"],
+          "notes": "The Disclosure Principle requires that personal data is only disclosed for the purposes stated in the notice. The Guideline clarifies how disclosure purposes should be described in the notice."
+        }
+      ]
+    },
+    {
+      "section": "s9",
+      "sectionTitle": "Security Principle",
+      "part": "II",
+      "guidelines": [
+        {
+          "guidelineId": "dbn-guideline-2025",
+          "relevantProvisions": ["dbn-2", "dbn-3"],
+          "notes": "The security principle includes the obligation to implement measures to prevent unauthorized access, loss, or destruction of data. The DBN Guideline addresses the security breach response aspect of this obligation."
+        }
+      ]
+    },
+    {
+      "section": "s129A",
+      "sectionTitle": "Cross-Border Personal Data Transfer",
+      "part": "X",
+      "guidelines": [
+        {
+          "guidelineId": "cbpdt-guideline-2025",
+          "relevantProvisions": ["cbpdt-1", "cbpdt-2", "cbpdt-3", "cbpdt-4", "cbpdt-5", "cbpdt-6", "cbpdt-7"],
+          "notes": "Section 129A establishes the legal framework for cross-border transfers. The CBPDT Guideline 2025 provides comprehensive practical guidance on all available transfer mechanisms, including adequacy decisions, binding corporate rules, standard contractual clauses, certification, and derogations."
+        }
+      ]
+    },
+    {
+      "section": "s129B",
+      "sectionTitle": "Appointment of Data Protection Officer",
+      "part": "X",
+      "guidelines": [
+        {
+          "guidelineId": "dpo-guideline-2025",
+          "relevantProvisions": ["dpo-1", "dpo-2", "dpo-3", "dpo-4", "dpo-5", "dpo-6", "dpo-7", "dpo-8"],
+          "notes": "Section 129B (inserted by A1699) establishes the mandatory DPO requirement. The DPO Guideline provides detailed guidance on all aspects of DPO appointment, qualification, registration, and responsibilities."
+        }
+      ]
+    },
+    {
+      "section": "s143A",
+      "sectionTitle": "Data Breach Notification",
+      "part": "X",
+      "guidelines": [
+        {
+          "guidelineId": "dbn-guideline-2025",
+          "relevantProvisions": ["dbn-1", "dbn-2", "dbn-3", "dbn-4", "dbn-5", "dbn-6", "dbn-7", "dbn-8"],
+          "notes": "Section 143A (inserted by A1699) establishes the mandatory data breach notification obligation. The DBN Guideline provides comprehensive guidance on all aspects of breach identification, assessment, notification, and record-keeping."
+        }
+      ]
+    },
+    {
+      "section": "s30-44",
+      "sectionTitle": "Rights of Data Subject",
+      "part": "II",
+      "guidelines": [
+        {
+          "guidelineId": "data-protection-notices-guideline",
+          "relevantProvisions": ["dpn-4", "dpn-5"],
+          "notes": "The data subject rights include the right of access (s30), right to correct (s34), and right to opt out from direct marketing (s43). The DPN Guideline addresses how these rights should be disclosed in data protection notices."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "s101": {
+    "sectionId": "s101",
+    "part": "VIII",
+    "title": "Powers of Inspection",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors will assess whether the organisation is prepared to cooperate with inspections and has a documented inspection response procedure. The state of the compliance document repository is a direct reflection of the organisation's overall compliance maturity.",
+    "evidenceItems": [
+      {
+        "id": "s101-E1",
+        "name": "Compliance document repository (completeness and currency)",
+        "description": "A central repository containing all key PDPA compliance documents, organised and readily accessible to produce to JPDP inspectors promptly",
+        "whatGoodLooksLike": [
+          "Repository contains all key documents: ROPA, registration certificate, DPO appointment, PDPA policy, DPAs, retention schedule, disposal logs, privacy notices, training records, breach log, access request log, and security policy",
+          "All documents are current (last-reviewed within the past 12 months, or within the applicable review cycle)",
+          "Documents are organised by category and retrievable within minutes",
+          "Repository is maintained in both physical (for key signed originals) and digital formats",
+          "Repository completeness is reviewed against a checklist quarterly by the DPO"
+        ],
+        "commonGaps": [
+          "Key compliance documents are scattered across multiple systems, email inboxes, and network drives with no central access",
+          "Repository exists but key documents are out of date (e.g., retention schedule from 2020, expired DPAs)",
+          "Repository completeness has never been formally reviewed against a checklist",
+          "Physical documents (signed originals of DPAs, registration certificate) cannot be located"
+        ],
+        "suggestedSources": [
+          "Compliance document repository (digital and/or physical)",
+          "Repository completeness checklist and last-review date",
+          "DPO quarterly repository review records"
+        ],
+        "format": "Repository index / File system",
+        "retentionPeriod": "Per the retention schedule applicable to each document type"
+      },
+      {
+        "id": "s101-E2",
+        "name": "Inspection response procedure and preparedness self-assessment",
+        "description": "A documented procedure for responding to JPDP inspections, and evidence of annual self-assessments conducted to identify and remediate compliance gaps",
+        "whatGoodLooksLike": [
+          "Inspection response procedure designates the DPO as primary contact and specifies notification of Legal counsel upon receiving an inspection notice",
+          "Inspection response procedure assigns responsibilities for document collection, witness preparation, and escort of inspection officers",
+          "Annual self-assessment is conducted using the JPDP inspection checklist as a guide",
+          "Self-assessment findings are documented with remediation actions and completion dates",
+          "Self-assessment report is presented to management to resource gap remediation"
+        ],
+        "commonGaps": [
+          "No inspection response procedure exists",
+          "No self-assessments have ever been conducted",
+          "Self-assessment was conducted but findings were not acted upon — the same gaps are present at the actual inspection"
+        ],
+        "suggestedSources": [
+          "Inspection response procedure document",
+          "Annual PDPA self-assessment report (last 2 years)",
+          "Remediation tracker from self-assessment",
+          "Management acknowledgement of self-assessment findings"
+        ],
+        "format": "PDF / Word document",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "s101-E3",
+        "name": "System audit logs for personal data processing activities",
+        "description": "Audit logs from systems processing personal data, recording access events, data modifications, and export activities with sufficient detail to reconstruct processing activities for inspection purposes",
+        "whatGoodLooksLike": [
+          "Audit logs capture user ID, timestamp, action performed, data category accessed, and source IP for all access to personal data",
+          "Logs are tamper-evident (write-once or cryptographically protected) so they cannot be altered retrospectively",
+          "Log retention meets the minimum requirement (3 years) so historical access patterns can be reviewed",
+          "Logs are searchable and can produce a report of all access by a specific user or to a specific data category within minutes",
+          "Regular log review is conducted as part of the security monitoring process, with anomalies investigated"
+        ],
+        "commonGaps": [
+          "Audit logs are not enabled on the primary systems containing personal data",
+          "Logs are enabled but retention is set to 30 or 90 days, making historical review impossible",
+          "Logs capture only login events and do not capture data access or export events",
+          "Logs are not reviewed — they are collected but never analysed, so security incidents go undetected",
+          "Log integrity is not protected — logs could be altered without detection"
+        ],
+        "suggestedSources": [
+          "Audit log configuration screenshots for each primary system containing personal data",
+          "Sample audit log export (demonstrating log content and searchability)",
+          "Log retention configuration documentation",
+          "Security monitoring review records showing log analysis is being performed"
+        ],
+        "format": "System configuration screenshots / Log exports",
+        "retentionPeriod": "3 years minimum (logs themselves)"
+      }
+    ],
+    "auditTips": [
+      "At the start of the inspection, ask the organisation to produce its compliance document index — assess how quickly documents are retrieved",
+      "Request the most recent self-assessment report and compare the findings with current observations — are the same gaps still present?",
+      "Ask who the DPO is and verify they are available to assist during the inspection",
+      "Request a sample audit log export from the primary customer data system and verify it contains sufficient detail"
+    ]
+  },
+  "s104": {
+    "sectionId": "s104",
+    "part": "VIII",
+    "title": "Complaint Procedures",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors may have specific data subject complaints they are investigating. They will look for evidence that the organisation has a functioning internal grievance mechanism and that complaints are investigated, remediated, and reported.",
+    "evidenceItems": [
+      {
+        "id": "s104-E1",
+        "name": "Internal data subject complaint procedure (published)",
+        "description": "A documented and published internal complaint procedure enabling data subjects to raise PDPA concerns directly with the organisation before escalating to the Commissioner",
+        "whatGoodLooksLike": [
+          "Complaint procedure is published in BM and English, accessible from the privacy notice or organisation's website",
+          "Procedure specifies a named contact or team for receiving complaints and a committed response timeframe",
+          "Procedure explains what the organisation will do with the complaint (investigate, respond, remediate) and the data subject's right to escalate to the Commissioner",
+          "Procedure is tested periodically to verify the contact details are working",
+          "Procedure is cross-referenced in the privacy notice so data subjects can easily find it"
+        ],
+        "commonGaps": [
+          "No internal complaint procedure published — data subjects are directed immediately to the Commissioner without internal resolution opportunity",
+          "Complaint contact email is incorrect, unmonitered, or inactive",
+          "Procedure does not specify any timeframe for response",
+          "Procedure exists but is not linked from the privacy notice, making it inaccessible"
+        ],
+        "suggestedSources": [
+          "Published complaint procedure (website screenshot or PDF)",
+          "Privacy notice showing link to complaint procedure",
+          "Test email to complaint contact address confirming it is active"
+        ],
+        "format": "Website screenshots / PDF",
+        "retentionPeriod": "All versions retained"
+      },
+      {
+        "id": "s104-E2",
+        "name": "Data subject complaint log and resolution records",
+        "description": "A log of all data subject complaints received (direct and via the Commissioner), showing investigation steps, outcomes, and remedial actions taken",
+        "whatGoodLooksLike": [
+          "Complaint log records all complaints with date received, nature, investigation steps, outcome, and remedial actions",
+          "Complaints are investigated promptly with a target resolution timeframe",
+          "Where a complaint reveals a genuine violation, remediation is documented and the data subject is informed of the outcome",
+          "Complaint themes are analysed to identify systemic issues requiring structural remediation",
+          "DPO reviews complaint log monthly and reports complaint metrics to management"
+        ],
+        "commonGaps": [
+          "No complaint log exists",
+          "Log records complaints received but does not document investigation steps or outcomes",
+          "Where the complaint reveals a genuine violation, no remediation is documented",
+          "Complaint log shows a pattern of similar complaints indicating a systemic issue that has not been addressed"
+        ],
+        "suggestedSources": [
+          "Complaint log (last 3 years)",
+          "Sample complaint investigation records and response letters",
+          "Remediation actions taken in response to complaints",
+          "Management report on complaint metrics"
+        ],
+        "format": "Spreadsheet / Ticketing system export",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "s104-E3",
+        "name": "Commissioner investigation correspondence and response records",
+        "description": "Records of any Commissioner investigations arising from data subject complaints, including all correspondence with the Commissioner, internal investigation records, and evidence of any remedial actions taken in response",
+        "whatGoodLooksLike": [
+          "All Commissioner correspondence is filed in chronological order and retrievable immediately",
+          "The organisation's responses to Commissioner investigation requests are factually accurate, complete, and legally reviewed before submission",
+          "Where the Commissioner investigation reveals a violation, the organisation has implemented prompt remedial action documented with evidence",
+          "Legal counsel engagement records show Legal was involved from the point the investigation commenced",
+          "Post-investigation report documents lessons learned and systemic improvements made"
+        ],
+        "commonGaps": [
+          "Commissioner correspondence cannot be located or is incomplete",
+          "Responses to the Commissioner were prepared without legal review and contain inaccuracies",
+          "Remedial action promised in the Commissioner response was never implemented",
+          "The organisation failed to respond to the Commissioner within the specified timeframe, resulting in an escalation"
+        ],
+        "suggestedSources": [
+          "File of all Commissioner correspondence (last 5 years)",
+          "Legal counsel engagement records for Commissioner investigations",
+          "Internal investigation records and reports",
+          "Remediation evidence for violations identified in Commissioner investigations"
+        ],
+        "format": "PDF correspondence / Legal memoranda",
+        "retentionPeriod": "10 years"
+      }
+    ],
+    "auditTips": [
+      "Navigate to the organisation's website and attempt to find the complaint procedure — is it easily accessible?",
+      "Review the complaint log for patterns — recurring complaint types indicate systemic compliance issues",
+      "Ask whether the organisation has received any complaints that were also lodged with the Commissioner and verify full cooperation",
+      "Ask to see the response to any specific complaint cited in the inspection notice or referral"
+    ]
+  },
+  "s106": {
+    "sectionId": "s106",
+    "part": "VIII",
+    "title": "Investigation Powers",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors exercising investigation powers will assess whether the organisation has cooperated fully, provided accurate information, and preserved evidence. An investigation response protocol and evidence preservation capability are the key readiness indicators.",
+    "evidenceItems": [
+      {
+        "id": "s106-E1",
+        "name": "Investigation response protocol and legal counsel engagement records",
+        "description": "A documented protocol for managing Commissioner investigations, and evidence that legal counsel was engaged at the earliest opportunity in any past investigation",
+        "whatGoodLooksLike": [
+          "Investigation response protocol designates the CEO and Legal Counsel as ultimate decision-makers and the DPO as operational coordinator",
+          "Protocol specifies the internal escalation path from first contact with JPDP investigators to Board notification",
+          "Where a past investigation has occurred: legal counsel engagement began within 24 hours of first JPDP contact",
+          "Protocol includes guidance on responding to document production requests and interview requests",
+          "Protocol specifies the litigation hold activation procedure to prevent evidence destruction"
+        ],
+        "commonGaps": [
+          "No investigation response protocol exists",
+          "Protocol exists but was never tested and staff are unaware of it",
+          "In a past investigation, the organisation responded without legal counsel involvement, resulting in inaccurate or prejudicial statements",
+          "Litigation hold was not activated promptly, resulting in deletion of potentially relevant records during the investigation"
+        ],
+        "suggestedSources": [
+          "Investigation response protocol document",
+          "Legal counsel engagement records for any past Commissioner investigation",
+          "Internal escalation communications from past investigations",
+          "Litigation hold activation records"
+        ],
+        "format": "PDF / Word document",
+        "retentionPeriod": "Permanently"
+      }
+    ],
+    "auditTips": [
+      "Ask for the investigation response protocol and verify it has been reviewed since the 2024 Amendment came into force",
+      "If the organisation has been subject to a past Commissioner investigation, verify that all aspects of the investigation are documented and closed",
+      "Ask how the organisation would respond to a surprise visit from JPDP investigators — the procedural readiness of the response indicates overall compliance culture"
+    ]
+  }
+}

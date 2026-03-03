@@ -1,0 +1,140 @@
+{
+  "description": "Mapping of PDPA 2010 (Act 709) sections to the Personal Data Protection Standards 2015 issued under the Act",
+  "lastUpdated": "2025-06-01",
+  "standards": [
+    {
+      "id": "pdpa-standard-electronic-security-2015",
+      "title": "Personal Data Protection Standard (Security of Personal Data — Electronic) 2015",
+      "shortTitle": "Electronic Security Standard 2015",
+      "subject": "Security measures for electronically processed personal data",
+      "effectiveDate": "2015-11-01",
+      "supplementFilePath": "supplements/standards/pdpa-standard-2015.json",
+      "supplementSection": "electronic-security"
+    },
+    {
+      "id": "pdpa-standard-nonelectronic-security-2015",
+      "title": "Personal Data Protection Standard (Security of Personal Data — Non-Electronic) 2015",
+      "shortTitle": "Non-Electronic Security Standard 2015",
+      "subject": "Security measures for non-electronically processed (paper-based) personal data",
+      "effectiveDate": "2015-11-01",
+      "supplementFilePath": "supplements/standards/pdpa-standard-2015.json",
+      "supplementSection": "non-electronic-security"
+    },
+    {
+      "id": "pdpa-standard-retention-2015",
+      "title": "Personal Data Protection Standard (Retention of Personal Data) 2015",
+      "shortTitle": "Retention Standard 2015",
+      "subject": "Maximum retention periods and secure deletion requirements for personal data",
+      "effectiveDate": "2015-11-01",
+      "supplementFilePath": "supplements/standards/pdpa-standard-2015.json",
+      "supplementSection": "retention"
+    },
+    {
+      "id": "pdpa-standard-data-integrity-2015",
+      "title": "Personal Data Protection Standard (Integrity of Personal Data) 2015",
+      "shortTitle": "Data Integrity Standard 2015",
+      "subject": "Accuracy, completeness, and currency requirements for personal data",
+      "effectiveDate": "2015-11-01",
+      "supplementFilePath": "supplements/standards/pdpa-standard-2015.json",
+      "supplementSection": "data-integrity"
+    }
+  ],
+  "mappings": [
+    {
+      "section": "s9",
+      "sectionTitle": "Security Principle",
+      "part": "II",
+      "standardReferences": [
+        {
+          "standardId": "pdpa-standard-electronic-security-2015",
+          "relevantProvisions": ["s3", "s4", "s5", "s6", "s7"],
+          "relationship": "implements",
+          "notes": "The Electronic Security Standard directly implements s9 for electronically processed personal data. It specifies minimum requirements for: (1) access controls and authentication; (2) encryption of stored and transmitted personal data; (3) system and network security measures; (4) physical and environmental security for server rooms and data centers; (5) security incident logging and monitoring; and (6) security testing and vulnerability assessment. Data users must comply with the Standard as a minimum baseline; the Codes of Practice may specify enhanced requirements for particular sectors."
+        },
+        {
+          "standardId": "pdpa-standard-nonelectronic-security-2015",
+          "relevantProvisions": ["s3", "s4", "s5"],
+          "relationship": "implements",
+          "notes": "The Non-Electronic Security Standard implements s9 for paper-based records and other non-electronic media. It specifies requirements for: (1) physical access controls to areas containing personal data; (2) document security including locked storage; (3) clean desk policy implementation; (4) secure document disposal (shredding); and (5) visitor management and access logging for secure areas."
+        }
+      ]
+    },
+    {
+      "section": "s10",
+      "sectionTitle": "Retention Principle",
+      "part": "II",
+      "standardReferences": [
+        {
+          "standardId": "pdpa-standard-retention-2015",
+          "relevantProvisions": ["s3", "s4", "s5", "s6"],
+          "relationship": "implements",
+          "notes": "The Retention Standard directly implements s10. It prescribes: (1) the general maximum retention principle — personal data shall not be kept longer than necessary for the purpose for which it was collected; (2) minimum retention periods for regulated sectors where other legislation (e.g., Companies Act, AMLA) requires retention; (3) procedures for the secure deletion of electronic personal data (e.g., cryptographic erasure, secure overwriting); (4) procedures for the secure destruction of physical records (e.g., cross-cut shredding, incineration); and (5) documentation requirements for retention schedules and deletion logs. Sector-specific codes may specify retention periods appropriate to that sector which, where more specific, prevail over the general Standard."
+        }
+      ]
+    },
+    {
+      "section": "s11",
+      "sectionTitle": "Data Integrity Principle",
+      "part": "II",
+      "standardReferences": [
+        {
+          "standardId": "pdpa-standard-data-integrity-2015",
+          "relevantProvisions": ["s3", "s4", "s5"],
+          "relationship": "implements",
+          "notes": "The Data Integrity Standard implements s11. It specifies: (1) procedures for verifying the accuracy of personal data at the point of collection; (2) update mechanisms to correct inaccurate or outdated data, including processes for handling correction requests from data subjects under s34; (3) data quality monitoring processes including periodic audits; (4) controls to prevent unauthorized modification or corruption of personal data; and (5) source documentation requirements to establish a chain of custody for personal data accuracy."
+        }
+      ]
+    },
+    {
+      "section": "s5",
+      "sectionTitle": "Application of Personal Data Protection Principles",
+      "part": "II",
+      "standardReferences": [
+        {
+          "standardId": "pdpa-standard-electronic-security-2015",
+          "relevantProvisions": ["s3"],
+          "relationship": "supports",
+          "notes": "Non-compliance with the Security Standards constitutes prima facie evidence of a breach of the Security Principle under s9, read with s5."
+        },
+        {
+          "standardId": "pdpa-standard-retention-2015",
+          "relevantProvisions": ["s3"],
+          "relationship": "supports",
+          "notes": "Non-compliance with the Retention Standard constitutes prima facie evidence of a breach of the Retention Principle under s10, read with s5."
+        },
+        {
+          "standardId": "pdpa-standard-data-integrity-2015",
+          "relevantProvisions": ["s3"],
+          "relationship": "supports",
+          "notes": "Non-compliance with the Data Integrity Standard constitutes prima facie evidence of a breach of the Data Integrity Principle under s11, read with s5."
+        }
+      ]
+    },
+    {
+      "section": "s143A",
+      "sectionTitle": "Data Breach Notification",
+      "part": "X",
+      "standardReferences": [
+        {
+          "standardId": "pdpa-standard-electronic-security-2015",
+          "relevantProvisions": ["s6", "s7"],
+          "relationship": "supports",
+          "notes": "The security incident logging and monitoring requirements of the Electronic Security Standard are prerequisites to effective data breach detection and notification under s143A. The Standard's requirements for incident response planning also support timely breach notification."
+        }
+      ]
+    },
+    {
+      "section": "s30-44",
+      "sectionTitle": "Rights of Data Subject",
+      "part": "II",
+      "standardReferences": [
+        {
+          "standardId": "pdpa-standard-data-integrity-2015",
+          "relevantProvisions": ["s4", "s5"],
+          "relationship": "supports",
+          "notes": "The data integrity procedures — particularly the mechanisms for handling correction requests — directly support the data subject's right to correct inaccurate personal data under s34."
+        }
+      ]
+    }
+  ]
+}

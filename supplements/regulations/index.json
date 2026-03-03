@@ -1,0 +1,92 @@
+{
+  "description": "Index of all subsidiary legislation (regulations, orders, and rules) made under the Personal Data Protection Act 2010 (Act 709)",
+  "parentAct": "Act 709",
+  "lastUpdated": "2025-06-01",
+  "regulations": [
+    {
+      "id": "pdpa-regulations-2013",
+      "title": "Personal Data Protection Regulations 2013",
+      "type": "regulations",
+      "reference": "P.U.(A) 169/2013",
+      "gazetteDate": "2013-11-14",
+      "effectiveDate": "2013-11-15",
+      "enablingSection": "s139",
+      "subject": "General regulations prescribing forms, conditions, and procedures under the Act",
+      "filePath": "supplements/regulations/pdpa-regulations-2013.json",
+      "status": "in-force",
+      "amendments": []
+    },
+    {
+      "id": "class-of-data-users-order-2013",
+      "title": "Personal Data Protection (Class of Data Users) Order 2013",
+      "type": "order",
+      "reference": "P.U.(A) 168/2013",
+      "gazetteDate": "2013-11-14",
+      "effectiveDate": "2013-11-15",
+      "enablingSection": "s13(3)",
+      "subject": "Prescribes the 13 classes of data users required to register with the Commissioner",
+      "filePath": "supplements/regulations/class-of-data-users-order-2013.json",
+      "status": "in-force",
+      "amendments": [
+        {
+          "id": "class-of-data-users-amendment-2016",
+          "reference": "P.U.(A) 27/2016",
+          "gazetteDate": "2016-01-28",
+          "description": "Minor amendment to clarify the description of certain classes"
+        }
+      ]
+    },
+    {
+      "id": "class-of-data-users-amendment-2016",
+      "title": "Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+      "type": "order",
+      "reference": "P.U.(A) 27/2016",
+      "gazetteDate": "2016-01-28",
+      "effectiveDate": "2016-01-29",
+      "enablingSection": "s13(3)",
+      "subject": "Amendment to the Class of Data Users Order 2013",
+      "filePath": "supplements/regulations/class-of-data-users-amendment-2016.json",
+      "status": "in-force",
+      "parentInstrument": "class-of-data-users-order-2013"
+    },
+    {
+      "id": "registration-regulations-2013",
+      "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+      "type": "regulations",
+      "reference": "P.U.(A) 170/2013",
+      "gazetteDate": "2013-11-14",
+      "effectiveDate": "2013-11-15",
+      "enablingSection": "s139",
+      "subject": "Registration procedures, forms, and certificate requirements for data users",
+      "filePath": "supplements/regulations/registration-regulations-2013.json",
+      "status": "in-force",
+      "amendments": []
+    },
+    {
+      "id": "fees-regulations-2013",
+      "title": "Personal Data Protection (Fees) Regulations 2013",
+      "type": "regulations",
+      "reference": "P.U.(A) 171/2013",
+      "gazetteDate": "2013-11-14",
+      "effectiveDate": "2013-11-15",
+      "enablingSection": "s139",
+      "subject": "Fee schedule for registration, renewal, access requests, and other matters",
+      "filePath": "supplements/regulations/fees-regulations-2013.json",
+      "status": "in-force",
+      "amendments": []
+    },
+    {
+      "id": "compounding-of-offences-2016",
+      "title": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+      "type": "regulations",
+      "reference": "P.U.(A) 28/2016",
+      "gazetteDate": "2016-01-28",
+      "effectiveDate": "2016-01-29",
+      "enablingSection": "s139",
+      "subject": "Procedures and compound amounts for compoundable offences under the Act",
+      "filePath": "supplements/regulations/compounding-of-offences-2016.json",
+      "status": "in-force",
+      "amendments": []
+    }
+  ]
+}

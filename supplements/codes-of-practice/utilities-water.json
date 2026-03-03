@@ -1,0 +1,72 @@
+{
+  "id": "cop-utilities-water",
+  "title": "Personal Data Protection Code of Practice (Utilities — Water) 2022",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "2022-01-01",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["utilities"],
+  "summary": "This sector-specific Code applies to water utility providers in the Utilities class (Class 11 of the Class of Data Users Order 2013), including state water utilities companies and Pengurusan Aset Air Berhad (PAAB) concessionaries. It supplements the General Code 2022 with requirements tailored to the water services sector. The Code takes into account requirements under the Water Services Industry Act 2006 and the National Water Services Commission (SPAN) regulations. Water utilities process comparatively less sensitive personal data than electricity utilities given the absence of smart metering at equivalent scale, but must still comply with all PDPA principles.",
+  "provisions": [
+    {
+      "id": "cop-water-s1",
+      "title": "Scope and Application",
+      "content": "This Code applies to water operators licensed under the Water Services Industry Act 2006 (Act 655), including state water authorities and their concessionaries. It addresses the processing of consumer personal data including account information, water consumption records, billing data, and field service records. Water utilities must also comply with any SPAN directives relating to consumer data management.",
+      "requirements": [
+        "Water utilities must identify and document all personal data processing activities in their ROPA",
+        "SPAN regulatory disclosures are lawful and do not require consumer consent",
+        "This Code must be read together with the General Code 2022"
+      ]
+    },
+    {
+      "id": "cop-water-s2",
+      "title": "Consumer Account and Billing Data",
+      "content": "Consumer account and billing data must be: (a) collected only for the purposes of providing water services, billing, and regulatory compliance; (b) maintained accurate and current — utilities must have processes for accepting consumer updates; (c) retained for the duration of the service relationship plus 7 years for regulatory and billing dispute purposes; (d) not disclosed to third parties except for debt collection (under DPAs), regulatory reporting, and other lawfully required disclosures; and (e) protected by appropriate security measures consistent with the Security Standards 2015.",
+      "requirements": [
+        "7-year post-relationship retention for billing records",
+        "Consumer updates to account data must be processed within 7 days",
+        "Third-party billing agents must operate under DPAs",
+        "Account data must not be used for commercial profiling without consent"
+      ]
+    },
+    {
+      "id": "cop-water-s3",
+      "title": "Field Service Records",
+      "content": "Personal data collected in the course of field service activities (meter reading, maintenance, connection/disconnection, plumbing inspections) must be: (a) limited to information genuinely necessary for the service task; (b) used only for the purpose of the specific service activity; (c) not retained beyond the completion of the activity and the associated administrative record; and (d) secured on field service devices, which must be encrypted and access-controlled. Field service officers must not collect personal data beyond what is required for their assigned task.",
+      "requirements": [
+        "Field service devices must be encrypted",
+        "Field service personnel must not collect personal data beyond their task requirements",
+        "Field service records retained for a maximum of 5 years for maintenance history purposes",
+        "CCTV footage from field vehicles must comply with a maximum 30-day retention period"
+      ]
+    },
+    {
+      "id": "cop-water-s4",
+      "title": "Debt Management",
+      "content": "Water utilities engaging in debt recovery for unpaid accounts must: (a) disclose credit bureau reporting in the consumer privacy notice; (b) use debt collection agents only under data processing agreements; (c) ensure that debt collection activities comply with s44 (Access Principle) and consumer rights under the PDPA; (d) correct credit bureau records promptly upon payment; and (e) not disclose consumer debt information to third parties beyond what is necessary for the debt recovery purpose.",
+      "requirements": [
+        "Credit bureau reporting disclosure is mandatory in the consumer notice",
+        "Debt collection agents must sign DPAs before receiving consumer data",
+        "Post-payment credit bureau correction within 14 days",
+        "Consumer debt data must not be shared beyond the immediate debt recovery purpose"
+      ]
+    },
+    {
+      "id": "cop-water-s5",
+      "title": "Security of Consumer Data",
+      "content": "Water utilities must implement security measures for consumer data consistent with the Security Standards 2015, including: (a) access controls for consumer information systems; (b) encrypted storage of consumer account and billing data; (c) secure disposal of physical records (meter reading books, paper billing records) through cross-cut shredding; (d) network security for online customer portals; and (e) incident response plans covering consumer data breach scenarios. Consumer-facing online portals must implement MFA or equivalent authentication for account access.",
+      "requirements": [
+        "Consumer online portals must implement MFA",
+        "Paper billing records must be cross-cut shredded at end of retention period",
+        "Incident response plan must be tested at least annually",
+        "Consumer data systems must be on secure and access-controlled network segments"
+      ]
+    }
+  ],
+  "keywords": [
+    "water utilities", "water services", "SPAN", "PAAB", "consumer data", "billing",
+    "field service", "meter reading", "debt collection", "Water Services Industry Act",
+    "Class 11", "utilities"
+  ]
+}

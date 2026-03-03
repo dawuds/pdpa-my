@@ -1,0 +1,30 @@
+[
+  {
+    "id": "s145",
+    "part": "XI",
+    "division": null,
+    "title": "Savings",
+    "sectionNumber": 145,
+    "obligationType": "administrative",
+    "verbatim": "(1) Nothing in this Act shall affect—\n(a) any right or obligation existing immediately before the commencement of this Act in respect of personal data processing by a person who was lawfully processing personal data at that time;\n(b) any legal proceeding that has been commenced before the commencement of this Act;\n(c) any investigation commenced before the commencement of this Act;\n(d) any order, direction, or notice issued before the commencement of this Act.\n(2) Any proceedings or investigation in respect of an offence or matter arising before the commencement of this Act may be continued and completed under the law applicable to such offence or matter as if this Act had not been enacted.\n(3) Any right of appeal existing immediately before the commencement of this Act shall be exercised as if this Act had not been enacted.",
+    "translation": "Savings provisions protect existing rights, obligations, legal proceedings, and investigations that pre-date the Act's commencement. Prior proceedings continue under applicable prior law. Existing appeal rights are preserved.",
+    "amendedBy": null,
+    "effectiveDate": "2013-11-15",
+    "relatedPrinciple": null,
+    "keywords": ["savings", "existing rights", "obligations", "legal proceedings", "investigation", "commencement", "prior law", "appeal rights"]
+  },
+  {
+    "id": "s146",
+    "part": "XI",
+    "division": null,
+    "title": "Transitional provisions",
+    "sectionNumber": 146,
+    "obligationType": "administrative",
+    "verbatim": "(1) Any person who is processing personal data immediately before the commencement of this Act and is required to be registered as a data user under this Act shall apply for registration within such period as may be prescribed by the Minister.\n(2) A person referred to in subsection (1) who is processing personal data in good faith in reliance on the applicable law immediately before the commencement of this Act may continue to do so until—\n(a) the expiry of the period prescribed by the Minister under subsection (1); or\n(b) the determination of the person's application for registration, whichever is the later.\n(3) Following the commencement of the Personal Data Protection (Amendment) Act 2024—\n(a) a data user that was registered before the Amendment Act came into force shall be deemed to be registered in accordance with the requirements of the amended Act for a period of twelve months from the commencement of the Amendment Act, or until the data user's registration falls due for renewal, whichever is the earlier;\n(b) a data user that is required to appoint a data protection officer shall appoint a data protection officer within twelve months of the commencement of the relevant provision;\n(c) a data user that is required to maintain records of processing activities shall comply with that requirement within twelve months of the commencement of the relevant provision;\n(d) a data user that is required to carry out a data protection impact assessment in respect of existing processing activities shall do so within eighteen months of the commencement of the relevant provision.\n(4) Any code of practice in force immediately before the commencement of the Amendment Act shall continue in force until it is replaced or revoked by a new code of practice.\n(5) The Commissioner shall, within six months of the commencement of the Amendment Act, publish guidance on compliance with the new requirements introduced by the Amendment Act.",
+    "translation": "Transitional provisions govern the orderly implementation of both the original Act and the 2024 Amendment. Existing processors must register within the prescribed period and may continue operating during that period. Following the 2024 Amendment: existing registrations are deemed compliant for 12 months; DPO appointments must be made within 12 months; records of processing must be established within 12 months; DPIAs for existing processing must be completed within 18 months. Existing codes of practice remain in force. The Commissioner must publish compliance guidance within 6 months of the Amendment's commencement.",
+    "amendedBy": "A1699 s33",
+    "effectiveDate": "2025-04-01",
+    "relatedPrinciple": null,
+    "keywords": ["transitional", "registration", "good faith", "Amendment Act", "DPO appointment", "12 months", "18 months", "DPIA", "records", "deemed registration", "guidance", "codes of practice"]
+  }
+]

@@ -1,0 +1,185 @@
+{
+  "s101": {
+    "sectionId": "s101",
+    "part": "VIII",
+    "title": "Powers of Inspection",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 101 confers powers on the Commissioner and authorised officers to enter premises, inspect systems, examine records, and take copies of documents for the purpose of ascertaining compliance with the PDPA. Data users must cooperate with inspections and must not obstruct, hinder, or deceive inspecting officers.",
+      "requirements": [
+        {
+          "id": "s101-L1",
+          "requirement": "Cooperate fully with JPDP inspection officers exercising powers under s101, including providing access to premises, systems, records, and personnel as requested, and responding truthfully to inquiries",
+          "rationale": "Obstruction of a JPDP inspection is a criminal offence; cooperation is both a legal obligation and a factor that influences the Commissioner's assessment of the data user's good faith",
+          "owner": "DPO / Legal Counsel / Senior Management",
+          "frequency": "As required",
+          "priority": "Critical"
+        },
+        {
+          "id": "s101-L2",
+          "requirement": "Maintain all PDPA compliance documentation (ROPA, consent records, DPAs, security policies, training records, breach logs, registration certificate) in an organised and readily accessible form so it can be produced to JPDP inspectors promptly upon request",
+          "rationale": "JPDP inspectors assess documentation as the primary evidence of compliance; disorganised or unavailable records create a negative inference even if underlying compliance exists",
+          "owner": "DPO / Legal / IT",
+          "frequency": "Ongoing",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Systems must be capable of producing audit logs, access records, consent records, and other technical evidence in a format accessible to JPDP inspectors.",
+      "requirements": [
+        {
+          "id": "s101-T1",
+          "requirement": "Maintain audit logs for all systems processing personal data that record access events, data modifications, and export activities, with sufficient detail (user, timestamp, data accessed, action taken) to reconstruct processing activities for inspection purposes",
+          "rationale": "Audit logs are key technical evidence in JPDP inspections; they demonstrate whether access controls are operating effectively and whether processing has occurred within authorised parameters",
+          "owner": "IT Security / CISO",
+          "frequency": "Maintained continuously; log retention for minimum 3 years",
+          "priority": "High"
+        },
+        {
+          "id": "s101-T2",
+          "requirement": "Maintain a centralised compliance document repository (physical and/or digital) where all key PDPA compliance documents are stored, versioned, and accessible to the DPO within minutes during an unannounced inspection",
+          "rationale": "An unannounced inspection leaves no time for document preparation; a pre-organised repository enables rapid production of evidence to inspectors",
+          "owner": "DPO / IT / Legal",
+          "frequency": "Maintained continuously; completeness reviewed quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The organisation must have a documented inspection response procedure that designates a single point of contact for JPDP interactions, specifies the escalation process upon receipt of an inspection notice, and ensures legal counsel is engaged promptly.",
+      "requirements": [
+        {
+          "id": "s101-G1",
+          "requirement": "Establish an inspection response procedure designating the DPO as the primary point of contact for JPDP inspections, specifying that Legal counsel is notified immediately upon receipt of any inspection notice, and assigning responsibilities for document collection and witness preparation",
+          "rationale": "A documented response procedure ensures the organisation responds consistently and professionally to inspections, reducing the risk of inadvertent obstruction or prejudicial statements",
+          "owner": "DPO / Legal / Senior Management",
+          "frequency": "Established; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s101-G2",
+          "requirement": "Conduct an annual internal PDPA compliance inspection or self-assessment using the same document categories that JPDP inspectors review, to identify and remediate gaps before an actual inspection",
+          "rationale": "An annual self-assessment identifies compliance gaps in a low-stakes environment, enabling remediation before JPDP discovers the same gaps in a formal inspection",
+          "owner": "DPO / Internal Audit",
+          "frequency": "Annual",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s104": {
+    "sectionId": "s104",
+    "part": "VIII",
+    "title": "Complaint Procedures",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 104 provides for data subjects to lodge complaints with the Commissioner regarding non-compliance with the PDPA. Upon receipt of a complaint, the Commissioner may investigate the data user. Data users must be prepared to respond to Commissioner investigations arising from data subject complaints.",
+      "requirements": [
+        {
+          "id": "s104-L1",
+          "requirement": "Establish and publish an internal complaint and data subject grievance procedure that enables data subjects to raise PDPA concerns directly with the organisation before escalating to the Commissioner, with a commitment to respond within a defined timeframe",
+          "rationale": "An accessible internal grievance mechanism demonstrates good faith, may resolve complaints before they escalate to regulatory investigations, and is viewed positively by the Commissioner in enforcement proceedings",
+          "owner": "DPO / Customer Relations",
+          "frequency": "Established; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s104-L2",
+          "requirement": "Upon receiving notification of a Commissioner investigation arising from a data subject complaint, engage Legal counsel immediately, designate a single point of contact for the investigation, and comply fully with all information requests from the Commissioner within the specified timeframes",
+          "rationale": "The Commissioner's investigation powers are broad; non-cooperation or delayed responses are treated as aggravating factors; early engagement of legal counsel enables a structured and legally sound response",
+          "owner": "DPO / Legal Counsel / Senior Management",
+          "frequency": "As required",
+          "priority": "Critical"
+        },
+        {
+          "id": "s104-L3",
+          "requirement": "Where a complaint reveals a genuine PDPA violation, implement prompt remedial action and inform the Commissioner of the corrective steps taken; proactive remediation is considered a mitigating factor in enforcement proceedings",
+          "rationale": "Demonstrable corrective action reduces the likelihood of enforcement escalation and supports a plea in mitigation; a failure to remediate after receiving a complaint is an aggravating factor",
+          "owner": "DPO / Senior Management",
+          "frequency": "Per complaint requiring remediation",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The organisation must be able to retrieve the specific data subject's personal data records, consent records, and interaction history in response to a Commissioner investigation.",
+      "requirements": [
+        {
+          "id": "s104-T1",
+          "requirement": "Ensure the data subject request management system can retrieve all records relating to a specific data subject (including all access requests, correction requests, complaints, and consent history) in a consolidated format to support investigation responses",
+          "rationale": "A consolidated view of all interactions with a complaining data subject enables the organisation to prepare a complete and accurate response to the Commissioner's investigation",
+          "owner": "IT / DPO / CRM",
+          "frequency": "System capability verified annually",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Complaint governance must ensure that data subject complaints are taken seriously, investigated promptly, and resolved where possible, with escalation to senior management where remedial action is required.",
+      "requirements": [
+        {
+          "id": "s104-G1",
+          "requirement": "Implement a data subject complaint log that records all complaints received (direct and via the Commissioner), the nature of the complaint, the investigation conducted, the outcome, and any remedial actions taken, and report complaint metrics to the DPO monthly",
+          "rationale": "A complaint log enables the organisation to identify systemic issues and demonstrate to the Commissioner that complaints are managed seriously; recurring complaint themes indicate compliance gaps requiring structural remediation",
+          "owner": "DPO / Customer Relations",
+          "frequency": "Maintained continuously; monthly reporting",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s106": {
+    "sectionId": "s106",
+    "part": "VIII",
+    "title": "Investigation Powers",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 106 confers broad investigation powers on the Commissioner, including the power to require production of documents, interview witnesses, and inspect premises. Data users must comply with all investigation requirements and must not obstruct, destroy evidence, or make false statements during an investigation.",
+      "requirements": [
+        {
+          "id": "s106-L1",
+          "requirement": "Upon receipt of any investigation notice or request for information from the Commissioner under s106, treat the matter as a legal priority, engage external legal counsel within 24 hours, and prepare a detailed written response addressing all questions posed",
+          "rationale": "Investigation responses become part of the formal record; inadequate or inaccurate responses may be used as evidence in enforcement proceedings; legal counsel is essential to ensure responses are complete and legally protected",
+          "owner": "DPO / Legal Counsel / CEO",
+          "frequency": "As required",
+          "priority": "Critical"
+        },
+        {
+          "id": "s106-L2",
+          "requirement": "Preserve all documents, records, and electronic data that may be relevant to a JPDP investigation upon receipt of an investigation notice; implement a litigation hold to prevent deletion or modification of potentially relevant records",
+          "rationale": "Destruction of evidence after receiving an investigation notice constitutes obstruction and is a separate criminal offence; a litigation hold ensures the evidentiary record is preserved",
+          "owner": "Legal Counsel / IT / DPO",
+          "frequency": "Upon receipt of investigation notice",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical systems must support evidence preservation and production in the formats required by JPDP investigation procedures.",
+      "requirements": [
+        {
+          "id": "s106-T1",
+          "requirement": "Implement a legal hold capability in all primary data repositories and email systems that can be activated to prevent deletion of specified data categories pending the resolution of an investigation",
+          "rationale": "A technical legal hold prevents inadvertent or deliberate destruction of evidence during an investigation; without this capability, the organisation relies entirely on manual compliance with evidence preservation instructions",
+          "owner": "IT / Legal",
+          "frequency": "Capability maintained; activated as required",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Investigation governance must ensure that the organisation responds effectively and with appropriate legal representation to all Commissioner investigations.",
+      "requirements": [
+        {
+          "id": "s106-G1",
+          "requirement": "Establish an investigation response protocol designating the CEO and Legal Counsel as the ultimate decision-makers for investigation strategy, and the DPO as the operational coordinator of investigation responses",
+          "rationale": "Investigations require both strategic legal decisions and operational coordination; clear role assignment prevents confusion and ensures the organisation responds with a coherent, legally defensible position",
+          "owner": "CEO / Legal / DPO",
+          "frequency": "Protocol established; activated as required",
+          "priority": "High"
+        }
+      ]
+    }
+  }
+}

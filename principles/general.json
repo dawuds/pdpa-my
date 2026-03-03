@@ -1,0 +1,95 @@
+{
+  "id": "general",
+  "section": 6,
+  "name": "General Principle",
+  "summary": "A data user shall not process personal data about a data subject unless the data subject has given his consent to the processing, or the processing is necessary for one or more of the specified lawful purposes. This is the foundational principle that conditions all personal data processing under the PDPA.",
+  "obligations": [
+    {
+      "id": "general-O1",
+      "obligation": "Obtain valid consent from the data subject before processing personal data",
+      "basis": "Section 6(1)",
+      "type": "mandatory"
+    },
+    {
+      "id": "general-O2",
+      "obligation": "Ensure that where processing relies on a lawful basis other than consent, that basis is clearly established and documented prior to processing",
+      "basis": "Section 6(2)",
+      "type": "mandatory"
+    },
+    {
+      "id": "general-O3",
+      "obligation": "Ensure consent is explicit, informed, and freely given — not bundled with other consents or obtained through deceptive means",
+      "basis": "Section 6(1) read with Section 2 (definition of consent)",
+      "type": "mandatory"
+    },
+    {
+      "id": "general-O4",
+      "obligation": "Maintain records of the consent obtained, including the date, method, and scope of consent for each processing activity",
+      "basis": "Section 6(1); Personal Data Protection Standards 2015",
+      "type": "mandatory"
+    },
+    {
+      "id": "general-O5",
+      "obligation": "Where processing is based on legitimate interests, conduct and document a legitimate interest assessment (LIA) to verify that the interests of the data user are not overridden by the interests or rights of the data subject",
+      "basis": "Section 6(2)(f); 2024 Amendment Act",
+      "type": "mandatory"
+    },
+    {
+      "id": "general-O6",
+      "obligation": "Cease processing immediately if the data subject withdraws consent and no other lawful basis applies, and notify any third parties to whom the data was disclosed",
+      "basis": "Section 6(1); Section 38 (right to withdraw consent)",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "general-X1",
+      "exception": "Processing necessary for the performance of a contract to which the data subject is a party",
+      "basis": "Section 6(2)(a)",
+      "conditions": "The data subject must be a direct party to the contract; processing by a data user to fulfil obligations under a contract with a third party does not qualify under this exception"
+    },
+    {
+      "id": "general-X2",
+      "exception": "Processing necessary for compliance with a legal obligation to which the data user is subject, other than an obligation imposed by contract",
+      "basis": "Section 6(2)(b)",
+      "conditions": "The legal obligation must arise from Malaysian law (statute, subsidiary legislation, court order, or regulatory directive); the data user must not be able to reasonably fulfil the obligation without processing the personal data"
+    },
+    {
+      "id": "general-X3",
+      "exception": "Processing necessary to protect the vital interests of the data subject",
+      "basis": "Section 6(2)(c)",
+      "conditions": "This exception is intended for emergency situations where the data subject is physically incapable of giving consent (e.g., unconscious or incapacitated); it cannot be used where consent could reasonably be obtained"
+    },
+    {
+      "id": "general-X4",
+      "exception": "Processing necessary for the administration of justice, or for the exercise of any functions conferred on any person by or under any written law",
+      "basis": "Section 6(2)(d)",
+      "conditions": "Applies to public authorities and persons exercising statutory functions; the processing must be reasonably necessary and proportionate to the statutory purpose"
+    },
+    {
+      "id": "general-X5",
+      "exception": "Processing necessary for the purposes of legitimate interests pursued by the data user or by a third party to whom the data is disclosed, except where such interests are overridden by the interests of the data subject",
+      "basis": "Section 6(2)(f); 2024 Amendment Act",
+      "conditions": "The data user must conduct a legitimate interest assessment; the processing must be necessary and proportionate; the data subject's reasonable expectations must be considered; a data subject may object to processing under this basis"
+    }
+  ],
+  "practicalGuidance": "Organizations should implement a consent management framework that captures, stores, and makes auditable the consent of every data subject. Consent mechanisms must be granular — separate consents for separate processing purposes — and must be as easy to withdraw as to give. Where relying on a lawful basis other than consent, the applicable basis must be documented in the organization's Records of Processing Activities (ROPA) before processing begins. The 2024 Amendment strengthened consent requirements by requiring that consent be explicit and distinguishable from other matters; pre-ticked boxes or silence will not constitute valid consent. Organizations with complex processing activities should maintain a processing register mapping each activity to its lawful basis. For the legitimate interests basis, a three-part test applies: (1) identify the legitimate interest; (2) assess necessity of the processing; (3) balance against the data subject's interests, rights, and freedoms.",
+  "commonViolations": [
+    "Processing personal data without any documented lawful basis, particularly in marketing and analytics contexts",
+    "Bundling consent with terms and conditions such that refusal of consent prevents use of a service, making consent non-freely given",
+    "Continuing to process personal data after a data subject has withdrawn consent and no alternative lawful basis exists",
+    "Relying on the legitimate interests exception without conducting or documenting a legitimate interest assessment",
+    "Using consent obtained for one purpose to justify processing for a materially different purpose without obtaining fresh consent"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-consent-2023",
+    "pdpc-guidelines-notice-2023"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s3",
+    "general-cop-s4"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "retention",
+  "section": 10,
+  "name": "Retention Principle",
+  "summary": "Personal data processed for any purpose shall not be kept longer than is necessary for the fulfilment of that purpose. Data users must take all reasonable steps to ensure that personal data that is no longer required is destroyed or permanently deleted. The Retention Principle is complemented by the Personal Data Protection Standards 2015, which set out specific requirements for retention schedules.",
+  "obligations": [
+    {
+      "id": "retention-O1",
+      "obligation": "Establish and implement a documented data retention schedule that sets out the maximum retention period for each category of personal data, linked to the purpose for which it was collected",
+      "basis": "Section 10(1); Personal Data Protection Standards 2015 (Retention Standard)",
+      "type": "mandatory"
+    },
+    {
+      "id": "retention-O2",
+      "obligation": "Destroy, delete, or anonymise personal data once the retention period has elapsed and the data is no longer necessary for any purpose (including any secondary purpose such as dispute resolution or legal proceedings)",
+      "basis": "Section 10(2)",
+      "type": "mandatory"
+    },
+    {
+      "id": "retention-O3",
+      "obligation": "Where personal data is destroyed, use a method that renders the data permanently irrecoverable — this includes secure deletion for electronic records (e.g., cryptographic erasure or overwriting) and physical destruction or shredding for paper records",
+      "basis": "Section 10(2); Personal Data Protection Standards 2015 (Retention Standard)",
+      "type": "mandatory"
+    },
+    {
+      "id": "retention-O4",
+      "obligation": "Review retention periods periodically (at least annually) to ensure that personal data is not retained beyond the period for which a lawful purpose exists",
+      "basis": "Section 10(1); Personal Data Protection Standards 2015",
+      "type": "mandatory"
+    },
+    {
+      "id": "retention-O5",
+      "obligation": "Ensure that retention policies apply equally to personal data held by data processors on the data user's behalf; include deletion and return obligations in data processing agreements",
+      "basis": "Section 10(1) read with Section 43",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "retention-X1",
+      "exception": "Personal data may be retained beyond the standard retention period where continued retention is required by or under any written law",
+      "basis": "Section 10(1) (necessary for the purpose)",
+      "conditions": "The specific legal retention obligation must be identified (e.g., Companies Act 2016 requires retention of accounting records for seven years; Employment Act 1955 requires retention of wage records); the data should be retained only for the duration specified by the relevant law and no longer; access to data retained solely for legal compliance purposes should be restricted"
+    },
+    {
+      "id": "retention-X2",
+      "exception": "Personal data may be retained beyond the standard retention period where it is required for the establishment, exercise, or defence of legal claims",
+      "basis": "Section 10(1) (necessary for the purpose)",
+      "conditions": "The anticipated or ongoing legal proceedings must be documented; retention should be limited to the data necessary for the legal claim and for the duration of the limitation period applicable to that claim under the Limitation Act 1953; data should be subject to a litigation hold and access controls"
+    },
+    {
+      "id": "retention-X3",
+      "exception": "Anonymised data — data from which the data subject can no longer be directly or indirectly identified — is not subject to the retention limitations as it ceases to constitute 'personal data'",
+      "basis": "Section 4 (definition of personal data); Section 10(1)",
+      "conditions": "Anonymisation must be genuinely irreversible; pseudonymisation (replacement of direct identifiers with codes, where re-identification is possible using a key) does not qualify; the data user bears the burden of demonstrating that re-identification is not reasonably possible given available means"
+    }
+  ],
+  "practicalGuidance": "Organisations should develop a data retention schedule as part of their broader data governance framework. The schedule should be organised by data category (e.g., customer records, employee records, transaction data, marketing data, CCTV footage) and specify: the retention period, the legal or business basis for that period, the format of the data, the destruction method, and the person responsible for triggering destruction. Where statutory retention obligations exist under sector-specific laws (e.g., seven years for financial records under the Financial Services Act 2013, or under the Income Tax Act 1967), those periods should be reflected in the schedule. Destruction logs should be maintained to provide evidence of compliance. Backup media is a common pitfall — retention policies must explicitly cover backups, archived data, and data held by processors, not just live production systems. The Personal Data Protection Standards 2015 (Retention Standard) require organisations to take into account the purpose, quantity, nature, and sensitivity of the data when determining retention periods.",
+  "commonViolations": [
+    "Retaining personal data indefinitely with no defined retention period, often because no formal retention schedule has been established",
+    "Retaining customer or employee data long after the relationship has ended and no legal retention obligation applies, citing vague 'future business purposes'",
+    "Failing to apply retention policies to backup systems, archived databases, or data held by third-party processors and cloud providers",
+    "Disposing of paper records containing personal data (e.g., customer forms, HR files) in general waste rather than through secure shredding",
+    "Deleting personal data from active systems while retaining it in legacy databases, email archives, or file shares that are not covered by automated deletion processes"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-retention-2023"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015-retention",
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s8"
+  ]
+}

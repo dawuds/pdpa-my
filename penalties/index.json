@@ -1,0 +1,447 @@
+[
+  {
+    "id": "pen-s5-3",
+    "section": "s5(3)",
+    "part": "II",
+    "offence": "Contravention of Personal Data Protection Principles",
+    "description": "Failure to comply with any of the seven personal data protection principles under Part II Division 1 (sections 6-12), including the General Principle, Notice and Choice Principle, Disclosure Principle, Security Principle, Retention Principle, Data Integrity Principle, and Access Principle",
+    "originalPenalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "principles",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "This is the primary offence under the PDPA. Each principle violation is a separate offence. The 2024 Amendment significantly increased penalties to strengthen deterrence."
+  },
+  {
+    "id": "pen-s5-2",
+    "section": "s5(2)",
+    "part": "II",
+    "offence": "Processing Personal Data Without Registration",
+    "description": "Processing personal data as a data user belonging to a class of data users required to register under the Act, without being registered or without a valid certificate of registration",
+    "originalPenalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "registration",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "Applies only to data users in a prescribed class under the Class of Data Users Order 2013. Non-registered classes are subject to the Act's principles but not the registration requirement."
+  },
+  {
+    "id": "pen-s13",
+    "section": "s13",
+    "part": "II",
+    "offence": "Failure to Register as Data User",
+    "description": "Failure by a data user in a prescribed class to apply for registration with the Commissioner before processing personal data, or continuing to process personal data after a registration is revoked or suspended",
+    "originalPenalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true
+    },
+    "amendedPenalty": null,
+    "category": "registration",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "Related to but distinct from s5(2). The registration obligation arises at the point a data user begins operations; s5(2) covers the ongoing processing without registration."
+  },
+  {
+    "id": "pen-s129A",
+    "section": "s129A",
+    "part": "X",
+    "offence": "Non-Compliance with Cross-Border Personal Data Transfer Requirements",
+    "description": "Transfer or permitting the transfer of personal data to a place outside Malaysia without complying with the prescribed requirements, including transfers to countries not approved by the Minister and failure to implement adequate safeguards where required",
+    "originalPenalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "cross-border",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "Section 129A was substantially revised by A1699. The 2024 amendment introduced new mechanisms including binding corporate rules, standard contractual clauses, and certification schemes as alternatives to ministerial approval."
+  },
+  {
+    "id": "pen-s130",
+    "section": "s130",
+    "part": "X",
+    "offence": "Unauthorized Disclosure by Commissioner or Officers",
+    "description": "Disclosure by the Commissioner, Deputy Commissioner, officer or employee of the Department, or any person acting on behalf of or assisting the Commissioner, of any information that comes to their knowledge in the course of performing their duties, otherwise than in accordance with the Act",
+    "originalPenalty": {
+      "fine": "RM200,000",
+      "fineNumeric": 200000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": null,
+    "category": "disclosure",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "This provision protects the confidentiality of information obtained during enforcement and regulatory activities. It applies to current and former officers and their agents."
+  },
+  {
+    "id": "pen-s131",
+    "section": "s131",
+    "part": "X",
+    "offence": "Obstruction of Commissioner or Authorized Officers",
+    "description": "Wilfully obstructing the Commissioner or any authorized officer in the exercise of their powers or the performance of their duties, including refusing to produce documents, providing false information, or hindering inspections and investigations",
+    "originalPenalty": {
+      "fine": "RM200,000",
+      "fineNumeric": 200000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "enforcement",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "Obstruction includes failure to cooperate with audits, inspections, and investigations. The enhanced penalty post-2024 reflects the increased importance of effective enforcement mechanisms."
+  },
+  {
+    "id": "pen-s132",
+    "section": "s132",
+    "part": "X",
+    "offence": "Unauthorized Disclosure by Data User",
+    "description": "Disclosure of personal data by a data user, data processor, or their employees in contravention of the Act, including disclosure for unauthorized purposes, to unauthorized parties, or beyond the scope for which the data was collected and consented to",
+    "originalPenalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "disclosure",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "Distinct from the Disclosure Principle (s8) violation. This provision targets deliberate unauthorized disclosures by persons who have access to personal data in the course of their employment or engagement."
+  },
+  {
+    "id": "pen-s133",
+    "section": "s133",
+    "part": "X",
+    "offence": "Failure to Comply with Enforcement Notice",
+    "description": "Failure to comply with any requirement set out in an enforcement notice issued by the Commissioner, including notices requiring the data user to take specific remedial action, cease processing, or comply with any provision of the Act within a specified timeframe",
+    "originalPenalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "enforcement",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "An enforcement notice is a formal regulatory direction. Non-compliance undermines the entire enforcement regime. This offence can be charged in addition to the underlying breach that triggered the notice."
+  },
+  {
+    "id": "pen-s133A",
+    "section": "s133A",
+    "part": "X",
+    "offence": "Body Corporate Liability for Failure to Comply",
+    "description": "Where a body corporate commits an offence under the Act, any director, chief executive officer, chief operating officer, manager, secretary or other similar officer, or any person purporting to act in that capacity, who consented to, connived in, or whose neglect contributed to the commission of the offence, is also guilty of the offence",
+    "originalPenalty": {
+      "fine": "Same penalty as body corporate",
+      "imprisonment": "Same penalty as body corporate",
+      "or_both": true
+    },
+    "amendedPenalty": null,
+    "category": "general",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "This provision ensures individual accountability within organizations. Directors and senior officers cannot shelter behind corporate structures where they are responsible for or aware of PDPA violations. Introduced by A1699."
+  },
+  {
+    "id": "pen-s134",
+    "section": "s134",
+    "part": "X",
+    "offence": "False Statements and Misleading Information",
+    "description": "Making any statement or furnishing any document or information to the Commissioner or any authorized officer that is false or misleading in a material particular, whether in the context of registration, audit, inspection, investigation, or any other proceeding under the Act",
+    "originalPenalty": {
+      "fine": "RM200,000",
+      "fineNumeric": 200000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "enforcement",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data users, data subjects, data processors, and any other person providing information under the Act."
+  },
+  {
+    "id": "pen-s135A",
+    "section": "s135A",
+    "part": "X",
+    "offence": "Unauthorized Sale of Personal Data",
+    "description": "Selling, offering to sell, or procuring for sale any personal data in contravention of the Act, including bulk sales of personal data obtained without the consent of the data subjects, or selling data in breach of the purpose limitation or disclosure restrictions",
+    "originalPenalty": null,
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "disclosure",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "New offence inserted by the 2024 Amendment Act in response to growing concern over the commercial trade in personal data. Targets both the seller and any person who procures or facilitates the sale."
+  },
+  {
+    "id": "pen-s143A-5",
+    "section": "s143A(5)",
+    "part": "X",
+    "offence": "Failure to Notify Data Breach",
+    "description": "Failure by a data user to notify the Commissioner of a notifiable data breach within the prescribed period (72 hours), or failure to notify affected data subjects where required, or failure to maintain records of data breaches as required by the data breach notification guidelines",
+    "originalPenalty": null,
+    "amendedPenalty": {
+      "fine": "RM250,000",
+      "fineNumeric": 250000,
+      "imprisonment": "2 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "data-breach",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "New obligation inserted by A1699. The 72-hour notification window aligns with international best practice, including GDPR. Section 143A(5) creates the offence for failure to notify. Continuing failure is a continuing offence."
+  },
+  {
+    "id": "pen-dpo",
+    "section": "s129B(5)",
+    "part": "X",
+    "offence": "Failure to Appoint Data Protection Officer",
+    "description": "Failure by a data user who is required under the Act and guidelines to appoint a Data Protection Officer (DPO) to do so, or failure to register the appointed DPO with the Commissioner within the prescribed period, or appointing a person who does not meet the prescribed qualifications",
+    "originalPenalty": null,
+    "amendedPenalty": {
+      "fine": "RM250,000",
+      "fineNumeric": 250000,
+      "imprisonment": "2 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "processing",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "New obligation introduced by A1699. DPO appointment is mandatory for data users processing large volumes of data or processing sensitive personal data. The DPO Guideline 2025 sets out criteria for mandatory appointment."
+  },
+  {
+    "id": "pen-s44",
+    "section": "s44",
+    "part": "II",
+    "offence": "Contravention of Data Subject Rights",
+    "description": "Failure by a data user to comply with an access request, correction request, or opt-out request by a data subject within the prescribed time, or charging fees in excess of the prescribed amount, or refusing an access request without lawful grounds",
+    "originalPenalty": {
+      "fine": "RM100,000",
+      "fineNumeric": 100000,
+      "imprisonment": "1 year",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "2 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "processing",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "Covers access requests (s30), correction requests (s34), and opt-out from direct marketing (s43). Each unanswered or improperly answered request may constitute a separate offence."
+  },
+  {
+    "id": "pen-s29",
+    "section": "s29",
+    "part": "II",
+    "offence": "Processing Sensitive Personal Data Without Explicit Consent",
+    "description": "Processing sensitive personal data including health data, political opinions, religious beliefs, commission or alleged commission of offences, and other prescribed categories without obtaining the explicit consent of the data subject or without falling within the narrow statutory exemptions",
+    "originalPenalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "processing",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "Sensitive personal data attracts a higher standard of protection. The Act does not require an additional lawful basis beyond explicit consent except in very limited circumstances (e.g., medical emergencies, legal proceedings)."
+  },
+  {
+    "id": "pen-s136",
+    "section": "s136",
+    "part": "X",
+    "offence": "General Penalty",
+    "description": "Where no specific penalty is provided elsewhere in the Act for a contravention of any provision, the general penalty applies. This is a catch-all provision for technical or administrative breaches not covered by more specific penalty sections",
+    "originalPenalty": {
+      "fine": "RM100,000",
+      "fineNumeric": 100000,
+      "imprisonment": null,
+      "or_both": false
+    },
+    "amendedPenalty": {
+      "fine": "RM250,000",
+      "fineNumeric": 250000,
+      "imprisonment": "2 years",
+      "or_both": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "general",
+    "compoundable": true,
+    "compoundAmount": "50% of maximum fine",
+    "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+    "notes": "The 2024 Amendment elevated the general penalty and added an imprisonment option where none existed before, reflecting the legislature's intent to treat PDPA violations as serious offences."
+  },
+  {
+    "id": "pen-s138",
+    "section": "s138",
+    "part": "X",
+    "offence": "Continuing Offence",
+    "description": "Where a person is convicted of an offence under the Act and the contravention continues after the conviction, that person commits a further offence for each day or part of a day during which the contravention continues, rendering the person liable to a daily fine in addition to the original penalty",
+    "originalPenalty": {
+      "fine": "RM1,000 per day",
+      "fineNumeric": 1000,
+      "imprisonment": null,
+      "or_both": false,
+      "perDay": true
+    },
+    "amendedPenalty": {
+      "fine": "RM5,000 per day",
+      "fineNumeric": 5000,
+      "imprisonment": null,
+      "or_both": false,
+      "perDay": true,
+      "amendedBy": "A1699",
+      "effectiveDate": "2025-06-01"
+    },
+    "category": "general",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "The continuing offence provision is critical for compelling compliance. Where a data user refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly."
+  },
+  {
+    "id": "pen-s109",
+    "section": "s109",
+    "part": "VIII",
+    "offence": "Failure to Cooperate with Investigation",
+    "description": "Failure to comply with a requirement under Part VIII (Inspection, Complaint and Investigation), including failure to produce documents or records requested by the Commissioner, failure to attend for examination, or failure to answer questions put by an authorized officer in the course of an investigation",
+    "originalPenalty": {
+      "fine": "RM200,000",
+      "fineNumeric": 200000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": null,
+    "category": "enforcement",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "Applies to both data users and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act."
+  },
+  {
+    "id": "pen-s127",
+    "section": "s127",
+    "part": "IX",
+    "offence": "Failure to Comply with Production Order",
+    "description": "Failure by any person to comply with a production order issued by the Commissioner requiring the production of documents, data, records, or other material relevant to an investigation or enforcement action under Part IX of the Act",
+    "originalPenalty": {
+      "fine": "RM200,000",
+      "fineNumeric": 200000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
+    "amendedPenalty": null,
+    "category": "enforcement",
+    "compoundable": false,
+    "compoundAmount": null,
+    "compoundRegulation": null,
+    "notes": "A production order is a compulsory document production mechanism akin to a legal subpoena. Non-compliance is treated seriously as it frustrates the enforcement mandate of the Commissioner."
+  }
+]

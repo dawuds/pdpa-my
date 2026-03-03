@@ -1,0 +1,495 @@
+{
+  "description": "The 13 classes of data users required to register with the Commissioner under the Personal Data Protection (Class of Data Users) Order 2013, as amended by the Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+  "enablingSection": "s13",
+  "orderTitle": "Personal Data Protection (Class of Data Users) Order 2013",
+  "orderReference": "P.U.(A) 168/2013",
+  "amendmentOrderTitle": "Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+  "amendmentOrderReference": "P.U.(A) 27/2016",
+  "lastUpdated": "2025-06-01",
+  "classes": [
+    {
+      "id": "communications",
+      "classNumber": 1,
+      "name": "Communications",
+      "orderReference": "First Schedule, Class 1",
+      "description": "Licensees under the Communications and Multimedia Act 1998 (Act 588), including network facilities providers, network service providers, applications service providers, and content applications service providers",
+      "applicableCode": "cop-communications",
+      "registrationRequired": true,
+      "examples": [
+        "Telecommunications companies (telcos)",
+        "Internet service providers (ISPs)",
+        "Mobile network operators",
+        "Satellite communications providers",
+        "Cable TV and IPTV providers",
+        "Content applications service providers"
+      ],
+      "regulatoryOverlap": [
+        "Malaysian Communications and Multimedia Commission (MCMC)",
+        "Communications and Multimedia Act 1998 (Act 588)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Subscriber name and identity card number",
+        "Contact information (address, phone, email)",
+        "Billing and payment records",
+        "Call detail records (CDRs)",
+        "Internet usage and browsing data",
+        "Location data from mobile networks",
+        "Device identifiers (IMEI, IMSI)"
+      ],
+      "keyComplianceChallenges": [
+        "Processing of large volumes of sensitive location data",
+        "Lawful interception requirements under national security laws creating tension with PDPA",
+        "Cross-border data flows for roaming and international connectivity",
+        "Retention of call records for law enforcement purposes vs. PDPA retention principle"
+      ]
+    },
+    {
+      "id": "banking-and-financial-institutions",
+      "classNumber": 2,
+      "name": "Banking and Financial Institutions",
+      "orderReference": "First Schedule, Class 2",
+      "description": "Licensed banks, investment banks, Islamic banks, development financial institutions, and other institutions licensed or registered under financial services legislation regulated by Bank Negara Malaysia (BNM)",
+      "applicableCode": "cop-banking",
+      "registrationRequired": true,
+      "examples": [
+        "Commercial banks (conventional and Islamic)",
+        "Investment banks",
+        "Development financial institutions (e.g., Bank Simpanan Nasional, Agrobank)",
+        "Licensed money changers",
+        "Remittance service providers",
+        "Credit card issuers",
+        "Operator of payment systems licensed by BNM"
+      ],
+      "regulatoryOverlap": [
+        "Bank Negara Malaysia (BNM)",
+        "Financial Services Act 2013 (Act 758)",
+        "Islamic Financial Services Act 2013 (Act 759)",
+        "Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 (AMLA)",
+        "Credit Reporting Agencies Act 2010"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Customer identification (NRIC, passport)",
+        "Financial account information",
+        "Transaction records",
+        "Credit history and credit scores (via CCRIS and CTOS)",
+        "Income and employment information",
+        "Collateral and asset information",
+        "Beneficial ownership information (under AMLA)"
+      ],
+      "keyComplianceChallenges": [
+        "Mandatory KYC/AML reporting requirements creating conflicts with consent principles",
+        "Credit bureau reporting (CCRIS) — disclosure to third parties without data subject consent",
+        "Long retention periods mandated by BNM vs. PDPA retention principle",
+        "Correspondent banking relationships requiring cross-border data transfers"
+      ]
+    },
+    {
+      "id": "insurance",
+      "classNumber": 3,
+      "name": "Insurance",
+      "orderReference": "First Schedule, Class 3",
+      "description": "Licensed insurers, takaful operators, and insurance intermediaries (agents, brokers, adjusters) regulated by Bank Negara Malaysia under financial services legislation",
+      "applicableCode": "cop-insurance-takaful",
+      "registrationRequired": true,
+      "examples": [
+        "General insurance companies",
+        "Life insurance companies",
+        "Takaful operators",
+        "Reinsurance companies",
+        "Insurance brokers and agents",
+        "Loss adjusters",
+        "Medical insurance administrators"
+      ],
+      "regulatoryOverlap": [
+        "Bank Negara Malaysia (BNM)",
+        "Financial Services Act 2013 (Act 758)",
+        "Islamic Financial Services Act 2013 (Act 759)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Policyholder personal and financial information",
+        "Health and medical data for underwriting",
+        "Claims data including accident and injury details",
+        "Nominee and beneficiary information",
+        "Occupation and lifestyle information",
+        "Travel history for travel insurance"
+      ],
+      "keyComplianceChallenges": [
+        "Processing of sensitive health data for underwriting creates high compliance risk",
+        "Third-party claims assessment requiring disclosure to loss adjusters and medical practitioners",
+        "Reinsurance arrangements requiring cross-border transfer of personal data",
+        "Anti-fraud data sharing between insurers"
+      ]
+    },
+    {
+      "id": "health",
+      "classNumber": 4,
+      "name": "Health",
+      "orderReference": "First Schedule, Class 4",
+      "description": "Persons or organizations providing health care services, including registered medical practitioners, dentists, pharmacists, and operators of private healthcare facilities",
+      "applicableCode": "cop-healthcare",
+      "registrationRequired": true,
+      "examples": [
+        "Private hospitals and specialist centres",
+        "General practitioners and specialist clinics",
+        "Dental clinics",
+        "Pharmacies",
+        "Diagnostic laboratories",
+        "Physiotherapy and rehabilitation centres",
+        "Traditional and complementary medicine practitioners",
+        "Medical and dental software providers (acting as data users)"
+      ],
+      "regulatoryOverlap": [
+        "Ministry of Health Malaysia (MOH)",
+        "Private Healthcare Facilities and Services Act 1998 (Act 586)",
+        "Medical Act 1971",
+        "Malaysian Medical Council (MMC)",
+        "Malaysian Dental Council (MDC)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Patient name, NRIC, and contact details",
+        "Medical history and diagnoses",
+        "Prescription and medication records",
+        "Laboratory and diagnostic test results",
+        "Medical imaging (X-rays, MRIs, CT scans)",
+        "Insurance claim details",
+        "Next of kin and emergency contact information"
+      ],
+      "keyComplianceChallenges": [
+        "All health data is sensitive personal data under s29 — highest protection standards apply",
+        "Sharing patient data with insurance companies for claims requires careful consent management",
+        "Medical research using patient records — consent vs. public interest considerations",
+        "Telehealth services raise security and cross-border transfer considerations",
+        "Integration with national electronic health record systems"
+      ]
+    },
+    {
+      "id": "tourism-and-hospitalities",
+      "classNumber": 5,
+      "name": "Tourism and Hospitalities",
+      "orderReference": "First Schedule, Class 5",
+      "description": "Licensed hotels, travel agencies, and tourism service providers registered under tourism-related legislation",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Hotels (including boutique hotels and serviced apartments)",
+        "Travel agencies and tour operators",
+        "Online travel agencies (OTAs)",
+        "Inbound tour operators",
+        "Theme parks and leisure attractions",
+        "Cruise operators"
+      ],
+      "regulatoryOverlap": [
+        "Ministry of Tourism, Arts and Culture Malaysia",
+        "Tourism Industry Act 1992 (Act 482)",
+        "Hotels (Federal Territory of Kuala Lumpur) Act 1954"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Guest name, NRIC/passport, and contact details",
+        "Booking and reservation records",
+        "Payment card information",
+        "Travel itinerary and preferences",
+        "Loyalty programme membership data",
+        "Visa and immigration information for international guests"
+      ],
+      "keyComplianceChallenges": [
+        "Guest register requirements — mandatory disclosure to authorities under Tourism Act",
+        "Cross-border transfer of guest data through global hotel reservation systems",
+        "Direct marketing and loyalty programme data retention",
+        "Third-party booking platforms acting as data processors"
+      ]
+    },
+    {
+      "id": "transport",
+      "classNumber": 6,
+      "name": "Transport",
+      "orderReference": "First Schedule, Class 6",
+      "description": "Licensed public transport operators including airlines, rail operators, bus companies, and ferry operators operating scheduled services within or to/from Malaysia",
+      "applicableCode": "cop-aviation",
+      "registrationRequired": true,
+      "examples": [
+        "Airlines (national carriers and low-cost carriers)",
+        "Railway operators (KTM, RapidKL, KLIA Ekspres)",
+        "Bus companies operating scheduled services",
+        "Ferry operators",
+        "Taxi and e-hailing platform operators (acting as data users)",
+        "Ride-hailing aggregators"
+      ],
+      "regulatoryOverlap": [
+        "Civil Aviation Authority of Malaysia (CAAM)",
+        "Land Public Transport Agency (APAD)",
+        "Ministry of Transport",
+        "Civil Aviation Act 1969"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Passenger name records (PNR)",
+        "Passport and travel document information",
+        "Booking and ticketing records",
+        "Frequent flyer/loyalty programme data",
+        "Payment information",
+        "Journey origin and destination data",
+        "CCTV footage from vehicles and terminals"
+      ],
+      "keyComplianceChallenges": [
+        "Mandatory sharing of PNR data with authorities under international aviation agreements (ICAO Annex 9)",
+        "Cross-border data transfers inherent in international transport operations",
+        "Real-time tracking data from connected vehicles and GPS systems",
+        "CCTV data retention for security purposes"
+      ]
+    },
+    {
+      "id": "education",
+      "classNumber": 7,
+      "name": "Education",
+      "orderReference": "First Schedule, Class 7",
+      "description": "Private educational institutions at all levels, including private schools, tuition centres, colleges, and private universities registered under education legislation",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Private universities and university colleges",
+        "Private polytechnics and community colleges",
+        "Private secondary and primary schools",
+        "International schools",
+        "Tuition and learning centres",
+        "Online learning platforms registered in Malaysia",
+        "Professional training institutes"
+      ],
+      "regulatoryOverlap": [
+        "Ministry of Education Malaysia (MOE)",
+        "Ministry of Higher Education (MOHE)",
+        "Malaysian Qualifications Agency (MQA)",
+        "Education Act 1996 (Act 550)",
+        "Private Higher Educational Institutions Act 1996 (Act 555)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Student personal details and identity documents",
+        "Academic records, grades, and transcripts",
+        "Financial records and fee payment history",
+        "Parent/guardian contact and employment information",
+        "Medical and health records (for school health programmes)",
+        "Disciplinary records",
+        "Scholarship and financial aid information"
+      ],
+      "keyComplianceChallenges": [
+        "Processing of minors' personal data — heightened consent and protection requirements",
+        "Sharing student data with parents who are not the primary data subject (for adult students)",
+        "Alumni records and long-term data retention practices",
+        "Student learning analytics and profiling in digital learning environments"
+      ]
+    },
+    {
+      "id": "direct-selling",
+      "classNumber": 8,
+      "name": "Direct Selling",
+      "orderReference": "First Schedule, Class 8",
+      "description": "Direct sales companies and distributors licensed under the Direct Sales and Anti-Pyramid Scheme Act 1993, including multi-level marketing (MLM) organizations",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Multi-level marketing (MLM) companies",
+        "Direct sales companies",
+        "Network marketing organizations",
+        "Door-to-door sales companies",
+        "Direct catalogue retailers"
+      ],
+      "regulatoryOverlap": [
+        "Ministry of Domestic Trade and Cost of Living (KPDN)",
+        "Direct Sales and Anti-Pyramid Scheme Act 1993 (Act 500)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Distributor/agent personal and identification details",
+        "Customer contact and purchase history",
+        "Commission and earnings records",
+        "Downline network structure information",
+        "Bank account information for commission payments",
+        "Marketing communication preferences"
+      ],
+      "keyComplianceChallenges": [
+        "High-volume direct marketing creating significant compliance obligations under s43 opt-out",
+        "Sharing of personal data within multi-level distributor networks",
+        "Recruitment data used for both distributor acquisition and sales targeting",
+        "Cross-border operations in direct selling networks with regional headquarters"
+      ]
+    },
+    {
+      "id": "services",
+      "classNumber": 9,
+      "name": "Services",
+      "orderReference": "First Schedule, Class 9",
+      "description": "Licensed professional service providers including legal, audit, accountancy, engineering, and architecture firms registered with their respective professional bodies",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Law firms (advocates and solicitors)",
+        "Audit firms registered with MIA",
+        "Accountancy practices",
+        "Engineering consultancies",
+        "Architecture firms",
+        "Quantity surveying firms",
+        "Licensed valuers"
+      ],
+      "regulatoryOverlap": [
+        "Malaysian Bar Council",
+        "Malaysian Institute of Accountants (MIA)",
+        "Board of Engineers Malaysia (BEM)",
+        "Board of Architects Malaysia (LAM)",
+        "Legal Profession Act 1976",
+        "Accountants Act 1967"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Client identity and contact information",
+        "Matter/file records and correspondence",
+        "Financial information for billing",
+        "Litigation documents and court records",
+        "Due diligence and background check information",
+        "Tax and financial statements (for accountants)",
+        "Employee personal data"
+      ],
+      "keyComplianceChallenges": [
+        "Legal professional privilege intersecting with PDPA access rights",
+        "KYC/AML obligations for lawyers and accountants creating mandatory disclosure conflicts",
+        "Long file retention practices in legal and professional contexts vs. retention principle",
+        "Processing of client commercially sensitive information"
+      ]
+    },
+    {
+      "id": "real-estate",
+      "classNumber": 10,
+      "name": "Real Estate",
+      "orderReference": "First Schedule, Class 10",
+      "description": "Licensed real estate agents, real estate negotiators, property developers, and real estate management companies registered with the Board of Valuers, Appraisers, Estate Agents and Property Managers (BOVEAP)",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Real estate agencies and negotiators",
+        "Property developers",
+        "Property management companies",
+        "Real estate investment trusts (REITs) in their data user capacity",
+        "Online property portals",
+        "Strata management companies"
+      ],
+      "regulatoryOverlap": [
+        "Board of Valuers, Appraisers, Estate Agents and Property Managers (BOVEAP)",
+        "Housing Development (Control and Licensing) Act 1966 (Act 118)",
+        "Strata Management Act 2013 (Act 757)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Buyer/tenant personal and identity information",
+        "Financial capacity and income verification",
+        "Property ownership and title documents",
+        "Tenancy and lease agreements",
+        "Property valuation information",
+        "CCTV footage in managed properties"
+      ],
+      "keyComplianceChallenges": [
+        "Sharing buyer information with property developers, lawyers, and banks in transactions",
+        "Tenant screening involving sensitive financial and reference data",
+        "CCTV systems in common areas of strata developments",
+        "Marketing of property to prospective buyers without prior relationship"
+      ]
+    },
+    {
+      "id": "utilities",
+      "classNumber": 11,
+      "name": "Utilities",
+      "orderReference": "First Schedule, Class 11",
+      "description": "Licensed electricity supply companies and water operators providing utilities services to consumers in Malaysia",
+      "applicableCode": "cop-utilities-electricity",
+      "applicableAdditionalCode": "cop-utilities-water",
+      "registrationRequired": true,
+      "examples": [
+        "Tenaga Nasional Berhad (TNB)",
+        "Sarawak Energy Berhad (SEB)",
+        "Sabah Electricity Sdn Bhd (SESB)",
+        "Syabas (Pengurusan Aset Air)",
+        "State water utilities companies",
+        "Independent power producers (in their data user capacity)"
+      ],
+      "regulatoryOverlap": [
+        "Energy Commission Malaysia (Suruhanjaya Tenaga)",
+        "National Water Services Commission (SPAN)",
+        "Electricity Supply Act 1990 (Act 447)",
+        "Water Services Industry Act 2006 (Act 655)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Consumer name, NRIC, and address",
+        "Meter serial numbers and installation details",
+        "Consumption data (electricity and water usage)",
+        "Smart meter data (detailed time-of-use data)",
+        "Payment records and outstanding balance",
+        "Connection and disconnection history"
+      ],
+      "keyComplianceChallenges": [
+        "Smart meter data contains detailed patterns of daily life — high sensitivity",
+        "Mandatory reporting of consumption data to Energy Commission and SPAN",
+        "Debt recovery procedures involving credit reporting agencies",
+        "Use of consumption data for demand management and profiling programs"
+      ]
+    },
+    {
+      "id": "pawnbroking",
+      "classNumber": 12,
+      "name": "Pawnbroking",
+      "orderReference": "First Schedule, Class 12",
+      "description": "Licensed pawnbrokers operating under the Pawnbrokers Act 1972",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Ar-Rahn (Islamic pawnbroking) operators",
+        "Conventional pawnbroking businesses",
+        "Ar-Rahn counters operated by financial cooperatives"
+      ],
+      "regulatoryOverlap": [
+        "Ministry of Urban Wellbeing, Housing and Local Government",
+        "Pawnbrokers Act 1972 (Act 81)",
+        "Koperasi — cooperative pawnbrokers regulated by the Cooperatives Commission"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Borrower name, NRIC, and address",
+        "Item descriptions and valuation records",
+        "Loan amount, interest, and redemption records",
+        "Fingerprint records (where biometric authentication is used)",
+        "Transaction history",
+        "CCTV footage at business premises"
+      ],
+      "keyComplianceChallenges": [
+        "Biometric data (fingerprints) constitutes sensitive personal data requiring highest protection",
+        "Mandatory retention of pawnbroking records under the Pawnbrokers Act vs. PDPA retention principle",
+        "Access by police to records — mandatory disclosure conflicting with PDPA principles",
+        "Handling of personal data of financially vulnerable customers"
+      ]
+    },
+    {
+      "id": "moneylending",
+      "classNumber": 13,
+      "name": "Moneylending",
+      "orderReference": "First Schedule, Class 13",
+      "description": "Licensed moneylenders under the Moneylenders Act 1951",
+      "applicableCode": "general-cop-2022",
+      "registrationRequired": true,
+      "examples": [
+        "Licensed moneylending businesses",
+        "Credit cooperatives registered under the Cooperatives Act",
+        "Salary advance and payroll lending service providers licensed as moneylenders"
+      ],
+      "regulatoryOverlap": [
+        "Ministry of Urban Wellbeing, Housing and Local Government",
+        "Moneylenders Act 1951 (Act 400)",
+        "Perbadanan PR1MA Malaysia (for housing loan schemes)"
+      ],
+      "typicalPersonalDataProcessed": [
+        "Borrower identity and contact information",
+        "Employment and income details",
+        "Guarantor information and consent",
+        "Loan application, disbursement, and repayment records",
+        "Collateral information",
+        "Credit history and financial status"
+      ],
+      "keyComplianceChallenges": [
+        "Collection of guarantor data — third-party personal data requiring separate consent",
+        "Debt collection practices raising concerns about excessive data use and harassment",
+        "Credit scoring and profiling of applicants",
+        "Sharing with credit reporting agencies for default reporting"
+      ]
+    }
+  ]
+}

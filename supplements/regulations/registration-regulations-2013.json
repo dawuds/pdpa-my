@@ -1,0 +1,118 @@
+{
+  "id": "registration-regulations-2013",
+  "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+  "type": "regulations",
+  "reference": "P.U.(A) 170/2013",
+  "gazetteDate": "2013-11-14",
+  "effectiveDate": "2013-11-15",
+  "issuedBy": "Minister charged with responsibility for Personal Data Protection",
+  "enablingSection": "s139",
+  "parentAct": "Act 709",
+  "summary": "These Regulations prescribe the procedures, forms, and conditions for the registration of data users under section 13 of the Personal Data Protection Act 2010. They set out the application process, the information to be provided, the form of the certificate of registration, the renewal procedure, and the grounds for revocation and suspension. Together with the Class of Data Users Order 2013, they form the complete registration framework.",
+  "provisions": [
+    {
+      "id": "reg-reg-1",
+      "regulation": "reg1",
+      "title": "Citation and Commencement",
+      "content": "These Regulations may be cited as the Personal Data Protection (Registration of Data User) Regulations 2013 and shall come into force on 15 November 2013.",
+      "requirements": []
+    },
+    {
+      "id": "reg-reg-2",
+      "regulation": "reg2",
+      "title": "Application for Registration",
+      "content": "A data user who is required to register under section 13 of the Act shall submit an application for registration to the Commissioner using the prescribed Form JPDP-01. The application must be accompanied by: (a) a completed organizational profile of the data user; (b) a description of all personal data processing activities conducted or intended to be conducted by the data user; (c) a description of the categories of personal data processed or to be processed; (d) a description of the purposes for which the personal data is processed; (e) a description of the recipients of the personal data (including any cross-border transfers); (f) a description of the security measures implemented; and (g) the prescribed registration fee.",
+      "requirements": [
+        "Application must be submitted before commencing processing activities",
+        "All processing activities must be disclosed in the application — registration is void if material information is omitted",
+        "Applications must be signed by an authorised officer of the data user",
+        "Electronic applications may be submitted through the Commissioner's online portal"
+      ]
+    },
+    {
+      "id": "reg-reg-3",
+      "regulation": "reg3",
+      "title": "Processing of Application",
+      "content": "Upon receipt of an application for registration, the Commissioner shall: (a) acknowledge receipt of the application within 5 working days; (b) assess the completeness and accuracy of the information provided; (c) request additional information if necessary, within 14 days of receipt; (d) where satisfied that the applicant meets the registration requirements, issue a certificate of registration within 30 days of receipt of the completed application; and (e) where not satisfied, notify the applicant in writing with reasons and give the applicant an opportunity to make representations.",
+      "requirements": [
+        "Processing time: 30 days from receipt of complete application",
+        "Data user must not commence processing until the certificate is issued (unless an extension is granted)",
+        "A request for additional information pauses the 30-day clock until the information is provided"
+      ]
+    },
+    {
+      "id": "reg-reg-4",
+      "regulation": "reg4",
+      "title": "Certificate of Registration",
+      "content": "A certificate of registration issued by the Commissioner must be in the prescribed Form JPDP-02 and shall state: (a) the name and address of the data user; (b) the class or classes of data users to which the data user belongs; (c) the categories of personal data the data user is registered to process; (d) any conditions attached to the registration; (e) the effective date of registration; and (f) the expiry date of the registration (being 2 years from the effective date). The certificate must be displayed prominently at the data user's principal place of business and made available for inspection upon request.",
+      "requirements": [
+        "Certificate must be prominently displayed at the principal office",
+        "A copy of the certificate must be provided to any person who requests it",
+        "Loss or defacement of the certificate must be reported to the Commissioner, who will issue a replacement on payment of the prescribed fee"
+      ]
+    },
+    {
+      "id": "reg-reg-5",
+      "regulation": "reg5",
+      "title": "Conditions of Registration",
+      "content": "The Commissioner may attach conditions to a certificate of registration as the Commissioner considers appropriate to ensure compliance with the Act. Conditions may include requirements to: (a) implement specific security measures within a prescribed period; (b) notify the Commissioner before commencing new categories of processing; (c) submit compliance reports at prescribed intervals; (d) appoint a named person to liaise with the Commissioner; and (e) comply with directives issued by the Commissioner from time to time.",
+      "requirements": [
+        "Conditions form part of the registration and must be complied with",
+        "Material breach of conditions is grounds for suspension or revocation",
+        "Data user may appeal conditions to the Personal Data Protection Appeal Tribunal within 30 days of notification"
+      ]
+    },
+    {
+      "id": "reg-reg-6",
+      "regulation": "reg6",
+      "title": "Notification of Changes",
+      "content": "A registered data user must notify the Commissioner within 30 days of any material change to the information provided in the registration application, including: (a) change of name or address; (b) significant change in ownership or control; (c) addition of new categories of personal data or new purposes; (d) changes to cross-border transfer arrangements; (e) significant changes in security measures; or (f) commencement or cessation of class-triggering activities. Minor administrative changes must be notified at the time of renewal.",
+      "requirements": [
+        "Notification of material changes must be in writing using the prescribed amendment form",
+        "Failure to notify is an offence and may be grounds for revocation",
+        "The Commissioner may amend the certificate of registration to reflect notified changes"
+      ]
+    },
+    {
+      "id": "reg-reg-7",
+      "regulation": "reg7",
+      "title": "Renewal of Registration",
+      "content": "A registered data user must apply to renew its registration before the expiry of the current certificate by submitting the prescribed renewal form and the renewal fee. The renewal application must confirm that the information in the original application remains accurate or provide updated information. The Commissioner shall process the renewal application within 21 days of receipt. A certificate that has not been renewed by the expiry date is void, and the data user must cease processing until a new certificate is issued.",
+      "requirements": [
+        "Renewal applications must be submitted at least 30 days before expiry",
+        "Late renewal applications do not extend the validity of the expiring certificate",
+        "Where processing continues after expiry without a renewal application, s5(2) offence is committed",
+        "Updated compliance information must be included in renewal applications"
+      ]
+    },
+    {
+      "id": "reg-reg-8",
+      "regulation": "reg8",
+      "title": "Suspension of Registration",
+      "content": "The Commissioner may suspend a certificate of registration where: (a) the data user has breached a condition of registration; (b) the data user has been convicted of an offence under the Act; (c) the Commissioner has reasonable grounds to believe that the data user is not complying with the Act and the public interest requires immediate protective action; or (d) the data user has provided false or misleading information in its application or notification. The Commissioner must give the data user written notice of the proposed suspension and an opportunity to be heard within 14 days, except in urgent cases where suspension takes immediate effect.",
+      "requirements": [
+        "Notice and opportunity to be heard is required except in urgent circumstances",
+        "During suspension, the data user must not process personal data except as necessary to wind down operations",
+        "Suspension may be for a defined period or until specified remedial action is taken",
+        "Right of appeal to the Personal Data Protection Appeal Tribunal"
+      ]
+    },
+    {
+      "id": "reg-reg-9",
+      "regulation": "reg9",
+      "title": "Revocation of Registration",
+      "content": "The Commissioner may revoke a certificate of registration where: (a) the grounds for suspension in regulation 8 continue unresolved after a reasonable period; (b) the data user has committed repeated or serious breaches of the Act; (c) the data user is being wound up or has become insolvent; (d) the data user has surrendered its sectoral licence or registration (taking it outside the relevant prescribed class); or (e) the data user has provided materially false information. Revocation of registration renders the data user's processing unlawful under s5(2) of the Act.",
+      "requirements": [
+        "Revocation is a remedy of last resort following warning, conditions, and suspension",
+        "Written notice and opportunity to be heard is required",
+        "Data user has 30 days to appeal revocation to the Tribunal",
+        "Revoked data user must notify data subjects of the cessation of its registered operations"
+      ]
+    }
+  ],
+  "keywords": [
+    "registration", "certificate of registration", "application", "renewal", "suspension",
+    "revocation", "conditions", "form JPDP-01", "form JPDP-02", "material changes",
+    "prescribed class", "data user"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "general-cop-2022",
+  "title": "Personal Data Protection Code of Practice (General) 2022",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "2022-01-01",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": "All data users",
+  "summary": "The General Code of Practice 2022 provides the universal baseline for PDPA compliance across all sectors. It applies to all data users regardless of class. Sector-specific Codes supplement the General Code with additional or modified requirements appropriate to the sector — where a sector-specific Code applies, it prevails over the General Code to the extent of any inconsistency. The General Code was updated in 2022 to reflect developments in data protection practice, the growth of digital processing, and to address emerging issues such as biometric data, IoT, and AI-driven processing.",
+  "provisions": [
+    {
+      "id": "cop-gen-s1",
+      "title": "Application",
+      "content": "This Code applies to all data users processing personal data in Malaysia in connection with commercial transactions, regardless of whether they are required to register with the Commissioner. The Code provides practical guidance on implementing the seven Personal Data Protection Principles and other obligations under the Act. Where a sector-specific Code of Practice applies to a data user, the sector-specific Code prevails to the extent of any inconsistency with this General Code.",
+      "requirements": [
+        "All data users must maintain a copy of the applicable Code(s) and ensure senior management are aware of their contents",
+        "Compliance with the Code must be reviewed at least annually",
+        "Non-compliance with the Code may constitute a breach of the PDPA principles"
+      ]
+    },
+    {
+      "id": "cop-gen-s2",
+      "title": "Records of Processing Activities (ROPA)",
+      "content": "All data users must maintain a Records of Processing Activities (ROPA) documenting all personal data processing activities. The ROPA must include, for each processing activity: (a) the name and contact details of the data user and DPO (if appointed); (b) the purposes of the processing; (c) a description of the categories of data subjects and personal data; (d) the categories of recipients to whom the data has or will be disclosed; (e) any transfers to third countries and the transfer mechanisms used; (f) the intended retention period; and (g) a general description of the technical and organizational security measures in place. The ROPA must be available in electronic format and produced to the Commissioner within 5 working days of request.",
+      "requirements": [
+        "ROPA must be initiated before processing commences",
+        "ROPA must be updated within 30 days of any material change to processing activities",
+        "ROPA is an internal document — it does not need to be published but must be available to the Commissioner",
+        "DPO is responsible for maintaining the currency of the ROPA"
+      ]
+    },
+    {
+      "id": "cop-gen-s3",
+      "title": "Lawful Basis Assessment and Documentation",
+      "content": "Before commencing any processing activity, data users must identify and document the lawful basis for each processing activity in the ROPA. The assessment must be specific to the processing purpose — a single lawful basis may not cover multiple distinct purposes. Where consent is the lawful basis, the data user must maintain records of how and when consent was obtained. Where legitimate interests is the lawful basis, a documented Legitimate Interest Assessment (LIA) must be conducted and retained. The lawful basis assessment must be reviewed whenever the nature or purpose of processing changes.",
+      "requirements": [
+        "Lawful basis must be identified before processing begins — retrospective identification is not permitted",
+        "LIA must be documented using a structured three-part test: purpose, necessity, balance",
+        "Consent records must capture: who consented, when, how, and the version of the notice provided",
+        "Lawful basis documentation is subject to Commissioner audit"
+      ]
+    },
+    {
+      "id": "cop-gen-s4",
+      "title": "Consent Management",
+      "content": "Where consent is the lawful basis for processing, data users must implement a consent management framework ensuring: (a) consent is freely given, specific, informed, and unambiguous; (b) consent is obtained through a clear affirmative act — pre-ticked boxes, silence, or inactivity do not constitute consent; (c) consent is granular — separate consent is obtained for separate purposes; (d) consent can be withdrawn as easily as it was given; (e) records of consent are maintained including the date, context, and version of notice; (f) where consent is withdrawn, processing ceases promptly and third parties are notified; and (g) consent obtained from or for minors under 13 years is subject to parental/guardian consent requirements.",
+      "requirements": [
+        "Pre-ticked checkboxes are prohibited for consent",
+        "Bundled consent for multiple purposes is not valid — granular consent is required",
+        "Withdrawal of consent must be actioned within 7 days",
+        "Consent records must be retained for the duration of the relationship plus 3 years"
+      ]
+    },
+    {
+      "id": "cop-gen-s5",
+      "title": "Data Protection Notices",
+      "content": "Data users must provide data subjects with a data protection notice as prescribed by s7 of the Act and the Notice and Choice Principle. The notice must contain all mandatory elements as set out in the Regulations and the DPN Guideline. Data users are encouraged to adopt a layered notice approach combining a short, prominent first-layer notice with a comprehensive full privacy notice. Notices must be reviewed at least annually and when processing activities change. The DPO (if appointed) is responsible for reviewing and approving notices before issue.",
+      "requirements": [
+        "Notices must be in Bahasa Malaysia and English",
+        "Notice must be provided before or at the point of data collection",
+        "Notice format must be accessible — appropriate font size, language level, and layout",
+        "Digital notices must comply with WCAG 2.1 AA accessibility standards"
+      ]
+    },
+    {
+      "id": "cop-gen-s6",
+      "title": "Purpose Limitation and Disclosure Controls",
+      "content": "Personal data must be collected only for specified, explicit, and legitimate purposes and must not be further processed in a manner incompatible with those purposes. Data users must: (a) document all disclosure relationships in the ROPA; (b) execute data processing agreements with all data processors; (c) restrict disclosure to third parties to the minimum necessary for the stated purpose; (d) not sell personal data to third parties without specific explicit consent; (e) notify third-party recipients of any corrections, updates, or deletions to personal data previously disclosed; and (f) implement contractual restrictions on data processors to prevent secondary use.",
+      "requirements": [
+        "Data processors must be bound by contractual restrictions preventing secondary use",
+        "Third-party data sales require specific explicit consent",
+        "Disclosure log must be maintained for personal data disclosed to regulated third parties",
+        "Purpose compatibility assessment required for any non-obvious secondary use"
+      ]
+    },
+    {
+      "id": "cop-gen-s7",
+      "title": "Security Governance",
+      "content": "In addition to the minimum requirements of the Security Standards 2015, data users should implement: (a) a formal information security policy approved by senior management; (b) a data protection impact assessment (DPIA) process for new high-risk processing activities; (c) a supplier security management framework for all third parties processing personal data; (d) regular penetration testing for systems processing large volumes of personal data (at least annually for high-risk systems); (e) a privacy by design approach integrating data protection into new systems and processes from the outset; and (f) management reporting on data protection metrics including breach statistics, training completion rates, and audit findings.",
+      "requirements": [
+        "Information security policy must be reviewed annually and approved by a C-suite executive",
+        "DPIA must be conducted for all new processing activities that are likely to result in a high risk",
+        "Privacy by design must be embedded in the new product/service development process",
+        "Annual management report on data protection compliance must be prepared"
+      ]
+    },
+    {
+      "id": "cop-gen-s8",
+      "title": "Retention Schedule Management",
+      "content": "Data users must implement an enterprise-wide retention schedule management process ensuring: (a) the retention schedule is reviewed at least annually; (b) automated deletion is implemented wherever technically feasible; (c) where automated deletion is not feasible, manual deletion reviews are conducted at least quarterly; (d) the retention schedule is cross-referenced to applicable statutory minimum retention requirements; (e) data subject requests for early deletion are assessed against legal holds and statutory minimums; and (f) the DPO reviews the retention schedule and signs off on any material changes.",
+      "requirements": [
+        "Automated deletion preferred — manual processes require documented quarterly review",
+        "Statutory minimum retention requirements must be incorporated into the schedule",
+        "Retention schedule changes must be communicated to all relevant data custodians",
+        "Annual retention schedule review must be documented and retained"
+      ]
+    },
+    {
+      "id": "cop-gen-s9",
+      "title": "Data Quality Framework",
+      "content": "Data users must establish a data quality framework implementing the Data Integrity Principle. The framework must include: (a) data quality rules defining standards for accuracy, completeness, currency, and consistency; (b) data quality monitoring processes including automated checks and periodic manual reviews; (c) processes for handling data subject correction requests promptly and effectively; (d) data quality reporting to management; and (e) root cause analysis for recurring data quality issues. High-quality data inputs are essential for organizations using personal data in automated decision-making or profiling.",
+      "requirements": [
+        "Data quality rules must be documented and implemented in data management systems",
+        "Data quality monitoring reports must be produced at least quarterly for high-volume processing",
+        "Correction requests must be actioned within 21 days",
+        "Data quality issues identified through correction requests must be analysed for systemic patterns"
+      ]
+    },
+    {
+      "id": "cop-gen-s10",
+      "title": "Data Subject Rights Management",
+      "content": "Data users must implement a formal procedure for managing data subject rights requests, including: (a) a designated contact channel (email, web form, or postal address) for data subject requests; (b) identity verification procedures proportionate to the sensitivity of the data held; (c) response within prescribed timeframes (21 days for access requests, 21 days for correction requests, 7 days for opt-out requests); (d) a log of all data subject requests and the data user's responses; (e) a refusal procedure for requests that can be lawfully refused; and (f) information for data subjects on how to escalate complaints to the Commissioner. The DPO (if appointed) must oversee the data subject rights management process.",
+      "requirements": [
+        "Designated channel for data subject requests must be clearly communicated in the privacy notice",
+        "Identity verification must not be so burdensome as to effectively prevent exercise of rights",
+        "Data subject requests log must be maintained and available for Commissioner inspection",
+        "Staff handling data subject requests must be trained on the applicable legal requirements"
+      ]
+    },
+    {
+      "id": "cop-gen-s11",
+      "title": "Sensitive Personal Data",
+      "content": "Processing of sensitive personal data (health, political opinions, religious beliefs, criminal history, and other prescribed categories) requires enhanced protections beyond those applicable to general personal data. Data users processing sensitive personal data must: (a) identify all sensitive data in their ROPA and apply additional controls; (b) obtain explicit consent unless a specific narrow exception applies; (c) restrict access to sensitive personal data to the minimum number of authorized personnel; (d) apply encryption to all sensitive personal data in storage and transit; (e) conduct a DPIA before commencing any new processing of sensitive personal data; and (f) implement enhanced audit logging for access to and modifications of sensitive personal data.",
+      "requirements": [
+        "Sensitive data must be tagged or classified separately in all systems",
+        "Access to sensitive data must be need-to-know basis only",
+        "DPIA mandatory for all new sensitive data processing activities",
+        "Enhanced audit logs for sensitive data must be retained for minimum 24 months"
+      ]
+    }
+  ],
+  "keywords": [
+    "General Code", "ROPA", "Records of Processing Activities", "lawful basis", "consent management",
+    "data protection notice", "purpose limitation", "security governance", "DPIA",
+    "retention schedule", "data quality", "data subject rights", "sensitive personal data",
+    "privacy by design", "all data users", "Code of Practice"
+  ]
+}

@@ -1,0 +1,592 @@
+[
+  {
+    "id": "general",
+    "section": 6,
+    "name": "General Principle",
+    "summary": "A data user shall not process personal data about a data subject unless the data subject has given his consent to the processing, or the processing is necessary for one or more of the specified lawful purposes. This is the foundational principle that conditions all personal data processing under the PDPA.",
+    "obligations": [
+      {
+        "id": "general-O1",
+        "obligation": "Obtain valid consent from the data subject before processing personal data",
+        "basis": "Section 6(1)",
+        "type": "mandatory"
+      },
+      {
+        "id": "general-O2",
+        "obligation": "Ensure that where processing relies on a lawful basis other than consent, that basis is clearly established and documented prior to processing",
+        "basis": "Section 6(2)",
+        "type": "mandatory"
+      },
+      {
+        "id": "general-O3",
+        "obligation": "Ensure consent is explicit, informed, and freely given — not bundled with other consents or obtained through deceptive means",
+        "basis": "Section 6(1) read with Section 2 (definition of consent)",
+        "type": "mandatory"
+      },
+      {
+        "id": "general-O4",
+        "obligation": "Maintain records of the consent obtained, including the date, method, and scope of consent for each processing activity",
+        "basis": "Section 6(1); Personal Data Protection Standards 2015",
+        "type": "mandatory"
+      },
+      {
+        "id": "general-O5",
+        "obligation": "Where processing is based on legitimate interests, conduct and document a legitimate interest assessment (LIA) to verify that the interests of the data user are not overridden by the interests or rights of the data subject",
+        "basis": "Section 6(2)(f); 2024 Amendment Act",
+        "type": "mandatory"
+      },
+      {
+        "id": "general-O6",
+        "obligation": "Cease processing immediately if the data subject withdraws consent and no other lawful basis applies, and notify any third parties to whom the data was disclosed",
+        "basis": "Section 6(1); Section 38 (right to withdraw consent)",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "general-X1",
+        "exception": "Processing necessary for the performance of a contract to which the data subject is a party",
+        "basis": "Section 6(2)(a)",
+        "conditions": "The data subject must be a direct party to the contract; processing by a data user to fulfil obligations under a contract with a third party does not qualify under this exception"
+      },
+      {
+        "id": "general-X2",
+        "exception": "Processing necessary for compliance with a legal obligation to which the data user is subject, other than an obligation imposed by contract",
+        "basis": "Section 6(2)(b)",
+        "conditions": "The legal obligation must arise from Malaysian law (statute, subsidiary legislation, court order, or regulatory directive); the data user must not be able to reasonably fulfil the obligation without processing the personal data"
+      },
+      {
+        "id": "general-X3",
+        "exception": "Processing necessary to protect the vital interests of the data subject",
+        "basis": "Section 6(2)(c)",
+        "conditions": "This exception is intended for emergency situations where the data subject is physically incapable of giving consent (e.g., unconscious or incapacitated); it cannot be used where consent could reasonably be obtained"
+      },
+      {
+        "id": "general-X4",
+        "exception": "Processing necessary for the administration of justice, or for the exercise of any functions conferred on any person by or under any written law",
+        "basis": "Section 6(2)(d)",
+        "conditions": "Applies to public authorities and persons exercising statutory functions; the processing must be reasonably necessary and proportionate to the statutory purpose"
+      },
+      {
+        "id": "general-X5",
+        "exception": "Processing necessary for the purposes of legitimate interests pursued by the data user or by a third party to whom the data is disclosed, except where such interests are overridden by the interests of the data subject",
+        "basis": "Section 6(2)(f); 2024 Amendment Act",
+        "conditions": "The data user must conduct a legitimate interest assessment; the processing must be necessary and proportionate; the data subject's reasonable expectations must be considered; a data subject may object to processing under this basis"
+      }
+    ],
+    "practicalGuidance": "Organizations should implement a consent management framework that captures, stores, and makes auditable the consent of every data subject. Consent mechanisms must be granular — separate consents for separate processing purposes — and must be as easy to withdraw as to give. Where relying on a lawful basis other than consent, the applicable basis must be documented in the organization's Records of Processing Activities (ROPA) before processing begins. The 2024 Amendment strengthened consent requirements by requiring that consent be explicit and distinguishable from other matters; pre-ticked boxes or silence will not constitute valid consent. Organizations with complex processing activities should maintain a processing register mapping each activity to its lawful basis. For the legitimate interests basis, a three-part test applies: (1) identify the legitimate interest; (2) assess necessity of the processing; (3) balance against the data subject's interests, rights, and freedoms.",
+    "commonViolations": [
+      "Processing personal data without any documented lawful basis, particularly in marketing and analytics contexts",
+      "Bundling consent with terms and conditions such that refusal of consent prevents use of a service, making consent non-freely given",
+      "Continuing to process personal data after a data subject has withdrawn consent and no alternative lawful basis exists",
+      "Relying on the legitimate interests exception without conducting or documenting a legitimate interest assessment",
+      "Using consent obtained for one purpose to justify processing for a materially different purpose without obtaining fresh consent"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-consent-2023",
+      "pdpc-guidelines-notice-2023"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s3",
+      "general-cop-s4"
+    ]
+  },
+  {
+    "id": "notice-and-choice",
+    "section": 7,
+    "name": "Notice and Choice Principle",
+    "summary": "A data user shall, before collecting personal data about a data subject, inform the data subject in writing of the matters set out in Section 7(1) and provide the data subject with a choice to decide whether to allow processing of the data for purposes beyond those directly required for the transaction. This principle underpins the transparency and autonomy of data subjects under the PDPA.",
+    "obligations": [
+      {
+        "id": "notice-O1",
+        "obligation": "Provide the data subject with written notice before or at the time of collection of personal data",
+        "basis": "Section 7(1)",
+        "type": "mandatory"
+      },
+      {
+        "id": "notice-O2",
+        "obligation": "Include in the notice a description of the personal data being collected and the purposes for which it will be processed",
+        "basis": "Section 7(1)(a) and (b)",
+        "type": "mandatory"
+      },
+      {
+        "id": "notice-O3",
+        "obligation": "Disclose in the notice the classes of third parties to whom the personal data may be transferred or disclosed",
+        "basis": "Section 7(1)(c)",
+        "type": "mandatory"
+      },
+      {
+        "id": "notice-O4",
+        "obligation": "Inform the data subject of their right to request access to and correction of their personal data, and the contact details for submitting such requests",
+        "basis": "Section 7(1)(d)",
+        "type": "mandatory"
+      },
+      {
+        "id": "notice-O5",
+        "obligation": "Provide the notice in both Bahasa Malaysia and English",
+        "basis": "Section 7(3)",
+        "type": "mandatory"
+      },
+      {
+        "id": "notice-O6",
+        "obligation": "Provide the data subject with a choice to opt out of having their personal data processed for purposes beyond the primary purpose of the collection, including direct marketing",
+        "basis": "Section 7(1)(e) and Section 7(2); 2024 Amendment Act",
+        "type": "mandatory"
+      },
+      {
+        "id": "notice-O7",
+        "obligation": "Inform the data subject whether it is obligatory or voluntary to supply the personal data, and where it is obligatory, the consequences of failing to provide the data",
+        "basis": "Section 7(1)(f); 2024 Amendment Act",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "notice-X1",
+        "exception": "Notice is not required where it would involve a disproportionate effort relative to the purposes for which the data was collected",
+        "basis": "Section 7(4)(a)",
+        "conditions": "The data user must document why providing notice would involve disproportionate effort; this exception cannot be used merely because notice would be inconvenient; it is most applicable to processing of publicly available data or historical records"
+      },
+      {
+        "id": "notice-X2",
+        "exception": "Notice is not required where the recording or disclosure of personal data is expressly required or authorised by or under any law",
+        "basis": "Section 7(4)(b)",
+        "conditions": "The specific law or regulation authorising or requiring the data collection must be identified; the exception covers only the scope of data collection authorised by that law"
+      },
+      {
+        "id": "notice-X3",
+        "exception": "Notice is not required where the data subject already has the information described in Section 7(1)",
+        "basis": "Section 7(4)(c)",
+        "conditions": "The data user bears the burden of demonstrating that the data subject had actual prior knowledge of all the required notice elements; a general awareness of data processing is insufficient"
+      }
+    ],
+    "practicalGuidance": "Organizations should develop a layered privacy notice strategy: a short notice at the point of collection summarising key information, with a link or reference to a comprehensive privacy policy containing full details. The notice must be written in plain language accessible to the target audience — legalese and overly technical language undermines transparency. Both a Bahasa Malaysia and an English version are legally required; translation must be accurate and the content of both versions must be substantively identical. For online data collection, a link to the privacy notice embedded in a registration or checkout form is the minimum; the data subject should be required to affirmatively acknowledge receipt. Where data is collected indirectly (e.g., from a third party), notice must still be given to the data subject as soon as reasonably practicable after collection. The 2024 Amendment tightened the notice requirements by making it mandatory to disclose whether data provision is obligatory or voluntary, and to explain the consequences of non-provision.",
+    "commonViolations": [
+      "Providing a privacy notice only in English without a Bahasa Malaysia version",
+      "Publishing a privacy policy on a website without ensuring data subjects are directed to or made aware of it at the point of collection",
+      "Failing to update the privacy notice when new processing purposes or third-party disclosures are introduced",
+      "Omitting information about data subject rights or the contact details for submitting access and correction requests",
+      "Using a single blanket consent that covers marketing, analytics, and third-party sharing without giving the data subject a genuine choice to opt out of non-essential processing"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-notice-2023",
+      "pdpc-guidelines-consent-2023"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s5"
+    ]
+  },
+  {
+    "id": "disclosure",
+    "section": 8,
+    "name": "Disclosure Principle",
+    "summary": "Personal data shall not be disclosed for any purpose other than the purpose for which it was disclosed at the time of collection, or a purpose directly related to that purpose, without the consent of the data subject. The Disclosure Principle controls the onward flow of personal data and is closely linked to the cross-border transfer provisions of the PDPA.",
+    "obligations": [
+      {
+        "id": "disclosure-O1",
+        "obligation": "Do not disclose personal data to a third party for a purpose other than the purpose notified to the data subject at the time of collection, or a directly related purpose, without fresh consent",
+        "basis": "Section 8(1)",
+        "type": "mandatory"
+      },
+      {
+        "id": "disclosure-O2",
+        "obligation": "Where disclosing personal data to a third party (including a data processor), ensure that the disclosure is limited to personal data necessary for the disclosed purpose — do not disclose more data than required",
+        "basis": "Section 8(1) read with the General Principle (Section 6)",
+        "type": "mandatory"
+      },
+      {
+        "id": "disclosure-O3",
+        "obligation": "When disclosing personal data to a data processor or sub-processor, ensure a written data processing agreement is in place that binds the processor to process the data only on the data user's instructions and to comply with equivalent data protection obligations",
+        "basis": "Section 8(1); Section 43 (data processor obligations)",
+        "type": "mandatory"
+      },
+      {
+        "id": "disclosure-O4",
+        "obligation": "Do not transfer personal data outside Malaysia unless the destination country provides a level of protection equivalent to that afforded by the PDPA, or the data subject has consented to the transfer, or an applicable exception applies",
+        "basis": "Section 129; Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order",
+        "type": "mandatory"
+      },
+      {
+        "id": "disclosure-O5",
+        "obligation": "Maintain records of all third parties to whom personal data has been disclosed, the purpose of the disclosure, the legal basis, and the date of disclosure",
+        "basis": "Section 8(1); Personal Data Protection Standards 2015",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "disclosure-X1",
+        "exception": "Disclosure required for compliance with a legal obligation to which the data user is subject",
+        "basis": "Section 8(2)(a)",
+        "conditions": "The legal obligation must arise from Malaysian law (e.g., a court order, regulatory requirement, or statutory duty to report); voluntary disclosure to law enforcement is not covered; the data user should seek legal advice before disclosing pursuant to informal requests from government agencies"
+      },
+      {
+        "id": "disclosure-X2",
+        "exception": "Disclosure necessary to protect the vital interests of the data subject",
+        "basis": "Section 8(2)(b)",
+        "conditions": "Applies to emergency situations involving a serious threat to life or physical safety; the data subject must be incapable of giving consent and consent cannot be obtained from a legal representative in time; the disclosure must be limited to what is strictly necessary"
+      },
+      {
+        "id": "disclosure-X3",
+        "exception": "Disclosure necessary for the administration of justice or the exercise of statutory functions conferred by written law",
+        "basis": "Section 8(2)(c)",
+        "conditions": "Principally applies to court proceedings, law enforcement functions, and regulatory oversight activities; the data user must verify the requesting body has the relevant statutory function before disclosing"
+      },
+      {
+        "id": "disclosure-X4",
+        "exception": "Disclosure to a data subject's agent or representative acting with proper authority",
+        "basis": "Section 8(2)(d)",
+        "conditions": "The data user must verify the authority of the representative (e.g., power of attorney, written authorisation); the disclosure should be documented"
+      },
+      {
+        "id": "disclosure-X5",
+        "exception": "Disclosure for the purpose of, or in connection with, legal proceedings (including prospective proceedings), legal advice, or the establishment, exercise, or defence of legal rights",
+        "basis": "Section 8(2)(e)",
+        "conditions": "The disclosure must be proportionate to the legal purpose and limited to data reasonably necessary for that purpose; this exception does not justify speculative or fishing disclosures"
+      }
+    ],
+    "practicalGuidance": "Organizations should maintain a third-party disclosure register documenting every entity that receives personal data, the categories of data shared, the purpose, the legal basis, and any contractual safeguards in place. Before onboarding any new vendor or partner who will receive personal data, a data protection impact assessment (DPIA) and due diligence review should be conducted. Data processing agreements must be signed before data is disclosed to processors; template agreements should be reviewed by legal counsel to ensure they include mandatory clauses on security, sub-processing restrictions, data breach notification obligations, and post-processing deletion. For cross-border transfers, check whether the destination country is listed in the Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order; if not listed, standard contractual clauses, binding corporate rules, or explicit data subject consent must be used. In practice, disclosures to government agencies in response to informal requests (without a court order or statutory compulsion) should be treated cautiously — obtain legal advice before disclosing to avoid becoming an inadvertent enabler of unlawful surveillance.",
+    "commonViolations": [
+      "Sharing customer personal data with affiliated companies or marketing partners without informing the data subject or obtaining consent",
+      "Disclosing personal data to law enforcement in response to informal requests (e.g., phone calls or emails) that have no statutory compulsion, without verifying legal authority",
+      "Transferring personal data to overseas cloud service providers or group entities in countries not listed in the Transfer Order without implementing contractual safeguards or obtaining consent",
+      "Failing to execute a written data processing agreement before a vendor is given access to personal data",
+      "Disclosing more personal data than necessary when responding to a legal or regulatory request"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-disclosure-2023",
+      "pdpc-guidelines-cross-border-transfer"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s6"
+    ]
+  },
+  {
+    "id": "security",
+    "section": 9,
+    "name": "Security Principle",
+    "summary": "A data user shall take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction. The Security Principle applies to both the data user and, through the data user's obligations, to data processors acting on the data user's behalf. It is complemented by the Personal Data Protection Standards 2015, which set specific technical and organisational security requirements.",
+    "obligations": [
+      {
+        "id": "security-O1",
+        "obligation": "Implement appropriate technical and organisational measures to protect personal data against loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, and destruction",
+        "basis": "Section 9(1)",
+        "type": "mandatory"
+      },
+      {
+        "id": "security-O2",
+        "obligation": "Develop, implement, and maintain a written data security policy that is proportionate to the nature and sensitivity of the personal data processed and the risks arising from the processing activities",
+        "basis": "Section 9(1); Personal Data Protection Standards 2015 (Security Standard)",
+        "type": "mandatory"
+      },
+      {
+        "id": "security-O3",
+        "obligation": "Ensure that data processors engaged by the data user provide sufficient guarantees with respect to technical and organisational security measures, and take reasonable steps to ensure compliance with those measures",
+        "basis": "Section 9(2); Section 43",
+        "type": "mandatory"
+      },
+      {
+        "id": "security-O4",
+        "obligation": "Implement appropriate access controls to ensure that personal data is accessible only to authorised personnel, and that access rights are reviewed regularly and revoked when no longer required",
+        "basis": "Section 9(1); Personal Data Protection Standards 2015 (Security Standard, para 4)",
+        "type": "mandatory"
+      },
+      {
+        "id": "security-O5",
+        "obligation": "Implement data breach detection, response, and notification procedures; following the 2024 Amendment, notify the Commissioner of a data breach as soon as practicable after becoming aware of it, and notify affected data subjects where the breach is likely to result in significant harm",
+        "basis": "Section 9(1); 2024 Amendment Act (breach notification obligations)",
+        "type": "mandatory"
+      },
+      {
+        "id": "security-O6",
+        "obligation": "Conduct periodic security risk assessments and penetration testing, and take remedial action for identified vulnerabilities, particularly for systems processing large volumes of personal data or sensitive personal data",
+        "basis": "Section 9(1); Personal Data Protection Standards 2015 (Security Standard)",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "security-X1",
+        "exception": "The security obligation is qualified by the standard of 'practical steps' — it does not impose an absolute obligation to prevent all breaches, but rather requires measures proportionate to the risk",
+        "basis": "Section 9(1)",
+        "conditions": "The data user must demonstrate that the measures taken were reasonable given the nature of the data, the state of technology, the cost of implementation, and the likelihood and severity of potential harm; a best-efforts standard applies"
+      },
+      {
+        "id": "security-X2",
+        "exception": "Where a data breach occurs despite reasonable security measures, the data user may not be in violation of the Security Principle if it can demonstrate that appropriate controls were in place and the breach was caused by an unforeseen and unpreventable event",
+        "basis": "Section 9(1) (proportionality of 'practical steps')",
+        "conditions": "The data user must have conducted prior risk assessments, have a documented security policy, and respond promptly and appropriately to the breach once discovered; a failure to respond adequately to a known breach will constitute a separate violation"
+      }
+    ],
+    "practicalGuidance": "Organizations should adopt a risk-based approach to data security, calibrating the level of protection to the sensitivity of the data and the potential consequences of a breach. At a minimum, organisations should implement: (1) encryption of personal data at rest and in transit; (2) role-based access controls with the principle of least privilege; (3) multi-factor authentication for systems containing personal data; (4) regular staff training on data security and social engineering; (5) a documented incident response plan that assigns responsibilities and defines escalation paths. The Personal Data Protection Standards 2015 establish minimum standards for both electronic and non-electronic processing. For electronic processing: servers must be secured, access logs maintained, and anti-malware software deployed. For non-electronic processing (paper records): physical security controls such as locked cabinets, clean desk policies, and controlled visitor access are required. Following the 2024 Amendment, organisations must establish a data breach notification procedure that enables them to notify the Commissioner within the prescribed timeframe (details to be specified in subsidiary legislation). The engagement of any third-party processor should be preceded by a security due diligence review and governed by a data processing agreement that includes mandatory security standards.",
+    "commonViolations": [
+      "Failing to encrypt personal data stored on laptops, USB drives, or mobile devices, resulting in data exposure when these devices are lost or stolen",
+      "Maintaining excessive user access rights without periodic reviews, allowing former employees or contractors to retain access to systems containing personal data",
+      "Storing personal data on unsecured third-party cloud platforms without verifying the vendor's security certifications or signing a data processing agreement",
+      "Failing to detect or respond to a data breach in a timely manner, and not notifying affected data subjects or the Commissioner as required following the 2024 Amendment",
+      "Transmitting personal data via unencrypted email (e.g., attaching customer data in plain spreadsheets) to internal or external parties"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-security-2023",
+      "pdpc-advisory-breach-notification-2024"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015-security",
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s7",
+      "telecom-cop-s4",
+      "insurance-cop-s5"
+    ]
+  },
+  {
+    "id": "retention",
+    "section": 10,
+    "name": "Retention Principle",
+    "summary": "Personal data processed for any purpose shall not be kept longer than is necessary for the fulfilment of that purpose. Data users must take all reasonable steps to ensure that personal data that is no longer required is destroyed or permanently deleted. The Retention Principle is complemented by the Personal Data Protection Standards 2015, which set out specific requirements for retention schedules.",
+    "obligations": [
+      {
+        "id": "retention-O1",
+        "obligation": "Establish and implement a documented data retention schedule that sets out the maximum retention period for each category of personal data, linked to the purpose for which it was collected",
+        "basis": "Section 10(1); Personal Data Protection Standards 2015 (Retention Standard)",
+        "type": "mandatory"
+      },
+      {
+        "id": "retention-O2",
+        "obligation": "Destroy, delete, or anonymise personal data once the retention period has elapsed and the data is no longer necessary for any purpose (including any secondary purpose such as dispute resolution or legal proceedings)",
+        "basis": "Section 10(2)",
+        "type": "mandatory"
+      },
+      {
+        "id": "retention-O3",
+        "obligation": "Where personal data is destroyed, use a method that renders the data permanently irrecoverable — this includes secure deletion for electronic records (e.g., cryptographic erasure or overwriting) and physical destruction or shredding for paper records",
+        "basis": "Section 10(2); Personal Data Protection Standards 2015 (Retention Standard)",
+        "type": "mandatory"
+      },
+      {
+        "id": "retention-O4",
+        "obligation": "Review retention periods periodically (at least annually) to ensure that personal data is not retained beyond the period for which a lawful purpose exists",
+        "basis": "Section 10(1); Personal Data Protection Standards 2015",
+        "type": "mandatory"
+      },
+      {
+        "id": "retention-O5",
+        "obligation": "Ensure that retention policies apply equally to personal data held by data processors on the data user's behalf; include deletion and return obligations in data processing agreements",
+        "basis": "Section 10(1) read with Section 43",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "retention-X1",
+        "exception": "Personal data may be retained beyond the standard retention period where continued retention is required by or under any written law",
+        "basis": "Section 10(1) (necessary for the purpose)",
+        "conditions": "The specific legal retention obligation must be identified (e.g., Companies Act 2016 requires retention of accounting records for seven years; Employment Act 1955 requires retention of wage records); the data should be retained only for the duration specified by the relevant law and no longer; access to data retained solely for legal compliance purposes should be restricted"
+      },
+      {
+        "id": "retention-X2",
+        "exception": "Personal data may be retained beyond the standard retention period where it is required for the establishment, exercise, or defence of legal claims",
+        "basis": "Section 10(1) (necessary for the purpose)",
+        "conditions": "The anticipated or ongoing legal proceedings must be documented; retention should be limited to the data necessary for the legal claim and for the duration of the limitation period applicable to that claim under the Limitation Act 1953; data should be subject to a litigation hold and access controls"
+      },
+      {
+        "id": "retention-X3",
+        "exception": "Anonymised data — data from which the data subject can no longer be directly or indirectly identified — is not subject to the retention limitations as it ceases to constitute 'personal data'",
+        "basis": "Section 4 (definition of personal data); Section 10(1)",
+        "conditions": "Anonymisation must be genuinely irreversible; pseudonymisation (replacement of direct identifiers with codes, where re-identification is possible using a key) does not qualify; the data user bears the burden of demonstrating that re-identification is not reasonably possible given available means"
+      }
+    ],
+    "practicalGuidance": "Organisations should develop a data retention schedule as part of their broader data governance framework. The schedule should be organised by data category (e.g., customer records, employee records, transaction data, marketing data, CCTV footage) and specify: the retention period, the legal or business basis for that period, the format of the data, the destruction method, and the person responsible for triggering destruction. Where statutory retention obligations exist under sector-specific laws (e.g., seven years for financial records under the Financial Services Act 2013, or under the Income Tax Act 1967), those periods should be reflected in the schedule. Destruction logs should be maintained to provide evidence of compliance. Backup media is a common pitfall — retention policies must explicitly cover backups, archived data, and data held by processors, not just live production systems. The Personal Data Protection Standards 2015 (Retention Standard) require organisations to take into account the purpose, quantity, nature, and sensitivity of the data when determining retention periods.",
+    "commonViolations": [
+      "Retaining personal data indefinitely with no defined retention period, often because no formal retention schedule has been established",
+      "Retaining customer or employee data long after the relationship has ended and no legal retention obligation applies, citing vague 'future business purposes'",
+      "Failing to apply retention policies to backup systems, archived databases, or data held by third-party processors and cloud providers",
+      "Disposing of paper records containing personal data (e.g., customer forms, HR files) in general waste rather than through secure shredding",
+      "Deleting personal data from active systems while retaining it in legacy databases, email archives, or file shares that are not covered by automated deletion processes"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-retention-2023"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015-retention",
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s8"
+    ]
+  },
+  {
+    "id": "data-integrity",
+    "section": 11,
+    "name": "Data Integrity Principle",
+    "summary": "A data user shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up to date, having regard to the purpose, including any directly related purpose, for which the personal data was collected and further processed. The Data Integrity Principle is reinforced by the right of data subjects to correct inaccurate personal data under Section 34.",
+    "obligations": [
+      {
+        "id": "integrity-O1",
+        "obligation": "Take reasonable steps to ensure that personal data collected is accurate and complete at the point of collection",
+        "basis": "Section 11(1)",
+        "type": "mandatory"
+      },
+      {
+        "id": "integrity-O2",
+        "obligation": "Take reasonable steps to update or correct personal data that has become inaccurate, incomplete, or misleading in light of the purpose for which it is held",
+        "basis": "Section 11(1)",
+        "type": "mandatory"
+      },
+      {
+        "id": "integrity-O3",
+        "obligation": "Establish a process for data subjects to notify the data user of inaccuracies in their personal data and to have corrections made within a reasonable timeframe",
+        "basis": "Section 11(1) read with Section 34 (right to correct personal data)",
+        "type": "mandatory"
+      },
+      {
+        "id": "integrity-O4",
+        "obligation": "Where personal data has been corrected, take reasonable steps to notify any third parties to whom the inaccurate data was previously disclosed so that they may update their records",
+        "basis": "Section 11(1); Personal Data Protection Standards 2015 (Data Integrity Standard)",
+        "type": "mandatory"
+      },
+      {
+        "id": "integrity-O5",
+        "obligation": "Implement technical controls (e.g., input validation, duplicate detection) and organisational controls (e.g., data quality review processes) to maintain the accuracy and completeness of personal data over time",
+        "basis": "Section 11(1); Personal Data Protection Standards 2015 (Data Integrity Standard)",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "integrity-X1",
+        "exception": "The obligation to ensure accuracy is qualified by 'reasonable steps' and must be assessed having regard to the purpose for which the data is held; a data user is not required to verify personal data where verification is not reasonably practicable given the nature and volume of the data",
+        "basis": "Section 11(1)",
+        "conditions": "The data user must still have systems in place to correct data when inaccuracies are identified or reported; the 'reasonable steps' standard increases where the data is used to make significant decisions affecting the data subject (e.g., credit scoring, employment, insurance underwriting)"
+      },
+      {
+        "id": "integrity-X2",
+        "exception": "Where a data user is required to retain personal data in its original form by or under any written law (e.g., for evidential integrity in legal proceedings), the duty to update the data does not extend to altering the legally required original record",
+        "basis": "Section 11(1) read with statutory retention obligations",
+        "conditions": "The original record may be retained in its original form; however, the data user should, where possible, maintain a separate updated record or annotation indicating the correction, so that the current position of the data subject is accurately reflected in any decision-making"
+      },
+      {
+        "id": "integrity-X3",
+        "exception": "A data user is not required to update personal data that is retained solely for historical, statistical, or research purposes where updating or correcting the data would prejudice the research or statistical purpose for which it is held",
+        "basis": "Section 11(1); Section 45 (research and statistical exemptions)",
+        "conditions": "The data must be used exclusively for the permitted research or statistical purpose and must not be used to make decisions affecting individual data subjects; appropriate technical safeguards (e.g., anonymisation or pseudonymisation) should be applied"
+      }
+    ],
+    "practicalGuidance": "Organizations should embed data quality practices at every stage of the data lifecycle. At the collection stage, use input validation to prevent obviously incorrect data from entering systems (e.g., format checks for identification numbers, email addresses, and phone numbers). For data that changes over time (e.g., addresses, employment status, contact details), implement periodic refresh procedures: for high-value data this may mean annual verification with the data subject; for lower-risk data, opportunistic verification at the next point of contact is acceptable. Where automated decisions with significant consequences are made based on personal data (e.g., credit limits, insurance premiums, eligibility for services), the accuracy obligations are heightened — consider implementing pre-decision data quality checks. Data subjects should be provided with a simple and accessible mechanism to report inaccuracies; the target response time for corrections under Section 34 is 21 days. The Personal Data Protection Standards 2015 (Data Integrity Standard) require data users to take into account the nature and purpose of the data when determining appropriate data quality measures.",
+    "commonViolations": [
+      "Failing to update customer records when a data subject notifies the organisation of a change in address, name, or other personal details, resulting in decisions being made on the basis of outdated information",
+      "Using data sourced from third parties (e.g., data brokers, credit bureaus) without verifying its accuracy or currency, and making consequential decisions based on that unverified data",
+      "Failing to propagate a correction to all downstream systems, processors, and third parties who hold a copy of the inaccurate data",
+      "Refusing or failing to process a data correction request within the 21-day period required by Section 34",
+      "Holding multiple conflicting records for the same data subject in different systems without a data master record or deduplication process to identify and resolve inconsistencies"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-data-integrity-2023"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015-data-integrity",
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s9"
+    ]
+  },
+  {
+    "id": "access",
+    "section": 12,
+    "name": "Access Principle",
+    "summary": "A data user shall allow a data subject to have access to his personal data held by the data user and to correct that personal data where it is inaccurate, incomplete, misleading, or not up to date. The Access Principle is operationalised through Sections 30-35 (rights of data subjects) and is substantively strengthened by the 2024 Amendment Act, which enhanced access rights and introduced data portability provisions.",
+    "obligations": [
+      {
+        "id": "access-O1",
+        "obligation": "Provide data subjects with access to their personal data upon receiving a written access request, subject to the prescribed form and fee (if any), within 21 days of receipt of the request",
+        "basis": "Section 12(1); Section 30; Personal Data Protection Regulations 2013",
+        "type": "mandatory"
+      },
+      {
+        "id": "access-O2",
+        "obligation": "Process and respond to data correction requests within 21 days of receipt; if the correction is made, notify the data subject and any third party to whom the data was disclosed; if the request is refused, notify the data subject in writing with reasons and the data subject's right to complain to the Commissioner",
+        "basis": "Section 12(2); Section 34",
+        "type": "mandatory"
+      },
+      {
+        "id": "access-O3",
+        "obligation": "Establish a clear, accessible procedure for data subjects to submit access and correction requests, and publish contact details (including the name or designation of the person responsible for receiving requests) in the organisation's privacy notice",
+        "basis": "Section 12(1); Section 7(1)(d)",
+        "type": "mandatory"
+      },
+      {
+        "id": "access-O4",
+        "obligation": "Verify the identity of the requestor before providing access to personal data, to prevent disclosure to unauthorised parties",
+        "basis": "Section 30; Section 32 (form of access request)",
+        "type": "mandatory"
+      },
+      {
+        "id": "access-O5",
+        "obligation": "Where the 2024 Amendment data portability provisions apply, provide the data subject's personal data in a structured, commonly used, and machine-readable format upon request, and facilitate the transfer of that data to another data user designated by the data subject",
+        "basis": "Section 12; 2024 Amendment Act (data portability provisions)",
+        "type": "mandatory"
+      },
+      {
+        "id": "access-O6",
+        "obligation": "Maintain a log of all access and correction requests received, the outcome, and the date of response, to demonstrate compliance with the 21-day response obligation",
+        "basis": "Section 30; Personal Data Protection Standards 2015",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "access-X1",
+        "exception": "A data user may refuse an access request where the data includes information relating to another data subject who has not consented to the disclosure and the information cannot be separated",
+        "basis": "Section 31(1)(a)",
+        "conditions": "The data user must consider whether the personal data can be provided in redacted form, with the third party's data removed; a blanket refusal without considering partial disclosure is not compliant; the refusal must be communicated in writing with reasons"
+      },
+      {
+        "id": "access-X2",
+        "exception": "A data user may refuse an access request where disclosure would be likely to cause serious harm to the physical or mental health of the data subject or another individual",
+        "basis": "Section 31(1)(b)",
+        "conditions": "This exception is intended for therapeutic contexts (e.g., medical records where disclosure of a terminal diagnosis may cause acute psychological harm); it should be applied narrowly and only on the advice of a qualified professional; the refusal must be communicated with reasons and information about the right to complain"
+      },
+      {
+        "id": "access-X3",
+        "exception": "A data user may refuse an access request where the personal data is subject to legal professional privilege",
+        "basis": "Section 31(1)(c)",
+        "conditions": "Legal professional privilege must be validly established; the claim of privilege should be based on legal advice; the data user cannot use this exception as a blanket shield against all access requests simply because the data is held by or copied to a legal department"
+      },
+      {
+        "id": "access-X4",
+        "exception": "A data user may refuse a correction request where it is satisfied that the data is accurate and the data subject has not provided sufficient evidence to justify a correction",
+        "basis": "Section 34(3)",
+        "conditions": "The refusal must be in writing and include the reasons for refusal; the data subject must be informed of their right to annotate the record with a statement of their disagreement and their right to complain to the Commissioner; the data user should consider whether to append the data subject's statement to the record as a matter of good practice"
+      }
+    ],
+    "practicalGuidance": "Organisations should establish a dedicated data subject rights fulfilment process with clear ownership, defined procedures, and documented response timelines. The 21-day response clock begins on the day the complete and valid request is received; organisations should acknowledge receipt of requests promptly and confirm the expected response date. Where a request is complex or voluminous, organisations should communicate early with the data subject and, where permitted, request additional time. Identity verification is critical: the level of verification should be proportionate to the sensitivity of the data — for highly sensitive data (e.g., medical, financial), stronger verification methods (e.g., certified copy of identification) are appropriate. Requests submitted through an agent or representative should include proof of the representative's authority. Following the 2024 Amendment, data portability is an important new right — organisations should begin planning the technical infrastructure required to extract and transmit personal data in a structured, machine-readable format (e.g., JSON, CSV) upon request. For organisations with large data subject populations, consider implementing a self-service data access portal to reduce the administrative burden of access requests.",
+    "commonViolations": [
+      "Failing to respond to access requests within the 21-day statutory period, or responding with unexplained delays",
+      "Providing incomplete responses to access requests by omitting personal data held in secondary systems, archived records, or data held by processors on the data user's behalf",
+      "Refusing access requests using catch-all justifications (e.g., 'commercial confidentiality') without a proper assessment of whether a specific statutory exception applies",
+      "Failing to inform the data subject of their right to complain to the Commissioner when an access or correction request is refused",
+      "Not having a documented procedure for receiving and processing data subject rights requests, resulting in requests being lost, delayed, or handled inconsistently across the organisation"
+    ],
+    "relatedGuidelines": [
+      "pdpc-guidelines-access-correction-2023",
+      "pdpc-guidelines-data-portability-2024"
+    ],
+    "relatedStandards": [
+      "pdpa-standards-2015"
+    ],
+    "relatedCodeSections": [
+      "general-cop-s10"
+    ]
+  }
+]

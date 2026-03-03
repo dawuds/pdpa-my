@@ -1,0 +1,59 @@
+{
+  "description": "Index of all Personal Data Protection Standards issued under the Personal Data Protection Act 2010 (Act 709). Standards are mandatory and compliance with them constitutes compliance with the corresponding provisions of the Act.",
+  "issuingBody": "Minister charged with responsibility for Personal Data Protection on the recommendation of the Commissioner",
+  "parentAct": "Act 709",
+  "gazetteDate": "2015-10-15",
+  "effectiveDate": "2015-11-01",
+  "lastUpdated": "2025-06-01",
+  "standards": [
+    {
+      "id": "pdpa-standard-electronic-security-2015",
+      "title": "Personal Data Protection Standard (Security of Personal Data — Electronic) 2015",
+      "shortTitle": "Electronic Security Standard",
+      "type": "standard",
+      "subject": "Minimum technical and organizational security measures for personal data processed electronically",
+      "implementsSection": "s9",
+      "principleImplemented": "Security Principle",
+      "filePath": "supplements/standards/pdpa-standard-2015.json",
+      "fileSectionId": "electronic-security",
+      "status": "in-force"
+    },
+    {
+      "id": "pdpa-standard-nonelectronic-security-2015",
+      "title": "Personal Data Protection Standard (Security of Personal Data — Non-Electronic) 2015",
+      "shortTitle": "Non-Electronic Security Standard",
+      "type": "standard",
+      "subject": "Minimum physical and organizational security measures for personal data processed in non-electronic form",
+      "implementsSection": "s9",
+      "principleImplemented": "Security Principle",
+      "filePath": "supplements/standards/pdpa-standard-2015.json",
+      "fileSectionId": "non-electronic-security",
+      "status": "in-force"
+    },
+    {
+      "id": "pdpa-standard-retention-2015",
+      "title": "Personal Data Protection Standard (Retention of Personal Data) 2015",
+      "shortTitle": "Retention Standard",
+      "type": "standard",
+      "subject": "Maximum retention periods and procedures for secure deletion and destruction of personal data",
+      "implementsSection": "s10",
+      "principleImplemented": "Retention Principle",
+      "filePath": "supplements/standards/pdpa-standard-2015.json",
+      "fileSectionId": "retention",
+      "status": "in-force"
+    },
+    {
+      "id": "pdpa-standard-data-integrity-2015",
+      "title": "Personal Data Protection Standard (Integrity of Personal Data) 2015",
+      "shortTitle": "Data Integrity Standard",
+      "type": "standard",
+      "subject": "Procedures and controls to ensure the accuracy, completeness, and currency of personal data",
+      "implementsSection": "s11",
+      "principleImplemented": "Data Integrity Principle",
+      "filePath": "supplements/standards/pdpa-standard-2015.json",
+      "fileSectionId": "data-integrity",
+      "status": "in-force"
+    }
+  ],
+  "notes": "All four Standards were issued simultaneously on 1 November 2015 and are contained in a single Gazette notification. Non-compliance with a Standard constitutes prima facie evidence of a breach of the corresponding PDPA principle."
+}

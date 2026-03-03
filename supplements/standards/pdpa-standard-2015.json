@@ -1,0 +1,264 @@
+{
+  "id": "pdpa-standards-2015",
+  "title": "Personal Data Protection Standards 2015",
+  "type": "standards",
+  "issuedBy": "Minister charged with responsibility for Personal Data Protection",
+  "gazetteDate": "2015-10-15",
+  "effectiveDate": "2015-11-01",
+  "parentAct": "Act 709",
+  "summary": "The Personal Data Protection Standards 2015 comprise four distinct Standards issued simultaneously under the Personal Data Protection Act 2010. They provide mandatory minimum requirements implementing the Security Principle (s9), Retention Principle (s10), and Data Integrity Principle (s11). Together they establish the technical and operational baseline for PDPA compliance. Compliance with the Standards is assessed by the Commissioner during audits and investigations.",
+  "standards": {
+    "electronic-security": {
+      "id": "pdpa-standard-electronic-security-2015",
+      "title": "Personal Data Protection Standard (Security of Personal Data — Electronic) 2015",
+      "implementsSection": "s9",
+      "principleImplemented": "Security Principle",
+      "provisions": [
+        {
+          "id": "esec-1",
+          "title": "Scope",
+          "content": "This Standard applies to all personal data processed by electronic means, including data stored in databases, email systems, cloud platforms, mobile applications, and any other electronic medium. It applies to all personal data processors acting on behalf of data users as well as to data users directly."
+        },
+        {
+          "id": "esec-2",
+          "title": "Access Controls and Authentication",
+          "content": "Data users must implement appropriate access controls to limit access to personal data to authorized persons only. Minimum requirements include: (a) unique user credentials for each person with access to personal data; (b) role-based access controls (RBAC) granting users the minimum access necessary for their role; (c) multi-factor authentication (MFA) for access to personal data of more than 1,000 data subjects or any sensitive personal data; (d) automated session timeouts after a period of inactivity; (e) access logging recording all successful and failed access attempts; and (f) periodic review of access rights (at least annually) and prompt revocation upon termination of employment or change of role.",
+          "requirements": [
+            "Unique credentials — no shared accounts",
+            "MFA mandatory for sensitive or large-scale processing",
+            "Access logs retained for minimum 12 months",
+            "Quarterly access reviews for high-privilege accounts"
+          ]
+        },
+        {
+          "id": "esec-3",
+          "title": "Encryption",
+          "content": "Personal data must be encrypted: (a) at rest — where stored on portable devices (laptops, USB drives, external hard drives) or in cloud storage; AES-256 or equivalent is the minimum standard; (b) in transit — all personal data transmitted over public networks must use TLS 1.2 or higher; and (c) where a risk assessment indicates a high risk of unauthorized access, encryption of personal data stored on internal systems is also required. Encryption keys must be managed securely and stored separately from the encrypted data. Key management procedures must be documented.",
+          "requirements": [
+            "All portable devices containing personal data must be encrypted",
+            "TLS 1.2+ mandatory for all data transmission over public networks",
+            "Encryption key management policy must be documented",
+            "Key rotation schedule must be implemented"
+          ]
+        },
+        {
+          "id": "esec-4",
+          "title": "Network Security",
+          "content": "Data users must implement network security measures including: (a) firewalls protecting systems containing personal data from unauthorized access; (b) intrusion detection and/or prevention systems (IDS/IPS) monitoring for unauthorized access attempts; (c) network segmentation isolating systems processing sensitive personal data from general corporate networks; (d) Wi-Fi security — personal data must not be transmitted over unsecured Wi-Fi; (e) vulnerability scanning of systems containing personal data at least quarterly; and (f) patch management ensuring security patches are applied within 30 days of release (or sooner for critical patches).",
+          "requirements": [
+            "Firewall configuration must be reviewed at least annually",
+            "Vulnerability scans must be conducted at least quarterly",
+            "Critical patches applied within 14 days; standard patches within 30 days",
+            "Network segmentation required for systems processing sensitive personal data"
+          ]
+        },
+        {
+          "id": "esec-5",
+          "title": "Security Incident Management",
+          "content": "Data users must establish a formal security incident management procedure including: (a) a documented incident response plan (IRP) covering detection, containment, eradication, recovery, and post-incident review; (b) a designated incident response team with defined roles and responsibilities; (c) a security incident register logging all security incidents, their nature, impact, and resolution; (d) escalation procedures for incidents that may constitute notifiable data breaches under s143A; (e) post-incident reviews for all significant incidents; and (f) annual testing of the IRP through tabletop exercises or simulations.",
+          "requirements": [
+            "Incident response plan must be documented and reviewed at least annually",
+            "Security incident register must be maintained and available for Commissioner inspection",
+            "Annual IRP testing is mandatory",
+            "Incidents potentially constituting notifiable data breaches must trigger the s143A notification process"
+          ]
+        },
+        {
+          "id": "esec-6",
+          "title": "Third-Party and Cloud Processing",
+          "content": "Where personal data is processed by third parties (data processors) or in cloud environments, the data user must: (a) conduct due diligence on the cloud provider or processor's security certifications (ISO 27001, SOC 2 Type II, or equivalent); (b) ensure the service agreement includes security requirements equivalent to this Standard; (c) verify that cloud data is stored in Malaysia or in an adequate country, or that a cross-border transfer mechanism is in place; (d) retain the right to audit or obtain audit reports from the cloud provider or processor; and (e) ensure that data is deleted or returned at the end of the service relationship.",
+          "requirements": [
+            "Cloud provider must have recognized security certification (ISO 27001 or equivalent)",
+            "Data location must be verified and documented",
+            "Audit rights must be included in the service agreement",
+            "Exit and data deletion procedures must be contractually secured"
+          ]
+        },
+        {
+          "id": "esec-7",
+          "title": "Staff Training and Awareness",
+          "content": "Data users must ensure that all staff with access to personal data receive regular security awareness training. Training must cover: (a) PDPA obligations and the consequences of non-compliance; (b) phishing and social engineering awareness; (c) secure handling of personal data in electronic systems; (d) password management best practices; (e) incident reporting procedures; and (f) specific risks relevant to the data user's sector. Training must be conducted at induction and at least annually thereafter. Records of training must be maintained.",
+          "requirements": [
+            "Induction training for all new staff with access to personal data",
+            "Annual refresher training mandatory",
+            "Training records retained for minimum 3 years",
+            "Phishing simulation exercises recommended for higher-risk roles"
+          ]
+        }
+      ]
+    },
+    "non-electronic-security": {
+      "id": "pdpa-standard-nonelectronic-security-2015",
+      "title": "Personal Data Protection Standard (Security of Personal Data — Non-Electronic) 2015",
+      "implementsSection": "s9",
+      "principleImplemented": "Security Principle",
+      "provisions": [
+        {
+          "id": "nesec-1",
+          "title": "Scope",
+          "content": "This Standard applies to personal data processed in non-electronic form, including paper records, printed documents, handwritten files, microfiche, and any other tangible medium. It applies to data users and their data processors."
+        },
+        {
+          "id": "nesec-2",
+          "title": "Physical Access Controls",
+          "content": "Areas where physical records containing personal data are stored must be secured with appropriate physical access controls, including: (a) lockable filing cabinets or safes for sensitive personal data; (b) access-controlled rooms or storage areas for bulk personal data records; (c) visitor management procedures for areas containing personal data records; and (d) clean desk policies requiring personal data records to be secured when not in use.",
+          "requirements": [
+            "Filing cabinets containing personal data must be locked when unattended",
+            "Access to records rooms must be logged",
+            "Clean desk policy must be documented and enforced",
+            "Visitor access to areas with personal data records must be supervised"
+          ]
+        },
+        {
+          "id": "nesec-3",
+          "title": "Document Security and Handling",
+          "content": "Personal data records in non-electronic form must be: (a) labeled to indicate their sensitivity level; (b) handled only by authorized personnel; (c) not left unattended in public or shared spaces; (d) secured during transportation (e.g., in sealed envelopes, locked bags); (e) not copied or reproduced without authorization; and (f) not removed from secure storage areas without logging the removal.",
+          "requirements": [
+            "Sensitivity labeling must be applied consistently",
+            "Document removal log must be maintained",
+            "Transportation of sensitive records must use tamper-evident packaging",
+            "Unauthorized copying is prohibited and must be addressed in employment agreements"
+          ]
+        },
+        {
+          "id": "nesec-4",
+          "title": "Secure Disposal of Physical Records",
+          "content": "Physical records containing personal data must be disposed of securely at the end of their retention period. Minimum requirements: (a) paper records must be cross-cut shredded to at least DIN 66399 Level P-4 or equivalent; (b) disposal of bulk records should use a certified secure document destruction service; (c) a disposal certificate must be obtained from the document destruction service; (d) records of disposal (date, description of records, method, witness) must be maintained; and (e) records awaiting disposal must be stored securely in locked bins or bags pending destruction.",
+          "requirements": [
+            "Cross-cut shredding is minimum — strip shredding is not sufficient for sensitive personal data",
+            "Certified document destruction providers must hold accreditation (e.g., NAID AAA)",
+            "Disposal certificates must be retained for minimum 3 years",
+            "Disposal records must be available for Commissioner inspection"
+          ]
+        }
+      ]
+    },
+    "retention": {
+      "id": "pdpa-standard-retention-2015",
+      "title": "Personal Data Protection Standard (Retention of Personal Data) 2015",
+      "implementsSection": "s10",
+      "principleImplemented": "Retention Principle",
+      "provisions": [
+        {
+          "id": "ret-1",
+          "title": "Scope",
+          "content": "This Standard applies to all personal data processed by data users in both electronic and non-electronic form. It establishes the framework for retention periods and the procedures for secure deletion and destruction at the end of the retention period."
+        },
+        {
+          "id": "ret-2",
+          "title": "General Retention Principle",
+          "content": "Personal data must not be retained for longer than is necessary for the purpose for which it was collected and subsequently processed. Data users must establish a documented retention schedule that specifies, for each category of personal data: (a) the retention period; (b) the legal, regulatory, or operational basis for the retention period; (c) the trigger for the start of the retention period (e.g., end of contract, date of last transaction); and (d) the method of disposal at the end of the period.",
+          "requirements": [
+            "Retention schedule must be documented and reviewed at least annually",
+            "Each category of personal data must have a defined retention period",
+            "Retention must be tied to a specific legitimate purpose",
+            "Unlimited retention is not permitted"
+          ]
+        },
+        {
+          "id": "ret-3",
+          "title": "Sector-Specific Retention Periods",
+          "content": "Where other written law mandates a minimum retention period (e.g., Companies Act 2016 — 7 years for financial records; AMLA 2001 — 6 years for KYC records; Employment Act 1955 — 6 years for payroll records), the data user must retain personal data for at least the statutory minimum period. Where the PDPA purpose-based retention would be shorter, the statutory minimum prevails. Where the PDPA purpose-based retention would be longer than the statutory minimum, the statutory minimum is the ceiling unless there is a separate PDPA-compliant purpose justifying extended retention.",
+          "requirements": [
+            "Statutory retention requirements under other laws must be documented in the retention schedule",
+            "Conflicts between PDPA purpose-limitation and statutory minimums must be resolved in favour of compliance with all applicable law",
+            "Sector-specific Codes of Practice may specify retention periods appropriate to the sector"
+          ],
+          "sectorRetentionExamples": [
+            {"sector": "Banking", "recordType": "Customer due diligence (KYC) records", "minimumRetention": "6 years after end of customer relationship", "authority": "AMLA 2001"},
+            {"sector": "Healthcare", "recordType": "Medical records (adults)", "minimumRetention": "7 years after last treatment", "authority": "Private Healthcare Facilities Act 1998"},
+            {"sector": "Healthcare", "recordType": "Medical records (minors)", "minimumRetention": "Until patient reaches age 25 or 7 years after last treatment (whichever is later)", "authority": "Private Healthcare Facilities Act 1998"},
+            {"sector": "Employment", "recordType": "Employment records", "minimumRetention": "6 years after termination", "authority": "Employment Act 1955"},
+            {"sector": "General", "recordType": "Financial/accounting records", "minimumRetention": "7 years", "authority": "Companies Act 2016"},
+            {"sector": "Legal", "recordType": "Client files (completed matters)", "minimumRetention": "7 years after matter closure", "authority": "Bar Council Guidelines"}
+          ]
+        },
+        {
+          "id": "ret-4",
+          "title": "Secure Deletion of Electronic Data",
+          "content": "At the end of the retention period, electronic personal data must be securely and irreversibly deleted. Acceptable methods include: (a) cryptographic erasure — destroying the encryption key for encrypted data; (b) secure overwriting — overwriting data multiple times using recognized standards (e.g., DoD 5220.22-M, NIST 800-88); (c) physical destruction of storage media (degaussing, shredding, or incineration) where overwriting is not practicable. Deletion using the standard operating system delete function (e.g., emptying the Recycle Bin) is not sufficient as the data remains recoverable. Deletion must be verified and a deletion log maintained.",
+          "requirements": [
+            "Recycle Bin deletion is not secure deletion",
+            "Cloud-stored data — the cloud provider must certify deletion",
+            "Deletion log must record date, description of data, method, and responsible officer",
+            "Media being redeployed or decommissioned must have personal data securely wiped"
+          ]
+        },
+        {
+          "id": "ret-5",
+          "title": "Retention for Legal Proceedings",
+          "content": "Where personal data is relevant to actual or reasonably anticipated legal proceedings (litigation hold), the data user may retain the data beyond the standard retention period for the duration of the proceedings. The legal hold must be documented, specifying the proceedings, the categories of data subject to the hold, and the expected duration. Data under a legal hold must be segregated or flagged to prevent accidental deletion. Once the proceedings are concluded, the data must be disposed of in accordance with the standard retention schedule.",
+          "requirements": [
+            "Legal holds must be formally declared in writing",
+            "Data subject to a legal hold must be identified and protected from routine deletion",
+            "Legal holds must be reviewed at least every 12 months",
+            "Upon conclusion of proceedings, hold must be formally lifted and disposal completed within 30 days"
+          ]
+        }
+      ]
+    },
+    "data-integrity": {
+      "id": "pdpa-standard-data-integrity-2015",
+      "title": "Personal Data Protection Standard (Integrity of Personal Data) 2015",
+      "implementsSection": "s11",
+      "principleImplemented": "Data Integrity Principle",
+      "provisions": [
+        {
+          "id": "di-1",
+          "title": "Scope",
+          "content": "This Standard applies to all personal data processed by data users in both electronic and non-electronic form. It requires data users to implement procedures to ensure that personal data remains accurate, complete, and current throughout the processing lifecycle."
+        },
+        {
+          "id": "di-2",
+          "title": "Accuracy at Collection",
+          "content": "Data users must take reasonable steps to ensure the accuracy of personal data at the point of collection, including: (a) designing collection forms to minimize transcription errors; (b) implementing data validation rules for electronic collection (e.g., format checks, range checks); (c) verifying identity documents where the accuracy of identity data is critical (e.g., in financial services, healthcare); and (d) providing data subjects with an opportunity to review and confirm the accuracy of their data before submission.",
+          "requirements": [
+            "Electronic forms must include input validation where technically feasible",
+            "Identity document verification procedures must be appropriate to the risk",
+            "Data subjects should be given the opportunity to review data before submission",
+            "Data collection forms should be designed to avoid ambiguity"
+          ]
+        },
+        {
+          "id": "di-3",
+          "title": "Ongoing Data Quality Management",
+          "content": "Data users must implement ongoing data quality management processes including: (a) periodic data quality audits to identify and correct inaccurate, outdated, or incomplete personal data; (b) processes for capturing and applying updates from data subjects; (c) controls to prevent unauthorized modification of personal data; (d) change logs or audit trails recording modifications to personal data, identifying who made the change, what was changed, and when; and (e) data reconciliation processes where personal data is held in multiple systems.",
+          "requirements": [
+            "Data quality audits must be conducted at least annually for high-volume processing",
+            "Change logs must be retained for minimum 12 months",
+            "Multi-system data users must implement synchronization processes to prevent inconsistency",
+            "Unauthorized modifications must be treated as security incidents"
+          ]
+        },
+        {
+          "id": "di-4",
+          "title": "Handling Correction Requests",
+          "content": "Upon receipt of a data correction request from a data subject under s34 of the Act, the data user must: (a) verify the identity of the requesting data subject; (b) assess the accuracy of the correction claimed using available evidence; (c) where the correction is verified, update the personal data in all systems where it is held; (d) notify third parties to whom the inaccurate data was disclosed so they can also correct their records; (e) inform the data subject of the outcome within 21 days; and (f) where the correction is refused, allow the data subject to attach a statement of disagreement to the record.",
+          "requirements": [
+            "Correction must be propagated to all systems holding the inaccurate data",
+            "Third-party notifications must be completed within 14 days of the correction",
+            "Refusal of a correction must be explained in writing with specific reasons",
+            "Statement of disagreement must be attached to the record and disclosed whenever the data is accessed or disclosed"
+          ]
+        },
+        {
+          "id": "di-5",
+          "title": "Data Integrity in Automated Processing",
+          "content": "Where personal data is subject to automated processing including profiling, scoring, or automated decision-making, the data user must: (a) implement controls to ensure that inputs to automated systems are accurate and current; (b) regularly validate automated processing outputs against known benchmarks to detect systematic inaccuracies; (c) provide mechanisms for data subjects to contest automated decisions that significantly affect them; and (d) maintain audit trails of automated processing sufficient to reconstruct the basis for any individual decision.",
+          "requirements": [
+            "Automated decision systems must be tested for accuracy and bias",
+            "Input data quality controls are required for automated processing",
+            "Data subjects affected by automated decisions must have a right to human review",
+            "Audit trail for automated decisions must be retained for minimum 12 months"
+          ]
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "security standard", "electronic security", "non-electronic security", "retention standard",
+    "data integrity standard", "access controls", "encryption", "secure deletion", "retention periods",
+    "data quality", "correction requests", "s9", "s10", "s11", "Security Principle",
+    "Retention Principle", "Data Integrity Principle", "2015 Standards"
+  ]
+}

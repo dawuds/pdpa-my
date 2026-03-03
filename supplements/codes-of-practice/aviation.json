@@ -1,0 +1,83 @@
+{
+  "id": "cop-aviation",
+  "title": "Personal Data Protection Code of Practice (Aviation) 2022",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "2022-01-01",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["transport"],
+  "summary": "This sector-specific Code applies to aviation operators in the Transport class (Class 6 of the Class of Data Users Order 2013), including airlines, airport operators, and ground handling companies operating in Malaysia. It supplements the General Code 2022 with enhanced and sector-specific requirements reflecting the significant volumes of sensitive passenger data processed by the aviation sector, including passport data, travel history, biometric data, and Passenger Name Records (PNR). The Code takes into account Malaysia's obligations under ICAO Annex 9 and bilateral advance passenger information (API) agreements.",
+  "provisions": [
+    {
+      "id": "cop-avi-s1",
+      "title": "Scope and Application",
+      "content": "This Code applies to airlines licensed to operate in or from Malaysia, airport operators (including the operator of Kuala Lumpur International Airport), and ground handling companies processing passenger personal data in connection with aviation operations. The Code addresses the unique privacy challenges of the aviation sector, including advance passenger information sharing with foreign authorities, biometric processing at airports, frequent flyer programme data, and the use of global distribution systems (GDS).",
+      "requirements": [
+        "All aviation data users must ensure PDPA compliance is integrated into operations at Malaysian airports",
+        "Overseas airline operations involving Malaysian passengers must also comply with s129A where personal data is transferred to Malaysia",
+        "This Code must be read together with the General Code 2022"
+      ]
+    },
+    {
+      "id": "cop-avi-s2",
+      "title": "Passenger Name Records (PNR) and Advance Passenger Information (API)",
+      "content": "Airlines collecting and processing Passenger Name Records (PNR) and Advance Passenger Information (API) must: (a) disclose the collection and use of PNR/API data in the passenger privacy notice; (b) transmit API to the Immigration Department of Malaysia and foreign authorities only as required by applicable law and bilateral agreements; (c) limit PNR data elements to those specifically required by the receiving authority; (d) retain PNR data for no longer than required by applicable bilateral agreements; (e) implement access controls limiting PNR database access to authorized operations and compliance staff; and (f) document all cross-border transfers of PNR data under the appropriate s129A mechanism.",
+      "requirements": [
+        "PNR collection must be disclosed in the passenger privacy notice at booking",
+        "PNR transfers to foreign authorities are generally covered by the legal obligation or vital interests derogation",
+        "Retention of PNR for security purposes beyond the operational period requires specific legal basis",
+        "PNR access log must be maintained"
+      ]
+    },
+    {
+      "id": "cop-avi-s3",
+      "title": "Biometric Data at Airports",
+      "content": "Aviation operators using biometric technologies (facial recognition, fingerprint scanning, iris scanning) for passenger processing must: (a) treat biometric data as sensitive personal data requiring the highest level of protection; (b) obtain explicit consent for biometric processing, except where mandatory government-mandated biometric processing applies (e.g., immigration control); (c) provide clear notice of biometric processing, including alternatives where available; (d) implement strong access controls and encryption for all biometric data; (e) not retain biometric data beyond the processing session unless there is a specific lawful basis for longer retention; and (f) conduct a DPIA before deploying any new biometric system.",
+      "requirements": [
+        "Biometric data is sensitive personal data — explicit consent required where not government-mandated",
+        "Biometric templates must be encrypted at rest and in transit",
+        "DPIA mandatory before deployment of biometric systems",
+        "Government-mandated biometric processing (immigration) operates under statutory authority, not PDPA consent"
+      ]
+    },
+    {
+      "id": "cop-avi-s4",
+      "title": "Frequent Flyer Programmes",
+      "content": "Airlines operating frequent flyer or loyalty programmes must: (a) provide a specific privacy notice for the loyalty programme, covering how points, travel history, and preferences are processed; (b) obtain separate consent for marketing communications; (c) not use travel history data for purposes incompatible with the loyalty programme without fresh consent; (d) implement appropriate security for frequent flyer accounts, including MFA; (e) provide members with easy access to their account data and the ability to close their account and request deletion; and (f) where programme data is shared with airline alliance partners or third-party redemption partners, ensure appropriate disclosure in the privacy notice and data processing agreements.",
+      "requirements": [
+        "Loyalty programme privacy notice must be distinct from the booking privacy notice",
+        "Alliance partner data sharing must be disclosed and covered by appropriate transfer mechanisms",
+        "Account security must include MFA given the value of accumulated points",
+        "Account closure and data deletion requests must be processed within 30 days"
+      ]
+    },
+    {
+      "id": "cop-avi-s5",
+      "title": "Security of Passenger Data Systems",
+      "content": "Aviation data users must implement appropriate security for passenger data systems including: (a) access controls and MFA for all reservation systems (Departure Control Systems, Global Distribution Systems); (b) encrypted transmission of passenger data between airline systems and GDS providers; (c) regular security assessments of all passenger data systems; (d) documented incident response plans covering aviation-specific scenarios (e.g., mass passenger data breaches); and (e) compliance with IATA Cyber Security Guidance and applicable civil aviation authority directives on IT security. Data breaches involving passenger data must be notified to the Commissioner under s143A and to the Civil Aviation Authority of Malaysia (CAAM) as required.",
+      "requirements": [
+        "GDS access must be through encrypted and authenticated connections",
+        "Aviation sector incident response plans must address large-scale passenger data breach scenarios",
+        "CAAM and Commissioner must both be notified of significant passenger data breaches",
+        "Annual security assessments of reservation systems are required"
+      ]
+    },
+    {
+      "id": "cop-avi-s6",
+      "title": "CCTV and Surveillance Systems",
+      "content": "Airport operators and airlines operating CCTV and surveillance systems in airport terminals, aircraft, and airport precinct areas must: (a) display clear notices in surveillance areas informing persons that CCTV is in operation; (b) document the purposes for which CCTV is used (security, operations, investigation); (c) restrict access to CCTV footage to authorized security, operations, and law enforcement personnel; (d) retain CCTV footage for no longer than 30 days for general surveillance purposes; (e) retain footage relevant to specific incidents for the duration of any investigation or legal proceedings; and (f) provide access to CCTV footage to law enforcement only in response to lawful requests.",
+      "requirements": [
+        "CCTV notices must be displayed at all camera locations",
+        "General surveillance footage retained for maximum 30 days absent a specific incident",
+        "Incident-related footage subject to legal hold",
+        "Access to CCTV systems must be logged"
+      ]
+    }
+  ],
+  "keywords": [
+    "aviation", "airline", "airport", "PNR", "passenger name records", "API", "advance passenger information",
+    "biometric", "facial recognition", "frequent flyer", "loyalty programme", "GDS", "global distribution system",
+    "CCTV", "surveillance", "CAAM", "ICAO", "Class 6", "transport"
+  ]
+}

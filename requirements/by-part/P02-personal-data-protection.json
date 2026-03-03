@@ -1,0 +1,992 @@
+{
+  "s5": {
+    "sectionId": "s5",
+    "part": "II",
+    "title": "Compliance with Personal Data Protection Principles",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 5 is the gateway compliance provision. It prohibits processing personal data unless all applicable principles are satisfied and registration requirements are met. Violation is a criminal offence with penalties up to RM1,000,000 or 3 years imprisonment following the 2024 Amendment.",
+      "requirements": [
+        {
+          "id": "s5-L1",
+          "requirement": "Ensure that all personal data processing activities comply with each of the seven Personal Data Protection Principles (ss 6-12) before processing commences and on an ongoing basis",
+          "rationale": "Section 5(1) makes compliance with the principles a condition precedent to lawful processing; any breach of ss 6-12 is prosecuted under s5(3) and carries criminal liability",
+          "owner": "Data Protection Officer / Legal Counsel",
+          "frequency": "Ongoing — reviewed at each new processing activity and annually",
+          "priority": "Critical"
+        },
+        {
+          "id": "s5-L2",
+          "requirement": "Ensure the organisation is registered as a data user if it falls within a prescribed class under the Personal Data Protection (Class of Data Users) Order 2013, and maintain a valid certificate of registration at all times",
+          "rationale": "Section 5(2) makes processing without registration a criminal offence; penalties were increased to RM1,000,000 or 3 years imprisonment by the 2024 Amendment",
+          "owner": "Legal Counsel / Company Secretary",
+          "frequency": "At onboarding and upon any change in business activities",
+          "priority": "Critical"
+        },
+        {
+          "id": "s5-L3",
+          "requirement": "Conduct a principles compliance audit at least annually and document findings; remediate any identified gaps before the next audit cycle",
+          "rationale": "Documented compliance demonstrates good faith to JPDP inspectors and supports a defence of due diligence in enforcement proceedings",
+          "owner": "Data Protection Officer / Internal Audit",
+          "frequency": "Annual",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Systems and processes must be designed and configured so that all personal data processing is technically capable of complying with the seven principles. Privacy-by-design and privacy-by-default must be embedded into system architecture.",
+      "requirements": [
+        {
+          "id": "s5-T1",
+          "requirement": "Maintain a complete and up-to-date Record of Processing Activities (ROPA) mapping every processing activity to its applicable principles, lawful basis, and responsible owner",
+          "rationale": "A ROPA is the foundational tool for demonstrating compliance with all seven principles; it enables rapid identification of gaps and supports JPDP inspections",
+          "owner": "Data Protection Officer / IT Compliance",
+          "frequency": "Maintained continuously; formally reviewed quarterly",
+          "priority": "Critical"
+        },
+        {
+          "id": "s5-T2",
+          "requirement": "Implement a principles compliance checklist as a mandatory gate in the new product/service launch and change management processes, requiring sign-off before any new processing activity goes live",
+          "rationale": "Embedding compliance checks in operational workflows ensures principles are considered at design stage rather than retrospectively",
+          "owner": "IT / Product / Legal",
+          "frequency": "Per new project or material change",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Board-level accountability for PDPA compliance must be established. A Data Protection Officer (or equivalent function) must have clear mandate and reporting lines to ensure the seven principles are upheld across the organisation.",
+      "requirements": [
+        {
+          "id": "s5-G1",
+          "requirement": "Appoint a Data Protection Officer (DPO) or equivalent accountable function with a written mandate covering oversight of compliance with all seven principles, and ensure the DPO has direct access to senior management",
+          "rationale": "Organisational accountability is a prerequisite for systemic compliance; the Commissioner treats absence of a DPO as an aggravating factor in enforcement",
+          "owner": "Board / CEO",
+          "frequency": "At establishment; reviewed annually",
+          "priority": "Critical"
+        },
+        {
+          "id": "s5-G2",
+          "requirement": "Establish a PDPA compliance policy approved by the Board that articulates the organisation's commitment to the seven principles and assigns individual accountability for each principle",
+          "rationale": "A Board-approved policy creates the governance framework within which operational compliance is embedded",
+          "owner": "Board / DPO",
+          "frequency": "Annual review",
+          "priority": "High"
+        },
+        {
+          "id": "s5-G3",
+          "requirement": "Report PDPA compliance status (including any breaches, complaints, or JPDP investigations) to senior management or the Board at least quarterly",
+          "rationale": "Regular reporting ensures senior leadership has visibility of compliance posture and can resource remediation efforts promptly",
+          "owner": "DPO",
+          "frequency": "Quarterly",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s6": {
+    "sectionId": "s6",
+    "part": "II",
+    "title": "General Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "The General Principle is the foundational lawful basis requirement. Data users must have a valid lawful basis for every personal data processing activity. Consent is the primary basis; alternatives are enumerated in s6(2). Processing without a lawful basis is an offence under s5(3).",
+      "requirements": [
+        {
+          "id": "s6-L1",
+          "requirement": "Obtain valid consent from data subjects before processing personal data, or establish and document an alternative lawful basis under s6(2) prior to processing commencing",
+          "rationale": "Consent is the primary lawful basis under PDPA; failure to have any lawful basis constitutes an offence under s5(3) with penalties up to RM1,000,000 or 3 years imprisonment",
+          "owner": "Data Protection Officer / Legal Counsel",
+          "frequency": "Per processing activity",
+          "priority": "Critical"
+        },
+        {
+          "id": "s6-L2",
+          "requirement": "Ensure consent is freely given, specific, informed, and unambiguous; consent obtained through bundling with terms of service, pre-ticked boxes, or silence does not constitute valid consent under the 2024 Amendment definition in s2",
+          "rationale": "The 2024 Amendment aligned the consent definition with international best practice; invalid consent is treated as no consent for enforcement purposes",
+          "owner": "Legal Counsel / Marketing / Product",
+          "frequency": "Reviewed at each consent collection mechanism review",
+          "priority": "Critical"
+        },
+        {
+          "id": "s6-L3",
+          "requirement": "Where relying on the legitimate interests basis under s6(2)(f), conduct, document, and retain a Legitimate Interest Assessment (LIA) demonstrating the three-part test: identify legitimate interest, establish necessity, and balance against data subject rights",
+          "rationale": "The LIA is the evidentiary foundation for the legitimate interests basis; absence of a documented LIA prevents reliance on this basis in enforcement proceedings",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "Per processing activity relying on legitimate interests",
+          "priority": "High"
+        },
+        {
+          "id": "s6-L4",
+          "requirement": "Implement a mechanism for data subjects to withdraw consent at any time, and cease processing upon withdrawal where no alternative lawful basis applies, notifying any third parties to whom the data was disclosed",
+          "rationale": "Section 38 provides a right to withdraw consent; failure to honour withdrawal while continuing to process constitutes ongoing contravention of s6",
+          "owner": "DPO / Operations / IT",
+          "frequency": "Ongoing",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical systems must support consent collection, tracking, withdrawal, and lawful basis documentation. A consent management platform or equivalent capability is essential for demonstrating compliance.",
+      "requirements": [
+        {
+          "id": "s6-T1",
+          "requirement": "Implement a consent management platform (CMP) or equivalent system that records the date, time, method, scope, and version of consent obtained from each data subject, with audit trail integrity",
+          "rationale": "The data user bears the burden of proving valid consent; an auditable CMP provides the evidentiary record required for JPDP inspections",
+          "owner": "IT / Product",
+          "frequency": "Implemented before processing commences; maintained continuously",
+          "priority": "Critical"
+        },
+        {
+          "id": "s6-T2",
+          "requirement": "Configure all data collection interfaces (web forms, mobile apps, paper forms) to present consent requests that are unbundled, granular (separate consent per purpose), and require affirmative action before data is submitted",
+          "rationale": "Technical implementation must reflect the legal requirements of freely given, specific, and unambiguous consent",
+          "owner": "Product / IT / UX",
+          "frequency": "At design and on each UI change",
+          "priority": "High"
+        },
+        {
+          "id": "s6-T3",
+          "requirement": "Maintain a lawful basis register (as part of the ROPA) that maps each processing activity to its s6(2) lawful basis, with linked documentation (consent records, contracts, LIAs, or legal obligations)",
+          "rationale": "The register enables the organisation to demonstrate a lawful basis for every processing activity during a JPDP inspection",
+          "owner": "DPO / IT Compliance",
+          "frequency": "Updated per new processing activity; reviewed quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Governance structures must ensure that the lawful basis for processing is assessed before any new processing activity commences, and that accountability for consent management is clearly assigned.",
+      "requirements": [
+        {
+          "id": "s6-G1",
+          "requirement": "Establish a lawful basis review process as a mandatory gate in the new processing activity approval workflow, requiring DPO sign-off on the documented lawful basis before processing commences",
+          "rationale": "Embedding lawful basis assessment in the governance workflow prevents processing without a basis, which is the most fundamental PDPA violation",
+          "owner": "DPO / Legal",
+          "frequency": "Per new processing activity",
+          "priority": "Critical"
+        },
+        {
+          "id": "s6-G2",
+          "requirement": "Conduct annual training for all staff who collect, use, or manage personal data on the lawful bases for processing and the requirements for valid consent",
+          "rationale": "Staff awareness is essential to prevent inadvertent processing without a lawful basis, particularly in customer-facing and marketing teams",
+          "owner": "HR / DPO",
+          "frequency": "Annual; at onboarding for new staff",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s7": {
+    "sectionId": "s7",
+    "part": "II",
+    "title": "Notice and Choice Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Data users must provide written notice to data subjects before or at the time of personal data collection. The notice must contain all prescribed elements under s7(1) and must be provided in both Bahasa Malaysia and English. Data subjects must be given a meaningful choice over non-essential processing.",
+      "requirements": [
+        {
+          "id": "s7-L1",
+          "requirement": "Provide written notice to data subjects before or at the time of personal data collection containing all elements required by s7(1): description of data collected, processing purposes, classes of third party recipients, right of access and correction, contact details for requests, whether data provision is obligatory or voluntary, and consequences of non-provision",
+          "rationale": "Each missing element is a separate point of non-compliance with the Notice and Choice Principle, prosecutable under s5(3)",
+          "owner": "Legal Counsel / DPO / Marketing",
+          "frequency": "At each data collection point; reviewed annually",
+          "priority": "Critical"
+        },
+        {
+          "id": "s7-L2",
+          "requirement": "Publish and maintain the privacy notice in both Bahasa Malaysia and English, ensuring both versions are substantively identical and clearly accessible to data subjects at all collection points",
+          "rationale": "Section 7(3) mandates bilingual notice; a notice in only one language does not satisfy the legal requirement",
+          "owner": "Legal Counsel / Communications",
+          "frequency": "At each notice review; at least annually",
+          "priority": "Critical"
+        },
+        {
+          "id": "s7-L3",
+          "requirement": "Provide data subjects with a genuine and accessible choice to opt out of processing for purposes beyond the primary transaction purpose, including direct marketing and analytics, without conditioning service delivery on acceptance of non-essential processing",
+          "rationale": "Section 7(2) requires a meaningful choice mechanism; conditioning service access on acceptance of non-essential processing renders consent non-freely given under s2",
+          "owner": "Legal Counsel / Product / Marketing",
+          "frequency": "At each consent and notice review",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "All data collection interfaces must embed the required notice and present genuine choice mechanisms. Website privacy policies, mobile app notices, paper forms, and verbal collection processes must all satisfy s7 requirements.",
+      "requirements": [
+        {
+          "id": "s7-T1",
+          "requirement": "Implement a layered notice strategy: a concise notice at the point of collection containing key information and a link to the comprehensive privacy policy; the comprehensive policy must contain all s7(1) elements in plain language",
+          "rationale": "Layered notices balance user experience with legal completeness; the comprehensive policy must be accessible and substantively complete to satisfy s7",
+          "owner": "Product / Legal / UX",
+          "frequency": "At design; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s7-T2",
+          "requirement": "Implement a version-controlled notice management system that records the version of the privacy notice presented to each data subject at the time of collection, enabling the organisation to demonstrate what information was provided and when",
+          "rationale": "Version records are critical evidence if a data subject disputes whether they received adequate notice; regulators may request notice history during investigations",
+          "owner": "IT / Product / Legal",
+          "frequency": "Maintained continuously",
+          "priority": "High"
+        },
+        {
+          "id": "s7-T3",
+          "requirement": "Implement accessible opt-out mechanisms for direct marketing and non-essential processing that are as easy to use as the corresponding opt-in, and ensure opt-out preferences are technically propagated to all relevant processing systems within a defined timeframe",
+          "rationale": "A nominal opt-out mechanism that is technically ineffective does not satisfy s7(2); the system must suppress processing for opted-out individuals",
+          "owner": "IT / Marketing Technology",
+          "frequency": "At implementation; tested quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The organisation must have a documented notice management process, ensuring notices are reviewed, updated, and distributed appropriately whenever processing purposes or third-party disclosures change.",
+      "requirements": [
+        {
+          "id": "s7-G1",
+          "requirement": "Establish a privacy notice review and update procedure that mandates review whenever new processing purposes are introduced, new third parties receive personal data, or relevant law or guidance changes",
+          "rationale": "An outdated privacy notice that does not reflect current processing activities is a standing non-compliance with s7(1)(b) and (c)",
+          "owner": "DPO / Legal",
+          "frequency": "Event-triggered and annual",
+          "priority": "High"
+        },
+        {
+          "id": "s7-G2",
+          "requirement": "Maintain a notice distribution log recording when and how updated privacy notices were communicated to existing data subjects, and confirm that data subjects were informed of material changes",
+          "rationale": "Existing data subjects must be informed of material changes to processing purposes or disclosures; passive publication of an updated notice is insufficient",
+          "owner": "DPO / Marketing / CRM",
+          "frequency": "Per notice update",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s8": {
+    "sectionId": "s8",
+    "part": "II",
+    "title": "Disclosure Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Personal data shall not be disclosed for any purpose other than the purpose disclosed at collection, or a directly related purpose, without data subject consent. Third-party disclosures must be governed by data processing agreements, and cross-border transfers must comply with the Transfer Order or s129A.",
+      "requirements": [
+        {
+          "id": "s8-L1",
+          "requirement": "Obtain fresh consent from the data subject before disclosing personal data to any third party for a purpose that is not the purpose originally notified, or is not directly related to that purpose, unless an exception under s8(2) applies",
+          "rationale": "Unauthorised disclosure to third parties is among the most common and serious PDPA violations; each disclosure to an unintended recipient is a separate breach",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "Per disclosure event",
+          "priority": "Critical"
+        },
+        {
+          "id": "s8-L2",
+          "requirement": "Maintain a third-party disclosure register documenting every entity receiving personal data, categories of data shared, purpose, legal basis, data processing agreement reference, and date of disclosure",
+          "rationale": "The disclosure register provides the evidentiary foundation for demonstrating compliance with s8 to JPDP inspectors and responding to data subject access requests",
+          "owner": "DPO / Legal",
+          "frequency": "Updated per new disclosure; reviewed quarterly",
+          "priority": "High"
+        },
+        {
+          "id": "s8-L3",
+          "requirement": "Apply the minimum necessary principle to all disclosures — disclose only the categories and volume of personal data strictly necessary for the stated disclosure purpose, and not more",
+          "rationale": "Over-disclosure beyond the stated purpose breaches s8(1) and may also breach the General Principle; the minimum necessary standard applies to both the categories and volume of data shared",
+          "owner": "DPO / Business Units",
+          "frequency": "Per disclosure event",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical controls must prevent unauthorised disclosures through access controls, data loss prevention tools, and API governance. Automated disclosure to third-party systems must be governed by documented agreements and technical controls.",
+      "requirements": [
+        {
+          "id": "s8-T1",
+          "requirement": "Implement data loss prevention (DLP) controls on email, file sharing, and API endpoints to detect and prevent unauthorised transmission of personal data to external parties",
+          "rationale": "Inadvertent or unauthorised disclosures often occur through uncontrolled channels; DLP provides a technical backstop against breaches of s8",
+          "owner": "IT Security",
+          "frequency": "Implemented continuously; policy reviewed quarterly",
+          "priority": "High"
+        },
+        {
+          "id": "s8-T2",
+          "requirement": "Govern all API and system integrations that transmit personal data to third parties through documented data processing agreements, with technical access controls ensuring third parties receive only the agreed data fields",
+          "rationale": "API integrations can silently disclose personal data at scale; technical field-level controls aligned with contractual agreements prevent over-disclosure",
+          "owner": "IT / Integration Team",
+          "frequency": "At integration design; reviewed annually",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The organisation must operate a controlled third-party disclosure process requiring DPO or Legal sign-off before any new third-party data sharing arrangement is established.",
+      "requirements": [
+        {
+          "id": "s8-G1",
+          "requirement": "Require DPO review and sign-off for all new third-party data sharing arrangements before execution, including a review of the counterparty's data protection practices and the adequacy of the proposed data processing agreement",
+          "rationale": "Proactive governance of third-party disclosures prevents non-compliant sharing arrangements from being established without legal oversight",
+          "owner": "DPO / Legal / Procurement",
+          "frequency": "Per new third-party engagement",
+          "priority": "High"
+        },
+        {
+          "id": "s8-G2",
+          "requirement": "Conduct annual reviews of all active third-party data sharing arrangements to verify continued necessity, adequacy of contractual protections, and alignment with current processing purposes",
+          "rationale": "Third-party relationships evolve; arrangements that were compliant at inception may become non-compliant if processing purposes change or agreements are not renewed",
+          "owner": "DPO / Procurement / Legal",
+          "frequency": "Annual",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s9": {
+    "sectionId": "s9",
+    "part": "II",
+    "title": "Security Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Data users must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access, disclosure, alteration, or destruction. The obligation extends to data processors through s9(2). The 2024 Amendment introduced mandatory breach notification under s143A, reinforcing the security obligation.",
+      "requirements": [
+        {
+          "id": "s9-L1",
+          "requirement": "Implement and maintain a written data security policy approved by senior management that is proportionate to the sensitivity of personal data processed and the risks identified in a current security risk assessment",
+          "rationale": "Section 9(1) and the Personal Data Protection Standards 2015 (Security Standard) mandate a documented security policy; absence of a written policy is treated as per se non-compliance by JPDP",
+          "owner": "DPO / CISO / Senior Management",
+          "frequency": "Implemented; reviewed annually and after significant incidents",
+          "priority": "Critical"
+        },
+        {
+          "id": "s9-L2",
+          "requirement": "Ensure all data processing agreements with data processors contain mandatory security standards at least equivalent to those the data user applies to its own processing, and conduct periodic security due diligence reviews of processors",
+          "rationale": "Section 9(2) makes the data user responsible for the security of personal data processed by processors on its behalf; a breach at a processor's systems may constitute a violation by the data user",
+          "owner": "DPO / Legal / Procurement",
+          "frequency": "At processor engagement; reviewed annually",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The organisation must implement a layered technical security architecture covering encryption, access controls, monitoring, and incident response to satisfy the practical steps requirement of s9(1) and the Personal Data Protection Standards 2015.",
+      "requirements": [
+        {
+          "id": "s9-T1",
+          "requirement": "Implement encryption for personal data at rest (AES-256 or equivalent) and in transit (TLS 1.2 minimum), apply to all systems storing or transmitting personal data including mobile devices, laptops, and cloud storage",
+          "rationale": "The Personal Data Protection Standards 2015 (Security Standard) requires encryption; unencrypted personal data on lost or stolen devices or intercepted in transit constitutes a security failure under s9",
+          "owner": "IT Security / CISO",
+          "frequency": "Implemented; reviewed at technology refresh",
+          "priority": "Critical"
+        },
+        {
+          "id": "s9-T2",
+          "requirement": "Implement role-based access controls with least-privilege principles for all systems containing personal data, enforce multi-factor authentication for privileged access and remote access, and review and revoke access rights quarterly or upon role change",
+          "rationale": "Excessive access rights are among the most common causes of data breaches; the Security Standard requires access controls and regular access reviews",
+          "owner": "IT Security / IT Operations",
+          "frequency": "Access reviews quarterly; MFA enforcement ongoing",
+          "priority": "Critical"
+        },
+        {
+          "id": "s9-T3",
+          "requirement": "Conduct annual security risk assessments and penetration tests on systems processing personal data; maintain a remediation tracker for identified vulnerabilities with target resolution dates tied to risk severity",
+          "rationale": "Periodic assessments demonstrate the 'practical steps' standard under s9(1); unaddressed known vulnerabilities are evidence of failure to take practical steps",
+          "owner": "IT Security / CISO",
+          "frequency": "Annual; additional assessments after significant changes",
+          "priority": "High"
+        },
+        {
+          "id": "s9-T4",
+          "requirement": "Implement security monitoring and intrusion detection on all systems processing personal data, with alerting, logging, and incident triage capabilities sufficient to detect and respond to breaches within the timeframe required by s143A",
+          "rationale": "Detection capability is a prerequisite for timely breach notification under s143A; failure to detect a breach in a timely manner may indicate failure to take practical steps under s9",
+          "owner": "IT Security / SOC",
+          "frequency": "Implemented continuously; monitoring reviewed quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Security governance must be formalised with clear ownership, regular reviews, staff training, and incident response procedures that link the Security Principle obligations to the breach notification requirements under s143A.",
+      "requirements": [
+        {
+          "id": "s9-G1",
+          "requirement": "Establish and test an incident response and data breach notification procedure that assigns roles, defines escalation paths, and ensures the organisation can meet its s143A notification obligations to the Commissioner and affected data subjects",
+          "rationale": "An untested incident response plan is unlikely to function effectively in a real breach; the Commissioner treats failure to have an IRP as evidence of inadequate security governance",
+          "owner": "DPO / CISO / Legal",
+          "frequency": "Annual tabletop exercise; updated after each incident",
+          "priority": "Critical"
+        },
+        {
+          "id": "s9-G2",
+          "requirement": "Deliver annual security awareness training to all staff with access to personal data, with specific modules on phishing, social engineering, clean desk, and data handling procedures",
+          "rationale": "Human error is the leading cause of data breaches; staff training is explicitly referenced in the Personal Data Protection Standards 2015 as a security measure",
+          "owner": "HR / DPO / CISO",
+          "frequency": "Annual; at onboarding",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s10": {
+    "sectionId": "s10",
+    "part": "II",
+    "title": "Retention Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Personal data shall not be retained for longer than is necessary for the purpose for which it was collected. Data users must establish and adhere to documented retention schedules and implement secure disposal procedures for data that has reached the end of its retention period.",
+      "requirements": [
+        {
+          "id": "s10-L1",
+          "requirement": "Establish a documented data retention schedule that specifies the retention period for each category of personal data, the legal or business basis for the period, and the approved disposal method",
+          "rationale": "Section 10(1) prohibits retention beyond the necessary period; an undocumented retention practice is not auditable and cannot demonstrate compliance to JPDP",
+          "owner": "DPO / Legal / Records Management",
+          "frequency": "Established; reviewed annually",
+          "priority": "Critical"
+        },
+        {
+          "id": "s10-L2",
+          "requirement": "Implement secure disposal procedures for personal data that has reached the end of its retention period, including certified deletion for electronic data and cross-cut shredding or secure destruction for physical records",
+          "rationale": "Retention beyond the necessary period is an offence under s5(3); indefinite retention without a legal basis is a standing violation; the disposal method must be appropriate to the sensitivity of the data",
+          "owner": "DPO / IT / Records Management",
+          "frequency": "Ongoing; disposal events documented",
+          "priority": "High"
+        },
+        {
+          "id": "s10-L3",
+          "requirement": "Align the retention schedule with all applicable legal, regulatory, and contractual retention obligations (e.g., tax records under the Income Tax Act, employment records under the Employment Act, AML records under AMLA), and document the basis for any retention extending beyond the PDPA minimum necessary period",
+          "rationale": "Where a separate law requires longer retention, that law provides the legal basis for extended retention; the data user must identify and document this basis",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "At schedule creation; reviewed on any change in applicable law",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Systems must be configured to enforce retention schedules automatically where possible, with manual review processes for data categories that require judgment-based retention decisions.",
+      "requirements": [
+        {
+          "id": "s10-T1",
+          "requirement": "Configure automated data lifecycle management controls in all primary systems processing personal data to flag or delete personal data upon expiry of the applicable retention period",
+          "rationale": "Manual retention enforcement is error-prone and does not scale; automated controls provide reliable and auditable enforcement of the retention schedule",
+          "owner": "IT / Data Management",
+          "frequency": "Implemented; retention rules reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s10-T2",
+          "requirement": "Maintain disposal certificates or logs for all personal data that has been destroyed, recording the data category, disposal date, disposal method, and authorising officer",
+          "rationale": "Disposal logs provide evidence that the organisation has complied with its retention schedule; they are a key document requested by JPDP inspectors",
+          "owner": "IT / Records Management",
+          "frequency": "Per disposal event",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Retention governance must ensure that business owners are accountable for retention decisions, and that the retention schedule is maintained as a living document aligned with changes in legal obligations and business practices.",
+      "requirements": [
+        {
+          "id": "s10-G1",
+          "requirement": "Assign retention schedule ownership to named data owners for each data category, who are responsible for periodic review of retention periods and escalating requests for extension with documented justification",
+          "rationale": "Retention decisions require business and legal judgement; assigning ownership ensures accountable decision-making rather than passive data accumulation",
+          "owner": "DPO / Data Owners",
+          "frequency": "Assigned at schedule creation; reviewed annually",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s11": {
+    "sectionId": "s11",
+    "part": "II",
+    "title": "Data Integrity Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "A data user shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up-to-date, having regard to the purpose for which it is collected and used.",
+      "requirements": [
+        {
+          "id": "s11-L1",
+          "requirement": "Implement processes to verify the accuracy and completeness of personal data at the point of collection, including validation of mandatory fields and format checks where applicable",
+          "rationale": "Section 11 imposes a continuous obligation to maintain data accuracy; preventive validation at collection is more effective and less costly than correcting errors after the fact",
+          "owner": "DPO / IT / Operations",
+          "frequency": "At collection; maintained continuously",
+          "priority": "High"
+        },
+        {
+          "id": "s11-L2",
+          "requirement": "Implement processes to update personal data when changes are notified by data subjects or identified through other reliable means, and to correct inaccurate data promptly upon identification or receipt of a correction request",
+          "rationale": "Section 11 requires that data be kept up-to-date having regard to its processing purpose; stale or incorrect data used in decisions affecting individuals breaches s11",
+          "owner": "DPO / CRM / Operations",
+          "frequency": "Ongoing",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Data quality controls must be embedded in data collection interfaces and data management systems.",
+      "requirements": [
+        {
+          "id": "s11-T1",
+          "requirement": "Implement data quality controls in all systems containing personal data, including input validation rules, format checks, mandatory field enforcement, and duplicate detection mechanisms",
+          "rationale": "Technical data quality controls prevent inaccurate data from entering systems, reducing the compliance burden of ongoing correction",
+          "owner": "IT / Data Management",
+          "frequency": "Implemented at system design; reviewed at system changes",
+          "priority": "High"
+        },
+        {
+          "id": "s11-T2",
+          "requirement": "Implement a self-service data correction portal or process that allows data subjects to submit correction requests, tracks the status of requests, and ensures corrections are propagated to all systems containing the relevant personal data",
+          "rationale": "Section 32 provides a right to data correction; the technical mechanism must be capable of implementing corrections across all relevant systems",
+          "owner": "IT / CRM / DPO",
+          "frequency": "Implemented; reviewed annually",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Data quality governance must assign ownership of data accuracy to business process owners, with periodic data quality audits and clear procedures for handling correction requests.",
+      "requirements": [
+        {
+          "id": "s11-G1",
+          "requirement": "Conduct periodic data quality audits of key personal data repositories to identify and remediate systemic accuracy issues, and report data quality metrics to the DPO quarterly",
+          "rationale": "Proactive quality audits demonstrate the 'reasonable steps' standard under s11 and prevent the accumulation of inaccurate data that could cause harm to data subjects",
+          "owner": "Data Owners / DPO / IT",
+          "frequency": "Quarterly audits",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s12": {
+    "sectionId": "s12",
+    "part": "II",
+    "title": "Access Principle",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "A data user shall allow data subjects to access their personal data and correct any inaccuracies. The Access Principle is operationalised through ss 30-33.",
+      "requirements": [
+        {
+          "id": "s12-L1",
+          "requirement": "Maintain a documented data subject access and correction request procedure that is accessible to data subjects, specifies the required request format, processing timeframes (maximum 21 days under s31), and applicable fees, if any",
+          "rationale": "Section 12 creates the right; ss 30-33 operationalise it; failure to have a procedure that can realistically handle requests within the statutory timeframe is non-compliance",
+          "owner": "DPO / Legal / Operations",
+          "frequency": "Established; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s12-L2",
+          "requirement": "Provide data subjects with access to their personal data held by the organisation upon a valid access request, within the prescribed timeframe, in a commonly used electronic format where practicable",
+          "rationale": "Section 30 and s31 create enforceable rights; failure to respond to a valid access request within the prescribed period is an offence",
+          "owner": "DPO / Operations",
+          "frequency": "Per request",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Systems must be capable of locating and extracting personal data relating to a specific data subject across all relevant systems in order to respond to access requests efficiently and within statutory timeframes.",
+      "requirements": [
+        {
+          "id": "s12-T1",
+          "requirement": "Implement a data subject request management system or workflow that tracks incoming access and correction requests, records dates, assigned handler, status, and response date, and alerts on approaching deadlines",
+          "rationale": "Manual tracking of data subject requests is error-prone; a formal tracking system prevents missed deadlines and provides the audit trail required for JPDP inspections",
+          "owner": "IT / DPO / Operations",
+          "frequency": "Implemented; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s12-T2",
+          "requirement": "Maintain a data map identifying all systems and locations where personal data for different data subject categories is stored, enabling efficient search and retrieval across systems to respond to access requests within the 21-day period",
+          "rationale": "Without a comprehensive data map, access request responses may be incomplete; a data map is a prerequisite for efficient, accurate access request handling",
+          "owner": "DPO / IT / Data Governance",
+          "frequency": "Maintained continuously; formally reviewed quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The organisation must designate a responsible function for managing data subject access and correction requests, with clear escalation procedures and regular reporting on request volumes and response times.",
+      "requirements": [
+        {
+          "id": "s12-G1",
+          "requirement": "Designate a named contact or team responsible for receiving, processing, and responding to data subject access and correction requests, and publish the contact details in the organisation's privacy notice",
+          "rationale": "Section 7(1)(d) requires the notice to include access request contact details; the designated contact ensures requests are routed correctly",
+          "owner": "DPO",
+          "frequency": "Established; reviewed at any staff changes",
+          "priority": "High"
+        },
+        {
+          "id": "s12-G2",
+          "requirement": "Report request volumes, response times, and outcomes to the DPO monthly, and escalate any requests that cannot be fulfilled within the statutory timeframe for management decision",
+          "rationale": "Management oversight of request handling ensures systemic issues are identified and addressed before they result in enforcement action",
+          "owner": "DPO / Operations",
+          "frequency": "Monthly reporting",
+          "priority": "Medium"
+        }
+      ]
+    }
+  },
+  "s13": {
+    "sectionId": "s13",
+    "part": "II",
+    "title": "Registration of Data Users",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Data users belonging to a prescribed class under the Personal Data Protection (Class of Data Users) Order 2013 must register with the Commissioner before processing personal data. Processing without registration is a criminal offence under s5(2) with penalties up to RM1,000,000 or 3 years imprisonment.",
+      "requirements": [
+        {
+          "id": "s13-L1",
+          "requirement": "Determine whether the organisation falls within any prescribed class of data users under the Personal Data Protection (Class of Data Users) Order 2013, and obtain registration before commencing processing of personal data",
+          "rationale": "Processing without registration where required is an offence under s5(2); penalties were increased to RM1,000,000 or 3 years imprisonment by the 2024 Amendment",
+          "owner": "Legal Counsel / Company Secretary",
+          "frequency": "At establishment; on each material change of business",
+          "priority": "Critical"
+        },
+        {
+          "id": "s13-L2",
+          "requirement": "Maintain a valid registration certificate and notify the Commissioner of any material changes to the information provided in the registration application within 14 days of the change",
+          "rationale": "Holding an expired or lapsed registration while continuing to process personal data constitutes the same offence as unregistered processing",
+          "owner": "Legal Counsel / Company Secretary / DPO",
+          "frequency": "Ongoing; change notification within 14 days of change",
+          "priority": "Critical"
+        },
+        {
+          "id": "s13-L3",
+          "requirement": "Renew the registration certificate before its expiry date and maintain records of all historical registration certificates and renewal applications",
+          "rationale": "Lapse in registration renders all ongoing processing unlawful under s5(2); renewal should be initiated well before the expiry date",
+          "owner": "Company Secretary / DPO",
+          "frequency": "Before each expiry; renewal tracked in compliance calendar",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The organisation must maintain accurate records of its registration status and automate renewal reminders to prevent inadvertent lapses.",
+      "requirements": [
+        {
+          "id": "s13-T1",
+          "requirement": "Maintain a compliance calendar with automated reminders for registration renewal deadlines, set at 90 days, 60 days, and 30 days before the registration expiry date",
+          "rationale": "Registration lapses are preventable with adequate advance notice; automated reminders remove reliance on manual calendar management",
+          "owner": "Company Secretary / DPO / IT",
+          "frequency": "Maintained continuously",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Registration governance must ensure that the responsible officer is accountable for maintaining registration status and that any changes in business activities triggering new registration requirements are identified and acted on promptly.",
+      "requirements": [
+        {
+          "id": "s13-G1",
+          "requirement": "Assign named responsibility for monitoring registration status, initiating renewals, and notifying the Commissioner of changes to a specific officer, with backup coverage documented",
+          "rationale": "Registration lapses frequently result from unclear ownership; designated responsibility with documented backup prevents gaps",
+          "owner": "Company Secretary / DPO",
+          "frequency": "Assigned at establishment; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s13-G2",
+          "requirement": "Include a PDPA registration status review as a mandatory item in the organisation's annual compliance review, and verify that the registered particulars continue to accurately reflect the organisation's processing activities",
+          "rationale": "Registration particulars must reflect actual processing; misalignment may constitute a failure to notify changes as required",
+          "owner": "DPO / Legal / Company Secretary",
+          "frequency": "Annual",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s14": {
+    "sectionId": "s14",
+    "part": "II",
+    "title": "Application for Registration",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 14 specifies the requirements for a valid registration application. The application must contain accurate particulars of the data user's processing activities, categories of personal data processed, and purposes of processing.",
+      "requirements": [
+        {
+          "id": "s14-L1",
+          "requirement": "Submit a complete and accurate registration application to the Commissioner containing all prescribed particulars, including the organisation's details, categories of personal data processed, and processing purposes",
+          "rationale": "An incomplete or inaccurate application may be rejected; providing false information is a separate criminal offence",
+          "owner": "Legal Counsel / Company Secretary",
+          "frequency": "At initial registration and at each renewal",
+          "priority": "Critical"
+        },
+        {
+          "id": "s14-L2",
+          "requirement": "Ensure that all information provided in the registration application is consistent with the organisation's actual processing activities as documented in the ROPA, and review for consistency before submission",
+          "rationale": "Inconsistency between the registration application and actual processing activities may indicate unlawful processing of unregistered activities or provision of false information",
+          "owner": "DPO / Legal",
+          "frequency": "At each application submission",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The registration application process must be supported by accurate internal documentation of processing activities.",
+      "requirements": [
+        {
+          "id": "s14-T1",
+          "requirement": "Use the ROPA as the primary source document for preparing registration applications, ensuring that the ROPA is current and complete before any registration application or renewal is submitted",
+          "rationale": "The ROPA contains the detailed processing activity information needed to prepare an accurate registration application",
+          "owner": "DPO / IT",
+          "frequency": "Before each application submission",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The registration application process must be managed as a formal legal filing, with appropriate review and sign-off before submission.",
+      "requirements": [
+        {
+          "id": "s14-G1",
+          "requirement": "Require legal counsel or the DPO to review and approve all registration applications and renewals before submission to the Commissioner, and retain copies of all submitted applications and the Commissioner's acknowledgements",
+          "rationale": "Registration applications are legal documents; formal review prevents errors and creates an audit trail of the organisation's registration history",
+          "owner": "Legal Counsel / DPO / Company Secretary",
+          "frequency": "Per application submission",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s30": {
+    "sectionId": "s30",
+    "part": "II",
+    "title": "Right of Access to Personal Data",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "A data subject has the right to access their personal data processed by the data user. Section 30 establishes the substantive right; section 31 governs the procedure for compliance.",
+      "requirements": [
+        {
+          "id": "s30-L1",
+          "requirement": "Upon receipt of a valid data subject access request, provide the data subject with a copy of all personal data relating to them held by the organisation, within 21 days, in an intelligible form and in a language that the data subject can understand",
+          "rationale": "Section 30 creates an enforceable right; failure to provide access within the statutory period without lawful justification is an offence",
+          "owner": "DPO / Operations",
+          "frequency": "Per request",
+          "priority": "Critical"
+        },
+        {
+          "id": "s30-L2",
+          "requirement": "Where access to some or all personal data is refused, provide the data subject with written notification of the refusal, the reasons for refusal, the specific exemption relied on, and information about the right to complain to the Commissioner",
+          "rationale": "Section 31(3) requires written notification of refusal with reasons; a refusal without written notification is treated as an unlawful refusal",
+          "owner": "DPO / Legal",
+          "frequency": "Per refusal",
+          "priority": "High"
+        },
+        {
+          "id": "s30-L3",
+          "requirement": "Implement identity verification procedures for data subject access requests to ensure personal data is not disclosed to an unauthorised person, while ensuring the verification process is not so burdensome as to discourage legitimate requests",
+          "rationale": "Disclosing personal data to an unauthorised requestor is a breach of s8; however, overly burdensome verification deters legitimate access requests",
+          "owner": "DPO / Operations",
+          "frequency": "Per request",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The organisation must have the technical capability to search, compile, and export personal data relating to a specific data subject across all relevant systems within the 21-day statutory period.",
+      "requirements": [
+        {
+          "id": "s30-T1",
+          "requirement": "Maintain documented data subject search procedures for each primary system containing personal data, specifying the search queries or export functions to use, data fields covered, and estimated time required",
+          "rationale": "Without documented procedures, access request responses may be inconsistent or incomplete; documented search procedures enable repeatable, auditable compliance",
+          "owner": "IT / DPO",
+          "frequency": "Documented at system onboarding; reviewed at system changes",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The data subject access right must be embedded in the organisation's operational processes, with clear escalation procedures and management oversight.",
+      "requirements": [
+        {
+          "id": "s30-G1",
+          "requirement": "Establish a data subject access request handling procedure document covering: receipt and logging, identity verification, search and compilation, legal review of exemptions, response preparation, dispatch, and record-keeping",
+          "rationale": "A documented procedure ensures consistent and auditable handling of access requests",
+          "owner": "DPO / Legal / Operations",
+          "frequency": "Established; reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s30-G2",
+          "requirement": "Track and report all data subject access requests to the DPO monthly, including request type, date received, date responded, and outcome, and use this data to identify process improvements",
+          "rationale": "Performance reporting enables management to identify bottlenecks before they result in statutory deadline breaches",
+          "owner": "DPO",
+          "frequency": "Monthly",
+          "priority": "Medium"
+        }
+      ]
+    }
+  },
+  "s31": {
+    "sectionId": "s31",
+    "part": "II",
+    "title": "Compliance with Data Access Request",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 31 establishes the procedural requirements for handling data subject access requests, including the maximum response time of 21 days.",
+      "requirements": [
+        {
+          "id": "s31-L1",
+          "requirement": "Comply with a valid data access request within 21 days of receipt, or apply to the Commissioner for an extension where compliance within 21 days is impracticable due to complexity or volume",
+          "rationale": "Section 31(2) sets the 21-day maximum; failure to comply without an approved extension is an offence",
+          "owner": "DPO / Operations",
+          "frequency": "Per request",
+          "priority": "Critical"
+        },
+        {
+          "id": "s31-L2",
+          "requirement": "Charge only the prescribed fee (if any) for processing data access requests and do not impose additional charges that effectively operate as a deterrent to exercising the access right",
+          "rationale": "Section 31 permits only the prescribed fee; excessive fees that deter legitimate access requests undermine the right under s30",
+          "owner": "DPO / Finance",
+          "frequency": "Per request",
+          "priority": "Medium"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "The organisation's request management system must enforce the 21-day deadline with automated escalation alerts.",
+      "requirements": [
+        {
+          "id": "s31-T1",
+          "requirement": "Configure the data subject request management system to automatically escalate requests to the DPO at day 14 if not yet responded to, and to flag any request approaching the 21-day deadline for senior management attention",
+          "rationale": "Automated escalation prevents deadline breaches caused by workload or oversight",
+          "owner": "IT / DPO",
+          "frequency": "System configuration; tested quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Governance of the access request process must ensure adequate resourcing to meet the 21-day deadline.",
+      "requirements": [
+        {
+          "id": "s31-G1",
+          "requirement": "Maintain a data subject access request log as a permanent record, retaining all requests, responses, and supporting documentation for at least 3 years after the request is closed",
+          "rationale": "The log provides evidence of compliance in the event of a data subject complaint to the Commissioner",
+          "owner": "DPO / Records Management",
+          "frequency": "Continuous; retention applied per schedule",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s32": {
+    "sectionId": "s32",
+    "part": "II",
+    "title": "Right to Correct Personal Data",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "A data subject has the right to request the correction of inaccurate, incomplete, misleading, or outdated personal data. The data user must either make the correction or attach a correction statement, and must notify third parties of the correction.",
+      "requirements": [
+        {
+          "id": "s32-L1",
+          "requirement": "Upon receipt of a valid data correction request, either correct the personal data and notify the data subject and relevant third parties of the correction, or explain in writing why the data is not inaccurate and attach a correction statement where the data subject insists on annotation",
+          "rationale": "Section 32 creates an enforceable right to correction; failure to process a correction request is an offence",
+          "owner": "DPO / Operations",
+          "frequency": "Per request",
+          "priority": "Critical"
+        },
+        {
+          "id": "s32-L2",
+          "requirement": "Notify all third parties to whom the inaccurate personal data was previously disclosed of the correction, to ensure that corrections are reflected in their records",
+          "rationale": "Section 32 requires notification to third parties; failure to do so means the correction is incomplete and third parties may continue making decisions based on inaccurate data",
+          "owner": "DPO / Operations",
+          "frequency": "Per correction event",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Systems must support propagation of corrections across all locations where the affected data is held.",
+      "requirements": [
+        {
+          "id": "s32-T1",
+          "requirement": "Implement correction propagation procedures that ensure corrections made in the primary system are reflected in all downstream systems, data warehouses, backups, and third-party integrations where the affected personal data exists",
+          "rationale": "A correction that applies only to the primary system while inaccurate data persists in downstream systems does not satisfy s32 or the integrity obligation under s11",
+          "owner": "IT / Data Management",
+          "frequency": "Per correction event",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The correction request process must include a clear dispute resolution pathway and maintain records of all correction requests and outcomes.",
+      "requirements": [
+        {
+          "id": "s32-G1",
+          "requirement": "Maintain a correction request log recording all correction requests received, the nature of the claimed inaccuracy, the organisation's response, the date of response, and third parties notified",
+          "rationale": "The log provides evidence of compliance and enables the DPO to identify systemic data quality issues",
+          "owner": "DPO / Operations",
+          "frequency": "Per request",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s43": {
+    "sectionId": "s43",
+    "part": "II",
+    "title": "Processing by Data Processor",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Where a data user engages a data processor to process personal data on its behalf, the data user remains responsible for ensuring the processor processes data only on the data user's instructions and applies appropriate security measures. A written data processing agreement is mandatory.",
+      "requirements": [
+        {
+          "id": "s43-L1",
+          "requirement": "Execute a written data processing agreement (DPA) with every data processor engaged to process personal data on the organisation's behalf, prior to the commencement of processing, covering: instruction-only processing, confidentiality, security requirements, sub-processing restrictions, breach notification, and post-processing deletion or return",
+          "rationale": "Section 43 requires a written contract; absence of a DPA means the data user cannot simultaneously meet its obligations under s8, s9, and s43; a DPA is a fundamental compliance document",
+          "owner": "Legal Counsel / DPO / Procurement",
+          "frequency": "Before each processor engagement; renewed at contract renewal",
+          "priority": "Critical"
+        },
+        {
+          "id": "s43-L2",
+          "requirement": "Restrict data processors contractually and technically to processing personal data only on the data user's documented instructions, and prohibit processors from processing the data for their own purposes or disclosing it to unauthorised third parties",
+          "rationale": "Section 43 requires instruction-only processing; a processor that processes data for its own purposes becomes a data user in its own right",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "At contract execution; monitored continuously",
+          "priority": "Critical"
+        },
+        {
+          "id": "s43-L3",
+          "requirement": "Conduct periodic due diligence reviews of data processors to verify they have implemented the security measures required by the DPA, and take corrective action (including termination) where a processor fails to meet the required standards",
+          "rationale": "The data user remains responsible for processor compliance under s43; periodic reviews demonstrate reasonable oversight",
+          "owner": "DPO / Procurement / CISO",
+          "frequency": "Annual due diligence; ad hoc after incidents",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical controls must ensure data processors access only the minimum personal data necessary for their contracted purpose.",
+      "requirements": [
+        {
+          "id": "s43-T1",
+          "requirement": "Implement technical access controls to ensure data processors can access only the specific categories of personal data required for their contracted service, through dedicated credentials, API keys, or tenanted access",
+          "rationale": "Technical limitation of processor access to the minimum necessary data is a practical step under s9 and enforces the instruction-only requirement of s43",
+          "owner": "IT Security / CISO",
+          "frequency": "At onboarding; reviewed annually and on scope changes",
+          "priority": "High"
+        },
+        {
+          "id": "s43-T2",
+          "requirement": "Maintain an up-to-date processor register listing all engaged data processors, the categories of personal data they process, the services they provide, the DPA reference, and the data transfer mechanism used",
+          "rationale": "A processor register enables systematic management of processor relationships and is a key document in JPDP inspections",
+          "owner": "DPO / Procurement",
+          "frequency": "Maintained continuously; reviewed quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Processor governance must be embedded in the procurement process, ensuring no processor is engaged without a DPA.",
+      "requirements": [
+        {
+          "id": "s43-G1",
+          "requirement": "Implement a vendor onboarding procedure that requires DPO review and DPA execution as a mandatory prerequisite before any vendor is given access to personal data, with procurement unable to finalise vendor contracts without DPO sign-off",
+          "rationale": "Embedding DPA requirements in the procurement process prevents processors from commencing processing before contractual protections are in place",
+          "owner": "DPO / Procurement / Legal",
+          "frequency": "Per new vendor engagement",
+          "priority": "Critical"
+        }
+      ]
+    }
+  }
+}

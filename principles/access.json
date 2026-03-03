@@ -1,0 +1,88 @@
+{
+  "id": "access",
+  "section": 12,
+  "name": "Access Principle",
+  "summary": "A data user shall allow a data subject to have access to his personal data held by the data user and to correct that personal data where it is inaccurate, incomplete, misleading, or not up to date. The Access Principle is operationalised through Sections 30-35 (rights of data subjects) and is substantively strengthened by the 2024 Amendment Act, which enhanced access rights and introduced data portability provisions.",
+  "obligations": [
+    {
+      "id": "access-O1",
+      "obligation": "Provide data subjects with access to their personal data upon receiving a written access request, subject to the prescribed form and fee (if any), within 21 days of receipt of the request",
+      "basis": "Section 12(1); Section 30; Personal Data Protection Regulations 2013",
+      "type": "mandatory"
+    },
+    {
+      "id": "access-O2",
+      "obligation": "Process and respond to data correction requests within 21 days of receipt; if the correction is made, notify the data subject and any third party to whom the data was disclosed; if the request is refused, notify the data subject in writing with reasons and the data subject's right to complain to the Commissioner",
+      "basis": "Section 12(2); Section 34",
+      "type": "mandatory"
+    },
+    {
+      "id": "access-O3",
+      "obligation": "Establish a clear, accessible procedure for data subjects to submit access and correction requests, and publish contact details (including the name or designation of the person responsible for receiving requests) in the organisation's privacy notice",
+      "basis": "Section 12(1); Section 7(1)(d)",
+      "type": "mandatory"
+    },
+    {
+      "id": "access-O4",
+      "obligation": "Verify the identity of the requestor before providing access to personal data, to prevent disclosure to unauthorised parties",
+      "basis": "Section 30; Section 32 (form of access request)",
+      "type": "mandatory"
+    },
+    {
+      "id": "access-O5",
+      "obligation": "Where the 2024 Amendment data portability provisions apply, provide the data subject's personal data in a structured, commonly used, and machine-readable format upon request, and facilitate the transfer of that data to another data user designated by the data subject",
+      "basis": "Section 12; 2024 Amendment Act (data portability provisions)",
+      "type": "mandatory"
+    },
+    {
+      "id": "access-O6",
+      "obligation": "Maintain a log of all access and correction requests received, the outcome, and the date of response, to demonstrate compliance with the 21-day response obligation",
+      "basis": "Section 30; Personal Data Protection Standards 2015",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "access-X1",
+      "exception": "A data user may refuse an access request where the data includes information relating to another data subject who has not consented to the disclosure and the information cannot be separated",
+      "basis": "Section 31(1)(a)",
+      "conditions": "The data user must consider whether the personal data can be provided in redacted form, with the third party's data removed; a blanket refusal without considering partial disclosure is not compliant; the refusal must be communicated in writing with reasons"
+    },
+    {
+      "id": "access-X2",
+      "exception": "A data user may refuse an access request where disclosure would be likely to cause serious harm to the physical or mental health of the data subject or another individual",
+      "basis": "Section 31(1)(b)",
+      "conditions": "This exception is intended for therapeutic contexts (e.g., medical records where disclosure of a terminal diagnosis may cause acute psychological harm); it should be applied narrowly and only on the advice of a qualified professional; the refusal must be communicated with reasons and information about the right to complain"
+    },
+    {
+      "id": "access-X3",
+      "exception": "A data user may refuse an access request where the personal data is subject to legal professional privilege",
+      "basis": "Section 31(1)(c)",
+      "conditions": "Legal professional privilege must be validly established; the claim of privilege should be based on legal advice; the data user cannot use this exception as a blanket shield against all access requests simply because the data is held by or copied to a legal department"
+    },
+    {
+      "id": "access-X4",
+      "exception": "A data user may refuse a correction request where it is satisfied that the data is accurate and the data subject has not provided sufficient evidence to justify a correction",
+      "basis": "Section 34(3)",
+      "conditions": "The refusal must be in writing and include the reasons for refusal; the data subject must be informed of their right to annotate the record with a statement of their disagreement and their right to complain to the Commissioner; the data user should consider whether to append the data subject's statement to the record as a matter of good practice"
+    }
+  ],
+  "practicalGuidance": "Organisations should establish a dedicated data subject rights fulfilment process with clear ownership, defined procedures, and documented response timelines. The 21-day response clock begins on the day the complete and valid request is received; organisations should acknowledge receipt of requests promptly and confirm the expected response date. Where a request is complex or voluminous, organisations should communicate early with the data subject and, where permitted, request additional time. Identity verification is critical: the level of verification should be proportionate to the sensitivity of the data — for highly sensitive data (e.g., medical, financial), stronger verification methods (e.g., certified copy of identification) are appropriate. Requests submitted through an agent or representative should include proof of the representative's authority. Following the 2024 Amendment, data portability is an important new right — organisations should begin planning the technical infrastructure required to extract and transmit personal data in a structured, machine-readable format (e.g., JSON, CSV) upon request. For organisations with large data subject populations, consider implementing a self-service data access portal to reduce the administrative burden of access requests.",
+  "commonViolations": [
+    "Failing to respond to access requests within the 21-day statutory period, or responding with unexplained delays",
+    "Providing incomplete responses to access requests by omitting personal data held in secondary systems, archived records, or data held by processors on the data user's behalf",
+    "Refusing access requests using catch-all justifications (e.g., 'commercial confidentiality') without a proper assessment of whether a specific statutory exception applies",
+    "Failing to inform the data subject of their right to complain to the Commissioner when an access or correction request is refused",
+    "Not having a documented procedure for receiving and processing data subject rights requests, resulting in requests being lost, delayed, or handled inconsistently across the organisation"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-access-correction-2023",
+    "pdpc-guidelines-data-portability-2024"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s10"
+  ]
+}

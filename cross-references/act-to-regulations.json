@@ -1,0 +1,265 @@
+{
+  "description": "Mapping of PDPA 2010 (Act 709) sections to subsidiary legislation (regulations, orders, and rules) made under the Act",
+  "lastUpdated": "2025-06-01",
+  "mappings": [
+    {
+      "section": "s2",
+      "sectionTitle": "Interpretation",
+      "part": "I",
+      "regulations": [
+        {
+          "id": "pdpa-regulations-2013",
+          "title": "Personal Data Protection Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg2", "reg3"],
+          "notes": "The Regulations supplement the Act's definitions by providing further specificity on what constitutes adequate security measures, retention periods, and processing conditions referenced in the Act."
+        },
+        {
+          "id": "class-of-data-users-order-2013",
+          "title": "Personal Data Protection (Class of Data Users) Order 2013",
+          "type": "order",
+          "relevantProvisions": ["s1", "s2", "FirstSchedule"],
+          "notes": "Defines the 13 classes of data users required to register with the Commissioner. The definitions in s2 of the Act must be read alongside the class descriptions in this Order."
+        }
+      ]
+    },
+    {
+      "section": "s5",
+      "sectionTitle": "Application of Personal Data Protection Principles",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "pdpa-regulations-2013",
+          "title": "Personal Data Protection Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "reg4", "reg5", "reg6", "reg7", "reg8"],
+          "notes": "The Regulations provide substantive content for the application of the principles, including conditions for processing, security measures, and retention schedules."
+        },
+        {
+          "id": "compounding-of-offences-2016",
+          "title": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "Schedule"],
+          "notes": "Section 5(3) offences (contravention of principles) are compoundable under these regulations."
+        }
+      ]
+    },
+    {
+      "section": "s6",
+      "sectionTitle": "General Principle",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "pdpa-regulations-2013",
+          "title": "Personal Data Protection Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg4"],
+          "notes": "Regulation 4 sets out the conditions for lawful processing corresponding to s6(2), providing additional guidance on each lawful basis."
+        }
+      ]
+    },
+    {
+      "section": "s7",
+      "sectionTitle": "Notice and Choice Principle",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "pdpa-regulations-2013",
+          "title": "Personal Data Protection Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg5"],
+          "notes": "Regulation 5 specifies the form and content requirements for data protection notices, including the requirement for bilingual (Bahasa Malaysia and English) notices."
+        }
+      ]
+    },
+    {
+      "section": "s9",
+      "sectionTitle": "Security Principle",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "pdpa-standard-electronic-security-2015",
+          "title": "Personal Data Protection Standard (Security of Personal Data — Electronic) 2015",
+          "type": "standard",
+          "relevantProvisions": ["s3", "s4", "s5", "s6"],
+          "notes": "Sets out the minimum technical and organizational security measures required for personal data processed electronically, implementing s9 of the Act."
+        },
+        {
+          "id": "pdpa-standard-nonelectronic-security-2015",
+          "title": "Personal Data Protection Standard (Security of Personal Data — Non-Electronic) 2015",
+          "type": "standard",
+          "relevantProvisions": ["s3", "s4", "s5"],
+          "notes": "Sets out the minimum physical and organizational security measures required for personal data processed in non-electronic (paper-based) form."
+        }
+      ]
+    },
+    {
+      "section": "s10",
+      "sectionTitle": "Retention Principle",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "pdpa-standard-retention-2015",
+          "title": "Personal Data Protection Standard (Retention of Personal Data) 2015",
+          "type": "standard",
+          "relevantProvisions": ["s3", "s4", "s5", "s6"],
+          "notes": "Specifies the maximum retention periods for various categories of personal data and the procedures for secure deletion and destruction at the end of the retention period."
+        }
+      ]
+    },
+    {
+      "section": "s11",
+      "sectionTitle": "Data Integrity Principle",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "pdpa-standard-data-integrity-2015",
+          "title": "Personal Data Protection Standard (Integrity of Personal Data) 2015",
+          "type": "standard",
+          "relevantProvisions": ["s3", "s4", "s5"],
+          "notes": "Specifies the procedures and controls required to maintain the accuracy, completeness, and currency of personal data, implementing s11 of the Act."
+        }
+      ]
+    },
+    {
+      "section": "s13",
+      "sectionTitle": "Registration of Data Users",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "registration-regulations-2013",
+          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "reg4", "reg5", "reg6", "reg7", "reg8"],
+          "notes": "The primary subsidiary legislation governing the registration process. Sets out the application procedure, required information, and conditions for registration."
+        },
+        {
+          "id": "class-of-data-users-order-2013",
+          "title": "Personal Data Protection (Class of Data Users) Order 2013",
+          "type": "order",
+          "relevantProvisions": ["FirstSchedule"],
+          "notes": "Identifies the 13 classes of data users required to register under s13. Only data users in these classes are subject to the registration requirement."
+        },
+        {
+          "id": "fees-regulations-2013",
+          "title": "Personal Data Protection (Fees) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "Schedule"],
+          "notes": "Sets out the fees payable on registration, renewal of registration, and related matters."
+        }
+      ]
+    },
+    {
+      "section": "s14",
+      "sectionTitle": "Application for Registration",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "registration-regulations-2013",
+          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "reg4", "reg5"],
+          "notes": "Prescribes the form of the application, documents to be submitted, and the procedure for processing applications."
+        },
+        {
+          "id": "fees-regulations-2013",
+          "title": "Personal Data Protection (Fees) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg3"],
+          "notes": "Sets the registration application fee."
+        }
+      ]
+    },
+    {
+      "section": "s15",
+      "sectionTitle": "Certificate of Registration",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "registration-regulations-2013",
+          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg6", "reg7"],
+          "notes": "Sets out the form of the certificate of registration, its validity period, and the conditions for renewal."
+        },
+        {
+          "id": "fees-regulations-2013",
+          "title": "Personal Data Protection (Fees) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg4"],
+          "notes": "Sets the renewal fee."
+        }
+      ]
+    },
+    {
+      "section": "s16",
+      "sectionTitle": "Revocation and Suspension of Registration",
+      "part": "II",
+      "regulations": [
+        {
+          "id": "registration-regulations-2013",
+          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg8", "reg9"],
+          "notes": "Sets out the procedure for revocation and suspension of registration, including notice requirements and the opportunity to be heard."
+        }
+      ]
+    },
+    {
+      "section": "s129A",
+      "sectionTitle": "Cross-Border Personal Data Transfer",
+      "part": "X",
+      "regulations": [
+        {
+          "id": "pdpa-regulations-2013",
+          "title": "Personal Data Protection Regulations 2013",
+          "type": "regulations",
+          "relevantProvisions": ["reg9", "reg10"],
+          "notes": "The Regulations supplement s129A by specifying the countries approved for data transfer and the conditions for each mechanism."
+        }
+      ]
+    },
+    {
+      "section": "s143A",
+      "sectionTitle": "Data Breach Notification",
+      "part": "X",
+      "regulations": [
+        {
+          "id": "compounding-of-offences-2016",
+          "title": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "Schedule"],
+          "notes": "Offences under s143A are compoundable under these regulations, providing a mechanism for out-of-court settlement for less serious breach notification failures."
+        }
+      ]
+    },
+    {
+      "section": "s136",
+      "sectionTitle": "General Penalty",
+      "part": "X",
+      "regulations": [
+        {
+          "id": "compounding-of-offences-2016",
+          "title": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+          "type": "regulations",
+          "relevantProvisions": ["reg3", "Schedule"],
+          "notes": "The Schedule to the Compounding Regulations lists all compoundable offences. General penalty offences under s136 are included where the underlying breach is compoundable."
+        }
+      ]
+    },
+    {
+      "section": "s57",
+      "sectionTitle": "Power to Issue Code of Practice",
+      "part": "IV",
+      "regulations": [
+        {
+          "id": "general-cop-2022",
+          "title": "Personal Data Protection Code of Practice (General) 2022",
+          "type": "code-of-practice",
+          "relevantProvisions": ["all"],
+          "notes": "Issued pursuant to the Commissioner's power under s57. Compliance with the Code is mandatory for all data users."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "description": "Index of all Codes of Practice issued by the Commissioner under section 57 of the Personal Data Protection Act 2010 (Act 709). Compliance with an applicable Code of Practice is mandatory under s58 of the Act.",
+  "issuingAuthority": "Personal Data Protection Commissioner",
+  "enablingSection": "s57",
+  "complianceSection": "s58",
+  "parentAct": "Act 709",
+  "lastUpdated": "2025-06-01",
+  "codes": [
+    {
+      "id": "general-cop-2022",
+      "title": "Personal Data Protection Code of Practice (General) 2022",
+      "shortTitle": "General Code 2022",
+      "type": "general",
+      "applicableClasses": "All data users regardless of class",
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/general-cop-2022.json",
+      "status": "in-force",
+      "supersedes": "General Code 2013"
+    },
+    {
+      "id": "cop-banking",
+      "title": "Personal Data Protection Code of Practice (Banking and Financial Institutions) 2022",
+      "shortTitle": "Banking Code 2022",
+      "type": "sector",
+      "applicableClasses": ["banking-and-financial-institutions"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/banking.json",
+      "status": "in-force"
+    },
+    {
+      "id": "cop-communications",
+      "title": "Personal Data Protection Code of Practice (Communications) 2022",
+      "shortTitle": "Communications Code 2022",
+      "type": "sector",
+      "applicableClasses": ["communications"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/communications.json",
+      "status": "in-force"
+    },
+    {
+      "id": "cop-insurance-takaful",
+      "title": "Personal Data Protection Code of Practice (Insurance and Takaful) 2022",
+      "shortTitle": "Insurance Code 2022",
+      "type": "sector",
+      "applicableClasses": ["insurance"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/insurance-takaful.json",
+      "status": "in-force"
+    },
+    {
+      "id": "cop-healthcare",
+      "title": "Personal Data Protection Code of Practice (Health) 2022",
+      "shortTitle": "Healthcare Code 2022",
+      "type": "sector",
+      "applicableClasses": ["health"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/healthcare.json",
+      "status": "in-force"
+    },
+    {
+      "id": "cop-aviation",
+      "title": "Personal Data Protection Code of Practice (Aviation) 2022",
+      "shortTitle": "Aviation Code 2022",
+      "type": "sector",
+      "applicableClasses": ["transport"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/aviation.json",
+      "status": "in-force"
+    },
+    {
+      "id": "cop-utilities-electricity",
+      "title": "Personal Data Protection Code of Practice (Utilities — Electricity) 2022",
+      "shortTitle": "Electricity Utilities Code 2022",
+      "type": "sector",
+      "applicableClasses": ["utilities"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/utilities-electricity.json",
+      "status": "in-force"
+    },
+    {
+      "id": "cop-utilities-water",
+      "title": "Personal Data Protection Code of Practice (Utilities — Water) 2022",
+      "shortTitle": "Water Utilities Code 2022",
+      "type": "sector",
+      "applicableClasses": ["utilities"],
+      "effectiveDate": "2022-01-01",
+      "filePath": "supplements/codes-of-practice/utilities-water.json",
+      "status": "in-force"
+    }
+  ],
+  "notes": "Where a data user is subject to both the General Code and a sector-specific Code, the sector-specific Code prevails to the extent of any inconsistency. Codes are issued under s57 and compliance is mandated by s58 — non-compliance constitutes a breach of the Code which may be treated as a breach of the corresponding principle under s5."
+}

@@ -1,0 +1,94 @@
+{
+  "id": "cop-banking",
+  "title": "Personal Data Protection Code of Practice (Banking and Financial Institutions) 2022",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "2022-01-01",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["banking-and-financial-institutions"],
+  "summary": "This sector-specific Code applies to all data users in the Banking and Financial Institutions class (Class 2 of the Class of Data Users Order 2013). It supplements the General Code 2022 with enhanced and sector-specific requirements reflecting the highly sensitive nature of financial personal data and the significant regulatory obligations applicable to the banking and financial sector. The Code takes into account requirements under the Financial Services Act 2013, the Islamic Financial Services Act 2013, Bank Negara Malaysia (BNM) policy documents, and the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001.",
+  "provisions": [
+    {
+      "id": "cop-bank-s1",
+      "title": "Scope and Application",
+      "content": "This Code applies to all banks (commercial, Islamic, investment), development financial institutions, licensed payment system operators, remittance service providers, and other financial institutions in Class 2 of the Class of Data Users Order 2013. Where processing is regulated by Bank Negara Malaysia policy documents, those documents apply in addition to this Code. Where a BNM policy document provides greater protection for data subjects than this Code, the BNM policy document prevails.",
+      "requirements": [
+        "Data users must identify all applicable BNM policy documents relevant to their data processing",
+        "Conflicts between BNM requirements and PDPA obligations must be escalated to the DPO and Legal",
+        "This Code must be read together with the General Code 2022"
+      ]
+    },
+    {
+      "id": "cop-bank-s2",
+      "title": "Customer Due Diligence and KYC Data",
+      "content": "Personal data collected in the course of Know Your Customer (KYC) and Customer Due Diligence (CDD) processes must be: (a) used only for AML/CFT compliance, credit assessment, and other lawful purposes disclosed in the privacy notice; (b) retained for the minimum period required by AMLA (6 years after end of customer relationship); (c) not disclosed to third parties except for regulatory reporting, fraud prevention, or with explicit consent; and (d) maintained accurate and current — where discrepancies are identified during KYC refresh, they must be investigated and resolved. Enhanced due diligence (EDD) data on high-risk customers must be subject to additional access controls.",
+      "requirements": [
+        "KYC data may be processed under the legal obligation lawful basis",
+        "6-year minimum retention under AMLA must be reflected in the retention schedule",
+        "EDD data must have restricted access — limited to compliance and relationship management staff",
+        "KYC refresh must update personal data to maintain Data Integrity Principle compliance"
+      ]
+    },
+    {
+      "id": "cop-bank-s3",
+      "title": "Credit Assessment and Credit Bureau Reporting",
+      "content": "Financial institutions reporting customer credit information to credit bureaus (CCRIS, CTOS, or other credit reporting agencies) must: (a) notify customers in the privacy notice that their data will be reported to credit bureaus; (b) report only accurate and current information — inaccurate reports must be corrected promptly upon discovery; (c) have a formal process for handling customer disputes about credit bureau data, including escalation to the relevant bureau; and (d) comply with the Credit Reporting Agencies Act 2010 requirements in addition to PDPA obligations. Accessing another person's credit report requires lawful purpose — unauthorized access to credit data is an offence.",
+      "requirements": [
+        "Credit bureau reporting must be disclosed in the privacy notice",
+        "Dispute resolution process must be accessible and responsive",
+        "Inaccurate credit bureau data must be corrected within 14 days of confirmation of inaccuracy",
+        "Access to credit bureau data must be logged and limited to authorized purposes"
+      ]
+    },
+    {
+      "id": "cop-bank-s4",
+      "title": "Online and Mobile Banking Security",
+      "content": "For personal data processed through online and mobile banking channels, financial institutions must implement: (a) multi-factor authentication (MFA) for all online and mobile banking access, as mandated by BNM Risk Management in Technology (RMiT) policy; (b) end-to-end encryption for all transactions; (c) real-time fraud detection and anomaly monitoring; (d) secure communication channels — personal data must not be transmitted via unencrypted SMS or email; (e) device binding for mobile banking applications; and (f) session management controls including automatic logout after inactivity.",
+      "requirements": [
+        "MFA is mandatory — consistent with BNM RMiT requirements",
+        "Transaction data must not be transmitted in plaintext",
+        "Fraud detection systems must flag unusual access patterns for review",
+        "Mobile app security must be tested at least annually by an accredited security tester"
+      ]
+    },
+    {
+      "id": "cop-bank-s5",
+      "title": "Disclosure to Regulators and Law Enforcement",
+      "content": "Disclosures of customer personal data to regulators (BNM, Securities Commission, Bursa Malaysia, LOFSA) and law enforcement must: (a) be based on a lawful requirement (statutory duty, court order, or regulatory direction); (b) be limited to the information specifically required; (c) be documented in a disclosure log; and (d) where legally permitted, the customer may be informed of the disclosure unless such notification would prejudice the regulatory or law enforcement purpose. Voluntary disclosures to regulators (beyond what is legally required) must comply with the Act and may require customer consent.",
+      "requirements": [
+        "Mandatory disclosures must be logged with the legal basis identified",
+        "Only the minimum necessary information should be disclosed",
+        "Voluntary disclosures beyond statutory requirements require consent or other lawful basis",
+        "Staff must not disclose personal data to law enforcement without proper authority"
+      ]
+    },
+    {
+      "id": "cop-bank-s6",
+      "title": "Data Security for Financial Institutions",
+      "content": "In addition to the Security Standards 2015, financial institutions must comply with: (a) Bank Negara Malaysia's Risk Management in Technology (RMiT) policy document on cybersecurity; (b) Payment Card Industry Data Security Standard (PCI DSS) for cardholder data; (c) SWIFT Customer Security Controls Framework for interbank messaging; and (d) the Commissioner's sector-specific data breach notification requirements. Security incidents affecting financial personal data must be reported to both the Commissioner under s143A and to BNM in accordance with BNM's incident reporting requirements.",
+      "requirements": [
+        "BNM RMiT compliance is required in addition to PDPA security obligations",
+        "PCI DSS compliance required for all entities processing payment card data",
+        "Dual reporting obligations (to Commissioner and BNM) for significant security incidents",
+        "Penetration testing required at least annually for internet-facing financial systems"
+      ]
+    },
+    {
+      "id": "cop-bank-s7",
+      "title": "Retention of Financial Records",
+      "content": "Financial institutions must comply with the following minimum retention periods, which prevail over the general retention principle to the extent they require longer retention: (a) customer identity and KYC documents: 6 years from end of customer relationship (AMLA); (b) transaction records: 6 years from date of transaction (AMLA); (c) credit agreements and related correspondence: 7 years from maturity or early termination (Evidence Act); (d) account statements: 7 years (Companies Act); and (e) CCTV footage from banking premises: 90 days minimum (or as directed by BNM). At the end of applicable retention periods, records must be securely destroyed.",
+      "requirements": [
+        "AMLA 6-year retention is a statutory minimum — it takes precedence over shorter PDPA retention periods",
+        "Retention schedule must cross-reference AMLA, Evidence Act, and Companies Act requirements",
+        "CCTV footage retention must comply with the 90-day minimum",
+        "Disposal of financial records must be documented with certificates of destruction"
+      ]
+    }
+  ],
+  "keywords": [
+    "banking", "financial institutions", "KYC", "CDD", "AMLA", "credit bureau", "CCRIS", "CTOS",
+    "BNM", "RMiT", "PCI DSS", "online banking", "MFA", "financial data", "regulatory reporting",
+    "Class 2", "payment systems"
+  ]
+}

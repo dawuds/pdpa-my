@@ -1,0 +1,299 @@
+{
+  "sectionToArtifacts": {
+    "s2": [
+      "personal-data-protection-policy",
+      "data-classification-policy",
+      "general-data-protection-notice-bm-en",
+      "employee-data-protection-notice",
+      "customer-data-protection-notice",
+      "website-app-privacy-notice"
+    ],
+    "s5": [
+      "personal-data-protection-policy",
+      "personal-data-inventory-ropa",
+      "compliance-audit-records",
+      "annual-data-protection-compliance-report",
+      "dpo-annual-report",
+      "dpia-records",
+      "dpia-report",
+      "data-processing-records",
+      "joint-data-user-agreement",
+      "privacy-by-design-review-procedure",
+      "data-protection-impact-assessment-procedure"
+    ],
+    "s6": [
+      "personal-data-protection-policy",
+      "consent-collection-procedure",
+      "consent-withdrawal-procedure",
+      "consent-register",
+      "consent-records",
+      "general-data-protection-notice-bm-en",
+      "employee-data-protection-notice",
+      "customer-data-protection-notice",
+      "website-app-privacy-notice",
+      "consent-form-templates",
+      "cookie-and-tracking-policy",
+      "direct-marketing-policy",
+      "employee-data-protection-policy",
+      "joint-data-user-agreement",
+      "dpia-records",
+      "dpia-report"
+    ],
+    "s7": [
+      "personal-data-protection-policy",
+      "consent-collection-procedure",
+      "consent-register",
+      "consent-records",
+      "general-data-protection-notice-bm-en",
+      "employee-data-protection-notice",
+      "customer-data-protection-notice",
+      "website-app-privacy-notice",
+      "cctv-notice",
+      "consent-form-templates",
+      "direct-marketing-policy",
+      "cookie-and-tracking-policy",
+      "employee-data-protection-policy"
+    ],
+    "s8": [
+      "personal-data-protection-policy",
+      "data-sharing-agreement",
+      "joint-data-user-agreement",
+      "acceptable-use-policy",
+      "employee-data-protection-policy"
+    ],
+    "s9": [
+      "personal-data-protection-policy",
+      "information-security-policy",
+      "access-control-policy",
+      "acceptable-use-policy",
+      "data-breach-response-policy",
+      "third-party-data-processor-management-policy",
+      "employee-data-protection-policy",
+      "data-breach-notification-procedure",
+      "third-party-due-diligence-procedure",
+      "data-protection-training-procedure",
+      "privacy-by-design-review-procedure",
+      "jpdp-inspection-response-procedure",
+      "data-breach-register",
+      "third-party-data-processor-register",
+      "training-records-register",
+      "data-processing-records",
+      "data-breach-investigation-records",
+      "dpia-records",
+      "training-attendance-records",
+      "compliance-audit-records",
+      "data-processing-agreement",
+      "non-disclosure-agreement-data-protection",
+      "joint-data-user-agreement",
+      "annual-data-protection-compliance-report",
+      "dpia-report",
+      "third-party-compliance-assessment-report"
+    ],
+    "s10": [
+      "personal-data-protection-policy",
+      "data-retention-and-disposal-policy",
+      "data-retention-and-disposal-procedure",
+      "personal-data-inventory-ropa",
+      "employee-data-protection-policy"
+    ],
+    "s11": [
+      "personal-data-protection-policy",
+      "data-classification-policy",
+      "employee-data-protection-policy"
+    ],
+    "s12": [
+      "personal-data-protection-policy",
+      "access-control-policy",
+      "employee-data-protection-policy"
+    ],
+    "s13": [
+      "data-user-registration-record",
+      "commissioner-correspondence-records"
+    ],
+    "s14": [
+      "data-user-registration-record"
+    ],
+    "s15": [
+      "data-user-registration-record"
+    ],
+    "s16": [
+      "data-user-registration-record"
+    ],
+    "s29": [
+      "data-classification-policy",
+      "data-protection-impact-assessment-procedure",
+      "dpia-records",
+      "dpia-report",
+      "consent-form-templates"
+    ],
+    "s30": [
+      "data-subject-access-request-procedure",
+      "dsar-log",
+      "complaint-handling-procedure",
+      "data-portability-request-procedure",
+      "annual-data-protection-compliance-report"
+    ],
+    "s31": [
+      "data-subject-access-request-procedure",
+      "data-portability-request-procedure"
+    ],
+    "s32": [
+      "data-subject-access-request-procedure"
+    ],
+    "s33": [
+      "data-subject-access-request-procedure"
+    ],
+    "s34": [
+      "data-correction-request-procedure",
+      "dsar-log",
+      "third-party-data-processor-management-policy"
+    ],
+    "s35": [
+      "data-correction-request-procedure"
+    ],
+    "s36": [
+      "data-correction-request-procedure"
+    ],
+    "s38": [
+      "consent-withdrawal-procedure",
+      "dsar-log"
+    ],
+    "s40": [
+      "direct-marketing-policy"
+    ],
+    "s41": [
+      "direct-marketing-policy"
+    ],
+    "s42": [
+      "direct-marketing-policy"
+    ],
+    "s43": [
+      "direct-marketing-policy",
+      "consent-withdrawal-procedure",
+      "dsar-log",
+      "complaint-handling-procedure"
+    ],
+    "s44": [
+      "dsar-log"
+    ],
+    "s83": [
+      "enforcement-notice-response-procedure"
+    ],
+    "s101": [
+      "jpdp-inspection-response-procedure",
+      "complaint-handling-procedure",
+      "commissioner-correspondence-records"
+    ],
+    "s102": [
+      "jpdp-inspection-response-procedure",
+      "complaint-handling-procedure"
+    ],
+    "s103": [
+      "jpdp-inspection-response-procedure"
+    ],
+    "s104": [
+      "jpdp-inspection-response-procedure"
+    ],
+    "s105": [
+      "jpdp-inspection-response-procedure"
+    ],
+    "s110": [
+      "enforcement-notice-response-procedure",
+      "enforcement-notice-response-records"
+    ],
+    "s111": [
+      "enforcement-notice-response-procedure",
+      "enforcement-notice-response-records"
+    ],
+    "s129A": [
+      "cross-border-data-transfer-policy",
+      "cross-border-transfer-assessment-procedure",
+      "cross-border-transfer-register",
+      "third-party-data-processor-management-policy",
+      "third-party-due-diligence-procedure",
+      "third-party-data-processor-register",
+      "data-processing-agreement",
+      "data-sharing-agreement",
+      "standard-contractual-clauses-cross-border",
+      "third-party-compliance-assessment-report"
+    ],
+    "s129B": [
+      "dpo-annual-report"
+    ],
+    "s133": [
+      "enforcement-notice-response-procedure",
+      "enforcement-notice-response-records"
+    ],
+    "s143A": [
+      "data-breach-response-policy",
+      "data-breach-notification-procedure",
+      "data-breach-register",
+      "data-breach-investigation-records",
+      "data-breach-notification-report-commissioner",
+      "data-breach-notification-report-data-subjects",
+      "commissioner-correspondence-records"
+    ]
+  },
+  "artifactToSections": {
+    "personal-data-protection-policy": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+    "data-classification-policy": ["s9", "s10", "s11", "s29"],
+    "data-retention-and-disposal-policy": ["s10"],
+    "data-breach-response-policy": ["s9", "s143A"],
+    "cross-border-data-transfer-policy": ["s129A"],
+    "information-security-policy": ["s9"],
+    "access-control-policy": ["s9", "s12"],
+    "acceptable-use-policy": ["s8", "s9"],
+    "third-party-data-processor-management-policy": ["s9", "s34", "s129A"],
+    "direct-marketing-policy": ["s7", "s40", "s41", "s42", "s43"],
+    "cookie-and-tracking-policy": ["s6", "s7"],
+    "employee-data-protection-policy": ["s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+    "consent-collection-procedure": ["s6", "s7"],
+    "data-subject-access-request-procedure": ["s30", "s31", "s32", "s33"],
+    "data-correction-request-procedure": ["s34", "s35", "s36"],
+    "data-breach-notification-procedure": ["s9", "s143A"],
+    "data-protection-impact-assessment-procedure": ["s5", "s6", "s9", "s29"],
+    "data-retention-and-disposal-procedure": ["s10"],
+    "cross-border-transfer-assessment-procedure": ["s129A"],
+    "third-party-due-diligence-procedure": ["s9", "s129A"],
+    "data-protection-training-procedure": ["s9"],
+    "privacy-by-design-review-procedure": ["s5", "s6", "s9"],
+    "complaint-handling-procedure": ["s30", "s34", "s43", "s101", "s102"],
+    "jpdp-inspection-response-procedure": ["s101", "s102", "s103", "s104", "s105"],
+    "enforcement-notice-response-procedure": ["s83", "s110", "s111", "s133"],
+    "data-portability-request-procedure": ["s30", "s31"],
+    "consent-withdrawal-procedure": ["s6", "s38", "s43"],
+    "personal-data-inventory-ropa": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+    "data-user-registration-record": ["s13", "s14", "s15", "s16"],
+    "consent-register": ["s6", "s7"],
+    "data-breach-register": ["s9", "s143A"],
+    "dsar-log": ["s30", "s34", "s38", "s43", "s44"],
+    "cross-border-transfer-register": ["s129A"],
+    "third-party-data-processor-register": ["s9", "s129A"],
+    "training-records-register": ["s9"],
+    "general-data-protection-notice-bm-en": ["s2", "s6", "s7"],
+    "employee-data-protection-notice": ["s2", "s6", "s7"],
+    "customer-data-protection-notice": ["s2", "s6", "s7"],
+    "website-app-privacy-notice": ["s2", "s6", "s7"],
+    "cctv-notice": ["s7"],
+    "consent-form-templates": ["s6", "s7", "s29"],
+    "consent-records": ["s6", "s7"],
+    "data-processing-records": ["s5", "s9"],
+    "data-breach-investigation-records": ["s9", "s143A"],
+    "dpia-records": ["s5", "s6", "s9", "s29"],
+    "training-attendance-records": ["s9"],
+    "compliance-audit-records": ["s5", "s9"],
+    "enforcement-notice-response-records": ["s110", "s111", "s133"],
+    "commissioner-correspondence-records": ["s13", "s101", "s143A"],
+    "annual-data-protection-compliance-report": ["s5", "s9", "s30"],
+    "data-breach-notification-report-commissioner": ["s143A"],
+    "data-breach-notification-report-data-subjects": ["s143A"],
+    "dpia-report": ["s5", "s6", "s9", "s29"],
+    "dpo-annual-report": ["s129B"],
+    "third-party-compliance-assessment-report": ["s9", "s129A"],
+    "data-processing-agreement": ["s9", "s129A"],
+    "data-sharing-agreement": ["s8", "s129A"],
+    "standard-contractual-clauses-cross-border": ["s129A"],
+    "non-disclosure-agreement-data-protection": ["s9"],
+    "joint-data-user-agreement": ["s5", "s6", "s7", "s8", "s9"]
+  }
+}

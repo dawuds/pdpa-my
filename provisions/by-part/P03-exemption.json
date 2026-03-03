@@ -1,0 +1,30 @@
+[
+  {
+    "id": "s45",
+    "part": "III",
+    "division": null,
+    "title": "Exemptions",
+    "sectionNumber": 45,
+    "obligationType": "administrative",
+    "verbatim": "(1) The Minister may by order published in the Gazette exempt any data user or any class of data users from all or any of the provisions of this Act.\n(2) An exemption under subsection (1) may be given subject to conditions.\n(3) An exemption may be withdrawn by the Minister by order published in the Gazette if the data user breaches any condition imposed under subsection (2) or if the Minister considers it appropriate to do so.\n(4) Any data user who processes personal data in reliance on an exemption under this section and who breaches any condition imposed in respect of that exemption commits an offence and shall, on conviction, be liable—\n(a) to a fine not exceeding three hundred thousand ringgit;\n(b) to imprisonment for a term not exceeding two years; or\n(c) to both.",
+    "translation": "The Minister has broad power to exempt any data user or class of data users from all or any provisions of the Act, by Gazette order. Exemptions may be conditional and may be withdrawn. Breaching exemption conditions is a criminal offence. This ministerial power allows tailored regulatory flexibility.",
+    "amendedBy": null,
+    "effectiveDate": "2013-11-15",
+    "relatedPrinciple": null,
+    "keywords": ["exemption", "Minister", "gazette", "conditional exemption", "withdrawal", "offence", "class of data users"]
+  },
+  {
+    "id": "s46",
+    "part": "III",
+    "division": null,
+    "title": "Exemption for personal data processed outside Malaysia",
+    "sectionNumber": 46,
+    "obligationType": "administrative",
+    "verbatim": "(1) Personal data processed outside Malaysia is exempt from this Act unless it is intended for further processing in Malaysia.\n(2) Personal data that is in transit through Malaysia and is not intended for further processing in Malaysia is exempt from this Act.\n(3) For the purposes of subsection (1), 'further processing' includes any processing in Malaysia following the transfer of personal data from outside Malaysia, including the use, disclosure, storage, or organisation of such data within Malaysia.",
+    "translation": "Personal data processed entirely outside Malaysia is exempt from the Act unless it is intended to be further processed within Malaysia. Data that is merely in transit through Malaysia is also exempt. The definition of 'further processing' is broad and includes any use, disclosure, storage or organisation within Malaysia following an international transfer.",
+    "amendedBy": null,
+    "effectiveDate": "2013-11-15",
+    "relatedPrinciple": null,
+    "keywords": ["exemption", "outside Malaysia", "transit", "further processing", "territorial scope", "international processing"]
+  }
+]

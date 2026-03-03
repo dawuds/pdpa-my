@@ -1,0 +1,225 @@
+{
+  "s129A": {
+    "sectionId": "s129A",
+    "part": "X",
+    "title": "Cross-Border Transfer of Personal Data (2024 Amendment)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 129A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), governs the transfer of personal data outside Malaysia. Data users may only transfer personal data to places outside Malaysia that are specified by the Minister, or where the transfer meets one of the prescribed conditions including data subject consent, adequacy, binding corporate rules, standard contractual clauses, or other approved mechanisms.",
+      "requirements": [
+        {
+          "id": "s129A-L1",
+          "requirement": "Before transferring personal data outside Malaysia, verify that the destination country or territory is listed in the Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order, or that one of the alternative transfer mechanisms under s129A applies",
+          "rationale": "Section 129A prohibits cross-border transfers except as permitted; an unlawful transfer is an offence; the 2024 Amendment replaced the original s129 with more structured transfer mechanisms aligned with international standards",
+          "owner": "DPO / Legal Counsel",
+          "frequency": "Before each new cross-border transfer arrangement",
+          "priority": "Critical"
+        },
+        {
+          "id": "s129A-L2",
+          "requirement": "Where relying on standard contractual clauses (SCCs) or binding corporate rules (BCRs) as the transfer mechanism, execute the approved clauses with all overseas recipients before the transfer commences, and retain copies of executed agreements",
+          "rationale": "SCCs and BCRs create legally binding obligations on overseas recipients equivalent to Malaysian PDPA standards; execution before transfer is a prerequisite, not a retrospective formality",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "Before each transfer to a new overseas recipient relying on SCCs/BCRs",
+          "priority": "Critical"
+        },
+        {
+          "id": "s129A-L3",
+          "requirement": "Maintain a cross-border transfer register documenting all transfers of personal data outside Malaysia, the destination country, the transfer mechanism relied on, the categories of data transferred, and the third-party recipient details",
+          "rationale": "The transfer register enables the data user to demonstrate compliance with s129A and provides JPDP with the documentation required during inspections",
+          "owner": "DPO / Legal",
+          "frequency": "Maintained continuously; reviewed quarterly",
+          "priority": "High"
+        },
+        {
+          "id": "s129A-L4",
+          "requirement": "Where relying on data subject consent as the transfer mechanism, ensure consent is specific to the cross-border transfer, identifies the destination country, and informs the data subject of the risks arising from the absence of a protection standard equivalent to the PDPA",
+          "rationale": "Consent for cross-border transfer must be informed and specific; generic consent to data sharing does not extend to cross-border transfers to unprotected jurisdictions",
+          "owner": "Legal Counsel / DPO / Product",
+          "frequency": "At each consent mechanism review",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical controls must prevent unauthorised cross-border transfers and enforce the approved transfer mechanisms. Data flows must be mapped to identify all cross-border transfers, including those through cloud services and third-party processors.",
+      "requirements": [
+        {
+          "id": "s129A-T1",
+          "requirement": "Conduct a comprehensive data flow mapping exercise to identify all cross-border transfers of personal data, including transfers through cloud service providers, SaaS platforms, and third-party integrations, and classify each transfer against the applicable s129A mechanism",
+          "rationale": "Many cross-border transfers occur invisibly through cloud services; data flow mapping identifies all transfers and enables the organisation to ensure each has a lawful basis",
+          "owner": "DPO / IT / Data Governance",
+          "frequency": "Annual exercise; updated on new system deployments",
+          "priority": "Critical"
+        },
+        {
+          "id": "s129A-T2",
+          "requirement": "Implement network and data governance controls to prevent transfers of personal data to non-approved overseas locations, including DLP policies, API gateway controls, and cloud access security broker (CASB) configurations where applicable",
+          "rationale": "Technical controls to prevent unauthorised transfers provide a last line of defence when process controls fail",
+          "owner": "IT Security / CISO",
+          "frequency": "Implemented; reviewed quarterly",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Cross-border transfer governance must ensure that all new arrangements involving overseas transfer of personal data are reviewed and approved before implementation.",
+      "requirements": [
+        {
+          "id": "s129A-G1",
+          "requirement": "Require DPO and Legal sign-off for all new arrangements involving cross-border transfer of personal data before the arrangement is implemented, including SaaS platform adoptions and international group data sharing agreements",
+          "rationale": "Many organisations inadvertently transfer personal data overseas through cloud platform adoptions without realising the cross-border transfer implications; mandatory review prevents these inadvertent violations",
+          "owner": "DPO / Legal / Procurement / IT",
+          "frequency": "Per new arrangement",
+          "priority": "Critical"
+        },
+        {
+          "id": "s129A-G2",
+          "requirement": "Conduct annual review of all cross-border transfer arrangements to verify that the transfer mechanism remains appropriate, and take corrective action where the basis for a transfer has lapsed or changed",
+          "rationale": "Transfer mechanisms can become inadequate over time; annual review ensures continued lawfulness of ongoing transfers",
+          "owner": "DPO / Legal",
+          "frequency": "Annual",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s143A": {
+    "sectionId": "s143A",
+    "part": "X",
+    "title": "Data Breach Notification (2024 Amendment)",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 143A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), introduces mandatory data breach notification obligations. Data users must notify the Commissioner of a data breach as soon as practicable after becoming aware of it, and must notify affected data subjects where the breach is likely to result in significant harm.",
+      "requirements": [
+        {
+          "id": "s143A-L1",
+          "requirement": "Notify the Personal Data Protection Commissioner as soon as practicable after becoming aware of a data breach, providing all prescribed information about the breach including its nature, categories of data affected, approximate number of data subjects affected, and remediation measures taken or planned",
+          "rationale": "Section 143A makes breach notification to the Commissioner mandatory; failure to notify is a criminal offence; 'as soon as practicable' requires internal escalation processes that can confirm and notify a breach within the expected regulatory timeframe",
+          "owner": "DPO / Legal Counsel / CISO",
+          "frequency": "Per breach event",
+          "priority": "Critical"
+        },
+        {
+          "id": "s143A-L2",
+          "requirement": "Notify affected data subjects of a data breach as soon as practicable where the breach is likely to result in significant harm to those data subjects, providing information about the nature of the breach, the personal data affected, and the steps they can take to protect themselves",
+          "rationale": "Data subject notification enables affected individuals to take protective action; failure to notify where significant harm is likely denies data subjects the opportunity to mitigate harm and is an offence",
+          "owner": "DPO / Legal / Communications",
+          "frequency": "Per qualifying breach event",
+          "priority": "Critical"
+        },
+        {
+          "id": "s143A-L3",
+          "requirement": "Establish and document a data breach assessment procedure that enables the organisation to assess the severity and scope of a breach, determine notification obligations, and initiate the notification process within the prescribed timeframe from the point of becoming aware of the breach",
+          "rationale": "The assessment procedure must be documented and tested in advance; a spontaneous response to a breach is unlikely to meet regulatory expectations for promptness",
+          "owner": "DPO / Legal / CISO",
+          "frequency": "Documented in advance; tested annually",
+          "priority": "Critical"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "Technical detection, logging, and escalation capabilities must support the organisation's ability to become aware of breaches promptly and to gather the information required for regulatory and data subject notifications.",
+      "requirements": [
+        {
+          "id": "s143A-T1",
+          "requirement": "Implement security monitoring, intrusion detection, and alerting systems on all systems processing personal data capable of detecting potential data breaches and generating alerts for investigation within a defined response timeframe",
+          "rationale": "An organisation cannot notify of a breach it does not know about; detection capability is a prerequisite for timely notification compliance under s143A",
+          "owner": "CISO / IT Security / SOC",
+          "frequency": "Implemented continuously; monitoring effectiveness reviewed quarterly",
+          "priority": "Critical"
+        },
+        {
+          "id": "s143A-T2",
+          "requirement": "Implement a breach investigation and evidence preservation process that captures forensic information about the breach (attack vector, data accessed, data subjects affected, timeline) to support regulatory notifications and any subsequent JPDP investigation",
+          "rationale": "Regulatory notifications require specific factual information about the breach; forensic evidence preservation preserves the data needed for notifications",
+          "owner": "CISO / IT Security / Legal",
+          "frequency": "Per breach event; procedure reviewed annually",
+          "priority": "High"
+        },
+        {
+          "id": "s143A-T3",
+          "requirement": "Maintain a centralised breach log recording all actual and near-miss security incidents, including date of discovery, nature of incident, data affected, notification decisions made, and regulatory correspondence, for at least 7 years",
+          "rationale": "The breach log is a key regulatory document demonstrating the organisation's breach history and notification compliance",
+          "owner": "DPO / CISO",
+          "frequency": "Per incident; retained for 7 years",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Breach notification governance must assign clear roles and decision-making authority for breach assessment and notification, supported by a tested incident response plan.",
+      "requirements": [
+        {
+          "id": "s143A-G1",
+          "requirement": "Develop and maintain an Incident Response Plan (IRP) that specifically addresses the s143A notification obligations, assigns named roles for breach assessment (DPO, CISO, Legal, Communications), and specifies the internal escalation timeframe from detection to notification decision",
+          "rationale": "An IRP with clear roles and timeframes ensures the organisation can meet its notification obligations without confusion about who is responsible for each step",
+          "owner": "DPO / CISO / Legal",
+          "frequency": "Established; reviewed annually and after each incident",
+          "priority": "Critical"
+        },
+        {
+          "id": "s143A-G2",
+          "requirement": "Conduct at least one annual tabletop exercise simulating a significant data breach scenario to test the IRP, the notification process, the Commissioner communication, and the data subject communication templates, and remediate any gaps identified",
+          "rationale": "Annual testing of the IRP ensures that roles, processes, and templates are fit for purpose before a real incident occurs",
+          "owner": "DPO / CISO / Legal / Communications",
+          "frequency": "Annual",
+          "priority": "High"
+        }
+      ]
+    }
+  },
+  "s128": {
+    "sectionId": "s128",
+    "part": "X",
+    "title": "General Offences and Penalties",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 128 and related provisions establish general offences under the PDPA, including offences relating to obstruction, false statements, and failure to comply with the Act. Data users must ensure their conduct does not create additional liability through procedural violations beyond substantive PDPA breaches.",
+      "requirements": [
+        {
+          "id": "s128-L1",
+          "requirement": "Ensure all communications with the Commissioner, JPDP officers, and the Appeal Tribunal are accurate, complete, and not misleading; false or misleading statements in any regulatory context are separate offences under the Act",
+          "rationale": "False statements to regulators are treated very seriously and may result in criminal prosecution separate from and in addition to any underlying PDPA violation",
+          "owner": "Legal Counsel / DPO / Senior Management",
+          "frequency": "Ongoing",
+          "priority": "Critical"
+        },
+        {
+          "id": "s128-L2",
+          "requirement": "Train all staff who may interact with JPDP officers or the Commissioner on the prohibition against making false statements, the obligation to cooperate, and the procedure for referring all regulatory inquiries to the DPO or Legal counsel",
+          "rationale": "Staff who are unaware that they must not make false statements may inadvertently create additional criminal liability for themselves and the organisation",
+          "owner": "DPO / HR / Legal",
+          "frequency": "At onboarding; annually",
+          "priority": "High"
+        }
+      ]
+    },
+    "technical": {
+      "summary": "No specific technical requirements, but accurate record-keeping systems underpin the ability to provide truthful responses to regulatory inquiries.",
+      "requirements": [
+        {
+          "id": "s128-T1",
+          "requirement": "Ensure all compliance records and logs are protected against unauthorised alteration or deletion, using integrity controls (e.g., write-once storage, digital signatures, or audit logging) to prevent retrospective manipulation of compliance evidence",
+          "rationale": "Alteration of compliance records before or during a regulatory investigation is a form of false statement and obstruction; technical integrity controls prevent this inadvertently or intentionally",
+          "owner": "IT Security / CISO",
+          "frequency": "Implemented; reviewed annually",
+          "priority": "High"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "The organisation must have clear policies on regulatory interactions to prevent inadvertent creation of additional liability through procedural violations.",
+      "requirements": [
+        {
+          "id": "s128-G1",
+          "requirement": "Establish a policy requiring all regulatory communications (with JPDP, Commissioner, or Appeal Tribunal) to be reviewed by Legal counsel before despatch, and maintaining a file of all regulatory correspondence",
+          "rationale": "Legal review of all regulatory communications prevents inadvertent inaccuracies and ensures the organisation's position is consistently and accurately presented",
+          "owner": "Legal Counsel / DPO",
+          "frequency": "Policy established; applied per regulatory interaction",
+          "priority": "High"
+        }
+      ]
+    }
+  }
+}

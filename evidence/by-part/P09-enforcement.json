@@ -1,0 +1,179 @@
+{
+  "s110": {
+    "sectionId": "s110",
+    "part": "IX",
+    "title": "Enforcement Notices",
+    "obligationType": "mandatory",
+    "auditorFocus": "If the Commissioner has previously issued an enforcement notice to the organisation, JPDP inspectors will specifically verify that it has been fully complied with. Evidence of compliance with every requirement specified in the notice must be produced. Partial or late compliance is treated as a continuing offence under s113.",
+    "evidenceItems": [
+      {
+        "id": "s110-E1",
+        "name": "Enforcement notice compliance evidence package",
+        "description": "A structured file containing the enforcement notice, the organisation's compliance plan, and evidence of completion of every remedial step specified in the notice, with dates",
+        "whatGoodLooksLike": [
+          "Compliance plan was prepared and submitted to the Commissioner within the timeline specified in the notice",
+          "Each requirement in the notice has corresponding evidence of compliance (screenshots, system configuration records, policy documents, training records as applicable)",
+          "Compliance was confirmed to the Commissioner in writing before or by the deadline specified in the notice",
+          "All evidence is timestamped, demonstrating that remedial steps were taken before the deadline",
+          "Legal counsel review of the compliance evidence package is documented before submission to the Commissioner",
+          "Board or senior management sign-off on the compliance plan is documented"
+        ],
+        "commonGaps": [
+          "Organisation received an enforcement notice but cannot produce evidence of any remedial steps taken",
+          "Remedial steps were taken after the deadline without seeking a Commissioner extension",
+          "Only some requirements from the notice were addressed — others were overlooked or deprioritised",
+          "Evidence of compliance exists but was never formally submitted to the Commissioner",
+          "Compliance was claimed but the remedial steps do not actually address the violation identified in the notice"
+        ],
+        "suggestedSources": [
+          "Copy of the enforcement notice received",
+          "Compliance plan prepared in response to the notice",
+          "Evidence package for each remedial requirement (tagged to the specific notice requirement)",
+          "Written confirmation of compliance submitted to the Commissioner",
+          "Commissioner acknowledgement of compliance",
+          "Board or senior management meeting minutes authorising the compliance response"
+        ],
+        "format": "PDF file (notice + evidence package)",
+        "retentionPeriod": "Permanently"
+      },
+      {
+        "id": "s110-E2",
+        "name": "Enforcement notice remediation project records",
+        "description": "Project management records demonstrating that the remediation required by an enforcement notice was managed as a priority project with dedicated resources and regular progress reporting",
+        "whatGoodLooksLike": [
+          "Project plan with specific tasks, owners, and target dates aligned to the enforcement notice deadline",
+          "Weekly progress reports showing status of each remediation task against the deadline",
+          "Board or senior management weekly briefings on remediation progress",
+          "Named senior manager accountable for delivery of the remediation project",
+          "Resource allocation records showing dedicated staff or budget assigned to the project",
+          "Final project completion sign-off confirming all requirements are met before submission to the Commissioner"
+        ],
+        "commonGaps": [
+          "No project management structure was applied — remediation was ad hoc with no tracking",
+          "Progress was not reported to senior management, resulting in insufficient priority given to the work",
+          "Deadline was missed because resources were not dedicated and the work competed with normal business priorities",
+          "No named accountable person — responsibility was diffused across multiple teams with no single owner"
+        ],
+        "suggestedSources": [
+          "Project plan and timeline for enforcement notice remediation",
+          "Weekly progress reports",
+          "Senior management briefing notes",
+          "Resource allocation approvals (budget/staff)$"
+        ],
+        "format": "Project management documents / Meeting minutes",
+        "retentionPeriod": "10 years (enforcement-related documents)"
+      }
+    ],
+    "auditTips": [
+      "Check the JPDP investigation history for the organisation — have any enforcement notices been issued? If so, verify full compliance evidence",
+      "Ask the DPO: 'Have you received any enforcement notices from the Commissioner?' and cross-reference the answer",
+      "If an enforcement notice was received and compliance is claimed, test a sample of the remedial steps by independently verifying technical changes were implemented",
+      "Check whether the compliance confirmation was submitted to the Commissioner before the deadline"
+    ]
+  },
+  "s113": {
+    "sectionId": "s113",
+    "part": "IX",
+    "title": "Failure to Comply with Enforcement Notice",
+    "obligationType": "mandatory",
+    "auditorFocus": "Section 113 creates a separate and additional criminal liability for failure to comply with an enforcement notice. JPDP inspectors will specifically assess whether enforcement notice compliance is complete, on time, and verifiable. Even good faith partial compliance requires proactive communication with the Commissioner.",
+    "evidenceItems": [
+      {
+        "id": "s113-E1",
+        "name": "Proactive compliance communication to Commissioner",
+        "description": "Evidence that where full compliance by the enforcement notice deadline was not achievable, the organisation proactively communicated this to the Commissioner with a revised timetable and evidence of good faith efforts",
+        "whatGoodLooksLike": [
+          "Communication to the Commissioner was sent before the deadline (not after a breach was discovered)",
+          "Communication includes specific reasons why the deadline cannot be met and a revised realistic timetable",
+          "Communication is accompanied by evidence of remediation steps already completed",
+          "Communication is in writing, reviewed by Legal counsel, and approved by senior management before despatch",
+          "Commissioner's response acknowledging the revised timetable is on file"
+        ],
+        "commonGaps": [
+          "The deadline passed without any communication to the Commissioner — the organisation hoped the failure would go unnoticed",
+          "Communication was sent after the Commissioner enquired about compliance status (reactive rather than proactive)",
+          "Communication was sent but did not include a revised timetable or evidence of partial completion",
+          "Communication was sent by email without legal review and contained statements prejudicial to the organisation's position"
+        ],
+        "suggestedSources": [
+          "Written communication to the Commissioner regarding deadline extension",
+          "Commissioner's acknowledgement or response to extension request",
+          "Evidence of partial compliance steps completed by the original deadline",
+          "Legal counsel review record for the communication"
+        ],
+        "format": "PDF correspondence",
+        "retentionPeriod": "Permanently"
+      }
+    ],
+    "auditTips": [
+      "If an enforcement notice deadline was missed, verify whether the Commissioner was notified proactively before the deadline or after",
+      "Where partial compliance is claimed, verify through independent technical testing that the claimed steps were actually implemented",
+      "Ask for the Commissioner's written response to any extension request — this shows the Commissioner's position on the missed deadline"
+    ]
+  },
+  "s114": {
+    "sectionId": "s114",
+    "part": "IX",
+    "title": "Powers of Enforcement Officers",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors will assess whether the organisation is capable of responding professionally and cooperatively to an enforcement visit, without obstruction and without inadvertent prejudice to its legal position. Staff training and a documented enforcement visit protocol are the key readiness indicators.",
+    "evidenceItems": [
+      {
+        "id": "s114-E1",
+        "name": "Enforcement visit protocol and staff training records",
+        "description": "A documented procedure for managing enforcement officer visits, and evidence that staff have been trained on their obligations when JPDP enforcement officers attend the premises",
+        "whatGoodLooksLike": [
+          "Enforcement visit protocol specifies: who to notify immediately (DPO, Legal, CEO), where enforcement officers should be received, how document production should be managed, and what records should be kept of the visit",
+          "Protocol instructs staff not to obstruct, and to refer all questions to the DPO",
+          "Protocol specifies that legal counsel must be notified within 30 minutes of enforcement officer attendance",
+          "Training records show all reception, security, and senior staff have received training on the protocol",
+          "Protocol includes a document production log template to record what is produced to enforcement officers"
+        ],
+        "commonGaps": [
+          "No enforcement visit protocol exists — staff have no guidance on how to respond to an unannounced enforcement visit",
+          "Protocol exists but was never communicated to staff below senior management level",
+          "Training on enforcement visit procedures has never been conducted",
+          "No mechanism exists to document what documents were produced to enforcement officers, leaving the organisation with no record of the production"
+        ],
+        "suggestedSources": [
+          "Enforcement visit protocol document",
+          "Staff training records covering enforcement visit procedures",
+          "Document production log template used during enforcement visits",
+          "Records from any actual past enforcement visits"
+        ],
+        "format": "PDF / Word document / Training records",
+        "retentionPeriod": "10 years (enforcement-related documents)"
+      },
+      {
+        "id": "s114-E2",
+        "name": "Controlled document production evidence",
+        "description": "Evidence that the organisation produces documents to enforcement officers in a controlled and documented manner, maintaining a record of everything produced",
+        "whatGoodLooksLike": [
+          "Document production log records each document produced during the enforcement visit: document title, date, recipient officer name, and producing officer name",
+          "Documents are produced in copies rather than originals where possible, so the organisation retains a record of what was produced",
+          "Electronic data is provided in controlled exports rather than by granting live system access to enforcement officers",
+          "Legal counsel is present (in person or by phone) during document production to advise on privilege or other grounds for withholding specific documents",
+          "Post-visit review is conducted by Legal counsel to confirm that all produced documents are accounted for and that no privileged material was inadvertently produced"
+        ],
+        "commonGaps": [
+          "No document production log was maintained during an actual enforcement visit",
+          "Original documents were handed over without retaining copies",
+          "Enforcement officers were given unmonitored direct access to systems rather than receiving controlled exports",
+          "Legal counsel was not present or engaged during the document production process"
+        ],
+        "suggestedSources": [
+          "Document production logs from any past enforcement visits",
+          "Post-visit review records",
+          "Legal counsel engagement records during enforcement visits"
+        ],
+        "format": "Spreadsheet / PDF log",
+        "retentionPeriod": "Permanently"
+      }
+    ],
+    "auditTips": [
+      "Ask for the enforcement visit protocol and verify it has been tested or briefed to front-desk and security staff who would first encounter enforcement officers",
+      "Ask whether any enforcement visits have occurred in the past 5 years — if so, request the document production log",
+      "Ask the DPO to walk through what would happen if enforcement officers arrived unannounced at the reception desk right now — the coherence of the response indicates preparedness"
+    ]
+  }
+}

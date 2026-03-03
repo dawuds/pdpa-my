@@ -1,0 +1,255 @@
+{
+  "description": "Mapping of PDPA 2010 (Act 709) sections to Codes of Practice issued under s57 of the Act",
+  "lastUpdated": "2025-06-01",
+  "codes": [
+    {
+      "id": "general-cop-2022",
+      "title": "Personal Data Protection Code of Practice (General) 2022",
+      "shortTitle": "General Code 2022",
+      "applicableClasses": "All data users",
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/general-cop-2022.json"
+    },
+    {
+      "id": "cop-banking",
+      "title": "Personal Data Protection Code of Practice (Banking and Financial Institutions) 2022",
+      "shortTitle": "Banking Code 2022",
+      "applicableClasses": ["banking-and-financial-institutions"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/banking.json"
+    },
+    {
+      "id": "cop-communications",
+      "title": "Personal Data Protection Code of Practice (Communications) 2022",
+      "shortTitle": "Communications Code 2022",
+      "applicableClasses": ["communications"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/communications.json"
+    },
+    {
+      "id": "cop-insurance-takaful",
+      "title": "Personal Data Protection Code of Practice (Insurance and Takaful) 2022",
+      "shortTitle": "Insurance Code 2022",
+      "applicableClasses": ["insurance"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/insurance-takaful.json"
+    },
+    {
+      "id": "cop-healthcare",
+      "title": "Personal Data Protection Code of Practice (Health) 2022",
+      "shortTitle": "Healthcare Code 2022",
+      "applicableClasses": ["health"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/healthcare.json"
+    },
+    {
+      "id": "cop-aviation",
+      "title": "Personal Data Protection Code of Practice (Aviation) 2022",
+      "shortTitle": "Aviation Code 2022",
+      "applicableClasses": ["transport"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/aviation.json"
+    },
+    {
+      "id": "cop-utilities-electricity",
+      "title": "Personal Data Protection Code of Practice (Utilities — Electricity) 2022",
+      "shortTitle": "Electricity Utilities Code 2022",
+      "applicableClasses": ["utilities"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/utilities-electricity.json"
+    },
+    {
+      "id": "cop-utilities-water",
+      "title": "Personal Data Protection Code of Practice (Utilities — Water) 2022",
+      "shortTitle": "Water Utilities Code 2022",
+      "applicableClasses": ["utilities"],
+      "effectiveDate": "2022-01-01",
+      "supplementFilePath": "supplements/codes-of-practice/utilities-water.json"
+    }
+  ],
+  "mappings": [
+    {
+      "section": "s5",
+      "sectionTitle": "Application of Personal Data Protection Principles",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s2", "cop-gen-s3"],
+          "notes": "The General Code provides comprehensive guidance on applying all seven principles across all sectors. Sector-specific codes supplement the General Code."
+        }
+      ]
+    },
+    {
+      "section": "s6",
+      "sectionTitle": "General Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s3", "cop-gen-s4"],
+          "notes": "The General Code provides the framework for implementing the General Principle, including guidance on lawful basis assessment and consent management."
+        },
+        {
+          "codeId": "cop-banking",
+          "relevantSections": ["cop-bank-s3"],
+          "notes": "Banking sector guidance on lawful bases for customer data processing, including product offerings, credit assessment, and regulatory reporting."
+        },
+        {
+          "codeId": "cop-healthcare",
+          "relevantSections": ["cop-health-s3"],
+          "notes": "Healthcare guidance on lawful bases for patient data processing, including treatment, billing, research, and public health."
+        }
+      ]
+    },
+    {
+      "section": "s7",
+      "sectionTitle": "Notice and Choice Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s5"],
+          "notes": "The General Code specifies the content, format, and delivery mechanism for data protection notices across all sectors."
+        },
+        {
+          "codeId": "cop-communications",
+          "relevantSections": ["cop-comms-s4"],
+          "notes": "Sector-specific guidance for telcos and ISPs on subscriber notices, including digital delivery and layered notice approaches."
+        }
+      ]
+    },
+    {
+      "section": "s8",
+      "sectionTitle": "Disclosure Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s6"],
+          "notes": "General guidance on managing disclosures to third parties, including data processors, service providers, and regulatory bodies."
+        },
+        {
+          "codeId": "cop-banking",
+          "relevantSections": ["cop-bank-s5"],
+          "notes": "Banking-specific guidance on credit bureau reporting, Central Credit Reference Information System (CCRIS), and inter-bank disclosures."
+        }
+      ]
+    },
+    {
+      "section": "s9",
+      "sectionTitle": "Security Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s7"],
+          "notes": "The General Code provides a baseline security framework applicable to all data users, cross-referenced to the Security Standards 2015."
+        },
+        {
+          "codeId": "cop-banking",
+          "relevantSections": ["cop-bank-s6"],
+          "notes": "Enhanced security requirements for banking sector, including multi-factor authentication, encryption standards, and network security for online banking."
+        },
+        {
+          "codeId": "cop-healthcare",
+          "relevantSections": ["cop-health-s6"],
+          "notes": "Healthcare sector security requirements for electronic health records (EHR), medical imaging systems, and clinical information systems."
+        },
+        {
+          "codeId": "cop-communications",
+          "relevantSections": ["cop-comms-s5"],
+          "notes": "Communications sector security for customer data, call records, and network management data."
+        },
+        {
+          "codeId": "cop-insurance-takaful",
+          "relevantSections": ["cop-ins-s5"],
+          "notes": "Insurance sector security for sensitive underwriting data, claims data, and health-related insurance data."
+        },
+        {
+          "codeId": "cop-utilities-electricity",
+          "relevantSections": ["cop-elec-s5"],
+          "notes": "Electricity utility sector security for smart meter data, consumption data, and customer account information."
+        },
+        {
+          "codeId": "cop-utilities-water",
+          "relevantSections": ["cop-water-s5"],
+          "notes": "Water utility sector security requirements for customer billing data and water consumption records."
+        },
+        {
+          "codeId": "cop-aviation",
+          "relevantSections": ["cop-avi-s5"],
+          "notes": "Aviation sector security for passenger name records (PNR), passport data, and frequent flyer information."
+        }
+      ]
+    },
+    {
+      "section": "s10",
+      "sectionTitle": "Retention Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s8"],
+          "notes": "The General Code provides a general framework for data retention schedules and secure deletion procedures, supplemented by the Retention Standard 2015."
+        },
+        {
+          "codeId": "cop-banking",
+          "relevantSections": ["cop-bank-s7"],
+          "notes": "Banking sector retention schedule specifying minimum and maximum retention periods for customer due diligence records, transaction records, and credit files, which must comply with Bank Negara Malaysia requirements."
+        },
+        {
+          "codeId": "cop-healthcare",
+          "relevantSections": ["cop-health-s7"],
+          "notes": "Healthcare sector retention periods for medical records, prescription records, and clinical trial data, informed by Ministry of Health regulations."
+        }
+      ]
+    },
+    {
+      "section": "s11",
+      "sectionTitle": "Data Integrity Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s9"],
+          "notes": "The General Code sets out data quality and accuracy requirements cross-referenced to the Data Integrity Standard 2015."
+        }
+      ]
+    },
+    {
+      "section": "s12",
+      "sectionTitle": "Access Principle",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s10"],
+          "notes": "The General Code provides procedures for handling access requests, including prescribed forms, response timelines, and permissible grounds for refusal."
+        }
+      ]
+    },
+    {
+      "section": "s29",
+      "sectionTitle": "Sensitive Personal Data",
+      "part": "II",
+      "codeReferences": [
+        {
+          "codeId": "general-cop-2022",
+          "relevantSections": ["cop-gen-s11"],
+          "notes": "Enhanced obligations for processing sensitive personal data, including requirements for additional consent mechanisms, enhanced security measures, and limited access controls."
+        },
+        {
+          "codeId": "cop-healthcare",
+          "relevantSections": ["cop-health-s8"],
+          "notes": "Comprehensive sector-specific guidance for health data, which constitutes sensitive personal data under the Act, addressing clinical use, research, insurance, and secondary uses."
+        },
+        {
+          "codeId": "cop-insurance-takaful",
+          "relevantSections": ["cop-ins-s7"],
+          "notes": "Insurance-specific handling of health and medical data obtained during underwriting and claims assessment."
+        }
+      ]
+    }
+  ]
+}

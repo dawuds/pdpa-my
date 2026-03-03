@@ -1,0 +1,93 @@
+{
+  "id": "class-of-data-users-order-2013",
+  "title": "Personal Data Protection (Class of Data Users) Order 2013",
+  "type": "order",
+  "reference": "P.U.(A) 168/2013",
+  "gazetteDate": "2013-11-14",
+  "effectiveDate": "2013-11-15",
+  "issuedBy": "Minister charged with responsibility for Personal Data Protection",
+  "enablingSection": "s13(3)",
+  "parentAct": "Act 709",
+  "summary": "This Order prescribes the 13 classes of data users who are required to register with the Personal Data Protection Commissioner before processing personal data in Malaysia. Data users who fall within a prescribed class must obtain a certificate of registration and must comply with all applicable provisions of the PDPA and any relevant Code of Practice. Data users outside these 13 classes are still subject to the PDPA principles and other provisions but are not required to register.",
+  "provisions": [
+    {
+      "id": "cdu-1",
+      "article": "art1",
+      "title": "Citation and Commencement",
+      "content": "This Order may be cited as the Personal Data Protection (Class of Data Users) Order 2013 and shall come into force on 15 November 2013.",
+      "requirements": []
+    },
+    {
+      "id": "cdu-2",
+      "article": "art2",
+      "title": "Class of Data Users",
+      "content": "The class of data users specified in the First Schedule is prescribed for the purposes of section 13(3) of the Personal Data Protection Act 2010. A data user who belongs to a class specified in the First Schedule must apply for registration with the Commissioner in accordance with the Personal Data Protection (Registration of Data User) Regulations 2013 before processing any personal data.",
+      "requirements": [
+        "Data users must self-assess whether they fall within a prescribed class",
+        "Where a data user's activities span multiple classes, each applicable class registration is required",
+        "The Commissioner may issue guidance on borderline cases",
+        "Registration must be obtained before commencing processing — no grace period is provided"
+      ]
+    },
+    {
+      "id": "cdu-3",
+      "article": "FirstSchedule",
+      "title": "First Schedule — Prescribed Classes of Data Users",
+      "content": "The 13 prescribed classes of data users are: Class 1 — Communications (licensees under Communications and Multimedia Act 1998); Class 2 — Banking and Financial Institutions (licensed banks, investment banks, Islamic banks, and financial institutions under financial services legislation); Class 3 — Insurance (licensed insurers and takaful operators); Class 4 — Health (healthcare providers and health professionals); Class 5 — Tourism and Hospitalities (licensed hotels and travel agencies); Class 6 — Transport (licensed public transport operators); Class 7 — Education (private educational institutions); Class 8 — Direct Selling (licensed direct sales companies under Direct Sales Act 1993); Class 9 — Services (professional services: legal, audit, accountancy, engineering, architecture); Class 10 — Real Estate (licensed real estate agents and property developers); Class 11 — Utilities (electricity and water utilities); Class 12 — Pawnbroking (licensed pawnbrokers); Class 13 — Moneylending (licensed moneylenders).",
+      "requirements": [
+        "Each class description is defined by reference to licensing or registration requirements under sector-specific legislation",
+        "A data user must be both within the defined activity and hold the relevant licence or registration",
+        "Unlicensed operators in these sectors are not in a prescribed class but are subject to PDPA obligations as data users"
+      ]
+    },
+    {
+      "id": "cdu-4",
+      "article": "art3",
+      "title": "Single Registration for Multiple Classes",
+      "content": "Where a data user carries out activities that fall within more than one prescribed class, the data user may apply for a single certificate of registration that covers all applicable classes, provided that all relevant information is provided in the application. The Commissioner may issue separate certificates for each class if appropriate.",
+      "requirements": [
+        "Combined registration applications must identify all classes to which the data user belongs",
+        "Applicable codes of practice for each class must all be complied with",
+        "Fees are assessed per class of registration"
+      ]
+    },
+    {
+      "id": "cdu-5",
+      "article": "art4",
+      "title": "Changes in Class Membership",
+      "content": "A data user who subsequently acquires a licence or registration that would bring it within an additional prescribed class must apply for registration or amendment of its existing registration within 30 days of acquiring such licence. A data user who ceases to fall within a prescribed class must notify the Commissioner within 30 days and surrender its certificate of registration for that class.",
+      "requirements": [
+        "Monitoring of class membership is a continuous obligation",
+        "Mergers and acquisitions may trigger new class membership",
+        "Notification of cessation of class membership must be in the prescribed form"
+      ]
+    },
+    {
+      "id": "cdu-6",
+      "article": "art5",
+      "title": "Validity and Renewal",
+      "content": "A certificate of registration is valid for a period of 2 years from the date of issue. The data user must apply for renewal of registration at least 30 days before the expiry of the certificate. Processing may continue during a pending renewal application provided the original certificate has not expired and the renewal application has been submitted.",
+      "requirements": [
+        "Renewal applications must include updated information if there have been material changes",
+        "Failure to renew before expiry constitutes unlawful processing under s5(2)",
+        "The Commissioner may require additional information or conditions upon renewal"
+      ]
+    },
+    {
+      "id": "cdu-7",
+      "article": "art6",
+      "title": "Conditions Attached to Registration",
+      "content": "The Commissioner may attach conditions to a certificate of registration, including conditions relating to the scope of processing, security measures, data breach notification procedures, and engagement with the Commissioner. Breach of any condition constitutes an offence under section 5(2) of the Act.",
+      "requirements": [
+        "Conditions must be complied with as if they were requirements under the Act",
+        "Conditions may be varied by the Commissioner with notice to the data user",
+        "A data user may appeal against conditions to the Personal Data Protection Appeal Tribunal"
+      ]
+    }
+  ],
+  "keywords": [
+    "registration", "prescribed class", "data user", "certificate of registration", "13 classes",
+    "communications", "banking", "insurance", "health", "education", "transport", "utilities",
+    "real estate", "direct selling", "pawnbroking", "moneylending", "services", "tourism"
+  ]
+}

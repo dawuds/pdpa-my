@@ -1,0 +1,94 @@
+{
+  "id": "cop-insurance-takaful",
+  "title": "Personal Data Protection Code of Practice (Insurance and Takaful) 2022",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "2022-01-01",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["insurance"],
+  "summary": "This sector-specific Code applies to all insurers and takaful operators in the Insurance class (Class 3 of the Class of Data Users Order 2013). It supplements the General Code 2022 with enhanced requirements reflecting the highly sensitive nature of insurance and health data processed for underwriting and claims purposes. The Code takes into account requirements under the Financial Services Act 2013, the Islamic Financial Services Act 2013, and applicable Bank Negara Malaysia policy documents on actuarial practices and insurance governance.",
+  "provisions": [
+    {
+      "id": "cop-ins-s1",
+      "title": "Scope and Application",
+      "content": "This Code applies to general insurers, life insurers, takaful operators, reinsurers, and insurance intermediaries (brokers, agents, adjusters) in Class 3 of the Class of Data Users Order 2013. It addresses the unique data protection challenges of the insurance sector, including the processing of highly sensitive health data for underwriting, sharing of data with reinsurers and claims investigators, and the use of telematics and connected device data for usage-based insurance.",
+      "requirements": [
+        "All insurance data users must ensure the Code is reflected in their data governance frameworks",
+        "Insurance intermediaries are subject to this Code in their capacity as data users",
+        "This Code must be read together with the General Code 2022"
+      ]
+    },
+    {
+      "id": "cop-ins-s2",
+      "title": "Underwriting Data",
+      "content": "Personal data collected for underwriting purposes, including health questionnaires, medical histories, and lifestyle information, must be: (a) limited to information genuinely necessary for risk assessment; (b) used only for underwriting and related insurance purposes; (c) not disclosed to third parties beyond the insurer's underwriting team, appointed medical examiners, and reinsurers without explicit consent; (d) retained in accordance with the retention schedule — underwriting records must be retained for the policy term plus 7 years; and (e) treated as sensitive personal data (health data) and subject to the highest level of protection under this Code.",
+      "requirements": [
+        "Underwriting health data is sensitive personal data — enhanced protections apply",
+        "Minimum data collection — only data genuinely necessary for risk assessment",
+        "7-year post-policy retention for underwriting records",
+        "Reinsurance disclosure must be covered by the privacy notice"
+      ]
+    },
+    {
+      "id": "cop-ins-s3",
+      "title": "Claims Data",
+      "content": "Personal data collected and processed for insurance claims purposes must be: (a) collected only for the purposes of assessing, managing, and settling the claim; (b) not used for underwriting purposes without specific disclosure and consent; (c) disclosed only to persons directly involved in the claims process (loss adjusters, medical experts, investigators, lawyers, reinsurers); (d) retained for the claim settlement period plus 7 years for litigation risk; and (e) not used for marketing or profiling without separate consent. Health data in claims files is sensitive personal data and must be encrypted and access-controlled.",
+      "requirements": [
+        "Claims data must not be recycled into underwriting without consent",
+        "Third-party claims investigators must operate under data processing agreements",
+        "Health data in claims files must have restricted access",
+        "7-year post-settlement retention for claims records"
+      ]
+    },
+    {
+      "id": "cop-ins-s4",
+      "title": "Anti-Fraud Data Sharing",
+      "content": "Insurance companies may share personal data with the Malaysian Takaful Association (MTA), Persatuan Insurans Am Malaysia (PIAM), and recognized anti-fraud databases for the purposes of preventing and detecting insurance fraud. Such sharing must: (a) be disclosed in the policy holder's privacy notice; (b) be proportionate to the fraud risk; (c) involve only the minimum data necessary for fraud detection; and (d) comply with s8 (Disclosure Principle) of the PDPA. Flagging a policyholder in a fraud database must be based on reasonable grounds — reckless or malicious flagging is prohibited.",
+      "requirements": [
+        "Anti-fraud data sharing must be disclosed in the privacy notice",
+        "Fraud database entries must be based on reasonable grounds",
+        "Data subjects must be able to challenge incorrect fraud database entries",
+        "Anti-fraud databases must have appropriate access controls"
+      ]
+    },
+    {
+      "id": "cop-ins-s5",
+      "title": "Security for Insurance Data",
+      "content": "In addition to the Security Standards 2015, insurance data users must: (a) encrypt all health data in storage and transit; (b) implement role-based access controls restricting health and medical data to claims, underwriting, and medical teams; (c) conduct DPIAs before implementing new insurance technologies such as telematics, wearables, or AI-based underwriting; (d) ensure all loss adjusters, investigation firms, and medical examiners have appropriate security measures through data processing agreements; and (e) report data breaches to both the Commissioner and Bank Negara Malaysia.",
+      "requirements": [
+        "Health data encryption is mandatory",
+        "DPIA required for telematics and wearable device data processing",
+        "Third-party investigators must have DPAs in place",
+        "Dual reporting (Commissioner and BNM) for significant data breaches"
+      ]
+    },
+    {
+      "id": "cop-ins-s6",
+      "title": "Telematics and Usage-Based Insurance",
+      "content": "Insurers offering usage-based insurance (UBI) products using telematics devices, mobile applications, or connected vehicle data must: (a) provide clear and specific notice of the data collected, how it is used for pricing, and how it may be shared; (b) obtain explicit consent for telematics data collection — consent must be distinct from the general insurance policy consent; (c) inform policyholders of how driving behaviour data affects their premium; (d) not use telematics data to refuse claims without providing the data subject with a copy of the data relied upon; and (e) retain telematics data for only as long as necessary for pricing and claims purposes.",
+      "requirements": [
+        "Telematics consent must be separate and specific to the UBI product",
+        "Policyholders must have access to their telematics data",
+        "Claims decisions based on telematics data must be transparent and challengeable",
+        "Telematics data retention: operational period plus 2 years for potential claims"
+      ]
+    },
+    {
+      "id": "cop-ins-s7",
+      "title": "Sensitive Personal Data in Insurance",
+      "content": "Health, genetic, and biometric data processed in the course of insurance operations must comply with s29 of the Act (sensitive personal data) as well as the enhanced requirements of this Code. Specific requirements: (a) medical examiner reports must be obtained through data processing agreements with medical practitioners; (b) genetic test results used in underwriting must be subject to strict access controls and not disclosed outside the underwriting team without consent; (c) biometric data (e.g., fingerprints for mobile app authentication) must be encrypted and not used for underwriting purposes; and (d) health data must be purged from marketing and CRM systems and retained only in secure claims and underwriting systems.",
+      "requirements": [
+        "Genetic data — most sensitive category — access limited to named underwriting officers",
+        "Health data must not be in general CRM systems — segregated storage required",
+        "Medical examiners must have DPAs in place before accessing policyholder health data",
+        "Biometric authentication data must not be cross-used for underwriting"
+      ]
+    }
+  ],
+  "keywords": [
+    "insurance", "takaful", "underwriting", "claims", "health data", "telematics", "UBI",
+    "loss adjuster", "anti-fraud", "reinsurance", "biometric", "sensitive data",
+    "Class 3", "BNM", "PIAM", "MTA"
+  ]
+}

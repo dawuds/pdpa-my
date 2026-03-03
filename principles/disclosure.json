@@ -1,0 +1,88 @@
+{
+  "id": "disclosure",
+  "section": 8,
+  "name": "Disclosure Principle",
+  "summary": "Personal data shall not be disclosed for any purpose other than the purpose for which it was disclosed at the time of collection, or a purpose directly related to that purpose, without the consent of the data subject. The Disclosure Principle controls the onward flow of personal data and is closely linked to the cross-border transfer provisions of the PDPA.",
+  "obligations": [
+    {
+      "id": "disclosure-O1",
+      "obligation": "Do not disclose personal data to a third party for a purpose other than the purpose notified to the data subject at the time of collection, or a directly related purpose, without fresh consent",
+      "basis": "Section 8(1)",
+      "type": "mandatory"
+    },
+    {
+      "id": "disclosure-O2",
+      "obligation": "Where disclosing personal data to a third party (including a data processor), ensure that the disclosure is limited to personal data necessary for the disclosed purpose — do not disclose more data than required",
+      "basis": "Section 8(1) read with the General Principle (Section 6)",
+      "type": "mandatory"
+    },
+    {
+      "id": "disclosure-O3",
+      "obligation": "When disclosing personal data to a data processor or sub-processor, ensure a written data processing agreement is in place that binds the processor to process the data only on the data user's instructions and to comply with equivalent data protection obligations",
+      "basis": "Section 8(1); Section 43 (data processor obligations)",
+      "type": "mandatory"
+    },
+    {
+      "id": "disclosure-O4",
+      "obligation": "Do not transfer personal data outside Malaysia unless the destination country provides a level of protection equivalent to that afforded by the PDPA, or the data subject has consented to the transfer, or an applicable exception applies",
+      "basis": "Section 129; Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order",
+      "type": "mandatory"
+    },
+    {
+      "id": "disclosure-O5",
+      "obligation": "Maintain records of all third parties to whom personal data has been disclosed, the purpose of the disclosure, the legal basis, and the date of disclosure",
+      "basis": "Section 8(1); Personal Data Protection Standards 2015",
+      "type": "mandatory"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "disclosure-X1",
+      "exception": "Disclosure required for compliance with a legal obligation to which the data user is subject",
+      "basis": "Section 8(2)(a)",
+      "conditions": "The legal obligation must arise from Malaysian law (e.g., a court order, regulatory requirement, or statutory duty to report); voluntary disclosure to law enforcement is not covered; the data user should seek legal advice before disclosing pursuant to informal requests from government agencies"
+    },
+    {
+      "id": "disclosure-X2",
+      "exception": "Disclosure necessary to protect the vital interests of the data subject",
+      "basis": "Section 8(2)(b)",
+      "conditions": "Applies to emergency situations involving a serious threat to life or physical safety; the data subject must be incapable of giving consent and consent cannot be obtained from a legal representative in time; the disclosure must be limited to what is strictly necessary"
+    },
+    {
+      "id": "disclosure-X3",
+      "exception": "Disclosure necessary for the administration of justice or the exercise of statutory functions conferred by written law",
+      "basis": "Section 8(2)(c)",
+      "conditions": "Principally applies to court proceedings, law enforcement functions, and regulatory oversight activities; the data user must verify the requesting body has the relevant statutory function before disclosing"
+    },
+    {
+      "id": "disclosure-X4",
+      "exception": "Disclosure to a data subject's agent or representative acting with proper authority",
+      "basis": "Section 8(2)(d)",
+      "conditions": "The data user must verify the authority of the representative (e.g., power of attorney, written authorisation); the disclosure should be documented"
+    },
+    {
+      "id": "disclosure-X5",
+      "exception": "Disclosure for the purpose of, or in connection with, legal proceedings (including prospective proceedings), legal advice, or the establishment, exercise, or defence of legal rights",
+      "basis": "Section 8(2)(e)",
+      "conditions": "The disclosure must be proportionate to the legal purpose and limited to data reasonably necessary for that purpose; this exception does not justify speculative or fishing disclosures"
+    }
+  ],
+  "practicalGuidance": "Organizations should maintain a third-party disclosure register documenting every entity that receives personal data, the categories of data shared, the purpose, the legal basis, and any contractual safeguards in place. Before onboarding any new vendor or partner who will receive personal data, a data protection impact assessment (DPIA) and due diligence review should be conducted. Data processing agreements must be signed before data is disclosed to processors; template agreements should be reviewed by legal counsel to ensure they include mandatory clauses on security, sub-processing restrictions, data breach notification obligations, and post-processing deletion. For cross-border transfers, check whether the destination country is listed in the Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order; if not listed, standard contractual clauses, binding corporate rules, or explicit data subject consent must be used. In practice, disclosures to government agencies in response to informal requests (without a court order or statutory compulsion) should be treated cautiously — obtain legal advice before disclosing to avoid becoming an inadvertent enabler of unlawful surveillance.",
+  "commonViolations": [
+    "Sharing customer personal data with affiliated companies or marketing partners without informing the data subject or obtaining consent",
+    "Disclosing personal data to law enforcement in response to informal requests (e.g., phone calls or emails) that have no statutory compulsion, without verifying legal authority",
+    "Transferring personal data to overseas cloud service providers or group entities in countries not listed in the Transfer Order without implementing contractual safeguards or obtaining consent",
+    "Failing to execute a written data processing agreement before a vendor is given access to personal data",
+    "Disclosing more personal data than necessary when responding to a legal or regulatory request"
+  ],
+  "relatedGuidelines": [
+    "pdpc-guidelines-disclosure-2023",
+    "pdpc-guidelines-cross-border-transfer"
+  ],
+  "relatedStandards": [
+    "pdpa-standards-2015"
+  ],
+  "relatedCodeSections": [
+    "general-cop-s6"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "principles": {
+    "label": "Personal Data Protection Principles",
+    "description": "Offences related to contraventions of the seven data protection principles under Part II Division 1",
+    "offenceIds": ["pen-s5-3", "pen-s29"],
+    "primarySection": "s5",
+    "maxPenalty": {
+      "fine": "RM1,000,000",
+      "imprisonment": "3 years"
+    }
+  },
+  "registration": {
+    "label": "Registration of Data Users",
+    "description": "Offences relating to the failure to register as a data user or processing personal data without valid registration, as required under Part II Division 2",
+    "offenceIds": ["pen-s5-2", "pen-s13"],
+    "primarySection": "s13-16",
+    "maxPenalty": {
+      "fine": "RM1,000,000",
+      "imprisonment": "3 years"
+    }
+  },
+  "processing": {
+    "label": "Processing of Personal Data",
+    "description": "Offences related to unlawful or improper processing, including failure to comply with data subject rights and failure to appoint a Data Protection Officer",
+    "offenceIds": ["pen-s29", "pen-s44", "pen-dpo"],
+    "primarySection": "s17-44",
+    "maxPenalty": {
+      "fine": "RM1,000,000",
+      "imprisonment": "3 years"
+    }
+  },
+  "disclosure": {
+    "label": "Unauthorized Disclosure",
+    "description": "Offences involving the unauthorized or unlawful disclosure of personal data, whether by data users, their employees, or by the Commissioner and regulatory officers",
+    "offenceIds": ["pen-s130", "pen-s132", "pen-s135A"],
+    "primarySection": "s130-135A",
+    "maxPenalty": {
+      "fine": "RM1,000,000",
+      "imprisonment": "3 years"
+    }
+  },
+  "enforcement": {
+    "label": "Enforcement and Investigation",
+    "description": "Offences that obstruct, impede, or undermine the enforcement functions of the Commissioner and authorized officers, including obstruction, false statements, and non-compliance with enforcement notices",
+    "offenceIds": ["pen-s131", "pen-s133", "pen-s134", "pen-s109", "pen-s127"],
+    "primarySection": "s101-133",
+    "maxPenalty": {
+      "fine": "RM1,000,000",
+      "imprisonment": "3 years"
+    }
+  },
+  "data-breach": {
+    "label": "Data Breach Notification",
+    "description": "Offences related to the mandatory data breach notification obligations introduced by the 2024 Amendment Act, including failure to notify the Commissioner within 72 hours and failure to notify affected data subjects",
+    "offenceIds": ["pen-s143A-5"],
+    "primarySection": "s143A",
+    "maxPenalty": {
+      "fine": "RM250,000",
+      "imprisonment": "2 years"
+    }
+  },
+  "cross-border": {
+    "label": "Cross-Border Personal Data Transfer",
+    "description": "Offences related to the unlawful transfer of personal data outside Malaysia without complying with the requirements under s129A, including transfers to non-approved countries and failure to implement adequate safeguards",
+    "offenceIds": ["pen-s129A"],
+    "primarySection": "s129A",
+    "maxPenalty": {
+      "fine": "RM1,000,000",
+      "imprisonment": "3 years"
+    }
+  },
+  "general": {
+    "label": "General and Miscellaneous Penalties",
+    "description": "General penalty provisions, continuing offence provisions, and body corporate liability provisions that apply across all categories of offences",
+    "offenceIds": ["pen-s136", "pen-s138", "pen-s133A"],
+    "primarySection": "s133A-138",
+    "maxPenalty": {
+      "fine": "RM250,000 (general); RM5,000/day (continuing)",
+      "imprisonment": "2 years"
+    }
+  }
+}

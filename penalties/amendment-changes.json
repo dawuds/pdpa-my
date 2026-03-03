@@ -1,0 +1,262 @@
+{
+  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1699) significantly enhanced penalties under the PDPA to strengthen deterrence and align Malaysian data protection law with international standards. The amendments increased maximum fines for most principal offences from RM300,000 to RM1,000,000, extended imprisonment terms, introduced daily fines for continuing offences, created new offences targeting contemporary data harms (unauthorized sale of personal data, failure to notify breaches, failure to appoint a DPO), and established individual liability for directors and senior officers of body corporates. The amendments came into force on 1 June 2025.",
+  "amendmentActId": "A1699",
+  "amendmentTitle": "Personal Data Protection (Amendment) Act 2024",
+  "gazetteDate": "2024-10-17",
+  "effectiveDate": "2025-04-01",
+  "keyChanges": [
+    {
+      "section": "s5(3)",
+      "sectionTitle": "Contravention of Personal Data Protection Principles",
+      "before": {
+        "fine": "RM300,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM1,000,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "233%",
+        "imprisonment": "50%"
+      },
+      "rationale": "The principles are the core obligations of the PDPA. Increasing the maximum penalty for principle violations reflects the fundamental importance of these obligations and brings penalties closer to international comparators such as the GDPR."
+    },
+    {
+      "section": "s5(2)",
+      "sectionTitle": "Processing Without Registration",
+      "before": {
+        "fine": "RM500,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM1,000,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "100%",
+        "imprisonment": "0%"
+      },
+      "rationale": "Operating outside the registration framework undermines the Commissioner's ability to supervise data users. The doubled fine reflects the seriousness of operating outside the regulatory perimeter."
+    },
+    {
+      "section": "s129A",
+      "sectionTitle": "Cross-Border Personal Data Transfer",
+      "before": {
+        "fine": "RM300,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM1,000,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "233%",
+        "imprisonment": "50%"
+      },
+      "rationale": "Cross-border data transfers raise significant privacy risks, particularly where data is transferred to jurisdictions with inadequate protections. The enhanced penalty reflects the transnational nature of such violations and the difficulty of remediation once data has left Malaysian jurisdiction."
+    },
+    {
+      "section": "s131",
+      "sectionTitle": "Obstruction of Commissioner or Officers",
+      "before": {
+        "fine": "RM200,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM500,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "150%",
+        "imprisonment": "50%"
+      },
+      "rationale": "Obstruction of regulatory functions is treated as a serious offence across most regulatory regimes. The enhanced penalty ensures that the cost of obstruction outweighs any benefit from delaying or disrupting enforcement."
+    },
+    {
+      "section": "s132",
+      "sectionTitle": "Unauthorized Disclosure by Data User",
+      "before": {
+        "fine": "RM300,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM1,000,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "233%",
+        "imprisonment": "50%"
+      },
+      "rationale": "Unauthorized disclosures can cause serious harm to data subjects including identity theft, financial fraud, and reputational damage. The significantly increased maximum fine is intended to deter deliberate disclosures."
+    },
+    {
+      "section": "s133",
+      "sectionTitle": "Failure to Comply with Enforcement Notice",
+      "before": {
+        "fine": "RM300,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM1,000,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "233%",
+        "imprisonment": "50%"
+      },
+      "rationale": "Compliance with enforcement notices is essential to the effectiveness of the regulatory regime. Non-compliance is a direct challenge to regulatory authority and must attract meaningful consequences."
+    },
+    {
+      "section": "s134",
+      "sectionTitle": "False Statements",
+      "before": {
+        "fine": "RM200,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM500,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "150%",
+        "imprisonment": "50%"
+      },
+      "rationale": "False statements undermine the integrity of regulatory processes and can corrupt the enforcement record. The increased penalty reflects the fundamental importance of honest dealing with the Commissioner."
+    },
+    {
+      "section": "s136",
+      "sectionTitle": "General Penalty",
+      "before": {
+        "fine": "RM100,000",
+        "imprisonment": null,
+        "or_both": false
+      },
+      "after": {
+        "fine": "RM250,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "150%",
+        "imprisonment": "New (previously no imprisonment)"
+      },
+      "rationale": "The introduction of imprisonment for general offences, where none existed before, signals a fundamental shift in the legislature's approach to PDPA violations. Even technical breaches can now attract custodial sentences where circumstances warrant."
+    },
+    {
+      "section": "s138",
+      "sectionTitle": "Continuing Offence Daily Fine",
+      "before": {
+        "fine": "RM1,000 per day",
+        "imprisonment": null
+      },
+      "after": {
+        "fine": "RM5,000 per day",
+        "imprisonment": null
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "400%"
+      },
+      "rationale": "The five-fold increase in the daily fine for continuing offences is designed to create a strong financial incentive for data users to remediate violations promptly rather than accepting a small ongoing cost as a business expense."
+    },
+    {
+      "section": "s44",
+      "sectionTitle": "Contravention of Data Subject Rights",
+      "before": {
+        "fine": "RM100,000",
+        "imprisonment": "1 year",
+        "or_both": true
+      },
+      "after": {
+        "fine": "RM500,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "changeType": "enhanced",
+      "percentageIncrease": {
+        "fine": "400%",
+        "imprisonment": "100%"
+      },
+      "rationale": "Strengthening the penalties for violation of data subject rights recognizes that these rights are fundamental to the value of the PDPA. Data subjects must be able to effectively exercise their access, correction, and opt-out rights."
+    }
+  ],
+  "newOffences": [
+    {
+      "section": "s135A",
+      "sectionTitle": "Unauthorized Sale of Personal Data",
+      "offence": "Selling, offering to sell, or procuring for sale personal data in contravention of the Act",
+      "penalty": {
+        "fine": "RM1,000,000",
+        "imprisonment": "3 years",
+        "or_both": true
+      },
+      "rationale": "The commercial trade in personal data without the knowledge or consent of data subjects is a growing concern. Section 135A creates a specific offence targeting the data brokerage economy where individuals' data is bought and sold without their awareness or benefit. The high maximum fine and imprisonment term reflect the serious potential for harm.",
+      "compoundable": false
+    },
+    {
+      "section": "s143A(5)",
+      "sectionTitle": "Failure to Notify Data Breach",
+      "offence": "Failure to notify the Commissioner within 72 hours or data subjects within 7 days of a notifiable data breach",
+      "penalty": {
+        "fine": "RM250,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "rationale": "Mandatory data breach notification is a cornerstone of modern data protection law. Timely notification enables affected individuals to take protective action and allows the Commissioner to oversee the data user's response. Failure to notify denies data subjects the opportunity to protect themselves.",
+      "compoundable": true
+    },
+    {
+      "section": "s129B(5)",
+      "sectionTitle": "Failure to Appoint Data Protection Officer",
+      "offence": "Failure by a qualifying data user to appoint a DPO or to register the appointed DPO with the Commissioner",
+      "penalty": {
+        "fine": "RM250,000",
+        "imprisonment": "2 years",
+        "or_both": true
+      },
+      "rationale": "The DPO is a key accountability mechanism. Data users processing large volumes of data or sensitive personal data are required to have a dedicated officer responsible for ensuring PDPA compliance. The offence ensures this requirement has teeth.",
+      "compoundable": true
+    },
+    {
+      "section": "s133A",
+      "sectionTitle": "Body Corporate Officer Liability",
+      "offence": "Individual officers of a body corporate who consent, connive, or negligently contribute to a PDPA offence by the body corporate",
+      "penalty": {
+        "fine": "Same as body corporate",
+        "imprisonment": "Same as body corporate",
+        "or_both": true
+      },
+      "rationale": "Individual accountability is essential to effective corporate governance of data protection. The provision pierces the corporate veil to hold responsible directors, CEOs, and other senior officers personally liable where they are at fault for the organization's PDPA violations.",
+      "compoundable": false
+    }
+  ],
+  "overallImpact": {
+    "averageFineIncrease": "175%",
+    "numberOfNewOffences": 4,
+    "newImposedImprisonment": ["s136 (general penalty) — previously fine only"],
+    "keyTheme": "The 2024 amendments transform the PDPA penalty regime from one focused primarily on fines for regulatory breaches to a comprehensive criminal liability framework with significant imprisonment terms and individual officer accountability. The new offences targeting data breaches, unauthorized sales, and DPO non-compliance reflect Malaysia's alignment with global data protection norms."
+  }
+}

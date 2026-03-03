@@ -1,0 +1,104 @@
+{
+  "id": "compounding-of-offences-2016",
+  "title": "Personal Data Protection (Compounding of Offences) Regulations 2016",
+  "type": "regulations",
+  "reference": "P.U.(A) 28/2016",
+  "gazetteDate": "2016-01-28",
+  "effectiveDate": "2016-01-29",
+  "issuedBy": "Minister charged with responsibility for Personal Data Protection",
+  "enablingSection": "s139",
+  "parentAct": "Act 709",
+  "summary": "These Regulations establish the framework for compounding (settling out of court) offences under the Personal Data Protection Act 2010. Compounding allows the Commissioner to offer a settlement to offenders in lieu of prosecution, subject to payment of a compound amount. Compounding is available only for specified offences listed in the Schedule and is not available for serious offences such as obstruction, false statements, or the unauthorized sale of personal data. Compounding does not constitute a criminal conviction.",
+  "provisions": [
+    {
+      "id": "compound-1",
+      "regulation": "reg1",
+      "title": "Citation and Commencement",
+      "content": "These Regulations may be cited as the Personal Data Protection (Compounding of Offences) Regulations 2016 and shall come into force on 29 January 2016.",
+      "requirements": []
+    },
+    {
+      "id": "compound-2",
+      "regulation": "reg2",
+      "title": "Compoundable Offences",
+      "content": "The offences specified in the Schedule to these Regulations are designated as compoundable offences. The Commissioner or any public officer authorized in writing by the Commissioner may, with the consent of the Public Prosecutor, offer to compound a compoundable offence by collecting a sum not exceeding 50% of the maximum fine to which the offender would be liable on conviction. The power to compound is discretionary and may be refused where the circumstances of the offence are serious or where the offender has a history of repeated violations.",
+      "requirements": [
+        "Compounding requires consent of the Public Prosecutor",
+        "Compounding is at the Commissioner's discretion — it is not a right of the offender",
+        "The compound amount must not exceed 50% of the maximum fine for the offence",
+        "Prior compounding of the same offence may be taken into account in assessing whether to compound again"
+      ]
+    },
+    {
+      "id": "compound-3",
+      "regulation": "reg3",
+      "title": "Procedure for Compounding",
+      "content": "Where the Commissioner proposes to compound an offence, the Commissioner shall: (a) serve a written offer to compound on the offender specifying the offence, the proposed compound amount, and the deadline for acceptance; (b) give the offender at least 14 days to accept or reject the offer; (c) where the offender accepts, issue a demand for payment of the compound amount within 30 days; and (d) where the compound amount is paid within the specified period, not institute or continue any proceedings for the offence and issue a certificate of compounding. Where the offender rejects the offer or fails to pay within the specified period, the Commissioner may proceed with prosecution.",
+      "requirements": [
+        "Written offer is mandatory — verbal compounding is not permitted",
+        "Acceptance of the compound offer is voluntary",
+        "Once a compound amount is paid and a certificate issued, the matter is closed",
+        "A certificate of compounding is not an admission of guilt and cannot be used as evidence in civil proceedings"
+      ]
+    },
+    {
+      "id": "compound-4",
+      "regulation": "reg4",
+      "title": "Compound Amount Determination",
+      "content": "In determining the compound amount within the maximum of 50% of the maximum fine, the Commissioner shall have regard to: (a) the nature, gravity, and duration of the offence; (b) the harm or potential harm caused to data subjects; (c) the degree of cooperation with the Commissioner's investigation; (d) remedial action taken by the offender; (e) the financial capacity of the offender; (f) whether the offence was an isolated incident or part of a pattern; and (g) any previous compoundings or convictions for PDPA offences.",
+      "requirements": [
+        "Compound amount must be proportionate to the seriousness of the offence",
+        "Cooperation and voluntary remediation are mitigating factors",
+        "Repeat offenders may be offered a higher compound amount or refused compounding",
+        "The Commissioner must document the basis for the compound amount offered"
+      ]
+    },
+    {
+      "id": "compound-5",
+      "regulation": "reg5",
+      "title": "Payment of Compound Amount",
+      "content": "The compound amount must be paid to the Commissioner within 30 days of the acceptance of the compound offer, or within such extended period as the Commissioner may allow in writing. Payment must be made by electronic transfer, banker's draft, or such other method as the Commissioner may prescribe. Compound amounts paid are deposited into the Personal Data Protection Fund.",
+      "requirements": [
+        "Payment deadline is 30 days from acceptance",
+        "Extension of time must be requested in writing before the deadline",
+        "Failure to pay within the specified period voids the compound offer",
+        "Instalments are not permitted unless specifically agreed by the Commissioner"
+      ]
+    },
+    {
+      "id": "compound-6",
+      "regulation": "Schedule",
+      "title": "Schedule — Compoundable Offences and Maximum Compound Amounts",
+      "content": "The following offences are compoundable under these Regulations, with the compound amount not exceeding 50% of the maximum fine prescribed for each offence: (1) Contravention of any Personal Data Protection Principle (s5(3)) — 50% of RM1,000,000 = RM500,000 maximum compound; (2) Processing without registration (s5(2)) — 50% of RM1,000,000 = RM500,000 maximum compound; (3) Unauthorized disclosure by data user (s132) — 50% of RM1,000,000 = RM500,000 maximum compound; (4) Failure to notify data breach (s143A(5)) — 50% of RM250,000 = RM125,000 maximum compound; (5) Failure to appoint DPO (s129B(5)) — 50% of RM250,000 = RM125,000 maximum compound; (6) Contravention of data subject rights (s44) — 50% of RM500,000 = RM250,000 maximum compound; (7) Cross-border transfer violations (s129A) — 50% of RM1,000,000 = RM500,000 maximum compound; (8) General penalty offences (s136) — 50% of RM250,000 = RM125,000 maximum compound.",
+      "requirements": [
+        "Non-compoundable offences (obstruction, false statements, unauthorized sale of personal data, failure to comply with enforcement notice) must be prosecuted",
+        "Compounding does not prevent the Commissioner from issuing an enforcement notice requiring remediation",
+        "Data users who are compounded retain their PDPA obligations and must remediate the underlying issue"
+      ],
+      "nonCompoundableOffences": [
+        "s131 — Obstruction of Commissioner or officers",
+        "s134 — False statements and misleading information",
+        "s135A — Unauthorized sale of personal data",
+        "s133 — Failure to comply with enforcement notice",
+        "s130 — Unauthorized disclosure by Commissioner or officers"
+      ]
+    },
+    {
+      "id": "compound-7",
+      "regulation": "reg6",
+      "title": "Public Register of Compounds",
+      "content": "The Commissioner shall maintain a public register of all compounds issued under these Regulations. The register shall be published on the Commissioner's website and shall include: (a) the name of the compounded data user (for body corporates); (b) the offence compounded; (c) the compound amount paid; and (d) the date of compounding. The names of natural persons who have been compounded are not published in the public register to protect their privacy.",
+      "requirements": [
+        "The public register is accessible to all members of the public",
+        "Register must be updated within 14 days of each compounding",
+        "Natural persons' names are protected from publication",
+        "Body corporates' names are published to enable accountability"
+      ]
+    }
+  ],
+  "keywords": [
+    "compounding", "compound offences", "settlement", "out of court", "maximum fine",
+    "50% of maximum fine", "Public Prosecutor", "enforcement", "certificate of compounding",
+    "personal data protection fund", "non-compoundable offences"
+  ]
+}
