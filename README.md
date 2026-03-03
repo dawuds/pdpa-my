@@ -8,10 +8,10 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 |-------|-----------|-------------|-------|
 | 1 | `provisions/` | Act sections — verbatim text + plain-language translation | 151 sections |
 | 2 | `principles/` | Deep dive into the 7 PDPA Principles | 7 principles |
-| 3 | `requirements/` | Three-perspective obligation breakdowns | 115 requirements across 19 sections |
+| 3 | `requirements/` | Three-perspective obligation breakdowns with source tracking | ~277 requirements across 21 sections |
 | 4 | `evidence/` | Compliance evidence guidance | 40 evidence items across 19 sections |
 | 5 | `artifacts/` | Compliance document inventory | 60 artifacts in 7 categories |
-| 6 | `controls/` | Common controls with framework mappings | 49 controls across 10 domains |
+| 6 | `controls/` | Common controls with framework mappings + supplement links | 49 controls across 10 domains |
 | 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 19 offences in 8 categories |
 | 8 | `cross-references/` | Act ↔ regulations, guidelines, codes, GDPR, ISO 27701 | 31 framework mappings |
 | — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 22 instruments |
@@ -135,6 +135,53 @@ pdpa-my/
         └── utilities-water.json
 ```
 
+## Compliance Framework Architecture
+
+The PDPA compliance database implements a **compliance chain** that traces requirements from their authoritative sources through to implementable controls and auditable evidence.
+
+### Source Hierarchy
+
+```
+Tier 1: Act 709 ─────────────── Primary legislation (151 sections)        → sourceType: "act"
+Tier 2: Standards 2015 ──────── Mandatory technical minimums (s9, s10, s11) → sourceType: "standard"
+Tier 3: Guidelines ──────────── Procedural guidance (DBN, DPO, CBPDT, DPN) → sourceType: "guideline"
+Tier 4: General Code 2022 ───── Implementation baseline (all sectors)      → sourceType: "general-code"
+Tier 5: Sector Codes (×7) ───── Sector-specific tightening/extensions      → sourceType: "sector-code"
+```
+
+Each tier adds increasingly specific requirements. Sector codes don't replace higher tiers — they tighten or extend the base obligations for specific industries.
+
+### Compliance Chain
+
+```
+Sources (Act + Standards + Guidelines + General Code + Sector Codes)
+  → Requirements (~277 obligations with source tracking)
+    → Controls (49 controls with supplement links + sector variants)
+      → Evidence (40 evidence items)
+        → Artifacts (60 compliance documents)
+```
+
+### Source Types
+
+| `sourceType` | Count | Example ID | Description |
+|-------------|-------|------------|-------------|
+| `act` | 115 | `s9-T2` | Direct statutory obligation from Act 709 |
+| `standard` | ~19 | `s9-ST1` | Mandatory minimum from Standards 2015 |
+| `guideline` | ~29 | `s143A-GL1` | Procedural requirement from JPDP Guidelines |
+| `general-code` | ~19 | `s6-CG1` | Implementation requirement from General Code 2022 |
+| `sector-code` | ~25 | `s9-CS-BNK1` | Sector-specific tightening from Sector Codes |
+
+### The `tightens` Chain
+
+Requirements from lower tiers may **tighten** requirements from higher tiers. The `tightens` field creates a chain showing how sector-specific requirements build on general ones:
+
+```
+s9-T1 (Act: "implement security measures")
+  ← s9-ST1 (Standard: "unique credentials, RBAC, MFA for 1K+ subjects")
+    ← s9-CS-BNK1 (Banking: "MFA mandatory per BNM RMiT, PCI DSS")
+    ← s9-CS-HLT1 (Healthcare: "AES-256 for EHR, TLS 1.2+, 2FA, break-glass")
+```
+
 ## Data Schemas
 
 ### Layer 1: Provisions
@@ -200,12 +247,16 @@ Each requirement item:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `id` | string | e.g. `"s6-L1"`, `"s7-T2"` |
+| `id` | string | e.g. `"s6-L1"`, `"s7-T2"`, `"s9-ST1"`, `"s143A-GL3"`, `"s6-CG1"`, `"s9-CS-BNK1"` |
 | `requirement` | string | What must be done |
 | `rationale` | string | Why it matters |
 | `owner` | string | Responsible role |
 | `frequency` | string | Review/execution frequency |
 | `priority` | string | `Critical` \| `High` \| `Medium` |
+| `source` | string | Source provision ID (e.g. `"s9"`, `"esec-2"`, `"dbn-7"`, `"cop-gen-s3"`, `"cop-bank-s6"`) |
+| `sourceType` | string | `"act"` \| `"standard"` \| `"guideline"` \| `"general-code"` \| `"sector-code"` |
+| `sector` | string\|null | Sector name if sector-specific (e.g. `"banking"`, `"healthcare"`), else `null` |
+| `tightens` | string\|null | ID of the requirement this one tightens, else `null` |
 
 ### Layer 4: Evidence
 
@@ -271,6 +322,10 @@ Each evidence item:
 | `iso27701` | string[] | ISO 27701 clause references |
 | `gdpr` | string[] | GDPR article references |
 | `apecCBPR` | string[] | APEC CBPR principle references |
+| `relatedStandards` | string[] | Related standard IDs (e.g. `"pdpa-standard-electronic-security-2015"`) |
+| `relatedGuidelines` | string[] | Related guideline IDs (e.g. `"dbn-guideline-2025"`) |
+| `relatedCodes` | string[] | Related code of practice IDs (e.g. `"general-cop-2022"`, `"cop-banking"`) |
+| `sectorVariants` | object | Keyed by sector (`"banking"`, `"healthcare"`, etc.), each with `additionalRequirements` and `relatedProvision` |
 
 ### Layer 7: Penalties
 
@@ -362,7 +417,8 @@ Open `index.html` in a browser to interactively explore:
 - **Requirements** — Three-perspective obligation breakdowns (legal, technical, governance)
 - **Evidence** — Compliance readiness guidance with auditor focus and audit tips
 - **Artifacts** — 60 compliance documents across 7 categories with provision mappings
-- **Controls** — 49 controls across 10 domains with maturity levels and framework mappings
+- **Framework** — Compliance chain flow, 5-tier source hierarchy, worked s9 trace example, 8-layer summary grid
+- **Controls** — 49 controls across 10 domains with maturity levels, supplement links, and sector variants
 - **Penalties** — 19 offences with original vs amended penalties, compounding info
 - **Cross-References** — Section → regulations, guidelines, codes, standards; GDPR/ISO 27701/APEC CBPR mappings
 - **Supplements** — Browse 22 subsidiary instruments (regulations, guidelines, standards, codes)

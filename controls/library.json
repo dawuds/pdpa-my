@@ -7,7 +7,10 @@
       "type": "preventive",
       "layer": "process",
       "description": "Implement systematic consent collection across all data collection channels ensuring compliance with s6 and s7 requirements. Consent must be freely given, specific, informed, and unambiguous per the PDPA s2 definition, with separate consent obtained for each distinct processing purpose",
-      "sections": ["s6", "s7"],
+      "sections": [
+        "s6",
+        "s7"
+      ],
       "keyActivities": [
         "Design consent forms and flows incorporating all s7 notice elements",
         "Implement granular, purpose-specific consent checkboxes with no pre-ticking",
@@ -20,10 +23,41 @@
         "mature": "Digital consent forms with purpose-specific consent fields; automated timestamp and version recording; consent records stored in CRM or consent management system; annual consent form review against current notice",
         "advanced": "Centralised consent management platform integrated across all collection channels (web, app, physical, call centre) with real-time consent status propagation, automated preference propagation to downstream systems, consent analytics dashboard, and automated consent expiry management"
       },
-      "toolExamples": ["OneTrust Consent Management", "TrustArc Consent Manager", "Securiti.ai", "Usercentrics", "Custom CMP integrated with CRM"],
-      "iso27701": ["A.7.2.3", "A.7.2.4"],
-      "gdpr": ["Article 6(1)(a)", "Article 7"],
-      "apecCBPR": ["Choice Principle", "Notice Principle"]
+      "toolExamples": [
+        "OneTrust Consent Management",
+        "TrustArc Consent Manager",
+        "Securiti.ai",
+        "Usercentrics",
+        "Custom CMP integrated with CRM"
+      ],
+      "iso27701": [
+        "A.7.2.3",
+        "A.7.2.4"
+      ],
+      "gdpr": [
+        "Article 6(1)(a)",
+        "Article 7"
+      ],
+      "apecCBPR": [
+        "Choice Principle",
+        "Notice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "healthcare": {
+          "additionalRequirements": "Granular patient consent: separate for treatment, billing, insurance, research; emergency vital interests exception documented",
+          "relatedProvision": "cop-health-s2"
+        }
+      }
     },
     {
       "slug": "consent-record-keeping",
@@ -32,7 +66,10 @@
       "type": "detective",
       "layer": "process",
       "description": "Maintain auditable records of all consents obtained, including the content of the notice presented at the time of consent, the specific options selected by the data subject, the collection timestamp and channel, and the complete consent lifecycle including any subsequent withdrawal",
-      "sections": ["s6", "s7"],
+      "sections": [
+        "s6",
+        "s7"
+      ],
       "keyActivities": [
         "Store consent records linked to data subject identity with tamper-evident audit trail",
         "Retain the exact version of the notice or consent form presented at time of consent",
@@ -45,10 +82,36 @@
         "mature": "Digital consent records in CRM or dedicated system; searchable by data subject; linked to processing activities; consent record accessible for DSAR responses",
         "advanced": "Immutable consent audit log with cryptographic timestamping; automated consent evidence retrieval for DSAR and regulatory requests; integration with ROPA showing consent coverage per processing activity; automated alerts for consent approaching expiry"
       },
-      "toolExamples": ["OneTrust Consent and Preference Management", "Salesforce Privacy Centre", "TrustArc DataFlow Manager", "Custom database with audit logging"],
-      "iso27701": ["A.7.2.3", "A.7.2.4", "A.7.3.2"],
-      "gdpr": ["Article 7(1)", "Recital 42"],
-      "apecCBPR": ["Accountability Principle", "Notice Principle"]
+      "toolExamples": [
+        "OneTrust Consent and Preference Management",
+        "Salesforce Privacy Centre",
+        "TrustArc DataFlow Manager",
+        "Custom database with audit logging"
+      ],
+      "iso27701": [
+        "A.7.2.3",
+        "A.7.2.4",
+        "A.7.3.2"
+      ],
+      "gdpr": [
+        "Article 7(1)",
+        "Recital 42"
+      ],
+      "apecCBPR": [
+        "Accountability Principle",
+        "Notice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "consent-withdrawal-management",
@@ -57,7 +120,11 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement mechanisms for data subjects to withdraw consent as easily as it was given under PDPA s38, and ensure that upon withdrawal all downstream processing ceases and processors and third-party recipients are notified where required",
-      "sections": ["s6", "s38", "s43"],
+      "sections": [
+        "s6",
+        "s38",
+        "s43"
+      ],
       "keyActivities": [
         "Provide withdrawal mechanisms on every channel used for consent collection",
         "Confirm withdrawal to data subject within a reasonable period (within 14 days)",
@@ -70,10 +137,29 @@
         "mature": "Online withdrawal form or account preference centre; automated consent register update; workflow-based notification to processors; completion tracking",
         "advanced": "Real-time withdrawal propagation across all systems via API integration; automated processor notification; confirmation to data subject on completion; withdrawal analytics to identify systemic withdrawal causes"
       },
-      "toolExamples": ["Preference centre within CMP", "CRM withdrawal workflow", "OneTrust Universal Consent and Preference Management"],
-      "iso27701": ["A.7.3.4", "A.7.3.5"],
-      "gdpr": ["Article 7(3)"],
-      "apecCBPR": ["Choice Principle"]
+      "toolExamples": [
+        "Preference centre within CMP",
+        "CRM withdrawal workflow",
+        "OneTrust Universal Consent and Preference Management"
+      ],
+      "iso27701": [
+        "A.7.3.4",
+        "A.7.3.5"
+      ],
+      "gdpr": [
+        "Article 7(3)"
+      ],
+      "apecCBPR": [
+        "Choice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare"
+      ],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "sensitive-data-explicit-consent",
@@ -82,7 +168,10 @@
       "type": "preventive",
       "layer": "process",
       "description": "Apply heightened consent controls for the collection and processing of sensitive personal data under PDPA s29 (health data, political opinions, religious beliefs, criminal offences, biometric data), requiring explicit and specific consent beyond the standard consent requirement",
-      "sections": ["s6", "s29"],
+      "sections": [
+        "s6",
+        "s29"
+      ],
       "keyActivities": [
         "Identify all processing activities involving sensitive personal data under s29 categories",
         "Design explicit consent mechanisms for sensitive data — standalone, clearly highlighted, cannot be inferred from general consent",
@@ -95,10 +184,47 @@
         "mature": "Separate consent fields flagged in system with sensitive data indicator; access to sensitive data fields restricted to authorised roles; consent records for sensitive data retained separately",
         "advanced": "Automated sensitive data detection (DLP) preventing capture without consent token; encrypted storage of sensitive data with separate access controls; real-time monitoring of sensitive data access; automated DPIA trigger for sensitive data processing activities"
       },
-      "toolExamples": ["DLP tools (Microsoft Purview, Symantec DLP)", "Consent management with data classification integration", "Vault or key management for sensitive data encryption"],
-      "iso27701": ["A.7.2.3", "A.7.4.1"],
-      "gdpr": ["Article 9"],
-      "apecCBPR": ["Preventing Harm Principle"]
+      "toolExamples": [
+        "DLP tools (Microsoft Purview, Symantec DLP)",
+        "Consent management with data classification integration",
+        "Vault or key management for sensitive data encryption"
+      ],
+      "iso27701": [
+        "A.7.2.3",
+        "A.7.4.1"
+      ],
+      "gdpr": [
+        "Article 9"
+      ],
+      "apecCBPR": [
+        "Preventing Harm Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-insurance-takaful"
+      ],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "healthcare": {
+          "additionalRequirements": "All patient data is sensitive by definition; research consent specific per project; ethics committee approval prerequisite",
+          "relatedProvision": "cop-health-s7"
+        },
+        "insurance": {
+          "additionalRequirements": "Underwriting health data requires enhanced protections; genetic data access limited to named officers; biometric auth data not cross-used for underwriting",
+          "relatedProvision": "cop-ins-s7"
+        },
+        "aviation": {
+          "additionalRequirements": "Biometric data requires explicit consent except government-mandated immigration; DPIA before biometric system deployment",
+          "relatedProvision": "cop-avi-s3"
+        },
+        "communications": {
+          "additionalRequirements": "SIM registration biometric data treated as high-risk; location data consent specific per purpose",
+          "relatedProvision": "cop-comms-s2"
+        }
+      }
     },
     {
       "slug": "consent-validity-assessment",
@@ -107,7 +233,10 @@
       "type": "detective",
       "layer": "process",
       "description": "Periodically assess existing consent records against current PDPA requirements to identify deficient or invalid consents (e.g., pre-ticked boxes, bundled consents, consents obtained under legacy practices) and implement remediation including re-consent campaigns where necessary",
-      "sections": ["s6", "s7"],
+      "sections": [
+        "s6",
+        "s7"
+      ],
       "keyActivities": [
         "Conduct annual audit of consent mechanisms against current PDPA requirements and guidance",
         "Identify consent records that do not meet current validity standards",
@@ -120,10 +249,34 @@
         "mature": "Annual consent validity review against regulatory guidance; targeted re-consent campaigns by email with tracking of responses; documentation of assessment findings",
         "advanced": "Automated consent validity scoring against configurable rules; continuous monitoring of regulatory guidance changes; automated re-consent workflow with fallback to consent withdrawal if no response received; board reporting on consent validity metrics"
       },
-      "toolExamples": ["OneTrust Consent Audit", "TrustArc consent assessment tools", "Internal audit workpaper templates"],
-      "iso27701": ["A.7.2.3", "A.7.2.4"],
-      "gdpr": ["Article 7(1)", "WP29 Consent Guidelines"],
-      "apecCBPR": ["Notice Principle", "Choice Principle"]
+      "toolExamples": [
+        "OneTrust Consent Audit",
+        "TrustArc consent assessment tools",
+        "Internal audit workpaper templates"
+      ],
+      "iso27701": [
+        "A.7.2.3",
+        "A.7.2.4"
+      ],
+      "gdpr": [
+        "Article 7(1)",
+        "WP29 Consent Guidelines"
+      ],
+      "apecCBPR": [
+        "Notice Principle",
+        "Choice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     }
   ],
   "data-subject-rights": [
@@ -134,7 +287,12 @@
       "type": "operational",
       "layer": "process",
       "description": "Operate a systematic process for receiving data subject rights requests through accessible channels, authenticating the identity of requesters before processing, and logging all requests with statutory deadline tracking in compliance with PDPA s30 and related sections",
-      "sections": ["s30", "s34", "s38", "s43"],
+      "sections": [
+        "s30",
+        "s34",
+        "s38",
+        "s43"
+      ],
       "keyActivities": [
         "Provide accessible request channels (web form, email, post, in-person) clearly communicated in privacy notice",
         "Acknowledge all requests within 3 business days with unique reference number",
@@ -147,10 +305,28 @@
         "mature": "Dedicated DSAR web portal with structured form; automated acknowledgement and reference generation; identity verification via government ID upload; DSAR case management system with deadline alerts",
         "advanced": "Omnichannel DSAR intake with automated routing; AI-assisted identity proofing with liveness detection for digital channel; real-time DSAR dashboard for DPO; automated statutory deadline escalation to management"
       },
-      "toolExamples": ["OneTrust DSAR Management", "TrustArc Data Rights Management", "Osano DSAR", "Zendesk with DSAR workflow", "Custom case management system"],
-      "iso27701": ["A.7.3.2", "A.7.3.3"],
-      "gdpr": ["Article 12", "Article 15"],
-      "apecCBPR": ["Access and Correction Principle"]
+      "toolExamples": [
+        "OneTrust DSAR Management",
+        "TrustArc Data Rights Management",
+        "Osano DSAR",
+        "Zendesk with DSAR workflow",
+        "Custom case management system"
+      ],
+      "iso27701": [
+        "A.7.3.2",
+        "A.7.3.3"
+      ],
+      "gdpr": [
+        "Article 12",
+        "Article 15"
+      ],
+      "apecCBPR": [
+        "Access and Correction Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "access-request-fulfillment",
@@ -159,7 +335,12 @@
       "type": "operational",
       "layer": "process",
       "description": "Systematically search, compile, review, and provide data subjects with access to their personal data held by the organization within the 21-day statutory period under PDPA s30, applying appropriate exemptions and redactions where permissible",
-      "sections": ["s30", "s31", "s32", "s33"],
+      "sections": [
+        "s30",
+        "s31",
+        "s32",
+        "s33"
+      ],
       "keyActivities": [
         "Execute a comprehensive search across all identified personal data systems against the ROPA",
         "Compile search results and remove third-party personal data and information subject to legal privilege",
@@ -172,10 +353,25 @@
         "mature": "Structured search playbook covering all ROPA systems; redaction tool for third-party data; response template library; fee assessment and waiver procedure; documented exemption analysis",
         "advanced": "Automated personal data discovery and extraction from integrated systems; automated third-party data redaction; secure data subject portal for response delivery; complete audit trail of search and compilation steps; metrics on response quality and timeliness"
       },
-      "toolExamples": ["OneTrust DSAR with data discovery integration", "Spirion for personal data search", "Bigid data discovery", "Adobe Acrobat for redaction"],
-      "iso27701": ["A.7.3.2"],
-      "gdpr": ["Article 15"],
-      "apecCBPR": ["Access and Correction Principle"]
+      "toolExamples": [
+        "OneTrust DSAR with data discovery integration",
+        "Spirion for personal data search",
+        "Bigid data discovery",
+        "Adobe Acrobat for redaction"
+      ],
+      "iso27701": [
+        "A.7.3.2"
+      ],
+      "gdpr": [
+        "Article 15"
+      ],
+      "apecCBPR": [
+        "Access and Correction Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "correction-request-handling",
@@ -184,7 +380,11 @@
       "type": "operational",
       "layer": "process",
       "description": "Process and fulfil data subject correction requests under PDPA s34 within statutory timelines, amending inaccurate or incomplete personal data across relevant systems, notifying downstream recipients, and communicating outcomes to the data subject",
-      "sections": ["s34", "s35", "s36"],
+      "sections": [
+        "s34",
+        "s35",
+        "s36"
+      ],
       "keyActivities": [
         "Accept and log correction requests with clear evidentiary requirements communicated to the data subject",
         "Assess accuracy of existing data against evidence provided by data subject",
@@ -197,10 +397,24 @@
         "mature": "Correction request tracked in DSAR system; documented accuracy assessment; systematic notification list for downstream recipients; standard response templates; correction log maintained",
         "advanced": "Automated correction propagation to integrated systems via API; master data management integration for single source of truth; automated notification to processors and recipients; data subject portal showing correction status and completion"
       },
-      "toolExamples": ["OneTrust DSAR", "Master Data Management platforms (Informatica, SAP MDM)", "CRM with correction workflow"],
-      "iso27701": ["A.7.3.3"],
-      "gdpr": ["Article 16"],
-      "apecCBPR": ["Access and Correction Principle"]
+      "toolExamples": [
+        "OneTrust DSAR",
+        "Master Data Management platforms (Informatica, SAP MDM)",
+        "CRM with correction workflow"
+      ],
+      "iso27701": [
+        "A.7.3.3"
+      ],
+      "gdpr": [
+        "Article 16"
+      ],
+      "apecCBPR": [
+        "Access and Correction Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "direct-marketing-opt-out",
@@ -209,7 +423,10 @@
       "type": "operational",
       "layer": "process",
       "description": "Operate a systematic mechanism for data subjects to opt out of direct marketing communications under PDPA s43, ensuring opt-outs are processed promptly, suppression lists are maintained and applied across all marketing channels, and do-not-contact preferences are respected",
-      "sections": ["s40", "s43"],
+      "sections": [
+        "s40",
+        "s43"
+      ],
       "keyActivities": [
         "Include a clear, easy-to-use opt-out mechanism in every direct marketing communication",
         "Process opt-out requests within 10 business days and suppress all marketing to opted-out contacts",
@@ -222,10 +439,25 @@
         "mature": "Automated unsubscribe processing via ESP; central suppression list applied in CRM; marketing platform checks against suppression before each campaign; DNC list checked against MCMC registry",
         "advanced": "Universal preference centre managing opt-outs across all channels (email, SMS, post, calls); real-time suppression propagation to all marketing systems; automated audit of suppression list application; analytics on opt-out rates by channel and campaign"
       },
-      "toolExamples": ["Mailchimp / Salesforce Marketing Cloud unsubscribe management", "HubSpot GDPR/consent tools", "Preference centre platforms", "MCMC Do Not Call Registry integration"],
-      "iso27701": ["A.7.3.4"],
-      "gdpr": ["Article 21"],
-      "apecCBPR": ["Choice Principle"]
+      "toolExamples": [
+        "Mailchimp / Salesforce Marketing Cloud unsubscribe management",
+        "HubSpot GDPR/consent tools",
+        "Preference centre platforms",
+        "MCMC Do Not Call Registry integration"
+      ],
+      "iso27701": [
+        "A.7.3.4"
+      ],
+      "gdpr": [
+        "Article 21"
+      ],
+      "apecCBPR": [
+        "Choice Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "dsar-deadline-management",
@@ -234,7 +466,11 @@
       "type": "detective",
       "layer": "process",
       "description": "Monitor and enforce statutory response deadlines for all data subject rights requests, with automated alerts and escalation procedures to ensure the 21-day response period under PDPA s30 and s34 is met consistently, and that extensions are justified and communicated to data subjects",
-      "sections": ["s30", "s34", "s44"],
+      "sections": [
+        "s30",
+        "s34",
+        "s44"
+      ],
       "keyActivities": [
         "Automatically calculate and display statutory deadline (21 calendar days from verified receipt) for each request",
         "Implement tiered alert system at day 10, day 16, and day 20 to responsible handler and DPO",
@@ -247,10 +483,26 @@
         "mature": "DSAR case management system with built-in deadline tracking; automated email alerts to handler and DPO; extension logged with reason code; monthly DSAR performance report",
         "advanced": "Real-time DSAR dashboard with SLA traffic-light status; automated escalation to senior management for at-risk requests; extension workflow requiring DPO approval; quarterly performance reporting to board; benchmarking against industry response times"
       },
-      "toolExamples": ["OneTrust DSAR", "Jira Service Desk with SLA plugin", "ServiceNow with DSAR module", "Custom CRM workflow"],
-      "iso27701": ["A.7.3.2", "A.7.3.3"],
-      "gdpr": ["Article 12(3)"],
-      "apecCBPR": ["Access and Correction Principle"]
+      "toolExamples": [
+        "OneTrust DSAR",
+        "Jira Service Desk with SLA plugin",
+        "ServiceNow with DSAR module",
+        "Custom CRM workflow"
+      ],
+      "iso27701": [
+        "A.7.3.2",
+        "A.7.3.3"
+      ],
+      "gdpr": [
+        "Article 12(3)"
+      ],
+      "apecCBPR": [
+        "Access and Correction Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "rights-awareness-communication",
@@ -259,7 +511,13 @@
       "type": "preventive",
       "layer": "process",
       "description": "Ensure data subjects are clearly informed of their rights under PDPA (access, correction, withdrawal of consent, opt-out from direct marketing) in all privacy notices and at relevant touchpoints, in plain language accessible to the intended audience including in Bahasa Malaysia",
-      "sections": ["s7", "s30", "s34", "s38", "s43"],
+      "sections": [
+        "s7",
+        "s30",
+        "s34",
+        "s38",
+        "s43"
+      ],
       "keyActivities": [
         "Include clear description of all data subject rights in all privacy notices and consent forms",
         "Provide practical instructions for how to exercise each right (contact details, form link, process)",
@@ -272,10 +530,32 @@
         "mature": "Plain-language explanation of rights in all notices; dedicated 'Your Rights' webpage; how-to guide for exercising each right; DPO contact on every communication",
         "advanced": "Interactive rights exercise portal with step-by-step guidance; multilingual support beyond BM/EN; chatbot for rights guidance; accessibility-compliant format (WCAG); data subject feedback mechanism on rights exercise experience"
       },
-      "toolExamples": ["Accessibility-compliant web design tools", "Translation management systems", "Interactive PDF guides", "Chatbot platforms"],
-      "iso27701": ["A.7.3.1"],
-      "gdpr": ["Article 13", "Article 14"],
-      "apecCBPR": ["Notice Principle", "Access and Correction Principle"]
+      "toolExamples": [
+        "Accessibility-compliant web design tools",
+        "Translation management systems",
+        "Interactive PDF guides",
+        "Chatbot platforms"
+      ],
+      "iso27701": [
+        "A.7.3.1"
+      ],
+      "gdpr": [
+        "Article 13",
+        "Article 14"
+      ],
+      "apecCBPR": [
+        "Notice Principle",
+        "Access and Correction Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     }
   ],
   "notice-transparency": [
@@ -286,7 +566,9 @@
       "type": "preventive",
       "layer": "process",
       "description": "Design and maintain privacy notices that contain all elements required by PDPA s7 (Notice and Choice Principle), presented in a clear and intelligible format in both Bahasa Malaysia and English, and updated whenever processing activities materially change",
-      "sections": ["s7"],
+      "sections": [
+        "s7"
+      ],
       "keyActivities": [
         "Audit all data collection touchpoints to identify where s7 notices must be provided",
         "Ensure every notice includes all mandatory elements: controller identity, purposes, consent rights, disclosure categories, transfer information, and data subject rights",
@@ -299,10 +581,32 @@
         "mature": "Purpose-specific or audience-specific notices (employee, customer, website); layered notice approach with short-form and long-form; annual compliance review against s7 checklist; BM and EN versions maintained in sync",
         "advanced": "Dynamic privacy notice generated from ROPA data; automated gap analysis against s7 checklist; version-controlled notice library; notice testing with data subject panels; notice effectiveness metrics (read rates, comprehension scores)"
       },
-      "toolExamples": ["OneTrust Policy Management", "TrustArc Notice Generator", "Legal review management systems", "CMS for privacy notice publication"],
-      "iso27701": ["A.7.2.1", "A.7.2.2"],
-      "gdpr": ["Article 13", "Article 14"],
-      "apecCBPR": ["Notice Principle"]
+      "toolExamples": [
+        "OneTrust Policy Management",
+        "TrustArc Notice Generator",
+        "Legal review management systems",
+        "CMS for privacy notice publication"
+      ],
+      "iso27701": [
+        "A.7.2.1",
+        "A.7.2.2"
+      ],
+      "gdpr": [
+        "Article 13",
+        "Article 14"
+      ],
+      "apecCBPR": [
+        "Notice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "notice-delivery-mechanism",
@@ -311,7 +615,9 @@
       "type": "operational",
       "layer": "process",
       "description": "Ensure data protection notices are delivered to data subjects at or before the time of personal data collection through appropriate channels, and remain accessible throughout the processing relationship, in compliance with PDPA s7",
-      "sections": ["s7"],
+      "sections": [
+        "s7"
+      ],
       "keyActivities": [
         "Map every data collection touchpoint to the applicable notice and verify notice is presented before or at collection",
         "Ensure notice is accessible year-round on the organization's website and physical premises",
@@ -324,10 +630,32 @@
         "mature": "Notice displayed at every digital data collection form; mandatory notice acknowledgement for new customer onboarding; email notification to existing data subjects of material notice changes",
         "advanced": "Just-in-time contextual notices at each data element collection point; notice interaction tracking (opened, clicked, time on page); automated re-notification workflow on material change; A/B testing of notice presentation formats for comprehension"
       },
-      "toolExamples": ["CMP for web-based delivery", "DocuSign for notice acknowledgement", "Email automation platforms", "In-app notification systems"],
-      "iso27701": ["A.7.2.1", "A.7.2.2"],
-      "gdpr": ["Article 13(1)", "Article 13(2)"],
-      "apecCBPR": ["Notice Principle"]
+      "toolExamples": [
+        "CMP for web-based delivery",
+        "DocuSign for notice acknowledgement",
+        "Email automation platforms",
+        "In-app notification systems"
+      ],
+      "iso27701": [
+        "A.7.2.1",
+        "A.7.2.2"
+      ],
+      "gdpr": [
+        "Article 13(1)",
+        "Article 13(2)"
+      ],
+      "apecCBPR": [
+        "Notice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "notice-review-cycle",
@@ -336,7 +664,9 @@
       "type": "detective",
       "layer": "process",
       "description": "Maintain a regular review cycle for all privacy notices and data protection disclosures to ensure they remain accurate, complete, and aligned with current processing activities, regulatory guidance, and organizational changes",
-      "sections": ["s7"],
+      "sections": [
+        "s7"
+      ],
       "keyActivities": [
         "Schedule annual review of all notices with DPO sign-off as minimum",
         "Trigger ad hoc notice review upon: new processing activity, new disclosure category, system change, regulatory guidance update, or organizational restructure",
@@ -349,10 +679,30 @@
         "mature": "Change trigger register linking ROPA changes to notice review obligations; structured review against s7 checklist; management sign-off for material changes; version control with diff between versions",
         "advanced": "Automated ROPA-to-notice gap analysis; continuous monitoring of regulatory guidance and Commissioner issuances for notice implications; notice change impact assessment; automated data subject notification workflow for material changes"
       },
-      "toolExamples": ["OneTrust Policy Management", "Confluence with version control", "GRC platform change management module"],
-      "iso27701": ["A.7.2.1"],
-      "gdpr": ["Article 13", "Recital 61"],
-      "apecCBPR": ["Notice Principle"]
+      "toolExamples": [
+        "OneTrust Policy Management",
+        "Confluence with version control",
+        "GRC platform change management module"
+      ],
+      "iso27701": [
+        "A.7.2.1"
+      ],
+      "gdpr": [
+        "Article 13",
+        "Recital 61"
+      ],
+      "apecCBPR": [
+        "Notice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "cctv-and-monitoring-disclosure",
@@ -361,7 +711,9 @@
       "type": "preventive",
       "layer": "process",
       "description": "Ensure transparent disclosure of workplace and premises surveillance (CCTV, access monitoring, email monitoring, location tracking) through physical notices at monitoring locations and disclosure in applicable privacy notices, in compliance with PDPA s7",
-      "sections": ["s7"],
+      "sections": [
+        "s7"
+      ],
       "keyActivities": [
         "Map all monitoring and surveillance technologies in operation",
         "Install CCTV notices compliant with Commissioner guidance at camera locations and premises entrances",
@@ -374,10 +726,31 @@
         "mature": "CCTV notice at each camera zone and building entrance meeting s7 requirements; employee monitoring section in acceptable use policy; access logs for CCTV footage reviewed quarterly",
         "advanced": "Comprehensive monitoring inventory including all digital monitoring (email, keyloggers, location tracking); layered notice architecture with short-form signage and full notice at reception; annual employee survey on monitoring awareness; DPIA for high-risk monitoring technologies"
       },
-      "toolExamples": ["Signage management systems", "Physical notice templates compliant with Commissioner guidance", "CCTV management software with audit logs"],
-      "iso27701": ["A.7.2.1", "A.6.6.1"],
-      "gdpr": ["Article 13", "Recital 61"],
-      "apecCBPR": ["Notice Principle"]
+      "toolExamples": [
+        "Signage management systems",
+        "Physical notice templates compliant with Commissioner guidance",
+        "CCTV management software with audit logs"
+      ],
+      "iso27701": [
+        "A.7.2.1",
+        "A.6.6.1"
+      ],
+      "gdpr": [
+        "Article 13",
+        "Recital 61"
+      ],
+      "apecCBPR": [
+        "Notice Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-communications"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     }
   ],
   "data-security": [
@@ -388,7 +761,9 @@
       "type": "preventive",
       "layer": "governance",
       "description": "Implement a structured information security risk management process to identify, assess, treat, and monitor risks to personal data, ensuring that security measures are proportionate to the risk of harm as required under PDPA s9 and the Personal Data Protection Standards 2015",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Conduct annual information security risk assessment scoped to personal data processing activities",
         "Maintain a risk register with risk ratings, treatment plans, and risk owners",
@@ -401,10 +776,41 @@
         "mature": "Formal risk assessment methodology (ISO 27001, NIST); risk register maintained in GRC tool; risk treatment plans tracked to completion; management risk reporting; annual penetration testing",
         "advanced": "Continuous risk monitoring with automated vulnerability scanning and threat intelligence integration; risk-based security investment decisions; integration with enterprise risk management; real-time risk posture dashboard; third-party security risk management integrated into vendor onboarding"
       },
-      "toolExamples": ["Qualys", "Rapid7 InsightVM", "ServiceNow GRC", "Archer GRC", "Microsoft Secure Score"],
-      "iso27701": ["A.6.5.2", "A.6.6.1"],
-      "gdpr": ["Article 32(1)"],
-      "apecCBPR": ["Security Principle"]
+      "toolExamples": [
+        "Qualys",
+        "Rapid7 InsightVM",
+        "ServiceNow GRC",
+        "Archer GRC",
+        "Microsoft Secure Score"
+      ],
+      "iso27701": [
+        "A.6.5.2",
+        "A.6.6.1"
+      ],
+      "gdpr": [
+        "Article 32(1)"
+      ],
+      "apecCBPR": [
+        "Security Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "access-control-and-identity-management",
@@ -413,7 +819,10 @@
       "type": "preventive",
       "layer": "technical",
       "description": "Implement role-based access controls and identity management for all systems processing personal data, applying least-privilege and need-to-know principles to minimize the risk of unauthorized access, in compliance with PDPA s9 Security Principle and s12 Access Principle",
-      "sections": ["s9", "s12"],
+      "sections": [
+        "s9",
+        "s12"
+      ],
       "keyActivities": [
         "Assign system access based on job role and minimum necessary data access (least privilege)",
         "Implement multi-factor authentication for all systems processing personal data",
@@ -426,10 +835,55 @@
         "mature": "RBAC implemented across major personal data systems; MFA for remote access and sensitive systems; quarterly access certification reviews; automated de-provisioning integrated with HR system; access logs reviewed by IT security monthly",
         "advanced": "Zero-trust network architecture; conditional access policies based on device compliance and risk score; privileged access management (PAM) for admin accounts with session recording; just-in-time access for sensitive data; continuous access review with automated anomaly detection; UEBA for insider threat detection"
       },
-      "toolExamples": ["Microsoft Entra ID (Azure AD)", "Okta", "CyberArk PAM", "SailPoint IGA", "BeyondTrust"],
-      "iso27701": ["A.8.4.1", "A.8.4.2", "A.6.7.1"],
-      "gdpr": ["Article 32(1)(b)"],
-      "apecCBPR": ["Security Principle"]
+      "toolExamples": [
+        "Microsoft Entra ID (Azure AD)",
+        "Okta",
+        "CyberArk PAM",
+        "SailPoint IGA",
+        "BeyondTrust"
+      ],
+      "iso27701": [
+        "A.8.4.1",
+        "A.8.4.2",
+        "A.6.7.1"
+      ],
+      "gdpr": [
+        "Article 32(1)(b)"
+      ],
+      "apecCBPR": [
+        "Security Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {
+        "banking": {
+          "additionalRequirements": "MFA mandatory for all online/mobile banking access per BNM RMiT; device binding for mobile apps",
+          "relatedProvision": "cop-bank-s4"
+        },
+        "healthcare": {
+          "additionalRequirements": "2FA for EHR access; auto-logout after 10 minutes; emergency break-glass access with post-access review",
+          "relatedProvision": "cop-health-s3"
+        },
+        "communications": {
+          "additionalRequirements": "Privileged access management with MFA and additional logging for network admin accounts",
+          "relatedProvision": "cop-comms-s5"
+        }
+      }
     },
     {
       "slug": "encryption-and-data-protection-in-transit-at-rest",
@@ -438,7 +892,9 @@
       "type": "preventive",
       "layer": "technical",
       "description": "Implement encryption controls to protect personal data during transmission and at rest, reducing the risk of unauthorized disclosure in the event of interception, theft, or unauthorized access, as required by PDPA s9 and the Personal Data Protection Standards 2015",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Encrypt all personal data in transit using TLS 1.2 or higher for all web-facing services",
         "Encrypt personal data at rest in databases, file systems, and backup media using AES-256 or equivalent",
@@ -451,10 +907,62 @@
         "mature": "TLS 1.2+ enforced across all internal and external services; AES-256 encryption at rest for all personal data stores; full-disk encryption on all endpoints; key management procedure documented; email encryption for sensitive communications",
         "advanced": "End-to-end encryption for high-sensitivity data flows; hardware security modules (HSMs) for key management; automated certificate management and renewal; data loss prevention integration to block unencrypted transmission; encryption health monitoring dashboard"
       },
-      "toolExamples": ["AWS KMS / Azure Key Vault", "HashiCorp Vault", "Thales HSM", "Microsoft BitLocker", "Cloudflare / Let's Encrypt for TLS"],
-      "iso27701": ["A.8.4.3", "A.6.6.3"],
-      "gdpr": ["Article 32(1)(a)"],
-      "apecCBPR": ["Security Principle"]
+      "toolExamples": [
+        "AWS KMS / Azure Key Vault",
+        "HashiCorp Vault",
+        "Thales HSM",
+        "Microsoft BitLocker",
+        "Cloudflare / Let's Encrypt for TLS"
+      ],
+      "iso27701": [
+        "A.8.4.3",
+        "A.6.6.3"
+      ],
+      "gdpr": [
+        "Article 32(1)(a)"
+      ],
+      "apecCBPR": [
+        "Security Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {
+        "healthcare": {
+          "additionalRequirements": "AES-256 mandatory for EHR; TLS 1.2+; 2FA; break-glass emergency access with automatic privacy officer alert",
+          "relatedProvision": "cop-health-s3"
+        },
+        "banking": {
+          "additionalRequirements": "MFA mandatory per BNM RMiT; PCI DSS for cardholder data; end-to-end encryption for online/mobile banking transactions",
+          "relatedProvision": "cop-bank-s6"
+        },
+        "communications": {
+          "additionalRequirements": "End-to-end encryption for subscriber data; segregated network segments; SIEM for real-time monitoring",
+          "relatedProvision": "cop-comms-s5"
+        },
+        "insurance": {
+          "additionalRequirements": "All health data encrypted at rest and in transit; role-based access for health/medical data",
+          "relatedProvision": "cop-ins-s5"
+        },
+        "electricity": {
+          "additionalRequirements": "Encrypted smart meter communications; segregated AMI/MDMS networks",
+          "relatedProvision": "cop-elec-s5"
+        }
+      }
     },
     {
       "slug": "vulnerability-and-patch-management",
@@ -463,7 +971,9 @@
       "type": "preventive",
       "layer": "technical",
       "description": "Maintain a systematic process for identifying, assessing, and remediating vulnerabilities in systems that process personal data, ensuring software is kept patched and secure against known exploits that could lead to a personal data breach",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Conduct automated vulnerability scanning on all personal data systems at least monthly",
         "Triage and prioritise vulnerabilities based on CVSS score and exposure to personal data",
@@ -476,10 +986,53 @@
         "mature": "Dedicated vulnerability scanner (Qualys/Rapid7) scanning weekly; patch management platform (SCCM/Intune) with compliance reporting; risk-based patch prioritisation; monthly vulnerability report to IT management; annual penetration test",
         "advanced": "Continuous vulnerability scanning with real-time remediation workflows; integration with SIEM for active exploitation detection; attack surface management platform for internet-exposed assets; penetration testing twice yearly plus after major changes; vulnerability KPIs in board security report"
       },
-      "toolExamples": ["Qualys VMDR", "Rapid7 InsightVM", "Tenable.io", "Microsoft Intune / SCCM", "Nessus"],
-      "iso27701": ["A.6.5.3"],
-      "gdpr": ["Article 32(1)(d)"],
-      "apecCBPR": ["Security Principle"]
+      "toolExamples": [
+        "Qualys VMDR",
+        "Rapid7 InsightVM",
+        "Tenable.io",
+        "Microsoft Intune / SCCM",
+        "Nessus"
+      ],
+      "iso27701": [
+        "A.6.5.3"
+      ],
+      "gdpr": [
+        "Article 32(1)(d)"
+      ],
+      "apecCBPR": [
+        "Security Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {
+        "banking": {
+          "additionalRequirements": "Annual penetration testing for internet-facing financial systems per BNM RMiT; PCI DSS quarterly ASV scans",
+          "relatedProvision": "cop-bank-s6"
+        },
+        "communications": {
+          "additionalRequirements": "Penetration testing twice yearly minimum for subscriber data systems",
+          "relatedProvision": "cop-comms-s5"
+        },
+        "healthcare": {
+          "additionalRequirements": "Annual penetration testing of EHR systems",
+          "relatedProvision": "cop-health-s3"
+        }
+      }
     },
     {
       "slug": "security-monitoring-and-siem",
@@ -488,7 +1041,10 @@
       "type": "detective",
       "layer": "technical",
       "description": "Implement security monitoring capabilities to detect unauthorized access, unusual data access patterns, and potential personal data breaches in real time, enabling rapid response to security events before they escalate into notifiable breaches under PDPA s143A",
-      "sections": ["s9", "s143A"],
+      "sections": [
+        "s9",
+        "s143A"
+      ],
       "keyActivities": [
         "Collect and centralize security logs from all personal data systems into a SIEM platform",
         "Define and tune detection rules for unauthorized access, bulk data export, and anomalous behaviour",
@@ -501,10 +1057,54 @@
         "mature": "SIEM deployed with correlation rules for key threat scenarios; security alerts reviewed by IT security daily; documented incident response procedure; breach notification checklist aligned with s143A",
         "advanced": "Managed SOC with 24/7 monitoring and 15-minute alert response SLA; UEBA for insider threat detection; threat intelligence integration; automated incident triage and severity classification; SOAR platform for automated containment actions; quarterly red team exercises"
       },
-      "toolExamples": ["Microsoft Sentinel", "Splunk", "IBM QRadar", "Elastic SIEM", "Palo Alto Cortex XSOAR"],
-      "iso27701": ["A.6.5.4", "A.6.6.4"],
-      "gdpr": ["Article 32(1)(d)"],
-      "apecCBPR": ["Security Principle"]
+      "toolExamples": [
+        "Microsoft Sentinel",
+        "Splunk",
+        "IBM QRadar",
+        "Elastic SIEM",
+        "Palo Alto Cortex XSOAR"
+      ],
+      "iso27701": [
+        "A.6.5.4",
+        "A.6.6.4"
+      ],
+      "gdpr": [
+        "Article 32(1)(d)"
+      ],
+      "apecCBPR": [
+        "Security Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {
+        "banking": {
+          "additionalRequirements": "Real-time fraud detection and anomaly monitoring for online banking; dual breach reporting to Commissioner and BNM",
+          "relatedProvision": "cop-bank-s6"
+        },
+        "communications": {
+          "additionalRequirements": "SIEM capabilities for real-time subscriber data system access monitoring; threat intelligence sharing with MCMC",
+          "relatedProvision": "cop-comms-s5"
+        },
+        "electricity": {
+          "additionalRequirements": "AMI network attack scenario coverage in IRP; comprehensive audit logging for consumption data access",
+          "relatedProvision": "cop-elec-s5"
+        }
+      }
     },
     {
       "slug": "physical-security-controls",
@@ -513,7 +1113,9 @@
       "type": "preventive",
       "layer": "technical",
       "description": "Implement physical security measures to protect personal data stored or processed in physical locations, including server rooms, offices, and physical record storage areas, preventing unauthorized physical access to systems and documents containing personal data",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Restrict physical access to server rooms and data centres to authorised personnel only using access cards",
         "Secure paper records containing personal data in locked storage with controlled access",
@@ -526,10 +1128,45 @@
         "mature": "Card-access controlled server room with access log; CCTV in server room; clear desk policy enforced; secure destruction for paper personal data; visitor escort policy",
         "advanced": "Biometric access control for server room; CCTV with motion detection and 90-day retention; clean desk automated enforcement via physical security audit; hardware asset tagging and tracking; environmental monitoring (temperature, humidity) for server rooms"
       },
-      "toolExamples": ["Physical access control systems (HID, Lenel)", "CCTV management systems", "Secure document shredders and destruction services", "Environmental monitoring systems"],
-      "iso27701": ["A.8.3.1", "A.8.3.2"],
-      "gdpr": ["Article 32(1)"],
-      "apecCBPR": ["Security Principle"]
+      "toolExamples": [
+        "Physical access control systems (HID, Lenel)",
+        "CCTV management systems",
+        "Secure document shredders and destruction services",
+        "Environmental monitoring systems"
+      ],
+      "iso27701": [
+        "A.8.3.1",
+        "A.8.3.2"
+      ],
+      "gdpr": [
+        "Article 32(1)"
+      ],
+      "apecCBPR": [
+        "Security Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {
+        "aviation": {
+          "additionalRequirements": "CCTV notices at all camera locations; general footage max 30 days; incident footage subject to legal hold",
+          "relatedProvision": "cop-avi-s6"
+        }
+      }
     },
     {
       "slug": "data-loss-prevention",
@@ -538,7 +1175,9 @@
       "type": "preventive",
       "layer": "technical",
       "description": "Deploy data loss prevention technology and controls to detect and prevent unauthorized exfiltration or disclosure of personal data through digital channels including email, cloud storage, removable media, and web uploads, reducing the risk of personal data breaches",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Define DLP policies for personal data categories (name, NRIC, financial data, health data)",
         "Deploy DLP at email gateway, endpoint, and web proxy to detect and block policy violations",
@@ -551,10 +1190,41 @@
         "mature": "DLP deployed at email gateway with content inspection for NRIC, credit card numbers; USB restriction by policy with exception process; quarterly DLP policy review; DLP alerts reviewed by security team",
         "advanced": "Integrated DLP platform covering email, endpoint, web, and cloud; ML-based sensitive data classification integrated with DLP engine; context-aware DLP with risk-based blocking vs. alerting; DLP dashboards showing data flow risk; integration with SIEM for DLP events in security monitoring"
       },
-      "toolExamples": ["Microsoft Purview DLP", "Symantec DLP", "Forcepoint DLP", "Digital Guardian", "Nightfall AI for cloud DLP"],
-      "iso27701": ["A.8.4.3"],
-      "gdpr": ["Article 32(1)(b)"],
-      "apecCBPR": ["Security Principle", "Preventing Harm Principle"]
+      "toolExamples": [
+        "Microsoft Purview DLP",
+        "Symantec DLP",
+        "Forcepoint DLP",
+        "Digital Guardian",
+        "Nightfall AI for cloud DLP"
+      ],
+      "iso27701": [
+        "A.8.4.3"
+      ],
+      "gdpr": [
+        "Article 32(1)(b)"
+      ],
+      "apecCBPR": [
+        "Security Principle",
+        "Preventing Harm Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     }
   ],
   "data-lifecycle": [
@@ -565,7 +1235,10 @@
       "type": "preventive",
       "layer": "process",
       "description": "Ensure that only personal data that is adequate, relevant, and necessary for the specified processing purpose is collected, aligned with the General Principle (s6) necessity requirement and the Data Integrity Principle (s11) principle of processing personal data appropriate to its purpose",
-      "sections": ["s6", "s11"],
+      "sections": [
+        "s6",
+        "s11"
+      ],
       "keyActivities": [
         "Conduct data minimisation review for all data collection forms and systems before deployment",
         "Require business justification for each data field collected linked to a specified processing purpose",
@@ -578,10 +1251,31 @@
         "mature": "Data field justification register required for all new collection forms; DPO sign-off on new collection forms; annual audit of existing forms for minimisation opportunities",
         "advanced": "Automated data minimisation gate in SDLC pipeline; machine learning-assisted identification of redundant data fields in existing systems; data minimisation metrics (average fields per form vs. purpose) tracked in governance dashboard"
       },
-      "toolExamples": ["Form design governance tools", "SDLC workflow management", "Data cataloguing tools for field justification", "Privacy by design checklists"],
-      "iso27701": ["A.7.4.3"],
-      "gdpr": ["Article 5(1)(c)"],
-      "apecCBPR": ["Collection Limitation Principle"]
+      "toolExamples": [
+        "Form design governance tools",
+        "SDLC workflow management",
+        "Data cataloguing tools for field justification",
+        "Privacy by design checklists"
+      ],
+      "iso27701": [
+        "A.7.4.3"
+      ],
+      "gdpr": [
+        "Article 5(1)(c)"
+      ],
+      "apecCBPR": [
+        "Collection Limitation Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare"
+      ],
+      "relatedGuidelines": [],
+      "relatedStandards": [
+        "pdpa-standard-data-integrity-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "retention-schedule-management",
@@ -590,7 +1284,9 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement and enforce a comprehensive personal data retention schedule aligned with PDPA s10 (Retention Principle), ensuring personal data is not retained longer than necessary for the purpose for which it was collected, subject to legal hold requirements",
-      "sections": ["s10"],
+      "sections": [
+        "s10"
+      ],
       "keyActivities": [
         "Develop and maintain a data retention schedule covering all personal data categories and processing activities",
         "Configure automated data deletion or anonymisation at retention period expiry in key personal data systems",
@@ -603,10 +1299,57 @@
         "mature": "Retention schedule integrated with primary personal data systems for automated deletion prompts; legal hold tool integrated with retention system; quarterly disposal reporting; retention schedule annually reviewed against legal changes",
         "advanced": "Automated retention enforcement across all integrated systems via data governance platform; automated legal hold propagation from legal case management; real-time retention compliance dashboard; machine learning-assisted retention classification for unstructured data; integration with ROPA"
       },
-      "toolExamples": ["Microsoft Purview Records Management", "Exterro Legal Hold", "OpenText Magellan", "Informatica Data Governance", "Custom retention database"],
-      "iso27701": ["A.7.4.7"],
-      "gdpr": ["Article 5(1)(e)"],
-      "apecCBPR": ["Use Limitation Principle"]
+      "toolExamples": [
+        "Microsoft Purview Records Management",
+        "Exterro Legal Hold",
+        "OpenText Magellan",
+        "Informatica Data Governance",
+        "Custom retention database"
+      ],
+      "iso27701": [
+        "A.7.4.7"
+      ],
+      "gdpr": [
+        "Article 5(1)(e)"
+      ],
+      "apecCBPR": [
+        "Use Limitation Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare"
+      ],
+      "relatedGuidelines": [],
+      "relatedStandards": [
+        "pdpa-standard-retention-2015"
+      ],
+      "sectorVariants": {
+        "banking": {
+          "additionalRequirements": "KYC/CDD records 6yr post-relationship (AMLA); transaction records 6yr; credit agreements 7yr; CCTV 90 days minimum",
+          "relatedProvision": "cop-bank-s7"
+        },
+        "healthcare": {
+          "additionalRequirements": "Adult records 7yr post-treatment; minors until age 25 or 7yr; surgical 10yr; imaging 5yr; obstetric 25yr",
+          "relatedProvision": "cop-health-s5"
+        },
+        "communications": {
+          "additionalRequirements": "CDRs max 12 months; SIM registration subscription+2yr; granular location max 3 months without consent",
+          "relatedProvision": "cop-comms-s3"
+        },
+        "insurance": {
+          "additionalRequirements": "Underwriting records policy term+7yr; claims settlement+7yr; telematics operational+2yr",
+          "relatedProvision": "cop-ins-s2"
+        },
+        "electricity": {
+          "additionalRequirements": "Smart meter interval data max 13 months; consumer accounts 7yr post-relationship",
+          "relatedProvision": "cop-elec-s2"
+        },
+        "water": {
+          "additionalRequirements": "Billing records 7yr post-relationship; field service max 5yr; field vehicle CCTV max 30 days",
+          "relatedProvision": "cop-water-s2"
+        }
+      }
     },
     {
       "slug": "secure-data-disposal",
@@ -615,7 +1358,9 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement secure disposal procedures for personal data that has reached end of retention period or is no longer needed, ensuring personal data cannot be recovered from disposed media or from decommissioned third-party systems, in compliance with PDPA s10 Retention Principle",
-      "sections": ["s10"],
+      "sections": [
+        "s10"
+      ],
       "keyActivities": [
         "Apply NIST 800-88 or equivalent data sanitisation standards for electronic media disposal",
         "Maintain disposal certificates for all disposed media, hardware, and paper records",
@@ -628,10 +1373,42 @@
         "mature": "Documented disposal procedure per media type; certified third-party destruction service for hard drives; certificate of destruction obtained and filed; cloud/SaaS deletion verification on offboarding",
         "advanced": "Asset-level disposal tracking with automated retirement workflow; NIST 800-88 compliant sanitisation with verification; blockchain-based disposal certification; automated verification of processor data deletion via API; annual disposal effectiveness audit"
       },
-      "toolExamples": ["Blancco data sanitisation", "DBAN for on-premise disposal", "Certified destruction services (e.g., Iron Mountain)", "Cloud offboarding verification tools"],
-      "iso27701": ["A.7.4.7", "A.8.3.3"],
-      "gdpr": ["Article 5(1)(e)", "Article 17"],
-      "apecCBPR": ["Preventing Harm Principle"]
+      "toolExamples": [
+        "Blancco data sanitisation",
+        "DBAN for on-premise disposal",
+        "Certified destruction services (e.g., Iron Mountain)",
+        "Cloud offboarding verification tools"
+      ],
+      "iso27701": [
+        "A.7.4.7",
+        "A.8.3.3"
+      ],
+      "gdpr": [
+        "Article 5(1)(e)",
+        "Article 17"
+      ],
+      "apecCBPR": [
+        "Preventing Harm Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare"
+      ],
+      "relatedGuidelines": [],
+      "relatedStandards": [
+        "pdpa-standard-retention-2015"
+      ],
+      "sectorVariants": {
+        "healthcare": {
+          "additionalRequirements": "Disposal certificates mandatory; legacy paper-to-electronic conversion under appropriate security",
+          "relatedProvision": "cop-health-s5"
+        },
+        "banking": {
+          "additionalRequirements": "Financial records disposal must be documented with certificates of destruction",
+          "relatedProvision": "cop-bank-s7"
+        }
+      }
     },
     {
       "slug": "data-accuracy-and-quality",
@@ -640,7 +1417,9 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement controls to maintain the accuracy and completeness of personal data throughout its lifecycle, aligned with PDPA s11 Data Integrity Principle, which requires that personal data is accurate, complete, not misleading, and kept up to date",
-      "sections": ["s11"],
+      "sections": [
+        "s11"
+      ],
       "keyActivities": [
         "Implement data validation rules at point of collection to prevent inaccurate data entry",
         "Establish periodic data quality reviews for critical personal data stores (customer, employee databases)",
@@ -653,10 +1432,30 @@
         "mature": "Data validation rules in all data entry systems; regular data quality reports from CRM/ERP; customer self-service portal for data correction; duplicate detection in CRM; staff training on data accuracy",
         "advanced": "Master data management (MDM) platform as single source of truth; automated data quality scoring with alerts for degradation; continuous duplicate detection and merge; address and contact data validation via third-party APIs; data quality KPIs in operational dashboards"
       },
-      "toolExamples": ["Informatica Data Quality", "Talend Data Quality", "SAP MDM", "Melissa Data for address validation", "CRM deduplication tools"],
-      "iso27701": ["A.7.4.6"],
-      "gdpr": ["Article 5(1)(d)"],
-      "apecCBPR": ["Collection Limitation Principle"]
+      "toolExamples": [
+        "Informatica Data Quality",
+        "Talend Data Quality",
+        "SAP MDM",
+        "Melissa Data for address validation",
+        "CRM deduplication tools"
+      ],
+      "iso27701": [
+        "A.7.4.6"
+      ],
+      "gdpr": [
+        "Article 5(1)(d)"
+      ],
+      "apecCBPR": [
+        "Collection Limitation Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022"
+      ],
+      "relatedGuidelines": [],
+      "relatedStandards": [
+        "pdpa-standard-data-integrity-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "purpose-limitation-enforcement",
@@ -665,7 +1464,11 @@
       "type": "preventive",
       "layer": "process",
       "description": "Implement controls ensuring personal data collected for a specified purpose is not processed in a manner incompatible with that purpose, aligned with the General Principle (s6) and Disclosure Principle (s8) requirements to process data only for the purposes stated at collection",
-      "sections": ["s6", "s8", "s11"],
+      "sections": [
+        "s6",
+        "s8",
+        "s11"
+      ],
       "keyActivities": [
         "Document permitted purposes for each data category in the ROPA and consent records",
         "Implement technical access controls preventing use of personal data for non-authorised purposes",
@@ -678,10 +1481,34 @@
         "mature": "Purpose limitation clause in all data processing agreements; formal purpose compatibility assessment required for new data uses; ROPA purpose fields reviewed when use cases change; access controls by purpose category in primary systems",
         "advanced": "Technical data labelling by purpose in data platform; automated enforcement preventing data flows outside permitted purpose boundaries; purpose limitation metrics tracked in governance dashboard; privacy by design gate for new data use cases requires DPO sign-off on purpose compatibility"
       },
-      "toolExamples": ["Data catalogues with purpose tagging (Collibra, Alation)", "ROPA management tools", "API gateway policies for purpose-based access", "DPO review workflow tools"],
-      "iso27701": ["A.7.4.3", "A.7.4.4"],
-      "gdpr": ["Article 5(1)(b)"],
-      "apecCBPR": ["Use Limitation Principle"]
+      "toolExamples": [
+        "Data catalogues with purpose tagging (Collibra, Alation)",
+        "ROPA management tools",
+        "API gateway policies for purpose-based access",
+        "DPO review workflow tools"
+      ],
+      "iso27701": [
+        "A.7.4.3",
+        "A.7.4.4"
+      ],
+      "gdpr": [
+        "Article 5(1)(b)"
+      ],
+      "apecCBPR": [
+        "Use Limitation Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare"
+      ],
+      "relatedGuidelines": [
+        "data-protection-notices-guideline"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-data-integrity-2015"
+      ],
+      "sectorVariants": {}
     }
   ],
   "breach-response": [
@@ -692,7 +1519,10 @@
       "type": "detective",
       "layer": "technical",
       "description": "Implement controls for the timely detection of personal data breaches from multiple sources (security alerts, employee reports, third-party notifications, vulnerability scans) and a rapid triage process to assess notifiability under PDPA s143A within the 72-hour window",
-      "sections": ["s9", "s143A"],
+      "sections": [
+        "s9",
+        "s143A"
+      ],
       "keyActivities": [
         "Establish and publicise multiple breach reporting channels (IT helpdesk, DPO email, security hotline)",
         "Define and train staff on personal data breach indicators and reporting obligations",
@@ -705,10 +1535,54 @@
         "mature": "Dedicated breach reporting inbox with auto-acknowledgement; breach triage template with severity matrix; defined escalation path to DPO and CISO; 72-hour countdown starts on confirmation; breach register updated at triage",
         "advanced": "24/7 breach detection through SOC integration; automated initial classification of security events as potential breaches; breach management platform tracking triage, notification, and remediation; regulatory countdown timer with automated escalation; API integration with Commissioner portal for notification"
       },
-      "toolExamples": ["Breach management platforms (OneTrust Incident Management)", "SIEM with breach-specific playbooks", "ServiceNow Security Incident Response", "Jira for incident tracking"],
-      "iso27701": ["A.6.5.4", "A.6.6.4"],
-      "gdpr": ["Article 33", "Article 34"],
-      "apecCBPR": ["Preventing Harm Principle"]
+      "toolExamples": [
+        "Breach management platforms (OneTrust Incident Management)",
+        "SIEM with breach-specific playbooks",
+        "ServiceNow Security Incident Response",
+        "Jira for incident tracking"
+      ],
+      "iso27701": [
+        "A.6.5.4",
+        "A.6.6.4"
+      ],
+      "gdpr": [
+        "Article 33",
+        "Article 34"
+      ],
+      "apecCBPR": [
+        "Preventing Harm Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {
+        "banking": {
+          "additionalRequirements": "Dual reporting to Commissioner under s143A and to BNM per incident reporting requirements",
+          "relatedProvision": "cop-bank-s6"
+        },
+        "insurance": {
+          "additionalRequirements": "Dual reporting to Commissioner and BNM for significant security incidents",
+          "relatedProvision": "cop-ins-s5"
+        },
+        "aviation": {
+          "additionalRequirements": "Notify both Commissioner and CAAM for significant passenger data breaches",
+          "relatedProvision": "cop-avi-s5"
+        }
+      }
     },
     {
       "slug": "breach-notification-to-commissioner",
@@ -717,7 +1591,9 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement a process to ensure mandatory notification of notifiable personal data breaches to the Personal Data Protection Commissioner within 72 hours of becoming aware, as required by PDPA s143A inserted by Amendment Act A1699, with all prescribed notification content",
-      "sections": ["s143A"],
+      "sections": [
+        "s143A"
+      ],
       "keyActivities": [
         "Determine notifiability: assess whether breach is likely to result in harm to data subjects",
         "Prepare notification using Commissioner's prescribed format including all mandatory content",
@@ -730,10 +1606,40 @@
         "mature": "Breach notification template pre-drafted against s143A requirements; notifiability assessment checklist; DPO and CISO jointly sign off on notification; legal review for significant breaches; timeline log documenting notification steps",
         "advanced": "Automated notification drafting from breach management platform data fields; real-time 72-hour countdown with alerts; legal and DPO review workflow integrated in platform; direct API submission to Commissioner portal where available; automated supplementary notification scheduling"
       },
-      "toolExamples": ["OneTrust Incident Management", "Commissioner's MyPDPA portal", "Breach notification templates aligned with s143A", "DocuSign for internal sign-off"],
-      "iso27701": ["A.6.6.4"],
-      "gdpr": ["Article 33"],
-      "apecCBPR": ["Preventing Harm Principle"]
+      "toolExamples": [
+        "OneTrust Incident Management",
+        "Commissioner's MyPDPA portal",
+        "Breach notification templates aligned with s143A",
+        "DocuSign for internal sign-off"
+      ],
+      "iso27701": [
+        "A.6.6.4"
+      ],
+      "gdpr": [
+        "Article 33"
+      ],
+      "apecCBPR": [
+        "Preventing Harm Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "banking": {
+          "additionalRequirements": "Dual reporting to Commissioner under s143A and to BNM per incident reporting requirements",
+          "relatedProvision": "cop-bank-s6"
+        },
+        "insurance": {
+          "additionalRequirements": "Dual reporting to Commissioner and BNM for significant security incidents",
+          "relatedProvision": "cop-ins-s5"
+        },
+        "aviation": {
+          "additionalRequirements": "Notify both Commissioner and CAAM for significant passenger data breaches",
+          "relatedProvision": "cop-avi-s5"
+        }
+      }
     },
     {
       "slug": "breach-containment-and-remediation",
@@ -742,7 +1648,10 @@
       "type": "corrective",
       "layer": "process",
       "description": "Implement documented containment and remediation procedures for personal data breaches by breach type, ensuring the breach is stopped, the root cause is identified and addressed, and recurrence is prevented, as part of the overall breach response obligation under PDPA s143A and s9",
-      "sections": ["s9", "s143A"],
+      "sections": [
+        "s9",
+        "s143A"
+      ],
       "keyActivities": [
         "Execute breach-type-specific containment playbooks (ransomware, unauthorized access, data loss, insider threat)",
         "Preserve evidence for forensic investigation before containment actions where possible",
@@ -755,10 +1664,42 @@
         "mature": "Written incident response playbooks by breach type; forensic evidence preservation procedure; root cause analysis template; remediation action plan tracked to completion; post-incident review report shared with management",
         "advanced": "Cyber incident response retainer with specialist forensic firm; SOAR platform for automated containment actions (account lockout, network isolation); real-time threat intelligence integration during response; tabletop exercises twice yearly; breach remediation effectiveness metrics"
       },
-      "toolExamples": ["CrowdStrike Falcon for endpoint response", "Carbon Black for EDR", "Managed forensics retainers", "SOAR platforms (Splunk SOAR, Cortex XSOAR)"],
-      "iso27701": ["A.6.6.4", "A.6.5.4"],
-      "gdpr": ["Article 32(1)(d)", "Article 33(3)(d)"],
-      "apecCBPR": ["Security Principle", "Preventing Harm Principle"]
+      "toolExamples": [
+        "CrowdStrike Falcon for endpoint response",
+        "Carbon Black for EDR",
+        "Managed forensics retainers",
+        "SOAR platforms (Splunk SOAR, Cortex XSOAR)"
+      ],
+      "iso27701": [
+        "A.6.6.4",
+        "A.6.5.4"
+      ],
+      "gdpr": [
+        "Article 32(1)(d)",
+        "Article 33(3)(d)"
+      ],
+      "apecCBPR": [
+        "Security Principle",
+        "Preventing Harm Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "data-subject-breach-notification",
@@ -767,7 +1708,9 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement a process for notifying affected data subjects of a personal data breach where the breach is likely to result in harm to the data subjects, in compliance with PDPA s143A, including notification content, delivery methods, and timeline requirements",
-      "sections": ["s143A"],
+      "sections": [
+        "s143A"
+      ],
       "keyActivities": [
         "Assess harm likelihood and necessity of data subject notification based on breach nature and data type",
         "Draft notification in plain language explaining the breach, data affected, potential harm, and protective steps",
@@ -780,10 +1723,28 @@
         "mature": "Harm assessment framework for notification decisions; notification template library by channel; bulk email/SMS capability for large-scale breaches; dedicated helpline established for significant breaches; notification sent within 5 business days of notification decision",
         "advanced": "Dynamic notification platform with personalised content by affected data type; multi-channel delivery with delivery confirmation; credit monitoring or identity protection service offered for high-risk breaches; call centre script and FAQ prepared; regulatory-compliant notification content reviewed by legal and DPO"
       },
-      "toolExamples": ["Email marketing platforms for bulk notification", "SMS gateways", "Call centre scripting tools", "Identity protection services (Experian, Equifax)"],
-      "iso27701": ["A.6.6.4"],
-      "gdpr": ["Article 34"],
-      "apecCBPR": ["Preventing Harm Principle", "Notice Principle"]
+      "toolExamples": [
+        "Email marketing platforms for bulk notification",
+        "SMS gateways",
+        "Call centre scripting tools",
+        "Identity protection services (Experian, Equifax)"
+      ],
+      "iso27701": [
+        "A.6.6.4"
+      ],
+      "gdpr": [
+        "Article 34"
+      ],
+      "apecCBPR": [
+        "Preventing Harm Principle",
+        "Notice Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     }
   ],
   "cross-border-transfer": [
@@ -794,7 +1755,9 @@
       "type": "detective",
       "layer": "process",
       "description": "Identify and map all flows of personal data outside Malaysia including transfers to cloud services, SaaS platforms, offshore processors, group companies, and business partners, to ensure all cross-border transfers are subject to appropriate safeguards under PDPA s129A",
-      "sections": ["s129A"],
+      "sections": [
+        "s129A"
+      ],
       "keyActivities": [
         "Conduct data flow mapping to identify all cross-border transfers (including cloud, SaaS, and email)",
         "Classify transfers by recipient country, recipient type, and data categories transferred",
@@ -807,10 +1770,38 @@
         "mature": "Data flow mapping integrated with vendor onboarding process; cross-border transfer register maintained in ROPA tool; quarterly review of transfer register; IT procurement required to declare international transfers at contract stage",
         "advanced": "Automated data flow discovery tool scanning network traffic for international data flows; integration with cloud access security broker (CASB) to detect unsanctioned cross-border SaaS usage; real-time transfer monitoring dashboard; automated alerts for new or unregistered international data flows"
       },
-      "toolExamples": ["OneTrust DataFlow", "Collibra Data Governance", "Microsoft Defender for Cloud Apps (CASB)", "BigID for data flow discovery"],
-      "iso27701": ["A.7.5.1", "A.7.5.2"],
-      "gdpr": ["Article 44", "Article 46"],
-      "apecCBPR": ["Transfers to Third Parties Principle"]
+      "toolExamples": [
+        "OneTrust DataFlow",
+        "Collibra Data Governance",
+        "Microsoft Defender for Cloud Apps (CASB)",
+        "BigID for data flow discovery"
+      ],
+      "iso27701": [
+        "A.7.5.1",
+        "A.7.5.2"
+      ],
+      "gdpr": [
+        "Article 44",
+        "Article 46"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "cbpdt-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "aviation": {
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "relatedProvision": "cop-avi-s2"
+        },
+        "healthcare": {
+          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "relatedProvision": "cop-health-s6"
+        }
+      }
     },
     {
       "slug": "transfer-mechanism-selection",
@@ -819,7 +1810,9 @@
       "type": "preventive",
       "layer": "process",
       "description": "Select and implement an appropriate transfer mechanism for each cross-border transfer of personal data under PDPA s129A, including adequacy determination, standard contractual clauses, binding corporate rules, explicit consent, or certification schemes, and document the selection rationale",
-      "sections": ["s129A"],
+      "sections": [
+        "s129A"
+      ],
       "keyActivities": [
         "Determine whether the recipient country has an adequacy determination from the Malaysian Commissioner",
         "Where no adequacy exists, select appropriate alternative mechanism (SCCs, BCRs, consent, certification)",
@@ -832,10 +1825,39 @@
         "mature": "Transfer mechanism decision tree approved by DPO and legal; SCCs template library for different transfer scenarios; mechanism selection documented in transfer register; Commissioner notification completed for applicable transfers; annual review of mechanism adequacy",
         "advanced": "Automated adequacy assessment against current approved country list; SCC execution workflow integrated with vendor contracting; BCR program management for intra-group transfers; mechanism currency monitoring for regulatory changes (adequacy decisions, new SCCs); transfer mechanism compliance dashboard"
       },
-      "toolExamples": ["OneTrust Vendor Risk for transfer mechanism management", "DocuSign for SCC execution", "Legal contract management systems", "Commissioner's adequacy list monitoring"],
-      "iso27701": ["A.7.5.1", "A.7.5.2"],
-      "gdpr": ["Article 45", "Article 46", "Article 47"],
-      "apecCBPR": ["Transfers to Third Parties Principle"]
+      "toolExamples": [
+        "OneTrust Vendor Risk for transfer mechanism management",
+        "DocuSign for SCC execution",
+        "Legal contract management systems",
+        "Commissioner's adequacy list monitoring"
+      ],
+      "iso27701": [
+        "A.7.5.1",
+        "A.7.5.2"
+      ],
+      "gdpr": [
+        "Article 45",
+        "Article 46",
+        "Article 47"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "cbpdt-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "aviation": {
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "relatedProvision": "cop-avi-s2"
+        },
+        "healthcare": {
+          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "relatedProvision": "cop-health-s6"
+        }
+      }
     },
     {
       "slug": "transfer-impact-assessment",
@@ -844,7 +1866,9 @@
       "type": "detective",
       "layer": "process",
       "description": "Conduct Transfer Impact Assessments for transfers to third countries without adequacy determinations to assess whether the chosen transfer mechanism can effectively protect personal data in the destination country's legal environment, particularly assessing government access to data",
-      "sections": ["s129A"],
+      "sections": [
+        "s129A"
+      ],
       "keyActivities": [
         "Assess the destination country's data protection law, government access powers, and enforcement environment",
         "Evaluate whether the chosen transfer mechanism (SCCs, BCRs) can be upheld in the destination country",
@@ -857,10 +1881,38 @@
         "mature": "Structured TIA template covering legal framework, government access, enforcement, and supplementary measures; DPO and legal sign-off on TIA; TIA stored in transfer register; review trigger for material legal changes in destination country",
         "advanced": "TIA integrated into cross-border transfer workflow with country risk intelligence feeds; automated alerts on significant legal changes in transfer destinations; TIA library covering common destination countries; third-party legal opinions obtained for high-risk transfers; TIA outcomes inform encryption and access control requirements"
       },
-      "toolExamples": ["OneTrust TIA module", "DLA Piper Global Data Protection Law", "TrustArc Transfer Risk Assessment", "Custom TIA template with country research"],
-      "iso27701": ["A.7.5.2"],
-      "gdpr": ["Article 46", "Schrems II guidance", "EDPB Transfer Impact Assessment guidance"],
-      "apecCBPR": ["Transfers to Third Parties Principle"]
+      "toolExamples": [
+        "OneTrust TIA module",
+        "DLA Piper Global Data Protection Law",
+        "TrustArc Transfer Risk Assessment",
+        "Custom TIA template with country research"
+      ],
+      "iso27701": [
+        "A.7.5.2"
+      ],
+      "gdpr": [
+        "Article 46",
+        "Schrems II guidance",
+        "EDPB Transfer Impact Assessment guidance"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "cbpdt-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "aviation": {
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "relatedProvision": "cop-avi-s2"
+        },
+        "healthcare": {
+          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "relatedProvision": "cop-health-s6"
+        }
+      }
     },
     {
       "slug": "cross-border-transfer-monitoring",
@@ -869,7 +1921,9 @@
       "type": "detective",
       "layer": "process",
       "description": "Monitor existing cross-border transfer arrangements on an ongoing basis to ensure continued adequacy of transfer mechanisms, detect changes in the legal environment of destination countries, and identify new or unauthorized transfers requiring assessment and authorization",
-      "sections": ["s129A"],
+      "sections": [
+        "s129A"
+      ],
       "keyActivities": [
         "Review cross-border transfer register quarterly for accuracy and completeness",
         "Monitor Commissioner announcements and regulatory updates affecting approved country list",
@@ -882,10 +1936,38 @@
         "mature": "Quarterly transfer register review with documented outcomes; regulatory monitoring service subscription covering key jurisdictions; annual mechanism re-assessment for top-10 cross-border transfers; IT procurement gate requires DPO approval for new international data flows",
         "advanced": "Real-time regulatory monitoring with automated alerts for transfer-relevant developments; CASB monitoring for unauthorized international data flows; automated annual re-assessment workflow; cross-border transfer risk score in third-party risk management dashboard; management reporting on cross-border transfer risk"
       },
-      "toolExamples": ["LexisNexis/Westlaw for legal monitoring", "Thomson Reuters regulatory intelligence", "CASB tools (Microsoft Defender, Netskope)", "GRC platforms with regulatory monitoring"],
-      "iso27701": ["A.7.5.1", "A.7.5.2"],
-      "gdpr": ["Article 44", "Article 45(4)"],
-      "apecCBPR": ["Transfers to Third Parties Principle"]
+      "toolExamples": [
+        "LexisNexis/Westlaw for legal monitoring",
+        "Thomson Reuters regulatory intelligence",
+        "CASB tools (Microsoft Defender, Netskope)",
+        "GRC platforms with regulatory monitoring"
+      ],
+      "iso27701": [
+        "A.7.5.1",
+        "A.7.5.2"
+      ],
+      "gdpr": [
+        "Article 44",
+        "Article 45(4)"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "cbpdt-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {
+        "aviation": {
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "relatedProvision": "cop-avi-s2"
+        },
+        "healthcare": {
+          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "relatedProvision": "cop-health-s6"
+        }
+      }
     }
   ],
   "third-party-management": [
@@ -896,7 +1978,9 @@
       "type": "preventive",
       "layer": "process",
       "description": "Conduct privacy and security due diligence on prospective data processors before engagement, assessing their technical and organizational measures to protect personal data and their ability to support the organization's PDPA compliance obligations",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Classify all third parties by data access level and processing sensitivity",
         "Send privacy due diligence questionnaire (covering security, privacy practices, subprocessors, cross-border transfers) to all significant processors",
@@ -909,10 +1993,41 @@
         "mature": "Tiered due diligence programme based on processor risk rating; standardised questionnaire with scoring rubric; certification review against recognized standards; annual reassessment for high-risk processors; findings documented in third-party register",
         "advanced": "Automated due diligence platform with continuous processor risk scoring; integration with third-party risk intelligence services (BitSight, SecurityScorecard); onsite audit capability for critical processors; SLA for questionnaire completion; AI-assisted analysis of processor privacy policies and certifications"
       },
-      "toolExamples": ["OneTrust Vendor Risk Management", "Prevalent Vendor Risk", "SecurityScorecard", "BitSight", "CyberGRX"],
-      "iso27701": ["A.6.5.2", "A.8.5.1"],
-      "gdpr": ["Article 28(1)"],
-      "apecCBPR": ["Transfers to Third Parties Principle"]
+      "toolExamples": [
+        "OneTrust Vendor Risk Management",
+        "Prevalent Vendor Risk",
+        "SecurityScorecard",
+        "BitSight",
+        "CyberGRX"
+      ],
+      "iso27701": [
+        "A.6.5.2",
+        "A.8.5.1"
+      ],
+      "gdpr": [
+        "Article 28(1)"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "data-processing-agreement-management",
@@ -921,7 +2036,9 @@
       "type": "preventive",
       "layer": "process",
       "description": "Ensure all data processors are subject to a binding data processing agreement (DPA) containing the mandatory provisions required to ensure the processor processes personal data only on the data user's instructions and implements adequate security measures",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Maintain a DPA template incorporating all minimum required provisions",
         "Require DPA execution before any personal data is processed by a third-party processor",
@@ -934,10 +2051,41 @@
         "mature": "DPA template library for different processing scenarios; automated contract expiry alerts; DPA clause library enabling negotiation while maintaining minimum standards; DPA status tracked in procurement system; annual DPA template review against regulatory guidance",
         "advanced": "AI-assisted contract review to identify DPA gaps in existing vendor agreements; automated DPA workflow integrated with vendor onboarding; contractual obligation tracking (breach notification SLAs, audit rights) in contract management platform; DPA compliance dashboard"
       },
-      "toolExamples": ["Ironclad contract management", "DocuSign CLM", "Conga Contracts", "Legal tracker with DPA templates", "OneTrust Vendor Management"],
-      "iso27701": ["A.8.5.1"],
-      "gdpr": ["Article 28"],
-      "apecCBPR": ["Transfers to Third Parties Principle", "Accountability Principle"]
+      "toolExamples": [
+        "Ironclad contract management",
+        "DocuSign CLM",
+        "Conga Contracts",
+        "Legal tracker with DPA templates",
+        "OneTrust Vendor Management"
+      ],
+      "iso27701": [
+        "A.8.5.1"
+      ],
+      "gdpr": [
+        "Article 28"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle",
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "processor-oversight-and-audit",
@@ -946,7 +2094,9 @@
       "type": "detective",
       "layer": "process",
       "description": "Maintain ongoing oversight of data processors through annual reassessments, review of updated certifications, and exercise of contractual audit rights where risk warrants, ensuring processors continue to meet the organization's data protection requirements",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Conduct annual reassessment of high-risk processors using updated security questionnaire",
         "Review processor security certifications for continued validity and scope coverage",
@@ -959,10 +2109,40 @@
         "mature": "Tiered reassessment schedule (annual for high-risk, bi-annual for medium-risk); certification scope verification; contractual audit right exercised for top-5 critical processors annually; processor compliance dashboard in third-party register",
         "advanced": "Continuous security rating monitoring via BitSight/SecurityScorecard; automated reassessment workflow triggered by certification expiry or security rating decline; onsite or virtual audit program for critical processors; processor risk metrics integrated into organizational risk register; board reporting on third-party data risk"
       },
-      "toolExamples": ["BitSight", "SecurityScorecard", "OneTrust Vendor Risk", "Audit management tools (AuditBoard)", "Contract management with audit right tracking"],
-      "iso27701": ["A.8.5.3"],
-      "gdpr": ["Article 28(3)(h)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "BitSight",
+        "SecurityScorecard",
+        "OneTrust Vendor Risk",
+        "Audit management tools (AuditBoard)",
+        "Contract management with audit right tracking"
+      ],
+      "iso27701": [
+        "A.8.5.3"
+      ],
+      "gdpr": [
+        "Article 28(3)(h)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "processor-offboarding",
@@ -971,7 +2151,10 @@
       "type": "operational",
       "layer": "process",
       "description": "Implement a structured offboarding process for outgoing data processors ensuring all personal data held by the processor is returned or securely deleted, access credentials are revoked, and certificate of deletion is obtained in compliance with DPA terms and PDPA s10",
-      "sections": ["s9", "s10"],
+      "sections": [
+        "s9",
+        "s10"
+      ],
       "keyActivities": [
         "Initiate offboarding checklist at contract termination or notice date",
         "Request data return or deletion per DPA provisions (return first, then confirm deletion)",
@@ -984,10 +2167,39 @@
         "mature": "Processor offboarding checklist with sign-off required before contract close; deletion certificate template in DPA; IT access revocation tracked; 30-day follow-up if certificate not received",
         "advanced": "Automated offboarding workflow integrated with contract management; technical verification of data deletion via API or audit log review where available; deletion certificate stored in third-party register; post-offboarding security scan for residual data; management reporting on offboarding completion rates"
       },
-      "toolExamples": ["Contract lifecycle management with offboarding workflow", "IT access management tools (identity governance)", "Processor offboarding checklist templates"],
-      "iso27701": ["A.8.5.4"],
-      "gdpr": ["Article 28(3)(g)"],
-      "apecCBPR": ["Transfers to Third Parties Principle"]
+      "toolExamples": [
+        "Contract lifecycle management with offboarding workflow",
+        "IT access management tools (identity governance)",
+        "Processor offboarding checklist templates"
+      ],
+      "iso27701": [
+        "A.8.5.4"
+      ],
+      "gdpr": [
+        "Article 28(3)(g)"
+      ],
+      "apecCBPR": [
+        "Transfers to Third Parties Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015",
+        "pdpa-standard-retention-2015"
+      ],
+      "sectorVariants": {}
     }
   ],
   "governance-accountability": [
@@ -998,7 +2210,9 @@
       "type": "governance",
       "layer": "governance",
       "description": "Appoint a qualified Data Protection Officer (DPO) as required under PDPA s129B (inserted by Amendment Act A1699), register the DPO with the Commissioner, and ensure the DPO performs all required functions including advising on compliance, monitoring implementation, and acting as contact point for data subjects and the Commissioner",
-      "sections": ["s129B"],
+      "sections": [
+        "s129B"
+      ],
       "keyActivities": [
         "Assess mandatory DPO appointment obligation under s129B criteria and DPO Guideline 2025",
         "Select and appoint DPO meeting minimum qualification requirements",
@@ -1011,10 +2225,29 @@
         "mature": "Dedicated DPO role with clear job description and reporting line to board; DPO with recognized certification (CIPM, CIPP); DPO participates in DPIA reviews, policy updates, incident response; DPO annual report with metrics presented to board",
         "advanced": "DPO function with supporting privacy team; DPO integrated into all major business decisions involving personal data; DPO maintains professional development plan; DPO participates in industry associations and regulatory engagement; DPO dashboard with real-time compliance metrics"
       },
-      "toolExamples": ["GRC platforms for DPO function management", "Commissioner's DPO registration portal", "IAPP CIPM certification", "Privacy management platforms (OneTrust, TrustArc)"],
-      "iso27701": ["A.6.3.1"],
-      "gdpr": ["Article 37", "Article 38", "Article 39"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "GRC platforms for DPO function management",
+        "Commissioner's DPO registration portal",
+        "IAPP CIPM certification",
+        "Privacy management platforms (OneTrust, TrustArc)"
+      ],
+      "iso27701": [
+        "A.6.3.1"
+      ],
+      "gdpr": [
+        "Article 37",
+        "Article 38",
+        "Article 39"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [
+        "dpo-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "privacy-policy-management",
@@ -1023,7 +2256,10 @@
       "type": "governance",
       "layer": "governance",
       "description": "Maintain a suite of up-to-date data protection policies and procedures covering all PDPA obligations, ensuring policies are approved at appropriate levels, communicated to staff, regularly reviewed, and aligned with the current regulatory environment including the 2024 Amendment Act A1699",
-      "sections": ["s5", "s9"],
+      "sections": [
+        "s5",
+        "s9"
+      ],
       "keyActivities": [
         "Maintain a policy inventory covering all data protection obligations under PDPA",
         "Conduct annual review of all policies against current PDPA requirements and Commissioner guidance",
@@ -1036,10 +2272,39 @@
         "mature": "Complete policy suite covering all PDPA domains; annual policy review cycle with DPO sign-off; board approval for key policies; policy acknowledgement tracked in HR system; policy version control in document management system",
         "advanced": "Policy management platform with automated review reminders and approval workflows; regulatory change monitoring service triggers policy review; policy gap analysis against PDPA amendments; real-time policy compliance indicators; external counsel review of policy suite on significant regulatory change"
       },
-      "toolExamples": ["OneTrust Policy Management", "Compliance 360", "SharePoint with version control", "Navex PolicyTech"],
-      "iso27701": ["A.6.3.2"],
-      "gdpr": ["Article 24"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "OneTrust Policy Management",
+        "Compliance 360",
+        "SharePoint with version control",
+        "Navex PolicyTech"
+      ],
+      "iso27701": [
+        "A.6.3.2"
+      ],
+      "gdpr": [
+        "Article 24"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "staff-training-and-awareness",
@@ -1048,7 +2313,9 @@
       "type": "preventive",
       "layer": "people",
       "description": "Implement a structured data protection training and awareness programme ensuring all employees understand their PDPA obligations, can recognize personal data and sensitive personal data, know how to handle data subject requests, and can identify and report potential breaches",
-      "sections": ["s9"],
+      "sections": [
+        "s9"
+      ],
       "keyActivities": [
         "Deliver mandatory data protection induction training to all new employees within 30 days of start",
         "Deliver annual refresher training to all staff covering key PDPA obligations and organizational policies",
@@ -1061,10 +2328,42 @@
         "mature": "Role-differentiated training curriculum; compliance-themed scenarios in training content; assessment with minimum pass mark; non-completion escalated to line manager; training records integrated with HR system; phishing simulation to reinforce security awareness",
         "advanced": "Adaptive learning platform with AI-personalised training content by role and past assessment performance; micro-learning nudges on current breach scenarios; gamified compliance challenges; real-time training dashboard; training effectiveness measured against incident and DSAR performance trends; external certification support for privacy professionals"
       },
-      "toolExamples": ["SANS Security Awareness", "KnowBe4", "Proofpoint Security Awareness", "LinkedIn Learning (data protection modules)", "Custom LMS (Moodle, Docebo)"],
-      "iso27701": ["A.6.4.1", "A.6.4.2"],
-      "gdpr": ["Article 24", "Article 32(4)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "SANS Security Awareness",
+        "KnowBe4",
+        "Proofpoint Security Awareness",
+        "LinkedIn Learning (data protection modules)",
+        "Custom LMS (Moodle, Docebo)"
+      ],
+      "iso27701": [
+        "A.6.4.1",
+        "A.6.4.2"
+      ],
+      "gdpr": [
+        "Article 24",
+        "Article 32(4)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "privacy-by-design-and-default",
@@ -1073,7 +2372,11 @@
       "type": "preventive",
       "layer": "process",
       "description": "Embed privacy considerations into the design and development of new products, services, and systems from inception, ensuring data protection requirements are addressed by design rather than as an afterthought, aligned with the accountability principles underlying PDPA compliance",
-      "sections": ["s5", "s6", "s9"],
+      "sections": [
+        "s5",
+        "s6",
+        "s9"
+      ],
       "keyActivities": [
         "Define privacy by design trigger criteria for new projects and material changes to existing systems",
         "Conduct privacy design review using structured checklist at the design/architecture stage",
@@ -1086,10 +2389,40 @@
         "mature": "Privacy by design checklist integrated into project governance; DPIA trigger assessment mandatory for all new projects processing personal data; DPO review required for significant processing changes; privacy by design documented in project artefacts",
         "advanced": "Privacy engineering function embedded in product and IT teams; automated privacy gate in CI/CD pipeline; privacy design patterns library; DPIA integrated with project management tooling; privacy debt tracking for legacy systems; privacy metrics in product health dashboards"
       },
-      "toolExamples": ["OneTrust DPIA and PbD tools", "JIRA with privacy workflow gates", "Privacy design pattern libraries", "Threat modelling tools (Microsoft Threat Modeling Tool)"],
-      "iso27701": ["A.7.4.1"],
-      "gdpr": ["Article 25"],
-      "apecCBPR": ["Preventing Harm Principle", "Accountability Principle"]
+      "toolExamples": [
+        "OneTrust DPIA and PbD tools",
+        "JIRA with privacy workflow gates",
+        "Privacy design pattern libraries",
+        "Threat modelling tools (Microsoft Threat Modeling Tool)"
+      ],
+      "iso27701": [
+        "A.7.4.1"
+      ],
+      "gdpr": [
+        "Article 25"
+      ],
+      "apecCBPR": [
+        "Preventing Harm Principle",
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "compliance-monitoring-and-audit",
@@ -1098,7 +2431,10 @@
       "type": "detective",
       "layer": "process",
       "description": "Implement a compliance monitoring programme and annual internal audit of data protection practices to identify gaps against PDPA obligations, assess control effectiveness, and provide management with accurate information on the organization's compliance posture",
-      "sections": ["s5", "s9"],
+      "sections": [
+        "s5",
+        "s9"
+      ],
       "keyActivities": [
         "Develop and execute an annual data protection audit programme based on risk priorities",
         "Assess compliance against PDPA obligations using a structured compliance checklist",
@@ -1111,10 +2447,42 @@
         "mature": "Annual compliance audit using structured methodology; internal audit or DPO-led; evidence-based assessment with sampling; findings rated by severity; remediation tracking to closure; board reporting",
         "advanced": "Risk-based audit programme with continuous monitoring between annual audits; automated compliance testing (consent record completeness, DSAR response rates, training completion); external verification for high-risk areas; audit outcomes feed into DPO annual report; benchmarking against industry peers and Commissioner guidance"
       },
-      "toolExamples": ["AuditBoard", "MetricStream GRC", "ServiceNow GRC", "OneTrust Assessment Automation", "Internal audit workpaper tools"],
-      "iso27701": ["A.6.3.2", "A.6.5.1"],
-      "gdpr": ["Article 24", "Article 28(3)(h)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "AuditBoard",
+        "MetricStream GRC",
+        "ServiceNow GRC",
+        "OneTrust Assessment Automation",
+        "Internal audit workpaper tools"
+      ],
+      "iso27701": [
+        "A.6.3.2",
+        "A.6.5.1"
+      ],
+      "gdpr": [
+        "Article 24",
+        "Article 28(3)(h)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022",
+        "cop-banking",
+        "cop-healthcare",
+        "cop-communications",
+        "cop-insurance-takaful",
+        "cop-utilities-electricity",
+        "cop-utilities-water",
+        "cop-aviation"
+      ],
+      "relatedGuidelines": [
+        "dbn-guideline-2025"
+      ],
+      "relatedStandards": [
+        "pdpa-standard-electronic-security-2015",
+        "pdpa-standard-nonelectronic-security-2015"
+      ],
+      "sectorVariants": {}
     },
     {
       "slug": "board-reporting-and-accountability",
@@ -1123,7 +2491,10 @@
       "type": "governance",
       "layer": "governance",
       "description": "Establish regular reporting of data protection compliance status, key risks, incidents, and emerging obligations to senior management and the board, ensuring leadership accountability for PDPA compliance and informed decision-making on data protection investment",
-      "sections": ["s5", "s129B"],
+      "sections": [
+        "s5",
+        "s129B"
+      ],
       "keyActivities": [
         "Prepare and present DPO annual report to board covering compliance status, incidents, and recommendations",
         "Provide quarterly management reporting on key data protection metrics (breach incidents, DSAR performance, training rates)",
@@ -1136,10 +2507,31 @@
         "mature": "Quarterly management KPI dashboard for data protection; DPO annual report tabled at board; breach incidents reported to board within required timeframes; data protection risk in enterprise risk register with board visibility; management sign-off on DPO recommendations",
         "advanced": "Real-time executive data protection dashboard; monthly management briefing on emerging risks; board education sessions on PDPA and regulatory developments; data protection risk appetite statement approved by board; DPO participates in board audit/risk committee meetings; external benchmarking of compliance maturity presented to board"
       },
-      "toolExamples": ["GRC platforms with board reporting module", "PowerBI / Tableau for data protection dashboards", "Board portal software (Diligent, BoardEffect)", "OneTrust Executive Dashboard"],
-      "iso27701": ["A.6.3.1", "A.6.3.2"],
-      "gdpr": ["Article 24", "Article 39(1)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "GRC platforms with board reporting module",
+        "PowerBI / Tableau for data protection dashboards",
+        "Board portal software (Diligent, BoardEffect)",
+        "OneTrust Executive Dashboard"
+      ],
+      "iso27701": [
+        "A.6.3.1",
+        "A.6.3.2"
+      ],
+      "gdpr": [
+        "Article 24",
+        "Article 39(1)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [
+        "general-cop-2022"
+      ],
+      "relatedGuidelines": [
+        "dpo-guideline-2025"
+      ],
+      "relatedStandards": [],
+      "sectorVariants": {}
     }
   ],
   "registration-compliance": [
@@ -1150,7 +2542,12 @@
       "type": "operational",
       "layer": "process",
       "description": "Manage the organization's data user registration with the Personal Data Protection Commissioner under PDPA s13-s16, including initial registration, timely renewal, notification of material changes, and DPO registration, to ensure the organization operates with valid registration at all times",
-      "sections": ["s13", "s14", "s15", "s16"],
+      "sections": [
+        "s13",
+        "s14",
+        "s15",
+        "s16"
+      ],
       "keyActivities": [
         "Determine registration obligation and class under the Personal Data Protection (Class of Data Users) Order 2013",
         "Apply for registration before commencing processing activities as a registered class data user",
@@ -1163,10 +2560,24 @@
         "mature": "Registration calendar with automated renewal alerts at 90 and 30 days before expiry; registration details reviewed annually against ROPA for accuracy; material change notification checklist; DPO registration maintained current",
         "advanced": "Registration compliance integrated into GRC platform with automated tracking; change management process flags registration notification obligations; Commissioner portal monitored for regulatory updates to registration requirements; registration compliance included in annual audit scope"
       },
-      "toolExamples": ["Calendar management with compliance alerts", "GRC platform for regulatory deadline tracking", "Commissioner's MyPDPA online registration portal"],
-      "iso27701": ["A.6.3.2"],
-      "gdpr": ["N/A (EU registration-free model)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "Calendar management with compliance alerts",
+        "GRC platform for regulatory deadline tracking",
+        "Commissioner's MyPDPA online registration portal"
+      ],
+      "iso27701": [
+        "A.6.3.2"
+      ],
+      "gdpr": [
+        "N/A (EU registration-free model)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "regulatory-inspection-readiness",
@@ -1175,7 +2586,13 @@
       "type": "preventive",
       "layer": "process",
       "description": "Maintain the organization in a state of readiness for inspections, investigations, and audits by the JPDP Commissioner under PDPA Part VIII (s101-s109), including pre-organized compliance evidence, trained inspection response team, and documented response procedures",
-      "sections": ["s101", "s102", "s103", "s104", "s105"],
+      "sections": [
+        "s101",
+        "s102",
+        "s103",
+        "s104",
+        "s105"
+      ],
       "keyActivities": [
         "Maintain a compliance evidence repository with current copies of all key policies, registers, and records",
         "Designate and train an inspection response team including DPO, legal counsel, and IT representative",
@@ -1188,10 +2605,26 @@
         "mature": "Written inspection response procedure; designated inspection response team with defined roles; compliance evidence repository maintained and indexed; annual readiness review; external legal counsel briefed on PDPA enforcement procedures",
         "advanced": "Formal inspection readiness programme with annual tabletop simulation; comprehensive compliance evidence repository with document index; privilege review procedure for legal communications; inspection response playbook covering all JPDP inspection powers; post-inspection review and learning embedded in governance programme"
       },
-      "toolExamples": ["Document management system for evidence repository", "Legal matter management tools", "GRC platform with audit trail", "Incident response tabletop exercise frameworks"],
-      "iso27701": ["A.6.3.2", "A.6.5.1"],
-      "gdpr": ["Article 31"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "Document management system for evidence repository",
+        "Legal matter management tools",
+        "GRC platform with audit trail",
+        "Incident response tabletop exercise frameworks"
+      ],
+      "iso27701": [
+        "A.6.3.2",
+        "A.6.5.1"
+      ],
+      "gdpr": [
+        "Article 31"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "enforcement-notice-compliance",
@@ -1200,7 +2633,11 @@
       "type": "corrective",
       "layer": "process",
       "description": "Manage compliance with enforcement notices issued by the Commissioner under PDPA Part IX, including legal assessment, compliance roadmap development, evidence collection, and Commissioner reporting, to avoid the criminal offence of non-compliance under PDPA s133",
-      "sections": ["s110", "s111", "s133"],
+      "sections": [
+        "s110",
+        "s111",
+        "s133"
+      ],
       "keyActivities": [
         "Immediately escalate enforcement notices to DPO, senior management, and legal counsel upon receipt",
         "Obtain legal advice on notice requirements, compliance obligations, and appeal grounds",
@@ -1213,10 +2650,24 @@
         "mature": "Enforcement notice response procedure documented and tested; compliance roadmap template with milestone tracking; legal sign-off on Commissioner communications; post-compliance review to prevent recurrence",
         "advanced": "Enforcement notice risk assessment integrated with proactive compliance programme to prevent notices; rapid legal response protocol (within 24 hours); compliance roadmap managed via project management tool; Commissioner relationship management strategy; enforcement notice outcome used to update audit programme and training content"
       },
-      "toolExamples": ["Legal matter management (Clio, PracticePanther)", "Project management tools (MS Project, Jira) for compliance roadmap", "Document management for evidence compilation"],
-      "iso27701": ["A.6.3.2"],
-      "gdpr": ["Article 58(2)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "Legal matter management (Clio, PracticePanther)",
+        "Project management tools (MS Project, Jira) for compliance roadmap",
+        "Document management for evidence compilation"
+      ],
+      "iso27701": [
+        "A.6.3.2"
+      ],
+      "gdpr": [
+        "Article 58(2)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     },
     {
       "slug": "regulatory-monitoring",
@@ -1225,7 +2676,10 @@
       "type": "detective",
       "layer": "process",
       "description": "Systematically monitor PDPA regulatory developments including Commissioner guidelines, codes of practice, new subsidiary legislation, enforcement actions, and relevant court decisions, and assess their impact on the organization's compliance programme with timely implementation of required changes",
-      "sections": ["s13", "s101"],
+      "sections": [
+        "s13",
+        "s101"
+      ],
       "keyActivities": [
         "Subscribe to and review JPDP Commissioner publications, press releases, and enforcement announcements",
         "Monitor Parliament Hansard and Gazette for PDPA amendments and subsidiary legislation",
@@ -1238,10 +2692,26 @@
         "mature": "Formal regulatory monitoring programme covering JPDP, Parliament, and comparable regional regulators; impact assessment for each significant development; change management procedure for implementing required updates; management briefings on significant changes",
         "advanced": "Regulatory technology platform monitoring Malaysian, ASEAN, and global privacy regulatory developments with AI-assisted impact analysis; regulatory change management integrated with policy management platform; regulatory intelligence briefings to board; engagement in Commissioner consultation processes; participation in industry associations for advance regulatory intelligence"
       },
-      "toolExamples": ["Westlaw Malaysia / LexisNexis Malaysia", "Thomson Reuters Regulatory Intelligence", "JPDP website monitoring", "Data Protection World Forum news alerts", "Industry association membership (AMCHAM, MDBA)"],
-      "iso27701": ["A.6.3.2"],
-      "gdpr": ["Recital 97 (DPA cooperation)"],
-      "apecCBPR": ["Accountability Principle"]
+      "toolExamples": [
+        "Westlaw Malaysia / LexisNexis Malaysia",
+        "Thomson Reuters Regulatory Intelligence",
+        "JPDP website monitoring",
+        "Data Protection World Forum news alerts",
+        "Industry association membership (AMCHAM, MDBA)"
+      ],
+      "iso27701": [
+        "A.6.3.2"
+      ],
+      "gdpr": [
+        "Recital 97 (DPA cooperation)"
+      ],
+      "apecCBPR": [
+        "Accountability Principle"
+      ],
+      "relatedCodes": [],
+      "relatedGuidelines": [],
+      "relatedStandards": [],
+      "sectorVariants": {}
     }
   ]
 }

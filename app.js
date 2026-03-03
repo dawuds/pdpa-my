@@ -45,6 +45,7 @@ function parseRoute() {
   if (hash === 'supplements') return { view: 'supplements' };
   if (hash.startsWith('supplement/')) return { view: 'supplement-detail', id: hash.slice(11) };
   if (hash === 'cross-references') return { view: 'cross-references' };
+  if (hash === 'framework') return { view: 'framework' };
   return { view: 'overview' };
 }
 
@@ -88,6 +89,7 @@ function render() {
     case 'supplements': renderSupplements(app); break;
     case 'supplement-detail': renderSupplementDetail(app, state.route.id); break;
     case 'cross-references': renderCrossReferences(app); break;
+    case 'framework': renderFramework(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
   }
@@ -102,7 +104,8 @@ function updateNav() {
       (view === 'overview' && state.route.view === 'section') ||
       (view === 'principles' && state.route.view === 'principle') ||
       (view === 'controls' && state.route.view === 'control-detail') ||
-      (view === 'supplements' && state.route.view === 'supplement-detail')
+      (view === 'supplements' && state.route.view === 'supplement-detail') ||
+      (view === 'framework' && state.route.view === 'framework')
     );
   });
 }
@@ -299,10 +302,42 @@ async function activateTab(tabName, sectionId) {
 }
 
 /* ===== REQUIREMENTS PANEL ===== */
+function sourceBadge(sourceType) {
+  const map = {
+    act: 'badge-source-act',
+    standard: 'badge-source-standard',
+    guideline: 'badge-source-guideline',
+    'general-code': 'badge-source-general-code',
+    'sector-code': 'badge-source-sector-code',
+  };
+  const labels = { act: 'Act', standard: 'Standard', guideline: 'Guideline', 'general-code': 'Gen Code', 'sector-code': 'Sector' };
+  const cls = map[sourceType] || 'badge-source-act';
+  const label = labels[sourceType] || sourceType || 'Act';
+  return `<span class="badge ${cls}">${esc(label)}</span>`;
+}
+
 function renderRequirementsPanel(req) {
   const cols = ['legal', 'technical', 'governance'];
   const colLabels = { legal: 'Legal / Compliance', technical: 'Technical / Operational', governance: 'Governance' };
+
+  // Collect all sourceTypes present for filter chips
+  const sourceTypes = new Set();
+  for (const col of cols) {
+    for (const r of (req[col]?.requirements || [])) {
+      sourceTypes.add(r.sourceType || 'act');
+    }
+  }
+  const sourceTypeLabels = { act: 'Act', standard: 'Standard', guideline: 'Guideline', 'general-code': 'General Code', 'sector-code': 'Sector Codes' };
+
+  const filterBar = sourceTypes.size > 1 ? `
+    <div class="filter-bar" id="req-source-filter">
+      <span class="filter-chip active" data-source-filter="all">All</span>
+      ${[...sourceTypes].map(st => `<span class="filter-chip" data-source-filter="${esc(st)}">${esc(sourceTypeLabels[st] || st)}</span>`).join('')}
+    </div>
+  ` : '';
+
   return `
+    ${filterBar}
     <div class="req-columns">
       ${cols.map(col => {
         const data = req[col];
@@ -313,8 +348,13 @@ function renderRequirementsPanel(req) {
             <div class="req-column-body">
               <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(data.summary)}</p>
               ${(data.requirements || []).map(r => `
-                <div class="req-item">
-                  <div class="req-item-id">${esc(r.id)}</div>
+                <div class="req-item" data-source-type="${esc(r.sourceType || 'act')}">
+                  <div style="display:flex;align-items:center;gap:0.375rem;flex-wrap:wrap;">
+                    <span class="req-item-id">${esc(r.id)}</span>
+                    ${sourceBadge(r.sourceType)}
+                    ${r.sector ? `<span class="badge badge-sector">${esc(r.sector)}</span>` : ''}
+                    ${r.tightens ? `<span class="badge badge-tightens">tightens ${esc(r.tightens)}</span>` : ''}
+                  </div>
                   <div class="req-item-text">${esc(r.requirement)}</div>
                   <div class="req-item-meta">
                     <span class="req-item-priority priority-${(r.priority || '').toLowerCase()}">${esc(r.priority || '')}</span>
@@ -635,6 +675,13 @@ async function renderControlDetail(el, slug) {
   if (!control) return renderNotFound(el);
 
   const domain = state.controls.domains[control.domain] || {};
+
+  // Build supplement links sections
+  const hasStandards = control.relatedStandards && control.relatedStandards.length;
+  const hasGuidelines = control.relatedGuidelines && control.relatedGuidelines.length;
+  const hasCodes = control.relatedCodes && control.relatedCodes.length;
+  const hasSectorVariants = control.sectorVariants && Object.keys(control.sectorVariants).length;
+
   el.innerHTML = `
     <div class="breadcrumbs"><a href="#">Overview</a><span class="sep">/</span><a href="#controls">Controls</a><span class="sep">/</span>${esc(control.name)}</div>
     <div style="display:flex;gap:0.375rem;margin-bottom:0.25rem;">
@@ -651,6 +698,42 @@ async function renderControlDetail(el, slug) {
         <div style="display:flex;gap:0.375rem;flex-wrap:wrap;">
           ${control.sections.map(s => `<a href="#section/${s}" class="badge badge-domain">${esc(s)}</a>`).join('')}
         </div>
+      </div>
+    ` : ''}
+    ${hasStandards ? `
+      <div class="card">
+        <div class="card-title">Related Standards</div>
+        <div class="supplement-links">
+          ${control.relatedStandards.map(s => `<a href="#supplement/${s}" class="supplement-link-badge supplement-link-standard">${esc(s)}</a>`).join('')}
+        </div>
+      </div>
+    ` : ''}
+    ${hasGuidelines ? `
+      <div class="card">
+        <div class="card-title">Related Guidelines</div>
+        <div class="supplement-links">
+          ${control.relatedGuidelines.map(g => `<a href="#supplement/${g}" class="supplement-link-badge supplement-link-guideline">${esc(g)}</a>`).join('')}
+        </div>
+      </div>
+    ` : ''}
+    ${hasCodes ? `
+      <div class="card">
+        <div class="card-title">Related Codes of Practice</div>
+        <div class="supplement-links">
+          ${control.relatedCodes.map(c => `<a href="#supplement/${c}" class="supplement-link-badge supplement-link-code">${esc(c)}</a>`).join('')}
+        </div>
+      </div>
+    ` : ''}
+    ${hasSectorVariants ? `
+      <div class="card">
+        <div class="card-title">Sector-Specific Variants</div>
+        ${Object.entries(control.sectorVariants).map(([sector, variant]) => `
+          <div class="sector-variant-card">
+            <div class="sector-variant-name">${esc(sector)}</div>
+            <div class="sector-variant-reqs">${esc(variant.additionalRequirements || '')}</div>
+            ${variant.relatedProvision ? `<div class="sector-variant-provision">${esc(variant.relatedProvision)}</div>` : ''}
+          </div>
+        `).join('')}
       </div>
     ` : ''}
   `;
@@ -933,6 +1016,225 @@ function renderDataUserClasses(data) {
   `;
 }
 
+/* ===== FRAMEWORK EXPLORER ===== */
+async function renderFramework(el) {
+  // Ensure requirements data is loaded for counts
+  if (!state.requirements) {
+    state.requirements = await fetchJSON('requirements/index.json') || {};
+  }
+  if (!state.controls) {
+    const [domains, library, provisionMap] = await Promise.all([
+      fetchJSON('controls/domains.json'),
+      fetchJSON('controls/library.json'),
+      fetchJSON('controls/provision-map.json'),
+    ]);
+    state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
+  }
+
+  // Count requirements by sourceType
+  let totalReqs = 0, actReqs = 0, stdReqs = 0, glReqs = 0, gcReqs = 0, scReqs = 0;
+  for (const sec of Object.values(state.requirements)) {
+    for (const perspective of ['legal', 'technical', 'governance']) {
+      const reqs = sec[perspective]?.requirements || [];
+      for (const r of reqs) {
+        totalReqs++;
+        switch (r.sourceType) {
+          case 'standard': stdReqs++; break;
+          case 'guideline': glReqs++; break;
+          case 'general-code': gcReqs++; break;
+          case 'sector-code': scReqs++; break;
+          default: actReqs++;
+        }
+      }
+    }
+  }
+
+  const totalControls = Object.values(state.controls.library).reduce((sum, arr) => sum + arr.length, 0);
+
+  el.innerHTML = `
+    <div class="page-title">Compliance Framework Architecture</div>
+    <div class="page-subtitle">How the PDPA ecosystem connects: from sources through requirements to controls, evidence, and artifacts</div>
+
+    <!-- Section 1: Compliance Chain Flow -->
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Compliance Chain</h3>
+    <div class="framework-flow">
+      <div class="framework-step" onclick="location.hash='#framework'">
+        <div class="framework-step-label">Sources</div>
+        <div class="framework-step-count">Act + 22 supplements</div>
+      </div>
+      <div class="framework-step" onclick="location.hash='#framework'">
+        <div class="framework-step-label">Requirements</div>
+        <div class="framework-step-count">${totalReqs} obligations</div>
+      </div>
+      <div class="framework-step" onclick="location.hash='#controls'">
+        <div class="framework-step-label">Controls</div>
+        <div class="framework-step-count">${totalControls} controls</div>
+      </div>
+      <div class="framework-step" onclick="location.hash='#framework'">
+        <div class="framework-step-label">Evidence</div>
+        <div class="framework-step-count">40 evidence items</div>
+      </div>
+      <div class="framework-step" onclick="location.hash='#artifacts'">
+        <div class="framework-step-label">Artifacts</div>
+        <div class="framework-step-count">60 documents</div>
+      </div>
+    </div>
+
+    <!-- Section 2: Source Hierarchy -->
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Source Hierarchy</h3>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
+      Each tier adds increasingly specific requirements. Sector codes don't replace higher tiers — they tighten or extend the base obligations for specific industries.
+    </p>
+    <div class="source-hierarchy">
+      <div class="source-tier" data-tier="1">
+        <div class="source-tier-num">Tier 1</div>
+        <div class="source-tier-name">Act 709</div>
+        <div class="source-tier-desc">Primary legislation — 151 sections establishing core data protection obligations</div>
+        <div class="source-tier-badge"><span class="badge badge-source-act">${actReqs} reqs</span></div>
+      </div>
+      <div class="source-tier" data-tier="2">
+        <div class="source-tier-num">Tier 2</div>
+        <div class="source-tier-name">Standards 2015</div>
+        <div class="source-tier-desc">Mandatory technical minimums implementing s9 (Security), s10 (Retention), s11 (Integrity)</div>
+        <div class="source-tier-badge"><span class="badge badge-source-standard">${stdReqs} reqs</span></div>
+      </div>
+      <div class="source-tier" data-tier="3">
+        <div class="source-tier-num">Tier 3</div>
+        <div class="source-tier-name">Guidelines</div>
+        <div class="source-tier-desc">Procedural guidance for s7 (Notices), s129A (Cross-Border), s129B (DPO), s143A (Breach)</div>
+        <div class="source-tier-badge"><span class="badge badge-source-guideline">${glReqs} reqs</span></div>
+      </div>
+      <div class="source-tier" data-tier="4">
+        <div class="source-tier-num">Tier 4</div>
+        <div class="source-tier-name">General Code 2022</div>
+        <div class="source-tier-desc">Implementation baseline for all sectors — ROPA, consent, notices, security governance</div>
+        <div class="source-tier-badge"><span class="badge badge-source-general-code">${gcReqs} reqs</span></div>
+      </div>
+      <div class="source-tier" data-tier="5">
+        <div class="source-tier-num">Tier 5</div>
+        <div class="source-tier-name">Sector Codes (7)</div>
+        <div class="source-tier-desc">Sector-specific tightening for banking, healthcare, communications, insurance, aviation, electricity, water</div>
+        <div class="source-tier-badge"><span class="badge badge-source-sector-code">${scReqs} reqs</span></div>
+      </div>
+    </div>
+
+    <!-- Section 3: Worked Example (s9 Security Principle) -->
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Worked Example: s9 Security Principle</h3>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
+      Tracing the full compliance chain for the Security Principle shows how each layer builds on the previous.
+    </p>
+    <div class="framework-trace">
+      <div class="framework-trace-col">
+        <div class="framework-trace-col-header">Sources</div>
+        <div class="framework-trace-col-body">
+          <div class="trace-item"><span class="badge badge-source-act" style="font-size:0.625rem;">Act</span> s9</div>
+          <div class="trace-item"><span class="badge badge-source-standard" style="font-size:0.625rem;">Standard</span> esec-2..7</div>
+          <div class="trace-item"><span class="badge badge-source-standard" style="font-size:0.625rem;">Standard</span> nesec-2..4</div>
+          <div class="trace-item"><span class="badge badge-source-guideline" style="font-size:0.625rem;">Guideline</span> dbn-1, dbn-8</div>
+          <div class="trace-item"><span class="badge badge-source-general-code" style="font-size:0.625rem;">Gen Code</span> cop-gen-s7</div>
+          <div class="trace-item"><span class="badge badge-source-sector-code" style="font-size:0.625rem;">Banking</span> cop-bank-s6</div>
+          <div class="trace-item"><span class="badge badge-source-sector-code" style="font-size:0.625rem;">Health</span> cop-health-s3</div>
+        </div>
+      </div>
+      <div class="framework-trace-col">
+        <div class="framework-trace-col-header">Requirements</div>
+        <div class="framework-trace-col-body">
+          <div class="trace-item"><span class="badge badge-source-act" style="font-size:0.625rem;">Act</span> s9-L1..T3, G1..G2</div>
+          <div class="trace-item"><span class="badge badge-source-standard" style="font-size:0.625rem;">Std</span> s9-ST1..ST11</div>
+          <div class="trace-item"><span class="badge badge-source-guideline" style="font-size:0.625rem;">GL</span> s9-GL1</div>
+          <div class="trace-item"><span class="badge badge-source-general-code" style="font-size:0.625rem;">CG</span> s9-CG1..CG2</div>
+          <div class="trace-item"><span class="badge badge-source-sector-code" style="font-size:0.625rem;">CS</span> s9-CS-BNK1, HLT1, COM1, INS1, AVI1, ELC1, WTR1</div>
+        </div>
+      </div>
+      <div class="framework-trace-col">
+        <div class="framework-trace-col-header">Controls</div>
+        <div class="framework-trace-col-body">
+          <div class="trace-item"><a href="#control/encryption-and-data-protection-in-transit-at-rest" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Encryption</a></div>
+          <div class="trace-item"><a href="#control/access-control-and-identity-management" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Access Control</a></div>
+          <div class="trace-item"><a href="#control/security-monitoring-and-siem" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Security Monitoring</a></div>
+          <div class="trace-item"><a href="#control/vulnerability-and-patch-management" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Vulnerability Mgmt</a></div>
+          <div class="trace-item"><a href="#control/physical-security-controls" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Physical Security</a></div>
+          <div class="trace-item"><a href="#control/data-loss-prevention" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">DLP</a></div>
+        </div>
+      </div>
+      <div class="framework-trace-col">
+        <div class="framework-trace-col-header">Evidence</div>
+        <div class="framework-trace-col-body">
+          <div class="trace-item">Security policy document</div>
+          <div class="trace-item">Access control logs</div>
+          <div class="trace-item">Vulnerability scan reports</div>
+          <div class="trace-item">Penetration test results</div>
+          <div class="trace-item">Incident response records</div>
+          <div class="trace-item">Training records</div>
+        </div>
+      </div>
+      <div class="framework-trace-col">
+        <div class="framework-trace-col-header">Artifacts</div>
+        <div class="framework-trace-col-body">
+          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Information Security Policy</a></div>
+          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Incident Response Plan</a></div>
+          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Encryption Register</a></div>
+          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Access Control Matrix</a></div>
+          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Vendor Security Assessment</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: 8-Layer Summary Grid -->
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">8-Layer Data Architecture</h3>
+    <div class="layer-grid">
+      <div class="layer-card" onclick="location.hash='#'">
+        <div class="layer-card-num">1</div>
+        <div class="layer-card-name">Provisions</div>
+        <div class="layer-card-count">151 sections</div>
+        <div class="layer-card-desc">Act verbatim text + plain-language translation across 11 Parts</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#principles'">
+        <div class="layer-card-num">2</div>
+        <div class="layer-card-name">Principles</div>
+        <div class="layer-card-count">7 principles</div>
+        <div class="layer-card-desc">Deep dive into obligations, exceptions, and practical guidance</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#framework'">
+        <div class="layer-card-num">3</div>
+        <div class="layer-card-name">Requirements</div>
+        <div class="layer-card-count">${totalReqs} obligations</div>
+        <div class="layer-card-desc">Three-perspective breakdowns with source tracking from Act + supplements</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#framework'">
+        <div class="layer-card-num">4</div>
+        <div class="layer-card-name">Evidence</div>
+        <div class="layer-card-count">40 items</div>
+        <div class="layer-card-desc">Compliance evidence guidance with auditor focus and audit tips</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#artifacts'">
+        <div class="layer-card-num">5</div>
+        <div class="layer-card-name">Artifacts</div>
+        <div class="layer-card-count">60 documents</div>
+        <div class="layer-card-desc">Compliance document inventory across 7 categories</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#controls'">
+        <div class="layer-card-num">6</div>
+        <div class="layer-card-name">Controls</div>
+        <div class="layer-card-count">${totalControls} controls</div>
+        <div class="layer-card-desc">10 domains with maturity levels, supplement links, and sector variants</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#penalties'">
+        <div class="layer-card-num">7</div>
+        <div class="layer-card-name">Penalties</div>
+        <div class="layer-card-count">19 offences</div>
+        <div class="layer-card-desc">Offences with original and 2024-amended penalties</div>
+      </div>
+      <div class="layer-card" onclick="location.hash='#cross-references'">
+        <div class="layer-card-num">8</div>
+        <div class="layer-card-name">Cross-References</div>
+        <div class="layer-card-count">31 mappings</div>
+        <div class="layer-card-desc">Act to subsidiary instruments, GDPR, ISO 27701, APEC CBPR</div>
+      </div>
+    </div>
+  `;
+}
+
 /* ===== SEARCH ===== */
 async function renderSearch(el, query) {
   if (!query || query.length < 2) {
@@ -1037,8 +1339,27 @@ function handleClick(e) {
     return;
   }
 
-  // Filter chips
-  const chip = e.target.closest('.filter-chip');
+  // Filter chips (source type filter for requirements)
+  const sourceFilterChip = e.target.closest('[data-source-filter]');
+  if (sourceFilterChip) {
+    const filter = sourceFilterChip.dataset.sourceFilter;
+    const bar = sourceFilterChip.closest('.filter-bar');
+    if (bar) {
+      bar.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c === sourceFilterChip));
+    }
+    // Apply source type filter across all requirement columns
+    const container = sourceFilterChip.closest('.filter-bar')?.parentElement;
+    if (container) {
+      const items = container.querySelectorAll('[data-source-type]');
+      items.forEach(item => {
+        item.style.display = (filter === 'all' || item.dataset.sourceType === filter) ? '' : 'none';
+      });
+    }
+    return;
+  }
+
+  // Filter chips (category filter)
+  const chip = e.target.closest('.filter-chip:not([data-source-filter])');
   if (chip) {
     const filter = chip.dataset.filter;
     const bar = chip.closest('.filter-bar');

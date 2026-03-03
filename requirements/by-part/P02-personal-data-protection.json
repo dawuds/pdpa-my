@@ -13,7 +13,11 @@
           "rationale": "Section 5(1) makes compliance with the principles a condition precedent to lawful processing; any breach of ss 6-12 is prosecuted under s5(3) and carries criminal liability",
           "owner": "Data Protection Officer / Legal Counsel",
           "frequency": "Ongoing — reviewed at each new processing activity and annually",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s5-L2",
@@ -21,7 +25,11 @@
           "rationale": "Section 5(2) makes processing without registration a criminal offence; penalties were increased to RM1,000,000 or 3 years imprisonment by the 2024 Amendment",
           "owner": "Legal Counsel / Company Secretary",
           "frequency": "At onboarding and upon any change in business activities",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s5-L3",
@@ -29,7 +37,11 @@
           "rationale": "Documented compliance demonstrates good faith to JPDP inspectors and supports a defence of due diligence in enforcement proceedings",
           "owner": "Data Protection Officer / Internal Audit",
           "frequency": "Annual",
-          "priority": "High"
+          "priority": "High",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -42,7 +54,11 @@
           "rationale": "A ROPA is the foundational tool for demonstrating compliance with all seven principles; it enables rapid identification of gaps and supports JPDP inspections",
           "owner": "Data Protection Officer / IT Compliance",
           "frequency": "Maintained continuously; formally reviewed quarterly",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s5-T2",
@@ -50,7 +66,11 @@
           "rationale": "Embedding compliance checks in operational workflows ensures principles are considered at design stage rather than retrospectively",
           "owner": "IT / Product / Legal",
           "frequency": "Per new project or material change",
-          "priority": "High"
+          "priority": "High",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -63,7 +83,11 @@
           "rationale": "Organisational accountability is a prerequisite for systemic compliance; the Commissioner treats absence of a DPO as an aggravating factor in enforcement",
           "owner": "Board / CEO",
           "frequency": "At establishment; reviewed annually",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s5-G2",
@@ -71,7 +95,11 @@
           "rationale": "A Board-approved policy creates the governance framework within which operational compliance is embedded",
           "owner": "Board / DPO",
           "frequency": "Annual review",
-          "priority": "High"
+          "priority": "High",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s5-G3",
@@ -79,7 +107,35 @@
           "rationale": "Regular reporting ensures senior leadership has visibility of compliance posture and can resource remediation efforts promptly",
           "owner": "DPO",
           "frequency": "Quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s5",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s5-CG1",
+          "requirement": "Maintain Records of Processing Activities (ROPA) documenting all processing activities with purposes, data categories, recipients, transfers, retention periods, and security measures; update within 30 days of material changes",
+          "rationale": "General Code 2022, cop-gen-s2 — ROPA requirement under s5",
+          "owner": "DPO",
+          "frequency": "Ongoing; formally reviewed quarterly",
+          "priority": "Critical",
+          "source": "cop-gen-s2",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s5-CG2",
+          "requirement": "Maintain copy of applicable Code(s) of Practice; ensure senior management awareness; review Code compliance annually",
+          "rationale": "General Code 2022, cop-gen-s1 — Code application under s5",
+          "owner": "DPO / Compliance",
+          "frequency": "Annual",
+          "priority": "High",
+          "source": "cop-gen-s1",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -98,7 +154,11 @@
           "rationale": "Consent is the primary lawful basis under PDPA; failure to have any lawful basis constitutes an offence under s5(3) with penalties up to RM1,000,000 or 3 years imprisonment",
           "owner": "Data Protection Officer / Legal Counsel",
           "frequency": "Per processing activity",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s6-L2",
@@ -106,7 +166,11 @@
           "rationale": "The 2024 Amendment aligned the consent definition with international best practice; invalid consent is treated as no consent for enforcement purposes",
           "owner": "Legal Counsel / Marketing / Product",
           "frequency": "Reviewed at each consent collection mechanism review",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s6-L3",
@@ -114,7 +178,11 @@
           "rationale": "The LIA is the evidentiary foundation for the legitimate interests basis; absence of a documented LIA prevents reliance on this basis in enforcement proceedings",
           "owner": "Legal Counsel / DPO",
           "frequency": "Per processing activity relying on legitimate interests",
-          "priority": "High"
+          "priority": "High",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s6-L4",
@@ -122,7 +190,71 @@
           "rationale": "Section 38 provides a right to withdraw consent; failure to honour withdrawal while continuing to process constitutes ongoing contravention of s6",
           "owner": "DPO / Operations / IT",
           "frequency": "Ongoing",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s6-CG1",
+          "requirement": "Identify and document lawful basis for each processing activity in ROPA before processing begins; retrospective identification not permitted",
+          "rationale": "General Code 2022, cop-gen-s3 — lawful basis documentation under s6",
+          "owner": "DPO / Legal",
+          "frequency": "Before each new processing activity",
+          "priority": "Critical",
+          "source": "cop-gen-s3",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s6-L1"
+        },
+        {
+          "id": "s6-CG2",
+          "requirement": "Implement consent management framework: freely given, specific, informed, unambiguous consent through clear affirmative act; no pre-ticked boxes; granular per purpose; withdraw as easily as given",
+          "rationale": "General Code 2022, cop-gen-s4 — consent management under s6",
+          "owner": "DPO / IT",
+          "frequency": "Ongoing; withdrawal actioned within 7 days",
+          "priority": "Critical",
+          "source": "cop-gen-s4",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s6-L2"
+        },
+        {
+          "id": "s6-CG3",
+          "requirement": "For legitimate interests basis: conduct and retain documented Legitimate Interest Assessment using three-part test (purpose, necessity, balance)",
+          "rationale": "General Code 2022, cop-gen-s3 — LIA requirement under s6",
+          "owner": "DPO / Legal",
+          "frequency": "Per processing activity relying on legitimate interests",
+          "priority": "High",
+          "source": "cop-gen-s3",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s6-CS-BNK1",
+          "requirement": "For banking: identify lawful basis for customer data including product offerings, credit assessment, and regulatory reporting under FSA/IFSA",
+          "rationale": "Banking Code 2022, cop-bank-s3 — sector-specific lawful basis under s6",
+          "owner": "Compliance / DPO",
+          "frequency": "Per processing activity",
+          "priority": "High",
+          "source": "cop-bank-s3",
+          "sourceType": "sector-code",
+          "sector": "banking",
+          "tightens": "s6-CG1"
+        },
+        {
+          "id": "s6-CS-HLT1",
+          "requirement": "For healthcare: obtain granular patient consent separately for treatment, billing, insurance disclosure, and research; emergency processing under vital interests must be documented",
+          "rationale": "Healthcare Code 2022, cop-health-s2 — patient consent under s6",
+          "owner": "Clinical Admin / DPO",
+          "frequency": "At patient registration; per new purpose",
+          "priority": "Critical",
+          "source": "cop-health-s2",
+          "sourceType": "sector-code",
+          "sector": "healthcare",
+          "tightens": "s6-CG2"
         }
       ]
     },
@@ -135,7 +267,11 @@
           "rationale": "The data user bears the burden of proving valid consent; an auditable CMP provides the evidentiary record required for JPDP inspections",
           "owner": "IT / Product",
           "frequency": "Implemented before processing commences; maintained continuously",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s6-T2",
@@ -143,7 +279,11 @@
           "rationale": "Technical implementation must reflect the legal requirements of freely given, specific, and unambiguous consent",
           "owner": "Product / IT / UX",
           "frequency": "At design and on each UI change",
-          "priority": "High"
+          "priority": "High",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s6-T3",
@@ -151,7 +291,11 @@
           "rationale": "The register enables the organisation to demonstrate a lawful basis for every processing activity during a JPDP inspection",
           "owner": "DPO / IT Compliance",
           "frequency": "Updated per new processing activity; reviewed quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -164,7 +308,11 @@
           "rationale": "Embedding lawful basis assessment in the governance workflow prevents processing without a basis, which is the most fundamental PDPA violation",
           "owner": "DPO / Legal",
           "frequency": "Per new processing activity",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s6-G2",
@@ -172,7 +320,11 @@
           "rationale": "Staff awareness is essential to prevent inadvertent processing without a lawful basis, particularly in customer-facing and marketing teams",
           "owner": "HR / DPO",
           "frequency": "Annual; at onboarding for new staff",
-          "priority": "High"
+          "priority": "High",
+          "source": "s6",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -191,7 +343,11 @@
           "rationale": "Each missing element is a separate point of non-compliance with the Notice and Choice Principle, prosecutable under s5(3)",
           "owner": "Legal Counsel / DPO / Marketing",
           "frequency": "At each data collection point; reviewed annually",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s7-L2",
@@ -199,7 +355,11 @@
           "rationale": "Section 7(3) mandates bilingual notice; a notice in only one language does not satisfy the legal requirement",
           "owner": "Legal Counsel / Communications",
           "frequency": "At each notice review; at least annually",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s7-L3",
@@ -207,7 +367,11 @@
           "rationale": "Section 7(2) requires a meaningful choice mechanism; conditioning service access on acceptance of non-essential processing renders consent non-freely given under s2",
           "owner": "Legal Counsel / Product / Marketing",
           "frequency": "At each consent and notice review",
-          "priority": "High"
+          "priority": "High",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -220,7 +384,11 @@
           "rationale": "Layered notices balance user experience with legal completeness; the comprehensive policy must be accessible and substantively complete to satisfy s7",
           "owner": "Product / Legal / UX",
           "frequency": "At design; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s7-T2",
@@ -228,7 +396,11 @@
           "rationale": "Version records are critical evidence if a data subject disputes whether they received adequate notice; regulators may request notice history during investigations",
           "owner": "IT / Product / Legal",
           "frequency": "Maintained continuously",
-          "priority": "High"
+          "priority": "High",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s7-T3",
@@ -236,7 +408,107 @@
           "rationale": "A nominal opt-out mechanism that is technically ineffective does not satisfy s7(2); the system must suppress processing for opted-out individuals",
           "owner": "IT / Marketing Technology",
           "frequency": "At implementation; tested quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-GL1",
+          "requirement": "Include all 8 mandatory elements in data protection notices: data types, purposes, sources, rights, disclosures, transfers, obligatory/voluntary, identity",
+          "rationale": "DPN Guideline, dpn-1/2 — mandatory notice content under s7",
+          "owner": "DPO / Legal",
+          "frequency": "At each notice creation/revision",
+          "priority": "Critical",
+          "source": "dpn-2",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": "s7-T1"
+        },
+        {
+          "id": "s7-GL2",
+          "requirement": "Provide notices in both Bahasa Malaysia and English; BM prevails on inconsistency; translations must be professionally prepared",
+          "rationale": "DPN Guideline, dpn-3 — language requirements under s7",
+          "owner": "DPO / Legal / Marketing",
+          "frequency": "At each notice creation/revision",
+          "priority": "High",
+          "source": "dpn-3",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-GL3",
+          "requirement": "Deliver notice at/before collection or within 7 days for indirect collection; notify material changes before new processing begins",
+          "rationale": "DPN Guideline, dpn-4 — timing requirements under s7",
+          "owner": "DPO / Operations",
+          "frequency": "At each collection point; per material change",
+          "priority": "Critical",
+          "source": "dpn-4",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": "s7-T2"
+        },
+        {
+          "id": "s7-GL4",
+          "requirement": "Implement layered notice approach with short first-layer notice and full notice accessible within one click; first layer must not be misleading",
+          "rationale": "DPN Guideline, dpn-5 — layered notices under s7",
+          "owner": "UX / DPO",
+          "frequency": "At each digital notice implementation",
+          "priority": "Medium",
+          "source": "dpn-5",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-GL5",
+          "requirement": "For minors: age-appropriate language, parental consent for under-13; for disabilities: accessible formats (WCAG 2.1 AA); for vulnerable persons: defer notice until able to understand",
+          "rationale": "DPN Guideline, dpn-6 — special categories under s7",
+          "owner": "DPO / UX",
+          "frequency": "At each notice creation for vulnerable groups",
+          "priority": "High",
+          "source": "dpn-6",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-GL6",
+          "requirement": "For direct marketing: express statement of marketing purpose, prominent opt-out mechanism, separate granular consent per channel (email, SMS, phone), act on opt-out within 7 days",
+          "rationale": "DPN Guideline, dpn-7 — direct marketing notices under s7",
+          "owner": "Marketing / DPO",
+          "frequency": "Per marketing activity",
+          "priority": "High",
+          "source": "dpn-7",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-GL7",
+          "requirement": "Review notices at least annually; archive previous versions for minimum 3 years; notify affected data subjects of material changes directly",
+          "rationale": "DPN Guideline, dpn-8 — review and update under s7",
+          "owner": "DPO",
+          "frequency": "Annual minimum; per material change",
+          "priority": "High",
+          "source": "dpn-8",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-CS-COM1",
+          "requirement": "For communications: provide specific subscriber notices for SIM registration data, CDR collection, and location data processing; digital delivery acceptable",
+          "rationale": "Communications Code 2022, cop-comms-s4 — subscriber notices under s7",
+          "owner": "Compliance / Marketing",
+          "frequency": "At subscriber registration",
+          "priority": "High",
+          "source": "cop-comms-s4",
+          "sourceType": "sector-code",
+          "sector": "communications",
+          "tightens": "s7-GL1"
         }
       ]
     },
@@ -249,7 +521,11 @@
           "rationale": "An outdated privacy notice that does not reflect current processing activities is a standing non-compliance with s7(1)(b) and (c)",
           "owner": "DPO / Legal",
           "frequency": "Event-triggered and annual",
-          "priority": "High"
+          "priority": "High",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s7-G2",
@@ -257,7 +533,35 @@
           "rationale": "Existing data subjects must be informed of material changes to processing purposes or disclosures; passive publication of an updated notice is insufficient",
           "owner": "DPO / Marketing / CRM",
           "frequency": "Per notice update",
-          "priority": "High"
+          "priority": "High",
+          "source": "s7",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-CG1",
+          "requirement": "Adopt layered notice approach; DPO reviews and approves all notices before issue; ensure notices comply with Regulations and DPN Guideline",
+          "rationale": "General Code 2022, cop-gen-s5 — notice governance under s7",
+          "owner": "DPO",
+          "frequency": "Per notice creation/revision",
+          "priority": "High",
+          "source": "cop-gen-s5",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s7-CG2",
+          "requirement": "Ensure digital notices meet WCAG 2.1 AA accessibility standards; provide notices in BM and EN at point of collection",
+          "rationale": "General Code 2022, cop-gen-s5 — accessible notices under s7",
+          "owner": "UX / DPO",
+          "frequency": "At implementation; reviewed annually",
+          "priority": "Medium",
+          "source": "cop-gen-s5",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -276,7 +580,11 @@
           "rationale": "Unauthorised disclosure to third parties is among the most common and serious PDPA violations; each disclosure to an unintended recipient is a separate breach",
           "owner": "Legal Counsel / DPO",
           "frequency": "Per disclosure event",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s8-L2",
@@ -284,7 +592,11 @@
           "rationale": "The disclosure register provides the evidentiary foundation for demonstrating compliance with s8 to JPDP inspectors and responding to data subject access requests",
           "owner": "DPO / Legal",
           "frequency": "Updated per new disclosure; reviewed quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s8-L3",
@@ -292,7 +604,71 @@
           "rationale": "Over-disclosure beyond the stated purpose breaches s8(1) and may also breach the General Principle; the minimum necessary standard applies to both the categories and volume of data shared",
           "owner": "DPO / Business Units",
           "frequency": "Per disclosure event",
-          "priority": "High"
+          "priority": "High",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s8-CG1",
+          "requirement": "Document all disclosure relationships in ROPA; execute DPAs with all data processors; restrict disclosures to minimum necessary for stated purpose",
+          "rationale": "General Code 2022, cop-gen-s6 — purpose limitation under s8",
+          "owner": "DPO / Legal / Procurement",
+          "frequency": "Per disclosure relationship; reviewed annually",
+          "priority": "Critical",
+          "source": "cop-gen-s6",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s8-L1"
+        },
+        {
+          "id": "s8-CG2",
+          "requirement": "Prohibit personal data sales without specific explicit consent; maintain disclosure log for regulated third-party disclosures; assess purpose compatibility for secondary uses",
+          "rationale": "General Code 2022, cop-gen-s6 — disclosure controls under s8",
+          "owner": "DPO / Legal",
+          "frequency": "Per disclosure event",
+          "priority": "High",
+          "source": "cop-gen-s6",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s8-CS-BNK1",
+          "requirement": "For banking: comply with credit bureau reporting requirements (CCRIS, CTOS); correct inaccurate reports within 14 days; maintain accessible dispute resolution process",
+          "rationale": "Banking Code 2022, cop-bank-s3/s5 — credit bureau disclosure under s8",
+          "owner": "Compliance / Operations",
+          "frequency": "Per report; 14-day correction SLA",
+          "priority": "High",
+          "source": "cop-bank-s3",
+          "sourceType": "sector-code",
+          "sector": "banking",
+          "tightens": "s8-CG1"
+        },
+        {
+          "id": "s8-CS-HLT1",
+          "requirement": "For healthcare: obtain specific consent for each insurance disclosure; referring to treating providers within treatment purpose does not require additional consent; research disclosures require ethics approval",
+          "rationale": "Healthcare Code 2022, cop-health-s4 — patient disclosure under s8",
+          "owner": "Clinical Admin / DPO",
+          "frequency": "Per disclosure event",
+          "priority": "High",
+          "source": "cop-health-s4",
+          "sourceType": "sector-code",
+          "sector": "healthcare",
+          "tightens": "s8-CG1"
+        },
+        {
+          "id": "s8-CS-INS1",
+          "requirement": "For insurance: share anti-fraud data with MTA/PIAM only as disclosed in privacy notice; fraud flagging must be based on reasonable grounds; data subjects must be able to challenge entries",
+          "rationale": "Insurance Code 2022, cop-ins-s4 — anti-fraud sharing under s8",
+          "owner": "Compliance / Fraud Unit",
+          "frequency": "Per sharing event",
+          "priority": "High",
+          "source": "cop-ins-s4",
+          "sourceType": "sector-code",
+          "sector": "insurance",
+          "tightens": "s8-CG1"
         }
       ]
     },
@@ -305,7 +681,11 @@
           "rationale": "Inadvertent or unauthorised disclosures often occur through uncontrolled channels; DLP provides a technical backstop against breaches of s8",
           "owner": "IT Security",
           "frequency": "Implemented continuously; policy reviewed quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s8-T2",
@@ -313,7 +693,11 @@
           "rationale": "API integrations can silently disclose personal data at scale; technical field-level controls aligned with contractual agreements prevent over-disclosure",
           "owner": "IT / Integration Team",
           "frequency": "At integration design; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -326,7 +710,11 @@
           "rationale": "Proactive governance of third-party disclosures prevents non-compliant sharing arrangements from being established without legal oversight",
           "owner": "DPO / Legal / Procurement",
           "frequency": "Per new third-party engagement",
-          "priority": "High"
+          "priority": "High",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s8-G2",
@@ -334,7 +722,11 @@
           "rationale": "Third-party relationships evolve; arrangements that were compliant at inception may become non-compliant if processing purposes change or agreements are not renewed",
           "owner": "DPO / Procurement / Legal",
           "frequency": "Annual",
-          "priority": "High"
+          "priority": "High",
+          "source": "s8",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -353,7 +745,11 @@
           "rationale": "Section 9(1) and the Personal Data Protection Standards 2015 (Security Standard) mandate a documented security policy; absence of a written policy is treated as per se non-compliance by JPDP",
           "owner": "DPO / CISO / Senior Management",
           "frequency": "Implemented; reviewed annually and after significant incidents",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s9-L2",
@@ -361,7 +757,11 @@
           "rationale": "Section 9(2) makes the data user responsible for the security of personal data processed by processors on its behalf; a breach at a processor's systems may constitute a violation by the data user",
           "owner": "DPO / Legal / Procurement",
           "frequency": "At processor engagement; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -374,7 +774,11 @@
           "rationale": "The Personal Data Protection Standards 2015 (Security Standard) requires encryption; unencrypted personal data on lost or stolen devices or intercepted in transit constitutes a security failure under s9",
           "owner": "IT Security / CISO",
           "frequency": "Implemented; reviewed at technology refresh",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s9-T2",
@@ -382,7 +786,11 @@
           "rationale": "Excessive access rights are among the most common causes of data breaches; the Security Standard requires access controls and regular access reviews",
           "owner": "IT Security / IT Operations",
           "frequency": "Access reviews quarterly; MFA enforcement ongoing",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s9-T3",
@@ -390,7 +798,11 @@
           "rationale": "Periodic assessments demonstrate the 'practical steps' standard under s9(1); unaddressed known vulnerabilities are evidence of failure to take practical steps",
           "owner": "IT Security / CISO",
           "frequency": "Annual; additional assessments after significant changes",
-          "priority": "High"
+          "priority": "High",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s9-T4",
@@ -398,7 +810,227 @@
           "rationale": "Detection capability is a prerequisite for timely breach notification under s143A; failure to detect a breach in a timely manner may indicate failure to take practical steps under s9",
           "owner": "IT Security / SOC",
           "frequency": "Implemented continuously; monitoring reviewed quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST1",
+          "requirement": "Implement unique user credentials with role-based access control; enforce MFA for systems processing 1,000+ data subjects or sensitive personal data",
+          "rationale": "Electronic Security Standard 2015, esec-2 — mandatory minimum under s9",
+          "owner": "IT Security / CISO",
+          "frequency": "Ongoing; annual access reviews",
+          "priority": "Critical",
+          "source": "esec-2",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s9-T1"
+        },
+        {
+          "id": "s9-ST2",
+          "requirement": "Encrypt personal data at rest using AES-256 on portable devices and cloud storage; enforce TLS 1.2+ for all data in transit over public networks",
+          "rationale": "Electronic Security Standard 2015, esec-3 — mandatory minimum under s9",
+          "owner": "IT Security / Infrastructure",
+          "frequency": "Ongoing; key rotation per schedule",
+          "priority": "Critical",
+          "source": "esec-3",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s9-T2"
+        },
+        {
+          "id": "s9-ST3",
+          "requirement": "Implement firewalls, IDS/IPS, and network segmentation for systems processing sensitive data; conduct quarterly vulnerability scans; apply critical patches within 14 days",
+          "rationale": "Electronic Security Standard 2015, esec-4 — mandatory minimum under s9",
+          "owner": "IT Security / Network Operations",
+          "frequency": "Quarterly scans; patches per schedule",
+          "priority": "Critical",
+          "source": "esec-4",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s9-T3"
+        },
+        {
+          "id": "s9-ST4",
+          "requirement": "Maintain a documented Incident Response Plan with designated team, incident register, escalation to s143A process, and annual testing through tabletop exercises",
+          "rationale": "Electronic Security Standard 2015, esec-5 — mandatory minimum under s9",
+          "owner": "CISO / Incident Response Team",
+          "frequency": "IRP reviewed annually; tested annually",
+          "priority": "Critical",
+          "source": "esec-5",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST5",
+          "requirement": "Conduct due diligence on cloud/third-party processors for ISO 27001 or SOC 2; include security clauses and audit rights in contracts; ensure end-of-contract data deletion",
+          "rationale": "Electronic Security Standard 2015, esec-6 — mandatory minimum under s9",
+          "owner": "Procurement / IT Security",
+          "frequency": "At onboarding; annual review",
+          "priority": "High",
+          "source": "esec-6",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST6",
+          "requirement": "Deliver security awareness training at induction and annually; include phishing awareness; retain training records for minimum 3 years",
+          "rationale": "Electronic Security Standard 2015, esec-7 — mandatory minimum under s9",
+          "owner": "HR / IT Security",
+          "frequency": "At induction; annual refresher",
+          "priority": "High",
+          "source": "esec-7",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST7",
+          "requirement": "Secure physical records in lockable cabinets/access-controlled rooms; implement visitor management and clean desk policy",
+          "rationale": "Non-Electronic Security Standard 2015, nesec-2 — mandatory minimum under s9",
+          "owner": "Facilities / Office Management",
+          "frequency": "Ongoing; quarterly checks",
+          "priority": "High",
+          "source": "nesec-2",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST8",
+          "requirement": "Apply sensitivity labeling to physical documents; log all removals; use tamper-evident packaging for transport",
+          "rationale": "Non-Electronic Security Standard 2015, nesec-3 — mandatory minimum under s9",
+          "owner": "Records Management",
+          "frequency": "Ongoing",
+          "priority": "Medium",
+          "source": "nesec-3",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST9",
+          "requirement": "Dispose of physical records via cross-cut shredding (DIN 66399 P-4+) or certified destruction; retain disposal certificates for 3 years",
+          "rationale": "Non-Electronic Security Standard 2015, nesec-4 — mandatory minimum under s9",
+          "owner": "Records Management / Facilities",
+          "frequency": "Per retention schedule",
+          "priority": "High",
+          "source": "nesec-4",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-ST10",
+          "requirement": "Retain access logs for minimum 12 months; conduct annual access right reviews and prompt revocation upon role change or termination",
+          "rationale": "Electronic Security Standard 2015, esec-2 — access log retention minimum",
+          "owner": "IT Security",
+          "frequency": "Annual reviews; ongoing revocation",
+          "priority": "High",
+          "source": "esec-2",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s9-ST1"
+        },
+        {
+          "id": "s9-ST11",
+          "requirement": "Document encryption key management procedures; implement key rotation schedule; store keys separately from encrypted data",
+          "rationale": "Electronic Security Standard 2015, esec-3 — key management requirement",
+          "owner": "IT Security / Infrastructure",
+          "frequency": "Per key rotation schedule",
+          "priority": "High",
+          "source": "esec-3",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s9-ST2"
+        },
+        {
+          "id": "s9-CS-BNK1",
+          "requirement": "For banking: implement MFA per BNM RMiT; comply with PCI DSS for cardholder data; implement SWIFT CSP for interbank messaging; dual breach reporting to Commissioner and BNM",
+          "rationale": "Banking Code 2022, cop-bank-s6 — enhanced banking security under s9",
+          "owner": "IT Security / Compliance",
+          "frequency": "Ongoing; annual PCI DSS assessment",
+          "priority": "Critical",
+          "source": "cop-bank-s6",
+          "sourceType": "sector-code",
+          "sector": "banking",
+          "tightens": "s9-ST1"
+        },
+        {
+          "id": "s9-CS-HLT1",
+          "requirement": "For healthcare: EHR systems must use AES-256 encryption at rest and TLS 1.2+ in transit; implement 2FA for EHR access; auto-logout after 10 minutes; break-glass emergency access with automatic privacy officer alert",
+          "rationale": "Healthcare Code 2022, cop-health-s3 — EHR security under s9",
+          "owner": "IT Security / Clinical IT",
+          "frequency": "Ongoing; annual pen testing",
+          "priority": "Critical",
+          "source": "cop-health-s3",
+          "sourceType": "sector-code",
+          "sector": "healthcare",
+          "tightens": "s9-ST2"
+        },
+        {
+          "id": "s9-CS-COM1",
+          "requirement": "For communications: segregate subscriber data systems from internet-facing systems; implement SIEM for real-time monitoring; penetration test twice yearly; share threat intelligence with MCMC",
+          "rationale": "Communications Code 2022, cop-comms-s5 — network security under s9",
+          "owner": "IT Security / Network Operations",
+          "frequency": "Ongoing; pen test twice yearly",
+          "priority": "Critical",
+          "source": "cop-comms-s5",
+          "sourceType": "sector-code",
+          "sector": "communications",
+          "tightens": "s9-ST3"
+        },
+        {
+          "id": "s9-CS-INS1",
+          "requirement": "For insurance: encrypt all health data at rest and in transit; DPIA before telematics/wearable/AI underwriting; ensure loss adjusters and investigators have DPAs; dual breach reporting to Commissioner and BNM",
+          "rationale": "Insurance Code 2022, cop-ins-s5 — insurance data security under s9",
+          "owner": "IT Security / Compliance",
+          "frequency": "Ongoing; DPIA per new technology",
+          "priority": "Critical",
+          "source": "cop-ins-s5",
+          "sourceType": "sector-code",
+          "sector": "insurance",
+          "tightens": "s9-ST2"
+        },
+        {
+          "id": "s9-CS-AVI1",
+          "requirement": "For aviation: MFA for all reservation systems (DCS, GDS); encrypted PNR transmission; annual security assessments; incident response for mass passenger data breach scenarios",
+          "rationale": "Aviation Code 2022, cop-avi-s5 — passenger data security under s9",
+          "owner": "IT Security / Aviation Operations",
+          "frequency": "Ongoing; annual security assessment",
+          "priority": "Critical",
+          "source": "cop-avi-s5",
+          "sourceType": "sector-code",
+          "sector": "aviation",
+          "tightens": "s9-ST1"
+        },
+        {
+          "id": "s9-CS-ELC1",
+          "requirement": "For electricity: segregate AMI/MDMS networks; encrypt smart meter communications; implement MFA for MDMS access; IRP covering AMI network attack scenarios",
+          "rationale": "Electricity Code 2022, cop-elec-s5 — AMI security under s9",
+          "owner": "IT Security / Grid Operations",
+          "frequency": "Ongoing; annual security assessment",
+          "priority": "High",
+          "source": "cop-elec-s5",
+          "sourceType": "sector-code",
+          "sector": "electricity",
+          "tightens": "s9-ST3"
+        },
+        {
+          "id": "s9-CS-WTR1",
+          "requirement": "For water: implement access controls, encrypted storage, MFA for consumer portals, cross-cut shredding of paper records, annual IRP testing",
+          "rationale": "Water Code 2022, cop-water-s5 — consumer data security under s9",
+          "owner": "IT / Facilities",
+          "frequency": "Ongoing; annual IRP test",
+          "priority": "High",
+          "source": "cop-water-s5",
+          "sourceType": "sector-code",
+          "sector": "water",
+          "tightens": "s9-ST7"
         }
       ]
     },
@@ -411,7 +1043,11 @@
           "rationale": "An untested incident response plan is unlikely to function effectively in a real breach; the Commissioner treats failure to have an IRP as evidence of inadequate security governance",
           "owner": "DPO / CISO / Legal",
           "frequency": "Annual tabletop exercise; updated after each incident",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s9-G2",
@@ -419,7 +1055,47 @@
           "rationale": "Human error is the leading cause of data breaches; staff training is explicitly referenced in the Personal Data Protection Standards 2015 as a security measure",
           "owner": "HR / DPO / CISO",
           "frequency": "Annual; at onboarding",
-          "priority": "High"
+          "priority": "High",
+          "source": "s9",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-GL1",
+          "requirement": "Integrate breach detection and response obligations from DBN Guideline into security operations: incident logging, escalation procedures, and IRP alignment with s143A notification timelines",
+          "rationale": "DBN Guideline 2025, dbn-2/3 — security-to-breach response integration under s9",
+          "owner": "CISO / DPO",
+          "frequency": "Ongoing; IRP reviewed annually",
+          "priority": "High",
+          "source": "dbn-2",
+          "sourceType": "guideline",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s9-CG1",
+          "requirement": "Implement formal information security policy approved by senior management; conduct DPIAs for high-risk processing; embed privacy by design in new products/services; produce annual management data protection report",
+          "rationale": "General Code 2022, cop-gen-s7 — security governance under s9",
+          "owner": "CISO / DPO / Board",
+          "frequency": "Annual review; DPIA per high-risk activity",
+          "priority": "Critical",
+          "source": "cop-gen-s7",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s9-G1"
+        },
+        {
+          "id": "s9-CG2",
+          "requirement": "Implement supplier security management framework for all third parties processing personal data; conduct annual penetration testing for high-risk systems",
+          "rationale": "General Code 2022, cop-gen-s7 — supplier and testing governance under s9",
+          "owner": "IT Security / Procurement",
+          "frequency": "Annual pen testing; supplier reviews per schedule",
+          "priority": "High",
+          "source": "cop-gen-s7",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -438,7 +1114,11 @@
           "rationale": "Section 10(1) prohibits retention beyond the necessary period; an undocumented retention practice is not auditable and cannot demonstrate compliance to JPDP",
           "owner": "DPO / Legal / Records Management",
           "frequency": "Established; reviewed annually",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s10",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s10-L2",
@@ -446,15 +1126,23 @@
           "rationale": "Retention beyond the necessary period is an offence under s5(3); indefinite retention without a legal basis is a standing violation; the disposal method must be appropriate to the sensitivity of the data",
           "owner": "DPO / IT / Records Management",
           "frequency": "Ongoing; disposal events documented",
-          "priority": "High"
+          "priority": "High",
+          "source": "s10",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s10-L3",
           "requirement": "Align the retention schedule with all applicable legal, regulatory, and contractual retention obligations (e.g., tax records under the Income Tax Act, employment records under the Employment Act, AML records under AMLA), and document the basis for any retention extending beyond the PDPA minimum necessary period",
-          "rationale": "Where a separate law requires longer retention, that law provides the legal basis for extended retention; the data user must identify and document this basis",
+          "rationale": "Where a separate law requires longer retention, that law provides the legal basis for extended retention; the data user must identify and document this basis to demonstrate that extended retention is not arbitrary",
           "owner": "Legal Counsel / DPO",
           "frequency": "At schedule creation; reviewed on any change in applicable law",
-          "priority": "High"
+          "priority": "High",
+          "source": "s10",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -463,11 +1151,15 @@
       "requirements": [
         {
           "id": "s10-T1",
-          "requirement": "Configure automated data lifecycle management controls in all primary systems processing personal data to flag or delete personal data upon expiry of the applicable retention period",
+          "requirement": "Configure automated data lifecycle management controls in all primary systems processing personal data, including CRM, HR, financial, and marketing platforms, to flag or delete personal data upon expiry of the applicable retention period",
           "rationale": "Manual retention enforcement is error-prone and does not scale; automated controls provide reliable and auditable enforcement of the retention schedule",
           "owner": "IT / Data Management",
           "frequency": "Implemented; retention rules reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s10",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s10-T2",
@@ -475,7 +1167,131 @@
           "rationale": "Disposal logs provide evidence that the organisation has complied with its retention schedule; they are a key document requested by JPDP inspectors",
           "owner": "IT / Records Management",
           "frequency": "Per disposal event",
-          "priority": "High"
+          "priority": "High",
+          "source": "s10",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s10-ST1",
+          "requirement": "Establish a documented retention schedule per data category specifying retention period, legal basis, trigger event, and disposal method; review annually",
+          "rationale": "Retention Standard 2015, ret-2 — mandatory minimum under s10",
+          "owner": "DPO / Records Management",
+          "frequency": "Annual review",
+          "priority": "Critical",
+          "source": "ret-2",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s10-T1"
+        },
+        {
+          "id": "s10-ST2",
+          "requirement": "Apply sector-specific retention periods (banking 6yr, healthcare 7-25yr, employment 6yr, financial 7yr) where statutory minimums apply",
+          "rationale": "Retention Standard 2015, ret-3 — sector-specific periods under s10",
+          "owner": "Legal / Records Management",
+          "frequency": "Per retention schedule",
+          "priority": "High",
+          "source": "ret-3",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s10-ST3",
+          "requirement": "Implement secure electronic deletion using NIST 800-88 methods (cryptographic erasure or secure overwriting); maintain deletion logs with date, data description, method, and responsible officer",
+          "rationale": "Retention Standard 2015, ret-4 — secure deletion mandatory under s10",
+          "owner": "IT Operations / Records Management",
+          "frequency": "Per retention schedule",
+          "priority": "Critical",
+          "source": "ret-4",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s10-T2"
+        },
+        {
+          "id": "s10-ST4",
+          "requirement": "Implement legal hold procedures: formal written declarations, data segregation/flagging, 12-month reviews, and 30-day post-conclusion disposal",
+          "rationale": "Retention Standard 2015, ret-5 — legal hold procedures under s10",
+          "owner": "Legal Counsel / Records Management",
+          "frequency": "Per litigation event; 12-month reviews",
+          "priority": "High",
+          "source": "ret-5",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s10-CS-BNK1",
+          "requirement": "For banking: retain KYC/CDD records 6 years post-relationship (AMLA); transaction records 6 years; credit agreements 7 years; account statements 7 years; CCTV 90 days minimum",
+          "rationale": "Banking Code 2022, cop-bank-s7 — financial retention under s10",
+          "owner": "Compliance / Records Management",
+          "frequency": "Per retention schedule",
+          "priority": "Critical",
+          "source": "cop-bank-s7",
+          "sourceType": "sector-code",
+          "sector": "banking",
+          "tightens": "s10-ST2"
+        },
+        {
+          "id": "s10-CS-HLT1",
+          "requirement": "For healthcare: retain adult patient records 7 years post-treatment; minor records until age 25 or 7 years; surgical records 10 years; imaging 5 years; obstetric records 25 years",
+          "rationale": "Healthcare Code 2022, cop-health-s5 — medical records retention under s10",
+          "owner": "Medical Records / DPO",
+          "frequency": "Per retention schedule",
+          "priority": "Critical",
+          "source": "cop-health-s5",
+          "sourceType": "sector-code",
+          "sector": "healthcare",
+          "tightens": "s10-ST2"
+        },
+        {
+          "id": "s10-CS-COM1",
+          "requirement": "For communications: retain CDRs/billing data maximum 12 months; SIM registration data for subscription period plus 2 years; granular location history maximum 3 months without consent",
+          "rationale": "Communications Code 2022, cop-comms-s3/s4 — telecoms retention under s10",
+          "owner": "Compliance / Network Operations",
+          "frequency": "Per retention schedule",
+          "priority": "High",
+          "source": "cop-comms-s3",
+          "sourceType": "sector-code",
+          "sector": "communications",
+          "tightens": "s10-ST1"
+        },
+        {
+          "id": "s10-CS-INS1",
+          "requirement": "For insurance: retain underwriting records for policy term plus 7 years; claims records for settlement period plus 7 years; telematics data for operational period plus 2 years",
+          "rationale": "Insurance Code 2022, cop-ins-s2/s3 — insurance retention under s10",
+          "owner": "Compliance / Records",
+          "frequency": "Per retention schedule",
+          "priority": "High",
+          "source": "cop-ins-s2",
+          "sourceType": "sector-code",
+          "sector": "insurance",
+          "tightens": "s10-ST2"
+        },
+        {
+          "id": "s10-CS-ELC1",
+          "requirement": "For electricity: retain smart meter interval data maximum 13 months without consent; consumer account data 7 years post-relationship",
+          "rationale": "Electricity Code 2022, cop-elec-s2/s3 — utility retention under s10",
+          "owner": "IT / Records Management",
+          "frequency": "Per retention schedule",
+          "priority": "High",
+          "source": "cop-elec-s2",
+          "sourceType": "sector-code",
+          "sector": "electricity",
+          "tightens": "s10-ST1"
+        },
+        {
+          "id": "s10-CS-WTR1",
+          "requirement": "For water: retain billing records 7 years post-relationship; field service records maximum 5 years; CCTV from field vehicles maximum 30 days",
+          "rationale": "Water Code 2022, cop-water-s2/s3 — water utility retention under s10",
+          "owner": "Records Management",
+          "frequency": "Per retention schedule",
+          "priority": "Medium",
+          "source": "cop-water-s2",
+          "sourceType": "sector-code",
+          "sector": "water",
+          "tightens": "s10-ST1"
         }
       ]
     },
@@ -488,7 +1304,35 @@
           "rationale": "Retention decisions require business and legal judgement; assigning ownership ensures accountable decision-making rather than passive data accumulation",
           "owner": "DPO / Data Owners",
           "frequency": "Assigned at schedule creation; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s10",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s10-CG1",
+          "requirement": "Implement enterprise-wide retention schedule management with automated deletion where feasible; quarterly manual reviews where not; DPO sign-off on material changes",
+          "rationale": "General Code 2022, cop-gen-s8 — retention management under s10",
+          "owner": "DPO / Records Management",
+          "frequency": "Annual review; quarterly manual checks",
+          "priority": "High",
+          "source": "cop-gen-s8",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s10-G1"
+        },
+        {
+          "id": "s10-CG2",
+          "requirement": "Cross-reference retention schedule to statutory minimum retention requirements; communicate changes to all data custodians",
+          "rationale": "General Code 2022, cop-gen-s8 — statutory cross-referencing under s10",
+          "owner": "Legal / Records Management",
+          "frequency": "Annual review",
+          "priority": "Medium",
+          "source": "cop-gen-s8",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -499,7 +1343,7 @@
     "title": "Data Integrity Principle",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data user shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up-to-date, having regard to the purpose for which it is collected and used.",
+      "summary": "A data user shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up-to-date, having regard to the purpose for which it is collected and used. Data integrity obligations are continuous and must be supported by both technical and procedural controls.",
       "requirements": [
         {
           "id": "s11-L1",
@@ -507,7 +1351,11 @@
           "rationale": "Section 11 imposes a continuous obligation to maintain data accuracy; preventive validation at collection is more effective and less costly than correcting errors after the fact",
           "owner": "DPO / IT / Operations",
           "frequency": "At collection; maintained continuously",
-          "priority": "High"
+          "priority": "High",
+          "source": "s11",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s11-L2",
@@ -515,33 +1363,105 @@
           "rationale": "Section 11 requires that data be kept up-to-date having regard to its processing purpose; stale or incorrect data used in decisions affecting individuals breaches s11",
           "owner": "DPO / CRM / Operations",
           "frequency": "Ongoing",
-          "priority": "High"
+          "priority": "High",
+          "source": "s11",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "technical": {
-      "summary": "Data quality controls must be embedded in data collection interfaces and data management systems.",
+      "summary": "Data quality controls must be embedded in data collection interfaces and data management systems. Duplicate detection, validation rules, and data enrichment processes must support the accuracy obligation.",
       "requirements": [
         {
           "id": "s11-T1",
           "requirement": "Implement data quality controls in all systems containing personal data, including input validation rules, format checks, mandatory field enforcement, and duplicate detection mechanisms",
-          "rationale": "Technical data quality controls prevent inaccurate data from entering systems, reducing the compliance burden of ongoing correction",
+          "rationale": "Technical data quality controls prevent inaccurate data from entering systems in the first place, reducing the compliance burden of ongoing correction",
           "owner": "IT / Data Management",
           "frequency": "Implemented at system design; reviewed at system changes",
-          "priority": "High"
+          "priority": "High",
+          "source": "s11",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s11-T2",
           "requirement": "Implement a self-service data correction portal or process that allows data subjects to submit correction requests, tracks the status of requests, and ensures corrections are propagated to all systems containing the relevant personal data",
-          "rationale": "Section 32 provides a right to data correction; the technical mechanism must be capable of implementing corrections across all relevant systems",
+          "rationale": "Section 32 provides a right to data correction; the technical mechanism must be capable of implementing corrections across all relevant systems to satisfy the integrity principle",
           "owner": "IT / CRM / DPO",
           "frequency": "Implemented; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s11",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s11-ST1",
+          "requirement": "Implement data validation rules at collection points; verify identity documents where accuracy is critical; provide data subjects opportunity to review before submission",
+          "rationale": "Data Integrity Standard 2015, di-2 — accuracy at collection under s11",
+          "owner": "IT Development / Operations",
+          "frequency": "At each collection point; reviewed annually",
+          "priority": "High",
+          "source": "di-2",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s11-T1"
+        },
+        {
+          "id": "s11-ST2",
+          "requirement": "Conduct annual data quality audits; maintain change logs for minimum 12 months; implement multi-system reconciliation processes",
+          "rationale": "Data Integrity Standard 2015, di-3 — ongoing quality management under s11",
+          "owner": "Data Governance / IT",
+          "frequency": "Annual audits; ongoing monitoring",
+          "priority": "High",
+          "source": "di-3",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": "s11-T2"
+        },
+        {
+          "id": "s11-ST3",
+          "requirement": "Process correction requests within 21 days; propagate corrections to all systems; notify third parties within 14 days; allow statement of disagreement on refusal",
+          "rationale": "Data Integrity Standard 2015, di-4 — correction request handling under s11",
+          "owner": "DPO / Customer Service",
+          "frequency": "Per request; 21-day SLA",
+          "priority": "High",
+          "source": "di-4",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s11-ST4",
+          "requirement": "Test automated processing systems for accuracy and bias; maintain audit trails for automated decisions for minimum 12 months; provide mechanism for human review",
+          "rationale": "Data Integrity Standard 2015, di-5 — automated processing integrity under s11",
+          "owner": "IT Development / Data Science",
+          "frequency": "Before deployment; ongoing monitoring",
+          "priority": "High",
+          "source": "di-5",
+          "sourceType": "standard",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s11-CS-BNK1",
+          "requirement": "For banking: maintain KYC data accuracy through refresh cycles; correct inaccurate credit bureau data within 14 days of confirmation",
+          "rationale": "Banking Code 2022, cop-bank-s2/s3 — financial data integrity under s11",
+          "owner": "Compliance / Operations",
+          "frequency": "Per KYC refresh cycle; 14-day SLA",
+          "priority": "High",
+          "source": "cop-bank-s2",
+          "sourceType": "sector-code",
+          "sector": "banking",
+          "tightens": "s11-ST2"
         }
       ]
     },
     "governance": {
-      "summary": "Data quality governance must assign ownership of data accuracy to business process owners, with periodic data quality audits and clear procedures for handling correction requests.",
+      "summary": "Data quality governance must assign ownership of data accuracy to business process owners, with periodic data quality audits and clear procedures for handling correction requests from data subjects.",
       "requirements": [
         {
           "id": "s11-G1",
@@ -549,7 +1469,35 @@
           "rationale": "Proactive quality audits demonstrate the 'reasonable steps' standard under s11 and prevent the accumulation of inaccurate data that could cause harm to data subjects",
           "owner": "Data Owners / DPO / IT",
           "frequency": "Quarterly audits",
-          "priority": "High"
+          "priority": "High",
+          "source": "s11",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s11-CG1",
+          "requirement": "Establish data quality framework with documented data quality rules, automated quality monitoring, quarterly quality reports, and root cause analysis for recurring issues",
+          "rationale": "General Code 2022, cop-gen-s9 — data quality framework under s11",
+          "owner": "Data Governance / DPO",
+          "frequency": "Quarterly reports; ongoing monitoring",
+          "priority": "High",
+          "source": "cop-gen-s9",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s11-G1"
+        },
+        {
+          "id": "s11-CG2",
+          "requirement": "Action correction requests within 21 days; analyse correction patterns for systemic data quality issues",
+          "rationale": "General Code 2022, cop-gen-s9 — correction management under s11",
+          "owner": "DPO / Customer Service",
+          "frequency": "Per request; 21-day SLA",
+          "priority": "High",
+          "source": "cop-gen-s9",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -560,7 +1508,7 @@
     "title": "Access Principle",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data user shall allow data subjects to access their personal data and correct any inaccuracies. The Access Principle is operationalised through ss 30-33.",
+      "summary": "A data user shall allow data subjects to access their personal data and correct any inaccuracies. The Access Principle is operationalised through ss 30-33, which establish the procedural framework for data access and correction requests. The principle creates an affirmative obligation to facilitate access, not merely to refrain from obstructing it.",
       "requirements": [
         {
           "id": "s12-L1",
@@ -568,7 +1516,11 @@
           "rationale": "Section 12 creates the right; ss 30-33 operationalise it; failure to have a procedure that can realistically handle requests within the statutory timeframe is non-compliance",
           "owner": "DPO / Legal / Operations",
           "frequency": "Established; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s12",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s12-L2",
@@ -576,7 +1528,11 @@
           "rationale": "Section 30 and s31 create enforceable rights; failure to respond to a valid access request within the prescribed period is an offence",
           "owner": "DPO / Operations",
           "frequency": "Per request",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s12",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -585,40 +1541,92 @@
       "requirements": [
         {
           "id": "s12-T1",
-          "requirement": "Implement a data subject request management system or workflow that tracks incoming access and correction requests, records dates, assigned handler, status, and response date, and alerts on approaching deadlines",
+          "requirement": "Implement a data subject request management system or workflow that tracks incoming access and correction requests, records the date received, assigned handler, status, and response date, and alerts on approaching deadlines",
           "rationale": "Manual tracking of data subject requests is error-prone; a formal tracking system prevents missed deadlines and provides the audit trail required for JPDP inspections",
           "owner": "IT / DPO / Operations",
           "frequency": "Implemented; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s12",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s12-T2",
           "requirement": "Maintain a data map identifying all systems and locations where personal data for different data subject categories is stored, enabling efficient search and retrieval across systems to respond to access requests within the 21-day period",
-          "rationale": "Without a comprehensive data map, access request responses may be incomplete; a data map is a prerequisite for efficient, accurate access request handling",
+          "rationale": "Without a comprehensive data map, access request responses may be incomplete, exposing the organisation to complaints; a data map is a prerequisite for efficient, accurate access request handling",
           "owner": "DPO / IT / Data Governance",
           "frequency": "Maintained continuously; formally reviewed quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s12",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "governance": {
-      "summary": "The organisation must designate a responsible function for managing data subject access and correction requests, with clear escalation procedures and regular reporting on request volumes and response times.",
+      "summary": "The organisation must designate a responsible function for managing data subject access and correction requests, with clear escalation procedures for complex or disputed requests, and regular reporting on request volumes and response times.",
       "requirements": [
         {
           "id": "s12-G1",
           "requirement": "Designate a named contact or team responsible for receiving, processing, and responding to data subject access and correction requests, and publish the contact details in the organisation's privacy notice",
-          "rationale": "Section 7(1)(d) requires the notice to include access request contact details; the designated contact ensures requests are routed correctly",
+          "rationale": "Section 7(1)(d) requires the notice to include access request contact details; the designated contact ensures requests are routed correctly and not lost",
           "owner": "DPO",
           "frequency": "Established; reviewed at any staff changes",
-          "priority": "High"
+          "priority": "High",
+          "source": "s12",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s12-G2",
-          "requirement": "Report request volumes, response times, and outcomes to the DPO monthly, and escalate any requests that cannot be fulfilled within the statutory timeframe for management decision",
+          "requirement": "Report request volumes, response times, and outcomes to the DPO monthly, and escalate any requests that cannot be fulfilled within the statutory timeframe for management decision on extension or partial fulfilment justification",
           "rationale": "Management oversight of request handling ensures systemic issues are identified and addressed before they result in enforcement action",
           "owner": "DPO / Operations",
           "frequency": "Monthly reporting",
-          "priority": "Medium"
+          "priority": "Medium",
+          "source": "s12",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s12-CG1",
+          "requirement": "Implement formal data subject rights management procedure: designated contact channel, proportionate identity verification, response within prescribed timeframes, requests log available for Commissioner inspection",
+          "rationale": "General Code 2022, cop-gen-s10 — data subject rights management under s12",
+          "owner": "DPO / Customer Service",
+          "frequency": "Ongoing; log maintained continuously",
+          "priority": "High",
+          "source": "cop-gen-s10",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": "s12-G1"
+        },
+        {
+          "id": "s12-CG2",
+          "requirement": "Train staff handling data subject requests on applicable legal requirements; identity verification must not be so burdensome as to prevent exercise of rights",
+          "rationale": "General Code 2022, cop-gen-s10 — rights training under s12",
+          "owner": "HR / DPO",
+          "frequency": "At onboarding; annual refresher",
+          "priority": "Medium",
+          "source": "cop-gen-s10",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s12-CS-HLT1",
+          "requirement": "For healthcare: provide patients copy of medical records (reasonable copying fee); clinical correction refusals must be documented with clinical reasons; treatment never conditional on waiving rights",
+          "rationale": "Healthcare Code 2022, cop-health-s8 — patient access rights under s12",
+          "owner": "Medical Records / DPO",
+          "frequency": "Per access request",
+          "priority": "High",
+          "source": "cop-health-s8",
+          "sourceType": "sector-code",
+          "sector": "healthcare",
+          "tightens": "s12-CG1"
         }
       ]
     }
@@ -633,32 +1641,44 @@
       "requirements": [
         {
           "id": "s13-L1",
-          "requirement": "Determine whether the organisation falls within any prescribed class of data users under the Personal Data Protection (Class of Data Users) Order 2013, and obtain registration before commencing processing of personal data",
+          "requirement": "Determine whether the organisation falls within any prescribed class of data users under the Personal Data Protection (Class of Data Users) Order 2013 (currently covering 11 industry sectors), and obtain registration before commencing processing of personal data",
           "rationale": "Processing without registration where required is an offence under s5(2); penalties were increased to RM1,000,000 or 3 years imprisonment by the 2024 Amendment",
           "owner": "Legal Counsel / Company Secretary",
           "frequency": "At establishment; on each material change of business",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s13",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s13-L2",
           "requirement": "Maintain a valid registration certificate and notify the Commissioner of any material changes to the information provided in the registration application within 14 days of the change",
-          "rationale": "Holding an expired or lapsed registration while continuing to process personal data constitutes the same offence as unregistered processing",
+          "rationale": "Holding an expired or lapsed registration while continuing to process personal data constitutes the same offence as unregistered processing; timely notification of changes is a legal obligation",
           "owner": "Legal Counsel / Company Secretary / DPO",
           "frequency": "Ongoing; change notification within 14 days of change",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s13",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s13-L3",
           "requirement": "Renew the registration certificate before its expiry date and maintain records of all historical registration certificates and renewal applications",
-          "rationale": "Lapse in registration renders all ongoing processing unlawful under s5(2); renewal should be initiated well before the expiry date",
+          "rationale": "Lapse in registration renders all ongoing processing unlawful under s5(2); renewal should be initiated well before the expiry date to avoid gaps in coverage",
           "owner": "Company Secretary / DPO",
           "frequency": "Before each expiry; renewal tracked in compliance calendar",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s13",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "technical": {
-      "summary": "The organisation must maintain accurate records of its registration status and automate renewal reminders to prevent inadvertent lapses.",
+      "summary": "The organisation must maintain accurate records of its registration status and automate renewal reminders to prevent inadvertent lapses. Registration details must align with actual processing activities.",
       "requirements": [
         {
           "id": "s13-T1",
@@ -666,7 +1686,11 @@
           "rationale": "Registration lapses are preventable with adequate advance notice; automated reminders remove reliance on manual calendar management",
           "owner": "Company Secretary / DPO / IT",
           "frequency": "Maintained continuously",
-          "priority": "High"
+          "priority": "High",
+          "source": "s13",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -675,19 +1699,27 @@
       "requirements": [
         {
           "id": "s13-G1",
-          "requirement": "Assign named responsibility for monitoring registration status, initiating renewals, and notifying the Commissioner of changes to a specific officer, with backup coverage documented",
-          "rationale": "Registration lapses frequently result from unclear ownership; designated responsibility with documented backup prevents gaps",
+          "requirement": "Assign named responsibility for monitoring registration status, initiating renewals, and notifying the Commissioner of changes to a specific officer (Company Secretary or DPO), with backup coverage documented",
+          "rationale": "Registration lapses frequently result from unclear ownership of the renewal process; designated responsibility with documented backup prevents gaps",
           "owner": "Company Secretary / DPO",
           "frequency": "Assigned at establishment; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s13",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s13-G2",
           "requirement": "Include a PDPA registration status review as a mandatory item in the organisation's annual compliance review, and verify that the registered particulars continue to accurately reflect the organisation's processing activities",
-          "rationale": "Registration particulars must reflect actual processing; misalignment may constitute a failure to notify changes as required",
+          "rationale": "Registration particulars must reflect actual processing; misalignment between registered activities and actual processing may constitute a failure to notify changes as required",
           "owner": "DPO / Legal / Company Secretary",
           "frequency": "Annual",
-          "priority": "High"
+          "priority": "High",
+          "source": "s13",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -698,36 +1730,48 @@
     "title": "Application for Registration",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 14 specifies the requirements for a valid registration application. The application must contain accurate particulars of the data user's processing activities, categories of personal data processed, and purposes of processing.",
+      "summary": "Section 14 specifies the requirements for a valid registration application. The application must contain accurate particulars of the data user's processing activities, categories of personal data processed, and purposes of processing. False or misleading information in an application is a separate offence.",
       "requirements": [
         {
           "id": "s14-L1",
-          "requirement": "Submit a complete and accurate registration application to the Commissioner containing all prescribed particulars, including the organisation's details, categories of personal data processed, and processing purposes",
-          "rationale": "An incomplete or inaccurate application may be rejected; providing false information is a separate criminal offence",
+          "requirement": "Submit a complete and accurate registration application to the Commissioner containing all prescribed particulars, including the organisation's details, categories of personal data processed, and processing purposes, and ensure the application is submitted in the prescribed form and manner",
+          "rationale": "An incomplete or inaccurate application may be rejected or may render the resulting registration invalid; providing false information is a separate criminal offence",
           "owner": "Legal Counsel / Company Secretary",
           "frequency": "At initial registration and at each renewal",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s14",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s14-L2",
           "requirement": "Ensure that all information provided in the registration application is consistent with the organisation's actual processing activities as documented in the ROPA, and review for consistency before submission",
-          "rationale": "Inconsistency between the registration application and actual processing activities may indicate unlawful processing of unregistered activities or provision of false information",
+          "rationale": "Inconsistency between the registration application and actual processing activities may indicate unlawful processing of unregistered activities or provision of false information to the Commissioner",
           "owner": "DPO / Legal",
           "frequency": "At each application submission",
-          "priority": "High"
+          "priority": "High",
+          "source": "s14",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "technical": {
-      "summary": "The registration application process must be supported by accurate internal documentation of processing activities.",
+      "summary": "The registration application process must be supported by accurate internal documentation of processing activities to ensure applications are complete and consistent with operational reality.",
       "requirements": [
         {
           "id": "s14-T1",
           "requirement": "Use the ROPA as the primary source document for preparing registration applications, ensuring that the ROPA is current and complete before any registration application or renewal is submitted",
-          "rationale": "The ROPA contains the detailed processing activity information needed to prepare an accurate registration application",
+          "rationale": "The ROPA contains the detailed processing activity information needed to prepare an accurate registration application; using the ROPA ensures consistency between registration particulars and operational practice",
           "owner": "DPO / IT",
           "frequency": "Before each application submission",
-          "priority": "High"
+          "priority": "High",
+          "source": "s14",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -740,7 +1784,103 @@
           "rationale": "Registration applications are legal documents; formal review prevents errors and creates an audit trail of the organisation's registration history",
           "owner": "Legal Counsel / DPO / Company Secretary",
           "frequency": "Per application submission",
-          "priority": "High"
+          "priority": "High",
+          "source": "s14",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
+        }
+      ]
+    }
+  },
+  "s29": {
+    "sectionId": "s29",
+    "part": "II",
+    "title": "Sensitive Personal Data",
+    "obligationType": "mandatory",
+    "legal": {
+      "summary": "Section 29 defines sensitive personal data (health, political opinions, religious beliefs, criminal history) requiring explicit consent and enhanced protections.",
+      "requirements": []
+    },
+    "technical": {
+      "summary": "Systems processing sensitive personal data must implement classification, access controls, encryption, and enhanced audit logging.",
+      "requirements": [
+        {
+          "id": "s29-CG2",
+          "requirement": "Tag/classify sensitive data separately in all systems; restrict access to need-to-know basis; implement enhanced audit logging with 24-month retention",
+          "rationale": "General Code 2022, cop-gen-s11 — sensitive data controls under s29",
+          "owner": "IT Security / Data Governance",
+          "frequency": "Ongoing; access reviewed quarterly",
+          "priority": "Critical",
+          "source": "cop-gen-s11",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
+        },
+        {
+          "id": "s29-CS-HLT1",
+          "requirement": "For healthcare: all patient data is sensitive by definition; require explicit consent per processing purpose (treatment, billing, insurance, research); emergency processing documented under vital interests",
+          "rationale": "Healthcare Code 2022, cop-health-s1/s2 — patient data classification under s29",
+          "owner": "Clinical Admin / DPO",
+          "frequency": "At registration; per new purpose",
+          "priority": "Critical",
+          "source": "cop-health-s1",
+          "sourceType": "sector-code",
+          "sector": "healthcare",
+          "tightens": "s29-CG1"
+        },
+        {
+          "id": "s29-CS-INS1",
+          "requirement": "For insurance: underwriting health data requires enhanced protections; genetic data access limited to named officers; health data must not be in general CRM systems; biometric auth data not cross-used for underwriting",
+          "rationale": "Insurance Code 2022, cop-ins-s7 — sensitive insurance data under s29",
+          "owner": "Compliance / IT Security",
+          "frequency": "Ongoing",
+          "priority": "Critical",
+          "source": "cop-ins-s7",
+          "sourceType": "sector-code",
+          "sector": "insurance",
+          "tightens": "s29-CG2"
+        },
+        {
+          "id": "s29-CS-AVI1",
+          "requirement": "For aviation: biometric data (facial recognition, fingerprint) requires explicit consent except for government-mandated immigration; encrypt templates at rest/transit; DPIA before deployment; no retention beyond session",
+          "rationale": "Aviation Code 2022, cop-avi-s3 — biometric data at airports under s29",
+          "owner": "Airport Operations / DPO",
+          "frequency": "DPIA per deployment; consent per use",
+          "priority": "Critical",
+          "source": "cop-avi-s3",
+          "sourceType": "sector-code",
+          "sector": "aviation",
+          "tightens": "s29-CG2"
+        },
+        {
+          "id": "s29-CS-COM1",
+          "requirement": "For communications: SIM registration data (incl. biometrics) treated as high-risk sensitive data; not used for commercial profiling without consent; unauthorized disclosure is serious offence under CMA and PDPA",
+          "rationale": "Communications Code 2022, cop-comms-s2 — SIM registration data under s29",
+          "owner": "Compliance / Network Operations",
+          "frequency": "Ongoing",
+          "priority": "Critical",
+          "source": "cop-comms-s2",
+          "sourceType": "sector-code",
+          "sector": "communications",
+          "tightens": "s29-CG2"
+        }
+      ]
+    },
+    "governance": {
+      "summary": "Sensitive data processing requires DPIA, explicit consent management, need-to-know access policies, and enhanced audit trail retention.",
+      "requirements": [
+        {
+          "id": "s29-CG1",
+          "requirement": "Identify all sensitive personal data in ROPA; apply additional access controls, encryption, and DPIA requirements; obtain explicit consent unless narrow exception applies",
+          "rationale": "General Code 2022, cop-gen-s11 — sensitive data handling under s29",
+          "owner": "DPO / Data Governance",
+          "frequency": "Ongoing; ROPA reviewed quarterly",
+          "priority": "Critical",
+          "source": "cop-gen-s11",
+          "sourceType": "general-code",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -751,31 +1891,43 @@
     "title": "Right of Access to Personal Data",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data subject has the right to access their personal data processed by the data user. Section 30 establishes the substantive right; section 31 governs the procedure for compliance.",
+      "summary": "A data subject has the right to access their personal data processed by the data user. Section 30 establishes the substantive right; section 31 governs the procedure for compliance. Refusal to provide access without lawful justification is an offence.",
       "requirements": [
         {
           "id": "s30-L1",
           "requirement": "Upon receipt of a valid data subject access request, provide the data subject with a copy of all personal data relating to them held by the organisation, within 21 days, in an intelligible form and in a language that the data subject can understand",
-          "rationale": "Section 30 creates an enforceable right; failure to provide access within the statutory period without lawful justification is an offence",
+          "rationale": "Section 30 creates an enforceable right; failure to provide access within the statutory period without lawful justification is an offence; the 21-day period begins on receipt of a valid request with the prescribed fee (if any)",
           "owner": "DPO / Operations",
           "frequency": "Per request",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s30",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s30-L2",
           "requirement": "Where access to some or all personal data is refused, provide the data subject with written notification of the refusal, the reasons for refusal, the specific exemption relied on, and information about the right to complain to the Commissioner",
-          "rationale": "Section 31(3) requires written notification of refusal with reasons; a refusal without written notification is treated as an unlawful refusal",
+          "rationale": "Section 31(3) requires written notification of refusal with reasons; a refusal without written notification and reasons is treated as an unlawful refusal",
           "owner": "DPO / Legal",
           "frequency": "Per refusal",
-          "priority": "High"
+          "priority": "High",
+          "source": "s30",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s30-L3",
           "requirement": "Implement identity verification procedures for data subject access requests to ensure personal data is not disclosed to an unauthorised person, while ensuring the verification process is not so burdensome as to discourage legitimate requests",
-          "rationale": "Disclosing personal data to an unauthorised requestor is a breach of s8; however, overly burdensome verification deters legitimate access requests",
+          "rationale": "Disclosing personal data to an unauthorised requestor is a breach of s8; however, overly burdensome verification that deters legitimate access requests undermines the right under s30",
           "owner": "DPO / Operations",
           "frequency": "Per request",
-          "priority": "High"
+          "priority": "High",
+          "source": "s30",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
@@ -784,32 +1936,44 @@
       "requirements": [
         {
           "id": "s30-T1",
-          "requirement": "Maintain documented data subject search procedures for each primary system containing personal data, specifying the search queries or export functions to use, data fields covered, and estimated time required",
-          "rationale": "Without documented procedures, access request responses may be inconsistent or incomplete; documented search procedures enable repeatable, auditable compliance",
+          "requirement": "Maintain documented data subject search procedures for each primary system containing personal data, specifying the search queries or export functions to use, the data fields covered, and the estimated time required, to enable efficient response to access requests",
+          "rationale": "Without documented procedures, access request responses may be inconsistent, incomplete, or missed; documented search procedures enable repeatable, auditable compliance",
           "owner": "IT / DPO",
           "frequency": "Documented at system onboarding; reviewed at system changes",
-          "priority": "High"
+          "priority": "High",
+          "source": "s30",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "governance": {
-      "summary": "The data subject access right must be embedded in the organisation's operational processes, with clear escalation procedures and management oversight.",
+      "summary": "The data subject access right must be embedded in the organisation's operational processes, with clear escalation procedures and management oversight of request handling performance.",
       "requirements": [
         {
           "id": "s30-G1",
-          "requirement": "Establish a data subject access request handling procedure document covering: receipt and logging, identity verification, search and compilation, legal review of exemptions, response preparation, dispatch, and record-keeping",
-          "rationale": "A documented procedure ensures consistent and auditable handling of access requests",
+          "requirement": "Establish a data subject access request handling procedure document covering: receipt and logging of requests, identity verification, search and compilation of data, legal review of exemptions, response preparation, dispatch, and record-keeping",
+          "rationale": "A documented procedure ensures consistent and auditable handling of access requests; it also demonstrates to the Commissioner that the organisation has taken the right seriously",
           "owner": "DPO / Legal / Operations",
           "frequency": "Established; reviewed annually",
-          "priority": "High"
+          "priority": "High",
+          "source": "s30",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s30-G2",
-          "requirement": "Track and report all data subject access requests to the DPO monthly, including request type, date received, date responded, and outcome, and use this data to identify process improvements",
-          "rationale": "Performance reporting enables management to identify bottlenecks before they result in statutory deadline breaches",
+          "requirement": "Track and report all data subject access requests to the DPO monthly, including request type, date received, date responded, and outcome (fulfilled, partially fulfilled, refused with reason), and use this data to identify process improvements",
+          "rationale": "Performance reporting on access request handling enables management to identify bottlenecks and address them before they result in statutory deadline breaches",
           "owner": "DPO",
           "frequency": "Monthly",
-          "priority": "Medium"
+          "priority": "Medium",
+          "source": "s30",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -820,49 +1984,65 @@
     "title": "Compliance with Data Access Request",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 31 establishes the procedural requirements for handling data subject access requests, including the maximum response time of 21 days.",
+      "summary": "Section 31 establishes the procedural requirements for handling data subject access requests, including the maximum response time of 21 days, the permissible fee, and the format of the response. Non-compliance within the statutory timeframe is an offence.",
       "requirements": [
         {
           "id": "s31-L1",
-          "requirement": "Comply with a valid data access request within 21 days of receipt, or apply to the Commissioner for an extension where compliance within 21 days is impracticable due to complexity or volume",
-          "rationale": "Section 31(2) sets the 21-day maximum; failure to comply without an approved extension is an offence",
+          "requirement": "Comply with a valid data access request within 21 days of receipt, or apply to the Commissioner for an extension where compliance within 21 days is impracticable due to the complexity or volume of the request",
+          "rationale": "Section 31(2) sets the 21-day maximum; failure to comply within this period without an approved extension is an offence; the 21-day clock starts on receipt of the request with all required particulars",
           "owner": "DPO / Operations",
           "frequency": "Per request",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s31",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s31-L2",
           "requirement": "Charge only the prescribed fee (if any) for processing data access requests and do not impose additional charges that effectively operate as a deterrent to exercising the access right",
-          "rationale": "Section 31 permits only the prescribed fee; excessive fees that deter legitimate access requests undermine the right under s30",
+          "rationale": "Section 31 permits only the prescribed fee; excessive fees that deter legitimate access requests undermine the right under s30 and may constitute a separate contravention",
           "owner": "DPO / Finance",
           "frequency": "Per request",
-          "priority": "Medium"
+          "priority": "Medium",
+          "source": "s31",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "technical": {
-      "summary": "The organisation's request management system must enforce the 21-day deadline with automated escalation alerts.",
+      "summary": "The organisation's request management system must enforce the 21-day deadline with automated escalation alerts, and must support the generation of structured data exports in an intelligible format.",
       "requirements": [
         {
           "id": "s31-T1",
           "requirement": "Configure the data subject request management system to automatically escalate requests to the DPO at day 14 if not yet responded to, and to flag any request approaching the 21-day deadline for senior management attention",
-          "rationale": "Automated escalation prevents deadline breaches caused by workload or oversight",
+          "rationale": "Automated escalation prevents deadline breaches caused by workload or oversight; 14-day escalation provides sufficient time for senior management to intervene",
           "owner": "IT / DPO",
           "frequency": "System configuration; tested quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s31",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "governance": {
-      "summary": "Governance of the access request process must ensure adequate resourcing to meet the 21-day deadline.",
+      "summary": "Governance of the access request process must ensure adequate resourcing to meet the 21-day deadline, with a documented escalation process for complex requests.",
       "requirements": [
         {
           "id": "s31-G1",
           "requirement": "Maintain a data subject access request log as a permanent record, retaining all requests, responses, and supporting documentation for at least 3 years after the request is closed",
-          "rationale": "The log provides evidence of compliance in the event of a data subject complaint to the Commissioner",
+          "rationale": "The log provides evidence of compliance in the event of a data subject complaint to the Commissioner; retention for 3 years covers the typical period within which complaints are brought",
           "owner": "DPO / Records Management",
           "frequency": "Continuous; retention applied per schedule",
-          "priority": "High"
+          "priority": "High",
+          "source": "s31",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -873,49 +2053,65 @@
     "title": "Right to Correct Personal Data",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data subject has the right to request the correction of inaccurate, incomplete, misleading, or outdated personal data. The data user must either make the correction or attach a correction statement, and must notify third parties of the correction.",
+      "summary": "A data subject has the right to request the correction of inaccurate, incomplete, misleading, or outdated personal data. The data user must either make the correction or attach a correction statement, and must notify third parties to whom the data was disclosed of the correction.",
       "requirements": [
         {
           "id": "s32-L1",
-          "requirement": "Upon receipt of a valid data correction request, either correct the personal data and notify the data subject and relevant third parties of the correction, or explain in writing why the data is not inaccurate and attach a correction statement where the data subject insists on annotation",
-          "rationale": "Section 32 creates an enforceable right to correction; failure to process a correction request is an offence",
+          "requirement": "Upon receipt of a valid data correction request, either correct the personal data and notify the data subject and relevant third parties of the correction, or explain in writing why the data is not inaccurate and attach a correction statement to the data where the data subject insists on annotation",
+          "rationale": "Section 32 creates an enforceable right to correction; failure to process a correction request is an offence; the data user cannot simply reject a correction request without explanation and annotation",
           "owner": "DPO / Operations",
           "frequency": "Per request",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s32",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s32-L2",
-          "requirement": "Notify all third parties to whom the inaccurate personal data was previously disclosed of the correction, to ensure that corrections are reflected in their records",
-          "rationale": "Section 32 requires notification to third parties; failure to do so means the correction is incomplete and third parties may continue making decisions based on inaccurate data",
+          "requirement": "Notify all third parties to whom the inaccurate personal data was previously disclosed of the correction, to ensure that the correction is reflected in their records and that decision-making based on the inaccurate data ceases",
+          "rationale": "Section 32 requires notification to third parties; failure to do so means the correction is incomplete and third parties may continue to make decisions based on inaccurate data, causing ongoing harm to the data subject",
           "owner": "DPO / Operations",
           "frequency": "Per correction event",
-          "priority": "High"
+          "priority": "High",
+          "source": "s32",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "technical": {
-      "summary": "Systems must support propagation of corrections across all locations where the affected data is held.",
+      "summary": "Systems must support propagation of corrections across all locations where the affected data is held, and must enable notification of third parties where personal data has been disclosed.",
       "requirements": [
         {
           "id": "s32-T1",
           "requirement": "Implement correction propagation procedures that ensure corrections made in the primary system are reflected in all downstream systems, data warehouses, backups, and third-party integrations where the affected personal data exists",
-          "rationale": "A correction that applies only to the primary system while inaccurate data persists in downstream systems does not satisfy s32 or the integrity obligation under s11",
+          "rationale": "A correction that applies only to the primary system while inaccurate data persists in downstream systems does not satisfy the integrity obligation under s11 or the correction right under s32",
           "owner": "IT / Data Management",
           "frequency": "Per correction event",
-          "priority": "High"
+          "priority": "High",
+          "source": "s32",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "governance": {
-      "summary": "The correction request process must include a clear dispute resolution pathway and maintain records of all correction requests and outcomes.",
+      "summary": "The correction request process must include a clear dispute resolution pathway for cases where the data user disagrees with the data subject's claim of inaccuracy, and must maintain records of all correction requests and outcomes.",
       "requirements": [
         {
           "id": "s32-G1",
-          "requirement": "Maintain a correction request log recording all correction requests received, the nature of the claimed inaccuracy, the organisation's response, the date of response, and third parties notified",
-          "rationale": "The log provides evidence of compliance and enables the DPO to identify systemic data quality issues",
+          "requirement": "Maintain a correction request log recording all correction requests received, the nature of the claimed inaccuracy, the organisation's response (corrected or annotation attached), the date of response, and third parties notified",
+          "rationale": "The log provides evidence of compliance in the event of a complaint; it also enables the DPO to identify systemic data quality issues requiring process improvements",
           "owner": "DPO / Operations",
           "frequency": "Per request",
-          "priority": "High"
+          "priority": "High",
+          "source": "s32",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
@@ -926,57 +2122,77 @@
     "title": "Processing by Data Processor",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Where a data user engages a data processor to process personal data on its behalf, the data user remains responsible for ensuring the processor processes data only on the data user's instructions and applies appropriate security measures. A written data processing agreement is mandatory.",
+      "summary": "Where a data user engages a data processor to process personal data on its behalf, the data user remains responsible for ensuring that the data processor processes the data only on the data user's instructions and applies appropriate security measures. A written data processing agreement is mandatory.",
       "requirements": [
         {
           "id": "s43-L1",
-          "requirement": "Execute a written data processing agreement (DPA) with every data processor engaged to process personal data on the organisation's behalf, prior to the commencement of processing, covering: instruction-only processing, confidentiality, security requirements, sub-processing restrictions, breach notification, and post-processing deletion or return",
-          "rationale": "Section 43 requires a written contract; absence of a DPA means the data user cannot simultaneously meet its obligations under s8, s9, and s43; a DPA is a fundamental compliance document",
+          "requirement": "Execute a written data processing agreement (DPA) with every data processor engaged to process personal data on the organisation's behalf, prior to the commencement of processing, covering: instruction-only processing, confidentiality obligations, security requirements, sub-processing restrictions, breach notification obligations, and post-processing deletion or return",
+          "rationale": "Section 43 requires a written contract; absence of a DPA means the data user cannot meet its obligations under s8, s9, and s43 simultaneously; a DPA is a fundamental compliance document",
           "owner": "Legal Counsel / DPO / Procurement",
           "frequency": "Before each processor engagement; renewed at contract renewal",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s43",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s43-L2",
           "requirement": "Restrict data processors contractually and technically to processing personal data only on the data user's documented instructions, and prohibit processors from processing the data for their own purposes or disclosing it to unauthorised third parties",
-          "rationale": "Section 43 requires instruction-only processing; a processor that processes data for its own purposes becomes a data user in its own right",
+          "rationale": "Section 43 requires instruction-only processing; a processor that processes data for its own purposes becomes a data user in its own right, creating additional legal complications",
           "owner": "Legal Counsel / DPO",
           "frequency": "At contract execution; monitored continuously",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s43",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s43-L3",
           "requirement": "Conduct periodic due diligence reviews of data processors to verify they have implemented the security measures required by the DPA, and take corrective action (including termination) where a processor fails to meet the required standards",
-          "rationale": "The data user remains responsible for processor compliance under s43; periodic reviews demonstrate reasonable oversight",
+          "rationale": "The data user remains responsible for processor compliance under s43; periodic reviews demonstrate the data user has exercised reasonable oversight",
           "owner": "DPO / Procurement / CISO",
           "frequency": "Annual due diligence; ad hoc after incidents",
-          "priority": "High"
+          "priority": "High",
+          "source": "s43",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "technical": {
-      "summary": "Technical controls must ensure data processors access only the minimum personal data necessary for their contracted purpose.",
+      "summary": "Technical controls must ensure data processors access only the minimum personal data necessary for their contracted purpose, with monitoring of processor access and data handling practices.",
       "requirements": [
         {
           "id": "s43-T1",
-          "requirement": "Implement technical access controls to ensure data processors can access only the specific categories of personal data required for their contracted service, through dedicated credentials, API keys, or tenanted access",
+          "requirement": "Implement technical access controls to ensure data processors can access only the specific categories of personal data required for their contracted service, through dedicated credentials, API keys, or tenanted access, rather than broad access to primary systems",
           "rationale": "Technical limitation of processor access to the minimum necessary data is a practical step under s9 and enforces the instruction-only requirement of s43",
           "owner": "IT Security / CISO",
           "frequency": "At onboarding; reviewed annually and on scope changes",
-          "priority": "High"
+          "priority": "High",
+          "source": "s43",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         },
         {
           "id": "s43-T2",
-          "requirement": "Maintain an up-to-date processor register listing all engaged data processors, the categories of personal data they process, the services they provide, the DPA reference, and the data transfer mechanism used",
-          "rationale": "A processor register enables systematic management of processor relationships and is a key document in JPDP inspections",
+          "requirement": "Maintain an up-to-date processor register listing all engaged data processors, the categories of personal data they process, the services they provide, the DPA reference, and the data transfer mechanism used (where applicable for cross-border transfers)",
+          "rationale": "A processor register enables the data user to manage its processor relationships systematically and is a key document in JPDP inspections",
           "owner": "DPO / Procurement",
           "frequency": "Maintained continuously; reviewed quarterly",
-          "priority": "High"
+          "priority": "High",
+          "source": "s43",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     },
     "governance": {
-      "summary": "Processor governance must be embedded in the procurement process, ensuring no processor is engaged without a DPA.",
+      "summary": "Processor governance must be embedded in the procurement process, ensuring no processor is engaged without a DPA and that ongoing oversight is maintained throughout the processor relationship.",
       "requirements": [
         {
           "id": "s43-G1",
@@ -984,7 +2200,11 @@
           "rationale": "Embedding DPA requirements in the procurement process prevents processors from commencing processing before contractual protections are in place",
           "owner": "DPO / Procurement / Legal",
           "frequency": "Per new vendor engagement",
-          "priority": "Critical"
+          "priority": "Critical",
+          "source": "s43",
+          "sourceType": "act",
+          "sector": null,
+          "tightens": null
         }
       ]
     }
