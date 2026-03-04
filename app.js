@@ -115,6 +115,9 @@ function renderOverview(el) {
   const totalSections = Object.keys(state.provisions).length;
   const amended = Object.values(state.provisions).filter(s => s.amendedBy).length;
   el.innerHTML = `
+    <div class="disclaimer">
+      This database is for educational and indicative purposes only. It does not constitute legal advice. The content represents a structured interpretation of the Personal Data Protection Act 2010 (Act 709) and its amendments. Always consult the official Gazette text and qualified legal counsel for compliance decisions.
+    </div>
     <div class="stats-banner">
       <div class="stat-card"><div class="stat-number">${totalSections}</div><div class="stat-label">Sections</div></div>
       <div class="stat-card"><div class="stat-number">11</div><div class="stat-label">Parts</div></div>
