@@ -104,8 +104,8 @@
         "notes": "Both require notification to the supervisory authority within 72 hours and to data subjects for high-risk breaches. The threshold concepts are similar: GDPR uses 'likely to result in a risk to rights and freedoms'; PDPA uses 'notifiable data breach' defined in the Act and DBN Guideline. Key differences: PDPA's 7-day deadline for data subject notification is less prescriptive than GDPR's 'without undue delay'; GDPR's content requirements for notifications are more detailed."
       },
       {
-        "pdpaSection": "s47-60",
-        "pdpaName": "Commissioner",
+        "pdpaSection": "ss47-60",
+        "pdpaName": "Commissioner (ss 47–60)",
         "gdprArticle": "Articles 51-59",
         "gdprName": "Supervisory authority",
         "similarity": "medium",
@@ -135,7 +135,7 @@
         "notes": "Both limit collection to data necessary for specified purposes with appropriate consent. The APEC principle aligns with PDPA's purpose limitation embedded in the General Principle."
       },
       {
-        "pdpaSection": "s6 read with s7",
+        "pdpaSection": "s6; s7",
         "pdpaName": "General Principle and Notice and Choice Principle",
         "apecPrinciple": "Uses of Personal Information",
         "apecPrincipleNumber": "III",
@@ -175,8 +175,8 @@
         "notes": "Both provide individuals with rights to access and correct their personal data. Implementation mechanisms are similar."
       },
       {
-        "pdpaSection": "s47-60",
-        "pdpaName": "Commissioner",
+        "pdpaSection": "ss47-60",
+        "pdpaName": "Commissioner (ss 47–60)",
         "apecPrinciple": "Accountability",
         "apecPrincipleNumber": "IX",
         "similarity": "medium",
@@ -219,15 +219,15 @@
         "notes": "ISO 27701 Clause 7.3 addresses consent management as a component of privacy information management. The PDPA Notice and Choice Principle, implemented through the DPN Guideline, aligns with these requirements."
       },
       {
-        "pdpaSection": "s5-12",
-        "pdpaName": "Personal Data Protection Principles",
+        "pdpaSection": "ss5-12",
+        "pdpaName": "Personal Data Protection Principles (ss 5–12)",
         "isoClause": "7.4 (Privacy by design and default)",
         "similarity": "high",
         "notes": "ISO 27701 Clause 7.4 implements the privacy by design concept. While PDPA does not have an explicit 'privacy by design' obligation, the combined effect of the seven principles, read with the Security Standards and Codes of Practice, establishes an equivalent framework."
       },
       {
-        "pdpaSection": "s30-44",
-        "pdpaName": "Rights of Data Subject",
+        "pdpaSection": "ss30-44",
+        "pdpaName": "Rights of Data Subject (ss 30–44)",
         "isoClause": "7.3.6 (Providing mechanism to modify or withdraw consent); 7.3.7 (Complying with data subject requests)",
         "similarity": "high",
         "notes": "ISO 27701 provides specific controls for managing data subject requests and consent changes. PDPA's data subject rights provisions (access, correction, opt-out) and the associated procedural requirements in the General Code 2022 align with these ISO controls."
@@ -254,8 +254,8 @@
         "notes": "ISO 27701 requires clear assignment of privacy-related roles and responsibilities. The DPO role required under PDPA s129B can be mapped to the 'Privacy Officer' or 'Privacy Information Manager' roles in ISO 27701's organizational responsibility framework."
       },
       {
-        "pdpaSection": "s5-12",
-        "pdpaName": "Personal Data Protection Principles (overall)",
+        "pdpaSection": "ss5-12",
+        "pdpaName": "Personal Data Protection Principles (overall, ss 5–12)",
         "isoClause": "ISO/IEC 27701 overall (Privacy Information Management System)",
         "similarity": "high",
         "notes": "ISO 27701 certification provides a structured management system approach to PDPA compliance. Organizations certified under ISO 27701 will have addressed most of the technical and organizational requirements under the PDPA principles. The Commissioner recognizes ISO 27701 as a relevant international standard for PDPA compliance purposes."

@@ -1,5 +1,5 @@
 {
-  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1699) significantly enhanced penalties under the PDPA to strengthen deterrence and align Malaysian data protection law with international standards. The amendments increased maximum fines for most principal offences from RM300,000 to RM1,000,000, extended imprisonment terms, introduced daily fines for continuing offences, created new offences targeting contemporary data harms (unauthorized sale of personal data, failure to notify breaches, failure to appoint a DPO), and established individual liability for directors and senior officers of body corporates. The amendments came into force on 1 June 2025.",
+  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1699) significantly enhanced penalties under the PDPA to strengthen deterrence and align Malaysian data protection law with international standards. The amendments increased maximum fines for most principal offences from RM300,000 to RM1,000,000, extended imprisonment terms, introduced daily fines for continuing offences, created new offences targeting contemporary data harms (unauthorized sale of personal data, failure to notify breaches, failure to appoint a DPO), and established individual liability for directors and senior officers of body corporates. The amendments came into force on 1 April 2025.",
   "amendmentActId": "A1699",
   "amendmentTitle": "Personal Data Protection (Amendment) Act 2024",
   "gazetteDate": "2024-10-17",
@@ -221,8 +221,8 @@
       "sectionTitle": "Failure to Notify Data Breach",
       "offence": "Failure to notify the Commissioner within 72 hours or data subjects within 7 days of a notifiable data breach",
       "penalty": {
-        "fine": "RM250,000",
-        "imprisonment": "2 years",
+        "fine": "RM500,000",
+        "imprisonment": "3 years",
         "or_both": true
       },
       "rationale": "Mandatory data breach notification is a cornerstone of modern data protection law. Timely notification enables affected individuals to take protective action and allows the Commissioner to oversee the data user's response. Failure to notify denies data subjects the opportunity to protect themselves.",

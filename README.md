@@ -7,16 +7,16 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 | Layer | Directory | Description | Count |
 |-------|-----------|-------------|-------|
 | 1 | `provisions/` | Act sections — verbatim text + plain-language translation | 151 sections |
-| 2 | `principles/` | Deep dive into the 7 PDPA Principles | 7 principles |
-| 3 | `requirements/` | Three-perspective obligation breakdowns with source tracking | ~277 requirements across 21 sections |
+| 2 | `principles/` | Deep dive into the 7 PDPA Principles + 4 new A1699 rights | 11 principles |
+| 3 | `requirements/` | Three-perspective obligation breakdowns with source tracking | 208 requirements across 21 sections |
 | 4 | `evidence/` | Compliance evidence guidance | 40 evidence items across 19 sections |
 | 5 | `artifacts/` | Compliance document inventory | 60 artifacts in 7 categories |
 | 6 | `controls/` | Common controls with framework mappings + supplement links | 49 controls across 10 domains |
-| 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 19 offences in 8 categories |
+| 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 22 offences in 8 categories |
 | 8 | `cross-references/` | Act ↔ regulations, guidelines, codes, GDPR, ISO 27701 | 31 framework mappings |
-| — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 22 instruments |
+| — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 25 instruments |
 
-**69 JSON data files** across all layers.
+**74 JSON data files** across all layers.
 
 ## Repository Structure
 
@@ -376,7 +376,7 @@ Each evidence item:
 
 ## 2024 Amendment Act (A1699)
 
-The Personal Data Protection (Amendment) Act 2024 (gazetted 17 October 2024, effective 1 April 2025) introduces 35 changes across 26 amended sections and 9 new sections:
+The Personal Data Protection (Amendment) Act 2024 (gazetted 17 October 2024, effective 1 April 2025) introduces 35 changes across approximately 23 amended sections and 12 new sections:
 
 - **Enhanced penalties** — Up to RM1,000,000 fine and/or 3 years imprisonment; corporate penalties up to RM3M or 10% of annual Malaysian turnover (s130)
 - **Mandatory data breach notification** — New s143A; 72 hours to Commissioner, as soon as practicable to data subjects
@@ -478,6 +478,42 @@ with open('cross-references/framework-mappings.json') as f:
     mappings = json.load(f)
 gdpr_mappings = mappings['gdpr']['mappings']
 ```
+
+## AI-Generated Content Disclaimer
+
+**IMPORTANT — Data Quality Notice**
+
+This database contains two distinct types of content that must not be confused:
+
+### Authoritative Content (verbatim from official sources)
+The following fields reproduce official text directly and are authoritative:
+- `verbatim` — Exact statutory text from Act 709 and Amendment Act A1699
+- `section`, `sectionNumber`, `part`, `amendedBy`, `effectiveDate` — Structural metadata
+- `originalPenalty`, `amendedPenalty` — Penalty amounts from official gazette
+- `gazetteDate`, `effectiveDate` fields throughout supplements
+
+### AI-Generated Content (interpretive — not authoritative legal text)
+The following fields are **AI-generated interpretations or illustrative examples**. They are provided to assist understanding and compliance planning, but must not be treated as authoritative legal advice or official guidance:
+
+| Field | Location | Nature |
+|-------|----------|--------|
+| `translation` | `provisions/index.json` | AI-generated plain-language interpretation of statutory text |
+| `summary` | `requirements/`, `principles/` | AI-generated interpretive summary |
+| `rationale` | `requirements/` | AI-generated explanation of why an obligation exists |
+| `practicalGuidance` | `principles/*.json` | AI-generated implementation guidance |
+| `commonViolations` | `principles/*.json` | AI-generated illustrative examples |
+| `auditorFocus` | `evidence/` | AI-generated interpretive view of inspector priorities |
+| `auditTips` | `evidence/` | AI-generated guidance examples |
+| `whatGoodLooksLike` | `evidence/` | AI-generated illustrative examples |
+| `commonGaps` | `evidence/` | AI-generated illustrative examples |
+| `description` (controls/artifacts) | `controls/`, `artifacts/` | AI-generated description |
+| `keyActivities`, `maturity` | `controls/library.json` | AI-generated guidance |
+| `notes` | `cross-references/framework-mappings.json` | AI-generated comparative analysis |
+| `obligations[].obligation` text | `principles/*.json` | Some entries paraphrase statutory text |
+
+**Always verify AI-generated interpretations against the original Act text and official JPDP guidance before relying on them for compliance decisions. Consult qualified legal counsel for compliance advice.**
+
+The web explorer labels AI-generated fields with an **AI Generated** indicator. Items described as examples or guidance (e.g., `whatGoodLooksLike`, `commonViolations`) are marked **Example** or **Guidance**.
 
 ## Source
 

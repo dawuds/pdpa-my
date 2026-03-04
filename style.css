@@ -817,6 +817,8 @@ body {
 .badge-source-sector-code { background: var(--purple-light); color: var(--purple); }
 .badge-sector { background: #FDF2F8; color: #BE185D; }
 .badge-tightens { background: var(--border-light); color: var(--text-secondary); font-size: 0.625rem; }
+.badge-ai { background: #EFF6FF; color: #1D4ED8; font-size: 0.6rem; font-style: italic; cursor: help; }
+.badge-example { background: #F0FDF4; color: #15803D; font-size: 0.6rem; font-style: italic; cursor: help; }
 
 /* ===== FRAMEWORK FLOW ===== */
 .framework-flow {
