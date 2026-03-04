@@ -219,7 +219,8 @@
     {
       "section": "s143A(5)",
       "sectionTitle": "Failure to Notify Data Breach",
-      "offence": "Failure to notify the Commissioner within 72 hours or data subjects within 7 days of a notifiable data breach",
+      "offence": "Failure to notify the Commissioner as soon as practicable, or failure to notify affected data subjects as soon as practicable, of a notifiable data breach",
+      "note": "Note: The JPDP Guideline on Data Breach Notification 2025 (effective 1 June 2025) specifies 72 hours for initial notification to JPDP and 7 days for data subject notification — these are guideline timelines, not statutory requirements under the Act itself.",
       "penalty": {
         "fine": "RM500,000",
         "imprisonment": "3 years",

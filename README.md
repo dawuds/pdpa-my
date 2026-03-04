@@ -12,9 +12,9 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 | 4 | `evidence/` | Compliance evidence guidance | 40 evidence items across 19 sections |
 | 5 | `artifacts/` | Compliance document inventory | 60 artifacts in 7 categories |
 | 6 | `controls/` | Common controls with framework mappings + supplement links | 49 controls across 10 domains |
-| 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 22 offences in 8 categories |
+| 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 22 offences in 10 categories |
 | 8 | `cross-references/` | Act ↔ regulations, guidelines, codes, GDPR, ISO 27701 | 31 framework mappings |
-| — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 25 instruments |
+| — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 22 instruments |
 
 **74 JSON data files** across all layers.
 
@@ -90,9 +90,9 @@ pdpa-my/
 │   ├── domains.json                    # Domain definitions
 │   └── provision-map.json              # Bidirectional section ↔ control map
 │
-├── penalties/                          # LAYER 7: Penalties & enforcement (19 offences)
+├── penalties/                          # LAYER 7: Penalties & enforcement (22 offences)
 │   ├── index.json                      # All offences with penalties
-│   ├── by-category.json                # Grouped into 8 categories
+│   ├── by-category.json                # Grouped into 10 categories
 │   └── amendment-changes.json          # Penalty changes from 2024 amendments
 │
 ├── cross-references/                   # LAYER 8: Cross-reference maps
@@ -329,7 +329,7 @@ Each evidence item:
 
 ### Layer 7: Penalties
 
-`penalties/index.json` is an array of 19 offence objects:
+`penalties/index.json` is an array of 22 offence objects:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -419,7 +419,7 @@ Open `index.html` in a browser to interactively explore:
 - **Artifacts** — 60 compliance documents across 7 categories with provision mappings
 - **Framework** — Compliance chain flow, 5-tier source hierarchy, worked s9 trace example, 8-layer summary grid
 - **Controls** — 49 controls across 10 domains with maturity levels, supplement links, and sector variants
-- **Penalties** — 19 offences with original vs amended penalties, compounding info
+- **Penalties** — 22 offences with original vs amended penalties, compounding info
 - **Cross-References** — Section → regulations, guidelines, codes, standards; GDPR/ISO 27701/APEC CBPR mappings
 - **Supplements** — Browse 22 subsidiary instruments (regulations, guidelines, standards, codes)
 - **Search** — Full-text search across all layers

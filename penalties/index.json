@@ -97,9 +97,10 @@
     "notes": "Section 129A was substantially revised by A1699. The 2024 amendment introduced new mechanisms including binding corporate rules, standard contractual clauses, and certification schemes as alternatives to ministerial approval."
   },
   {
-    "id": "pen-s130",
-    "section": "s130",
-    "part": "X",
+    "id": "pen-s57",
+    "section": "s57",
+    "sectionNumber": "57",
+    "part": "IV",
     "offence": "Unauthorized Disclosure by Commissioner or Officers",
     "description": "Disclosure by the Commissioner, Deputy Commissioner, officer or employee of the Department, or any person acting on behalf of or assisting the Commissioner, of any information that comes to their knowledge in the course of performing their duties, otherwise than in accordance with the Act",
     "originalPenalty": {
@@ -113,12 +114,13 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "This provision protects the confidentiality of information obtained during enforcement and regulatory activities. It applies to current and former officers and their agents."
+    "notes": "This provision protects the confidentiality of information obtained during enforcement and regulatory activities. It applies to current and former officers and their agents. Section reference corrected from s130 (which, post-A1699, is 'Liability of body corporate') to s57 ('Secrecy') where the secrecy obligation and offence for Commissioner and officers resides in the post-A1699 provisions database."
   },
   {
-    "id": "pen-s131",
-    "section": "s131",
-    "part": "X",
+    "id": "pen-s116",
+    "section": "s116",
+    "sectionNumber": "116",
+    "part": "IX",
     "offence": "Obstruction of Commissioner or Authorized Officers",
     "description": "Wilfully obstructing the Commissioner or any authorized officer in the exercise of their powers or the performance of their duties, including refusing to produce documents, providing false information, or hindering inspections and investigations",
     "originalPenalty": {
@@ -139,11 +141,12 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "Obstruction includes failure to cooperate with audits, inspections, and investigations. The enhanced penalty post-2024 reflects the increased importance of effective enforcement mechanisms."
+    "notes": "Obstruction includes failure to cooperate with audits, inspections, and investigations. The enhanced penalty post-2024 reflects the increased importance of effective enforcement mechanisms. Section reference corrected from s131 (which, post-A1699, is 'Service of notices') to s116 ('Obstruction of enforcement officers') where this offence resides in the post-A1699 provisions database."
   },
   {
     "id": "pen-s132",
     "section": "s132",
+    "sectionNumber": "132",
     "part": "X",
     "offence": "Unauthorized Disclosure by Data User",
     "description": "Disclosure of personal data by a data user, data processor, or their employees in contravention of the Act, including disclosure for unauthorized purposes, to unauthorized parties, or beyond the scope for which the data was collected and consented to",
@@ -165,12 +168,15 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Distinct from the Disclosure Principle (s8) violation. This provision targets deliberate unauthorized disclosures by persons who have access to personal data in the course of their employment or engagement."
+    "verificationRequired": true,
+    "notes": "Distinct from the Disclosure Principle (s8) violation. This provision targets deliberate unauthorized disclosures by persons who have access to personal data in the course of their employment or engagement.",
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure by data users. The pre-amendment 'Unauthorized Disclosure by Data User' offence may have been renumbered or consolidated into s129 ('Offences in relation to personal data') or s128 ('General offences'). Verify against the gazetted amended Act text before relying on this section reference."
   },
   {
-    "id": "pen-s133",
-    "section": "s133",
-    "part": "X",
+    "id": "pen-s29",
+    "section": "s29",
+    "sectionNumber": "29",
+    "part": "II",
     "offence": "Failure to Comply with Enforcement Notice",
     "description": "Failure to comply with any requirement set out in an enforcement notice issued by the Commissioner, including notices requiring the data user to take specific remedial action, cease processing, or comply with any provision of the Act within a specified timeframe",
     "originalPenalty": {
@@ -191,7 +197,7 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "An enforcement notice is a formal regulatory direction. Non-compliance undermines the entire enforcement regime. This offence can be charged in addition to the underlying breach that triggered the notice."
+    "notes": "An enforcement notice is a formal regulatory direction. Non-compliance undermines the entire enforcement regime. This offence can be charged in addition to the underlying breach that triggered the notice. Section reference corrected from s133 (which, post-A1699, is 'Presumptions') to s29 ('Failure to comply with enforcement notice') where this offence resides in the post-A1699 provisions database."
   },
   {
     "id": "pen-s133A",
@@ -214,6 +220,7 @@
   {
     "id": "pen-s134",
     "section": "s134",
+    "sectionNumber": "134",
     "part": "X",
     "offence": "False Statements and Misleading Information",
     "description": "Making any statement or furnishing any document or information to the Commissioner or any authorized officer that is false or misleading in a material particular, whether in the context of registration, audit, inspection, investigation, or any other proceeding under the Act",
@@ -235,7 +242,9 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data users, data subjects, data processors, and any other person providing information under the Act."
+    "verificationRequired": true,
+    "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data users, data subjects, data processors, and any other person providing information under the Act.",
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s134 is 'Public servants' (an administrative provision classifying Commissioner staff as public servants for Penal Code purposes), not an offence for false statements. The pre-amendment 'False Statements' offence may have been renumbered in the post-A1699 Act. Verify against the gazetted amended Act text to locate the correct section for this offence."
   },
   {
     "id": "pen-s135A",
@@ -263,7 +272,7 @@
     "section": "s143A(5)",
     "part": "X",
     "offence": "Failure to Notify Data Breach",
-    "description": "Failure by a data user to notify the Commissioner of a notifiable data breach within the prescribed period (72 hours), or failure to notify affected data subjects where required, or failure to maintain records of data breaches as required by the data breach notification guidelines",
+    "description": "Failure by a data user to notify the Commissioner of a notifiable data breach as soon as practicable, or failure to notify affected data subjects as soon as practicable where required",
     "originalPenalty": null,
     "amendedPenalty": {
       "fine": "RM500,000",
@@ -277,7 +286,7 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "New obligation inserted by A1699. The 72-hour notification window aligns with international best practice, including GDPR. Section 143A(5) creates the offence for failure to notify. Continuing failure is a continuing offence."
+    "notes": "New obligation inserted by A1699. Section 143A(5) creates the offence for failure to notify. Continuing failure is a continuing offence. Note: The JPDP Guideline on Data Breach Notification 2025 (effective 1 June 2025) specifies 72 hours for initial notification to JPDP and 7 days for data subject notification — these are guideline timelines, not statutory requirements under the Act itself."
   },
   {
     "id": "pen-dpo",
@@ -303,6 +312,7 @@
   {
     "id": "pen-s44",
     "section": "s44",
+    "sectionNumber": "44",
     "part": "II",
     "offence": "Contravention of Data Subject Rights",
     "description": "Failure by a data user to comply with an access request, correction request, or opt-out request by a data subject within the prescribed time, or charging fees in excess of the prescribed amount, or refusing an access request without lawful grounds",
@@ -324,11 +334,14 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Covers access requests (s30), correction requests (s34), and opt-out from direct marketing (s43). Each unanswered or improperly answered request may constitute a separate offence."
+    "verificationRequired": true,
+    "notes": "Covers access requests (s30), correction requests (s34), and opt-out from direct marketing (s43). Each unanswered or improperly answered request may constitute a separate offence.",
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s44 is 'Right to restrict processing' (a rights-based provision conferring rights on data subjects), not a penalty/offence section for contravention of data subject rights. The pre-amendment offence for failing to comply with data subject rights requests may have been renumbered or may now be captured under s128 ('General offences') or another penalty provision. Verify against the gazetted amended Act text to locate the correct section."
   },
   {
-    "id": "pen-s29",
-    "section": "s29",
+    "id": "pen-s17",
+    "section": "s17",
+    "sectionNumber": "17",
     "part": "II",
     "offence": "Processing Sensitive Personal Data Without Explicit Consent",
     "description": "Processing sensitive personal data including health data, political opinions, religious beliefs, commission or alleged commission of offences, and other prescribed categories without obtaining the explicit consent of the data subject or without falling within the narrow statutory exemptions",
@@ -350,7 +363,7 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Sensitive personal data attracts a higher standard of protection. The Act does not require an additional lawful basis beyond explicit consent except in very limited circumstances (e.g., medical emergencies, legal proceedings)."
+    "notes": "Sensitive personal data attracts a higher standard of protection. The Act does not require an additional lawful basis beyond explicit consent except in very limited circumstances (e.g., medical emergencies, legal proceedings). Section reference corrected from s29 (which, post-A1699, is 'Failure to comply with enforcement notice') to s17 ('Processing of sensitive personal data') where this obligation and its offence reside in the post-A1699 provisions database."
   },
   {
     "id": "pen-s136",
@@ -479,6 +492,7 @@
   {
     "id": "pen-s109",
     "section": "s109",
+    "sectionNumber": "109",
     "part": "VIII",
     "offence": "Failure to Cooperate with Investigation",
     "description": "Failure to comply with a requirement under Part VIII (Inspection, Complaint and Investigation), including failure to produce documents or records requested by the Commissioner, failure to attend for examination, or failure to answer questions put by an authorized officer in the course of an investigation",
@@ -493,14 +507,17 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "Applies to both data users and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act."
+    "verificationRequired": true,
+    "notes": "Applies to both data users and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act.",
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s109 is 'Confidentiality of complaints' (an administrative obligation on the Commissioner), not an offence for failure to cooperate with investigation. The offence for failing to attend/answer questions under investigation is located at s104 ('Power to require attendance') in the post-A1699 database. Verify against the gazetted amended Act text to determine whether this entry should be updated to s104 or a different section."
   },
   {
-    "id": "pen-s127",
-    "section": "s127",
+    "id": "pen-s114",
+    "section": "s114",
+    "sectionNumber": "114",
     "part": "IX",
     "offence": "Failure to Comply with Production Order",
-    "description": "Failure by any person to comply with a production order issued by the Commissioner requiring the production of documents, data, records, or other material relevant to an investigation or enforcement action under Part IX of the Act",
+    "description": "Failure by any person to comply with a production order issued by a Magistrate requiring the production of documents, data, records, or other material relating to an offence under the Act",
     "originalPenalty": {
       "fine": "RM200,000",
       "fineNumeric": 200000,
@@ -512,6 +529,6 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "A production order is a compulsory document production mechanism akin to a legal subpoena. Non-compliance is treated seriously as it frustrates the enforcement mandate of the Commissioner."
+    "notes": "A production order is a compulsory document production mechanism akin to a legal subpoena. Non-compliance is treated seriously as it frustrates the enforcement mandate of the Commissioner. Section reference corrected from s127 (which, post-A1699, is 'Public prosecutor') to s114 ('Production order') where the production order offence resides in the post-A1699 provisions database."
   }
 ]

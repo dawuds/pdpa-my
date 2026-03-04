@@ -2903,7 +2903,7 @@
     "id": "s129B",
     "part": "X",
     "division": null,
-    "title": "Data protection officer",
+    "title": "Data protection officer — appointment, functions and independence",
     "sectionNumber": "129B",
     "obligationType": "mandatory",
     "verbatim": "(1) A data user in a prescribed class of data users shall appoint a data protection officer.\n(2) The data protection officer shall—\n(a) inform and advise the data user and its employees of their obligations under this Act;\n(b) monitor compliance with this Act and with applicable codes of practice;\n(c) cooperate with the Commissioner and serve as the point of contact between the data user and the Commissioner;\n(d) act as the contact point for data subjects in relation to matters relating to the processing of personal data;\n(e) carry out such other functions as may be assigned by the data user or prescribed by regulations.\n(3) The data user shall ensure that the data protection officer—\n(a) is provided with sufficient resources to carry out the functions in subsection (2);\n(b) has access to personal data and processing operations;\n(c) is not given instructions that could lead to a conflict of interest.\n(4) The data protection officer may be an employee of the data user or an external service provider.\n(5) A data user who fails to appoint a data protection officer as required under this section commits an offence and shall, on conviction, be liable to a fine not exceeding two hundred and fifty thousand ringgit or to imprisonment for a term not exceeding two years or to both.",
@@ -2911,6 +2911,8 @@
     "amendedBy": "A1699 s26A",
     "effectiveDate": "2025-04-01",
     "relatedPrinciple": null,
+    "verificationRequired": true,
+    "note": "DUPLICATION FLAGGED: s136 in this database also contains near-identical DPO text. See the note on s136 for details of differences. s129B covers DPO appointment, functions, resourcing, and independence (subsections 1-4) with a penalty of RM250,000 or 2 years imprisonment or both (subsection 5, citing A1699 s26A). Verify against the gazetted A1699 text to confirm both sections exist as enacted and to resolve the divergent penalty amounts and additional obligations in s136.",
     "keywords": ["data protection officer", "DPO", "prescribed class", "appointment", "compliance", "Commissioner", "contact point", "resources", "independence", "offence", "RM250,000"]
   },
   {
@@ -3081,7 +3083,7 @@
     "id": "s136",
     "part": "X",
     "division": null,
-    "title": "Data protection officer",
+    "title": "Data protection officer — notification and publication obligations",
     "sectionNumber": 136,
     "obligationType": "mandatory",
     "verbatim": "(1) A data user in a prescribed class of data users shall appoint a data protection officer.\n(2) The data protection officer shall—\n(a) inform and advise the data user and its employees of their obligations under this Act;\n(b) monitor compliance with this Act and with applicable codes of practice;\n(c) cooperate with the Commissioner and serve as the point of contact between the data user and the Commissioner;\n(d) act as the contact point for data subjects in relation to matters relating to the processing of personal data;\n(e) carry out such other functions as may be assigned by the data user or prescribed by regulations.\n(3) The data user shall ensure that the data protection officer—\n(a) is provided with sufficient resources to carry out the functions in subsection (2);\n(b) has access to personal data and processing operations;\n(c) is not given instructions that could lead to a conflict of interest.\n(4) The data protection officer may be an employee of the data user or an external service provider.\n(5) The details of the data protection officer shall be notified to the Commissioner and published in a manner accessible to data subjects.\n(6) A data user who fails to appoint a data protection officer as required under this section commits an offence and shall, on conviction, be liable to a fine not exceeding five hundred thousand ringgit.",
@@ -3089,6 +3091,8 @@
     "amendedBy": "A1699 s29",
     "effectiveDate": "2025-04-01",
     "relatedPrinciple": null,
+    "verificationRequired": true,
+    "note": "DUPLICATION FLAGGED: This entry (s136) contains near-identical DPO text to s129B. Key differences observed: (1) s136 includes subsection (5) requiring notification of DPO details to the Commissioner and publication accessible to data subjects — this obligation does not appear in s129B; (2) s136 penalty (subsection 6) is a fine not exceeding RM500,000 with no imprisonment term, while s129B(5) provides fine not exceeding RM250,000 or imprisonment up to 2 years or both; (3) amendment references differ — s129B cites 'A1699 s26A' and s136 cites 'A1699 s29'. This may represent two separate sections in the enacted Act covering different aspects of DPO obligations (s129B = appointment and functions; s136 = notification/registration duties and a separate penalty), or one may be an erroneous duplicate. Verify against the gazetted A1699 text to confirm whether both sections exist as enacted and to resolve the divergent penalty amounts.",
     "keywords": [
       "data protection officer",
       "DPO",
@@ -3099,6 +3103,8 @@
       "contact point",
       "resources",
       "independence",
+      "notification",
+      "publication",
       "offence",
       "RM500,000"
     ]
