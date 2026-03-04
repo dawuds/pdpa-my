@@ -18,12 +18,15 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 
 **74 JSON data files** across all layers.
 
+> **Disclaimer**: This is an indicative/educational resource. It does not constitute legal advice. Always refer to the official gazette text and seek professional counsel for compliance decisions. See [LEARNINGS.md](LEARNINGS.md) for data quality audit history.
+
 ## Repository Structure
 
 ```
 pdpa-my/
 │
 ├── README.md
+├── LEARNINGS.md                       # Data quality audit findings and lessons
 ├── index.html                          # SPA entry point
 ├── app.js                              # Explorer application
 ├── style.css                           # Explorer styling
