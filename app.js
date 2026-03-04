@@ -118,7 +118,7 @@ function renderOverview(el) {
     <div class="stats-banner">
       <div class="stat-card"><div class="stat-number">${totalSections}</div><div class="stat-label">Sections</div></div>
       <div class="stat-card"><div class="stat-number">11</div><div class="stat-label">Parts</div></div>
-      <div class="stat-card"><div class="stat-number">7</div><div class="stat-label">Principles</div></div>
+      <div class="stat-card"><div class="stat-number">11</div><div class="stat-label">Principles</div></div>
       <div class="stat-card"><div class="stat-number">${amended}</div><div class="stat-label">Amended (2024)</div></div>
     </div>
     <h2 style="font-size:1.125rem;font-weight:600;margin-bottom:1rem;">Browse by Part</h2>
@@ -1192,7 +1192,7 @@ async function renderFramework(el) {
       <div class="layer-card" onclick="location.hash='#principles'">
         <div class="layer-card-num">2</div>
         <div class="layer-card-name">Principles</div>
-        <div class="layer-card-count">7 principles</div>
+        <div class="layer-card-count">11 principles</div>
         <div class="layer-card-desc">Deep dive into obligations, exceptions, and practical guidance</div>
       </div>
       <div class="layer-card" onclick="location.hash='#framework'">
@@ -1222,7 +1222,7 @@ async function renderFramework(el) {
       <div class="layer-card" onclick="location.hash='#penalties'">
         <div class="layer-card-num">7</div>
         <div class="layer-card-name">Penalties</div>
-        <div class="layer-card-count">19 offences</div>
+        <div class="layer-card-count">22 offences</div>
         <div class="layer-card-desc">Offences with original and 2024-amended penalties</div>
       </div>
       <div class="layer-card" onclick="location.hash='#cross-references'">
