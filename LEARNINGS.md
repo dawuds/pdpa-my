@@ -88,3 +88,5 @@ For any future AI-generated compliance data in this repo:
 - [ ] Test cross-references resolve in both directions
 - [ ] Model multi-phase commencement explicitly — never collapse to a single date
 - [ ] Define and enforce a cross-reference format specification
+- [ ] Never symlink to files outside the repo — GitHub Pages (Jekyll) fails on broken symlinks with `No such file or directory @ rb_check_realpath_internal`
+- [ ] Keep shared tooling (e.g., cross-repo validation scripts) in a parent directory or separate repo, not symlinked into each sub-repo
