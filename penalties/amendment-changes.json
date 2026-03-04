@@ -1,9 +1,27 @@
 {
-  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1699) significantly enhanced penalties under the PDPA to strengthen deterrence and align Malaysian data protection law with international standards. The amendments increased maximum fines for most principal offences from RM300,000 to RM1,000,000, extended imprisonment terms, introduced daily fines for continuing offences, created new offences targeting contemporary data harms (unauthorized sale of personal data, failure to notify breaches, failure to appoint a DPO), and established individual liability for directors and senior officers of body corporates. The amendments came into force on 1 April 2025.",
-  "amendmentActId": "A1699",
+  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1727) significantly enhanced penalties under the PDPA to strengthen deterrence and align Malaysian data protection law with international standards. The amendments increased maximum fines for most principal offences from RM300,000 to RM1,000,000, extended imprisonment terms, introduced daily fines for continuing offences, created new offences targeting contemporary data harms (unauthorized sale of personal data, failure to notify breaches, failure to appoint a DPO), and established individual liability for directors and senior officers of body corporates. The amendments commenced in three phases: Phase 1 (1 January 2025) for administrative/structural amendments; Phase 2 (1 April 2025) for enhanced penalties on existing offences, Commissioner powers, and enforcement provisions; Phase 3 (1 June 2025) for new provisions including data portability, right to erasure, data breach notification, DPO requirements, DPIA, RoPA, unauthorized sale of personal data, and officer liability.",
+  "amendmentActId": "A1727",
   "amendmentTitle": "Personal Data Protection (Amendment) Act 2024",
   "gazetteDate": "2024-10-17",
-  "effectiveDate": "2025-04-01",
+  "effectiveDate": "2025-01-01",
+  "effectiveDateNote": "Act A1727 has THREE commencement phases. Phase 1 (1 Jan 2025): administrative/structural. Phase 2 (1 Apr 2025): enhanced penalties, enforcement, Commissioner powers. Phase 3 (1 Jun 2025): new provisions (data portability, erasure, breach notification, DPO, DPIA, RoPA, unauthorized sale, officer liability).",
+  "commencementPhases": [
+    {
+      "phase": 1,
+      "effectiveDate": "2025-01-01",
+      "description": "Administrative and structural amendments"
+    },
+    {
+      "phase": 2,
+      "effectiveDate": "2025-04-01",
+      "description": "Enhanced penalties on existing offences, Commissioner powers, enforcement"
+    },
+    {
+      "phase": 3,
+      "effectiveDate": "2025-06-01",
+      "description": "New provisions: data portability, erasure, breach notification, DPO, DPIA, RoPA, unauthorized sale, officer liability"
+    }
+  ],
   "keyChanges": [
     {
       "section": "s5(3)",
@@ -66,7 +84,7 @@
       "rationale": "Cross-border data transfers raise significant privacy risks, particularly where data is transferred to jurisdictions with inadequate protections. The enhanced penalty reflects the transnational nature of such violations and the difficulty of remediation once data has left Malaysian jurisdiction."
     },
     {
-      "section": "s131",
+      "section": "s116",
       "sectionTitle": "Obstruction of Commissioner or Officers",
       "before": {
         "fine": "RM200,000",
@@ -106,7 +124,7 @@
       "rationale": "Unauthorized disclosures can cause serious harm to data subjects including identity theft, financial fraud, and reputational damage. The significantly increased maximum fine is intended to deter deliberate disclosures."
     },
     {
-      "section": "s133",
+      "section": "s29",
       "sectionTitle": "Failure to Comply with Enforcement Notice",
       "before": {
         "fine": "RM300,000",

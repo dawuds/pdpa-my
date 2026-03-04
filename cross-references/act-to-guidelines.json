@@ -104,7 +104,7 @@
         {
           "guidelineId": "dpo-guideline-2025",
           "relevantProvisions": ["dpo-1", "dpo-2", "dpo-3", "dpo-4", "dpo-5", "dpo-6", "dpo-7", "dpo-8"],
-          "notes": "Section 129B (inserted by A1699) establishes the mandatory DPO requirement. The DPO Guideline provides detailed guidance on all aspects of DPO appointment, qualification, registration, and responsibilities."
+          "notes": "Section 129B (inserted by A1727) establishes the mandatory DPO requirement. The DPO Guideline provides detailed guidance on all aspects of DPO appointment, qualification, registration, and responsibilities."
         }
       ]
     },
@@ -116,12 +116,12 @@
         {
           "guidelineId": "dbn-guideline-2025",
           "relevantProvisions": ["dbn-1", "dbn-2", "dbn-3", "dbn-4", "dbn-5", "dbn-6", "dbn-7", "dbn-8"],
-          "notes": "Section 143A (inserted by A1699) establishes the mandatory data breach notification obligation. The DBN Guideline provides comprehensive guidance on all aspects of breach identification, assessment, notification, and record-keeping."
+          "notes": "Section 143A (inserted by A1727) establishes the mandatory data breach notification obligation. The DBN Guideline provides comprehensive guidance on all aspects of breach identification, assessment, notification, and record-keeping."
         }
       ]
     },
     {
-      "section": "s30-44",
+      "section": "s30-s44",
       "sectionTitle": "Rights of Data Subject",
       "part": "II",
       "guidelines": [

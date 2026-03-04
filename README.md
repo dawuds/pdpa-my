@@ -1,13 +1,13 @@
 # PDPA-MY — Malaysian Personal Data Protection Act Compliance Database
 
-A structured, machine-readable compliance database for Malaysia's **Personal Data Protection Act 2010 (Act 709)** ecosystem — including the Act, 2024 Amendment Act (A1699), regulations, guidelines, standards, and codes of practice — with an interactive web explorer.
+A structured, machine-readable compliance database for Malaysia's **Personal Data Protection Act 2010 (Act 709)** ecosystem — including the Act, 2024 Amendment Act (A1727), regulations, guidelines, standards, and codes of practice — with an interactive web explorer.
 
 ## Overview
 
 | Layer | Directory | Description | Count |
 |-------|-----------|-------------|-------|
 | 1 | `provisions/` | Act sections — verbatim text + plain-language translation | 151 sections |
-| 2 | `principles/` | Deep dive into the 7 PDPA Principles + 4 new A1699 rights | 11 principles |
+| 2 | `principles/` | Deep dive into the 7 PDPA Principles + 4 new A1727 rights | 11 principles |
 | 3 | `requirements/` | Three-perspective obligation breakdowns with source tracking | 208 requirements across 21 sections |
 | 4 | `evidence/` | Compliance evidence guidance | 40 evidence items across 19 sections |
 | 5 | `artifacts/` | Compliance document inventory | 60 artifacts in 7 categories |
@@ -53,7 +53,7 @@ pdpa-my/
 │   │   ├── P09-enforcement.json                        # Part IX: ss110–127
 │   │   ├── P10-miscellaneous.json                      # Part X: ss128–144
 │   │   └── P11-savings-transitional.json               # Part XI: ss145–146
-│   └── amendment-tracker.json          # 35 changes tracked from Act A1699
+│   └── amendment-tracker.json          # 35 changes tracked from Act A1727
 │
 ├── principles/                         # LAYER 2: The 7 Principles
 │   ├── index.json
@@ -65,7 +65,7 @@ pdpa-my/
 │   ├── data-integrity.json
 │   └── access.json
 │
-├── requirements/                       # LAYER 3: Obligation breakdowns (19 sections, 115 items)
+├── requirements/                       # LAYER 3: Obligation breakdowns (21 sections, 208 requirements)
 │   ├── index.json                      # All requirements keyed by section ID
 │   └── by-part/
 │       ├── P02-personal-data-protection.json
@@ -77,8 +77,8 @@ pdpa-my/
 │   ├── index.json
 │   └── by-part/
 │       ├── P02-personal-data-protection.json
-│       ├── P04-commissioner.json
 │       ├── P08-inspection-complaint-investigation.json
+│       ├── P09-enforcement.json
 │       └── P10-miscellaneous.json
 │
 ├── artifacts/                          # LAYER 5: Compliance artifacts (60 artifacts)
@@ -198,7 +198,7 @@ Each section object in `provisions/index.json` (array of 151 objects):
 | `obligationType` | string | `mandatory` \| `administrative` \| `procedural` \| `rights-based` \| `definitional` \| `penalty` |
 | `verbatim` | string | Verbatim legal text |
 | `translation` | string | Plain-language explanation |
-| `amendedBy` | string\|null | Amendment reference, e.g. `"A1699 s5"` |
+| `amendedBy` | string\|null | Amendment reference, e.g. `"A1727 s5"` |
 | `effectiveDate` | string | ISO date of effectiveness |
 | `relatedPrinciple` | string\|null | Linked principle ID |
 | `keywords` | string[] | Search keywords |
@@ -339,7 +339,7 @@ Each evidence item:
 | `offence` | string | Offence short name |
 | `description` | string | Detailed offence description |
 | `originalPenalty` | object | Original penalty: `fine`, `imprisonment`, `or_both` |
-| `amendedPenalty` | object\|null | Enhanced penalty from A1699 |
+| `amendedPenalty` | object\|null | Enhanced penalty from A1727 |
 | `category` | string | Offence category |
 | `compoundable` | boolean | Can be compounded |
 | `compoundAmount` | string\|null | Compound amount if applicable |
@@ -374,7 +374,7 @@ Each evidence item:
 | 6 | Data Integrity | s11 | Ensure accuracy and completeness |
 | 7 | Access | s12 | Allow access to and correction of data |
 
-## 2024 Amendment Act (A1699)
+## 2024 Amendment Act (A1727)
 
 The Personal Data Protection (Amendment) Act 2024 (gazetted 17 October 2024, effective 1 April 2025) introduces 35 changes across approximately 23 amended sections and 12 new sections:
 
@@ -466,7 +466,7 @@ with open('provisions/index.json') as f:
 
 # Count sections amended by 2024 Act
 amended = [s for s in provisions if s.get('amendedBy')]
-print(f"{len(amended)} sections amended by A1699")
+print(f"{len(amended)} sections amended by A1727")
 
 # Load requirements by section
 with open('requirements/index.json') as f:
@@ -487,7 +487,7 @@ This database contains two distinct types of content that must not be confused:
 
 ### Authoritative Content (verbatim from official sources)
 The following fields reproduce official text directly and are authoritative:
-- `verbatim` — Exact statutory text from Act 709 and Amendment Act A1699
+- `verbatim` — Exact statutory text from Act 709 and Amendment Act A1727
 - `section`, `sectionNumber`, `part`, `amendedBy`, `effectiveDate` — Structural metadata
 - `originalPenalty`, `amendedPenalty` — Penalty amounts from official gazette
 - `gazetteDate`, `effectiveDate` fields throughout supplements
@@ -518,7 +518,7 @@ The web explorer labels AI-generated fields with an **AI Generated** indicator. 
 ## Source
 
 - **Personal Data Protection Act 2010 (Act 709)** — Malaysian Parliament
-- **Personal Data Protection (Amendment) Act 2024 (Act A1699)** — Malaysian Parliament (gazetted 17 October 2024)
+- **Personal Data Protection (Amendment) Act 2024 (Act A1727)** — Malaysian Parliament (gazetted 17 October 2024)
 - **Subsidiary legislation** — Jabatan Perlindungan Data Peribadi (JPDP)
 - **Guidelines** — JPDP / Personal Data Protection Commissioner
 - **Standards** — Personal Data Protection Standard 2015

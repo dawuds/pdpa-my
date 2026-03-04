@@ -2422,7 +2422,7 @@
     "title": "Cross-Border Transfer of Personal Data (2024 Amendment)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 129A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), governs the transfer of personal data outside Malaysia. Data users may only transfer personal data to places outside Malaysia that are specified by the Minister, or where the transfer meets one of the prescribed conditions including data subject consent, adequacy, binding corporate rules, standard contractual clauses, or other approved mechanisms.",
+      "summary": "Section 129A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), governs the transfer of personal data outside Malaysia. Data users may only transfer personal data to places outside Malaysia that are specified by the Minister, or where the transfer meets one of the prescribed conditions including data subject consent, adequacy, binding corporate rules, standard contractual clauses, or other approved mechanisms.",
       "requirements": [
         {
           "id": "s129A-L1",
@@ -2583,7 +2583,7 @@
           "source": "cbpdt-8",
           "sourceType": "guideline",
           "sector": null,
-          "tightens": "s129A-T3"
+          "tightens": null
         }
       ]
     },
@@ -2623,7 +2623,7 @@
     "title": "Appointment of Data Protection Officer",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 129B (inserted by A1699) requires prescribed data users to appoint a qualified DPO. The DPO must be registered with the Commissioner within 30 days. Failure to appoint is an offence.",
+      "summary": "Section 129B (inserted by A1727) requires prescribed data users to appoint a qualified DPO. The DPO must be registered with the Commissioner within 30 days. Failure to appoint is an offence.",
       "requirements": [
         {
           "id": "s129B-GL1",
@@ -2728,7 +2728,7 @@
     "title": "Data Breach Notification (2024 Amendment)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 143A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), introduces mandatory data breach notification obligations. Data users must notify the Commissioner of a data breach as soon as practicable after becoming aware of it, and must notify affected data subjects where the breach is likely to result in significant harm. The precise timeframes and notification content are to be specified in subsidiary legislation.",
+      "summary": "Section 143A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), introduces mandatory data breach notification obligations. Data users must notify the Commissioner of a data breach as soon as practicable after becoming aware of it, and must notify affected data subjects where the breach is likely to result in significant harm. The precise timeframes and notification content are to be specified in subsidiary legislation.",
       "requirements": [
         {
           "id": "s143A-L1",

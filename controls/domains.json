@@ -31,7 +31,7 @@
   },
   "breach-response": {
     "name": "Breach Response",
-    "description": "Controls for the detection, assessment, containment, investigation, notification, and remediation of personal data breaches. Includes the mandatory 72-hour breach notification obligation to the Commissioner under PDPA s143A (inserted by Amendment Act A1699) and data subject notification where required",
+    "description": "Controls for the detection, assessment, containment, investigation, notification, and remediation of personal data breaches. Includes the mandatory 72-hour breach notification obligation to the Commissioner under PDPA s143A (inserted by Amendment Act A1727) and data subject notification where required",
     "relatedSections": ["s9", "s143A"],
     "relatedPrinciples": ["security"]
   },

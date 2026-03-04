@@ -38,8 +38,8 @@
       "provisions": {
         "reg3f": {
           "text": "The processing is necessary for the purposes of the legitimate interests pursued by the data user or by any third party to which the data is disclosed, except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject.",
-          "insertedBy": "A1699",
-          "note": "This lawful basis (legitimate interests) was not in the original PDPA Regulations 2013. It was inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), effective 2025-04-01."
+          "insertedBy": "A1727",
+          "note": "This lawful basis (legitimate interests) was not in the original PDPA Regulations 2013. It was inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), effective 2025-04-01."
         }
       }
     },
@@ -108,7 +108,7 @@
       "id": "pdpa-reg-9",
       "regulation": "reg9",
       "title": "Cross-Border Personal Data Transfer",
-      "content": "A data user shall not transfer personal data outside Malaysia unless the country to which the data is transferred is determined by the Minister to provide an adequate level of protection for personal data, or unless one of the following applies: (a) the data subject has consented to the transfer; (b) the transfer is necessary for the performance of a contract between the data subject and the data user; (c) the transfer is necessary for reasons of public interest or for legal proceedings; (d) the transfer is necessary to protect the vital interests of the data subject; or (e) the data user has implemented appropriate safeguards in accordance with section 129A of the Act as amended by Act A1699.",
+      "content": "A data user shall not transfer personal data outside Malaysia unless the country to which the data is transferred is determined by the Minister to provide an adequate level of protection for personal data, or unless one of the following applies: (a) the data subject has consented to the transfer; (b) the transfer is necessary for the performance of a contract between the data subject and the data user; (c) the transfer is necessary for reasons of public interest or for legal proceedings; (d) the transfer is necessary to protect the vital interests of the data subject; or (e) the data user has implemented appropriate safeguards in accordance with section 129A of the Act as amended by Act A1727.",
       "requirements": [
         "The adequacy list must be checked before each transfer",
         "Consent for cross-border transfer must be specific to the transfer — general consent to data processing is insufficient",

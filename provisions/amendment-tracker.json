@@ -1,260 +1,351 @@
 {
   "amendmentAct": "Personal Data Protection (Amendment) Act 2024",
-  "actNumber": "A1699",
+  "actNumber": "A1727",
   "royalAssent": "2024-10-14",
   "gazetteDate": "2024-10-17",
-  "effectiveDate": "2025-04-01",
+  "effectiveDate": "2025-01-01",
+  "effectiveDateNote": "Act A1727 has THREE commencement phases, not a single effective date. Phase 1 (1 Jan 2025): administrative/structural amendments. Phase 2 (1 Apr 2025): Commissioner powers, enforcement, penalties. Phase 3 (1 Jun 2025): data portability, right to erasure, data breach notification.",
+  "commencementPhases": [
+    {
+      "phase": 1,
+      "effectiveDate": "2025-01-01",
+      "description": "Administrative and structural amendments",
+      "sections": "Sections related to Commissioner appointment, administrative matters"
+    },
+    {
+      "phase": 2,
+      "effectiveDate": "2025-04-01",
+      "description": "Commissioner powers, enforcement, penalties",
+      "sections": "Sections related to enforcement notices, penalties, compounding"
+    },
+    {
+      "phase": 3,
+      "effectiveDate": "2025-06-01",
+      "description": "Data portability, right to erasure, data breach notification",
+      "sections": "New Parts IIIA (data portability), IVA (erasure), VIA (breach notification)"
+    }
+  ],
   "parentAct": {
     "name": "Personal Data Protection Act 2010",
     "actNumber": "709",
     "commencementDate": "2013-11-15"
   },
-  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1699) is the first significant amendment to the PDPA since its original commencement in 2013. Key changes include mandatory data breach notification, data protection officer requirements, expanded cross-border transfer mechanisms, enhanced data subject rights (portability, erasure, restriction, withdrawal), data protection impact assessments, records of processing, enhanced penalties, and expanded Commissioner powers.",
+  "summary": "The Personal Data Protection (Amendment) Act 2024 (Act A1727) is the first significant amendment to the PDPA since its original commencement in 2013. Key changes include mandatory data breach notification, data protection officer requirements, expanded cross-border transfer mechanisms, enhanced data subject rights (portability, erasure, restriction, withdrawal), data protection impact assessments, records of processing, enhanced penalties, and expanded Commissioner powers.",
   "changes": [
     {
       "type": "amended",
       "section": "s2",
       "description": "Expanded definitions to include: 'biometric data', 'data breach', 'data protection officer', 'health data'. Updated definition of 'consent' to require it to be freely given, specific, informed, and unambiguous.",
-      "amendmentSection": "A1699 s2",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s2",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-01-01",
+      "commencementPhase": 1
     },
     {
       "type": "amended",
       "section": "s6",
       "description": "General Principle updated to clarify lawful bases for processing, particularly the legitimate interests basis, aligning more closely with modern data protection standards.",
-      "amendmentSection": "A1699 s3",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s3",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s7",
       "description": "Notice and Choice Principle enhanced to require more detailed information notices, including information about data subject rights, data portability, and automated decision-making.",
-      "amendmentSection": "A1699 s4",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s4",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s9",
       "description": "Security Principle updated to explicitly require data users to implement appropriate technical and organisational measures, and to have procedures for detecting, reporting, and investigating data breaches.",
-      "amendmentSection": "A1699 s5",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s5",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s13",
       "description": "Enhanced penalties for processing without registration increased to RM500,000 fine and/or 3 years imprisonment.",
-      "amendmentSection": "A1699 s6",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s6",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s18",
       "description": "Direct marketing provisions strengthened: data users must now provide clear opt-out mechanisms in all marketing communications. Opt-out must be as easy as opting in. Enhanced penalties apply.",
-      "amendmentSection": "A1699 s7",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s7",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s22",
       "description": "Cross-border transfer provisions updated to reference new section 129A which provides expanded transfer mechanisms including standard contractual clauses, binding corporate rules, and certification schemes.",
-      "amendmentSection": "A1699 s8",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s8",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s25",
       "description": "Enforcement notice provisions updated to include power to order data breach remediation and to require notification to data subjects.",
-      "amendmentSection": "A1699 s9",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s9",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s30",
       "description": "Right of access enhanced to include information about automated decision-making, profiling, and the existence of data portability rights.",
-      "amendmentSection": "A1699 s10",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s10",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s36",
       "description": "Compensation provisions updated to include class action mechanism allowing multiple data subjects to bring a joint claim. Non-material damages (including distress) explicitly included.",
-      "amendmentSection": "A1699 s11",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s11",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s37",
       "description": "Rectification provisions updated to reduce response time requirement from 21 days to 14 days and to require proactive notification to third parties who have received the corrected data.",
-      "amendmentSection": "A1699 s12",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s12",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s39",
       "description": "Fee provisions for access requests updated. Commissioner given power to prescribe zero fee for certain categories of requests, particularly initial requests.",
-      "amendmentSection": "A1699 s13",
-      "impactLevel": "low"
+      "amendmentSection": "A1727 s13",
+      "impactLevel": "low",
+      "effectiveDate": "2025-01-01",
+      "commencementPhase": 1
     },
     {
       "type": "amended",
       "section": "s40",
       "description": "Children's data provisions significantly enhanced. Age of child defined at 18 years. Enhanced penalties (RM500,000 and/or 3 years). Requirement for data users to implement age verification measures where they know or ought to know services are likely to be used by children.",
-      "amendmentSection": "A1699 s14",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s14",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "new",
       "section": "s41",
       "description": "New right to data portability introduced. Data subjects may request personal data in a structured, commonly used, machine-readable format. Where technically feasible, data may be transmitted directly to another data user. Applies to data processed by automated means on basis of consent or contract. 21-day compliance deadline.",
-      "amendmentSection": "A1699 s15",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s15",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s42",
       "description": "New express right to withdraw consent introduced. Withdrawal must be as easy as giving consent. Data user must cease processing on receipt of withdrawal notice unless compelling legitimate grounds exist. Withdrawal does not affect prior lawful processing.",
-      "amendmentSection": "A1699 s16",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s16",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s43",
       "description": "New right to erasure (right to be forgotten) introduced. Grounds: data no longer necessary; consent withdrawn; unlawful processing; objection upheld; legal compliance. Where data made public, data user must notify other processors of erasure request. Exceptions for freedom of expression, legal compliance, public interest.",
-      "amendmentSection": "A1699 s17",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s17",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s44",
       "description": "New right to restrict processing introduced. Data subjects may require processing to be limited to storage only while accuracy is disputed, legitimacy assessed, legal claims pending, or objection considered. Data user must notify before lifting restriction.",
-      "amendmentSection": "A1699 s18",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s18",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "amended",
       "section": "s48",
       "description": "Commissioner's functions expanded to include overseeing data breach notifications, monitoring DPO compliance, maintaining guidance on DPIAs, and international cooperation on data protection.",
-      "amendmentSection": "A1699 s19",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s19",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s49",
       "description": "Commissioner's powers expanded to include power to conduct unannounced inspections in cases of suspected serious breach, issue binding guidance, and impose financial penalties directly (in addition to referring for prosecution).",
-      "amendmentSection": "A1699 s20",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s20",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s58",
       "description": "Annual report requirements expanded to include statistics on data breach notifications received, DPO registration compliance, DPIA assessments reviewed, and cross-border transfer approvals.",
-      "amendmentSection": "A1699 s21",
-      "impactLevel": "low"
+      "amendmentSection": "A1727 s21",
+      "impactLevel": "low",
+      "effectiveDate": "2025-01-01",
+      "commencementPhase": 1
     },
     {
       "type": "amended",
       "section": "s107",
       "description": "Financial penalty notice provisions significantly enhanced. Maximum penalty that may be imposed via notice increased to reflect the enhanced maximum fines for offences.",
-      "amendmentSection": "A1699 s22",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s22",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s121",
       "description": "Order for financial penalty enhanced. Commissioner may now impose financial penalties of up to RM1 million for serious contraventions. Additional factors (cooperation, financial benefit from breach) added to penalty assessment criteria.",
-      "amendmentSection": "A1699 s23",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s23",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s128",
       "description": "General offences enhanced penalties: maximum fine increased to RM500,000 (from RM300,000) and maximum imprisonment increased to 3 years (from 2 years). Continuing offences attract RM1,000 per day additional fine.",
-      "amendmentSection": "A1699 s24",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s24",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "amended",
       "section": "s129",
       "description": "Offences relating to personal data: maximum penalties enhanced to RM500,000 fine and/or 3 years imprisonment. New offence of obtaining personal data by deception added.",
-      "amendmentSection": "A1699 s25",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s25",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "new",
       "section": "s129A",
       "description": "New comprehensive cross-border transfer provision. Expands permitted transfer mechanisms beyond adequacy decisions to include: Commissioner-approved standard contractual clauses (SCCs), binding corporate rules (BCRs), certification schemes, and international arrangements. Commissioner to publish and maintain list of approved mechanisms. Contravention: RM500,000 fine and/or 3 years imprisonment.",
-      "amendmentSection": "A1699 s26",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s26",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s129B",
       "description": "New mandatory Data Protection Officer (DPO) provision. Prescribed class data users must appoint a DPO. DPO functions: advise on obligations, monitor compliance, cooperate with Commissioner, act as data subject contact point. DPO must have adequate resources, data access, and independence. Failure to appoint: RM250,000 fine and/or 2 years imprisonment.",
-      "amendmentSection": "A1699 s26A",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s26A",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "amended",
       "section": "s130",
       "description": "Corporate liability provisions enhanced: courts may impose the greater of RM3 million or 10% of annual Malaysian turnover in addition to or instead of standard fines, targeting large organisations proportionately.",
-      "amendmentSection": "A1699 s27",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s27",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s133A",
       "description": "New provision on liability of officers of body corporate. Directors, CEOs, managers, and similar officers are personally liable for PDPA offences committed by the body corporate with their consent, connivance, or due to their neglect. Officers may be prosecuted independently of the body corporate.",
-      "amendmentSection": "A1699 s27A",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s27A",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "amended",
       "section": "s135",
       "description": "Power to make regulations expanded to cover: data breach notification procedures and forms; DPO qualifications and requirements; DPIA requirements; records of processing; data portability format standards; age verification requirements for children's data.",
-      "amendmentSection": "A1699 s28",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s28",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     {
       "type": "new",
       "section": "s135A",
       "description": "New offence of unauthorized sale of personal data. Selling, offering to sell, or procuring the sale of unlawfully obtained personal data is an offence. Knowingly purchasing such data is also an offence. Penalties up to RM1,000,000 fine and/or 3 years imprisonment.",
-      "amendmentSection": "A1699 s28A",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s28A",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s136",
       "description": "New mandatory Data Protection Officer (DPO) provision. Prescribed class data users must appoint a DPO. DPO functions: advise on obligations, monitor compliance, cooperate with Commissioner, act as data subject contact point. DPO must have adequate resources, data access, and independence. Details must be registered with Commissioner and published. Failure to appoint: RM500,000 fine. DPO may be internal or external.",
-      "amendmentSection": "A1699 s29",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s29",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s137",
       "description": "New mandatory Data Protection Impact Assessment (DPIA) provision. Required for high-risk processing activities. High-risk indicators: new technologies, large-scale processing, sensitive data, systematic monitoring. Prior consultation with Commissioner required where residual high risk cannot be mitigated. DPIA must include: processing description, necessity assessment, risk assessment, mitigation measures. Failure to conduct required DPIA: RM500,000 fine. Transitional period: 18 months for existing processing activities.",
-      "amendmentSection": "A1699 s30",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s30",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s138",
       "description": "New mandatory Records of Processing Activities (RoPA) provision. Prescribed class data users must maintain comprehensive records including: data user and DPO details, processing purposes, data categories, recipients, cross-border transfers and safeguards, retention periods, security measures description. Must be made available to Commissioner on request. Failure to maintain: RM300,000 fine. Transitional period: 12 months.",
-      "amendmentSection": "A1699 s31",
-      "impactLevel": "significant"
+      "amendmentSection": "A1727 s31",
+      "impactLevel": "significant",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "new",
       "section": "s143A",
       "description": "New mandatory data breach notification provision — the single most operationally significant change in the 2024 Amendment. Requirements: (1) notify Commissioner within 72 hours of becoming aware of a breach likely to cause significant harm; (2) notify affected data subjects as soon as practicable. Commissioner notification must include: breach description, categories and number of data subjects and records affected, DPO contact details, likely consequences, remedial measures. Phased notifications permitted. Data subject notification must be in plain language and include self-protection recommendations. Delay permitted if notification would impede criminal investigation (law enforcement request required). All breaches must be recorded, including those not requiring notification. Failure to comply: RM500,000 fine and/or 3 years imprisonment.",
-      "amendmentSection": "A1699 s32",
-      "impactLevel": "critical"
+      "amendmentSection": "A1727 s32",
+      "impactLevel": "critical",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     {
       "type": "amended",
       "section": "s146",
       "description": "Transitional provisions updated to accommodate Amendment Act requirements: 12-month transition for DPO appointments; 12-month transition for records of processing; 18-month transition for DPIAs on existing processing; deemed compliance period for existing registrations; 6-month deadline for Commissioner to publish Amendment Act compliance guidance.",
-      "amendmentSection": "A1699 s33",
-      "impactLevel": "moderate"
+      "amendmentSection": "A1727 s33",
+      "impactLevel": "moderate",
+      "effectiveDate": "2025-01-01",
+      "commencementPhase": 1
     }
   ],
   "keyThemes": [

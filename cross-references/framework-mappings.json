@@ -21,7 +21,7 @@
         "gdprArticle": "Article 6",
         "gdprName": "Lawfulness of processing",
         "similarity": "high",
-        "notes": "Both require a lawful basis for processing. GDPR provides 6 bases; PDPA s6(2) has equivalent bases. Key differences: GDPR has a specific basis for 'public task' which is narrower in PDPA; GDPR's 'legitimate interests' balancing test is substantively equivalent to PDPA's post-2024 amendment version; PDPA originally lacked the explicit 'legitimate interests' basis which was added by A1699."
+        "notes": "Both require a lawful basis for processing. GDPR provides 6 bases; PDPA s6(2) has equivalent bases. Key differences: GDPR has a specific basis for 'public task' which is narrower in PDPA; GDPR's 'legitimate interests' balancing test is substantively equivalent to PDPA's post-2024 amendment version; PDPA originally lacked the explicit 'legitimate interests' basis which was added by A1727."
       },
       {
         "pdpaSection": "s7",
@@ -244,7 +244,7 @@
         "pdpaName": "Cross-Border Personal Data Transfer",
         "isoClause": "8.5 (Privacy across jurisdictions and third-party transfers)",
         "similarity": "medium",
-        "notes": "ISO 27701 Clause 8.5 addresses privacy-specific controls for third-party data sharing and cross-border transfers. ISO 27701 certification can serve as evidence of 'adequate safeguards' for PDPA cross-border transfer purposes, supporting the 'appropriate safeguards' mechanism under s129A as amended by A1699."
+        "notes": "ISO 27701 Clause 8.5 addresses privacy-specific controls for third-party data sharing and cross-border transfers. ISO 27701 certification can serve as evidence of 'adequate safeguards' for PDPA cross-border transfer purposes, supporting the 'appropriate safeguards' mechanism under s129A as amended by A1727."
       },
       {
         "pdpaSection": "s129B",

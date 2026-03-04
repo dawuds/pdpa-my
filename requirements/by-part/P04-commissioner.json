@@ -122,7 +122,7 @@
     "title": "Compliance with Enforcement Notices (s133)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 133 requires data users to comply with any enforcement notice issued by the Commissioner. An enforcement notice sets out specific actions the data user must take or cease, within a specified timeframe, to remedy a contravention of the Act. Failure to comply with an enforcement notice is a criminal offence under s133 carrying up to RM1,000,000 fine and/or 3 years imprisonment (as amended by A1699).",
+      "summary": "Section 133 requires data users to comply with any enforcement notice issued by the Commissioner. An enforcement notice sets out specific actions the data user must take or cease, within a specified timeframe, to remedy a contravention of the Act. Failure to comply with an enforcement notice is a criminal offence under s133 carrying up to RM1,000,000 fine and/or 3 years imprisonment (as amended by A1727).",
       "requirements": [
         {
           "id": "s133-L1",

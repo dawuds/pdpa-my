@@ -1590,7 +1590,7 @@
       "domain": "breach-response",
       "type": "operational",
       "layer": "process",
-      "description": "Implement a process to ensure mandatory notification of notifiable personal data breaches to the Personal Data Protection Commissioner within 72 hours of becoming aware, as required by PDPA s143A inserted by Amendment Act A1699, with all prescribed notification content",
+      "description": "Implement a process to ensure mandatory notification of notifiable personal data breaches to the Personal Data Protection Commissioner within 72 hours of becoming aware, as required by PDPA s143A inserted by Amendment Act A1727, with all prescribed notification content",
       "sections": [
         "s143A"
       ],
@@ -2209,7 +2209,7 @@
       "domain": "governance-accountability",
       "type": "governance",
       "layer": "governance",
-      "description": "Appoint a qualified Data Protection Officer (DPO) as required under PDPA s129B (inserted by Amendment Act A1699), register the DPO with the Commissioner, and ensure the DPO performs all required functions including advising on compliance, monitoring implementation, and acting as contact point for data subjects and the Commissioner",
+      "description": "Appoint a qualified Data Protection Officer (DPO) as required under PDPA s129B (inserted by Amendment Act A1727), register the DPO with the Commissioner, and ensure the DPO performs all required functions including advising on compliance, monitoring implementation, and acting as contact point for data subjects and the Commissioner",
       "sections": [
         "s129B"
       ],
@@ -2255,7 +2255,7 @@
       "domain": "governance-accountability",
       "type": "governance",
       "layer": "governance",
-      "description": "Maintain a suite of up-to-date data protection policies and procedures covering all PDPA obligations, ensuring policies are approved at appropriate levels, communicated to staff, regularly reviewed, and aligned with the current regulatory environment including the 2024 Amendment Act A1699",
+      "description": "Maintain a suite of up-to-date data protection policies and procedures covering all PDPA obligations, ensuring policies are approved at appropriate levels, communicated to staff, regularly reviewed, and aligned with the current regulatory environment including the 2024 Amendment Act A1727",
       "sections": [
         "s5",
         "s9"

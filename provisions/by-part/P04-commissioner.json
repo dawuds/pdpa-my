@@ -22,7 +22,7 @@
     "obligationType": "administrative",
     "verbatim": "(1) The Commissioner shall have the following functions:\n(a) to exercise the powers conferred by this Act;\n(b) to advise the Minister generally on matters relating to personal data protection;\n(c) to carry out public education campaigns regarding personal data protection;\n(d) to issue codes of practice in accordance with section 24;\n(e) to carry out or commission research relating to personal data protection;\n(f) to register data users and carry out registration-related functions;\n(g) to investigate complaints received under this Act;\n(h) to promote good personal data protection practices;\n(i) to maintain a register of data users;\n(j) to liaise and co-operate with personal data protection authorities of other countries and territories;\n(k) to carry out such other functions as are conferred on the Commissioner by this Act or any other written law.\n(2) The Commissioner shall report annually to the Minister on the performance of his functions and the Minister shall cause such report to be tabled before Parliament.",
     "translation": "Sets out the broad functions of the Commissioner including: exercising statutory powers, advising the Minister, public education, issuing codes of practice, research, registration of data users, investigating complaints, maintaining the data user register, international co-operation, and annual reporting to Parliament.",
-    "amendedBy": "A1699 s19",
+    "amendedBy": "A1727 s19",
     "effectiveDate": "2025-04-01",
     "relatedPrinciple": null,
     "keywords": ["Commissioner", "functions", "public education", "codes of practice", "investigation", "registration", "annual report", "Parliament", "international cooperation"]
@@ -36,7 +36,7 @@
     "obligationType": "administrative",
     "verbatim": "(1) The Commissioner shall have the powers conferred by this Act.\n(2) The Commissioner may delegate any power conferred on the Commissioner by this Act, other than this power of delegation, to any officer or employee of the Department.\n(3) For the purpose of discharging his functions under this Act, the Commissioner may—\n(a) require any person to provide information;\n(b) require any data user to provide access to any equipment or facility;\n(c) issue enforcement notices;\n(d) carry out audits and inspections;\n(e) apply to court for an order requiring compliance with a requirement of this Act;\n(f) take any other action as may be conferred by this Act.",
     "translation": "Confers powers on the Commissioner including delegation to officers, requiring information from persons, access to equipment, issuing enforcement notices, carrying out audits and inspections, and applying to court for compliance orders.",
-    "amendedBy": "A1699 s20",
+    "amendedBy": "A1727 s20",
     "effectiveDate": "2025-04-01",
     "relatedPrinciple": null,
     "keywords": ["Commissioner", "powers", "delegation", "enforcement notice", "audit", "inspection", "court order", "information requirement"]
@@ -162,7 +162,7 @@
     "obligationType": "administrative",
     "verbatim": "(1) The Commissioner shall, as soon as practicable after the end of each calendar year, prepare and submit to the Minister a report on the activities of the Commissioner during that year.\n(2) The report shall include—\n(a) a summary of complaints received and investigations conducted;\n(b) a summary of enforcement actions taken;\n(c) statistics on data breach notifications received;\n(d) details of codes of practice issued;\n(e) details of data user registrations and de-registrations;\n(f) any recommendations for reform of the law;\n(g) any other matters that the Commissioner considers relevant.\n(3) The Minister shall cause the report to be tabled before Parliament as soon as practicable.",
     "translation": "The Commissioner must prepare an annual report for the Minister covering complaints, investigations, enforcement actions, data breach statistics, codes of practice, registration activities, and law reform recommendations. The Minister must table this report before Parliament.",
-    "amendedBy": "A1699 s21",
+    "amendedBy": "A1727 s21",
     "effectiveDate": "2025-04-01",
     "relatedPrinciple": null,
     "keywords": ["annual report", "Commissioner", "Minister", "Parliament", "complaints", "enforcement", "data breach statistics", "accountability"]

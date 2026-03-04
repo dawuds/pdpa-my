@@ -6,7 +6,7 @@
   "effectiveDate": "2025-06-01",
   "parentAct": "Act 709",
   "enablingSection": "s129B",
-  "summary": "This Guideline provides comprehensive guidance on the mandatory Data Protection Officer (DPO) requirement introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1699) through the insertion of section 129B into the PDPA. Certain categories of data users are required to appoint a qualified DPO and to register the DPO with the Commissioner. The DPO plays a central role in the data user's accountability framework, serving as the key point of contact for the Commissioner, data subjects, and internal stakeholders. The Guideline sets out the criteria for mandatory appointment, qualifications, tasks, independence requirements, and the registration process.",
+  "summary": "This Guideline provides comprehensive guidance on the mandatory Data Protection Officer (DPO) requirement introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1727) through the insertion of section 129B into the PDPA. Certain categories of data users are required to appoint a qualified DPO and to register the DPO with the Commissioner. The DPO plays a central role in the data user's accountability framework, serving as the key point of contact for the Commissioner, data subjects, and internal stakeholders. The Guideline sets out the criteria for mandatory appointment, qualifications, tasks, independence requirements, and the registration process.",
   "provisions": [
     {
       "id": "dpo-1",
@@ -18,7 +18,7 @@
         "The Commissioner may at any time direct a data user to appoint a DPO",
         "Voluntary DPO appointments must meet the same standards as mandatory appointments"
       ],
-      "mandatoryAppointmentStatus": "The mandatory appointment criteria set out in this guideline are based on the Commissioner's 2023 DPO Guideline and represent the PDPC's current interpretation pending formal subsidiary legislation under s129B(2) of the PDPA (as amended by A1699). These criteria are not yet codified in subsidiary legislation and may be revised."
+      "mandatoryAppointmentStatus": "The mandatory appointment criteria set out in this guideline are based on the Commissioner's 2023 DPO Guideline and represent the PDPC's current interpretation pending formal subsidiary legislation under s129B(2) of the PDPA (as amended by A1727). These criteria are not yet codified in subsidiary legislation and may be revised."
     },
     {
       "id": "dpo-2",

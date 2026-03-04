@@ -162,7 +162,7 @@
     "obligationType": "penalty",
     "verbatim": "(1) The Commissioner may, following an investigation, order a data user to pay a financial penalty not exceeding the maximum fine prescribed for the relevant offence.\n(2) In determining the amount of the financial penalty, the Commissioner shall have regard to—\n(a) the nature, gravity, and duration of the contravention;\n(b) the number of data subjects affected;\n(c) whether the data user has taken steps to remedy the contravention;\n(d) the financial capacity of the data user;\n(e) any previous contraventions by the data user;\n(f) the degree of cooperation with the Commissioner's investigation;\n(g) any financial benefit obtained from the contravention.\n(3) A data user who is ordered to pay a financial penalty may appeal to the Tribunal.\n(4) Financial penalties shall be paid into the Fund.",
     "translation": "Following investigation, the Commissioner may impose financial penalties up to the prescribed maximum. Penalty amounts consider the severity of contravention, affected data subjects, remedial steps, financial capacity, prior violations, cooperation, and financial benefit from the breach. Data users may appeal to the Tribunal.",
-    "amendedBy": "A1699 s23",
+    "amendedBy": "A1727 s23",
     "effectiveDate": "2025-04-01",
     "relatedPrinciple": null,
     "keywords": ["financial penalty", "Commissioner", "investigation", "gravity", "data subjects", "remedial steps", "cooperation", "Fund", "appeal", "Tribunal"]

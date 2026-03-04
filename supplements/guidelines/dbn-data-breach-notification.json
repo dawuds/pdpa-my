@@ -6,7 +6,7 @@
   "effectiveDate": "2025-06-01",
   "parentAct": "Act 709",
   "enablingSection": "s143A",
-  "summary": "This Guideline provides comprehensive guidance on the mandatory data breach notification obligations introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1699) through the insertion of section 143A into the PDPA. All data users are required to notify the Commissioner of a notifiable data breach within 72 hours of becoming aware of it, and in certain circumstances, to notify affected data subjects within 7 days. Failure to comply is an offence under s143A(5). The Guideline aligns Malaysia's breach notification framework with international standards, including the EU GDPR's breach notification requirements.",
+  "summary": "This Guideline provides comprehensive guidance on the mandatory data breach notification obligations introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1727) through the insertion of section 143A into the PDPA. All data users are required to notify the Commissioner of a notifiable data breach within 72 hours of becoming aware of it, and in certain circumstances, to notify affected data subjects within 7 days. Failure to comply is an offence under s143A(5). The Guideline aligns Malaysia's breach notification framework with international standards, including the EU GDPR's breach notification requirements.",
   "provisions": [
     {
       "id": "dbn-1",
@@ -117,6 +117,6 @@
   "keywords": [
     "data breach", "breach notification", "72 hours", "7 days", "Commissioner notification",
     "data subject notification", "Data Breach Register", "notifiable breach", "root cause analysis",
-    "containment", "remediation", "s143A", "Act A1699", "PDPA 2024 amendment"
+    "containment", "remediation", "s143A", "Act A1727", "PDPA 2024 amendment"
   ]
 }

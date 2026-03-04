@@ -71,7 +71,7 @@
   },
   "corporate-liability": {
     "label": "Body Corporate Turnover-Based Liability",
-    "description": "Turnover-based penalties applicable to body corporates under s130 (as amended by A1699). Calculated as the greater of RM3M or 10% of annual Malaysian gross turnover.",
+    "description": "Turnover-based penalties applicable to body corporates under s130 (as amended by A1727). Calculated as the greater of RM3M or 10% of annual Malaysian gross turnover.",
     "offenceIds": ["pen-s130-turnover"],
     "primarySection": "s130",
     "maxPenalty": {
@@ -81,7 +81,7 @@
   },
   "officer-liability": {
     "label": "Officer Personal Liability for Body Corporate Offences",
-    "description": "Personal liability of directors, CEOs, managers, secretaries and other officers of a body corporate where the body corporate commits a PDPA offence and the officer consented to, connived in, or whose neglect contributed to the offence (s133A, inserted by A1699).",
+    "description": "Personal liability of directors, CEOs, managers, secretaries and other officers of a body corporate where the body corporate commits a PDPA offence and the officer consented to, connived in, or whose neglect contributed to the offence (s133A, inserted by A1727).",
     "offenceIds": ["pen-s133A"],
     "primarySection": "s133A",
     "maxPenalty": {

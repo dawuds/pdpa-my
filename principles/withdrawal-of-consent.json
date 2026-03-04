@@ -2,7 +2,7 @@
   "id": "withdrawal-of-consent",
   "section": 42,
   "name": "Right to Withdraw Consent",
-  "summary": "Section 42, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), grants data subjects an explicit right to withdraw consent to the processing of their personal data at any time without detriment. Upon withdrawal of consent, the data user must cease processing the personal data for the purposes to which consent related. This right is distinct from the general consent withdrawal mechanism in s38 (which existed pre-A1699) in that s42 creates a stronger, more specific withdrawal right with express non-detriment protections for data subjects.",
+  "summary": "Section 42, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), grants data subjects an explicit right to withdraw consent to the processing of their personal data at any time without detriment. Upon withdrawal of consent, the data user must cease processing the personal data for the purposes to which consent related. This right is distinct from the general consent withdrawal mechanism in s38 (which existed pre-A1727) in that s42 creates a stronger, more specific withdrawal right with express non-detriment protections for data subjects.",
   "obligations": [
     {
       "id": "withdrawal-O1",
@@ -55,7 +55,7 @@
       "conditions": "Retention must be limited to the period required by the specific legal obligation; the data must be access-restricted during the retention period and not used for any purpose other than satisfying the legal obligation"
     }
   ],
-  "practicalGuidance": "Data users should implement a clear and prominent withdrawal mechanism in all consent-based processing flows. Where consent is collected online (e.g., marketing emails, cookies, app permissions), a one-click or similarly simple withdrawal mechanism must be available. Data users should maintain a consent register that records the date and method of consent, and updates the record upon withdrawal. Upon receiving a withdrawal, the data user should trigger an automated process to: (1) cease all processing for which consent was the sole basis; (2) flag the record as consent-withdrawn; (3) assess whether an alternative lawful basis applies; (4) if no alternative basis, schedule deletion or anonymisation within a reasonable period consistent with the Retention Principle. Note: s42 creates a distinct, stronger withdrawal right compared to the pre-A1699 s38 withdrawal right. Data users should review their consent management systems to ensure s42 compliance is implemented as a dedicated capability.",
+  "practicalGuidance": "Data users should implement a clear and prominent withdrawal mechanism in all consent-based processing flows. Where consent is collected online (e.g., marketing emails, cookies, app permissions), a one-click or similarly simple withdrawal mechanism must be available. Data users should maintain a consent register that records the date and method of consent, and updates the record upon withdrawal. Upon receiving a withdrawal, the data user should trigger an automated process to: (1) cease all processing for which consent was the sole basis; (2) flag the record as consent-withdrawn; (3) assess whether an alternative lawful basis applies; (4) if no alternative basis, schedule deletion or anonymisation within a reasonable period consistent with the Retention Principle. Note: s42 creates a distinct, stronger withdrawal right compared to the pre-A1727 s38 withdrawal right. Data users should review their consent management systems to ensure s42 compliance is implemented as a dedicated capability.",
   "commonViolations": [
     "Making the withdrawal mechanism harder to use than the consent mechanism (e.g., requiring a written letter to withdraw consent given by clicking a checkbox)",
     "Continuing to process personal data after consent withdrawal on the basis that 'the system hasn't been updated yet'",
@@ -72,6 +72,7 @@
   "relatedCodeSections": [
     "general-cop-s5"
   ],
-  "insertedBy": "A1699",
-  "effectiveDate": "2025-04-01"
+  "insertedBy": "A1727",
+  "effectiveDate": "2025-06-01",
+  "commencementPhase": 3
 }

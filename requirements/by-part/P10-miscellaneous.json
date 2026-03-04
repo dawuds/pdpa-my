@@ -5,7 +5,7 @@
     "title": "Cross-Border Transfer of Personal Data (2024 Amendment)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 129A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), governs the transfer of personal data outside Malaysia. Data users may only transfer personal data to places outside Malaysia that are specified by the Minister, or where the transfer meets one of the prescribed conditions including data subject consent, adequacy, binding corporate rules, standard contractual clauses, or other approved mechanisms.",
+      "summary": "Section 129A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), governs the transfer of personal data outside Malaysia. Data users may only transfer personal data to places outside Malaysia that are specified by the Minister, or where the transfer meets one of the prescribed conditions including data subject consent, adequacy, binding corporate rules, standard contractual clauses, or other approved mechanisms.",
       "requirements": [
         {
           "id": "s129A-L1",
@@ -206,7 +206,7 @@
     "title": "Appointment of Data Protection Officer",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 129B (inserted by A1699) requires prescribed data users to appoint a qualified DPO. The DPO must be registered with the Commissioner within 30 days. Failure to appoint is an offence.",
+      "summary": "Section 129B (inserted by A1727) requires prescribed data users to appoint a qualified DPO. The DPO must be registered with the Commissioner within 30 days. Failure to appoint is an offence.",
       "requirements": [
         {
           "id": "s129B-GL1",
@@ -311,7 +311,7 @@
     "title": "Data Protection Impact Assessment — DPIA (2024 Amendment)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 137, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), requires data users to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities. High-risk processing includes: large-scale processing of sensitive personal data; systematic monitoring of publicly accessible areas on a large scale; automated decision-making with significant effects on data subjects; processing personal data of vulnerable groups; and processing involving new technologies with uncertain privacy implications. An 18-month transition period applies (compliance required by 1 October 2026). Failure to conduct a required DPIA is an offence under s137 carrying a fine of up to RM500,000 and/or 3 years imprisonment.",
+      "summary": "Section 137, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), requires data users to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities. High-risk processing includes: large-scale processing of sensitive personal data; systematic monitoring of publicly accessible areas on a large scale; automated decision-making with significant effects on data subjects; processing personal data of vulnerable groups; and processing involving new technologies with uncertain privacy implications. An 18-month transition period applies (compliance required by 1 October 2026). Failure to conduct a required DPIA is an offence under s137 carrying a fine of up to RM500,000 and/or 3 years imprisonment.",
       "requirements": [
         {
           "id": "s137-L1",
@@ -397,7 +397,7 @@
         }
       ]
     },
-    "transitionNote": "18-month transition period from A1699 commencement (2025-04-01). Compliance deadline: 1 October 2026. Data users should begin DPIA capacity building immediately."
+    "transitionNote": "18-month transition period from A1727 commencement (2025-04-01). Compliance deadline: 1 October 2026. Data users should begin DPIA capacity building immediately."
   },
   "s138": {
     "sectionId": "s138",
@@ -405,7 +405,7 @@
     "title": "Records of Processing Activities — ROPA (2024 Amendment)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 138, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), requires prescribed classes of data users to maintain Records of Processing Activities (ROPA). ROPA must document: the identity and contact details of the data user and DPO; the purposes of processing; the categories of data subjects and personal data; the recipients of personal data; cross-border transfer details; retention periods; and security measures. A 12-month transition period applies — compliance deadline is 1 April 2026. Failure to maintain ROPA is an offence carrying a fine of up to RM300,000 and/or 2 years imprisonment. Note: if Act A1699 renumbered the Continuing Offence provision (formerly s138) to s139, the section reference for ROPA in this entry should be verified against the gazetted amended Act text.",
+      "summary": "Section 138, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), requires prescribed classes of data users to maintain Records of Processing Activities (ROPA). ROPA must document: the identity and contact details of the data user and DPO; the purposes of processing; the categories of data subjects and personal data; the recipients of personal data; cross-border transfer details; retention periods; and security measures. A 12-month transition period applies — compliance deadline is 1 April 2026. Failure to maintain ROPA is an offence carrying a fine of up to RM300,000 and/or 2 years imprisonment. Note: if Act A1727 renumbered the Continuing Offence provision (formerly s138) to s139, the section reference for ROPA in this entry should be verified against the gazetted amended Act text.",
       "requirements": [
         {
           "id": "s138-L1",
@@ -479,7 +479,7 @@
         }
       ]
     },
-    "transitionNote": "12-month transition period from A1699 commencement (2025-04-01). Compliance deadline: 1 April 2026. Data users should begin ROPA population immediately."
+    "transitionNote": "12-month transition period from A1727 commencement (2025-04-01). Compliance deadline: 1 April 2026. Data users should begin ROPA population immediately."
   },
   "s129B_s136_dpo_note": {
     "sectionId": "s129B_s136_note",
@@ -487,11 +487,11 @@
     "title": "DPO Penalty Provision — s129B(5) vs s136 Clarification Note",
     "obligationType": "informational",
     "legal": {
-      "summary": "The criminal penalty for failure to appoint a DPO is set out in s129B(5) of the PDPA (as inserted by A1699). Some references in legislative tracking materials refer to 's136 DPO' — this likely refers to the detailed DPO obligation provisions contained within s136 of the amended Act (dealing with the substantive DPO duties), which is separate from the criminal penalty for non-appointment in s129B(5). There is a potential Act numbering ambiguity: s136 in the pre-A1699 Act contained the General Penalty provision. If A1699 inserted a new s136 for DPO obligations, the original General Penalty provision may have been renumbered. Data users and legal practitioners should verify the section numbering against the gazetted amended Act text (Act A1699 as published in the Federal Gazette) rather than relying solely on secondary sources. The penalty entry 'pen-dpo' in this repository correctly references s129B(5) as the source of the criminal penalty.",
+      "summary": "The criminal penalty for failure to appoint a DPO is set out in s129B(5) of the PDPA (as inserted by A1727). Some references in legislative tracking materials refer to 's136 DPO' — this likely refers to the detailed DPO obligation provisions contained within s136 of the amended Act (dealing with the substantive DPO duties), which is separate from the criminal penalty for non-appointment in s129B(5). There is a potential Act numbering ambiguity: s136 in the pre-A1727 Act contained the General Penalty provision. If A1727 inserted a new s136 for DPO obligations, the original General Penalty provision may have been renumbered. Data users and legal practitioners should verify the section numbering against the gazetted amended Act text (Act A1727 as published in the Federal Gazette) rather than relying solely on secondary sources. The penalty entry 'pen-dpo' in this repository correctly references s129B(5) as the source of the criminal penalty.",
       "requirements": [
         {
           "id": "dpo-note-1",
-          "requirement": "Verify DPO penalty section references against the gazetted Act A1699 text; do not rely solely on amendment trackers or secondary legislative summaries for section numbers",
+          "requirement": "Verify DPO penalty section references against the gazetted Act A1727 text; do not rely solely on amendment trackers or secondary legislative summaries for section numbers",
           "rationale": "Amendment acts can cause section renumbering; discrepancies between secondary sources and the gazetted Act text must be resolved in favour of the gazetted text",
           "owner": "Legal Counsel / DPO",
           "frequency": "One-time verification; update if new gazetted version is published",
@@ -510,7 +510,7 @@
     "title": "Data Breach Notification (2024 Amendment)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 143A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), introduces mandatory data breach notification obligations. Data users must notify the Commissioner of a data breach as soon as practicable after becoming aware of it, and must notify affected data subjects where the breach is likely to result in significant harm. The precise timeframes and notification content are to be specified in subsidiary legislation.",
+      "summary": "Section 143A, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), introduces mandatory data breach notification obligations. Data users must notify the Commissioner of a data breach as soon as practicable after becoming aware of it, and must notify affected data subjects where the breach is likely to result in significant harm. The precise timeframes and notification content are to be specified in subsidiary legislation.",
       "requirements": [
         {
           "id": "s143A-L1",

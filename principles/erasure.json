@@ -2,7 +2,7 @@
   "id": "erasure",
   "section": 43,
   "name": "Right to Erasure",
-  "summary": "Section 43, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), grants data subjects the right to obtain from a data user the erasure of personal data concerning them without undue delay in specified circumstances. This right — sometimes called the 'right to be forgotten' — applies where the personal data is no longer necessary for the purpose for which it was collected, where consent has been withdrawn and no other lawful basis applies, where the data was processed unlawfully, or where erasure is required to comply with a legal obligation. The right is subject to important exceptions including legal claims and statutory obligations.",
+  "summary": "Section 43, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), grants data subjects the right to obtain from a data user the erasure of personal data concerning them without undue delay in specified circumstances. This right — sometimes called the 'right to be forgotten' — applies where the personal data is no longer necessary for the purpose for which it was collected, where consent has been withdrawn and no other lawful basis applies, where the data was processed unlawfully, or where erasure is required to comply with a legal obligation. The right is subject to important exceptions including legal claims and statutory obligations.",
   "obligations": [
     {
       "id": "erasure-O1",
@@ -78,6 +78,7 @@
   "relatedCodeSections": [
     "general-cop-s10"
   ],
-  "insertedBy": "A1699",
-  "effectiveDate": "2025-04-01"
+  "insertedBy": "A1727",
+  "effectiveDate": "2025-06-01",
+  "commencementPhase": 3
 }

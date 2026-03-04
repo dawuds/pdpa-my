@@ -25,7 +25,10 @@
       "personal-data-protection-policy",
       "consent-collection-procedure",
       "consent-withdrawal-procedure",
+      "data-protection-impact-assessment-procedure",
+      "privacy-by-design-review-procedure",
       "consent-register",
+      "personal-data-inventory-ropa",
       "consent-records",
       "general-data-protection-notice-bm-en",
       "employee-data-protection-notice",
@@ -43,6 +46,7 @@
       "personal-data-protection-policy",
       "consent-collection-procedure",
       "consent-register",
+      "personal-data-inventory-ropa",
       "consent-records",
       "general-data-protection-notice-bm-en",
       "employee-data-protection-notice",
@@ -52,13 +56,15 @@
       "consent-form-templates",
       "direct-marketing-policy",
       "cookie-and-tracking-policy",
-      "employee-data-protection-policy"
+      "employee-data-protection-policy",
+      "joint-data-user-agreement"
     ],
     "s8": [
       "personal-data-protection-policy",
       "data-sharing-agreement",
       "joint-data-user-agreement",
       "acceptable-use-policy",
+      "personal-data-inventory-ropa",
       "employee-data-protection-policy"
     ],
     "s9": [
@@ -67,13 +73,16 @@
       "access-control-policy",
       "acceptable-use-policy",
       "data-breach-response-policy",
+      "data-classification-policy",
       "third-party-data-processor-management-policy",
       "employee-data-protection-policy",
       "data-breach-notification-procedure",
+      "data-protection-impact-assessment-procedure",
       "third-party-due-diligence-procedure",
       "data-protection-training-procedure",
       "privacy-by-design-review-procedure",
       "jpdp-inspection-response-procedure",
+      "personal-data-inventory-ropa",
       "data-breach-register",
       "third-party-data-processor-register",
       "training-records-register",
@@ -91,6 +100,7 @@
     ],
     "s10": [
       "personal-data-protection-policy",
+      "data-classification-policy",
       "data-retention-and-disposal-policy",
       "data-retention-and-disposal-procedure",
       "personal-data-inventory-ropa",
@@ -99,11 +109,13 @@
     "s11": [
       "personal-data-protection-policy",
       "data-classification-policy",
+      "personal-data-inventory-ropa",
       "employee-data-protection-policy"
     ],
     "s12": [
       "personal-data-protection-policy",
       "access-control-policy",
+      "personal-data-inventory-ropa",
       "employee-data-protection-policy"
     ],
     "s13": [
@@ -145,6 +157,7 @@
     ],
     "s34": [
       "data-correction-request-procedure",
+      "complaint-handling-procedure",
       "dsar-log",
       "third-party-data-processor-management-policy"
     ],
@@ -235,8 +248,8 @@
     ]
   },
   "artifactToSections": {
-    "personal-data-protection-policy": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
-    "data-classification-policy": ["s9", "s10", "s11", "s29"],
+    "personal-data-protection-policy": ["s2", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+    "data-classification-policy": ["s2", "s9", "s10", "s11", "s29"],
     "data-retention-and-disposal-policy": ["s10"],
     "data-breach-response-policy": ["s9", "s143A"],
     "cross-border-data-transfer-policy": ["s129A"],
@@ -244,7 +257,7 @@
     "access-control-policy": ["s9", "s12"],
     "acceptable-use-policy": ["s8", "s9"],
     "third-party-data-processor-management-policy": ["s9", "s34", "s129A"],
-    "direct-marketing-policy": ["s7", "s40", "s41", "s42", "s43"],
+    "direct-marketing-policy": ["s6", "s7", "s40", "s41", "s42", "s43"],
     "cookie-and-tracking-policy": ["s6", "s7"],
     "employee-data-protection-policy": ["s6", "s7", "s8", "s9", "s10", "s11", "s12"],
     "consent-collection-procedure": ["s6", "s7"],
@@ -258,7 +271,7 @@
     "data-protection-training-procedure": ["s9"],
     "privacy-by-design-review-procedure": ["s5", "s6", "s9"],
     "complaint-handling-procedure": ["s30", "s34", "s43", "s101", "s102"],
-    "jpdp-inspection-response-procedure": ["s101", "s102", "s103", "s104", "s105"],
+    "jpdp-inspection-response-procedure": ["s9", "s101", "s102", "s103", "s104", "s105"],
     "enforcement-notice-response-procedure": ["s83", "s110", "s111", "s133"],
     "data-portability-request-procedure": ["s30", "s31"],
     "consent-withdrawal-procedure": ["s6", "s38", "s43"],
@@ -288,7 +301,7 @@
     "data-breach-notification-report-commissioner": ["s143A"],
     "data-breach-notification-report-data-subjects": ["s143A"],
     "dpia-report": ["s5", "s6", "s9", "s29"],
-    "dpo-annual-report": ["s129B"],
+    "dpo-annual-report": ["s5", "s129B"],
     "third-party-compliance-assessment-report": ["s9", "s129A"],
     "data-processing-agreement": ["s9", "s129A"],
     "data-sharing-agreement": ["s8", "s129A"],

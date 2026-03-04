@@ -2,7 +2,7 @@
   "id": "restriction",
   "section": 44,
   "name": "Right to Restriction of Processing",
-  "summary": "Section 44, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1699), grants data subjects the right to obtain from a data user the restriction of processing of their personal data in specified circumstances. Where processing is restricted, the data user may store the personal data but must not actively process it — the data is effectively placed in a hold state. The right to restriction arises where: (a) the accuracy of the data is contested and pending verification; (b) the data subject has objected to processing and a determination is pending; (c) the processing is unlawful but the data subject opposes erasure and requests restriction instead; or (d) the data is no longer needed by the data user but the data subject requires it for legal claims.",
+  "summary": "Section 44, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), grants data subjects the right to obtain from a data user the restriction of processing of their personal data in specified circumstances. Where processing is restricted, the data user may store the personal data but must not actively process it — the data is effectively placed in a hold state. The right to restriction arises where: (a) the accuracy of the data is contested and pending verification; (b) the data subject has objected to processing and a determination is pending; (c) the processing is unlawful but the data subject opposes erasure and requests restriction instead; or (d) the data is no longer needed by the data user but the data subject requires it for legal claims.",
   "obligations": [
     {
       "id": "restriction-O1",
@@ -78,6 +78,7 @@
   "relatedCodeSections": [
     "general-cop-s10"
   ],
-  "insertedBy": "A1699",
-  "effectiveDate": "2025-04-01"
+  "insertedBy": "A1727",
+  "effectiveDate": "2025-06-01",
+  "commencementPhase": 3
 }

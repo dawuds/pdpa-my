@@ -21,6 +21,7 @@
     "s7": [
       "consent-collection-mechanism",
       "consent-record-keeping",
+      "consent-validity-assessment",
       "privacy-notice-design",
       "notice-delivery-mechanism",
       "notice-review-cycle",
@@ -118,6 +119,7 @@
       "direct-marketing-opt-out"
     ],
     "s43": [
+      "consent-withdrawal-management",
       "direct-marketing-opt-out",
       "dsar-intake-and-verification",
       "rights-awareness-communication"
@@ -179,7 +181,7 @@
     "dsar-intake-and-verification": ["s30", "s34", "s38", "s43"],
     "access-request-fulfillment": ["s30", "s31", "s32", "s33"],
     "correction-request-handling": ["s34", "s35", "s36"],
-    "direct-marketing-opt-out": ["s40", "s43"],
+    "direct-marketing-opt-out": ["s7", "s40", "s43"],
     "dsar-deadline-management": ["s30", "s31", "s34", "s44"],
     "rights-awareness-communication": ["s7", "s30", "s34", "s38", "s43"],
     "privacy-notice-design": ["s7"],
@@ -199,9 +201,9 @@
     "data-accuracy-and-quality": ["s11"],
     "purpose-limitation-enforcement": ["s5", "s6", "s8", "s11"],
     "breach-detection-and-triage": ["s9", "s143A"],
-    "breach-notification-to-commissioner": ["s143A"],
+    "breach-notification-to-commissioner": ["s9", "s143A"],
     "breach-containment-and-remediation": ["s9", "s143A"],
-    "data-subject-breach-notification": ["s143A"],
+    "data-subject-breach-notification": ["s9", "s143A"],
     "transfer-identification-and-mapping": ["s129A"],
     "transfer-mechanism-selection": ["s129A"],
     "transfer-impact-assessment": ["s129A"],

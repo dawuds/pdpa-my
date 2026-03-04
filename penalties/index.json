@@ -16,8 +16,9 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "principles",
     "compoundable": true,
@@ -42,8 +43,9 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "registration",
     "compoundable": true,
@@ -87,14 +89,15 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     "category": "cross-border",
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Section 129A was substantially revised by A1699. The 2024 amendment introduced new mechanisms including binding corporate rules, standard contractual clauses, and certification schemes as alternatives to ministerial approval."
+    "notes": "Section 129A was substantially revised by A1727. The 2024 amendment introduced new mechanisms including binding corporate rules, standard contractual clauses, and certification schemes as alternatives to ministerial approval."
   },
   {
     "id": "pen-s57",
@@ -114,7 +117,7 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "This provision protects the confidentiality of information obtained during enforcement and regulatory activities. It applies to current and former officers and their agents. Section reference corrected from s130 (which, post-A1699, is 'Liability of body corporate') to s57 ('Secrecy') where the secrecy obligation and offence for Commissioner and officers resides in the post-A1699 provisions database."
+    "notes": "This provision protects the confidentiality of information obtained during enforcement and regulatory activities. It applies to current and former officers and their agents. Section reference corrected from s130 (which, post-A1727, is 'Liability of body corporate') to s57 ('Secrecy') where the secrecy obligation and offence for Commissioner and officers resides in the post-A1727 provisions database."
   },
   {
     "id": "pen-s116",
@@ -134,14 +137,15 @@
       "fineNumeric": 500000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "enforcement",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "Obstruction includes failure to cooperate with audits, inspections, and investigations. The enhanced penalty post-2024 reflects the increased importance of effective enforcement mechanisms. Section reference corrected from s131 (which, post-A1699, is 'Service of notices') to s116 ('Obstruction of enforcement officers') where this offence resides in the post-A1699 provisions database."
+    "notes": "Obstruction includes failure to cooperate with audits, inspections, and investigations. The enhanced penalty post-2024 reflects the increased importance of effective enforcement mechanisms. Section reference corrected from s131 (which, post-A1727, is 'Service of notices') to s116 ('Obstruction of enforcement officers') where this offence resides in the post-A1727 provisions database."
   },
   {
     "id": "pen-s132",
@@ -161,8 +165,9 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "disclosure",
     "compoundable": true,
@@ -170,7 +175,7 @@
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
     "verificationRequired": true,
     "notes": "Distinct from the Disclosure Principle (s8) violation. This provision targets deliberate unauthorized disclosures by persons who have access to personal data in the course of their employment or engagement.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure by data users. The pre-amendment 'Unauthorized Disclosure by Data User' offence may have been renumbered or consolidated into s129 ('Offences in relation to personal data') or s128 ('General offences'). Verify against the gazetted amended Act text before relying on this section reference."
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure by data users. The pre-amendment 'Unauthorized Disclosure by Data User' offence may have been renumbered or consolidated into s129 ('Offences in relation to personal data') or s128 ('General offences'). Verify against the gazetted amended Act text before relying on this section reference."
   },
   {
     "id": "pen-s29",
@@ -190,14 +195,15 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "enforcement",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "An enforcement notice is a formal regulatory direction. Non-compliance undermines the entire enforcement regime. This offence can be charged in addition to the underlying breach that triggered the notice. Section reference corrected from s133 (which, post-A1699, is 'Presumptions') to s29 ('Failure to comply with enforcement notice') where this offence resides in the post-A1699 provisions database."
+    "notes": "An enforcement notice is a formal regulatory direction. Non-compliance undermines the entire enforcement regime. This offence can be charged in addition to the underlying breach that triggered the notice. Section reference corrected from s133 (which, post-A1727, is 'Presumptions') to s29 ('Failure to comply with enforcement notice') where this offence resides in the post-A1727 provisions database."
   },
   {
     "id": "pen-s133A",
@@ -211,11 +217,14 @@
       "or_both": true
     },
     "amendedPenalty": null,
+    "insertedBy": "A1727",
+    "effectiveDate": "2025-06-01",
+    "commencementPhase": 3,
     "category": "officer-liability",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "This is personal liability of directors and senior officers — distinct from the body corporate's own liability under s130 (turnover penalty). Officers cannot shelter behind corporate structures where they consented to, connived in, or whose neglect contributed to PDPA violations. Introduced by A1699."
+    "notes": "This is personal liability of directors and senior officers — distinct from the body corporate's own liability under s130 (turnover penalty). Officers cannot shelter behind corporate structures where they consented to, connived in, or whose neglect contributed to PDPA violations. Introduced by A1727."
   },
   {
     "id": "pen-s134",
@@ -235,8 +244,9 @@
       "fineNumeric": 500000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "enforcement",
     "compoundable": false,
@@ -244,7 +254,7 @@
     "compoundRegulation": null,
     "verificationRequired": true,
     "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data users, data subjects, data processors, and any other person providing information under the Act.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s134 is 'Public servants' (an administrative provision classifying Commissioner staff as public servants for Penal Code purposes), not an offence for false statements. The pre-amendment 'False Statements' offence may have been renumbered in the post-A1699 Act. Verify against the gazetted amended Act text to locate the correct section for this offence."
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s134 is 'Public servants' (an administrative provision classifying Commissioner staff as public servants for Penal Code purposes), not an offence for false statements. The pre-amendment 'False Statements' offence may have been renumbered in the post-A1727 Act. Verify against the gazetted amended Act text to locate the correct section for this offence."
   },
   {
     "id": "pen-s135A",
@@ -258,8 +268,9 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     "category": "disclosure",
     "compoundable": false,
@@ -279,14 +290,15 @@
       "fineNumeric": 500000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     "category": "data-breach",
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "New obligation inserted by A1699. Section 143A(5) creates the offence for failure to notify. Continuing failure is a continuing offence. Note: The JPDP Guideline on Data Breach Notification 2025 (effective 1 June 2025) specifies 72 hours for initial notification to JPDP and 7 days for data subject notification — these are guideline timelines, not statutory requirements under the Act itself."
+    "notes": "New obligation inserted by A1727. Section 143A(5) creates the offence for failure to notify. Continuing failure is a continuing offence. Note: The JPDP Guideline on Data Breach Notification 2025 (effective 1 June 2025) specifies 72 hours for initial notification to JPDP and 7 days for data subject notification — these are guideline timelines, not statutory requirements under the Act itself."
   },
   {
     "id": "pen-dpo",
@@ -300,14 +312,15 @@
       "fineNumeric": 250000,
       "imprisonment": "2 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3
     },
     "category": "processing",
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "New obligation introduced by A1699. DPO appointment is mandatory for data users processing large volumes of data or processing sensitive personal data. The DPO Guideline 2025 sets out criteria for mandatory appointment."
+    "notes": "New obligation introduced by A1727. DPO appointment is mandatory for data users processing large volumes of data or processing sensitive personal data. The DPO Guideline 2025 sets out criteria for mandatory appointment."
   },
   {
     "id": "pen-s44",
@@ -327,8 +340,9 @@
       "fineNumeric": 500000,
       "imprisonment": "2 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "processing",
     "compoundable": true,
@@ -336,7 +350,7 @@
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
     "verificationRequired": true,
     "notes": "Covers access requests (s30), correction requests (s34), and opt-out from direct marketing (s43). Each unanswered or improperly answered request may constitute a separate offence.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s44 is 'Right to restrict processing' (a rights-based provision conferring rights on data subjects), not a penalty/offence section for contravention of data subject rights. The pre-amendment offence for failing to comply with data subject rights requests may have been renumbered or may now be captured under s128 ('General offences') or another penalty provision. Verify against the gazetted amended Act text to locate the correct section."
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s44 is 'Right to restrict processing' (a rights-based provision conferring rights on data subjects), not a penalty/offence section for contravention of data subject rights. The pre-amendment offence for failing to comply with data subject rights requests may have been renumbered or may now be captured under s128 ('General offences') or another penalty provision. Verify against the gazetted amended Act text to locate the correct section."
   },
   {
     "id": "pen-s17",
@@ -356,14 +370,15 @@
       "fineNumeric": 1000000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "processing",
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Sensitive personal data attracts a higher standard of protection. The Act does not require an additional lawful basis beyond explicit consent except in very limited circumstances (e.g., medical emergencies, legal proceedings). Section reference corrected from s29 (which, post-A1699, is 'Failure to comply with enforcement notice') to s17 ('Processing of sensitive personal data') where this obligation and its offence reside in the post-A1699 provisions database."
+    "notes": "Sensitive personal data attracts a higher standard of protection. The Act does not require an additional lawful basis beyond explicit consent except in very limited circumstances (e.g., medical emergencies, legal proceedings). Section reference corrected from s29 (which, post-A1727, is 'Failure to comply with enforcement notice') to s17 ('Processing of sensitive personal data') where this obligation and its offence reside in the post-A1727 provisions database."
   },
   {
     "id": "pen-s136",
@@ -382,8 +397,9 @@
       "fineNumeric": 250000,
       "imprisonment": "2 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "general",
     "compoundable": true,
@@ -410,15 +426,16 @@
       "imprisonment": null,
       "or_both": false,
       "perDay": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-04-01",
+      "commencementPhase": 2
     },
     "category": "general",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
     "notes": "The continuing offence provision is critical for compelling compliance. Where a data user refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly.",
-    "note": "If Act A1699 renumbered the original Continuing Offence provision to s139 or similar, the section reference in this entry should be updated accordingly. Verify against the gazetted amended Act text."
+    "note": "If Act A1727 renumbered the original Continuing Offence provision to s139 or similar, the section reference in this entry should be updated accordingly. Verify against the gazetted amended Act text."
   },
   {
     "id": "pen-s130-turnover",
@@ -432,15 +449,16 @@
       "fineNumeric": 3000000,
       "imprisonment": null,
       "or_both": false,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01",
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3,
       "notes": "Turnover-based penalty — the RM3M floor ensures a minimum sanction even for smaller organisations"
     },
     "category": "corporate-liability",
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "Inserted by A1699. Applies to body corporates only. Individual officers may additionally be liable under s133A. The 10% annual Malaysian turnover cap applies only to Malaysian-derived revenue, not global turnover."
+    "notes": "Inserted by A1727. Applies to body corporates only. Individual officers may additionally be liable under s133A. The 10% annual Malaysian turnover cap applies only to Malaysian-derived revenue, not global turnover."
   },
   {
     "id": "pen-s137",
@@ -454,16 +472,17 @@
       "fineNumeric": 500000,
       "imprisonment": "3 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01",
-      "transitionPeriod": "18 months from commencement (i.e., by 1 October 2026)",
-      "notes": "New section inserted by A1699"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3,
+      "transitionPeriod": "18 months from commencement (i.e., by 1 December 2026)",
+      "notes": "New section inserted by A1727"
     },
     "category": "processing",
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "New obligation inserted by A1699. High-risk processing includes large-scale processing of sensitive data, systematic monitoring, and automated decision-making with significant effects on data subjects. 18-month transition period applies."
+    "notes": "New obligation inserted by A1727. High-risk processing includes large-scale processing of sensitive data, systematic monitoring, and automated decision-making with significant effects on data subjects. 18-month transition period applies."
   },
   {
     "id": "pen-s138-ropa",
@@ -477,11 +496,12 @@
       "fineNumeric": 300000,
       "imprisonment": "2 years",
       "or_both": true,
-      "amendedBy": "A1699",
-      "effectiveDate": "2025-04-01",
-      "transitionPeriod": "12 months from commencement (i.e., by 1 April 2026)",
-      "complianceDeadline": "2026-04-01",
-      "notes": "New section inserted by A1699"
+      "amendedBy": "A1727",
+      "effectiveDate": "2025-06-01",
+      "commencementPhase": 3,
+      "transitionPeriod": "12 months from commencement (i.e., by 1 June 2026)",
+      "complianceDeadline": "2026-06-01",
+      "notes": "New section inserted by A1727"
     },
     "category": "processing",
     "compoundable": true,
@@ -509,7 +529,7 @@
     "compoundRegulation": null,
     "verificationRequired": true,
     "notes": "Applies to both data users and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1699 provisions database, s109 is 'Confidentiality of complaints' (an administrative obligation on the Commissioner), not an offence for failure to cooperate with investigation. The offence for failing to attend/answer questions under investigation is located at s104 ('Power to require attendance') in the post-A1699 database. Verify against the gazetted amended Act text to determine whether this entry should be updated to s104 or a different section."
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s109 is 'Confidentiality of complaints' (an administrative obligation on the Commissioner), not an offence for failure to cooperate with investigation. The offence for failing to attend/answer questions under investigation is located at s104 ('Power to require attendance') in the post-A1727 database. Verify against the gazetted amended Act text to determine whether this entry should be updated to s104 or a different section."
   },
   {
     "id": "pen-s114",
@@ -529,6 +549,6 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "A production order is a compulsory document production mechanism akin to a legal subpoena. Non-compliance is treated seriously as it frustrates the enforcement mandate of the Commissioner. Section reference corrected from s127 (which, post-A1699, is 'Public prosecutor') to s114 ('Production order') where the production order offence resides in the post-A1699 provisions database."
+    "notes": "A production order is a compulsory document production mechanism akin to a legal subpoena. Non-compliance is treated seriously as it frustrates the enforcement mandate of the Commissioner. Section reference corrected from s127 (which, post-A1727, is 'Public prosecutor') to s114 ('Production order') where the production order offence resides in the post-A1727 provisions database."
   }
 ]
