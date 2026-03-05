@@ -42,6 +42,74 @@ The tightens chain referenced `s129A-T3` (nonexistent). Cross-reference format u
 
 ---
 
+## Audit Package — Cross-Repo Design Pattern
+
+### What It Is
+
+The "Audit Package" is a UI component on the control detail view that auto-resolves linked artifacts and evidence items through provision maps. It answers three questions an auditor asks when reviewing a control:
+
+1. **What must I implement?** → Key Activities + Maturity Levels (existing)
+2. **What documents must exist?** → Required Artifacts (new)
+3. **How do I verify it works?** → Evidence Checklist (new)
+
+### Architecture (reusable across all compliance repos)
+
+```
+Control (slug)
+  └─ sections[] / clauses[] / subcategories[]
+       │
+       ├─ provision-map.json → sectionToArtifacts → artifact slugs
+       │    └─ resolve from artifacts/inventory.json → full objects
+       │
+       └─ evidence/index.json[section] → evidenceItems[]
+            └─ each with whatGoodLooksLike[], commonGaps[], suggestedSources[]
+```
+
+**Join key varies by repo:**
+
+| Repo | Join Key | Control Field | Artifact Map | Evidence Key |
+|------|----------|---------------|--------------|--------------|
+| PDPA-MY | PDPA section (s6, s7) | `sections[]` | `sectionToArtifacts` | `evidence/index.json[s6]` |
+| RMIT | BNM clause (8.1, 10.3) | `clauses[]` | `clauseToArtifacts` | `evidence/index.json[8.1]` |
+| NACSA | Act section (s17, s18) | `sections[]` | `sectionToArtifacts` | `evidence/index.json[s17]` |
+| OT-Security | Domain ID | `domain` | Need to create | `evidence/index.json[domain]` |
+| AI-Governance | Framework refs | `frameworkMappings` | `controlToArtifacts` (direct) | `evidence/index.json[slug]` |
+| NIST | Subcategory (GV.OC-01) | `subcategoryId` | `subcategoryToArtifacts` | `evidence/by-function/` |
+
+### UI Components (CSS classes — copy to each repo)
+
+| Class | Purpose |
+|-------|---------|
+| `.audit-package` | Wrapper — accent top border, light blue background |
+| `.audit-package-title` | "AUDIT PACKAGE" uppercase label |
+| `.audit-package-summary` | "N artifacts required, M evidence items" |
+| `.artifact-link-card` | Compact artifact card with hover |
+| `.artifact-link-card-checklist` | Checkbox-styled keyContents list |
+| `.evidence-checklist-item` | Evidence item card |
+| `.evidence-good` | Green-bordered "What Good Looks Like" list |
+| `.evidence-gap` | Red-bordered "Common Gaps" list |
+
+### Implementation Checklist (for each new repo)
+
+1. Ensure the repo has `controls/`, `artifacts/`, `evidence/` directories with the standard structure
+2. Ensure a provision map exists (e.g., `controls/provision-map.json` or equivalent) with bidirectional lookups
+3. In `renderControlDetail()`, load artifacts + evidence data (use existing state cache)
+4. Resolve linked artifacts via the provision map using the control's section/clause field
+5. Resolve evidence items from `evidence/index.json` using the same section/clause keys
+6. Sort artifacts mandatory-first
+7. Render the Audit Package HTML using the shared CSS classes
+8. Ensure nested accordion click handlers work (reuse existing `[data-accordion]` handler)
+
+### Design Decisions
+
+- **Option B (render-time resolution) chosen over Option A (direct IDs):** No data file changes needed — the provision maps already contain the join data. Direct `controlIds[]` on artifacts/evidence can be added later as an optimization.
+- **Mandatory artifacts sorted first:** Auditors care about mandatory items; nice-to-haves can come after.
+- **Evidence sub-accordions collapsed by default:** "What Good Looks Like" and "Common Gaps" are verbose — show them on demand to keep the page scannable.
+- **Checkbox-styled artifact contents:** Makes the artifact card feel like a checklist an auditor can mentally tick through.
+- **No new data files created:** Purely app.js + style.css changes, keeping the data layer clean.
+
+---
+
 ## Common Patterns (Shared Across All 3 Compliance Repos)
 
 ### Pattern 1: AI Confabulation
