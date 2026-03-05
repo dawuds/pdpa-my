@@ -1247,6 +1247,135 @@ body {
   .risk-card { break-inside: avoid; }
 }
 
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F172A;
+    --card: #1E293B;
+    --border: #334155;
+    --border-light: #1E293B;
+    --accent: #60A5FA;
+    --accent-light: #1E3A5F;
+    --accent-dark: #1E3A8A;
+    --text-primary: #E2E8F0;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --red: #F87171;
+    --red-light: #3B1C1C;
+    --green: #4ADE80;
+    --green-light: #1A3A2A;
+    --amber: #FBBF24;
+    --amber-light: #3D2E0A;
+    --purple: #A78BFA;
+    --purple-light: #2E1E5E;
+    --cyan: #22D3EE;
+    --cyan-light: #0C3644;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -2px rgba(0,0,0,0.2);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+  }
+
+  /* Header */
+  .header { background: #0D1B2A; }
+
+  /* Nav */
+  .nav { background: var(--card); }
+
+  /* Verbatim / Translation blocks */
+  .verbatim-block { background: #1A2744; }
+  .translation-block { background: #152E1F; }
+
+  /* Tables */
+  .data-table tr:hover td { background: #263548; }
+  .data-table th { background: var(--border-light); }
+
+  /* Requirement column headers */
+  .req-column-header.legal { background: #1E3A5F; color: #93C5FD; }
+  .req-column-header.technical { background: #1A3A2A; color: #86EFAC; }
+  .req-column-header.governance { background: #2E1E5E; color: #C4B5FD; }
+
+  /* Badges — ensure readable on dark */
+  .badge-mandatory { background: #3B1C1C; color: #F87171; }
+  .badge-administrative { background: #334155; color: #94A3B8; }
+  .badge-procedural { background: #3D2E0A; color: #FBBF24; }
+  .badge-rights { background: #2E1E5E; color: #A78BFA; }
+  .badge-definitional { background: #0C3644; color: #22D3EE; }
+  .badge-penalty { background: #3B1C1C; color: #F87171; }
+  .badge-amended { background: #3D2E0A; color: #FBBF24; }
+  .badge-domain { background: #1E3A5F; color: #60A5FA; }
+  .badge-type { background: #1A3A2A; color: #4ADE80; }
+  .badge-layer { background: #2E1E5E; color: #A78BFA; }
+  .badge-category { background: #0C3644; color: #22D3EE; }
+  .badge-source-act { background: #1E3A5F; color: #60A5FA; }
+  .badge-source-standard { background: #0C3644; color: #22D3EE; }
+  .badge-source-guideline { background: #3D2E0A; color: #FBBF24; }
+  .badge-source-general-code { background: #1A3A2A; color: #4ADE80; }
+  .badge-source-sector-code { background: #2E1E5E; color: #A78BFA; }
+  .badge-sector { background: #3B1028; color: #F472B6; }
+  .badge-tightens { background: #334155; color: #94A3B8; }
+  .badge-ai { background: #1E3A5F; color: #60A5FA; }
+  .badge-example { background: #1A3A2A; color: #4ADE80; }
+
+  /* Similarity badges */
+  .similarity-high { background: #1A3A2A; color: #4ADE80; }
+  .similarity-medium { background: #3D2E0A; color: #FBBF24; }
+  .similarity-low { background: #3B1C1C; color: #F87171; }
+
+  /* Search highlight */
+  .search-result-snippet mark {
+    background: #854D0E;
+    color: #FEF08A;
+  }
+
+  /* Auditor focus */
+  .auditor-focus { background: #3D2E0A; }
+  .auditor-focus .block-label { color: #FBBF24; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: #3D2E0A;
+    border-color: #854D0E;
+    color: #FBBF24;
+  }
+
+  /* Audit package */
+  .audit-package { background: #162035; }
+
+  /* Filter chips */
+  .filter-chip { background: var(--card); color: var(--text-secondary); }
+
+  /* Evidence good/gap */
+  .evidence-good { background: #1A3A2A; }
+  .evidence-gap { background: #3B1C1C; }
+  .evidence-good li span { color: var(--text-secondary); }
+  .evidence-gap li span { color: var(--text-secondary); }
+
+  /* Maturity levels */
+  .maturity-level.basic { background: #3B1C1C; }
+  .maturity-level.mature { background: #3D2E0A; }
+  .maturity-level.advanced { background: #1A3A2A; }
+
+  /* Penalty cards */
+  .penalty-original { background: #334155; color: var(--text-secondary); }
+  .penalty-amended { background: #3B1C1C; color: #F87171; }
+
+  /* Cross-ref tags */
+  .xref-tag { background: #334155; }
+  .xref-tag:hover { background: #1E3A5F; color: #60A5FA; }
+
+  /* Framework step */
+  .framework-step.active { background: #1E3A5F; }
+
+  /* DPIA screening */
+  .dpia-screening input[type="checkbox"]:checked + div {
+    color: var(--accent);
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .part-grid { grid-template-columns: repeat(2, 1fr); }
