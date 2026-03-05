@@ -537,3 +537,4 @@ The web explorer labels AI-generated fields with an **AI Generated** indicator. 
 ## License
 
 This database is a structured representation of publicly available Malaysian legislation and regulatory guidance. The original texts are copyright of the Government of Malaysia. This structured compilation is provided for informational and compliance purposes.
+
