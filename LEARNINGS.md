@@ -92,21 +92,26 @@ Control (slug)
 ### Implementation Checklist (for each new repo)
 
 1. Ensure the repo has `controls/`, `artifacts/`, `evidence/` directories with the standard structure
-2. Ensure a provision map exists (e.g., `controls/provision-map.json` or equivalent) with bidirectional lookups
-3. In `renderControlDetail()`, load artifacts + evidence data (use existing state cache)
-4. Resolve linked artifacts via the provision map using the control's section/clause field
-5. Resolve evidence items from `evidence/index.json` using the same section/clause keys
-6. Sort artifacts mandatory-first
-7. Render the Audit Package HTML using the shared CSS classes
-8. Ensure nested accordion click handlers work (reuse existing `[data-accordion]` handler)
+2. Add `controlSlugs[]` to each artifact in `artifacts/inventory.json` — curate 1-4 control slugs per artifact
+3. Add `artifactSlugs[]` to each evidence item in `evidence/index.json` — link 1-2 artifact slugs per item
+4. In `renderControlDetail()`, load artifacts + evidence data (use existing state cache)
+5. Filter artifacts where `controlSlugs` includes the current control's slug
+6. Filter evidence items by artifact overlap (evidence linked to artifacts that are linked to the control)
+7. Sort artifacts mandatory-first
+8. Render the Audit Package HTML using the shared CSS classes
+9. Ensure nested accordion click handlers work (reuse existing `[data-accordion]` handler)
 
 ### Design Decisions
 
-- **Option B (render-time resolution) chosen over Option A (direct IDs):** No data file changes needed — the provision maps already contain the join data. Direct `controlIds[]` on artifacts/evidence can be added later as an optimization.
+- **Direct `controlSlugs[]` mapping chosen over section-based joins:** Section-based joins (via provision maps) explode on broad provisions — e.g., PDPA s6 (General Principle) mapped to 19 of 60 artifacts, producing 20 results for a single control. Direct `controlSlugs[]` on each artifact provides curated, semantically relevant mappings (median 2 per control, max 6).
+- **`artifactSlugs[]` on evidence items:** Evidence is filtered by artifact overlap rather than raw section keys, ensuring only evidence relevant to a control's specific artifacts appears. Typical distribution: 1-2 artifact links per evidence item.
 - **Mandatory artifacts sorted first:** Auditors care about mandatory items; nice-to-haves can come after.
 - **Evidence sub-accordions collapsed by default:** "What Good Looks Like" and "Common Gaps" are verbose — show them on demand to keep the page scannable.
 - **Checkbox-styled artifact contents:** Makes the artifact card feel like a checklist an auditor can mentally tick through.
-- **No new data files created:** Purely app.js + style.css changes, keeping the data layer clean.
+
+### Lesson: Section-Based Joins Explode on Broad Provisions
+
+The initial design used provision maps to join controls → sections → artifacts at render time (no data changes needed). This worked conceptually but produced unusable results: controls mapped to broad provisions (like PDPA s6, which covers the General Principle) pulled in nearly every artifact. The fix was adding curated `controlSlugs[]` directly to artifacts — a small data change that dramatically improved relevance. **Rule of thumb:** If a join key can match >5 items, the join is too broad and needs direct curation.
 
 ---
 
