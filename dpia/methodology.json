@@ -1,0 +1,134 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "DPIA Methodology",
+  "description": "Data Protection Impact Assessment methodology aligned with Malaysia PDPA 2010 and international best practices",
+  "legalBasis": {
+    "pdpaSections": ["s6", "s9", "s129", "s129B"],
+    "description": "While PDPA 2010 does not explicitly mandate DPIAs, Sections 6 (General Principle), 9 (Security Principle), 129 (Cross-border transfers), and 129B (Data Protection Officer) collectively require organizations to assess and mitigate data protection risks"
+  },
+  "phases": [
+    {
+      "id": "phase-1",
+      "name": "Screening",
+      "description": "Determine whether a DPIA is required based on processing characteristics",
+      "steps": [
+        "Identify the data processing activity and its purpose",
+        "Determine categories of personal data involved (general vs sensitive under s4)",
+        "Assess scale of processing (number of data subjects, data volume, geographic scope)",
+        "Check against DPIA threshold criteria",
+        "Document screening decision with justification"
+      ],
+      "pdpaReferences": ["s4", "s6"],
+      "outputs": ["Screening decision record", "Processing activity description"]
+    },
+    {
+      "id": "phase-2",
+      "name": "Description",
+      "description": "Document the nature, scope, context, and purpose of the processing",
+      "steps": [
+        "Map complete data flow from collection to deletion",
+        "Identify all data processors and third parties involved (s4 definitions)",
+        "Document lawful basis for processing under PDPA principles",
+        "Describe technical infrastructure and security measures",
+        "Identify cross-border data transfers if any (s129)"
+      ],
+      "pdpaReferences": ["s4", "s5", "s6", "s129"],
+      "outputs": ["Data flow diagram", "Processing register entry", "Third-party inventory"]
+    },
+    {
+      "id": "phase-3",
+      "name": "Necessity & Proportionality",
+      "description": "Assess whether the processing is necessary and proportionate to its purpose",
+      "steps": [
+        "Verify processing is necessary for stated purpose (General Principle, s6)",
+        "Confirm data collected is adequate, relevant, and not excessive (s6(1))",
+        "Assess data retention periods against purpose limitation",
+        "Evaluate whether purpose can be achieved with less personal data",
+        "Review consent mechanisms and data subject notice (s7)"
+      ],
+      "pdpaReferences": ["s6", "s7"],
+      "outputs": ["Necessity assessment", "Proportionality analysis"]
+    },
+    {
+      "id": "phase-4",
+      "name": "Risk Identification",
+      "description": "Identify risks to data subjects' rights and interests",
+      "steps": [
+        "Identify threats to confidentiality (unauthorized access/disclosure)",
+        "Identify threats to integrity (unauthorized modification/corruption)",
+        "Identify threats to availability (loss/destruction of data)",
+        "Assess risks of function creep (processing beyond original purpose)",
+        "Evaluate discrimination or bias risks from processing outcomes",
+        "Consider vulnerable data subjects (children, employees, patients)"
+      ],
+      "pdpaReferences": ["s9", "s6"],
+      "outputs": ["Risk register", "Threat assessment"]
+    },
+    {
+      "id": "phase-5",
+      "name": "Risk Assessment",
+      "description": "Evaluate likelihood and severity of identified risks",
+      "steps": [
+        "Rate likelihood of each risk (1-5 scale)",
+        "Rate impact/severity on data subjects (1-5 scale)",
+        "Calculate risk score (likelihood \u00d7 impact)",
+        "Classify risks using organizational risk matrix",
+        "Prioritize risks requiring mitigation"
+      ],
+      "pdpaReferences": ["s9"],
+      "outputs": ["Risk assessment matrix", "Prioritized risk list"]
+    },
+    {
+      "id": "phase-6",
+      "name": "Mitigation",
+      "description": "Identify and implement measures to mitigate identified risks",
+      "steps": [
+        "Design technical controls (encryption, access control, pseudonymization)",
+        "Design organizational controls (policies, training, procedures)",
+        "Implement data minimization measures",
+        "Establish breach notification procedures (s12 Notice Principle alignment)",
+        "Define data retention and deletion schedules",
+        "Plan for data subject rights handling (access, correction, deletion under s30-s42)"
+      ],
+      "pdpaReferences": ["s9", "s12", "s30", "s31", "s32", "s33", "s34", "s36", "s38", "s40", "s42"],
+      "outputs": ["Mitigation plan", "Residual risk assessment", "Implementation timeline"]
+    },
+    {
+      "id": "phase-7",
+      "name": "Consultation",
+      "description": "Consult with stakeholders and the Data Protection Officer",
+      "steps": [
+        "Present DPIA findings to Data Protection Officer (s129B)",
+        "Consult with affected data subjects or their representatives where feasible",
+        "Engage information security team for technical review",
+        "Seek legal counsel on compliance gaps identified",
+        "Consider consulting JPDP (Commissioner) for high-risk processing"
+      ],
+      "pdpaReferences": ["s129B"],
+      "outputs": ["Consultation record", "DPO sign-off", "Stakeholder feedback"]
+    },
+    {
+      "id": "phase-8",
+      "name": "Decision & Review",
+      "description": "Make go/no-go decision and establish ongoing review",
+      "steps": [
+        "Document final risk assessment with residual risks",
+        "Obtain senior management approval for residual risk acceptance",
+        "Define review triggers (material change, incident, 12-month cycle)",
+        "Integrate DPIA into project governance lifecycle",
+        "Archive DPIA as compliance evidence"
+      ],
+      "pdpaReferences": ["s6", "s9"],
+      "outputs": ["DPIA report", "Approval record", "Review schedule"]
+    }
+  ],
+  "reviewTriggers": [
+    "Material change to processing purpose or scope",
+    "New categories of personal data collected",
+    "New technology or processing method introduced",
+    "Data breach or security incident related to the processing",
+    "Regulatory guidance or enforcement action by JPDP",
+    "Annual review cycle (minimum)",
+    "Change in data processor or cross-border transfer arrangements"
+  ]
+}

@@ -47,6 +47,7 @@ function parseRoute() {
   if (hash === 'cross-references') return { view: 'cross-references' };
   if (hash === 'framework') return { view: 'framework' };
   if (hash === 'risk-management') return { view: 'risk-management' };
+  if (hash === 'dpia') return { view: 'dpia' };
   return { view: 'overview' };
 }
 
@@ -92,6 +93,7 @@ function render() {
     case 'cross-references': renderCrossReferences(app); break;
     case 'framework': renderFramework(app); break;
     case 'risk-management': renderRiskManagement(app); break;
+    case 'dpia': renderDPIA(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
   }
@@ -108,7 +110,8 @@ function updateNav() {
       (view === 'controls' && state.route.view === 'control-detail') ||
       (view === 'supplements' && state.route.view === 'supplement-detail') ||
       (view === 'framework' && state.route.view === 'framework') ||
-      (view === 'risk-management' && state.route.view === 'risk-management')
+      (view === 'risk-management' && state.route.view === 'risk-management') ||
+      (view === 'dpia' && state.route.view === 'dpia')
     );
   });
 }
@@ -1778,6 +1781,436 @@ function renderRMTreatment(treatment) {
             ${s.constraints.map(c => `<li style="margin-bottom:0.125rem;">${esc(c)}</li>`).join('')}
           </ul>
         ` : ''}
+      </div>
+    `).join('')}
+  `;
+}
+
+/* ===== DPIA ===== */
+async function renderDPIA(app) {
+  const [methodology, thresholds, examples, templates] = await Promise.all([
+    fetchJSON('dpia/methodology.json'),
+    fetchJSON('dpia/thresholds.json'),
+    fetchJSON('dpia/worked-examples.json'),
+    fetchJSON('dpia/templates.json'),
+  ]);
+
+  if (!methodology && !thresholds && !examples && !templates) {
+    app.innerHTML = '<div class="empty-state"><div class="empty-state-text">DPIA data not available.</div></div>';
+    return;
+  }
+
+  const phases = (methodology && methodology.phases) || [];
+  const triggers = (thresholds && thresholds.mandatoryTriggers) || [];
+  const questions = (thresholds && thresholds.screeningQuestions) || [];
+  const exampleList = (examples && examples.examples) || [];
+
+  app.innerHTML = `
+    <div class="page-title">Data Protection Impact Assessment</div>
+    <div class="page-subtitle">DPIA methodology, screening tool, worked examples, and assessment template aligned with PDPA 2010 <span class="badge badge-ai" title="Constructed indicative content — not authoritative legal guidance">AI Generated</span></div>
+    <div class="stats-banner">
+      <div class="stat-card"><div class="stat-number">${phases.length}</div><div class="stat-label">Assessment Phases</div></div>
+      <div class="stat-card"><div class="stat-number">${triggers.length}</div><div class="stat-label">Mandatory Triggers</div></div>
+      <div class="stat-card"><div class="stat-number">${exampleList.length}</div><div class="stat-label">Worked Examples</div></div>
+      <div class="stat-card"><div class="stat-number">${(templates && templates.sections || []).length}</div><div class="stat-label">Template Sections</div></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="dpia-methodology">Methodology</button>
+      <button class="tab-btn" data-tab="dpia-screening">Screening Tool</button>
+      <button class="tab-btn" data-tab="dpia-examples">Worked Examples</button>
+      <button class="tab-btn" data-tab="dpia-template">Assessment Template</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-dpia-methodology">
+      ${renderDPIAMethodology(methodology)}
+    </div>
+    <div class="tab-panel" id="tab-dpia-screening">
+      ${renderDPIAScreening(thresholds)}
+    </div>
+    <div class="tab-panel" id="tab-dpia-examples">
+      ${renderDPIAExamples(examples)}
+    </div>
+    <div class="tab-panel" id="tab-dpia-template">
+      ${renderDPIATemplate(templates)}
+    </div>
+  `;
+
+  // Attach screening tool interactivity
+  initDPIAScreening(thresholds);
+}
+
+function renderDPIAMethodology(meth) {
+  if (!meth) return '<div class="empty-state"><div class="empty-state-text">Methodology data not available.</div></div>';
+
+  const phasesHTML = (meth.phases || []).map(p => `
+    <div class="accordion-item">
+      <div class="accordion-header" data-accordion>
+        <span><strong>${esc(p.name)}</strong> <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">${esc(p.description)}</span></span>
+        <span class="accordion-arrow">&#9654;</span>
+      </div>
+      <div class="accordion-body">
+        <div class="dpia-phase">
+          <div class="block-label">Steps</div>
+          <ol style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
+            ${(p.steps || []).map(s => `<li style="margin-bottom:0.25rem;">${esc(s)}</li>`).join('')}
+          </ol>
+          <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <div>
+              <div class="block-label">PDPA References</div>
+              <div style="display:flex;gap:0.25rem;flex-wrap:wrap;">
+                ${(p.pdpaReferences || []).map(r => `<a href="#section/${r}" class="badge badge-domain">${esc(r)}</a>`).join('')}
+              </div>
+            </div>
+            <div>
+              <div class="block-label">Outputs</div>
+              <div style="display:flex;gap:0.25rem;flex-wrap:wrap;">
+                ${(p.outputs || []).map(o => `<span class="badge badge-type">${esc(o)}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  return `
+    <div class="card">
+      <div class="card-title">${esc(meth.title)}</div>
+      <div class="card-body" style="margin-bottom:0.75rem;">${esc(meth.description)}</div>
+      ${meth.legalBasis ? `
+        <div class="auditor-focus">
+          <div class="block-label" style="color:#92400E;">Legal Basis</div>
+          <div style="font-size:0.8125rem;">${esc(meth.legalBasis.description)}</div>
+          <div style="display:flex;gap:0.25rem;flex-wrap:wrap;margin-top:0.5rem;">
+            ${(meth.legalBasis.pdpaSections || []).map(s => `<a href="#section/${s}" class="badge badge-domain">${esc(s)}</a>`).join('')}
+          </div>
+        </div>
+      ` : ''}
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">8-Phase DPIA Process</h3>
+    <div class="accordion">
+      ${phasesHTML}
+    </div>
+
+    ${meth.reviewTriggers && meth.reviewTriggers.length ? `
+      <div class="card" style="margin-top:1.5rem;">
+        <div class="card-title">Review Triggers</div>
+        <div class="card-body" style="margin-bottom:0.5rem;">A DPIA should be reviewed when any of the following occur:</div>
+        <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+          ${meth.reviewTriggers.map(t => `<li style="margin-bottom:0.25rem;">${esc(t)}</li>`).join('')}
+        </ul>
+      </div>
+    ` : ''}
+  `;
+}
+
+function renderDPIAScreening(thresholds) {
+  if (!thresholds) return '<div class="empty-state"><div class="empty-state-text">Screening data not available.</div></div>';
+
+  const questions = thresholds.screeningQuestions || [];
+  const triggers = thresholds.mandatoryTriggers || [];
+  const bands = (thresholds.scoringGuide && thresholds.scoringGuide.bands) || [];
+
+  return `
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="card-title">${esc(thresholds.title)}</div>
+      <div class="card-body">${esc(thresholds.description)}</div>
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Mandatory Triggers</h3>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">If any of the following criteria are met, a DPIA is required regardless of the screening score.</p>
+    <div class="accordion">
+      ${triggers.map(t => `
+        <div class="accordion-item">
+          <div class="accordion-header" data-accordion>
+            <span>
+              <span style="font-family:var(--mono);font-size:0.75rem;color:var(--accent);margin-right:0.5rem;">${esc(t.id)}</span>
+              <strong>${esc(t.criterion)}</strong>
+              <span class="badge ${t.riskLevel === 'high' ? 'badge-mandatory' : 'badge-procedural'}" style="margin-left:0.5rem;">${esc(t.riskLevel)}</span>
+            </span>
+            <span class="accordion-arrow">&#9654;</span>
+          </div>
+          <div class="accordion-body">
+            <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(t.description)}</p>
+            <div style="display:flex;gap:0.25rem;">
+              <a href="#section/${Array.isArray(t.pdpaSection) ? t.pdpaSection[0] : t.pdpaSection}" class="badge badge-domain">${esc(Array.isArray(t.pdpaSection) ? t.pdpaSection.join(', ') : t.pdpaSection)}</a>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Screening Questionnaire</h3>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">Check all that apply. The total weighted score determines whether a DPIA is required.</p>
+    <div class="dpia-screening" id="dpia-screening-form">
+      ${questions.map(q => `
+        <label class="dpia-screening-question" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.5rem;cursor:pointer;transition:all 0.15s;">
+          <input type="checkbox" data-weight="${q.weight}" data-sq-id="${esc(q.id)}" style="margin-top:0.25rem;flex-shrink:0;">
+          <div style="flex:1;">
+            <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.125rem;">${esc(q.question)}</div>
+            <div style="display:flex;gap:0.5rem;align-items:center;">
+              <span class="badge badge-category">${esc(q.category)}</span>
+              <span style="font-size:0.6875rem;color:var(--text-muted);">Weight: ${q.weight}</span>
+            </div>
+          </div>
+        </label>
+      `).join('')}
+    </div>
+
+    <div class="dpia-score" id="dpia-score-display" style="margin-top:1rem;">
+      <div class="card" style="text-align:center;padding:1.5rem;">
+        <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:0.5rem;">Screening Score</div>
+        <div id="dpia-score-value" style="font-family:var(--mono);font-size:2.5rem;font-weight:700;color:var(--green);line-height:1;">0</div>
+        <div id="dpia-score-recommendation" style="font-size:0.875rem;font-weight:500;color:var(--green);margin-top:0.5rem;">DPIA not required — document screening decision</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Scoring Guide</h3>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      ${bands.map(b => `
+        <div style="flex:1;min-width:200px;padding:0.75rem 1rem;border-radius:var(--radius);border-left:4px solid ${b.color};background:${b.color}10;">
+          <div style="font-family:var(--mono);font-size:1rem;font-weight:700;color:${b.color};margin-bottom:0.25rem;">${esc(b.range)}</div>
+          <div style="font-size:0.8125rem;color:var(--text-secondary);">${esc(b.recommendation)}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function initDPIAScreening(thresholds) {
+  if (!thresholds) return;
+  const form = document.getElementById('dpia-screening-form');
+  if (!form) return;
+
+  const bands = (thresholds.scoringGuide && thresholds.scoringGuide.bands) || [];
+
+  form.addEventListener('change', function() {
+    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+    let score = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked) score += parseInt(cb.dataset.weight, 10) || 0;
+    });
+
+    const scoreEl = document.getElementById('dpia-score-value');
+    const recEl = document.getElementById('dpia-score-recommendation');
+    if (!scoreEl || !recEl) return;
+
+    scoreEl.textContent = score;
+
+    // Determine band
+    let color = '#22c55e';
+    let recommendation = 'DPIA not required — document screening decision';
+    if (score >= 8) {
+      color = '#ef4444';
+      recommendation = 'DPIA required — proceed with full assessment';
+    } else if (score >= 5) {
+      color = '#f59e0b';
+      recommendation = 'DPIA recommended — consider voluntary assessment';
+    }
+
+    // Override from bands data if available
+    for (const b of bands) {
+      const parts = b.range.split('-');
+      const low = parseInt(parts[0], 10);
+      if (b.range.endsWith('+')) {
+        if (score >= low) { color = b.color; recommendation = b.recommendation; }
+      } else {
+        const high = parseInt(parts[1], 10);
+        if (score >= low && score <= high) { color = b.color; recommendation = b.recommendation; }
+      }
+    }
+
+    scoreEl.style.color = color;
+    recEl.style.color = color;
+    recEl.textContent = recommendation;
+  });
+}
+
+function renderDPIAExamples(examples) {
+  if (!examples || !examples.examples || !examples.examples.length) {
+    return '<div class="empty-state"><div class="empty-state-text">No worked examples available.</div></div>';
+  }
+
+  return `
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="card-title">${esc(examples.title)}</div>
+      <div class="card-body">${esc(examples.description)}</div>
+    </div>
+    <div class="accordion">
+      ${examples.examples.map(ex => {
+        const scoreColor = ex.screeningScore >= 8 ? '#ef4444' : ex.screeningScore >= 5 ? '#f59e0b' : '#22c55e';
+        return `
+          <div class="accordion-item">
+            <div class="accordion-header" data-accordion>
+              <span>
+                <span style="font-family:var(--mono);font-size:0.75rem;color:var(--accent);margin-right:0.5rem;">${esc(ex.id)}</span>
+                <strong>${esc(ex.title)}</strong>
+                <span class="badge badge-category" style="margin-left:0.5rem;">${esc(ex.sector)}</span>
+                <span style="font-family:var(--mono);font-size:0.75rem;font-weight:700;color:${scoreColor};margin-left:0.5rem;">Score: ${ex.screeningScore}</span>
+              </span>
+              <span class="accordion-arrow">&#9654;</span>
+            </div>
+            <div class="accordion-body">
+              <div class="dpia-example">
+                <div class="card-body" style="margin-bottom:0.75rem;">${esc(ex.scenario)}</div>
+
+                <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+                  <div>
+                    <div class="block-label">Data Subjects</div>
+                    <div style="font-size:0.8125rem;color:var(--text-secondary);">${esc(ex.dataSubjects)}</div>
+                  </div>
+                  <div>
+                    <div class="block-label">Screening Result</div>
+                    <div style="font-size:0.8125rem;font-weight:600;color:${scoreColor};">${esc(ex.screeningResult)} (Score: ${ex.screeningScore})</div>
+                  </div>
+                  <div>
+                    <div class="block-label">Residual Risk</div>
+                    <div style="font-size:0.8125rem;color:var(--text-secondary);">${esc(ex.residualRisk)}</div>
+                  </div>
+                </div>
+
+                <div class="block-label">Data Categories</div>
+                <div style="display:flex;gap:0.25rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+                  ${(ex.dataCategories || []).map(c => `<span class="badge badge-layer">${esc(c)}</span>`).join('')}
+                </div>
+
+                <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+                  <div style="flex:1;min-width:200px;">
+                    <div class="block-label">PDPA Sections</div>
+                    <div style="display:flex;gap:0.25rem;flex-wrap:wrap;">
+                      ${(ex.pdpaSections || []).map(s => `<a href="#section/${s}" class="badge badge-domain">${esc(s)}</a>`).join('')}
+                    </div>
+                  </div>
+                  <div style="flex:1;min-width:200px;">
+                    <div class="block-label">Triggers Met</div>
+                    <div style="display:flex;gap:0.25rem;flex-wrap:wrap;">
+                      ${(ex.triggersMet || []).map(t => `<span class="badge badge-mandatory">${esc(t)}</span>`).join('')}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="block-label">Risks Identified</div>
+                <div class="data-table-wrap" style="overflow-x:auto;margin-bottom:0.75rem;">
+                  <table class="data-table">
+                    <thead><tr><th>Risk</th><th style="text-align:center;">L</th><th style="text-align:center;">I</th><th style="text-align:center;">Score</th><th style="text-align:center;">Level</th></tr></thead>
+                    <tbody>
+                      ${(ex.risksIdentified || []).map(r => {
+                        const levelColor = r.level === 'High' ? 'var(--red)' : r.level === 'Medium' ? 'var(--amber)' : 'var(--green)';
+                        return `<tr>
+                          <td>${esc(r.risk)}</td>
+                          <td style="text-align:center;">${r.likelihood}</td>
+                          <td style="text-align:center;">${r.impact}</td>
+                          <td style="text-align:center;font-weight:600;">${r.score}</td>
+                          <td style="text-align:center;font-weight:600;color:${levelColor};">${esc(r.level)}</td>
+                        </tr>`;
+                      }).join('')}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="block-label">Mitigations</div>
+                <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
+                  ${(ex.mitigations || []).map(m => `<li style="margin-bottom:0.25rem;">${esc(m)}</li>`).join('')}
+                </ul>
+
+                <div style="background:var(--border-light);padding:0.75rem 1rem;border-radius:var(--radius);">
+                  <div class="block-label">Decision</div>
+                  <div style="font-size:0.8125rem;font-weight:500;color:var(--text-primary);">${esc(ex.decision)}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+function renderDPIATemplate(templates) {
+  if (!templates || !templates.sections || !templates.sections.length) {
+    return '<div class="empty-state"><div class="empty-state-text">Template data not available.</div></div>';
+  }
+
+  return `
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="card-title">${esc(templates.title)}</div>
+      <div class="card-body">${esc(templates.description)}</div>
+    </div>
+
+    ${templates.sections.map(section => `
+      <div class="card" style="margin-bottom:1rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+          <span style="font-family:var(--mono);font-size:0.75rem;font-weight:600;color:var(--accent);">${esc(section.id)}</span>
+          <span class="card-title" style="margin-bottom:0;">${esc(section.title)}</span>
+        </div>
+        ${(section.fields || []).map(f => {
+          let fieldHTML = '';
+          const requiredMark = f.required ? '<span style="color:var(--red);margin-left:0.25rem;">*</span>' : '';
+          const pdpaRef = f.pdpaRef ? `<a href="#section/${f.pdpaRef}" class="badge badge-domain" style="font-size:0.5625rem;margin-left:0.375rem;">${esc(f.pdpaRef)}</a>` : '';
+
+          if (f.type === 'text' || f.type === 'number' || f.type === 'date') {
+            fieldHTML = `
+              <div class="dpia-form-field" style="margin-bottom:0.75rem;">
+                <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(f.label)}${requiredMark}${pdpaRef}</div>
+                ${f.guidance ? `<div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem;">${esc(f.guidance)}</div>` : ''}
+                <div style="background:var(--border-light);border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.75rem;font-size:0.8125rem;color:var(--text-muted);">${f.type === 'date' ? 'DD/MM/YYYY' : f.type === 'number' ? '0' : 'Enter text...'}</div>
+              </div>
+            `;
+          } else if (f.type === 'textarea') {
+            fieldHTML = `
+              <div class="dpia-form-field" style="margin-bottom:0.75rem;">
+                <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(f.label)}${requiredMark}${pdpaRef}</div>
+                ${f.guidance ? `<div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem;">${esc(f.guidance)}</div>` : ''}
+                <div style="background:var(--border-light);border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.75rem;min-height:3rem;font-size:0.8125rem;color:var(--text-muted);">Enter details...</div>
+              </div>
+            `;
+          } else if (f.type === 'boolean') {
+            fieldHTML = `
+              <div class="dpia-form-field" style="margin-bottom:0.75rem;">
+                <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(f.label)}${requiredMark}${pdpaRef}</div>
+                <div style="display:flex;gap:0.75rem;">
+                  <span style="padding:0.375rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.8125rem;color:var(--text-muted);">Yes</span>
+                  <span style="padding:0.375rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.8125rem;color:var(--text-muted);">No</span>
+                </div>
+              </div>
+            `;
+          } else if (f.type === 'select') {
+            fieldHTML = `
+              <div class="dpia-form-field" style="margin-bottom:0.75rem;">
+                <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(f.label)}${requiredMark}${pdpaRef}</div>
+                <div style="display:flex;gap:0.375rem;flex-wrap:wrap;">
+                  ${(f.options || []).map(o => `<span style="padding:0.375rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.75rem;color:var(--text-secondary);background:var(--card);">${esc(o)}</span>`).join('')}
+                </div>
+              </div>
+            `;
+          } else if (f.type === 'checklist') {
+            fieldHTML = `
+              <div class="dpia-form-field" style="margin-bottom:0.75rem;">
+                <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(f.label)}${requiredMark}${pdpaRef}</div>
+                <div style="display:flex;gap:0.375rem;flex-wrap:wrap;">
+                  ${(f.options || []).map(o => `<span style="padding:0.25rem 0.625rem;border:1px solid var(--border);border-radius:9999px;font-size:0.75rem;color:var(--text-secondary);background:var(--card);">${esc(o)}</span>`).join('')}
+                </div>
+              </div>
+            `;
+          } else if (f.type === 'risk-table' || f.type === 'mitigation-table') {
+            fieldHTML = `
+              <div class="dpia-form-field" style="margin-bottom:0.75rem;">
+                <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(f.label)}${requiredMark}</div>
+                <div class="data-table-wrap" style="overflow-x:auto;">
+                  <table class="data-table">
+                    <thead><tr>${(f.columns || []).map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead>
+                    <tbody>
+                      <tr>${(f.columns || []).map(() => `<td style="color:var(--text-muted);font-size:0.75rem;">—</td>`).join('')}</tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            `;
+          }
+          return fieldHTML;
+        }).join('')}
       </div>
     `).join('')}
   `;

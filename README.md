@@ -15,8 +15,9 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 | 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 22 offences in 10 categories |
 | 8 | `cross-references/` | Act ↔ regulations, guidelines, codes, GDPR, ISO 27701 | 31 framework mappings |
 | — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 22 instruments |
+| — | `dpia/` | Data Protection Impact Assessment — methodology, screening, examples, templates | 4 files |
 
-**79 JSON data files** across all layers.
+**83 JSON data files** across all layers.
 
 > **Disclaimer**: This is an indicative/educational resource. It does not constitute legal advice. Always refer to the official gazette text and seek professional counsel for compliance decisions. See [LEARNINGS.md](LEARNINGS.md) for data quality audit history.
 
@@ -112,6 +113,12 @@ pdpa-my/
 │   ├── risk-register.json                # 20 PDPA data protection risks
 │   ├── checklist.json                    # 18-item risk assessment checklist
 │   └── treatment-options.json            # 4 treatment strategies with PDPA constraints
+│
+├── dpia/                               # DPIA: Data Protection Impact Assessment
+│   ├── methodology.json                  # 8-phase DPIA process with PDPA section references
+│   ├── thresholds.json                   # 10 mandatory triggers, 10 screening questions with scoring
+│   ├── worked-examples.json              # 4 Malaysian scenarios (e-KYC, employee monitoring, loyalty, telemedicine)
+│   └── templates.json                    # Structured DPIA questionnaire with 5 sections
 │
 └── supplements/                        # Subsidiary instruments (22 total)
     ├── regulations/                    # 6 regulations/orders
@@ -432,6 +439,7 @@ Open `index.html` in a browser to interactively explore:
 - **Penalties** — 22 offences with original vs amended penalties, compounding info
 - **Cross-References** — Section → regulations, guidelines, codes, standards; GDPR/ISO 27701/APEC CBPR mappings
 - **Supplements** — Browse 22 subsidiary instruments (regulations, guidelines, standards, codes)
+- **DPIA** — Data Protection Impact Assessment: 8-phase methodology, interactive screening tool, 4 Malaysian worked examples, structured assessment template
 - **Search** — Full-text search across all layers
 
 ## Usage

@@ -1,0 +1,116 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "DPIA Worked Examples",
+  "description": "Illustrative DPIA summaries for common Malaysian processing scenarios",
+  "examples": [
+    {
+      "id": "EX1",
+      "title": "E-KYC Digital Onboarding",
+      "sector": "Financial Services",
+      "scenario": "A Malaysian bank implements e-KYC (electronic Know Your Customer) using facial recognition and MyKad (IC) OCR to verify customer identity during online account opening. Processing includes capturing selfie photos, extracting IC data, performing liveness detection, and matching against National Registration Department records.",
+      "dataCategories": ["Full name", "IC number", "Facial biometrics", "Address", "Date of birth", "Liveness video"],
+      "dataSubjects": "New bank customers (estimated 50,000/year)",
+      "pdpaSections": ["s4", "s6", "s7", "s9"],
+      "screeningScore": 13,
+      "screeningResult": "DPIA required",
+      "triggersMet": ["T1", "T3", "T6", "T9"],
+      "risksIdentified": [
+        { "risk": "Biometric data breach exposing facial templates", "likelihood": 2, "impact": 5, "score": 10, "level": "High" },
+        { "risk": "False rejection discriminating against certain demographics", "likelihood": 3, "impact": 3, "score": 9, "level": "Medium" },
+        { "risk": "Facial data retained beyond verification purpose", "likelihood": 2, "impact": 4, "score": 8, "level": "Medium" },
+        { "risk": "Unauthorized access to IC numbers in transit", "likelihood": 2, "impact": 4, "score": 8, "level": "Medium" }
+      ],
+      "mitigations": [
+        "Biometric templates encrypted with AES-256 and stored separately from identity data",
+        "Facial matching algorithm tested across demographic groups with bias threshold <2%",
+        "Raw biometric data deleted within 24 hours of verification; only match result retained",
+        "End-to-end TLS 1.3 encryption for all data in transit",
+        "BNM RMiT-aligned access controls with MFA for staff accessing biometric systems"
+      ],
+      "residualRisk": "Medium \u2014 acceptable with controls in place",
+      "decision": "Approved with quarterly review and annual bias audit"
+    },
+    {
+      "id": "EX2",
+      "title": "Employee Monitoring System",
+      "sector": "Corporate / HR",
+      "scenario": "A Malaysian company with 2,000 employees deploys endpoint monitoring software on company-issued laptops. The system captures screenshots every 10 minutes, logs application usage, monitors email metadata, and tracks productivity metrics. Data is processed locally and sent to a cloud dashboard for managers.",
+      "dataCategories": ["Screenshots of work activity", "Application usage logs", "Email metadata", "Login/logout times", "Productivity scores"],
+      "dataSubjects": "2,000 employees across 5 Malaysian offices",
+      "pdpaSections": ["s6", "s7", "s9", "s12"],
+      "screeningScore": 11,
+      "screeningResult": "DPIA required",
+      "triggersMet": ["T2", "T3", "T7"],
+      "risksIdentified": [
+        { "risk": "Screenshots capture personal content (banking, health portals)", "likelihood": 4, "impact": 3, "score": 12, "level": "High" },
+        { "risk": "Productivity scoring creates discriminatory employment decisions", "likelihood": 3, "impact": 4, "score": 12, "level": "High" },
+        { "risk": "Excessive monitoring violates reasonable expectation of privacy", "likelihood": 3, "impact": 3, "score": 9, "level": "Medium" },
+        { "risk": "Cloud storage of screenshots exposes data to cross-border transfer", "likelihood": 2, "impact": 4, "score": 8, "level": "Medium" }
+      ],
+      "mitigations": [
+        "Replace continuous screenshots with application-category logging (no visual capture)",
+        "Productivity metrics aggregated to team level; individual scores visible only to direct manager and HR",
+        "Clear employee notice (s7) with opt-out for personal device usage periods",
+        "Cloud dashboard hosted in Malaysian data center (no cross-border transfer)",
+        "90-day retention limit with automatic deletion of raw logs"
+      ],
+      "residualRisk": "Medium \u2014 reduced from High after removing screenshot capture",
+      "decision": "Approved with modified scope (no screenshots) and 6-month review"
+    },
+    {
+      "id": "EX3",
+      "title": "Customer Loyalty Program with Analytics",
+      "sector": "Retail",
+      "scenario": "A Malaysian retail chain launches a loyalty program across 200 stores. The program collects purchase history, location data from the mobile app, demographic information, and browsing behavior on the e-commerce platform. An AI model segments customers into 50 behavioral clusters for targeted marketing and dynamic pricing.",
+      "dataCategories": ["Purchase history", "Location data", "Demographics", "Browsing behavior", "App usage patterns", "Payment method"],
+      "dataSubjects": "500,000 loyalty members",
+      "pdpaSections": ["s5", "s6", "s7", "s11"],
+      "screeningScore": 10,
+      "screeningResult": "DPIA required",
+      "triggersMet": ["T3", "T7", "T8", "T9"],
+      "risksIdentified": [
+        { "risk": "Location tracking reveals sensitive places (clinics, religious sites)", "likelihood": 3, "impact": 4, "score": 12, "level": "High" },
+        { "risk": "Dynamic pricing discriminates based on purchasing power or demographics", "likelihood": 3, "impact": 3, "score": 9, "level": "Medium" },
+        { "risk": "Customer profiling enables unwanted inference of sensitive attributes", "likelihood": 3, "impact": 3, "score": 9, "level": "Medium" },
+        { "risk": "Consent scope creep \u2014 data collected for loyalty used for unrelated purposes", "likelihood": 3, "impact": 3, "score": 9, "level": "Medium" }
+      ],
+      "mitigations": [
+        "Location data aggregated to district level; no precise GPS coordinates stored",
+        "Dynamic pricing algorithm prohibited from using demographic attributes; pricing based on product category only",
+        "Granular consent with separate opt-ins for: loyalty points, marketing, location services, analytics",
+        "Data subject access portal for members to view, export, and delete their profile",
+        "Annual algorithm fairness audit by independent third party"
+      ],
+      "residualRisk": "Low \u2014 acceptable with granular consent and location aggregation",
+      "decision": "Approved with annual review and fairness audit requirement"
+    },
+    {
+      "id": "EX4",
+      "title": "Telemedicine Platform",
+      "sector": "Healthcare",
+      "scenario": "A Malaysian healthtech startup launches a telemedicine app connecting patients with licensed doctors. The platform processes patient registration data, medical history, consultation notes (text/video), prescriptions, and payment information. Video consultations are recorded for quality assurance. Data is stored on AWS Singapore with backup in AWS Sydney.",
+      "dataCategories": ["Patient identity", "Medical history", "Consultation recordings", "Prescriptions", "Payment details", "Doctor notes"],
+      "dataSubjects": "100,000 registered patients, 500 doctors",
+      "pdpaSections": ["s4", "s6", "s7", "s9", "s129"],
+      "screeningScore": 16,
+      "screeningResult": "DPIA required",
+      "triggersMet": ["T1", "T4", "T5", "T9"],
+      "risksIdentified": [
+        { "risk": "Medical data breach exposing health conditions and prescriptions", "likelihood": 2, "impact": 5, "score": 10, "level": "High" },
+        { "risk": "Video recordings captured without adequate informed consent", "likelihood": 3, "impact": 4, "score": 12, "level": "High" },
+        { "risk": "Cross-border backup to Australia without adequate protection assessment", "likelihood": 2, "impact": 4, "score": 8, "level": "Medium" },
+        { "risk": "Minors accessing platform without parental consent", "likelihood": 3, "impact": 4, "score": 12, "level": "High" },
+        { "risk": "Re-identification of anonymized consultation data", "likelihood": 2, "impact": 4, "score": 8, "level": "Medium" }
+      ],
+      "mitigations": [
+        "End-to-end encryption for all medical data; AES-256 at rest, TLS 1.3 in transit",
+        "Explicit opt-in consent for video recording with clear notice per consultation; recordings deleted after 90 days",
+        "Cross-border transfer agreement with AWS under s129; encryption keys held in Malaysia",
+        "Age verification gate requiring MyKad-based verification; under-18 requires parent/guardian consent flow",
+        "Medical data pseudonymized for analytics; k-anonymity threshold of 5 applied"
+      ],
+      "residualRisk": "Medium \u2014 acceptable given healthcare benefit and controls",
+      "decision": "Approved with quarterly security review, annual penetration test, and MOH compliance check"
+    }
+  ]
+}

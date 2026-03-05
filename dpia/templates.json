@@ -1,0 +1,67 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "DPIA Assessment Template",
+  "description": "Structured questionnaire template for conducting DPIAs under PDPA 2010",
+  "sections": [
+    {
+      "id": "S1",
+      "title": "Project Overview",
+      "fields": [
+        { "label": "Project/Processing Name", "type": "text", "required": true },
+        { "label": "Project Owner", "type": "text", "required": true },
+        { "label": "DPO Consulted", "type": "boolean", "required": true },
+        { "label": "Assessment Date", "type": "date", "required": true },
+        { "label": "Review Date", "type": "date", "required": true },
+        { "label": "Business Purpose", "type": "textarea", "required": true, "guidance": "Describe the business objective this processing serves" },
+        { "label": "Lawful Basis under PDPA", "type": "select", "options": ["Consent (s6(1))", "Contract performance", "Legal obligation", "Vital interests", "Legitimate interests"], "required": true }
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Data Processing Description",
+      "fields": [
+        { "label": "Categories of Personal Data", "type": "checklist", "options": ["Name/Identity", "Contact details", "Financial data", "Health data (sensitive, s4)", "Biometric data", "Location data", "Online identifiers", "Employment data", "Religious beliefs (sensitive, s4)", "Political opinions (sensitive, s4)", "Criminal records (sensitive, s4)", "Children's data", "Other"], "required": true },
+        { "label": "Categories of Data Subjects", "type": "checklist", "options": ["Customers", "Employees", "Job applicants", "Website visitors", "Patients", "Students", "Children (<18)", "Suppliers/Vendors", "Other"], "required": true },
+        { "label": "Estimated Number of Data Subjects", "type": "number", "required": true },
+        { "label": "Data Collection Methods", "type": "textarea", "required": true },
+        { "label": "Data Storage Location", "type": "text", "required": true, "guidance": "Specify Malaysian or international hosting" },
+        { "label": "Data Retention Period", "type": "text", "required": true },
+        { "label": "Third-Party Processors", "type": "textarea", "guidance": "List all third parties who will process this data" },
+        { "label": "Cross-Border Transfers", "type": "boolean", "required": true },
+        { "label": "Transfer Destinations", "type": "text", "guidance": "If cross-border, specify countries (s129)" }
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Necessity & Proportionality Assessment",
+      "fields": [
+        { "label": "Is the processing necessary for the stated purpose?", "type": "textarea", "required": true, "pdpaRef": "s6" },
+        { "label": "Is the data collected adequate and not excessive?", "type": "textarea", "required": true, "pdpaRef": "s6(1)" },
+        { "label": "Can the purpose be achieved with less personal data?", "type": "textarea", "required": true },
+        { "label": "How will data subject consent be obtained?", "type": "textarea", "required": true, "pdpaRef": "s7" },
+        { "label": "How will data subjects be notified?", "type": "textarea", "required": true, "pdpaRef": "s7" },
+        { "label": "How will data subject rights be facilitated?", "type": "textarea", "required": true, "pdpaRef": "s30-s42" }
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Risk Assessment",
+      "fields": [
+        { "label": "Identified Risks", "type": "risk-table", "columns": ["Risk Description", "Likelihood (1-5)", "Impact (1-5)", "Score", "Level"], "required": true },
+        { "label": "Planned Mitigations", "type": "mitigation-table", "columns": ["Risk", "Mitigation Measure", "Owner", "Target Date", "Status"], "required": true }
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Approval & Sign-Off",
+      "fields": [
+        { "label": "Residual Risk Level", "type": "select", "options": ["Low", "Medium", "High", "Critical"], "required": true },
+        { "label": "DPO Recommendation", "type": "textarea", "required": true },
+        { "label": "Decision", "type": "select", "options": ["Approved", "Approved with conditions", "Rejected \u2014 redesign required", "Escalate to JPDP"], "required": true },
+        { "label": "Conditions (if any)", "type": "textarea" },
+        { "label": "Approved By", "type": "text", "required": true },
+        { "label": "Next Review Date", "type": "date", "required": true }
+      ]
+    }
+  ]
+}
