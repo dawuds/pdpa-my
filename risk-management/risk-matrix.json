@@ -1,0 +1,86 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "Data Protection Risk Matrix",
+  "description": "A standard 5x5 risk matrix for assessing data protection risks under the Malaysia PDPA 2010. Risk scores are calculated by multiplying likelihood (1-5) by impact (1-5) to produce a score from 1 to 25, mapped to four risk bands with prescribed actions.",
+  "axes": {
+    "x": {
+      "label": "Impact",
+      "scale": [
+        { "level": 1, "label": "Negligible" },
+        { "level": 2, "label": "Minor" },
+        { "level": 3, "label": "Moderate" },
+        { "level": 4, "label": "Major" },
+        { "level": 5, "label": "Critical" }
+      ]
+    },
+    "y": {
+      "label": "Likelihood",
+      "scale": [
+        { "level": 1, "label": "Rare" },
+        { "level": 2, "label": "Unlikely" },
+        { "level": 3, "label": "Possible" },
+        { "level": 4, "label": "Likely" },
+        { "level": 5, "label": "Almost Certain" }
+      ]
+    }
+  },
+  "matrix": [
+    [1,  2,  3,  4,  5],
+    [2,  4,  6,  8,  10],
+    [3,  6,  9,  12, 15],
+    [4,  8,  12, 16, 20],
+    [5,  10, 15, 20, 25]
+  ],
+  "bands": [
+    {
+      "band": "Low",
+      "color": "#22C55E",
+      "range": "1-4",
+      "scores": [1, 2, 3, 4],
+      "action": "Accept and Monitor",
+      "description": "Risk is within acceptable tolerance. Monitor through standard review cycles. No additional treatment required unless cost-effective measures are available.",
+      "reviewFrequency": "Annually",
+      "escalation": "None — managed by risk owner",
+      "pdpaNote": "Even low-rated risks must comply with mandatory PDPA requirements. Low rating does not excuse non-compliance with any Principle."
+    },
+    {
+      "band": "Medium",
+      "color": "#EAB308",
+      "range": "5-9",
+      "scores": [5, 6, 8, 9],
+      "action": "Mitigate with Controls",
+      "description": "Risk requires active management. Implement controls from the PDPA Controls Library to reduce risk to acceptable levels. Treatment plans should be established within 90 days.",
+      "reviewFrequency": "Quarterly",
+      "escalation": "Data Protection Officer and department head",
+      "pdpaNote": "Ensure all applicable PDPA controls are implemented. Review against relevant codes of practice and guidelines."
+    },
+    {
+      "band": "High",
+      "color": "#F97316",
+      "range": "10-16",
+      "scores": [10, 12, 15, 16],
+      "action": "Urgent Mitigation Required",
+      "description": "Risk exceeds acceptable tolerance and requires priority treatment. Implement additional controls immediately. Treatment plans must be established within 30 days with interim measures in place.",
+      "reviewFrequency": "Monthly",
+      "escalation": "Senior management and DPO; Board Risk Committee if involving sensitive personal data",
+      "pdpaNote": "May trigger DPIA requirement under s137. Consider whether JPDP consultation is required. Ensure breach notification readiness under s143A."
+    },
+    {
+      "band": "Critical",
+      "color": "#EF4444",
+      "range": "20-25",
+      "scores": [20, 25],
+      "action": "Immediate Executive Action",
+      "description": "Risk is at an unacceptable level. Requires immediate executive intervention. Processing activity may need to be suspended until risk is reduced. Emergency treatment plan within 7 days.",
+      "reviewFrequency": "Weekly until reduced to High or below",
+      "escalation": "Board of Directors, CEO, DPO, and legal counsel. Consider proactive engagement with JPDP.",
+      "pdpaNote": "DPIA is almost certainly required under s137. Consider suspending the processing activity. Assess whether Commissioner notification is needed. Review officer liability exposure under s133A."
+    }
+  ],
+  "scoreToBand": {
+    "1": "Low", "2": "Low", "3": "Low", "4": "Low",
+    "5": "Medium", "6": "Medium", "8": "Medium", "9": "Medium",
+    "10": "High", "12": "High", "15": "High", "16": "High",
+    "20": "Critical", "25": "Critical"
+  }
+}

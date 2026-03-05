@@ -1,0 +1,249 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "PDPA Risk Assessment Checklist",
+  "description": "A checklist of 18 items for conducting a data protection risk assessment aligned to the Malaysia PDPA 2010. Use this checklist to ensure comprehensive coverage during each risk assessment cycle.",
+  "items": [
+    {
+      "id": "RAC-01",
+      "area": "Data Inventory",
+      "checkItem": "Verify data inventory completeness",
+      "description": "Confirm that the Records of Processing Activities (ROPA) under s138 is complete, accurate, and up to date. Verify that all personal data processing activities, data categories, data flows, and storage locations are documented.",
+      "pdpaSection": "s138",
+      "priority": "Critical",
+      "evidenceRequired": [
+        "Current ROPA document",
+        "Data flow diagrams",
+        "System inventory with personal data flags"
+      ]
+    },
+    {
+      "id": "RAC-02",
+      "area": "Consent",
+      "checkItem": "Review consent collection mechanisms",
+      "description": "Assess all consent collection mechanisms across channels (web, mobile, physical, telephone) to ensure they comply with s6 (General Principle) and s7 (Notice and Choice Principle). Verify that notices are written, provided before or at the time of collection, and cover all required elements.",
+      "pdpaSection": "s6, s7",
+      "priority": "Critical",
+      "evidenceRequired": [
+        "Consent forms and scripts across all channels",
+        "Privacy notices displayed at collection points",
+        "Consent audit trail records"
+      ]
+    },
+    {
+      "id": "RAC-03",
+      "area": "Third-Party Processing",
+      "checkItem": "Assess third-party processor agreements",
+      "description": "Review all data processing agreements with third-party processors to ensure they include adequate PDPA-compliant security measures (s9), breach notification obligations (s143A), sub-processor restrictions, and audit rights.",
+      "pdpaSection": "s9, s143A",
+      "priority": "High",
+      "evidenceRequired": [
+        "Data processing agreements",
+        "Vendor security assessment reports",
+        "Sub-processor registers"
+      ]
+    },
+    {
+      "id": "RAC-04",
+      "area": "Cross-Border Transfer",
+      "checkItem": "Check cross-border transfer safeguards",
+      "description": "Verify that all personal data transfers outside Malaysia have a lawful transfer mechanism under s129A (adequacy decision, standard contractual clauses, binding corporate rules, consent, or certification). Confirm transfer impact assessments have been completed.",
+      "pdpaSection": "s129A",
+      "priority": "High",
+      "evidenceRequired": [
+        "Cross-border transfer register",
+        "Transfer impact assessments",
+        "Executed standard contractual clauses or BCR documentation"
+      ]
+    },
+    {
+      "id": "RAC-05",
+      "area": "Data Subject Rights",
+      "checkItem": "Validate data subject request process",
+      "description": "Test the end-to-end process for receiving, verifying, processing, and responding to data subject requests (access, correction, erasure, portability, withdrawal of consent) within statutory timelines (21 days for access under s31).",
+      "pdpaSection": "s12, s30-s36, s41-s44",
+      "priority": "High",
+      "evidenceRequired": [
+        "Data subject request procedures",
+        "Request tracking logs with response times",
+        "Sample completed request responses"
+      ]
+    },
+    {
+      "id": "RAC-06",
+      "area": "Security",
+      "checkItem": "Evaluate technical security controls",
+      "description": "Assess the adequacy of technical security measures under s9 (Security Principle) and the Personal Data Protection Standards 2015, including access controls, encryption, network security, vulnerability management, and endpoint protection.",
+      "pdpaSection": "s9",
+      "priority": "Critical",
+      "evidenceRequired": [
+        "Security architecture documentation",
+        "Penetration test reports",
+        "Vulnerability scan results",
+        "Access control matrices"
+      ]
+    },
+    {
+      "id": "RAC-07",
+      "area": "Breach Response",
+      "checkItem": "Test breach notification readiness",
+      "description": "Verify that the incident response plan includes procedures for meeting the 72-hour Commissioner notification requirement under s143A, data subject notification processes, and that breach response teams are trained and available.",
+      "pdpaSection": "s143A",
+      "priority": "Critical",
+      "evidenceRequired": [
+        "Incident response plan with breach notification procedures",
+        "Tabletop exercise reports",
+        "Commissioner notification template",
+        "On-call roster"
+      ]
+    },
+    {
+      "id": "RAC-08",
+      "area": "Retention",
+      "checkItem": "Audit data retention compliance",
+      "description": "Verify that personal data retention periods are defined for all data categories, that data is not retained beyond the defined periods, and that secure destruction methods are applied when data reaches end of life under s10 (Retention Principle).",
+      "pdpaSection": "s10",
+      "priority": "High",
+      "evidenceRequired": [
+        "Data retention schedule",
+        "Data destruction certificates or logs",
+        "Automated retention enforcement reports"
+      ]
+    },
+    {
+      "id": "RAC-09",
+      "area": "Training",
+      "checkItem": "Assess staff awareness and training",
+      "description": "Evaluate the effectiveness of data protection training and awareness programmes. Verify that all staff who handle personal data have completed training, and that training content covers current PDPA requirements including the 2024 amendments.",
+      "pdpaSection": "s9",
+      "priority": "High",
+      "evidenceRequired": [
+        "Training completion records",
+        "Training materials and curriculum",
+        "Post-training assessment results",
+        "Phishing simulation reports"
+      ]
+    },
+    {
+      "id": "RAC-10",
+      "area": "Sensitive Data",
+      "checkItem": "Review sensitive personal data processing",
+      "description": "Identify all processing of sensitive personal data (health, political opinion, religious belief, commission of offence, etc.) and verify that explicit consent has been obtained and that enhanced security measures are in place.",
+      "pdpaSection": "s4, s6, s40",
+      "priority": "Critical",
+      "evidenceRequired": [
+        "Sensitive data inventory",
+        "Explicit consent records",
+        "DPIA reports for sensitive data processing",
+        "Enhanced access control evidence"
+      ]
+    },
+    {
+      "id": "RAC-11",
+      "area": "DPIA",
+      "checkItem": "Verify DPIA completion for high-risk processing",
+      "description": "Confirm that Data Protection Impact Assessments have been completed for all high-risk processing activities as required by s137, and that identified risks have been treated with documented mitigation measures.",
+      "pdpaSection": "s137",
+      "priority": "Critical",
+      "evidenceRequired": [
+        "DPIA register",
+        "Completed DPIA reports",
+        "Risk treatment plans arising from DPIAs",
+        "Commissioner consultation records (where applicable)"
+      ]
+    },
+    {
+      "id": "RAC-12",
+      "area": "DPO",
+      "checkItem": "Confirm DPO appointment and effectiveness",
+      "description": "Verify that a Data Protection Officer has been appointed as required under s129B (for prescribed classes of data users), that the DPO has adequate resources and authority, and that the DPO's responsibilities are clearly defined.",
+      "pdpaSection": "s129B",
+      "priority": "High",
+      "evidenceRequired": [
+        "DPO appointment letter",
+        "DPO role description and reporting line",
+        "DPO activity reports",
+        "JPDP registration of DPO"
+      ]
+    },
+    {
+      "id": "RAC-13",
+      "area": "Data Integrity",
+      "checkItem": "Assess data accuracy and completeness controls",
+      "description": "Evaluate controls ensuring personal data is accurate, complete, not misleading, and kept up to date as required by the Data Integrity Principle (s11). Review processes for correcting inaccurate data.",
+      "pdpaSection": "s11",
+      "priority": "Medium",
+      "evidenceRequired": [
+        "Data quality monitoring reports",
+        "Correction request logs and completion records",
+        "Data validation rules documentation"
+      ]
+    },
+    {
+      "id": "RAC-14",
+      "area": "Disclosure",
+      "checkItem": "Review disclosure controls and third-party sharing",
+      "description": "Verify that personal data is not disclosed for purposes other than those for which it was collected (s8 Disclosure Principle), and that all disclosure arrangements are documented with appropriate legal basis.",
+      "pdpaSection": "s8",
+      "priority": "High",
+      "evidenceRequired": [
+        "Disclosure register",
+        "Data sharing agreements",
+        "Purpose limitation documentation"
+      ]
+    },
+    {
+      "id": "RAC-15",
+      "area": "Registration",
+      "checkItem": "Verify data user registration with JPDP",
+      "description": "Confirm that the organization has registered with JPDP as required for its class of data users under s14-s16 and the Personal Data Protection (Class of Data Users) Order 2013, and that registration details are current.",
+      "pdpaSection": "s14, s15, s16",
+      "priority": "High",
+      "evidenceRequired": [
+        "JPDP registration certificate",
+        "Registration renewal records",
+        "Data user class determination documentation"
+      ]
+    },
+    {
+      "id": "RAC-16",
+      "area": "Marketing",
+      "checkItem": "Audit direct marketing compliance",
+      "description": "Review all direct marketing activities to ensure valid consent was obtained before sending marketing communications, opt-out mechanisms are functioning, and opt-out requests are actioned promptly.",
+      "pdpaSection": "s6, s43",
+      "priority": "Medium",
+      "evidenceRequired": [
+        "Marketing consent records",
+        "Suppression list management logs",
+        "Opt-out processing records",
+        "Sample marketing communications with opt-out mechanism"
+      ]
+    },
+    {
+      "id": "RAC-17",
+      "area": "Governance",
+      "checkItem": "Evaluate governance and accountability framework",
+      "description": "Assess the overall data protection governance framework including policies, procedures, organizational structure, board oversight, risk management integration, and accountability mechanisms.",
+      "pdpaSection": "s6-s12",
+      "priority": "High",
+      "evidenceRequired": [
+        "Data protection policy suite",
+        "Governance structure chart",
+        "Board reporting on data protection",
+        "Internal audit reports on PDPA compliance"
+      ]
+    },
+    {
+      "id": "RAC-18",
+      "area": "Sector Compliance",
+      "checkItem": "Review sector-specific code of practice compliance",
+      "description": "If the organization falls under a registered class of data users, verify compliance with the applicable sector-specific code of practice (banking, healthcare, communications, insurance, aviation, utilities) in addition to the General Code of Practice 2022.",
+      "pdpaSection": "s23-s26",
+      "priority": "Medium",
+      "evidenceRequired": [
+        "Applicable code of practice compliance assessment",
+        "Sector-specific control implementation evidence",
+        "Code of practice gap analysis"
+      ]
+    }
+  ]
+}

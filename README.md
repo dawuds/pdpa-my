@@ -106,6 +106,13 @@ pdpa-my/
 │   ├── framework-mappings.json         # GDPR (13), APEC CBPR (9), ISO 27701 (9)
 │   └── data-user-classes.json          # 13 registered classes with applicable instruments
 │
+├── risk-management/                    # LAYER 9: Risk Management
+│   ├── methodology.json                  # Risk assessment methodology + DPIA integration
+│   ├── risk-matrix.json                  # 5x5 risk matrix with bands and actions
+│   ├── risk-register.json                # 20 PDPA data protection risks
+│   ├── checklist.json                    # 18-item risk assessment checklist
+│   └── treatment-options.json            # 4 treatment strategies with PDPA constraints
+│
 └── supplements/                        # Subsidiary instruments (22 total)
     ├── regulations/                    # 6 regulations/orders
     │   ├── index.json

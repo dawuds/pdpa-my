@@ -1,0 +1,221 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "Data Protection Risk Assessment Methodology",
+  "description": "A structured methodology for identifying, assessing, and managing data protection risks aligned to the Malaysia Personal Data Protection Act 2010 (Act 709) and the 2024 Amendment Act (A1727). This methodology integrates with the PDPA compliance framework to ensure risk-based prioritization of data protection controls.",
+  "scope": "All personal data processing activities subject to PDPA 2010, including collection, storage, use, disclosure, cross-border transfer, and disposal of personal data by data users and data processors.",
+  "alignment": [
+    "PDPA 2010 (Act 709) — all 7 Principles",
+    "PDPA (Amendment) Act 2024 (A1727) — DPIA requirement (s137)",
+    "ISO 31000:2018 — Risk Management",
+    "ISO 27005:2022 — Information Security Risk Management",
+    "ISO 27701:2019 — Privacy Information Management"
+  ],
+  "riskAssessmentProcess": {
+    "steps": [
+      {
+        "step": 1,
+        "name": "Context Establishment",
+        "description": "Define the scope, objectives, and criteria for the risk assessment. Identify all personal data processing activities, data flows, and data categories within scope.",
+        "activities": [
+          "Identify personal data processing activities from the Records of Processing Activities (ROPA) under s138",
+          "Map data flows including collection points, storage locations, third-party processors, and cross-border transfers",
+          "Identify applicable PDPA sections, regulations, guidelines, codes of practice, and sector-specific requirements",
+          "Determine the risk appetite of the organization for data protection compliance",
+          "Identify stakeholders including data subjects, JPDP (Jabatan Perlindungan Data Peribadi), data processors, and management"
+        ]
+      },
+      {
+        "step": 2,
+        "name": "Risk Identification",
+        "description": "Systematically identify data protection risks arising from personal data processing activities, including threats to data subject rights, non-compliance with PDPA obligations, and security vulnerabilities.",
+        "activities": [
+          "Review each processing activity against the 7 PDPA Principles for compliance gaps",
+          "Identify threats: unauthorized access, disclosure, loss, destruction, alteration of personal data",
+          "Assess cross-border transfer risks under s129A mechanisms",
+          "Review third-party processor arrangements for contractual and operational risks",
+          "Identify data subject rights fulfilment risks (access, correction, withdrawal, erasure, portability)",
+          "Consider sector-specific risks from applicable codes of practice",
+          "Review incident history and near-miss reports"
+        ]
+      },
+      {
+        "step": 3,
+        "name": "Risk Analysis",
+        "description": "Assess identified risks using the likelihood and impact scales to determine inherent risk levels. Consider both quantitative and qualitative factors.",
+        "activities": [
+          "Assess likelihood of each risk occurring using the 5-point likelihood scale",
+          "Assess impact of each risk using the 5-point impact scale across all impact dimensions",
+          "Calculate inherent risk score (likelihood x impact)",
+          "Map inherent risk to the risk matrix to determine risk band",
+          "Document assumptions and evidence supporting each assessment"
+        ]
+      },
+      {
+        "step": 4,
+        "name": "Risk Evaluation",
+        "description": "Evaluate existing controls, determine residual risk, and prioritize risks for treatment based on residual risk level and organizational risk appetite.",
+        "activities": [
+          "Identify and assess effectiveness of existing controls for each risk",
+          "Determine residual likelihood and impact after accounting for existing controls",
+          "Calculate residual risk score and map to risk matrix",
+          "Compare residual risk against risk appetite and tolerance thresholds",
+          "Prioritize risks requiring treatment based on residual risk level and PDPA compliance obligations"
+        ]
+      },
+      {
+        "step": 5,
+        "name": "Risk Treatment",
+        "description": "Select and implement appropriate risk treatment strategies. Note that certain PDPA obligations are mandatory and cannot be risk-accepted.",
+        "activities": [
+          "Select treatment strategy: mitigate, transfer, avoid, or accept (where legally permissible)",
+          "Develop treatment plans with specific actions, owners, timelines, and success criteria",
+          "Implement controls aligned to the PDPA Controls Library (49 controls across 10 domains)",
+          "Validate that mandatory PDPA requirements are fully addressed regardless of risk level",
+          "Document risk treatment decisions and rationale"
+        ]
+      },
+      {
+        "step": 6,
+        "name": "Monitoring and Review",
+        "description": "Continuously monitor risk levels, control effectiveness, and changes to the processing environment that may affect the risk profile.",
+        "activities": [
+          "Conduct quarterly reviews of the risk register",
+          "Monitor for changes in processing activities, data volumes, third-party arrangements, or regulatory requirements",
+          "Review and update risk assessments following data breaches, complaints, or JPDP enforcement actions",
+          "Track treatment plan progress and verify control implementation",
+          "Report risk status to senior management and the Data Protection Officer (DPO)"
+        ]
+      }
+    ]
+  },
+  "likelihoodScale": [
+    {
+      "level": 1,
+      "label": "Rare",
+      "description": "Event may occur only in exceptional circumstances. Adequate controls are in place and have been tested.",
+      "indicativeFrequency": "Less than once in 5 years"
+    },
+    {
+      "level": 2,
+      "label": "Unlikely",
+      "description": "Event could occur in unusual circumstances. Controls exist but may not fully cover all scenarios.",
+      "indicativeFrequency": "Once in 2-5 years"
+    },
+    {
+      "level": 3,
+      "label": "Possible",
+      "description": "Event could occur. Known vulnerabilities exist or controls have gaps that could be exploited.",
+      "indicativeFrequency": "Once in 1-2 years"
+    },
+    {
+      "level": 4,
+      "label": "Likely",
+      "description": "Event will probably occur. Significant control gaps exist or similar events have occurred recently.",
+      "indicativeFrequency": "Several times per year"
+    },
+    {
+      "level": 5,
+      "label": "Almost Certain",
+      "description": "Event is expected to occur. No effective controls in place, or event is already occurring.",
+      "indicativeFrequency": "Monthly or more frequently"
+    }
+  ],
+  "impactScale": [
+    {
+      "level": 1,
+      "label": "Negligible",
+      "description": "Minimal impact on data subjects or organization.",
+      "dataSubjectsAffected": "Fewer than 10 individuals",
+      "dataSensitivity": "Non-sensitive personal data only (e.g., business contact details)",
+      "harmToIndividuals": "No measurable financial, reputational, or physical harm to data subjects",
+      "regulatoryPenalty": "No JPDP interest; administrative guidance only",
+      "organizationalReputation": "No public awareness; internal issue only"
+    },
+    {
+      "level": 2,
+      "label": "Minor",
+      "description": "Limited impact on a small number of data subjects; minor regulatory interest.",
+      "dataSubjectsAffected": "10-100 individuals",
+      "dataSensitivity": "General personal data (name, address, email, phone)",
+      "harmToIndividuals": "Minor inconvenience; temporary disruption; easily remediated",
+      "regulatoryPenalty": "JPDP advisory or warning letter; potential compounding of offence",
+      "organizationalReputation": "Limited local media coverage; minor stakeholder concern"
+    },
+    {
+      "level": 3,
+      "label": "Moderate",
+      "description": "Significant impact on data subjects; JPDP investigation likely.",
+      "dataSubjectsAffected": "100-1,000 individuals",
+      "dataSensitivity": "Financial data, employment records, identification numbers",
+      "harmToIndividuals": "Financial loss (recoverable), reputational damage, stress and anxiety",
+      "regulatoryPenalty": "JPDP formal investigation; enforcement notice; fine up to RM300,000",
+      "organizationalReputation": "National media coverage; customer complaints; partner concern"
+    },
+    {
+      "level": 4,
+      "label": "Major",
+      "description": "Severe impact on many data subjects; substantial regulatory enforcement expected.",
+      "dataSubjectsAffected": "1,000-10,000 individuals",
+      "dataSensitivity": "Sensitive personal data (health, religious belief, political opinion, criminal record) per s4 PDPA",
+      "harmToIndividuals": "Significant financial loss, identity theft risk, discrimination, psychological harm",
+      "regulatoryPenalty": "JPDP prosecution; fine up to RM500,000 and/or imprisonment up to 3 years; potential officer liability under s133A",
+      "organizationalReputation": "Widespread media coverage; significant customer churn; board-level escalation"
+    },
+    {
+      "level": 5,
+      "label": "Critical",
+      "description": "Catastrophic impact on a large population; maximum regulatory penalties and potential criminal prosecution.",
+      "dataSubjectsAffected": "More than 10,000 individuals",
+      "dataSensitivity": "Sensitive personal data including children's data, biometric data, health records",
+      "harmToIndividuals": "Severe financial loss, physical safety risk, long-term identity theft, irreversible harm",
+      "regulatoryPenalty": "JPDP maximum penalty: fine up to RM1,000,000 and/or 3 years imprisonment; corporate penalty up to RM3,000,000 or 10% annual Malaysian turnover (s130 A1727); officer personal liability",
+      "organizationalReputation": "International media coverage; regulatory investigations across jurisdictions; existential business impact"
+    }
+  ],
+  "dpiaIntegration": {
+    "title": "Data Protection Impact Assessment (DPIA) Integration",
+    "pdpaSection": "s137",
+    "description": "The PDPA (Amendment) Act 2024 introduces a mandatory DPIA requirement under s137 for high-risk processing activities. The DPIA process integrates with and extends this risk assessment methodology.",
+    "dpiaRequired": [
+      "Large-scale processing of sensitive personal data (health, religious belief, political opinion, criminal record)",
+      "Systematic and extensive profiling with significant effects on data subjects",
+      "Large-scale monitoring of publicly accessible areas (CCTV, facial recognition)",
+      "Processing of children's personal data at scale",
+      "Cross-border transfer of personal data to countries without adequate protection",
+      "Use of new technologies that pose a high risk to data subject rights",
+      "Automated decision-making that significantly affects data subjects",
+      "Large-scale matching or combining of datasets from different sources"
+    ],
+    "dpiaProcess": [
+      "Describe the processing activity, its purposes, and its necessity under PDPA principles",
+      "Assess the necessity and proportionality of the processing in relation to the purpose",
+      "Identify and assess risks to data subject rights and freedoms using this methodology",
+      "Identify measures to mitigate risks, including safeguards, security measures, and mechanisms to protect data subjects",
+      "Document the assessment and its outcomes",
+      "Consult with the DPO and, where required, with the Commissioner before processing",
+      "Implement identified measures and integrate into the risk register",
+      "Review and update the DPIA when there are material changes to the processing"
+    ],
+    "notes": [
+      "DPIA is mandatory under s137 for prescribed high-risk processing — this is not risk-acceptable",
+      "DPIA results should be recorded in the risk register with cross-references to the DPIA report",
+      "The Commissioner may require a data user to carry out a DPIA even where not otherwise mandatory",
+      "DPIA should be completed before the processing begins, not retrospectively",
+      "Where a DPIA indicates high residual risk, the data user must consult the Commissioner under s137"
+    ]
+  },
+  "reviewSchedule": {
+    "fullAssessment": "Annually, or following a significant change in processing activities",
+    "registerReview": "Quarterly review of all risks and treatment plan progress",
+    "triggerEvents": [
+      "New personal data processing activity introduced",
+      "Data breach or security incident",
+      "JPDP enforcement action, complaint, or investigation",
+      "Change in applicable regulations, guidelines, or codes of practice",
+      "Significant organizational change (merger, acquisition, restructuring)",
+      "New third-party data processor engagement",
+      "New cross-border data transfer arrangement",
+      "Introduction of new technology affecting personal data processing"
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "sourceType": "constructed-indicative",
+  "title": "Risk Treatment Options",
+  "description": "Four risk treatment strategies for managing data protection risks under the Malaysia PDPA 2010, with PDPA-specific examples and constraints. Note that certain PDPA requirements are mandatory and cannot be risk-accepted.",
+  "mandatoryComplianceNote": "The PDPA 2010 establishes mandatory obligations that must be met regardless of an organization's risk appetite. The following cannot be risk-accepted under any circumstances: the General Principle (s6 — lawful processing with consent), the Notice and Choice Principle (s7 — written notice to data subjects), the Security Principle (s9 — adequate security measures), mandatory data breach notification (s143A — 72-hour notification to Commissioner), DPIA for high-risk processing (s137), DPO appointment where prescribed (s129B), and data user registration with JPDP (s14-s16). Failure to comply with these mandatory requirements constitutes an offence under the Act regardless of risk assessment outcomes.",
+  "strategies": [
+    {
+      "strategy": "Mitigate",
+      "description": "Reduce the likelihood and/or impact of the risk by implementing additional controls, improving existing controls, or strengthening processes. This is the most common treatment for data protection risks.",
+      "whenToUse": "When the risk can be reduced to an acceptable level through the implementation of controls from the PDPA Controls Library, and the cost of mitigation is proportionate to the risk reduction achieved.",
+      "pdpaExamples": [
+        {
+          "risk": "Unauthorized access to personal data",
+          "treatment": "Implement multi-factor authentication, role-based access controls, encryption at rest and in transit, and deploy security monitoring (SIEM) as per s9 Security Principle and Standards 2015",
+          "controls": ["access-control-and-identity-management", "encryption-and-data-protection-in-transit-at-rest", "security-monitoring-and-siem"]
+        },
+        {
+          "risk": "Data breach notification delay",
+          "treatment": "Establish a formal incident response team, implement automated breach detection tools, pre-populate Commissioner notification templates, and conduct quarterly tabletop exercises to ensure 72-hour readiness under s143A",
+          "controls": ["breach-detection-and-response-plan", "breach-notification-process"]
+        },
+        {
+          "risk": "Invalid consent collection",
+          "treatment": "Deploy a consent management platform that enforces mandatory notice display before data collection, records granular consent with timestamps, and provides automated withdrawal mechanisms under s6 and s7",
+          "controls": ["consent-collection-and-recording", "consent-withdrawal-and-preference-management"]
+        },
+        {
+          "risk": "Data retained beyond necessity",
+          "treatment": "Implement automated retention enforcement with scheduled purge jobs, deploy data discovery tools to identify orphaned datasets, and conduct quarterly retention audits under s10 Retention Principle",
+          "controls": ["retention-policy-enforcement", "secure-data-disposal"]
+        },
+        {
+          "risk": "Cross-border transfer without safeguards",
+          "treatment": "Implement a transfer impact assessment process, execute standard contractual clauses for all transfers, deploy technical controls to detect unauthorized transfers, and maintain a cross-border transfer register under s129A",
+          "controls": ["transfer-mechanism-implementation", "transfer-impact-assessment"]
+        }
+      ],
+      "considerations": [
+        "Most PDPA risks should be mitigated — the Act establishes baseline controls that must be implemented",
+        "Use the Controls Library to identify specific controls applicable to each risk",
+        "Consider both technical and organizational measures",
+        "Mitigation should be proportionate to the sensitivity of data and number of data subjects affected",
+        "Document all mitigation measures as evidence for JPDP inspection"
+      ]
+    },
+    {
+      "strategy": "Transfer",
+      "description": "Transfer or share the risk with a third party, typically through insurance, outsourcing to a specialized processor, or contractual allocation. Note that under PDPA, the data user retains ultimate accountability even when processing is outsourced.",
+      "whenToUse": "When a specialized third party can manage the risk more effectively, or when residual risk should be financially transferred through insurance. Not appropriate for mandatory compliance obligations which remain the data user's responsibility.",
+      "pdpaExamples": [
+        {
+          "risk": "Inadequate technical security capabilities",
+          "treatment": "Engage a managed security service provider (MSSP) with demonstrated PDPA compliance capabilities and ISO 27001 certification. Include PDPA-specific SLAs in the service agreement. Note: the data user remains liable under s9 for the processor's security failures",
+          "controls": ["processor-due-diligence-and-contracting"]
+        },
+        {
+          "risk": "Financial impact of data breach",
+          "treatment": "Obtain cyber liability insurance covering PDPA-specific scenarios including JPDP fines (where insurable), breach notification costs, forensic investigation, legal defense, and data subject compensation claims",
+          "controls": []
+        },
+        {
+          "risk": "Complex cross-border transfer compliance",
+          "treatment": "Engage a specialist privacy consultancy or law firm to manage cross-border transfer assessments and maintain standard contractual clause documentation under s129A",
+          "controls": ["transfer-impact-assessment"]
+        }
+      ],
+      "constraints": [
+        "Accountability cannot be transferred — the data user remains responsible under PDPA even when processing is outsourced (s9)",
+        "Transfer agreements must include PDPA-compliant data processing terms",
+        "Insurance does not cover criminal penalties (imprisonment) under s128-s130",
+        "The Commissioner can still pursue the data user for the processor's failures",
+        "Officer liability under s133A cannot be transferred"
+      ]
+    },
+    {
+      "strategy": "Avoid",
+      "description": "Eliminate the risk entirely by ceasing or not undertaking the processing activity that gives rise to the risk. This removes both the likelihood and impact of the risk.",
+      "whenToUse": "When the risk is too high to be adequately mitigated or transferred, and the processing activity is not essential to the organization's operations or can be achieved through alternative means that do not create the same risk.",
+      "pdpaExamples": [
+        {
+          "risk": "Processing biometric data without adequate safeguards",
+          "treatment": "Replace biometric access controls with alternative authentication methods (smart cards, PINs) that do not require collection of irrevocable biometric data",
+          "controls": []
+        },
+        {
+          "risk": "Cross-border transfer to high-risk jurisdiction",
+          "treatment": "Redesign data architecture to process and store personal data within Malaysia, eliminating the need for cross-border transfer entirely. Use local data centers and processors.",
+          "controls": []
+        },
+        {
+          "risk": "Collection of excessive personal data",
+          "treatment": "Redesign forms and processes to collect only the minimum personal data necessary for the stated purpose, eliminating collection of unnecessary data categories. Apply data minimization principle.",
+          "controls": []
+        },
+        {
+          "risk": "Children's data processing without robust age verification",
+          "treatment": "Restrict service eligibility to users aged 18 and above, implementing technical controls to prevent children from accessing the service and avoiding the need for guardian consent mechanisms",
+          "controls": []
+        }
+      ],
+      "considerations": [
+        "Avoidance may limit business functionality or market opportunities",
+        "Consider whether the processing purpose can be achieved through privacy-preserving alternatives",
+        "Document the risk avoidance decision and rationale for governance records",
+        "May be the only appropriate response when DPIA under s137 indicates unmitigable high risk",
+        "The Commissioner may direct cessation of processing when risk cannot be adequately addressed"
+      ]
+    },
+    {
+      "strategy": "Accept",
+      "description": "Accept the residual risk and continue the processing activity without additional treatment. The risk is acknowledged, documented, and monitored. This strategy is only appropriate for low residual risks that fall within the organization's risk appetite.",
+      "whenToUse": "When the residual risk is within acceptable tolerance (typically Low band only), the cost of further mitigation is disproportionate to the risk reduction, and — critically — all mandatory PDPA requirements have already been met.",
+      "pdpaExamples": [
+        {
+          "risk": "Minor data accuracy issues in non-sensitive contact records",
+          "treatment": "Accept the residual risk of occasional out-of-date non-sensitive contact information where the organization has self-service update mechanisms and periodic data quality checks in place, satisfying the Data Integrity Principle (s11) at a basic level",
+          "controls": []
+        },
+        {
+          "risk": "Low-volume data subject complaints",
+          "treatment": "Accept the residual risk of occasional data subject complaints where a robust complaint handling process is in place, complaints are resolved within statutory timelines, and complaint volumes are within expected ranges",
+          "controls": []
+        }
+      ],
+      "constraints": [
+        "CANNOT be applied to mandatory PDPA requirements — the following are non-negotiable regardless of risk appetite:",
+        "  - General Principle (s6): Processing must have lawful basis and consent",
+        "  - Notice and Choice Principle (s7): Written notice must be provided to data subjects",
+        "  - Security Principle (s9): Adequate security measures must be implemented",
+        "  - Breach notification (s143A): 72-hour notification to Commissioner is mandatory",
+        "  - DPIA (s137): Must be completed for prescribed high-risk processing",
+        "  - DPO appointment (s129B): Mandatory for prescribed classes of data users",
+        "  - Registration (s14-s16): Data user registration with JPDP is mandatory",
+        "Risk acceptance decisions must be documented with rationale and approved by the DPO and senior management",
+        "Accepted risks must still be monitored and reviewed at each assessment cycle",
+        "The Commissioner's enforcement powers mean that accepted risks can still result in penalties if they constitute non-compliance",
+        "Risk acceptance should be time-bound and subject to re-evaluation"
+      ]
+    }
+  ]
+}

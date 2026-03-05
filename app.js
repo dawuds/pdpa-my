@@ -46,6 +46,7 @@ function parseRoute() {
   if (hash.startsWith('supplement/')) return { view: 'supplement-detail', id: hash.slice(11) };
   if (hash === 'cross-references') return { view: 'cross-references' };
   if (hash === 'framework') return { view: 'framework' };
+  if (hash === 'risk-management') return { view: 'risk-management' };
   return { view: 'overview' };
 }
 
@@ -90,6 +91,7 @@ function render() {
     case 'supplement-detail': renderSupplementDetail(app, state.route.id); break;
     case 'cross-references': renderCrossReferences(app); break;
     case 'framework': renderFramework(app); break;
+    case 'risk-management': renderRiskManagement(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
   }
@@ -105,7 +107,8 @@ function updateNav() {
       (view === 'principles' && state.route.view === 'principle') ||
       (view === 'controls' && state.route.view === 'control-detail') ||
       (view === 'supplements' && state.route.view === 'supplement-detail') ||
-      (view === 'framework' && state.route.view === 'framework')
+      (view === 'framework' && state.route.view === 'framework') ||
+      (view === 'risk-management' && state.route.view === 'risk-management')
     );
   });
 }
@@ -1369,6 +1372,414 @@ async function renderFramework(el) {
         <div class="layer-card-desc">Act to subsidiary instruments, GDPR, ISO 27701, APEC CBPR</div>
       </div>
     </div>
+  `;
+}
+
+/* ===== RISK MANAGEMENT ===== */
+async function renderRiskManagement(app) {
+  const [methodology, matrix, register, checklist, treatment] = await Promise.all([
+    fetchJSON('risk-management/methodology.json'),
+    fetchJSON('risk-management/risk-matrix.json'),
+    fetchJSON('risk-management/risk-register.json'),
+    fetchJSON('risk-management/checklist.json'),
+    fetchJSON('risk-management/treatment-options.json'),
+  ]);
+
+  if (!methodology && !matrix && !register && !checklist) {
+    app.innerHTML = '<div class="empty-state"><div class="empty-state-text">Risk management data not available.</div></div>';
+    return;
+  }
+
+  // Compute stats from register
+  const risks = (register && register.risks) || [];
+  const categories = {};
+  const bandCounts = { Critical: 0, High: 0, Medium: 0, Low: 0 };
+  for (const r of risks) {
+    const cat = r.category || 'Other';
+    if (!categories[cat]) categories[cat] = [];
+    categories[cat].push(r);
+    const band = riskBand(r.residualRisk, matrix);
+    bandCounts[band] = (bandCounts[band] || 0) + 1;
+  }
+
+  app.innerHTML = `
+    <div class="page-title">Risk Management</div>
+    <div class="page-subtitle">PDPA-aligned data protection risk assessment methodology, risk register, and treatment options <span class="badge badge-ai" title="Constructed indicative content — not authoritative legal guidance">AI Generated</span></div>
+    <div class="stats-banner">
+      <div class="stat-card"><div class="stat-number">${risks.length}</div><div class="stat-label">Risks Identified</div></div>
+      <div class="stat-card"><div class="stat-number">${Object.keys(categories).length}</div><div class="stat-label">Categories</div></div>
+      <div class="stat-card"><div class="stat-number" style="color:#EF4444;">${bandCounts.Critical}</div><div class="stat-label">Critical (Residual)</div></div>
+      <div class="stat-card"><div class="stat-number" style="color:#F97316;">${bandCounts.High}</div><div class="stat-label">High (Residual)</div></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="rm-methodology">Methodology</button>
+      <button class="tab-btn" data-tab="rm-register">Risk Register</button>
+      <button class="tab-btn" data-tab="rm-checklist">Checklist</button>
+      <button class="tab-btn" data-tab="rm-treatment">Treatment Options</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-rm-methodology">
+      ${renderRMMethodology(methodology, matrix)}
+    </div>
+    <div class="tab-panel" id="tab-rm-register">
+      ${renderRMRegister(register, matrix)}
+    </div>
+    <div class="tab-panel" id="tab-rm-checklist">
+      ${renderRMChecklist(checklist)}
+    </div>
+    <div class="tab-panel" id="tab-rm-treatment">
+      ${renderRMTreatment(treatment)}
+    </div>
+  `;
+}
+
+function riskBand(score, matrix) {
+  if (!matrix || !matrix.scoreToBand) {
+    if (score >= 20) return 'Critical';
+    if (score >= 10) return 'High';
+    if (score >= 5) return 'Medium';
+    return 'Low';
+  }
+  return matrix.scoreToBand[String(score)] || (score >= 20 ? 'Critical' : score >= 10 ? 'High' : score >= 5 ? 'Medium' : 'Low');
+}
+
+function riskBandColor(band) {
+  const map = { Critical: '#EF4444', High: '#F97316', Medium: '#EAB308', Low: '#22C55E' };
+  return map[band] || '#6B7280';
+}
+
+function renderRMMethodology(meth, matrix) {
+  if (!meth) return '<div class="empty-state"><div class="empty-state-text">Methodology data not available.</div></div>';
+
+  const stepsHTML = (meth.riskAssessmentProcess?.steps || []).map(s => `
+    <div class="accordion-item">
+      <div class="accordion-header" data-accordion>
+        <span><strong>Step ${s.step}:</strong> ${esc(s.name)}</span>
+        <span class="accordion-arrow">&#9654;</span>
+      </div>
+      <div class="accordion-body">
+        <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(s.description)}</p>
+        <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+          ${(s.activities || []).map(a => `<li style="margin-bottom:0.25rem;">${esc(a)}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `).join('');
+
+  const matrixHTML = matrix ? renderRiskMatrix(matrix) : '';
+
+  const dpiaHTML = meth.dpiaIntegration ? `
+    <div class="card" style="margin-top:1.5rem;">
+      <div class="card-title">${esc(meth.dpiaIntegration.title)} <span class="badge badge-mandatory">${esc(meth.dpiaIntegration.pdpaSection)}</span></div>
+      <div class="card-body" style="margin-bottom:0.75rem;">${esc(meth.dpiaIntegration.description)}</div>
+      <div class="block-label">DPIA Required For</div>
+      <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
+        ${(meth.dpiaIntegration.dpiaRequired || []).map(r => `<li style="margin-bottom:0.25rem;">${esc(r)}</li>`).join('')}
+      </ul>
+      <div class="block-label">DPIA Process</div>
+      <ol style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
+        ${(meth.dpiaIntegration.dpiaProcess || []).map(p => `<li style="margin-bottom:0.25rem;">${esc(p)}</li>`).join('')}
+      </ol>
+      ${meth.dpiaIntegration.notes && meth.dpiaIntegration.notes.length ? `
+        <div class="block-label">Important Notes</div>
+        <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+          ${meth.dpiaIntegration.notes.map(n => `<li style="margin-bottom:0.25rem;">${esc(n)}</li>`).join('')}
+        </ul>
+      ` : ''}
+    </div>
+  ` : '';
+
+  return `
+    <div class="card">
+      <div class="card-title">${esc(meth.title)}</div>
+      <div class="card-body">${esc(meth.description)}</div>
+      ${meth.alignment && meth.alignment.length ? `
+        <div style="display:flex;gap:0.375rem;flex-wrap:wrap;margin-top:0.75rem;">
+          ${meth.alignment.map(a => `<span class="badge badge-domain">${esc(a)}</span>`).join('')}
+        </div>
+      ` : ''}
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Risk Assessment Process</h3>
+    <div class="accordion">
+      ${stepsHTML}
+    </div>
+
+    ${matrixHTML}
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Impact Scale</h3>
+    <div class="data-table-wrap" style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>Level</th><th>Label</th><th>Data Subjects</th><th>Data Sensitivity</th><th>Harm to Individuals</th><th>Regulatory Penalty</th></tr></thead>
+        <tbody>
+          ${(meth.impactScale || []).map(i => `
+            <tr>
+              <td><strong>${i.level}</strong></td>
+              <td><strong>${esc(i.label)}</strong></td>
+              <td style="font-size:0.75rem;">${esc(i.dataSubjectsAffected)}</td>
+              <td style="font-size:0.75rem;">${esc(i.dataSensitivity)}</td>
+              <td style="font-size:0.75rem;">${esc(i.harmToIndividuals)}</td>
+              <td style="font-size:0.75rem;">${esc(i.regulatoryPenalty)}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Likelihood Scale</h3>
+    <div class="data-table-wrap" style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>Level</th><th>Label</th><th>Description</th><th>Indicative Frequency</th></tr></thead>
+        <tbody>
+          ${(meth.likelihoodScale || []).map(l => `
+            <tr>
+              <td><strong>${l.level}</strong></td>
+              <td><strong>${esc(l.label)}</strong></td>
+              <td style="font-size:0.75rem;">${esc(l.description)}</td>
+              <td style="font-size:0.75rem;">${esc(l.indicativeFrequency)}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+
+    ${dpiaHTML}
+
+    ${meth.reviewSchedule ? `
+      <div class="card" style="margin-top:1.5rem;">
+        <div class="card-title">Review Schedule</div>
+        <div class="card-meta">
+          <span>Full Assessment: ${esc(meth.reviewSchedule.fullAssessment)}</span>
+          <span>Register Review: ${esc(meth.reviewSchedule.registerReview)}</span>
+        </div>
+        <div class="block-label" style="margin-top:0.75rem;">Trigger Events</div>
+        <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+          ${(meth.reviewSchedule.triggerEvents || []).map(t => `<li style="margin-bottom:0.25rem;">${esc(t)}</li>`).join('')}
+        </ul>
+      </div>
+    ` : ''}
+  `;
+}
+
+function renderRiskMatrix(matrix) {
+  if (!matrix) return '';
+  const impactLabels = matrix.axes.x.scale;
+  const likelihoodLabels = matrix.axes.y.scale;
+  const grid = matrix.matrix;
+  const stb = matrix.scoreToBand || {};
+
+  return `
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Risk Matrix (5x5)</h3>
+    <div class="data-table-wrap" style="overflow-x:auto;">
+      <table class="data-table risk-matrix-table">
+        <thead>
+          <tr>
+            <th style="min-width:100px;">Likelihood \\ Impact</th>
+            ${impactLabels.map(i => `<th style="text-align:center;">${esc(i.label)}<br><span style="font-size:0.625rem;color:var(--text-muted);">(${i.level})</span></th>`).join('')}
+          </tr>
+        </thead>
+        <tbody>
+          ${likelihoodLabels.slice().reverse().map((l, rowIdx) => {
+            const gridRow = grid[likelihoodLabels.length - 1 - rowIdx];
+            return `<tr>
+              <td><strong>${esc(l.label)}</strong> <span style="font-size:0.625rem;color:var(--text-muted);">(${l.level})</span></td>
+              ${gridRow.map(score => {
+                const band = stb[String(score)] || 'Low';
+                const color = riskBandColor(band);
+                return `<td style="text-align:center;background:${color}15;"><span style="font-weight:600;color:${color};">${score}</span></td>`;
+              }).join('')}
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.75rem;">
+      ${(matrix.bands || []).map(b => `
+        <div style="display:flex;align-items:center;gap:0.375rem;">
+          <span style="width:12px;height:12px;border-radius:2px;background:${b.color};display:inline-block;"></span>
+          <span style="font-size:0.75rem;font-weight:500;">${esc(b.band)} (${esc(b.range)})</span>
+          <span style="font-size:0.6875rem;color:var(--text-muted);">— ${esc(b.action)}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderRMRegister(register, matrix) {
+  if (!register || !register.risks || !register.risks.length) {
+    return '<div class="empty-state"><div class="empty-state-text">No risks in the register.</div></div>';
+  }
+  const risks = register.risks;
+  const categories = {};
+  for (const r of risks) {
+    const cat = r.category || 'Other';
+    if (!categories[cat]) categories[cat] = [];
+    categories[cat].push(r);
+  }
+
+  const filterChips = Object.keys(categories);
+
+  return `
+    <div class="card-meta" style="margin-bottom:1rem;">
+      <span>Last Review: ${esc(register.lastReviewDate || 'N/A')}</span>
+      <span>Next Review: ${esc(register.nextReviewDate || 'N/A')}</span>
+    </div>
+    <div class="filter-bar">
+      <span class="filter-chip active" data-filter="all">All (${risks.length})</span>
+      ${filterChips.map(cat => `<span class="filter-chip" data-filter="${esc(cat)}">${esc(cat)} (${categories[cat].length})</span>`).join('')}
+    </div>
+    <div id="risk-register-list">
+      ${risks.map(r => {
+        const inherentBand = riskBand(r.inherentRisk, matrix);
+        const residualBand = riskBand(r.residualRisk, matrix);
+        return `
+          <div class="card risk-register-card" data-category="${esc(r.category || 'Other')}" style="margin-bottom:0.75rem;">
+            <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.375rem;">
+              <span style="font-family:var(--mono);font-size:0.8125rem;font-weight:600;color:var(--accent);">${esc(r.id)}</span>
+              <span class="badge badge-category">${esc(r.category)}</span>
+              <span class="badge badge-domain">${esc(r.pdpaSection)}</span>
+            </div>
+            <div class="card-title" style="margin-bottom:0.375rem;">${esc(r.title)}</div>
+            <div class="card-body" style="margin-bottom:0.75rem;">${esc(r.description)}</div>
+            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+              <div>
+                <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.25rem;">Inherent Risk</div>
+                <div style="display:flex;align-items:center;gap:0.375rem;">
+                  <span style="font-size:0.75rem;color:var(--text-secondary);">L:${r.likelihood} x I:${r.impact}</span>
+                  <span style="font-weight:700;color:${riskBandColor(inherentBand)};">${r.inherentRisk}</span>
+                  <span style="font-size:0.6875rem;font-weight:600;color:${riskBandColor(inherentBand)};">${inherentBand}</span>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.25rem;">Residual Risk</div>
+                <div style="display:flex;align-items:center;gap:0.375rem;">
+                  <span style="font-size:0.75rem;color:var(--text-secondary);">L:${r.residualLikelihood} x I:${r.residualImpact}</span>
+                  <span style="font-weight:700;color:${riskBandColor(residualBand)};">${r.residualRisk}</span>
+                  <span style="font-size:0.6875rem;font-weight:600;color:${riskBandColor(residualBand)};">${residualBand}</span>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.25rem;">Treatment</div>
+                <span class="badge badge-type">${esc(r.treatment)}</span>
+              </div>
+              <div>
+                <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.25rem;">Owner</div>
+                <span style="font-size:0.75rem;color:var(--text-secondary);">${esc(r.owner)}</span>
+              </div>
+            </div>
+            ${r.existingControls && r.existingControls.length ? `
+              <div class="block-label">Existing Controls</div>
+              <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">
+                ${r.existingControls.map(c => `<li style="margin-bottom:0.125rem;">${esc(c)}</li>`).join('')}
+              </ul>
+            ` : ''}
+            <div class="block-label">Treatment Plan</div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.25rem;">${esc(r.treatmentPlan)}</div>
+            <div style="font-size:0.6875rem;color:var(--text-muted);margin-top:0.5rem;">Review Date: ${esc(r.reviewDate)}</div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+function renderRMChecklist(checklist) {
+  if (!checklist || !checklist.items || !checklist.items.length) {
+    return '<div class="empty-state"><div class="empty-state-text">No checklist items available.</div></div>';
+  }
+  const items = checklist.items;
+  const areas = {};
+  for (const item of items) {
+    const area = item.area || 'General';
+    if (!areas[area]) areas[area] = [];
+    areas[area].push(item);
+  }
+
+  return `
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="card-title">${esc(checklist.title)}</div>
+      <div class="card-body">${esc(checklist.description)}</div>
+    </div>
+    <div class="accordion">
+      ${Object.entries(areas).map(([area, areaItems]) => `
+        <div class="accordion-item open">
+          <div class="accordion-header" data-accordion>
+            <span>${esc(area)} (${areaItems.length})</span>
+            <span class="accordion-arrow">&#9654;</span>
+          </div>
+          <div class="accordion-body">
+            ${areaItems.map(item => `
+              <div class="card" style="margin-bottom:0.5rem;">
+                <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.375rem;">
+                  <span style="font-family:var(--mono);font-size:0.75rem;font-weight:600;color:var(--accent);">${esc(item.id)}</span>
+                  <span class="req-item-priority priority-${(item.priority || '').toLowerCase()}">${esc(item.priority)}</span>
+                  <span class="badge badge-domain">${esc(item.pdpaSection)}</span>
+                </div>
+                <div class="card-title" style="font-size:0.875rem;margin-bottom:0.25rem;">${esc(item.checkItem)}</div>
+                <div class="card-body" style="margin-bottom:0.5rem;">${esc(item.description)}</div>
+                ${item.evidenceRequired && item.evidenceRequired.length ? `
+                  <div class="block-label">Evidence Required</div>
+                  <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+                    ${item.evidenceRequired.map(e => `<li style="margin-bottom:0.125rem;">${esc(e)}</li>`).join('')}
+                  </ul>
+                ` : ''}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderRMTreatment(treatment) {
+  if (!treatment || !treatment.strategies || !treatment.strategies.length) {
+    return '<div class="empty-state"><div class="empty-state-text">No treatment options available.</div></div>';
+  }
+
+  return `
+    <div class="card" style="margin-bottom:1rem;border-left:3px solid #EF4444;">
+      <div class="card-title" style="color:#EF4444;">Mandatory Compliance Notice</div>
+      <div class="card-body" style="font-size:0.8125rem;">${esc(treatment.mandatoryComplianceNote)}</div>
+    </div>
+    ${treatment.strategies.map(s => `
+      <div class="card" style="margin-bottom:1rem;">
+        <div class="card-title">${esc(s.strategy)}</div>
+        <div class="card-body" style="margin-bottom:0.75rem;">${esc(s.description)}</div>
+        <div class="block-label">When to Use</div>
+        <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(s.whenToUse)}</div>
+
+        ${s.pdpaExamples && s.pdpaExamples.length ? `
+          <div class="block-label">PDPA Examples</div>
+          ${s.pdpaExamples.map(ex => `
+            <div style="border-left:3px solid var(--border);padding-left:0.75rem;margin-bottom:0.5rem;">
+              <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.125rem;">${esc(ex.risk)}</div>
+              <div style="font-size:0.8125rem;color:var(--text-secondary);">${esc(ex.treatment)}</div>
+              ${ex.controls && ex.controls.length ? `
+                <div style="display:flex;gap:0.25rem;flex-wrap:wrap;margin-top:0.25rem;">
+                  ${ex.controls.map(c => `<a href="#control/${c}" class="badge badge-layer" style="font-size:0.625rem;">${esc(c)}</a>`).join('')}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        ` : ''}
+
+        ${s.considerations && s.considerations.length ? `
+          <div class="block-label" style="margin-top:0.75rem;">Considerations</div>
+          <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+            ${s.considerations.map(c => `<li style="margin-bottom:0.125rem;">${esc(c)}</li>`).join('')}
+          </ul>
+        ` : ''}
+
+        ${s.constraints && s.constraints.length ? `
+          <div class="block-label" style="margin-top:0.75rem;">Constraints</div>
+          <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
+            ${s.constraints.map(c => `<li style="margin-bottom:0.125rem;">${esc(c)}</li>`).join('')}
+          </ul>
+        ` : ''}
+      </div>
+    `).join('')}
   `;
 }
 
