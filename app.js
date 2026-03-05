@@ -696,30 +696,32 @@ async function renderControlDetail(el, slug) {
   const hasCodes = control.relatedCodes && control.relatedCodes.length;
   const hasSectorVariants = control.sectorVariants && Object.keys(control.sectorVariants).length;
 
-  // --- Audit Package: resolve linked artifacts and evidence ---
+  // --- Audit Package: resolve linked artifacts and evidence (direct mapping) ---
+  const controlSlug = control.slug;
   const sections = control.sections || [];
-  const sectionToArtifacts = (state.artifacts.provisionMap && state.artifacts.provisionMap.sectionToArtifacts) || {};
-  const artifactSlugsSet = new Set();
-  sections.forEach(s => {
-    const slugs = sectionToArtifacts[s] || [];
-    slugs.forEach(sl => artifactSlugsSet.add(sl));
-  });
-  // Look up full artifact objects from inventory (search all categories)
+
+  // Find artifacts that directly reference this control via controlSlugs[]
   const artifactIndex = {};
   Object.values(state.artifacts.inventory).forEach(arr => {
     if (Array.isArray(arr)) arr.forEach(a => { artifactIndex[a.slug] = a; });
   });
-  const linkedArtifacts = [];
-  artifactSlugsSet.forEach(sl => { if (artifactIndex[sl]) linkedArtifacts.push(artifactIndex[sl]); });
-  linkedArtifacts.sort((a, b) => (b.mandatory ? 1 : 0) - (a.mandatory ? 1 : 0));
+  const linkedArtifacts = Object.values(artifactIndex)
+    .filter(a => Array.isArray(a.controlSlugs) && a.controlSlugs.includes(controlSlug))
+    .sort((a, b) => (b.mandatory ? 1 : 0) - (a.mandatory ? 1 : 0));
 
-  // Collect evidence items from linked sections
+  // Find evidence items that reference linked artifacts, scoped to control's sections
+  const linkedArtifactSlugs = new Set(linkedArtifacts.map(a => a.slug));
   const linkedEvidence = [];
   sections.forEach(s => {
     const ev = state.evidence[s];
     if (ev && ev.evidenceItems) {
       ev.evidenceItems.forEach(item => {
-        if (!linkedEvidence.find(e => e.id === item.id)) linkedEvidence.push(item);
+        if (linkedEvidence.find(e => e.id === item.id)) return;
+        // Include if evidence references any of this control's artifacts, or if no artifactSlugs field
+        const itemArtifacts = item.artifactSlugs || [];
+        if (!itemArtifacts.length || itemArtifacts.some(sl => linkedArtifactSlugs.has(sl))) {
+          linkedEvidence.push(item);
+        }
       });
     }
   });

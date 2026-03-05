@@ -30,7 +30,10 @@
           "Data governance meeting minutes approving ROPA updates"
         ],
         "format": "Spreadsheet / Database / PDF",
-        "retentionPeriod": "Current version plus previous 3 years of versions"
+        "retentionPeriod": "Current version plus previous 3 years of versions",
+        "artifactSlugs": [
+          "personal-data-inventory-ropa"
+        ]
       },
       {
         "id": "s5-E2",
@@ -57,7 +60,11 @@
           "Intranet screenshot showing policy is published and accessible"
         ],
         "format": "PDF / Word document with Board approval evidence",
-        "retentionPeriod": "Current version plus all prior versions indefinitely"
+        "retentionPeriod": "Current version plus all prior versions indefinitely",
+        "artifactSlugs": [
+          "personal-data-protection-policy",
+          "compliance-audit-records"
+        ]
       },
       {
         "id": "s5-E3",
@@ -84,7 +91,11 @@
           "Remediation tracker showing status of prior findings"
         ],
         "format": "PDF / Word document",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "annual-data-protection-compliance-report",
+          "compliance-audit-records"
+        ]
       }
     ],
     "auditTips": [
@@ -126,7 +137,11 @@
           "Marketing database opt-in/opt-out history export"
         ],
         "format": "Database export / System screenshots / PDF",
-        "retentionPeriod": "Duration of processing + 7 years"
+        "retentionPeriod": "Duration of processing + 7 years",
+        "artifactSlugs": [
+          "consent-register",
+          "consent-records"
+        ]
       },
       {
         "id": "s6-E2",
@@ -153,7 +168,10 @@
           "Legal opinions or analyses supporting claimed legal obligation bases"
         ],
         "format": "Spreadsheet / PDF",
-        "retentionPeriod": "Duration of processing + 3 years"
+        "retentionPeriod": "Duration of processing + 3 years",
+        "artifactSlugs": [
+          "personal-data-inventory-ropa"
+        ]
       },
       {
         "id": "s6-E3",
@@ -180,7 +198,11 @@
           "Emails to third parties notifying of consent withdrawals"
         ],
         "format": "System screenshots / Database export / Email evidence",
-        "retentionPeriod": "Duration of processing + 7 years"
+        "retentionPeriod": "Duration of processing + 7 years",
+        "artifactSlugs": [
+          "consent-withdrawal-procedure",
+          "consent-register"
+        ]
       }
     ],
     "auditTips": [
@@ -222,7 +244,11 @@
           "Point-of-sale or in-store notice boards (photos)"
         ],
         "format": "PDF / HTML / Screenshots",
-        "retentionPeriod": "All versions retained indefinitely"
+        "retentionPeriod": "All versions retained indefinitely",
+        "artifactSlugs": [
+          "general-data-protection-notice-bm-en",
+          "customer-data-protection-notice"
+        ]
       },
       {
         "id": "s7-E2",
@@ -247,7 +273,10 @@
           "CRM records showing notice version acknowledged by each data subject"
         ],
         "format": "Email records / CRM screenshots / Signed forms",
-        "retentionPeriod": "Duration of data subject relationship + 7 years"
+        "retentionPeriod": "Duration of data subject relationship + 7 years",
+        "artifactSlugs": [
+          "general-data-protection-notice-bm-en"
+        ]
       },
       {
         "id": "s7-E3",
@@ -273,7 +302,11 @@
           "Multi-channel suppression consistency test results"
         ],
         "format": "Screenshots / Database export / Process documentation",
-        "retentionPeriod": "Duration of data subject relationship + 7 years"
+        "retentionPeriod": "Duration of data subject relationship + 7 years",
+        "artifactSlugs": [
+          "consent-form-templates",
+          "consent-collection-procedure"
+        ]
       }
     ],
     "auditTips": [
@@ -314,7 +347,11 @@
           "IT systems inventory showing all integrations and API connections to third-party systems"
         ],
         "format": "Spreadsheet / Database / PDF",
-        "retentionPeriod": "Duration of relationship + 7 years"
+        "retentionPeriod": "Duration of relationship + 7 years",
+        "artifactSlugs": [
+          "third-party-data-processor-register",
+          "data-sharing-agreement"
+        ]
       },
       {
         "id": "s8-E2",
@@ -341,7 +378,10 @@
           "Legal review sign-off on DPA templates used"
         ],
         "format": "Signed PDF documents",
-        "retentionPeriod": "Duration of processor relationship + 7 years"
+        "retentionPeriod": "Duration of processor relationship + 7 years",
+        "artifactSlugs": [
+          "data-processing-agreement"
+        ]
       }
     ],
     "auditTips": [
@@ -382,7 +422,10 @@
           "Policy acknowledgement records from staff training"
         ],
         "format": "PDF / Word document with approval signature",
-        "retentionPeriod": "Current version plus all prior versions for 10 years"
+        "retentionPeriod": "Current version plus all prior versions for 10 years",
+        "artifactSlugs": [
+          "information-security-policy"
+        ]
       },
       {
         "id": "s9-E2",
@@ -410,7 +453,11 @@
           "Board or management sign-off on risk acceptance for any unresolved high/critical findings"
         ],
         "format": "PDF reports / Spreadsheet tracker",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "dpia-records",
+          "dpia-report"
+        ]
       },
       {
         "id": "s9-E3",
@@ -440,7 +487,11 @@
           "MDM enrollment and device encryption compliance reports"
         ],
         "format": "Screenshots / Configuration exports / PDF reports",
-        "retentionPeriod": "3 years (current configurations)"
+        "retentionPeriod": "3 years (current configurations)",
+        "artifactSlugs": [
+          "access-control-policy",
+          "information-security-policy"
+        ]
       },
       {
         "id": "s9-E4",
@@ -467,7 +518,11 @@
           "New staff onboarding checklist showing security training as a prerequisite for system access"
         ],
         "format": "Training management system report / PDF certificates",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "training-attendance-records",
+          "training-records-register"
+        ]
       }
     ],
     "auditTips": [
@@ -508,7 +563,11 @@
           "ROPA cross-reference showing all data categories are covered by the schedule"
         ],
         "format": "Spreadsheet / PDF",
-        "retentionPeriod": "Current version plus prior versions for 7 years"
+        "retentionPeriod": "Current version plus prior versions for 7 years",
+        "artifactSlugs": [
+          "data-retention-and-disposal-policy",
+          "data-retention-and-disposal-procedure"
+        ]
       },
       {
         "id": "s10-E2",
@@ -535,7 +594,10 @@
           "Backup management policy showing backup retention and deletion schedule"
         ],
         "format": "PDF certificates / System logs / Spreadsheet",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "data-retention-and-disposal-procedure"
+        ]
       }
     ],
     "auditTips": [
@@ -575,7 +637,10 @@
           "Process document for handling data update notifications from customers"
         ],
         "format": "Screenshots / PDF reports / Process documents",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-processing-records"
+        ]
       },
       {
         "id": "s11-E2",
@@ -602,7 +667,11 @@
           "Correction statement attachments where corrections were disputed"
         ],
         "format": "Spreadsheet / CRM export / PDF correspondence",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "dsar-log",
+          "data-correction-request-procedure"
+        ]
       }
     ],
     "auditTips": [
@@ -643,7 +712,11 @@
           "Published request form or template"
         ],
         "format": "Website screenshots / PDF / Process document",
-        "retentionPeriod": "All versions retained"
+        "retentionPeriod": "All versions retained",
+        "artifactSlugs": [
+          "data-subject-access-request-procedure",
+          "data-correction-request-procedure"
+        ]
       },
       {
         "id": "s12-E2",
@@ -670,7 +743,10 @@
           "Extension requests submitted to the Commissioner where applicable"
         ],
         "format": "Spreadsheet / Ticketing system export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "dsar-log"
+        ]
       }
     ],
     "auditTips": [
@@ -710,7 +786,10 @@
           "JPDP online portal screenshot confirming current registration status"
         ],
         "format": "Original certificate (physical) / PDF (digital)",
-        "retentionPeriod": "All certificates retained permanently"
+        "retentionPeriod": "All certificates retained permanently",
+        "artifactSlugs": [
+          "data-user-registration-record"
+        ]
       },
       {
         "id": "s13-E2",
@@ -736,7 +815,10 @@
           "Named responsible officer and backup documented in compliance manual"
         ],
         "format": "Calendar screenshots / Email evidence / Process document",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "data-user-registration-record"
+        ]
       }
     ],
     "auditTips": [
@@ -776,7 +858,11 @@
           "DPO or legal counsel sign-off on the application"
         ],
         "format": "PDF (application) / Spreadsheet (ROPA)",
-        "retentionPeriod": "All applications retained permanently"
+        "retentionPeriod": "All applications retained permanently",
+        "artifactSlugs": [
+          "data-user-registration-record",
+          "personal-data-inventory-ropa"
+        ]
       }
     ],
     "auditTips": [
@@ -817,7 +903,11 @@
           "Evidence of identity verification conducted before response (to show personal data was only disclosed to the correct person)"
         ],
         "format": "PDF / Email records",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "data-subject-access-request-procedure",
+          "dsar-log"
+        ]
       }
     ],
     "auditTips": [
@@ -857,7 +947,10 @@
           "Monthly DPO report on request handling performance"
         ],
         "format": "System export / Spreadsheet",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "dsar-log"
+        ]
       }
     ],
     "auditTips": [
@@ -897,7 +990,11 @@
           "Correction statement annotations on disputed records"
         ],
         "format": "Spreadsheet / CRM screenshots / Email records",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "dsar-log",
+          "data-correction-request-procedure"
+        ]
       }
     ],
     "auditTips": [
@@ -937,7 +1034,11 @@
           "Procurement records showing all vendors given access to personal data"
         ],
         "format": "Spreadsheet / PDF register",
-        "retentionPeriod": "Duration of processor relationship + 7 years"
+        "retentionPeriod": "Duration of processor relationship + 7 years",
+        "artifactSlugs": [
+          "third-party-data-processor-register",
+          "data-processing-agreement"
+        ]
       },
       {
         "id": "s43-E2",
@@ -964,7 +1065,10 @@
           "Standard DPA template approved by Legal counsel for use in new processor engagements"
         ],
         "format": "Signed PDF agreements",
-        "retentionPeriod": "Duration of processor relationship + 7 years"
+        "retentionPeriod": "Duration of processor relationship + 7 years",
+        "artifactSlugs": [
+          "data-processing-agreement"
+        ]
       },
       {
         "id": "s43-E3",
@@ -991,7 +1095,11 @@
           "Processor audit reports where on-site audits were conducted"
         ],
         "format": "PDF reports / Certificates / Correspondence",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "third-party-compliance-assessment-report",
+          "third-party-due-diligence-procedure"
+        ]
       }
     ],
     "auditTips": [
@@ -1031,7 +1139,11 @@
           "Network architecture diagrams showing data flows"
         ],
         "format": "Visio / PDF / Spreadsheet",
-        "retentionPeriod": "Current version plus prior 3 years"
+        "retentionPeriod": "Current version plus prior 3 years",
+        "artifactSlugs": [
+          "cross-border-transfer-register",
+          "cross-border-transfer-assessment-procedure"
+        ]
       },
       {
         "id": "s129A-E2",
@@ -1059,7 +1171,11 @@
           "Consent records specifically covering cross-border transfer consent"
         ],
         "format": "Spreadsheet / PDF register / Signed agreements",
-        "retentionPeriod": "Duration of transfer + 7 years"
+        "retentionPeriod": "Duration of transfer + 7 years",
+        "artifactSlugs": [
+          "cross-border-transfer-register",
+          "standard-contractual-clauses-cross-border"
+        ]
       }
     ],
     "auditTips": [
@@ -1101,7 +1217,11 @@
           "Named role assignments in the IRP with current incumbents confirmed"
         ],
         "format": "PDF / Word document",
-        "retentionPeriod": "Current version plus all prior versions"
+        "retentionPeriod": "Current version plus all prior versions",
+        "artifactSlugs": [
+          "data-breach-response-policy",
+          "data-breach-notification-procedure"
+        ]
       },
       {
         "id": "s143A-E2",
@@ -1128,7 +1248,10 @@
           "Remediation tracker showing status of post-exercise actions"
         ],
         "format": "PDF / Word document",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "data-breach-investigation-records"
+        ]
       },
       {
         "id": "s143A-E3",
@@ -1157,7 +1280,11 @@
           "Commissioner acknowledgement of receipt of breach notifications"
         ],
         "format": "Spreadsheet / PDF log / PDF notifications",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "data-breach-register",
+          "data-breach-notification-report-commissioner"
+        ]
       }
     ],
     "auditTips": [
@@ -1197,7 +1324,10 @@
           "DPO quarterly repository review records"
         ],
         "format": "Repository index / File system",
-        "retentionPeriod": "Per the retention schedule applicable to each document type"
+        "retentionPeriod": "Per the retention schedule applicable to each document type",
+        "artifactSlugs": [
+          "compliance-audit-records"
+        ]
       },
       {
         "id": "s101-E2",
@@ -1222,7 +1352,10 @@
           "Management acknowledgement of self-assessment findings"
         ],
         "format": "PDF / Word document",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "jpdp-inspection-response-procedure"
+        ]
       }
     ],
     "auditTips": [
@@ -1261,7 +1394,10 @@
           "Test email to complaint contact address confirming it is active"
         ],
         "format": "Website screenshots / PDF",
-        "retentionPeriod": "All versions retained"
+        "retentionPeriod": "All versions retained",
+        "artifactSlugs": [
+          "complaint-handling-procedure"
+        ]
       },
       {
         "id": "s104-E2",
@@ -1287,7 +1423,11 @@
           "Management report on complaint metrics"
         ],
         "format": "Spreadsheet / Ticketing system export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "complaint-handling-procedure",
+          "dsar-log"
+        ]
       }
     ],
     "auditTips": [
@@ -1328,7 +1468,11 @@
           "Commissioner acknowledgement of compliance"
         ],
         "format": "PDF file (notice + evidence package)",
-        "retentionPeriod": "Permanently"
+        "retentionPeriod": "Permanently",
+        "artifactSlugs": [
+          "enforcement-notice-response-procedure",
+          "enforcement-notice-response-records"
+        ]
       }
     ],
     "auditTips": [
