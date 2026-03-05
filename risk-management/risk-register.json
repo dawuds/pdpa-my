@@ -10,7 +10,10 @@
       "title": "Consent obtained without proper notice",
       "description": "Personal data is collected from data subjects without providing the written notice required under s7 (Notice and Choice Principle), rendering consent invalid and processing unlawful under s6 (General Principle).",
       "category": "Consent Management",
-      "pdpaSection": "s6, s7",
+      "pdpaSection": [
+        "s6",
+        "s7"
+      ],
       "likelihood": 4,
       "impact": 4,
       "inherentRisk": 16,
@@ -25,14 +28,19 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement automated consent management platform with mandatory notice display before data collection. Conduct quarterly audit of all data collection touchpoints. Integrate consent validation checks into IT systems.",
       "owner": "Data Protection Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "Critical",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-002",
       "title": "Unauthorized disclosure of personal data",
       "description": "Personal data is disclosed to unauthorized third parties in violation of the Disclosure Principle (s8), whether through employee error, system misconfiguration, or deliberate action.",
       "category": "Data Security",
-      "pdpaSection": "s8, s9",
+      "pdpaSection": [
+        "s8",
+        "s9"
+      ],
       "likelihood": 3,
       "impact": 5,
       "inherentRisk": 15,
@@ -47,14 +55,19 @@
       "treatment": "mitigate",
       "treatmentPlan": "Enhance DLP rules to cover all personal data categories. Implement data classification and labelling. Deploy user behaviour analytics for anomaly detection. Conduct regular access reviews.",
       "owner": "Chief Information Security Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "High"
     },
     {
       "id": "DR-003",
       "title": "Third-party data processor breach",
       "description": "A data processor engaged to process personal data on behalf of the data user suffers a security breach, resulting in unauthorized access to or loss of personal data. The data user remains liable under PDPA s9.",
       "category": "Third-Party Processing",
-      "pdpaSection": "s9, s143A",
+      "pdpaSection": [
+        "s9",
+        "s143A"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
@@ -66,10 +79,12 @@
       "residualLikelihood": 2,
       "residualImpact": 4,
       "residualRisk": 8,
-      "treatment": "mitigate",
-      "treatmentPlan": "Implement continuous monitoring of processor security posture. Require ISO 27001 certification or equivalent for processors handling sensitive data. Conduct unannounced audits for high-risk processors. Include right-to-audit clauses in all processor agreements.",
+      "treatment": "transfer",
+      "treatmentPlan": "Transfer residual breach risk by requiring all data processors to maintain cyber liability insurance covering PDPA breach scenarios. Engage a managed security service provider (MSSP) with ISO 27001 certification to monitor processor environments. Include contractual indemnification clauses and right-to-audit provisions. Note: under PDPA s9, the data user retains ultimate accountability — transfer reduces financial exposure but not legal responsibility.",
       "owner": "Vendor Management / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-004",
@@ -91,14 +106,21 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement automated detection of cross-border data transfers in IT systems. Complete transfer impact assessments for all existing transfers. Establish binding corporate rules for intra-group transfers. Monitor JPDP adequacy determinations list.",
       "owner": "Data Protection Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-005",
       "title": "Failure to respond to data access requests within 21 days",
       "description": "Data subject access requests under s30 are not processed within the 21-day statutory timeline, constituting a breach of the Access Principle (s12) and potentially leading to complaints to JPDP.",
       "category": "Data Subject Rights",
-      "pdpaSection": "s12, s30, s31, s32",
+      "pdpaSection": [
+        "s12",
+        "s30",
+        "s31",
+        "s32"
+      ],
       "likelihood": 3,
       "impact": 3,
       "inherentRisk": 9,
@@ -113,14 +135,19 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement automated data subject rights management system with SLA tracking and escalation alerts. Create comprehensive data inventory to accelerate data retrieval. Establish escalation procedures for complex requests. Train frontline staff on recognizing and routing access requests.",
       "owner": "Data Protection Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "Medium",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-006",
       "title": "JPDP enforcement action",
       "description": "The Commissioner initiates enforcement proceedings, issues an enforcement notice, or commences prosecution for non-compliance with PDPA provisions, resulting in fines, imprisonment, and reputational damage.",
       "category": "Compliance",
-      "pdpaSection": "s110-s127, s128-s130",
+      "pdpaSection": [
+        "s110-s127",
+        "s128-s130"
+      ],
       "likelihood": 2,
       "impact": 5,
       "inherentRisk": 10,
@@ -136,7 +163,9 @@
       "treatment": "mitigate",
       "treatmentPlan": "Conduct annual external compliance audit by qualified assessor. Maintain evidence portfolio aligned to JPDP inspection criteria. Establish proactive engagement strategy with JPDP. Implement compliance monitoring dashboard with key metrics.",
       "owner": "Chief Compliance Officer / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-007",
@@ -158,14 +187,20 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement automated retention enforcement in database systems with scheduled purge jobs. Extend retention schedules to cover all data categories including unstructured data. Deploy data discovery tools to identify orphaned datasets. Conduct quarterly retention compliance audits.",
       "owner": "Data Governance Lead",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-008",
       "title": "Employee personal data misuse",
       "description": "Employees with authorized access to personal data misuse that access for purposes beyond their job function, such as unauthorized lookups, sharing data with unauthorized parties, or using data for personal gain.",
       "category": "Data Security",
-      "pdpaSection": "s8, s9, s135A",
+      "pdpaSection": [
+        "s8",
+        "s9",
+        "s135A"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
@@ -180,14 +215,20 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement user behaviour analytics to detect anomalous access patterns. Enforce least-privilege access with regular recertification. Deploy break-glass procedures for sensitive data access. Strengthen pre-employment screening and ongoing vetting for roles with access to sensitive data.",
       "owner": "Chief Information Security Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-009",
       "title": "Marketing without consent",
       "description": "Direct marketing communications are sent to data subjects without obtaining valid consent under s6, or without honoring opt-out requests under s43, resulting in complaints and regulatory action.",
       "category": "Consent Management",
-      "pdpaSection": "s6, s7, s43",
+      "pdpaSection": [
+        "s6",
+        "s7",
+        "s43"
+      ],
       "likelihood": 3,
       "impact": 3,
       "inherentRisk": 9,
@@ -202,14 +243,19 @@
       "treatment": "mitigate",
       "treatmentPlan": "Centralize consent management for marketing across all channels. Implement real-time suppression list checking before any marketing dispatch. Conduct monthly audits of marketing consent records. Automate opt-out processing to ensure immediate effect.",
       "owner": "Marketing Director / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "Medium",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-010",
       "title": "Sensitive personal data processing without explicit consent",
       "description": "Sensitive personal data (health, political opinion, religious belief, criminal record, etc. per s4) is processed without obtaining explicit consent from the data subject, as required for sensitive data categories.",
       "category": "Consent Management",
-      "pdpaSection": "s6, s40",
+      "pdpaSection": [
+        "s6",
+        "s40"
+      ],
       "likelihood": 3,
       "impact": 5,
       "inherentRisk": 15,
@@ -224,7 +270,9 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement technical controls to flag and block sensitive data processing without verified explicit consent. Conduct DPIA for all sensitive data processing activities. Establish enhanced access controls for sensitive data repositories. Create automated alerts when sensitive data categories are detected in new processing flows.",
       "owner": "Data Protection Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "High"
     },
     {
       "id": "DR-011",
@@ -246,14 +294,20 @@
       "treatment": "mitigate",
       "treatmentPlan": "Conduct tabletop breach simulation exercises quarterly. Pre-populate Commissioner notification templates. Establish automated breach detection and escalation workflow. Create pre-approved data subject notification templates for common breach scenarios. Ensure 24/7 DPO on-call availability.",
       "owner": "Chief Information Security Officer / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "High"
     },
     {
       "id": "DR-012",
       "title": "Shadow data repositories",
       "description": "Personal data is stored in unmanaged locations (shared drives, personal devices, shadow IT, spreadsheets) outside the organization's data governance framework, creating uncontrolled processing that bypasses all PDPA controls.",
       "category": "Data Security",
-      "pdpaSection": "s9, s10, s138",
+      "pdpaSection": [
+        "s9",
+        "s10",
+        "s138"
+      ],
       "likelihood": 4,
       "impact": 3,
       "inherentRisk": 12,
@@ -268,7 +322,9 @@
       "treatment": "mitigate",
       "treatmentPlan": "Deploy enterprise data discovery and classification tools to scan endpoints and cloud services. Implement cloud access security broker (CASB) to detect shadow IT usage. Block unauthorized file-sharing services at the network level. Integrate data discovery findings into the ROPA under s138.",
       "owner": "Chief Information Security Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-013",
@@ -290,14 +346,19 @@
       "treatment": "mitigate",
       "treatmentPlan": "Conduct comprehensive data discovery across all systems, applications, and business processes. Implement automated data inventory tool with ongoing discovery. Mandate ROPA updates as part of change management process for new systems or processing activities. Validate ROPA accuracy through quarterly business unit reviews.",
       "owner": "Data Governance Lead / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-014",
       "title": "Vendor non-compliance with PDPA",
       "description": "Third-party vendors and service providers who process personal data fail to comply with PDPA requirements despite contractual obligations, exposing the data user to liability for the vendor's non-compliance.",
       "category": "Third-Party Processing",
-      "pdpaSection": "s9, s129A",
+      "pdpaSection": [
+        "s9",
+        "s129A"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
@@ -312,14 +373,19 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement tiered vendor risk assessment framework based on data sensitivity and volume. Conduct on-site audits for critical vendors. Establish vendor compliance monitoring programme with quarterly scorecards. Include PDPA compliance KPIs in vendor performance reviews. Maintain approved vendor list with compliance status tracking.",
       "owner": "Vendor Management / Procurement",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-015",
       "title": "Children's data collection without guardian consent",
       "description": "Personal data of children (individuals under 18 in Malaysia) is collected or processed without obtaining valid consent from a parent or legal guardian, particularly in digital services, education platforms, or healthcare settings.",
       "category": "Consent Management",
-      "pdpaSection": "s6, s7",
+      "pdpaSection": [
+        "s6",
+        "s7"
+      ],
       "likelihood": 3,
       "impact": 5,
       "inherentRisk": 15,
@@ -334,14 +400,20 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement robust age verification mechanisms across all data collection channels. Design guardian consent workflows with identity verification. Conduct DPIA for all processing activities involving children's data. Limit data collection for children to strict necessity. Apply enhanced security measures to children's data repositories.",
       "owner": "Data Protection Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "High"
     },
     {
       "id": "DR-016",
       "title": "Biometric data mishandling",
       "description": "Biometric data (fingerprints, facial recognition, iris scans) is collected, processed, or stored without adequate safeguards, proper consent, or DPIA, given its sensitive and irrevocable nature.",
       "category": "Data Security",
-      "pdpaSection": "s6, s9, s137",
+      "pdpaSection": [
+        "s6",
+        "s9",
+        "s137"
+      ],
       "likelihood": 2,
       "impact": 5,
       "inherentRisk": 10,
@@ -353,10 +425,12 @@
       "residualLikelihood": 1,
       "residualImpact": 5,
       "residualRisk": 5,
-      "treatment": "mitigate",
-      "treatmentPlan": "Complete DPIA for all biometric data processing activities. Implement biometric template protection (one-way hashing). Minimize biometric data retention to operational necessity. Conduct annual security testing of biometric systems. Provide clear notice and obtain explicit consent for biometric data collection.",
+      "treatment": "avoid",
+      "treatmentPlan": "Eliminate biometric data collection by replacing biometric access controls (fingerprint, facial recognition) with alternative authentication methods such as smart cards, PINs, or hardware security keys. This removes the inherent risk of processing irrevocable biometric identifiers entirely. Where biometric processing is operationally unavoidable, conduct a DPIA under s137 before proceeding.",
       "owner": "Chief Information Security Officer / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-017",
@@ -378,7 +452,9 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement formal complaint management system with SLA tracking and escalation procedures. Create complaint response templates for common scenarios. Establish root cause analysis process for recurring complaint types. Conduct trend analysis of complaints to identify systemic issues. Set up proactive complainant communication workflow.",
       "owner": "Data Protection Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-018",
@@ -401,7 +477,9 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement the full PDPA Security controls from the Controls Library including encryption, access control, SIEM, DLP, and physical security. Conduct annual penetration testing by independent assessor. Achieve ISO 27001 certification for personal data processing environments. Implement security awareness programme with phishing simulations.",
       "owner": "Chief Information Security Officer",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "High"
     },
     {
       "id": "DR-019",
@@ -420,17 +498,23 @@
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
-      "treatment": "mitigate",
-      "treatmentPlan": "Build automated data portability export APIs for all major systems. Define standard portable data formats for each data category. Test portability workflows end-to-end with realistic data volumes. Create interoperability testing arrangements with common data recipients. Integrate portability requests into the data subject rights management system.",
+      "treatment": "accept",
+      "treatmentPlan": "Accept the residual risk of occasional portability request delays given that s41 is newly introduced, request volumes are currently low, and existing data export capabilities (CSV, JSON) satisfy the basic requirement. The documented process is in place and SLA tracking is active. This acceptance is time-bound to the next review cycle, at which point volumes and compliance posture will be reassessed. Further investment in automated portability APIs will be triggered if request volumes exceed 10 per quarter.",
       "owner": "Chief Technology Officer / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "Medium",
+      "residualRiskLevel": "Medium"
     },
     {
       "id": "DR-020",
       "title": "Joint data user agreement gaps",
       "description": "Where multiple data users jointly determine the purposes and means of processing personal data, the responsibilities of each party are not clearly defined in a joint data user agreement, leading to compliance gaps and unclear accountability.",
       "category": "Compliance",
-      "pdpaSection": "s6, s8, s9",
+      "pdpaSection": [
+        "s6",
+        "s8",
+        "s9"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
@@ -445,7 +529,9 @@
       "treatment": "mitigate",
       "treatmentPlan": "Implement mandatory joint data user assessment for all new joint processing arrangements. Update all existing joint arrangements to include clear PDPA responsibility allocation. Define transparent information provision to data subjects about joint processing. Establish joint incident response procedures. Conduct annual compliance reviews of all joint processing arrangements.",
       "owner": "Legal Counsel / DPO",
-      "reviewDate": "2025-07-01"
+      "reviewDate": "2025-07-01",
+      "inherentRiskLevel": "High",
+      "residualRiskLevel": "Medium"
     }
   ]
 }

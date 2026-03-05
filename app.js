@@ -1821,6 +1821,79 @@ async function renderSearch(el, query) {
     }
   }
 
+  // Search controls
+  if (!state.controls) {
+    const [domains, library, provisionMap] = await Promise.all([
+      fetchJSON('controls/domains.json'),
+      fetchJSON('controls/library.json'),
+      fetchJSON('controls/provision-map.json'),
+    ]);
+    state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
+  }
+  if (state.controls && state.controls.library) {
+    for (const [domain, ctrls] of Object.entries(state.controls.library)) {
+      for (const c of ctrls) {
+        const fields = [c.name, c.description, c.slug, domain].join(' ').toLowerCase();
+        if (fields.includes(q)) {
+          results.push({ type: 'control', id: `[Control] ${domain}`, title: c.name, snippet: getSnippet(c.description, q), href: `#control/${c.slug}` });
+        }
+      }
+    }
+  }
+
+  // Search artifacts
+  if (!state.artifacts) {
+    const [inventory, provisionMap] = await Promise.all([
+      fetchJSON('artifacts/inventory.json'),
+      fetchJSON('artifacts/provision-map.json'),
+    ]);
+    state.artifacts = { inventory: inventory || {}, provisionMap: provisionMap || {} };
+  }
+  if (state.artifacts && state.artifacts.inventory) {
+    for (const [cat, items] of Object.entries(state.artifacts.inventory)) {
+      for (const a of items) {
+        const fields = [a.name, a.description, a.slug, cat].join(' ').toLowerCase();
+        if (fields.includes(q)) {
+          results.push({ type: 'artifact', id: `[Artifact] ${cat}`, title: a.name, snippet: getSnippet(a.description, q), href: `#artifacts` });
+        }
+      }
+    }
+  }
+
+  // Search requirements
+  if (!state.requirements) {
+    state.requirements = await fetchJSON('requirements/index.json') || {};
+  }
+  if (state.requirements) {
+    for (const [sectionId, section] of Object.entries(state.requirements)) {
+      for (const perspective of ['legal', 'technical', 'governance']) {
+        const reqs = section[perspective]?.requirements || [];
+        for (const r of reqs) {
+          const fields = [r.id, r.requirement, r.rationale || ''].join(' ').toLowerCase();
+          if (fields.includes(q)) {
+            results.push({ type: 'requirement', id: `[Requirement] ${r.id}`, title: r.requirement.slice(0, 100), snippet: getSnippet(r.requirement, q), href: `#section/${sectionId}` });
+            break; // one match per requirement is enough
+          }
+        }
+      }
+    }
+  }
+
+  // Search evidence
+  if (!state.evidence) {
+    state.evidence = await fetchJSON('evidence/index.json') || {};
+  }
+  if (state.evidence) {
+    for (const [sectionId, section] of Object.entries(state.evidence)) {
+      for (const item of (section.evidenceItems || [])) {
+        const fields = [item.id, item.name, item.description].join(' ').toLowerCase();
+        if (fields.includes(q)) {
+          results.push({ type: 'evidence', id: `[Evidence] ${item.id || sectionId}`, title: item.name, snippet: getSnippet(item.description, q), href: `#section/${sectionId}` });
+        }
+      }
+    }
+  }
+
   // Update search input
   const input = document.getElementById('search-input');
   if (input && input.value !== query) input.value = query;

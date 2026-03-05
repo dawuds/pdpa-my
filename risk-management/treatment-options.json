@@ -35,6 +35,11 @@
           "controls": ["transfer-mechanism-implementation", "transfer-impact-assessment"]
         }
       ],
+      "constraints": [
+        "Requires ongoing investment in controls",
+        "Effectiveness depends on implementation maturity",
+        "May not eliminate risk entirely"
+      ],
       "considerations": [
         "Most PDPA risks should be mitigated — the Act establishes baseline controls that must be implemented",
         "Use the Controls Library to identify specific controls applicable to each risk",
@@ -97,6 +102,11 @@
           "treatment": "Restrict service eligibility to users aged 18 and above, implementing technical controls to prevent children from accessing the service and avoiding the need for guardian consent mechanisms",
           "controls": []
         }
+      ],
+      "constraints": [
+        "May limit business operations or service scope",
+        "Requires viable alternative approaches",
+        "May impact competitive positioning"
       ],
       "considerations": [
         "Avoidance may limit business functionality or market opportunities",

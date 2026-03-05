@@ -338,6 +338,7 @@ body {
 }
 .tab-btn {
   padding: 0.625rem 1rem;
+  min-height: 44px;
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--text-secondary);
@@ -1195,6 +1196,31 @@ body {
   color: #92400E;
   line-height: 1.5;
   margin-bottom: 1.5rem;
+}
+
+/* ===== RISK MANAGEMENT ===== */
+.risk-matrix-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.risk-register-card {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+}
+.risk-register-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ===== PRINT ===== */
+@media print {
+  header { position: static; }
+  .search-container, nav { display: none; }
+  .tab-panel { display: block !important; }
+  .risk-card { break-inside: avoid; }
 }
 
 /* ===== RESPONSIVE ===== */

@@ -16,7 +16,7 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 | 8 | `cross-references/` | Act ↔ regulations, guidelines, codes, GDPR, ISO 27701 | 31 framework mappings |
 | — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 22 instruments |
 
-**74 JSON data files** across all layers.
+**79 JSON data files** across all layers.
 
 > **Disclaimer**: This is an indicative/educational resource. It does not constitute legal advice. Always refer to the official gazette text and seek professional counsel for compliance decisions. See [LEARNINGS.md](LEARNINGS.md) for data quality audit history.
 
