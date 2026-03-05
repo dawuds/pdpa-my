@@ -155,7 +155,7 @@ For any future AI-generated compliance data in this repo:
 - [ ] Use extraction (from documents) not generation (from memory) for legal text
 - [ ] Label AI-generated content explicitly at the field level (`sourceType`, `verificationStatus`)
 - [ ] Track dependency graphs between fields — know what breaks when a base field changes
-- [ ] Run validation script (`validate.py`) after every change
+- [ ] Run validation script after every change (note: `validate.py` was removed — broken symlink to cross-repo tooling; write a repo-local validation script if needed)
 - [ ] Never use blanket merge resolution (`git checkout --ours`) on data files
 - [ ] Check README/app.js counts match actual JSON data array lengths
 - [ ] Test cross-references resolve in both directions

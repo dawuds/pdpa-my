@@ -31,15 +31,15 @@ pdpa-my/
 ├── app.js                              # Explorer application
 ├── style.css                           # Explorer styling
 │
-├── source/                             # Original source documents (by category)
-│   ├── act/
-│   ├── amendment/
-│   ├── regulations/
-│   ├── orders/
-│   ├── guidelines/
-│   ├── standards/
-│   ├── codes-of-practice/
-│   └── consultation-papers/
+├── templates/                          # Compliance document templates (60 files)
+│   ├── contracts/                     # 5 contract templates
+│   ├── notices/                       # 6 data protection notices
+│   ├── policies/                      # 12 policy templates
+│   ├── procedures/                    # 15 procedure templates
+│   ├── records/                       # 8 record-keeping templates
+│   ├── registers/                     # 8 register templates
+│   ├── reports/                       # 6 reporting templates
+│   └── INDEX.md                       # Template index and usage guide
 │
 ├── provisions/                         # LAYER 1: Act sections (151 total)
 │   ├── index.json                      # All sections consolidated
