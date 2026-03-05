@@ -670,6 +670,17 @@ async function renderControlDetail(el, slug) {
     ]);
     state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
   }
+  if (!state.artifacts) {
+    const [inventory, provisionMap] = await Promise.all([
+      fetchJSON('artifacts/inventory.json'),
+      fetchJSON('artifacts/provision-map.json'),
+    ]);
+    state.artifacts = { inventory: inventory || {}, provisionMap: provisionMap || {} };
+  }
+  if (!state.evidence) {
+    state.evidence = await fetchJSON('evidence/index.json') || {};
+  }
+
   let control = null;
   for (const [, ctrls] of Object.entries(state.controls.library)) {
     control = ctrls.find(c => c.slug === slug);
@@ -684,6 +695,126 @@ async function renderControlDetail(el, slug) {
   const hasGuidelines = control.relatedGuidelines && control.relatedGuidelines.length;
   const hasCodes = control.relatedCodes && control.relatedCodes.length;
   const hasSectorVariants = control.sectorVariants && Object.keys(control.sectorVariants).length;
+
+  // --- Audit Package: resolve linked artifacts and evidence ---
+  const sections = control.sections || [];
+  const sectionToArtifacts = (state.artifacts.provisionMap && state.artifacts.provisionMap.sectionToArtifacts) || {};
+  const artifactSlugsSet = new Set();
+  sections.forEach(s => {
+    const slugs = sectionToArtifacts[s] || [];
+    slugs.forEach(sl => artifactSlugsSet.add(sl));
+  });
+  // Look up full artifact objects from inventory (search all categories)
+  const artifactIndex = {};
+  Object.values(state.artifacts.inventory).forEach(arr => {
+    if (Array.isArray(arr)) arr.forEach(a => { artifactIndex[a.slug] = a; });
+  });
+  const linkedArtifacts = [];
+  artifactSlugsSet.forEach(sl => { if (artifactIndex[sl]) linkedArtifacts.push(artifactIndex[sl]); });
+  linkedArtifacts.sort((a, b) => (b.mandatory ? 1 : 0) - (a.mandatory ? 1 : 0));
+
+  // Collect evidence items from linked sections
+  const linkedEvidence = [];
+  sections.forEach(s => {
+    const ev = state.evidence[s];
+    if (ev && ev.evidenceItems) {
+      ev.evidenceItems.forEach(item => {
+        if (!linkedEvidence.find(e => e.id === item.id)) linkedEvidence.push(item);
+      });
+    }
+  });
+
+  const auditPackageHTML = (linkedArtifacts.length || linkedEvidence.length) ? `
+    <div class="audit-package">
+      <div class="audit-package-title">AUDIT PACKAGE</div>
+      <div class="audit-package-summary">${linkedArtifacts.length} artifact${linkedArtifacts.length !== 1 ? 's' : ''} required, ${linkedEvidence.length} evidence item${linkedEvidence.length !== 1 ? 's' : ''}</div>
+
+      ${linkedArtifacts.length ? `
+        <div class="accordion">
+          <div class="accordion-item open">
+            <div class="accordion-header" data-accordion>
+              <span>Required Artifacts (${linkedArtifacts.length})</span>
+              <span class="accordion-arrow">&#9654;</span>
+            </div>
+            <div class="accordion-body">
+              ${linkedArtifacts.map(a => `
+                <div class="artifact-link-card">
+                  <div class="artifact-link-card-header">
+                    <span class="artifact-link-card-name">${esc(a.name)}</span>
+                    ${a.mandatory ? '<span class="badge badge-mandatory">Mandatory</span>' : ''}
+                    <span class="badge badge-category">${esc(a.category)}</span>
+                  </div>
+                  <div class="artifact-link-card-meta">
+                    <span>Owner: ${esc(a.owner || 'N/A')}</span>
+                    <span>Review: ${esc(a.reviewFrequency || 'N/A')}</span>
+                  </div>
+                  ${a.keyContents && a.keyContents.length ? `
+                    <ul class="artifact-link-card-checklist">
+                      ${a.keyContents.map(k => `<li>${esc(k)}</li>`).join('')}
+                    </ul>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
+      ${linkedEvidence.length ? `
+        <div class="accordion">
+          <div class="accordion-item open">
+            <div class="accordion-header" data-accordion>
+              <span>Evidence Checklist (${linkedEvidence.length})</span>
+              <span class="accordion-arrow">&#9654;</span>
+            </div>
+            <div class="accordion-body">
+              ${linkedEvidence.map(item => `
+                <div class="evidence-checklist-item">
+                  <div class="evidence-checklist-item-header">
+                    <span class="evidence-checklist-item-name">${esc(item.name)}</span>
+                    <span class="badge badge-category">${esc(item.format || '')}</span>
+                    ${item.retentionPeriod ? `<span class="badge badge-layer">${esc(item.retentionPeriod)}</span>` : ''}
+                  </div>
+                  <div class="evidence-checklist-item-desc">${esc(item.description)}</div>
+                  ${item.suggestedSources && item.suggestedSources.length ? `
+                    <div class="evidence-checklist-item-sources">
+                      <strong>Suggested Sources:</strong> ${item.suggestedSources.map(s => esc(s)).join('; ')}
+                    </div>
+                  ` : ''}
+                  ${item.whatGoodLooksLike && item.whatGoodLooksLike.length ? `
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <div class="accordion-header" data-accordion>
+                          <span>What Good Looks Like (${item.whatGoodLooksLike.length})</span>
+                          <span class="accordion-arrow">&#9654;</span>
+                        </div>
+                        <div class="accordion-body">
+                          <ul class="evidence-good">${item.whatGoodLooksLike.map(g => `<li><span>${esc(g)}</span></li>`).join('')}</ul>
+                        </div>
+                      </div>
+                    </div>
+                  ` : ''}
+                  ${item.commonGaps && item.commonGaps.length ? `
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <div class="accordion-header" data-accordion>
+                          <span>Common Gaps (${item.commonGaps.length})</span>
+                          <span class="accordion-arrow">&#9654;</span>
+                        </div>
+                        <div class="accordion-body">
+                          <ul class="evidence-gap">${item.commonGaps.map(g => `<li><span>${esc(g)}</span></li>`).join('')}</ul>
+                        </div>
+                      </div>
+                    </div>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      ` : ''}
+    </div>
+  ` : '';
 
   el.innerHTML = `
     <div class="breadcrumbs"><a href="#">Overview</a><span class="sep">/</span><a href="#controls">Controls</a><span class="sep">/</span>${esc(control.name)}</div>
@@ -739,6 +870,7 @@ async function renderControlDetail(el, slug) {
         `).join('')}
       </div>
     ` : ''}
+    ${auditPackageHTML}
   `;
 }
 
