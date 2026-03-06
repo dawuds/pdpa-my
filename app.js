@@ -12,6 +12,7 @@ const state = {
   crossRefs: null,
   supplements: null,
   route: { view: 'overview' },
+  sectorFilter: '',    // active sector filter key (e.g. 'banking', 'healthcare')
 };
 
 const cache = new Map();
@@ -64,6 +65,7 @@ async function init() {
   }
   window.addEventListener('hashchange', render);
   document.addEventListener('click', handleClick);
+  document.addEventListener('change', handleChange);
   document.getElementById('search-input').addEventListener('input', debounce(handleSearch, 300));
   render();
 }
@@ -623,6 +625,34 @@ function renderPenaltyCard(p) {
 }
 
 /* ===== CONTROLS BROWSER ===== */
+
+const SECTOR_LABELS = {
+  banking: 'Banking & Finance',
+  healthcare: 'Healthcare',
+  communications: 'Communications',
+  insurance: 'Insurance',
+  aviation: 'Aviation',
+  electricity: 'Electricity',
+  water: 'Water',
+};
+
+function getSectorKeys() {
+  const sectors = new Set();
+  if (!state.controls || !state.controls.library) return [];
+  for (const ctrls of Object.values(state.controls.library)) {
+    for (const c of ctrls) {
+      if (c.sectorVariants) {
+        for (const s of Object.keys(c.sectorVariants)) sectors.add(s);
+      }
+    }
+  }
+  return [...sectors].sort();
+}
+
+function controlHasSector(control, sector) {
+  return control.sectorVariants && Object.keys(control.sectorVariants).includes(sector);
+}
+
 async function renderControls(el) {
   if (!state.controls) {
     const [domains, library, provisionMap] = await Promise.all([
@@ -634,30 +664,59 @@ async function renderControls(el) {
   }
   const totalControls = Object.values(state.controls.library).reduce((sum, arr) => sum + arr.length, 0);
   const domainEntries = Object.entries(state.controls.domains);
+  const sectors = getSectorKeys();
+  const activeSector = state.sectorFilter || '';
+
+  // Count controls matching active sector
+  let matchCount = totalControls;
+  if (activeSector) {
+    matchCount = 0;
+    for (const ctrls of Object.values(state.controls.library)) {
+      for (const c of ctrls) {
+        if (controlHasSector(c, activeSector)) matchCount++;
+      }
+    }
+  }
 
   el.innerHTML = `
     <div class="page-title">Controls Library</div>
     <div class="page-subtitle">${totalControls} controls across ${domainEntries.length} domains</div>
-    <div class="accordion">
+    <div class="sector-filter-bar">
+      <label class="sector-filter-label" for="sector-select">Sector Filter:</label>
+      <select class="sector-filter-select" id="sector-select">
+        <option value="">All Sectors</option>
+        ${sectors.map(s => `<option value="${esc(s)}" ${activeSector === s ? 'selected' : ''}>${esc(SECTOR_LABELS[s] || s)}</option>`).join('')}
+      </select>
+      ${activeSector ? `<button class="sector-filter-clear" id="sector-clear">Clear</button>` : ''}
+    </div>
+    ${activeSector ? `<div class="sector-filter-indicator">Showing <strong>${matchCount}</strong> of <strong>${totalControls}</strong> controls with <strong>${esc(SECTOR_LABELS[activeSector] || activeSector)}</strong> sector-specific requirements</div>` : ''}
+    <div class="accordion" id="controls-accordion">
       ${domainEntries.map(([key, domain]) => {
         const controls = state.controls.library[key] || [];
+        const filteredControls = activeSector ? controls.filter(c => controlHasSector(c, activeSector)) : controls;
+        if (activeSector && !filteredControls.length) return '';
         return `
-          <div class="accordion-item">
+          <div class="accordion-item${activeSector ? ' open' : ''}">
             <div class="accordion-header" data-accordion>
-              <span>${esc(domain.name)} (${controls.length})</span>
+              <span>${esc(domain.name)} (${filteredControls.length}${activeSector ? '/' + controls.length : ''})</span>
               <span class="accordion-arrow">&#9654;</span>
             </div>
             <div class="accordion-body">
               <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(domain.description)}</p>
-              ${controls.map(c => `
-                <a href="#control/${c.slug}" class="section-link">
-                  <span class="section-link-title">${esc(c.name)}</span>
-                  <span class="section-link-badges">
-                    <span class="badge badge-type">${esc(c.type)}</span>
-                    <span class="badge badge-layer">${esc(c.layer || '')}</span>
-                  </span>
-                </a>
-              `).join('')}
+              ${filteredControls.map(c => {
+                const variant = activeSector && c.sectorVariants ? c.sectorVariants[activeSector] : null;
+                return `
+                  <a href="#control/${c.slug}" class="section-link">
+                    <span class="section-link-title">${esc(c.name)}</span>
+                    <span class="section-link-badges">
+                      <span class="badge badge-type">${esc(c.type)}</span>
+                      <span class="badge badge-layer">${esc(c.layer || '')}</span>
+                      ${variant ? '<span class="badge badge-sector-active">Sector</span>' : ''}
+                    </span>
+                  </a>
+                  ${variant ? `<div class="sector-variant-inline"><span class="sector-variant-inline-label">${esc(SECTOR_LABELS[activeSector] || activeSector)}:</span> ${esc(variant.additionalRequirements || '')}</div>` : ''}
+                `;
+              }).join('')}
             </div>
           </div>
         `;
@@ -2368,6 +2427,15 @@ function renderNotFound(el) {
 
 /* ===== EVENT HANDLERS ===== */
 function handleClick(e) {
+  // Sector filter clear button
+  if (e.target.id === 'sector-clear') {
+    state.sectorFilter = '';
+    const select = document.getElementById('sector-select');
+    if (select) select.value = '';
+    render();
+    return;
+  }
+
   // Accordion toggle
   const accHeader = e.target.closest('[data-accordion]');
   if (accHeader) {
@@ -2428,6 +2496,15 @@ function handleClick(e) {
         item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
       });
     }
+    return;
+  }
+}
+
+function handleChange(e) {
+  // Sector filter select
+  if (e.target.id === 'sector-select') {
+    state.sectorFilter = e.target.value;
+    render();
     return;
   }
 }

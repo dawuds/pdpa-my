@@ -21,5 +21,5 @@
 
 - [ ] Export functionality (PDF/CSV export of provisions, requirements, evidence, etc.)
 - [ ] ARIA accessibility improvements (screen reader labels, keyboard navigation, focus management)
-- [ ] Sector filter mode (filter requirements/controls by data user class or sector code)
+- [x] Sector filter mode (filter requirements/controls by data user class or sector code)
 - [ ] Compliance readiness dashboard (visual summary of coverage across all layers)
