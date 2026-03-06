@@ -27,6 +27,7 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 pdpa-my/
 │
 ├── README.md
+├── LICENSE                             # CC-BY-4.0
 ├── LEARNINGS.md                       # Data quality audit findings and lessons
 ├── index.html                          # SPA entry point
 ├── app.js                              # Explorer application
@@ -545,6 +546,8 @@ The web explorer labels AI-generated fields with an **AI Generated** indicator. 
 - **Codes of Practice** — Registered under s23 of Act 709
 
 ## License
+
+CC-BY-4.0 — see [LICENSE](LICENSE).
 
 This database is a structured representation of publicly available Malaysian legislation and regulatory guidance. The original texts are copyright of the Government of Malaysia. This structured compilation is provided for informational and compliance purposes.
 
