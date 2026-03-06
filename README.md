@@ -439,8 +439,10 @@ Open `index.html` in a browser to interactively explore:
 - **Penalties** — 22 offences with original vs amended penalties, compounding info
 - **Cross-References** — Section → regulations, guidelines, codes, standards; GDPR/ISO 27701/APEC CBPR mappings
 - **Supplements** — Browse 22 subsidiary instruments (regulations, guidelines, standards, codes)
+- **Risk Management** — Risk assessment methodology, 5x5 risk matrix, 20-risk register, assessment checklist, treatment strategies
 - **DPIA** — Data Protection Impact Assessment: 8-phase methodology, interactive screening tool, 4 Malaysian worked examples, structured assessment template
 - **Search** — Full-text search across all layers
+- **Dark mode** — Automatic via `prefers-color-scheme` media query
 
 ## Usage
 
