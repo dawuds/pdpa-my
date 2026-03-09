@@ -885,6 +885,7 @@ async function renderControlDetail(el, slug) {
 
   el.innerHTML = `
     <div class="breadcrumbs"><a href="#">Overview</a><span class="sep">/</span><a href="#controls">Controls</a><span class="sep">/</span>${esc(control.name)}</div>
+    ${renderComplianceToggle(slug)}
     <div style="display:flex;gap:0.375rem;margin-bottom:0.25rem;">
       <span class="badge badge-domain">${esc(domain.name || control.domain)}</span>
       <span class="badge badge-type">${esc(control.type)}</span>
@@ -2596,4 +2597,49 @@ function exportToCSV() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+}
+
+// === Compliance Gap Tracker Logic ===
+
+function getComplianceStatus(slug) {
+  const data = JSON.parse(localStorage.getItem('pdpa_compliance_status') || '{}');
+  return data[slug] || 'pending';
+}
+
+function setComplianceStatus(slug, status) {
+  const data = JSON.parse(localStorage.getItem('pdpa_compliance_status') || '{}');
+  data[slug] = status;
+  localStorage.setItem('pdpa_compliance_status', JSON.stringify(data));
+  router(); // Refresh UI
+}
+
+function renderComplianceToggle(slug) {
+  const status = getComplianceStatus(slug);
+  const options = [
+    { id: 'pending', label: 'Pending', color: '#64748b' },
+    { id: 'compliant', label: 'Compliant', color: '#22c55e' },
+    { id: 'gap', label: 'Gap (Non-Compliant)', color: '#ef4444' },
+    { id: 'na', label: 'Not Applicable', color: '#94a3b8' }
+  ];
+
+  const current = options.find(o => o.id === status);
+
+  return `
+    <div class="compliance-tracker-box" style="background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap">
+      <div>
+        <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--text-dim); margin-bottom:0.35rem">Compliance Status</div>
+        <div style="font-size:1.1rem; font-weight:700; color:${current.color}">
+          ${current.label}
+        </div>
+      </div>
+      <div style="margin-left:auto; display:flex; gap:0.5rem; flex-wrap:wrap">
+        ${options.map(o => `
+          <button 
+            onclick="setComplianceStatus('${slug}', '${o.id}')"
+            style="cursor:pointer; border:1px solid ${status === o.id ? o.color : 'var(--border)'}; background:${status === o.id ? o.color + '15' : 'var(--bg-card)'}; color:${status === o.id ? o.color : 'var(--text-secondary)'}; padding:0.4rem 0.75rem; border-radius:6px; font-size:0.75rem; font-weight:600; transition:all 0.2s"
+          >${o.label}</button>
+        `).join('')}
+      </div>
+    </div>
+  `;
 }
