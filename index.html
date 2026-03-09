@@ -38,7 +38,12 @@
       <a href="#cross-references" class="nav-link" data-view="cross-references">Cross-Refs</a>
       <a href="#risk-management" class="nav-link" data-view="risk-management">Risk Mgmt</a>
       <a href="#dpia" class="nav-link" data-view="dpia">DPIA</a>
-    </div>
+    
+      <div class="nav-actions" style="display: flex; gap: 0.5rem; margin-left: auto;">
+        <button onclick="exportToPDF()" class="btn-export">PDF</button>
+        <button onclick="exportToCSV()" class="btn-export">CSV</button>
+      </div>
+</div>
   </nav>
   <div id="app">
     <div class="loading">
