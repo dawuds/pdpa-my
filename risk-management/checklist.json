@@ -33,8 +33,8 @@
       "id": "RAC-03",
       "area": "Third-Party Processing",
       "checkItem": "Assess third-party processor agreements",
-      "description": "Review all data processing agreements with third-party processors to ensure they include adequate PDPA-compliant security measures (s9), breach notification obligations (s143A), sub-processor restrictions, and audit rights.",
-      "pdpaSection": "s9, s143A",
+      "description": "Review all data processing agreements with third-party processors to ensure they include adequate PDPA-compliant security measures (s9), breach notification obligations (s12B), sub-processor restrictions, and audit rights.",
+      "pdpaSection": "s9, s12B",
       "priority": "High",
       "evidenceRequired": [
         "Data processing agreements",
@@ -46,8 +46,8 @@
       "id": "RAC-04",
       "area": "Cross-Border Transfer",
       "checkItem": "Check cross-border transfer safeguards",
-      "description": "Verify that all personal data transfers outside Malaysia have a lawful transfer mechanism under s129A (adequacy decision, standard contractual clauses, binding corporate rules, consent, or certification). Confirm transfer impact assessments have been completed.",
-      "pdpaSection": "s129A",
+      "description": "Verify that all personal data transfers outside Malaysia have a lawful transfer mechanism under s129 (adequacy decision, standard contractual clauses, binding corporate rules, consent, or certification). Confirm transfer impact assessments have been completed.",
+      "pdpaSection": "s129",
       "priority": "High",
       "evidenceRequired": [
         "Cross-border transfer register",
@@ -86,8 +86,8 @@
       "id": "RAC-07",
       "area": "Breach Response",
       "checkItem": "Test breach notification readiness",
-      "description": "Verify that the incident response plan includes procedures for meeting the 72-hour Commissioner notification requirement under s143A, data subject notification processes, and that breach response teams are trained and available.",
-      "pdpaSection": "s143A",
+      "description": "Verify that the incident response plan includes procedures for meeting the 72-hour Commissioner notification requirement under s12B, data subject notification processes, and that breach response teams are trained and available.",
+      "pdpaSection": "s12B",
       "priority": "Critical",
       "evidenceRequired": [
         "Incident response plan with breach notification procedures",
@@ -155,8 +155,8 @@
       "id": "RAC-12",
       "area": "DPO",
       "checkItem": "Confirm DPO appointment and effectiveness",
-      "description": "Verify that a Data Protection Officer has been appointed as required under s129B (for prescribed classes of data users), that the DPO has adequate resources and authority, and that the DPO's responsibilities are clearly defined.",
-      "pdpaSection": "s129B",
+      "description": "Verify that a Data Protection Officer has been appointed as required under s12A (for prescribed classes of data controllers), that the DPO has adequate resources and authority, and that the DPO's responsibilities are clearly defined.",
+      "pdpaSection": "s12A",
       "priority": "High",
       "evidenceRequired": [
         "DPO appointment letter",
@@ -194,8 +194,8 @@
     {
       "id": "RAC-15",
       "area": "Registration",
-      "checkItem": "Verify data user registration with JPDP",
-      "description": "Confirm that the organization has registered with JPDP as required for its class of data users under s14-s16 and the Personal Data Protection (Class of Data Users) Order 2013, and that registration details are current.",
+      "checkItem": "Verify data controller registration with JPDP",
+      "description": "Confirm that the organization has registered with JPDP as required for its class of data controllers under s14-s16 and the Personal Data Protection (Class of Data Controllers) Order 2013, and that registration details are current.",
       "pdpaSection": "s14, s15, s16",
       "priority": "High",
       "evidenceRequired": [
@@ -236,7 +236,7 @@
       "id": "RAC-18",
       "area": "Sector Compliance",
       "checkItem": "Review sector-specific code of practice compliance",
-      "description": "If the organization falls under a registered class of data users, verify compliance with the applicable sector-specific code of practice (banking, healthcare, communications, insurance, aviation, utilities) in addition to the General Code of Practice 2022.",
+      "description": "If the organization falls under a registered class of data controllers, verify compliance with the applicable sector-specific code of practice (banking, healthcare, communications, insurance, aviation, utilities) in addition to the General Code of Practice 2022.",
       "pdpaSection": "s23-s26",
       "priority": "Medium",
       "evidenceRequired": [

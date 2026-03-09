@@ -2,7 +2,7 @@
   "sourceType": "constructed-indicative",
   "title": "Data Protection Risk Assessment Methodology",
   "description": "A structured methodology for identifying, assessing, and managing data protection risks aligned to the Malaysia Personal Data Protection Act 2010 (Act 709) and the 2024 Amendment Act (A1727). This methodology integrates with the PDPA compliance framework to ensure risk-based prioritization of data protection controls.",
-  "scope": "All personal data processing activities subject to PDPA 2010, including collection, storage, use, disclosure, cross-border transfer, and disposal of personal data by data users and data processors.",
+  "scope": "All personal data processing activities subject to PDPA 2010, including collection, storage, use, disclosure, cross-border transfer, and disposal of personal data by data controllers and data processors.",
   "alignment": [
     "PDPA 2010 (Act 709) — all 7 Principles",
     "PDPA (Amendment) Act 2024 (A1727) — DPIA requirement (s137)",
@@ -31,7 +31,7 @@
         "activities": [
           "Review each processing activity against the 7 PDPA Principles for compliance gaps",
           "Identify threats: unauthorized access, disclosure, loss, destruction, alteration of personal data",
-          "Assess cross-border transfer risks under s129A mechanisms",
+          "Assess cross-border transfer risks under s129 mechanisms",
           "Review third-party processor arrangements for contractual and operational risks",
           "Identify data subject rights fulfilment risks (access, correction, withdrawal, erasure, portability)",
           "Consider sector-specific risks from applicable codes of practice",
@@ -199,9 +199,9 @@
     "notes": [
       "DPIA is mandatory under s137 for prescribed high-risk processing — this is not risk-acceptable",
       "DPIA results should be recorded in the risk register with cross-references to the DPIA report",
-      "The Commissioner may require a data user to carry out a DPIA even where not otherwise mandatory",
+      "The Commissioner may require a data controller to carry out a DPIA even where not otherwise mandatory",
       "DPIA should be completed before the processing begins, not retrospectively",
-      "Where a DPIA indicates high residual risk, the data user must consult the Commissioner under s137"
+      "Where a DPIA indicates high residual risk, the data controller must consult the Commissioner under s137"
     ]
   },
   "reviewSchedule": {

@@ -48,8 +48,8 @@ This procedure establishes the structured response framework for [Organization N
 
 This procedure operates under the authority of:
 
-- **Section 110 PDPA** — Power of the Commissioner to issue enforcement notices requiring a data user to take specified remedial action within a prescribed period.
-- **Section 111 PDPA** — Requirements as to enforcement notices, including the mandatory contents of a valid notice and the rights of the data user receiving such a notice.
+- **Section 110 PDPA** — Power of the Commissioner to issue enforcement notices requiring a data controller to take specified remedial action within a prescribed period.
+- **Section 111 PDPA** — Requirements as to enforcement notices, including the mandatory contents of a valid notice and the rights of the data controller receiving such a notice.
 - **Section 133 PDPA** — Offences and penalties applicable to non-compliance with an enforcement notice, including the risk of criminal liability for officers of a body corporate.
 
 Failure to respond appropriately to an Enforcement Notice may constitute a criminal offence under s133 PDPA and may result in significant reputational, regulatory, and financial consequences for [Organization Name].
@@ -84,9 +84,9 @@ This procedure does not apply to:
 | Term | Definition |
 |---|---|
 | **Commissioner** | The Personal Data Protection Commissioner appointed under s10 PDPA |
-| **Data User** | [Organization Name] in its capacity as a person who processes personal data for business purposes |
-| **Enforcement Notice** | A notice issued by the Commissioner under s110 PDPA directing a data user to take specified action to comply with the PDPA |
-| **Compliance Period** | The period specified in the Enforcement Notice within which the data user must comply |
+| **Data Controller** | [Organization Name] in its capacity as a person who processes personal data for business purposes |
+| **Enforcement Notice** | A notice issued by the Commissioner under s110 PDPA directing a data controller to take specified action to comply with the PDPA |
+| **Compliance Period** | The period specified in the Enforcement Notice within which the data controller must comply |
 | **Appeal Tribunal** | The Appeal Tribunal established under Part X of the PDPA to hear appeals against Commissioner decisions |
 | **DPO** | Data Protection Officer — the designated officer responsible for PDPA compliance at [Organization Name] |
 | **GC / Legal** | General Counsel or Head of Legal / External Legal Counsel |
@@ -195,7 +195,7 @@ Legal counsel shall conduct a formal validity assessment of the Enforcement Noti
 | States the compliance period (i.e., deadline) | Yes / No / Unclear | [Notes] |
 | Includes information about the right to appeal | Yes / No / Unclear | [Notes] |
 | Signed or authenticated by the Commissioner or authorised officer | Yes / No / Unclear | [Notes] |
-| Properly served on the data user | Yes / No / Unclear | [Notes] |
+| Properly served on the data controller | Yes / No / Unclear | [Notes] |
 
 **Validity Assessment Outcome:**
 
@@ -229,9 +229,9 @@ For each requirement specified in the Enforcement Notice, complete the following
 
 ### 6.1 Overview of Appeal Rights
 
-*This section must be completed by legal counsel. Under ss83–100 PDPA, a data user has the right to appeal an Enforcement Notice to the Appeal Tribunal. The decision to appeal must be made carefully, as it does not automatically suspend the obligation to comply with the notice unless a stay is granted.*
+*This section must be completed by legal counsel. Under ss83–100 PDPA, a data controller has the right to appeal an Enforcement Notice to the Appeal Tribunal. The decision to appeal must be made carefully, as it does not automatically suspend the obligation to comply with the notice unless a stay is granted.*
 
-The data user has a statutory right to appeal an Enforcement Notice to the **Personal Data Protection Appeal Tribunal** under **Part X of the PDPA**. Legal counsel must advise on:
+The data controller has a statutory right to appeal an Enforcement Notice to the **Personal Data Protection Appeal Tribunal** under **Part X of the PDPA**. Legal counsel must advise on:
 
 1. Whether grounds for appeal exist.
 2. The deadline for filing an appeal (typically within [X] days of the notice — confirm per current PDPA Rules).
@@ -630,11 +630,11 @@ This procedure shall be reviewed **annually** from the last review date, or earl
 *Complete this checklist as part of the legal analysis in Section 5.1. Retain in the Enforcement Notice file.*
 
 - [ ] The notice identifies the specific PDPA provision(s) alleged to have been contravened
-- [ ] The notice specifies the steps the data user must take to comply
+- [ ] The notice specifies the steps the data controller must take to comply
 - [ ] The notice specifies the period within which those steps must be taken
 - [ ] The notice includes information about the right to appeal
 - [ ] The notice is signed or authenticated by the Commissioner or an authorised officer
-- [ ] The notice has been properly served on the registered data user
+- [ ] The notice has been properly served on the registered data controller
 
 **Assessment outcome:** [Valid / Defective — specify] | **Assessed by:** [Name, GC / External Counsel] | **Date:** [DD/MM/YYYY]
 

@@ -62,11 +62,11 @@
     {
       "id": "DR-003",
       "title": "Third-party data processor breach",
-      "description": "A data processor engaged to process personal data on behalf of the data user suffers a security breach, resulting in unauthorized access to or loss of personal data. The data user remains liable under PDPA s9.",
+      "description": "A data processor engaged to process personal data on behalf of the data controller suffers a security breach, resulting in unauthorized access to or loss of personal data. The data controller remains liable under PDPA s9.",
       "category": "Third-Party Processing",
       "pdpaSection": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "likelihood": 3,
       "impact": 4,
@@ -80,7 +80,7 @@
       "residualImpact": 4,
       "residualRisk": 8,
       "treatment": "transfer",
-      "treatmentPlan": "Transfer residual breach risk by requiring all data processors to maintain cyber liability insurance covering PDPA breach scenarios. Engage a managed security service provider (MSSP) with ISO 27001 certification to monitor processor environments. Include contractual indemnification clauses and right-to-audit provisions. Note: under PDPA s9, the data user retains ultimate accountability — transfer reduces financial exposure but not legal responsibility.",
+      "treatmentPlan": "Transfer residual breach risk by requiring all data processors to maintain cyber liability insurance covering PDPA breach scenarios. Engage a managed security service provider (MSSP) with ISO 27001 certification to monitor processor environments. Include contractual indemnification clauses and right-to-audit provisions. Note: under PDPA s9, the data controller retains ultimate accountability — transfer reduces financial exposure but not legal responsibility.",
       "owner": "Vendor Management / DPO",
       "reviewDate": "2025-07-01",
       "inherentRiskLevel": "High",
@@ -89,9 +89,9 @@
     {
       "id": "DR-004",
       "title": "Cross-border transfer without adequate safeguards",
-      "description": "Personal data is transferred to a country outside Malaysia without establishing adequate safeguards as required by s129A, exposing the organization to enforcement action and data subjects to reduced protection.",
+      "description": "Personal data is transferred to a country outside Malaysia without establishing adequate safeguards as required by s129, exposing the organization to enforcement action and data subjects to reduced protection.",
       "category": "Cross-Border Transfer",
-      "pdpaSection": "s129A",
+      "pdpaSection": "s129",
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
@@ -277,16 +277,16 @@
     {
       "id": "DR-011",
       "title": "Data breach notification delay",
-      "description": "A personal data breach occurs but is not reported to the Commissioner within the mandatory 72-hour notification window under s143A, and affected data subjects are not notified as soon as practicable.",
+      "description": "A personal data breach occurs but is not reported to the Commissioner within the mandatory 72-hour notification window under s12B, and affected data subjects are not notified as soon as practicable.",
       "category": "Breach Response",
-      "pdpaSection": "s143A",
+      "pdpaSection": "s12B",
       "likelihood": 3,
       "impact": 5,
       "inherentRisk": 15,
       "existingControls": [
         "Incident response plan with breach notification procedures",
         "24/7 security operations monitoring",
-        "Breach assessment template aligned to s143A criteria"
+        "Breach assessment template aligned to s12B criteria"
       ],
       "residualLikelihood": 2,
       "residualImpact": 5,
@@ -353,11 +353,11 @@
     {
       "id": "DR-014",
       "title": "Vendor non-compliance with PDPA",
-      "description": "Third-party vendors and service providers who process personal data fail to comply with PDPA requirements despite contractual obligations, exposing the data user to liability for the vendor's non-compliance.",
+      "description": "Third-party vendors and service providers who process personal data fail to comply with PDPA requirements despite contractual obligations, exposing the data controller to liability for the vendor's non-compliance.",
       "category": "Third-Party Processing",
       "pdpaSection": [
         "s9",
-        "s129A"
+        "s129"
       ],
       "likelihood": 3,
       "impact": 4,
@@ -507,8 +507,8 @@
     },
     {
       "id": "DR-020",
-      "title": "Joint data user agreement gaps",
-      "description": "Where multiple data users jointly determine the purposes and means of processing personal data, the responsibilities of each party are not clearly defined in a joint data user agreement, leading to compliance gaps and unclear accountability.",
+      "title": "Joint data controller agreement gaps",
+      "description": "Where multiple data controllers jointly determine the purposes and means of processing personal data, the responsibilities of each party are not clearly defined in a joint data controller agreement, leading to compliance gaps and unclear accountability.",
       "category": "Compliance",
       "pdpaSection": [
         "s6",
@@ -519,7 +519,7 @@
       "impact": 4,
       "inherentRisk": 12,
       "existingControls": [
-        "Template joint data user agreement reviewed by legal counsel",
+        "Template joint data controller agreement reviewed by legal counsel",
         "Register of joint processing arrangements maintained",
         "Annual review of existing joint arrangements"
       ],
@@ -527,7 +527,7 @@
       "residualImpact": 3,
       "residualRisk": 6,
       "treatment": "mitigate",
-      "treatmentPlan": "Implement mandatory joint data user assessment for all new joint processing arrangements. Update all existing joint arrangements to include clear PDPA responsibility allocation. Define transparent information provision to data subjects about joint processing. Establish joint incident response procedures. Conduct annual compliance reviews of all joint processing arrangements.",
+      "treatmentPlan": "Implement mandatory joint data controller assessment for all new joint processing arrangements. Update all existing joint arrangements to include clear PDPA responsibility allocation. Define transparent information provision to data subjects about joint processing. Establish joint incident response procedures. Conduct annual compliance reviews of all joint processing arrangements.",
       "owner": "Legal Counsel / DPO",
       "reviewDate": "2025-07-01",
       "inherentRiskLevel": "High",

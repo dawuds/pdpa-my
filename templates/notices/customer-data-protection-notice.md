@@ -15,7 +15,7 @@
 
 ## Purpose and Scope
 
-This Customer Data Protection Notice ("Notice") is issued by **[Organization Name]** ("we", "us", "our") in accordance with Section 7 of the **Personal Data Protection Act 2010 (PDPA)**, which requires data users to inform data subjects of the purposes for which their personal data is being processed at or before the time of collection.
+This Customer Data Protection Notice ("Notice") is issued by **[Organization Name]** ("we", "us", "our") in accordance with Section 7 of the **Personal Data Protection Act 2010 (PDPA)**, which requires data controllers to inform data subjects of the purposes for which their personal data is being processed at or before the time of collection.
 
 This Notice applies to all personal data collected from customers and prospective customers of [Organization Name] through any channel, including but not limited to in-branch interactions, digital platforms, telephone, and third-party intermediaries. It describes how we collect, use, disclose, retain, and protect your personal data throughout the course of our relationship with you.
 
@@ -83,18 +83,18 @@ Withdrawal of consent for secondary purposes will not affect the lawfulness of p
 
 ## 4. Disclosure to Service Partners and Third Parties
 
-*Identify all categories of third parties to whom personal data may be disclosed. Specify the basis for disclosure and whether recipients are data processors or independent data users.*
+*Identify all categories of third parties to whom personal data may be disclosed. Specify the basis for disclosure and whether recipients are data processors or independent data controllers.*
 
 We may disclose your personal data to the following categories of third parties:
 
 | Recipient Category | Purpose of Disclosure | Relationship |
 |---|---|---|
-| **Group Companies and Subsidiaries** | Consolidated account management, group reporting, cross-referral of services | Data User |
+| **Group Companies and Subsidiaries** | Consolidated account management, group reporting, cross-referral of services | Data Controller |
 | **Regulators and Government Authorities** | Bank Negara Malaysia (BNM), Securities Commission, LHDN, PDPA Commissioner, law enforcement | Mandatory disclosure |
-| **Credit Reporting Agencies** | Credit assessment and reporting (e.g. CCRIS, CTOS, Experian) | Data Processor / Data User |
+| **Credit Reporting Agencies** | Credit assessment and reporting (e.g. CCRIS, CTOS, Experian) | Data Processor / Data Controller |
 | **IT and Cloud Service Providers** | Hosting, data storage, system maintenance, and support | Data Processor |
 | **Payment and Settlement Networks** | Processing transactions, clearing, and settlement | Data Processor |
-| **Insurance and Takaful Operators** | Where applicable, for bundled product delivery | Data User |
+| **Insurance and Takaful Operators** | Where applicable, for bundled product delivery | Data Controller |
 | **Legal and Professional Advisers** | Legal proceedings, audits, due diligence | Bound by confidentiality |
 | **Debt Collection Agencies** | Recovery of outstanding amounts, where applicable | Data Processor |
 | **[Other categories as applicable]** | [Purpose] | [Relationship] |
@@ -270,8 +270,8 @@ If you are not satisfied with our response, you may escalate your complaint to t
 | Term | Definition |
 |---|---|
 | **Personal Data** | Any information that directly or indirectly identifies a living individual, as defined under the PDPA |
-| **Data User** | A person who processes personal data for their own purposes |
-| **Data Processor** | A person who processes personal data on behalf of a data user |
+| **Data Controller** | A person who processes personal data for their own purposes |
+| **Data Processor** | A person who processes personal data on behalf of a data controller |
 | **Data Subject** | The individual to whom the personal data relates |
 | **Processing** | Collection, recording, holding, use, disclosure, transfer, or erasure of personal data |
 | **Sensitive Personal Data** | Personal data consisting of information about health, political opinions, religious beliefs, or other categories specified under the PDPA |

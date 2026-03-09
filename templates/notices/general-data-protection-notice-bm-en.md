@@ -389,7 +389,7 @@ You also have the right to lodge a complaint with the **Department of Personal D
 | PDPA 2010 — **s43** | Right to prevent processing for direct marketing |
 | PDPA 2010 — **s129** | Prohibition on cross-border transfer except to specified countries or with consent |
 | Personal Data Protection Regulations 2013 | Subsidiary regulations prescribing forms and procedures |
-| Personal Data Protection (Class of Data Users) Order 2013 | Defines registered data user classes including financial institutions |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Defines registered data controller classes including financial institutions |
 | BNM Policy Document — Risk Management in Technology (RMiT) | Relevant provisions on data governance and third-party risk |
 | BNM Policy Document — Customer Due Diligence | KYC and AML data retention obligations |
 

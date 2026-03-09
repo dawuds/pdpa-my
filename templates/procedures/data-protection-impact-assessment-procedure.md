@@ -48,7 +48,7 @@ This procedure establishes the systematic process by which [Organization Name] c
 
 This procedure ensures that [Organization Name]:
 
-- Fulfills its obligations as a data user under the PDPA, particularly in respect of the General Principle (s.5), Notice and Choice Principle (s.6), Security Principle (s.9), and Data Integrity Principle (s.29);
+- Fulfills its obligations as a data controller under the PDPA, particularly in respect of the General Principle (s.5), Notice and Choice Principle (s.6), Security Principle (s.9), and Data Integrity Principle (s.29);
 - Demonstrates accountability and proactive risk governance to the **Personal Data Protection Commissioner** and other relevant regulatory authorities, including **Bank Negara Malaysia (BNM)** where applicable;
 - Protects the rights and interests of data subjects whose personal data is processed by or on behalf of [Organization Name]; and
 - Embeds privacy considerations into project, system, and process design from inception.
@@ -89,11 +89,11 @@ The primary objectives of this procedure are to:
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, including any sensitive personal data and expression of opinion about the individual, as defined under s.4 of the PDPA 2010. |
+| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, including any sensitive personal data and expression of opinion about the individual, as defined under s.4 of the PDPA 2010. |
 | **Sensitive Personal Data** | Personal data consisting of information relating to the physical or mental health or condition of a data subject; political opinions; religious beliefs or other beliefs of a similar nature; the commission or alleged commission of any offence; or any other personal data as the Minister may determine, per s.4 of the PDPA 2010. |
 | **Data Subject** | An individual who is the subject of the personal data. |
-| **Data User** | [Organization Name] and any person who either alone or jointly or in common with other persons processes any personal data or has control over or authorizes the processing of any personal data. |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user and does not process it for any of its own purposes. |
+| **Data Controller** | [Organization Name] and any person who either alone or jointly or in common with other persons processes any personal data or has control over or authorizes the processing of any personal data. |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller and does not process it for any of its own purposes. |
 | **Processing** | Collecting, recording, holding, storing, using, disclosing, publishing, erasure, or destruction of personal data, or carrying out any operation or set of operations on personal data. |
 | **DPIA** | Data Protection Impact Assessment — a systematic process to identify and minimize the privacy risks of processing activities involving personal data. |
 | **High-Risk Processing** | Processing activities that, by their nature, scope, context, or purpose, are likely to result in a high risk to the rights and interests of data subjects. |
@@ -131,10 +131,10 @@ The primary objectives of this procedure are to:
 | Instrument | Provision | Relevance to DPIA |
 |---|---|---|
 | Personal Data Protection Act 2010 | **s.5 — General Principle** | Requires that personal data is processed in accordance with the data subject's rights, and that processing is lawful, fair, and for specified purposes only. DPIAs verify lawful basis and purpose limitation. |
-| Personal Data Protection Act 2010 | **s.6 — Notice and Choice Principle** | Requires data users to notify data subjects of processing purposes, categories of data, and data subject rights. DPIAs assess adequacy of notice mechanisms. |
-| Personal Data Protection Act 2010 | **s.9 — Security Principle** | Requires data users to take practical steps to protect personal data from loss, misuse, modification, unauthorized or accidental access or disclosure, alteration, or destruction. DPIAs identify security controls required. |
+| Personal Data Protection Act 2010 | **s.6 — Notice and Choice Principle** | Requires data controllers to notify data subjects of processing purposes, categories of data, and data subject rights. DPIAs assess adequacy of notice mechanisms. |
+| Personal Data Protection Act 2010 | **s.9 — Security Principle** | Requires data controllers to take practical steps to protect personal data from loss, misuse, modification, unauthorized or accidental access or disclosure, alteration, or destruction. DPIAs identify security controls required. |
 | Personal Data Protection Act 2010 | **s.29 — Data Integrity Principle** | Requires that personal data processed is accurate, complete, not misleading, and up to date. DPIAs assess data quality and integrity controls. |
-| Personal Data Protection (Class of Data Users) Order 2013 | All provisions | Identifies classes of data users (including financial sector) subject to PDPA obligations. |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | All provisions | Identifies classes of data controllers (including financial sector) subject to PDPA obligations. |
 | BNM Risk Governance Framework | Applicable circulars | BNM expectations for risk identification and management applicable to technology and data risks in financial institutions. |
 | ISO/IEC 29134:2017 | Guidelines for Privacy Impact Assessment | International best-practice reference for DPIA methodology adopted by [Organization Name]. |
 
@@ -842,7 +842,7 @@ The DPO is responsible for initiating and coordinating the scheduled review.
 | **PDPA 2010 s.10** | Personal Data Protection Act 2010 — Retention Principle | Retention and disposal of personal data. DPIA assesses retention compliance. |
 | **PDPA 2010 s.12** | Personal Data Protection Act 2010 — Access Principle | Data subject rights to access and correct personal data. DPIA assesses adequacy of rights mechanisms. |
 | **PDPA 2010 s.29** | Personal Data Protection Act 2010 — Data Integrity Principle | Accuracy and completeness of personal data. DPIA assesses data quality controls. |
-| Personal Data Protection (Class of Data Users) Order 2013 | Class of Data Users Order | Identifies [Organization Name] as a regulated data user subject to PDPA obligations. |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Class of Data Controllers Order | Identifies [Organization Name] as a regulated data controller subject to PDPA obligations. |
 | Personal Data Protection Regulations 2013 | Personal Data Protection Regulations | Implementing regulations under the PDPA. |
 | BNM [Applicable Circular/Framework] | [Title of applicable BNM circular or framework] | [Describe relevance — e.g., Technology Risk Management guidelines; operational risk requirements] |
 

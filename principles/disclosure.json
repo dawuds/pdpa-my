@@ -18,7 +18,7 @@
     },
     {
       "id": "disclosure-O3",
-      "obligation": "When disclosing personal data to a data processor or sub-processor, ensure a written data processing agreement is in place that binds the processor to process the data only on the data user's instructions and to comply with equivalent data protection obligations",
+      "obligation": "When disclosing personal data to a data processor or sub-processor, ensure a written data processing agreement is in place that binds the processor to process the data only on the data controller's instructions and to comply with equivalent data protection obligations",
       "basis": "Section 8(1); Section 43 (data processor obligations)",
       "type": "mandatory"
     },
@@ -38,9 +38,9 @@
   "exceptions": [
     {
       "id": "disclosure-X1",
-      "exception": "Disclosure required for compliance with a legal obligation to which the data user is subject",
+      "exception": "Disclosure required for compliance with a legal obligation to which the data controller is subject",
       "basis": "Section 8(2)(a)",
-      "conditions": "The legal obligation must arise from Malaysian law (e.g., a court order, regulatory requirement, or statutory duty to report); voluntary disclosure to law enforcement is not covered; the data user should seek legal advice before disclosing pursuant to informal requests from government agencies"
+      "conditions": "The legal obligation must arise from Malaysian law (e.g., a court order, regulatory requirement, or statutory duty to report); voluntary disclosure to law enforcement is not covered; the data controller should seek legal advice before disclosing pursuant to informal requests from government agencies"
     },
     {
       "id": "disclosure-X2",
@@ -52,13 +52,13 @@
       "id": "disclosure-X3",
       "exception": "Disclosure necessary for the administration of justice or the exercise of statutory functions conferred by written law",
       "basis": "Section 8(2)(c)",
-      "conditions": "Principally applies to court proceedings, law enforcement functions, and regulatory oversight activities; the data user must verify the requesting body has the relevant statutory function before disclosing"
+      "conditions": "Principally applies to court proceedings, law enforcement functions, and regulatory oversight activities; the data controller must verify the requesting body has the relevant statutory function before disclosing"
     },
     {
       "id": "disclosure-X4",
       "exception": "Disclosure to a data subject's agent or representative acting with proper authority",
       "basis": "Section 8(2)(d)",
-      "conditions": "The data user must verify the authority of the representative (e.g., power of attorney, written authorisation); the disclosure should be documented"
+      "conditions": "The data controller must verify the authority of the representative (e.g., power of attorney, written authorisation); the disclosure should be documented"
     },
     {
       "id": "disclosure-X5",

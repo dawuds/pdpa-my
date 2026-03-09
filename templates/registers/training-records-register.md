@@ -451,7 +451,7 @@ This register applies to:
 
 | Term | Definition |
 |---|---|
-| **Data User** | An organization or person who processes personal data in the course of their commercial transactions |
+| **Data Controller** | An organization or person who processes personal data in the course of their commercial transactions |
 | **Data Subject** | An individual who is the subject of personal data |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject and is capable of identifying that individual |
 | **Processing** | Any operation performed on personal data, including collection, recording, holding, storing, use, disclosure, or destruction |

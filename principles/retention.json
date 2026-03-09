@@ -30,7 +30,7 @@
     },
     {
       "id": "retention-O5",
-      "obligation": "Ensure that retention policies apply equally to personal data held by data processors on the data user's behalf; include deletion and return obligations in data processing agreements",
+      "obligation": "Ensure that retention policies apply equally to personal data held by data processors on the data controller's behalf; include deletion and return obligations in data processing agreements",
       "basis": "Section 10(1) read with Section 43",
       "type": "mandatory"
     }
@@ -52,7 +52,7 @@
       "id": "retention-X3",
       "exception": "Anonymised data — data from which the data subject can no longer be directly or indirectly identified — is not subject to the retention limitations as it ceases to constitute 'personal data'",
       "basis": "Section 4 (definition of personal data); Section 10(1)",
-      "conditions": "Anonymisation must be genuinely irreversible; pseudonymisation (replacement of direct identifiers with codes, where re-identification is possible using a key) does not qualify; the data user bears the burden of demonstrating that re-identification is not reasonably possible given available means"
+      "conditions": "Anonymisation must be genuinely irreversible; pseudonymisation (replacement of direct identifiers with codes, where re-identification is possible using a key) does not qualify; the data controller bears the burden of demonstrating that re-identification is not reasonably possible given available means"
     }
   ],
   "practicalGuidance": "Organisations should develop a data retention schedule as part of their broader data governance framework. The schedule should be organised by data category (e.g., customer records, employee records, transaction data, marketing data, CCTV footage) and specify: the retention period, the legal or business basis for that period, the format of the data, the destruction method, and the person responsible for triggering destruction. Where statutory retention obligations exist under sector-specific laws (e.g., seven years for financial records under the Financial Services Act 2013, or under the Income Tax Act 1967), those periods should be reflected in the schedule. Destruction logs should be maintained to provide evidence of compliance. Backup media is a common pitfall — retention policies must explicitly cover backups, archived data, and data held by processors, not just live production systems. The Personal Data Protection Standards 2015 (Retention Standard) require organisations to take into account the purpose, quantity, nature, and sensitivity of the data when determining retention periods.",

@@ -341,7 +341,7 @@ We may disclose your personal data to third parties not listed in this notice wh
 
 ## 9. Cross-Border Transfers
 
-*Disclose any transfer of personal data outside Malaysia, which is subject to restrictions under Section 129 of the PDPA and the Personal Data Protection (Class of Data Users) Order. Identify recipient countries and safeguards in place.*
+*Disclose any transfer of personal data outside Malaysia, which is subject to restrictions under Section 129 of the PDPA and the Personal Data Protection (Class of Data Controllers) Order. Identify recipient countries and safeguards in place.*
 
 ### 9.1 Transfer Restrictions
 

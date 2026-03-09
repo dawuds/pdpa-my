@@ -888,7 +888,7 @@ The Board:
 | Instrument | Issuing Authority | Relevance |
 |---|---|---|
 | Personal Data Protection Regulations 2013 | Minister, MoCST | Processing standards and prescribed forms |
-| Personal Data Protection (Class of Data Users) Order 2013 | Minister, MoCST | Sector applicability of PDPA |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Minister, MoCST | Sector applicability of PDPA |
 | [PDPC Circular / Guidance Number and Title] | Personal Data Protection Commissioner | [Specific guidance area] |
 | [BNM Policy Document — if applicable] | Bank Negara Malaysia | [Relevance to financial institution context] |
 
@@ -967,7 +967,7 @@ The Board:
 | Term | Definition |
 |---|---|
 | **Data Controller** | A person who (either alone or jointly or in common with other persons) processes any personal data or has control over or authorises the processing of any personal data, but does not include a data processor. (PDPA Section 4) |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user, and does not process personal data for any of the data user's own purposes. (PDPA Section 4) |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller, and does not process personal data for any of the data controller's own purposes. (PDPA Section 4) |
 | **Data Protection Officer (DPO)** | A person designated by a data controller under Section 129B of the PDPA to perform specified data protection functions. |
 | **Data Subject** | An individual who is the subject of the personal data. (PDPA Section 4) |
 | **DPIA** | Data Protection Impact Assessment — a systematic process for identifying and mitigating privacy risks of a new or significantly changed processing activity. |

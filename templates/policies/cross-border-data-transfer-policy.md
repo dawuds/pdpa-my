@@ -124,8 +124,8 @@ The following are excluded from the scope of this policy:
 
 | Instrument | Relevance |
 |---|---|
-| Personal Data Protection (Class of Data Users) Order 2013 | Classification of data users in financial sector |
-| Personal Data Protection (Registration of Data Users) Regulations 2013 | Registration obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Classification of data controllers in financial sector |
+| Personal Data Protection (Registration of Data Controllers) Regulations 2013 | Registration obligations |
 | Personal Data Protection Regulations 2013 | General processing standards |
 | Personal Data Protection (Fees) Regulations 2013 | Applicable fees |
 | [BNM Policy Document on Outsourcing] | BNM requirements relevant to overseas service providers |
@@ -151,14 +151,14 @@ The following are excluded from the scope of this policy:
 | **Personal Data** | Any information in respect of commercial transactions that is processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, or is recorded with the intention that it should be processed by means of such equipment, and relates directly or indirectly to a data subject, who is identified or identifiable from that information, as defined under s4 of the PDPA. |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject, their political opinions, religious beliefs or other beliefs of a similar nature, the commission or alleged commission of an offence, or any other personal data as the Minister may determine, pursuant to s40 of the PDPA. |
 | **Cross-Border Transfer** | The transfer, disclosure, or making available of personal data to a recipient located in a place outside Malaysia, regardless of format, medium, or technology used. |
-| **Data User** | [Organization Name], being a person who either alone or jointly or in common with other persons processes any personal data or has control over or authorizes the processing of any personal data. |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user. |
+| **Data Controller** | [Organization Name], being a person who either alone or jointly or in common with other persons processes any personal data or has control over or authorizes the processing of any personal data. |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller. |
 | **Data Subject** | An individual who is the subject of the personal data. |
 | **Adequate Country/Jurisdiction** | A country or territory that, in the determination of the Minister responsible for the PDPA or as assessed by [Organization Name], provides an adequate level of protection for personal data equivalent to or exceeding that provided under the PDPA. |
 | **Standard Contractual Clauses (SCCs)** | Pre-approved contractual provisions that impose obligations equivalent to Malaysian data protection requirements on overseas recipients of personal data. |
 | **Binding Corporate Rules (BCRs)** | Legally binding internal policies adopted by a multinational group to govern intra-group transfers of personal data to countries that may not provide adequate protection. |
 | **Transfer Impact Assessment (TIA)** | A documented assessment evaluating the risks to personal data arising from a cross-border transfer to a particular destination country, having regard to the legal, regulatory, and practical environment in that country. |
-| **Data Processing Agreement (DPA)** | A legally binding contract between [Organization Name] as data user and a third-party data processor governing the terms of personal data processing, including cross-border transfer safeguards. |
+| **Data Processing Agreement (DPA)** | A legally binding contract between [Organization Name] as data controller and a third-party data processor governing the terms of personal data processing, including cross-border transfer safeguards. |
 | **Approved Transfer Mechanism** | Any mechanism listed in Section 7 of this policy that provides an adequate legal basis for a cross-border transfer under s129A of the PDPA. |
 | **Cloud Service Provider (CSP)** | A third-party entity that provides cloud computing services, including infrastructure, platform, or software as a service, involving the processing of personal data on [Organization Name]'s behalf. |
 | **Register of Cross-Border Transfers** | The internal register maintained by the Data Protection Officer recording all approved cross-border transfers of personal data. |
@@ -299,8 +299,8 @@ Standard Contractual Clauses may be used where a destination country does not be
 
 | Transfer Scenario | Template Reference | Approved By | Version |
 |---|---|---|---|
-| Data User to Data Processor (overseas) | [Template Ref 1] | [Approving Authority] | [Version] |
-| Data User to Data User (overseas) | [Template Ref 2] | [Approving Authority] | [Version] |
+| Data Controller to Data Processor (overseas) | [Template Ref 1] | [Approving Authority] | [Version] |
+| Data Controller to Data Controller (overseas) | [Template Ref 2] | [Approving Authority] | [Version] |
 | [Other scenarios as applicable] | | | |
 
 **7.2.3 Minimum SCC Requirements**
@@ -730,7 +730,7 @@ The DPO maintains a Register of Cross-Border Transfers (the "Transfer Register")
 
 *Detail any obligations to register data processing activities, including cross-border transfers, with the Commissioner.*
 
-[Organization Name] must ensure that its registration as a data user with the Personal Data Protection Commissioner is current and reflects all classes of personal data processed, including in the context of cross-border transfers, as required by the Personal Data Protection (Registration of Data Users) Regulations 2013.
+[Organization Name] must ensure that its registration as a data controller with the Personal Data Protection Commissioner is current and reflects all classes of personal data processed, including in the context of cross-border transfers, as required by the Personal Data Protection (Registration of Data Controllers) Regulations 2013.
 
 The DPO is responsible for:
 
@@ -969,8 +969,8 @@ The following legislative provisions, regulations, and guidelines are directly a
 | s5 | Personal Data Protection Act 2010 (Act 709) | General data protection principles applicable to all processing including transfer |
 | s136 | Personal Data Protection Act 2010 (Act 709) | Offences and penalties for unlawful cross-border transfer |
 | Reg 6 | Personal Data Protection Regulations 2013 | Security standard requirements |
-| Personal Data Protection (Class of Data Users) Order 2013 | Subsidiary Legislation | Classification of financial sector data users |
-| Personal Data Protection (Registration of Data Users) Regulations 2013 | Subsidiary Legislation | Registration obligations relevant to Section 12.3 |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Subsidiary Legislation | Classification of financial sector data controllers |
+| Personal Data Protection (Registration of Data Controllers) Regulations 2013 | Subsidiary Legislation | Registration obligations relevant to Section 12.3 |
 | [BNM Policy Document on Outsourcing, ref. [Reference Number]] | Bank Negara Malaysia | BNM outsourcing requirements applicable to overseas processing arrangements |
 | [BNM Risk Management in Technology (RMiT), ref. [Reference Number]] | Bank Negara Malaysia | Technology risk management requirements for cloud and overseas processing |
 | [NACSA Cyber Security Guidelines, ref. [Reference Number]] | National Cyber Security Agency | Cybersecurity requirements applicable to cross-border data flows |

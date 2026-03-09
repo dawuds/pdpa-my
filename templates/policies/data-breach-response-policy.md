@@ -49,7 +49,7 @@
 
 *State the primary objective of this policy. Explain why the organisation has adopted a formal breach response framework and the regulatory obligations it satisfies.*
 
-This Policy establishes [Organisation Name]'s framework for the timely and effective detection, assessment, containment, notification, and remediation of personal data breaches affecting personal data processed by the organisation in its capacity as a **data user** under the **Personal Data Protection Act 2010 (PDPA)**, as amended by the **Personal Data Protection (Amendment) Act 2024 (Act A1727)**.
+This Policy establishes [Organisation Name]'s framework for the timely and effective detection, assessment, containment, notification, and remediation of personal data breaches affecting personal data processed by the organisation in its capacity as a **data controller** under the **Personal Data Protection Act 2010 (PDPA)**, as amended by the **Personal Data Protection (Amendment) Act 2024 (Act A1727)**.
 
 The Policy gives effect to the mandatory personal data breach notification obligation introduced by **section 143A** of the PDPA and supports the organisation's compliance with the **seven data protection principles** prescribed under sections 6 to 12 of the Act, in particular the **Security Principle** (s9).
 
@@ -98,12 +98,12 @@ This Policy applies to:
 
 | PDPA Section | Obligation | Relevance to This Policy |
 |---|---|---|
-| **s4** | Definition of personal data, sensitive personal data, data breach, data user, data processor | Foundational definitions applied throughout this Policy |
-| **s9** | Security Principle — data users must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access, disclosure, alteration, or destruction | Mandates the existence of breach response and containment controls |
+| **s4** | Definition of personal data, sensitive personal data, data breach, data controller, data processor | Foundational definitions applied throughout this Policy |
+| **s9** | Security Principle — data controllers must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access, disclosure, alteration, or destruction | Mandates the existence of breach response and containment controls |
 | **s129** | Transfer of personal data outside Malaysia | Applies policy obligations to cross-border data flows |
 | **s143A** | Mandatory breach notification to the Personal Data Protection Commissioner within **72 hours** of becoming aware of a notifiable breach | Core notification obligation; detailed procedures in Section 8 |
 | **s143A(4)** | Notification to affected data subjects where the breach is likely to result in high risk to their rights and freedoms | Data subject notification requirements; detailed in Section 9 |
-| **s143A(7)** | Maintenance of breach records by the data user | Breach register requirements; detailed in Section 12 |
+| **s143A(7)** | Maintenance of breach records by the data controller | Breach register requirements; detailed in Section 12 |
 | **s133** | Offences and penalties for non-compliance | Risk and consequence framework |
 
 ### 2.2 Supporting Regulatory Instruments
@@ -129,8 +129,8 @@ This Policy applies to:
 | **Personal Data** | Any information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, or recorded with the intention that it should be wholly or partly processed by means of such equipment, or recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system (PDPA, s4). |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject; his political opinions; his religious beliefs or other beliefs of a similar nature; the commission or alleged commission by him of any offence; or any other personal data as the Minister may determine (PDPA, s4). |
 | **Personal Data Breach** | A breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored, or otherwise processed (PDPA, s4, as amended by Act A1727). |
-| **Data User** | A person who either alone or jointly or in common with other persons processes any personal data or has control over or authorises the processing of any personal data — in this Policy, [Organisation Name] (PDPA, s4). |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user (PDPA, s4). |
+| **Data Controller** | A person who either alone or jointly or in common with other persons processes any personal data or has control over or authorises the processing of any personal data — in this Policy, [Organisation Name] (PDPA, s4). |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller (PDPA, s4). |
 | **Commissioner** | The Personal Data Protection Commissioner appointed under section 74 of the PDPA. |
 | **Notifiable Breach** | A personal data breach that meets the threshold for mandatory notification to the Commissioner under s143A of the PDPA. |
 | **High-Risk Breach** | A notifiable breach that is additionally likely to result in high risk to the rights and freedoms of natural persons, triggering the obligation to notify affected data subjects under s143A(4). |
@@ -268,9 +268,9 @@ All confirmed or suspected personal data breaches shall be assessed against the 
    - Yes → Proceed to Question 2.
    - No → Close incident; document rationale.
 
-2. **Does the breach affect personal data for which [Organisation Name] is the data user?**
+2. **Does the breach affect personal data for which [Organisation Name] is the data controller?**
    - Yes → Proceed to Question 3.
-   - No → Notify the relevant data user; assist as data processor per contractual obligations.
+   - No → Notify the relevant data controller; assist as data processor per contractual obligations.
 
 3. **Is the breach likely to result in a risk to the rights and freedoms of data subjects?**
    - Yes → **Notifiable breach** — initiate 72-hour notification process (Section 8).
@@ -449,7 +449,7 @@ Upon receiving an Initial Incident Report, the DPO, supported by the CISO and IT
 
 ### 8.1 Legal Basis
 
-Section **143A** of the Personal Data Protection Act 2010 (as amended by Act A1727) imposes a mandatory obligation on data users to notify the **Personal Data Protection Commissioner** of a personal data breach **without undue delay** and, where feasible, **within 72 hours** of becoming aware of the breach, where the breach is likely to result in a risk to the rights and freedoms of data subjects.
+Section **143A** of the Personal Data Protection Act 2010 (as amended by Act A1727) imposes a mandatory obligation on data controllers to notify the **Personal Data Protection Commissioner** of a personal data breach **without undue delay** and, where feasible, **within 72 hours** of becoming aware of the breach, where the breach is likely to result in a risk to the rights and freedoms of data subjects.
 
 Where notification cannot be made within 72 hours, [Organisation Name] shall provide the notification as soon as practicable thereafter, **accompanied by reasons for the delay**, which shall be documented.
 
@@ -745,7 +745,7 @@ The Post-Incident Review Report (Appendix F) shall include:
 
 ### 12.1 Legal Basis
 
-Section **143A(7)** of the PDPA requires data users to maintain documentation of all personal data breaches, including those that are not notifiable to the Commissioner. The Commissioner may require production of these records at any time.
+Section **143A(7)** of the PDPA requires data controllers to maintain documentation of all personal data breaches, including those that are not notifiable to the Commissioner. The Commissioner may require production of these records at any time.
 
 ### 12.2 Breach Register — Required Fields
 

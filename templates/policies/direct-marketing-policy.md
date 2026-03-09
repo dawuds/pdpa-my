@@ -80,7 +80,7 @@ This Policy applies to all direct marketing activities directed at individuals l
 | Term | Definition |
 |---|---|
 | **Data Subject** | An individual who is the subject of personal data, as defined under s3 PDPA 2010. |
-| **Data User** | [Organization Name] in its capacity as the entity that processes personal data for the purposes of direct marketing. |
+| **Data Controller** | [Organization Name] in its capacity as the entity that processes personal data for the purposes of direct marketing. |
 | **Direct Marketing** | The communication of any advertising or marketing material directed to particular individuals, as contemplated under s40 PDPA 2010. |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject who can be identified from that information, as defined under s4 PDPA 2010. |
 | **Consent** | Any freely given, specific, and informed indication of the data subject's wishes by which they signify agreement to the processing of their personal data for direct marketing purposes, as required under s7 PDPA 2010. |
@@ -570,8 +570,8 @@ This Policy shall be reviewed at least annually, or more frequently if required 
 | Reference | Description |
 |---|---|
 | Personal Data Protection Regulations 2013 | Subsidiary regulations specifying procedural requirements under the PDPA 2010. |
-| Personal Data Protection (Class of Data Users) Order 2013 | Classification of data users subject to PDPA registration obligations. |
-| [PDPC Code of Practice — Financial Sector, if issued] | Sector-specific code of practice issued by the Commissioner applicable to financial data users. |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Classification of data controllers subject to PDPA registration obligations. |
+| [PDPC Code of Practice — Financial Sector, if issued] | Sector-specific code of practice issued by the Commissioner applicable to financial data controllers. |
 | Communications and Multimedia Act 1998 (CMA) | Applicable provisions governing electronic communications and unsolicited commercial communications. |
 | [MCMC General Consumer Code of Practice / DNC provisions] | Communications and Multimedia Commission guidance on Do Not Call obligations. |
 | [BNM Guideline reference, if applicable] | [Relevant BNM guideline title and reference number]. |

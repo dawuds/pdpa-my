@@ -6,7 +6,7 @@
       "id": "general-cop-2022",
       "title": "Personal Data Protection Code of Practice (General) 2022",
       "shortTitle": "General Code 2022",
-      "applicableClasses": "All data users",
+      "applicableClasses": "All data controllers",
       "effectiveDate": "2022-01-01",
       "supplementFilePath": "supplements/codes-of-practice/general-cop-2022.json"
     },
@@ -144,7 +144,7 @@
         {
           "codeId": "general-cop-2022",
           "relevantSections": ["cop-gen-s7"],
-          "notes": "The General Code provides a baseline security framework applicable to all data users, cross-referenced to the Security Standards 2015."
+          "notes": "The General Code provides a baseline security framework applicable to all data controllers, cross-referenced to the Security Standards 2015."
         },
         {
           "codeId": "cop-banking",

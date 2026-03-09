@@ -16,15 +16,15 @@
 
 **This Data Processing Agreement ("Agreement")** is entered into as of **[Effective Date]** between:
 
-**Data User:**
-[Organization Name], a company incorporated in Malaysia with company registration number [Company Registration Number], having its registered address at [Registered Address] ("**Data User**");
+**Data Controller:**
+[Organization Name], a company incorporated in Malaysia with company registration number [Company Registration Number], having its registered address at [Registered Address] ("**Data Controller**");
 
 and
 
 **Data Processor:**
 [Processor Organization Name], a company incorporated in [Country of Incorporation] with registration number [Processor Registration Number], having its registered address at [Processor Registered Address] ("**Data Processor**").
 
-The Data User and the Data Processor are each referred to herein as a "**Party**" and collectively as the "**Parties**."
+The Data Controller and the Data Processor are each referred to herein as a "**Party**" and collectively as the "**Parties**."
 
 ---
 
@@ -56,9 +56,9 @@ The Data User and the Data Processor are each referred to herein as a "**Party**
 
 ### 1.1 Purpose
 
-This Data Processing Agreement ("Agreement") governs the processing of personal data by the Data Processor on behalf of the Data User in connection with the services described in the underlying service agreement or statement of work between the Parties ("**Principal Agreement**"). This Agreement is incorporated into and forms part of the Principal Agreement.
+This Data Processing Agreement ("Agreement") governs the processing of personal data by the Data Processor on behalf of the Data Controller in connection with the services described in the underlying service agreement or statement of work between the Parties ("**Principal Agreement**"). This Agreement is incorporated into and forms part of the Principal Agreement.
 
-This Agreement is established to ensure compliance with the **Personal Data Protection Act 2010 (PDPA)**, specifically **Section 9** (which imposes obligations on data users to protect personal data processed by data processors) and **Section 129A** (which extends direct obligations and liability to data processors), as well as any subsidiary legislation, guidelines, and codes of practice issued by the **Personal Data Protection Commissioner of Malaysia** ("Commissioner").
+This Agreement is established to ensure compliance with the **Personal Data Protection Act 2010 (PDPA)**, specifically **Section 9** (which imposes obligations on data controllers to protect personal data processed by data processors) and **Section 129A** (which extends direct obligations and liability to data processors), as well as any subsidiary legislation, guidelines, and codes of practice issued by the **Personal Data Protection Commissioner of Malaysia** ("Commissioner").
 
 ### 1.2 Scope
 
@@ -66,11 +66,11 @@ This Agreement is established to ensure compliance with the **Personal Data Prot
 
 This Agreement applies to all personal data:
 
-- Processed by the Data Processor on behalf of the Data User as described in **Appendix A** (Description of Processing);
+- Processed by the Data Processor on behalf of the Data Controller as described in **Appendix A** (Description of Processing);
 - Relating to data subjects who are citizens or residents of Malaysia, or whose personal data is processed within Malaysia;
 - Processed in connection with the services specified under the Principal Agreement reference **[Principal Agreement Reference Number]**, dated **[Principal Agreement Date]**.
 
-This Agreement does **not** apply to personal data processed by the Data Processor for its own independent business purposes, which shall be governed by the Data Processor's own data protection obligations as a data user under the PDPA.
+This Agreement does **not** apply to personal data processed by the Data Processor for its own independent business purposes, which shall be governed by the Data Processor's own data protection obligations as a data controller under the PDPA.
 
 ### 1.3 Hierarchy of Documents
 
@@ -86,13 +86,13 @@ For the purposes of this Agreement, the following definitions apply:
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, or from that and other information in the possession of the Data User, including any sensitive personal data and expressions of opinion about the data subject, as defined under the PDPA. |
+| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, or from that and other information in the possession of the Data Controller, including any sensitive personal data and expressions of opinion about the data subject, as defined under the PDPA. |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject; political opinions; religious beliefs or other beliefs of a similar nature; commission or alleged commission of any offence; or any other personal data as the Minister may determine by order. |
 | **Processing** | Any operation or set of operations which is performed on personal data, whether or not by automatic means, including collecting, recording, holding, storing, organizing, adapting, altering, retrieving, consulting, using, disclosing, transferring, or erasing personal data. |
-| **Data User** | [Organization Name], being the person who processes personal data or has personal data processed on their behalf, and who controls the collection, holding, processing, or use of personal data. |
-| **Data Processor** | [Processor Organization Name], being a person who processes personal data solely on behalf of the Data User and does not process personal data for any of its own purposes. |
+| **Data Controller** | [Organization Name], being the person who processes personal data or has personal data processed on their behalf, and who controls the collection, holding, processing, or use of personal data. |
+| **Data Processor** | [Processor Organization Name], being a person who processes personal data solely on behalf of the Data Controller and does not process personal data for any of its own purposes. |
 | **Data Subject** | An individual who is the subject of the personal data. |
-| **Sub-Processor** | Any third party appointed by the Data Processor to process personal data on behalf of the Data User under this Agreement. |
+| **Sub-Processor** | Any third party appointed by the Data Processor to process personal data on behalf of the Data Controller under this Agreement. |
 | **Personal Data Breach** | A breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored, or otherwise processed. |
 | **Commissioner** | The Personal Data Protection Commissioner appointed under the PDPA. |
 | **PDPA** | Personal Data Protection Act 2010 (Act 709) of Malaysia, as amended from time to time. |
@@ -115,45 +115,45 @@ The Data Processor shall process personal data only to the extent necessary to p
 | **Nature of Processing** | [e.g., "Collection, storage, analysis, and transmission of customer personal data"] |
 | **Purpose of Processing** | [e.g., "To provide [Service Name] as specified in the Principal Agreement"] |
 | **Categories of Personal Data** | [e.g., "Name, NRIC/Passport number, contact details, financial data, transaction history"] |
-| **Categories of Data Subjects** | [e.g., "Customers, prospective customers, employees of the Data User"] |
+| **Categories of Data Subjects** | [e.g., "Customers, prospective customers, employees of the Data Controller"] |
 | **Special Categories** | [e.g., "None" or "Sensitive personal data as defined in Appendix A"] |
 
 ### 3.2 Permitted Processing Activities
 
-The Data Processor is authorized to carry out the following processing activities on behalf of the Data User:
+The Data Processor is authorized to carry out the following processing activities on behalf of the Data Controller:
 
 - [Permitted activity 1, e.g., "Hosting and storing personal data on secure servers"]
 - [Permitted activity 2, e.g., "Processing transactions and generating reports"]
 - [Permitted activity 3, e.g., "Providing technical support involving access to personal data where necessary"]
 - [Permitted activity 4 — add or remove as required]
 
-The Data Processor shall not process personal data for any purpose other than those explicitly listed above without the prior written consent of the Data User.
+The Data Processor shall not process personal data for any purpose other than those explicitly listed above without the prior written consent of the Data Controller.
 
 ---
 
 ## 4. Processor's Obligation to Process Only on Written Instructions
 
-*This section establishes the fundamental principle of controller-processor authority under PDPA s9 and s129A — the processor may only act on documented instructions from the data user.*
+*This section establishes the fundamental principle of controller-processor authority under PDPA s9 and s129A — the processor may only act on documented instructions from the data controller.*
 
 ### 4.1 Instruction-Based Processing
 
 The Data Processor shall process personal data only:
 
-- On the documented written instructions of the Data User, as set out in this Agreement, the Principal Agreement, or subsequent written instructions;
-- As required by Applicable Law, in which case the Data Processor shall, to the extent permitted by law, inform the Data User of that legal requirement before processing; and
+- On the documented written instructions of the Data Controller, as set out in this Agreement, the Principal Agreement, or subsequent written instructions;
+- As required by Applicable Law, in which case the Data Processor shall, to the extent permitted by law, inform the Data Controller of that legal requirement before processing; and
 - For no other purpose whatsoever.
 
 ### 4.2 Notification of Unlawful Instructions
 
-If the Data Processor reasonably believes that an instruction from the Data User infringes the PDPA or any other Applicable Law, the Data Processor shall:
+If the Data Processor reasonably believes that an instruction from the Data Controller infringes the PDPA or any other Applicable Law, the Data Processor shall:
 
-1. Immediately notify the Data User in writing, specifying the basis for its concern;
-2. Suspend compliance with the instruction pending the Data User's written confirmation or amendment; and
+1. Immediately notify the Data Controller in writing, specifying the basis for its concern;
+2. Suspend compliance with the instruction pending the Data Controller's written confirmation or amendment; and
 3. Not be required to comply with an instruction it reasonably believes to be unlawful.
 
 ### 4.3 Record of Instructions
 
-The Data Processor shall maintain a written register of all instructions received from the Data User relating to the processing of personal data and shall make this register available to the Data User upon request.
+The Data Processor shall maintain a written register of all instructions received from the Data Controller relating to the processing of personal data and shall make this register available to the Data Controller upon request.
 
 ### 4.4 No Independent Determination
 
@@ -192,7 +192,7 @@ Confidentiality obligations under this Section shall survive termination or expi
 
 ### 5.5 Breach by Personnel
 
-The Data Processor shall be liable for any breach of confidentiality by its personnel as if the breach had been committed by the Data Processor itself, and shall promptly notify the Data User of any known or suspected breach.
+The Data Processor shall be liable for any breach of confidentiality by its personnel as if the breach had been committed by the Data Processor itself, and shall promptly notify the Data Controller of any known or suspected breach.
 
 ---
 
@@ -232,7 +232,7 @@ The Data Processor shall implement, at a minimum, the following security control
 The Data Processor shall:
 
 - Conduct a formal security risk assessment at least **annually**, and upon any material change to its processing environment;
-- Make the results of such assessments available to the Data User upon request; and
+- Make the results of such assessments available to the Data Controller upon request; and
 - Promptly remediate identified risks in accordance with a risk-based remediation plan.
 
 ### 6.4 Security Documentation
@@ -248,76 +248,76 @@ The Data Processor shall maintain and make available upon request:
 
 ## 7. Sub-Processor Authorization and Notification Requirements
 
-*Govern how the processor may engage third parties to assist with processing, ensuring the data user retains visibility and control over the full processing chain, as required under PDPA.*
+*Govern how the processor may engage third parties to assist with processing, ensuring the data controller retains visibility and control over the full processing chain, as required under PDPA.*
 
 ### 7.1 General Authorization
 
-The Data Processor shall not engage any Sub-Processor to process personal data on behalf of the Data User without prior **written authorization** from the Data User.
+The Data Processor shall not engage any Sub-Processor to process personal data on behalf of the Data Controller without prior **written authorization** from the Data Controller.
 
-The Data User hereby grants **specific authorization** for the Sub-Processors listed in **Appendix B** ("Authorized Sub-Processors") as at the date of this Agreement.
+The Data Controller hereby grants **specific authorization** for the Sub-Processors listed in **Appendix B** ("Authorized Sub-Processors") as at the date of this Agreement.
 
 ### 7.2 Notification of New Sub-Processors
 
 Where the Data Processor intends to engage a new Sub-Processor or replace an existing Sub-Processor, it shall:
 
-1. Provide the Data User with **written notice at least [X] days** prior to the commencement of sub-processing, including:
+1. Provide the Data Controller with **written notice at least [X] days** prior to the commencement of sub-processing, including:
    - The name and registered address of the proposed Sub-Processor;
    - The nature and purpose of the proposed sub-processing; and
    - The categories of personal data to be shared with the Sub-Processor.
-2. Allow the Data User a period of **[X] days** from receipt of notice to raise objections.
-3. Not engage the new Sub-Processor if the Data User raises a reasonable objection within the notice period.
+2. Allow the Data Controller a period of **[X] days** from receipt of notice to raise objections.
+3. Not engage the new Sub-Processor if the Data Controller raises a reasonable objection within the notice period.
 
 ### 7.3 Sub-Processor Obligations
 
 Where the Data Processor engages a Sub-Processor, it shall:
 
 - Enter into a written agreement with the Sub-Processor imposing data protection obligations **no less onerous** than those set out in this Agreement;
-- Remain fully liable to the Data User for the Sub-Processor's compliance with such obligations; and
-- Ensure that the Sub-Processor does not engage further sub-processors without the Data Processor's prior written consent and, where required, the Data User's prior written authorization.
+- Remain fully liable to the Data Controller for the Sub-Processor's compliance with such obligations; and
+- Ensure that the Sub-Processor does not engage further sub-processors without the Data Processor's prior written consent and, where required, the Data Controller's prior written authorization.
 
 ### 7.4 Sub-Processor Register
 
-The Data Processor shall maintain an up-to-date register of all Sub-Processors engaged in the processing of personal data under this Agreement and provide a copy to the Data User upon request.
+The Data Processor shall maintain an up-to-date register of all Sub-Processors engaged in the processing of personal data under this Agreement and provide a copy to the Data Controller upon request.
 
 ---
 
 ## 8. Data Subject Rights Assistance Obligations
 
-*The data processor must assist the data user in fulfilling its obligations to respond to data subjects exercising their rights under the PDPA, including rights of access, correction, and withdrawal of consent.*
+*The data processor must assist the data controller in fulfilling its obligations to respond to data subjects exercising their rights under the PDPA, including rights of access, correction, and withdrawal of consent.*
 
 ### 8.1 Obligation to Assist
 
-The Data Processor shall provide all reasonable assistance to the Data User to ensure compliance with the Data User's obligations in respect of requests from data subjects exercising their rights under the PDPA, including but not limited to:
+The Data Processor shall provide all reasonable assistance to the Data Controller to ensure compliance with the Data Controller's obligations in respect of requests from data subjects exercising their rights under the PDPA, including but not limited to:
 
 | Data Subject Right | PDPA Reference | Processor Assistance Required |
 |---|---|---|
 | Right of Access | s12 | Locate and retrieve personal data; provide in readable format within agreed timeframe |
 | Right of Correction | s34 | Correct or supplement inaccurate personal data; record correction history |
 | Right to Withdraw Consent | s38 | Cease processing upon notification; flag data for deletion where required |
-| Right to Limit Processing | [Applicable section] | Restrict processing activities upon instruction from Data User |
-| Right of Complaint | s[X] | Provide information to support Data User's response to complaints |
+| Right to Limit Processing | [Applicable section] | Restrict processing activities upon instruction from Data Controller |
+| Right of Complaint | s[X] | Provide information to support Data Controller's response to complaints |
 
 ### 8.2 Response Timelines
 
-The Data Processor shall respond to a request for assistance from the Data User within **[X] business days** of receipt to enable the Data User to meet its statutory response obligations.
+The Data Processor shall respond to a request for assistance from the Data Controller within **[X] business days** of receipt to enable the Data Controller to meet its statutory response obligations.
 
 ### 8.3 No Direct Response to Data Subjects
 
-Unless expressly authorized in writing by the Data User, the Data Processor shall not respond directly to data subjects exercising their rights and shall redirect any such requests to the Data User without delay.
+Unless expressly authorized in writing by the Data Controller, the Data Processor shall not respond directly to data subjects exercising their rights and shall redirect any such requests to the Data Controller without delay.
 
 ### 8.4 Assistance with Privacy Impact Assessments
 
-Where requested by the Data User, the Data Processor shall provide reasonable assistance with data protection impact assessments or privacy impact assessments, including providing information about its processing activities and security measures.
+Where requested by the Data Controller, the Data Processor shall provide reasonable assistance with data protection impact assessments or privacy impact assessments, including providing information about its processing activities and security measures.
 
 ---
 
 ## 9. Breach Notification Requirements
 
-*Establish clear, time-bound obligations for the processor to report personal data breaches to the data user. The 24-hour notification requirement is a strict organizational requirement and must be clearly documented.*
+*Establish clear, time-bound obligations for the processor to report personal data breaches to the data controller. The 24-hour notification requirement is a strict organizational requirement and must be clearly documented.*
 
 ### 9.1 Notification Obligation
 
-In the event of a Personal Data Breach affecting personal data processed under this Agreement, the Data Processor shall notify the Data User:
+In the event of a Personal Data Breach affecting personal data processed under this Agreement, the Data Processor shall notify the Data Controller:
 
 - **Without undue delay, and in any event within 24 hours** of becoming aware of the Personal Data Breach;
 - Via the designated contact(s) specified in **Appendix C** (Contacts and Escalation); and
@@ -341,19 +341,19 @@ Where complete information is not available within 24 hours, the Data Processor 
 
 Following initial notification, the Data Processor shall:
 
-- Provide regular written updates to the Data User at intervals of no less than **every [X] hours** until the breach is contained;
-- Cooperate fully with the Data User's investigation into the breach;
+- Provide regular written updates to the Data Controller at intervals of no less than **every [X] hours** until the breach is contained;
+- Cooperate fully with the Data Controller's investigation into the breach;
 - Preserve all relevant logs, records, and evidence related to the breach;
-- Not make any public statement or notification to any regulatory authority regarding the breach without the prior written consent of the Data User, except where required by Applicable Law; and
-- Implement containment and remediation measures as agreed with the Data User.
+- Not make any public statement or notification to any regulatory authority regarding the breach without the prior written consent of the Data Controller, except where required by Applicable Law; and
+- Implement containment and remediation measures as agreed with the Data Controller.
 
 ### 9.4 Breach Register
 
-The Data Processor shall maintain a breach register recording all Personal Data Breaches (including those not notified to the Data User where the threshold is not met) and provide access to this register during audits.
+The Data Processor shall maintain a breach register recording all Personal Data Breaches (including those not notified to the Data Controller where the threshold is not met) and provide access to this register during audits.
 
 ### 9.5 Root Cause Analysis
 
-Following the resolution of a Personal Data Breach, the Data Processor shall provide the Data User with a written root cause analysis report within **[X] calendar days**, detailing:
+Following the resolution of a Personal Data Breach, the Data Processor shall provide the Data Controller with a written root cause analysis report within **[X] calendar days**, detailing:
 
 - Root cause(s) of the breach;
 - Remediation actions completed; and
@@ -363,11 +363,11 @@ Following the resolution of a Personal Data Breach, the Data Processor shall pro
 
 ## 10. Audit and Inspection Rights
 
-*Grant the data user the right to verify compliance with this agreement and PDPA obligations through audits, inspections, and third-party assessments.*
+*Grant the data controller the right to verify compliance with this agreement and PDPA obligations through audits, inspections, and third-party assessments.*
 
 ### 10.1 Audit Rights
 
-The Data User (or its authorized representative) shall have the right, upon **[X] days' written notice**, to:
+The Data Controller (or its authorized representative) shall have the right, upon **[X] days' written notice**, to:
 
 - Conduct audits and inspections of the Data Processor's facilities, systems, and records to verify compliance with this Agreement;
 - Request and receive copies of the Data Processor's relevant policies, procedures, records, and audit reports;
@@ -384,22 +384,22 @@ The Data User (or its authorized representative) shall have the right, upon **[X
 The Data Processor shall:
 
 - Provide all reasonable cooperation and access required to conduct audits;
-- Ensure that Sub-Processors are subject to equivalent audit rights in favor of the Data User; and
+- Ensure that Sub-Processors are subject to equivalent audit rights in favor of the Data Controller; and
 - Make available all information necessary to demonstrate compliance with this Agreement.
 
 ### 10.4 Cost of Audits
 
-- Routine annual audits: [Specify cost allocation, e.g., "Costs to be borne by the Data User"]
+- Routine annual audits: [Specify cost allocation, e.g., "Costs to be borne by the Data Controller"]
 - For-cause audits triggered by Data Processor non-compliance: Costs to be borne by the Data Processor.
 
 ### 10.5 Third-Party Certifications
 
-In lieu of or in addition to direct audits, the Data Processor may provide the Data User with:
+In lieu of or in addition to direct audits, the Data Processor may provide the Data Controller with:
 
 - Reports from independent third-party assessments (e.g., ISO 27001 audit reports, SOC 2 Type II reports); and
 - Any certifications relevant to data security and privacy.
 
-The Data User may, at its discretion, accept such reports as partial or full satisfaction of its audit rights for a given period.
+The Data Controller may, at its discretion, accept such reports as partial or full satisfaction of its audit rights for a given period.
 
 ---
 
@@ -409,15 +409,15 @@ The Data User may, at its discretion, accept such reports as partial or full sat
 
 ### 11.1 Obligation upon Termination or Expiry
 
-Upon termination or expiry of this Agreement (or the Principal Agreement), or upon written instruction from the Data User at any time, the Data Processor shall:
+Upon termination or expiry of this Agreement (or the Principal Agreement), or upon written instruction from the Data Controller at any time, the Data Processor shall:
 
 1. **Cease all processing** of personal data with effect from the date of termination or receipt of instruction (except to the extent required by Applicable Law);
-2. **Return or delete** all personal data (including copies, backups, and personal data held by Sub-Processors) as directed by the Data User in accordance with Section 11.2; and
-3. **Provide written confirmation** to the Data User of the return or deletion of personal data within **[X] calendar days** of completion.
+2. **Return or delete** all personal data (including copies, backups, and personal data held by Sub-Processors) as directed by the Data Controller in accordance with Section 11.2; and
+3. **Provide written confirmation** to the Data Controller of the return or deletion of personal data within **[X] calendar days** of completion.
 
 ### 11.2 Return or Deletion Election
 
-The Data User shall, no later than **[X] days** prior to the termination date (or within **[X] days** of an instruction to cease processing), notify the Data Processor in writing of its election to:
+The Data Controller shall, no later than **[X] days** prior to the termination date (or within **[X] days** of an instruction to cease processing), notify the Data Processor in writing of its election to:
 
 | Option | Description | Timeline |
 |---|---|---|
@@ -431,13 +431,13 @@ Where no election is made within the specified period, the Data Processor shall 
 
 The Data Processor may retain personal data beyond the termination date to the extent and for as long as required by Applicable Law, provided that:
 
-- The Data Processor notifies the Data User of such retention obligation prior to or at the time of termination;
+- The Data Processor notifies the Data Controller of such retention obligation prior to or at the time of termination;
 - The retained data is processed solely for the legally required purpose and subject to the security obligations of this Agreement; and
 - The retained data is deleted as soon as the legal retention period expires.
 
 ### 11.4 Certification of Deletion
 
-The Data Processor shall provide the Data User with a signed written certificate confirming:
+The Data Processor shall provide the Data Controller with a signed written certificate confirming:
 
 - The scope of personal data deleted or destroyed;
 - The date of deletion or destruction;
@@ -452,7 +452,7 @@ The Data Processor shall provide the Data User with a signed written certificate
 
 ### 12.1 General Restriction
 
-The Data Processor shall not transfer personal data to any country or territory outside Malaysia without the prior **written authorization** of the Data User and unless one of the following conditions is satisfied:
+The Data Processor shall not transfer personal data to any country or territory outside Malaysia without the prior **written authorization** of the Data Controller and unless one of the following conditions is satisfied:
 
 - The receiving country or territory is specified in a gazette notification by the Minister as providing an adequate level of protection; or
 - Adequate safeguards are in place as described in Section 12.2; or
@@ -474,13 +474,13 @@ Where a transfer to a country not providing adequate protection is authorized, t
 A transfer may proceed without satisfying Section 12.1 only where:
 
 - The data subject has given explicit written consent to the transfer with full knowledge of the risks;
-- The transfer is necessary for the performance of a contract between the data subject and the Data User;
+- The transfer is necessary for the performance of a contract between the data subject and the Data Controller;
 - The transfer is necessary for important public interest grounds; or
 - Such other circumstances as may be specified by the Commissioner.
 
 ### 12.4 Authorized Transfer Locations
 
-The Data User hereby authorizes transfers of personal data to the following jurisdictions under this Agreement, subject to the specified safeguards:
+The Data Controller hereby authorizes transfers of personal data to the following jurisdictions under this Agreement, subject to the specified safeguards:
 
 | Jurisdiction | Safeguard in Place | Authorization Reference |
 |---|---|---|
@@ -491,7 +491,7 @@ The Data User hereby authorizes transfers of personal data to the following juri
 
 ### 12.5 Change in Transfer Locations
 
-The Data Processor shall notify the Data User in writing at least **[X] days** prior to any change in the location(s) from which personal data is processed that would result in a new cross-border transfer, and shall not proceed with such transfer without obtaining updated written authorization.
+The Data Processor shall notify the Data Controller in writing at least **[X] days** prior to any change in the location(s) from which personal data is processed that would result in a new cross-border transfer, and shall not proceed with such transfer without obtaining updated written authorization.
 
 ---
 
@@ -511,7 +511,7 @@ Either Party may terminate this Agreement with immediate effect by written notic
 
 ### 13.3 Termination for Convenience
 
-The Data User may terminate this Agreement upon **[X] days'** written notice to the Data Processor.
+The Data Controller may terminate this Agreement upon **[X] days'** written notice to the Data Processor.
 
 ### 13.4 Effect of Termination
 
@@ -523,10 +523,10 @@ Termination or expiry of this Agreement shall not affect any accrued rights or l
 
 ### 14.1 Data Processor Liability
 
-The Data Processor shall be liable to the Data User for any loss, damage, claim, penalty, fine, cost, or expense (including reasonable legal fees) arising from or in connection with:
+The Data Processor shall be liable to the Data Controller for any loss, damage, claim, penalty, fine, cost, or expense (including reasonable legal fees) arising from or in connection with:
 
 - Any breach of this Agreement by the Data Processor or its Sub-Processors;
-- Any processing of personal data by the Data Processor otherwise than in accordance with this Agreement or the written instructions of the Data User; and
+- Any processing of personal data by the Data Processor otherwise than in accordance with this Agreement or the written instructions of the Data Controller; and
 - Any violation of the PDPA or Applicable Law attributable to the Data Processor's acts or omissions.
 
 ### 14.2 Limitation of Liability
@@ -536,12 +536,12 @@ The Data Processor shall be liable to the Data User for any loss, damage, claim,
 The Parties agree that liability under this Agreement shall be subject to the limitations set out in **Clause [X]** of the Principal Agreement, save that no limitation shall apply to:
 
 - Liability for personal data breaches caused by the Data Processor's gross negligence or willful misconduct;
-- Regulatory fines or penalties imposed directly on the Data User as a result of the Data Processor's breach; or
+- Regulatory fines or penalties imposed directly on the Data Controller as a result of the Data Processor's breach; or
 - Any other liability that cannot be limited by law.
 
 ### 14.3 Indemnification
 
-The Data Processor shall indemnify, defend, and hold harmless the Data User from and against any claim, proceeding, loss, damage, fine, penalty, or expense arising out of the Data Processor's breach of this Agreement or the PDPA.
+The Data Processor shall indemnify, defend, and hold harmless the Data Controller from and against any claim, proceeding, loss, damage, fine, penalty, or expense arising out of the Data Processor's breach of this Agreement or the PDPA.
 
 ---
 
@@ -565,13 +565,13 @@ Any dispute arising out of or in connection with this Agreement, including any q
 
 *This RACI table summarizes who is accountable (A), responsible (R), consulted (C), and informed (I) for the key obligations under this Agreement.*
 
-| Obligation / Activity | Data User (Legal/DPO) | Data User (IT/Security) | Data Processor | Data Processor (Security) | Sub-Processors |
+| Obligation / Activity | Data Controller (Legal/DPO) | Data Controller (IT/Security) | Data Processor | Data Processor (Security) | Sub-Processors |
 |---|---|---|---|---|---|
 | Define processing scope and instructions | A/R | C | I | I | I |
 | Implement security controls | C | A | R | A/R | R |
 | Conduct personnel confidentiality training | I | I | A | R | R |
 | Manage sub-processor relationships | I | I | A/R | C | — |
-| Notify Data User of Personal Data Breach | — | I | A/R | R | R (to Data Processor) |
+| Notify Data Controller of Personal Data Breach | — | I | A/R | R | R (to Data Processor) |
 | Notify Commissioner of Personal Data Breach | A/R | C | I | I | — |
 | Respond to data subject rights requests | A/R | C | C | I | I |
 | Facilitate audits and inspections | A | C | R | R | R |
@@ -599,7 +599,7 @@ This Agreement shall be reviewed:
 - Upon any material change to the nature, scope, or purpose of processing;
 - Upon any change in Applicable Law or regulatory guidance affecting the obligations herein;
 - Following a significant Personal Data Breach; and
-- At least **annually** as part of the Data User's data protection compliance calendar.
+- At least **annually** as part of the Data Controller's data protection compliance calendar.
 
 ### 17.2 Version History
 
@@ -615,9 +615,9 @@ This Agreement shall be reviewed:
 
 | Role | Organization | Name | Signature | Date |
 |---|---|---|---|---|
-| Data Protection Officer | [Organization Name] (Data User) | [Name] | ________________ | [Date] |
-| Head of Legal | [Organization Name] (Data User) | [Name] | ________________ | [Date] |
-| Chief Information Security Officer | [Organization Name] (Data User) | [Name] | ________________ | [Date] |
+| Data Protection Officer | [Organization Name] (Data Controller) | [Name] | ________________ | [Date] |
+| Head of Legal | [Organization Name] (Data Controller) | [Name] | ________________ | [Date] |
+| Chief Information Security Officer | [Organization Name] (Data Controller) | [Name] | ________________ | [Date] |
 | Authorized Signatory | [Processor Organization Name] (Data Processor) | [Name] | ________________ | [Date] |
 | Data Protection Contact | [Processor Organization Name] (Data Processor) | [Name] | ________________ | [Date] |
 
@@ -629,9 +629,9 @@ The following legislation, guidelines, and standards are referenced in or inform
 
 | Reference | Title | Relevance |
 |---|---|---|
-| **PDPA s9** | Personal Data Protection Act 2010, Section 9 — Security Principle | Requires data users to protect personal data processed by data processors; imposes contractual obligation to bind processors |
+| **PDPA s9** | Personal Data Protection Act 2010, Section 9 — Security Principle | Requires data controllers to protect personal data processed by data processors; imposes contractual obligation to bind processors |
 | **PDPA s129A** | Personal Data Protection Act 2010, Section 129A — Liability of Data Processor | Extends direct statutory obligations and liability to data processors; processors may be held directly liable for PDPA breaches |
-| **PDPA s12** | Right of Access to Personal Data | Basis for processor's obligation to assist data user with data subject access requests |
+| **PDPA s12** | Right of Access to Personal Data | Basis for processor's obligation to assist data controller with data subject access requests |
 | **PDPA s34** | Right to Correct Personal Data | Basis for processor's correction assistance obligations |
 | **PDPA s38** | Right to Withdraw Consent | Governs processor's obligations upon withdrawal of consent by data subject |
 | **PDPA Part V** | Transfer of Personal Data to Places Outside Malaysia | Governs cross-border transfer restrictions in Section 12 of this Agreement |
@@ -678,7 +678,7 @@ The following legislation, guidelines, and standards are referenced in or inform
 
 *Designate primary contacts for breach notification, audit requests, data subject rights requests, and general DPA administration. Update this appendix without requiring formal amendment to the Agreement.*
 
-**Data User Contacts:**
+**Data Controller Contacts:**
 
 | Role | Name | Email | Telephone | Escalation Level |
 |---|---|---|---|---|

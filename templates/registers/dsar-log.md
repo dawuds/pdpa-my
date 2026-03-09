@@ -42,7 +42,7 @@
 
 ### 1.1 Purpose
 
-This Data Subject Access Request (DSAR) Log serves as the official register for [Organisation Name] to record, track, and manage all rights requests submitted by data subjects under the **Personal Data Protection Act 2010 (PDPA)**. This log ensures that all requests are handled systematically, within statutory deadlines, and with full audit traceability in accordance with the obligations imposed on data processors and data users under Malaysian law.
+This Data Subject Access Request (DSAR) Log serves as the official register for [Organisation Name] to record, track, and manage all rights requests submitted by data subjects under the **Personal Data Protection Act 2010 (PDPA)**. This log ensures that all requests are handled systematically, within statutory deadlines, and with full audit traceability in accordance with the obligations imposed on data processors and data controllers under Malaysian law.
 
 The log provides the Data Protection Officer (DPO) and relevant stakeholders with a centralised view of the organisation's responsiveness to data subject rights, and constitutes primary evidence of compliance during regulatory audits conducted by the **Personal Data Protection Commissioner (PDPC)**.
 
@@ -71,7 +71,7 @@ This log **does not** apply to:
 
 | PDPA Section | Title | Relevance to This Log |
 |---|---|---|
-| **s.30** | Right of Access to Personal Data | Governs data subject requests to access their personal data held by the data user |
+| **s.30** | Right of Access to Personal Data | Governs data subject requests to access their personal data held by the data controller |
 | **s.34** | Right to Correct Personal Data | Governs requests to correct inaccurate, incomplete, misleading, or not up-to-date personal data |
 | **s.38** | Right to Withdraw Consent | Governs requests by data subjects to withdraw consent previously given for processing |
 | **s.43** | Right to Prevent Processing Likely to Cause Damage or Distress | Governs opt-out requests where processing causes or is likely to cause unwarranted damage or distress |
@@ -80,7 +80,7 @@ This log **does not** apply to:
 **Supplementary References:**
 
 - Personal Data Protection Regulations 2013
-- Personal Data Protection (Class of Data Users) Order 2013
+- Personal Data Protection (Class of Data Controllers) Order 2013
 - Bank Negara Malaysia (BNM) Policy Document on Technology Risk Management (where applicable)
 - [Organisation Name] Data Protection Policy [Document ID Ref]
 - [Organisation Name] Privacy Notice [Document ID Ref]
@@ -467,7 +467,7 @@ This log template and its associated procedures are subject to review:
 
 | Reference | Description |
 |---|---|
-| Personal Data Protection Act 2010 (Act 709), **s.30** | Right of data subjects to access personal data held by a data user |
+| Personal Data Protection Act 2010 (Act 709), **s.30** | Right of data subjects to access personal data held by a data controller |
 | Personal Data Protection Act 2010 (Act 709), **s.32** | Compliance with access requests — conditions and limits on access |
 | Personal Data Protection Act 2010 (Act 709), **s.34** | Right of data subjects to correct personal data |
 | Personal Data Protection Act 2010 (Act 709), **s.38** | Right of data subjects to withdraw consent to processing |
@@ -475,7 +475,7 @@ This log template and its associated procedures are subject to review:
 | Personal Data Protection Act 2010 (Act 709), **s.43** | Right of data subjects to prevent processing likely to cause damage or distress |
 | Personal Data Protection Act 2010 (Act 709), **s.44** | Right of data subjects to prevent processing for direct marketing |
 | Personal Data Protection Regulations 2013 | Subsidiary regulations governing data protection obligations |
-| Personal Data Protection (Class of Data Users) Order 2013 | Classification of regulated data user industries |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Classification of regulated data controller industries |
 
 ### 14.2 Internal Document References
 

@@ -1126,7 +1126,7 @@ async function renderCrossReferences(el) {
       <button class="tab-btn" data-tab="xref-codes">Codes of Practice</button>
       <button class="tab-btn" data-tab="xref-standards">Standards</button>
       <button class="tab-btn" data-tab="xref-frameworks">International Frameworks</button>
-      <button class="tab-btn" data-tab="xref-classes">Data User Classes</button>
+      <button class="tab-btn" data-tab="xref-classes">Data Controller Classes</button>
     </div>
 
     <div class="tab-panel active" id="tab-xref-regulations">
@@ -1197,7 +1197,7 @@ function renderFrameworkMappings(data) {
 }
 
 function renderDataUserClasses(data) {
-  if (!data || !data.classes) return '<div class="empty-state"><div class="empty-state-text">No data user classes available.</div></div>';
+  if (!data || !data.classes) return '<div class="empty-state"><div class="empty-state-text">No data controller classes available.</div></div>';
   return `
     <div class="data-table-wrap" style="overflow-x:auto;">
       <table class="data-table">

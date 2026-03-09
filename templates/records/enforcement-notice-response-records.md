@@ -458,7 +458,7 @@ This record applies to:
 
 | Reference | Description |
 |---|---|
-| **PDPA s110** | Power of the Commissioner to issue an enforcement notice requiring a data user to take specified steps or to refrain from processing personal data |
+| **PDPA s110** | Power of the Commissioner to issue an enforcement notice requiring a data controller to take specified steps or to refrain from processing personal data |
 | **PDPA s111** | Requirements and content of an enforcement notice; right to appeal an enforcement notice to the relevant tribunal or court |
 | **PDPA s133** | Offences, penalties, and criminal liability applicable to any person who fails to comply with an enforcement notice |
 | **Personal Data Protection Regulations 2013** | Subsidiary regulations made under the PDPA 2010 governing data protection standards and procedures |

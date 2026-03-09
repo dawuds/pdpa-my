@@ -45,7 +45,7 @@
 
 ### 1.1 Purpose
 
-This procedure establishes the mandatory requirements and standardized process by which [Organization Name] conducts privacy and data protection due diligence on all third parties prior to engagement, throughout the term of any engagement, and at offboarding. It ensures that [Organization Name] discharges its obligations as a **data user** under the **Personal Data Protection Act 2010 (PDPA)**, specifically the requirements under **Section 9** (disclosure principle) and **Section 129A** (data processor obligations), by verifying that third parties handling personal data on behalf of [Organization Name] provide sufficient guarantees regarding technical and organizational security measures, and comply with applicable data protection obligations.
+This procedure establishes the mandatory requirements and standardized process by which [Organization Name] conducts privacy and data protection due diligence on all third parties prior to engagement, throughout the term of any engagement, and at offboarding. It ensures that [Organization Name] discharges its obligations as a **data controller** under the **Personal Data Protection Act 2010 (PDPA)**, specifically the requirements under **Section 9** (disclosure principle) and **Section 129A** (data processor obligations), by verifying that third parties handling personal data on behalf of [Organization Name] provide sufficient guarantees regarding technical and organizational security measures, and comply with applicable data protection obligations.
 
 This procedure also supports [Organization Name]'s obligations under related regulatory frameworks, including Bank Negara Malaysia (BNM) guidelines on technology risk management and outsourcing, where applicable to financial institutions.
 
@@ -89,8 +89,8 @@ The following are **excluded** from the scope of this procedure:
 
 | Legislation | Provision | Requirement |
 |---|---|---|
-| Personal Data Protection Act 2010 | **Section 9** (Disclosure Principle) | Personal data shall not be disclosed without the consent of the data subject unless a permitted disclosure exception applies; data user must ensure third-party disclosures are lawful |
-| Personal Data Protection Act 2010 | **Section 129A** (Data Processor Obligations) | Data users must only use data processors providing sufficient guarantees on technical and organizational security; processing must be governed by a written contract; data processors must not engage subprocessors without data user consent |
+| Personal Data Protection Act 2010 | **Section 9** (Disclosure Principle) | Personal data shall not be disclosed without the consent of the data subject unless a permitted disclosure exception applies; data controller must ensure third-party disclosures are lawful |
+| Personal Data Protection Act 2010 | **Section 129A** (Data Processor Obligations) | Data users must only use data processors providing sufficient guarantees on technical and organizational security; processing must be governed by a written contract; data processors must not engage subprocessors without data controller consent |
 | Personal Data Protection Act 2010 | **Section 5** (General Principle) | Personal data must be processed fairly and lawfully; adequate notice provided to data subjects |
 | Personal Data Protection Act 2010 | **Section 10** (Security Principle) | Data user must take practical steps to protect personal data from loss, misuse, modification, unauthorized access, or other unlawful forms of processing |
 | Personal Data Protection Act 2010 | **Section 11** (Retention Principle) | Personal data must not be retained longer than necessary; third parties must return or destroy data on instruction |
@@ -100,7 +100,7 @@ The following are **excluded** from the scope of this procedure:
 | Instrument | Issuing Authority | Relevance |
 |---|---|---|
 | Personal Data Protection Regulations 2013 | Minister of Digital | Prescribed security standards and notification requirements |
-| Personal Data Protection (Class of Data Users) Order 2013 | Minister of Digital | Sector-specific obligations for registered data user classes |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Minister of Digital | Sector-specific obligations for registered data controller classes |
 | [BNM Risk Management in Technology (RMiT) Policy Document] | Bank Negara Malaysia | Third-party and outsourcing risk management for financial institutions |
 | [BNM Outsourcing Policy] | Bank Negara Malaysia | Outsourcing due diligence, contractual safeguards, and BNM notification |
 | [NACSA Cloud Security Guidelines] | NACSA | Cloud provider security assessment criteria |
@@ -127,11 +127,11 @@ The following are **excluded** from the scope of this procedure:
 
 | Term | Definition |
 |---|---|
-| **Data User** | A person who either alone, jointly, or in common with other persons processes any personal data or has control over, or authorizes the processing of any personal data — in this procedure, [Organization Name]. |
-| **Data Processor** | Any person who processes personal data solely on behalf of a data user, and does not process personal data for any of their own purposes. (PDPA s.129A context) |
-| **Joint Data User** | Two or more persons who jointly determine the purposes and means of processing personal data. Both bear full data user obligations under the PDPA. |
-| **Independent Data User** | A third party that receives personal data from [Organization Name] and processes it for its own purposes, thereby becoming a data user in its own right (e.g., a regulator or credit bureau). |
-| **Subprocessor** | A third party engaged by a data processor to carry out processing activities on behalf of [Organization Name] (the data user). Requires explicit prior written approval from [Organization Name]. |
+| **Data Controller** | A person who either alone, jointly, or in common with other persons processes any personal data or has control over, or authorizes the processing of any personal data — in this procedure, [Organization Name]. |
+| **Data Processor** | Any person who processes personal data solely on behalf of a data controller, and does not process personal data for any of their own purposes. (PDPA s.129A context) |
+| **Joint Data Controller** | Two or more persons who jointly determine the purposes and means of processing personal data. Both bear full data controller obligations under the PDPA. |
+| **Independent Data Controller** | A third party that receives personal data from [Organization Name] and processes it for its own purposes, thereby becoming a data controller in its own right (e.g., a regulator or credit bureau). |
+| **Subprocessor** | A third party engaged by a data processor to carry out processing activities on behalf of [Organization Name] (the data controller). Requires explicit prior written approval from [Organization Name]. |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject and that identifies or is reasonably capable of identifying the data subject. |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject, their political opinions, religious beliefs, commission or alleged commission of any offence, or any other personal data as the Minister may determine. |
 | **Data Processing Agreement (DPA)** | A binding written contract between [Organization Name] and a data processor governing the processing of personal data, as required under PDPA s.129A. |
@@ -173,19 +173,19 @@ A Data Processor processes personal data **solely on behalf of [Organization Nam
 
 **Examples:** Cloud infrastructure providers (IaaS/PaaS), payroll processing companies, data backup and archiving vendors, managed security service providers, call center operators.
 
-**PDPA Obligation:** Section 129A applies in full. A Data Processing Agreement is mandatory. [Organization Name] remains the data user and bears primary PDPA accountability.
+**PDPA Obligation:** Section 129A applies in full. A Data Processing Agreement is mandatory. [Organization Name] remains the data controller and bears primary PDPA accountability.
 
-#### Category B — Joint Data User
+#### Category B — Joint Data Controller
 
-A Joint Data User jointly determines the **purposes and means of processing** personal data together with [Organization Name]. Both parties bear the obligations of a data user under the PDPA.
+A Joint Data Controller jointly determines the **purposes and means of processing** personal data together with [Organization Name]. Both parties bear the obligations of a data controller under the PDPA.
 
 **Examples:** Co-branded product partners, joint marketing campaign partners, consortium members sharing a common customer database, bancassurance partners.
 
-**PDPA Obligation:** Both parties are data users. A Joint Controller/Data User Agreement defining each party's responsibilities is required. Each party must ensure independent PDPA compliance.
+**PDPA Obligation:** Both parties are data controllers. A Joint Controller/Data Controller Agreement defining each party's responsibilities is required. Each party must ensure independent PDPA compliance.
 
-#### Category C — Independent Data User
+#### Category C — Independent Data Controller
 
-An Independent Data User **receives personal data from [Organization Name]** and processes it entirely for their own purposes. Upon receipt, they become the data user for that data. Disclosure to an Independent Data User must be lawful under Section 9 of the PDPA.
+An Independent Data Controller **receives personal data from [Organization Name]** and processes it entirely for their own purposes. Upon receipt, they become the data controller for that data. Disclosure to an Independent Data Controller must be lawful under Section 9 of the PDPA.
 
 **Examples:** Credit reference agencies, regulatory and government bodies, law enforcement, insurers receiving claims data, lawyers acting for counterparties.
 
@@ -198,8 +198,8 @@ An Independent Data User **receives personal data from [Organization Name]** and
 | Does the third party determine the purpose of processing? | Does the third party determine the means of processing? | Classification |
 |---|---|---|
 | No — [Organization Name] determines purpose | No — [Organization Name] determines means | **Category A: Data Processor** |
-| Yes — jointly with [Organization Name] | Yes — jointly with [Organization Name] | **Category B: Joint Data User** |
-| Yes — independently, for their own purposes | Yes — independently | **Category C: Independent Data User** |
+| Yes — jointly with [Organization Name] | Yes — jointly with [Organization Name] | **Category B: Joint Data Controller** |
+| Yes — independently, for their own purposes | Yes — independently | **Category C: Independent Data Controller** |
 | Uncertain | Uncertain | **Escalate to DPO for determination** |
 
 ### 4.3 Classification Register
@@ -355,7 +355,7 @@ Compensating controls must be documented in the vendor's due diligence file and 
 
 ## 7. Data Processing Agreement Requirements and Negotiation
 
-*This section defines the mandatory contractual requirements for Data Processing Agreements and the process for negotiating, executing, and maintaining DPAs with data processors (Category A) and Joint Data User Agreements with Category B third parties.*
+*This section defines the mandatory contractual requirements for Data Processing Agreements and the process for negotiating, executing, and maintaining DPAs with data processors (Category A) and Joint Data Controller Agreements with Category B third parties.*
 
 ### 7.1 Mandatory DPA Requirement
 
@@ -372,7 +372,7 @@ All DPAs executed by [Organization Name] must include, at minimum, the following
 | **Subject Matter and Duration** | Precise description of the processing activities; duration aligned with the main services agreement |
 | **Nature and Purpose of Processing** | Explicit statement of the purposes for which personal data is processed; instruction-only processing requirement |
 | **Type of Personal Data and Data Subjects** | Categories of personal data; categories of data subjects affected |
-| **Data User Obligations and Rights** | [Organization Name]'s rights to issue instructions, conduct audits, approve subprocessors, and terminate processing |
+| **Data Controller Obligations and Rights** | [Organization Name]'s rights to issue instructions, conduct audits, approve subprocessors, and terminate processing |
 | **Processor Obligations** | Process only on documented instructions; confidentiality obligation on authorized personnel; security measures (referencing s.10 PDPA); subprocessor restrictions; assistance with data subject rights; assistance with breach notification; deletion/return on termination |
 | **Security Measures** | Minimum technical and organizational measures, aligned with ISO 27001 or equivalent; encryption standards; access control requirements |
 | **Subprocessor Restrictions** | Prior written consent of [Organization Name] required before engaging subprocessors; flow-down of DPA obligations |
@@ -421,9 +421,9 @@ Executed DPAs must be:
 |---|---|---|---|---|---|---|
 | [Vendor] | [DPA-2025-001] | [DD/MM/YYYY] | [DD/MM/YYYY] | [Name] | [Active / Expired / Under Renewal] | [System/Location] |
 
-### 7.5 Joint Data User Agreements (Category B)
+### 7.5 Joint Data Controller Agreements (Category B)
 
-For **Category B — Joint Data Users**, a Joint Data User Agreement (JDUA) must be executed in lieu of a DPA. The JDUA must:
+For **Category B — Joint Data Controllers**, a Joint Data Controller Agreement (JDUA) must be executed in lieu of a DPA. The JDUA must:
 
 - Define each party's respective responsibilities for PDPA compliance.
 - Identify which party acts as the primary point of contact for data subjects.
@@ -502,7 +502,7 @@ Upon receiving notice of a new or changed subprocessor, the DPO will conduct a r
 
 ### 9.1 Scheduled Annual Reassessment
 
-All active data processors (Category A) and joint data users (Category B) with access to personal data must undergo a **formal reassessment at least annually**. The reassessment cycle is managed by the DPO in coordination with the Relationship Owner.
+All active data processors (Category A) and joint data controllers (Category B) with access to personal data must undergo a **formal reassessment at least annually**. The reassessment cycle is managed by the DPO in coordination with the Relationship Owner.
 
 **Annual Reassessment Schedule:**
 - The DPO publishes an Annual Reassessment Calendar by **[1 February]** of each calendar year.
@@ -778,7 +778,7 @@ All offboarding documentation — including the Offboarding Initiation Notice, D
 - Reviews and approves compensating controls where certifications are absent.
 
 **Legal**
-- Drafts, reviews, and negotiates DPAs and Joint Data User Agreements.
+- Drafts, reviews, and negotiates DPAs and Joint Data Controller Agreements.
 - Advises on cross-border data transfer mechanisms and legality.
 - Maintains the DPA register.
 - Provides legal advice on offboarding disputes and data deletion obligations.
@@ -872,9 +872,9 @@ The DPO is responsible for initiating the review and obtaining re-approval from 
 | **PDPA s.9 — Disclosure Principle** | Restriction on disclosure of personal data to third parties without consent or a permitted exception; directly underpins the classification framework in Section 4 and the DPA requirement in Section 7 |
 | **PDPA s.10 — Security Principle** | Data user must take practical steps to protect personal data; informs security requirements imposed on data processors via the DPA |
 | **PDPA s.11 — Retention Principle** | Personal data must not be retained longer than necessary; informs data deletion and offboarding requirements in Section 11 |
-| **PDPA s.129A — Data Processor Obligations** | Mandates written contract between data user and data processor; flow-down of security obligations; restriction on subprocessing; directly underpins Sections 7 and 8 of this procedure |
+| **PDPA s.129A — Data Processor Obligations** | Mandates written contract between data controller and data processor; flow-down of security obligations; restriction on subprocessing; directly underpins Sections 7 and 8 of this procedure |
 | **Personal Data Protection Regulations 2013** | Prescribed security standards and breach notification requirements |
-| **Personal Data Protection (Class of Data Users) Order 2013** | Sector-specific registration and compliance obligations |
+| **Personal Data Protection (Class of Data Controllers) Order 2013** | Sector-specific registration and compliance obligations |
 
 ### 15.2 Related Regulatory Guidance
 
@@ -1028,7 +1028,7 @@ The DPO is responsible for initiating the review and obtaining re-approval from 
 
 I, [Authorized Representative Name], [Title], duly authorized on behalf of [Vendor Legal Entity Name] (**"Processor"**), hereby certify that:
 
-1. All personal data of [Organization Name] (the **"Data User"**) held by the Processor, including all copies, backups, disaster recovery copies, and archived copies, has been:
+1. All personal data of [Organization Name] (the **"Data Controller"**) held by the Processor, including all copies, backups, disaster recovery copies, and archived copies, has been:
 
    - [ ] **Returned** to [Organization Name] in full, via [method/date], as confirmed by [Organization Name]'s acknowledgement of receipt dated [DD/MM/YYYY]; and / or
    - [ ] **Securely deleted** using [deletion standard, e.g., NIST 800-88 / DoD 5220.22-M] no later than [DD/MM/YYYY].

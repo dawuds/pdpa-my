@@ -69,7 +69,7 @@ This document is maintained in accordance with the following provisions of the P
 | **Section 5** — General Principle | Personal data shall not be processed unless the data subject has given consent or another lawful basis applies; processing must be adequate, relevant, and not excessive |
 | **Section 6** — Sensitive Personal Data | Explicit consent and heightened protections are required for processing sensitive categories of personal data |
 | **Section 9** — Security Principle | Data users must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction |
-| **Section 29** — Data User's Right | Establishes obligations and accountability of data users in governing personal data processing activities |
+| **Section 29** — Data Controller's Right | Establishes obligations and accountability of data controllers in governing personal data processing activities |
 
 ---
 
@@ -464,9 +464,9 @@ The following regulatory provisions, guidelines, and internal policies are direc
 
 | Reference | Title | Relevant Provisions |
 |---|---|---|
-| Personal Data Protection Act 2010 (Act 709) | Personal Data Protection Act 2010 | s5 (General Principle), s6 (Sensitive Personal Data), s9 (Security Principle), s29 (Data User accountability) |
+| Personal Data Protection Act 2010 (Act 709) | Personal Data Protection Act 2010 | s5 (General Principle), s6 (Sensitive Personal Data), s9 (Security Principle), s29 (Data Controller accountability) |
 | Personal Data Protection Regulations 2013 | Processing standards and obligations | All regulations |
-| Personal Data Protection (Class of Data Users) Order 2013 | Sector-specific obligations | [Relevant class] |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Sector-specific obligations | [Relevant class] |
 
 ### 12.2 Regulatory Guidelines and Standards
 

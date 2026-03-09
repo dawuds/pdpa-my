@@ -14,8 +14,8 @@
       "title": "Scope and Application",
       "content": "This Code applies to general insurers, life insurers, takaful operators, reinsurers, and insurance intermediaries (brokers, agents, adjusters) in Class 3 of the Class of Data Users Order 2013. It addresses the unique data protection challenges of the insurance sector, including the processing of highly sensitive health data for underwriting, sharing of data with reinsurers and claims investigators, and the use of telematics and connected device data for usage-based insurance.",
       "requirements": [
-        "All insurance data users must ensure the Code is reflected in their data governance frameworks",
-        "Insurance intermediaries are subject to this Code in their capacity as data users",
+        "All insurance data controllers must ensure the Code is reflected in their data governance frameworks",
+        "Insurance intermediaries are subject to this Code in their capacity as data controllers",
         "This Code must be read together with the General Code 2022"
       ]
     },
@@ -55,7 +55,7 @@
     {
       "id": "cop-ins-s5",
       "title": "Security for Insurance Data",
-      "content": "In addition to the Security Standards 2015, insurance data users must: (a) encrypt all health data in storage and transit; (b) implement role-based access controls restricting health and medical data to claims, underwriting, and medical teams; (c) conduct DPIAs before implementing new insurance technologies such as telematics, wearables, or AI-based underwriting; (d) ensure all loss adjusters, investigation firms, and medical examiners have appropriate security measures through data processing agreements; and (e) report data breaches to both the Commissioner and Bank Negara Malaysia.",
+      "content": "In addition to the Security Standards 2015, insurance data controllers must: (a) encrypt all health data in storage and transit; (b) implement role-based access controls restricting health and medical data to claims, underwriting, and medical teams; (c) conduct DPIAs before implementing new insurance technologies such as telematics, wearables, or AI-based underwriting; (d) ensure all loss adjusters, investigation firms, and medical examiners have appropriate security measures through data processing agreements; and (e) report data breaches to both the Commissioner and Bank Negara Malaysia.",
       "requirements": [
         "Health data encryption is mandatory",
         "DPIA required for telematics and wearable device data processing",

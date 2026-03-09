@@ -93,10 +93,10 @@ This procedure is established pursuant to the following Malaysian legislation an
 |---|---|---|
 | s30 PDPA | Right of access to personal data | Data subjects may complain if access requests are refused or not fulfilled. |
 | s34 PDPA | Right to correct personal data | Data subjects may complain if correction requests are not actioned. |
-| s43 PDPA | General duties of data user | [Organization Name] has a general duty to protect personal data and respond to data subjects. |
+| s43 PDPA | General duties of data controller | [Organization Name] has a general duty to protect personal data and respond to data subjects. |
 | s101 PDPA | Complaint to Commissioner | Establishes the right of data subjects to refer complaints to the Commissioner. |
 | s102 PDPA | Investigation by Commissioner | Governs the Commissioner's powers to investigate complaints referred to them. |
-| PDPA — Data User Forums | Sector-specific codes of practice | Compliance with applicable sector codes (e.g., financial services) where issued. |
+| PDPA — Data Controller Forums | Sector-specific codes of practice | Compliance with applicable sector codes (e.g., financial services) where issued. |
 
 ### 3.2 Relationship to Other Policies
 
@@ -616,7 +616,7 @@ This procedure shall be reviewed **annually**, or earlier in the event of:
 |---|---|---|
 | Personal Data Protection Act 2010 (Act 709), s30 | Right of access to personal data | Defines data subjects' right to access their data; complaints may arise from refusal or delay. |
 | Personal Data Protection Act 2010 (Act 709), s34 | Right to correct personal data | Defines data subjects' right to correct inaccurate data; complaints may arise from refusal. |
-| Personal Data Protection Act 2010 (Act 709), s43 | General duties of data user | Establishes overarching data protection obligations, including accountability for complaint handling. |
+| Personal Data Protection Act 2010 (Act 709), s43 | General duties of data controller | Establishes overarching data protection obligations, including accountability for complaint handling. |
 | Personal Data Protection Act 2010 (Act 709), s101 | Complaint to Commissioner | Establishes the statutory right of data subjects to refer unresolved complaints to the Commissioner. |
 | Personal Data Protection Act 2010 (Act 709), s102 | Investigation by Commissioner | Governs the Commissioner's powers and process for investigating complaints. |
 | Personal Data Protection Regulations 2013 | Subsidiary regulations | Provide additional requirements for data processing practices. |

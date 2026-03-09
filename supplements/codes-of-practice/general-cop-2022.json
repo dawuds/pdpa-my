@@ -6,15 +6,15 @@
   "effectiveDate": "2022-01-01",
   "parentAct": "Act 709",
   "enablingSection": "s57",
-  "applicableClasses": "All data users",
-  "summary": "The General Code of Practice 2022 provides the universal baseline for PDPA compliance across all sectors. It applies to all data users regardless of class. Sector-specific Codes supplement the General Code with additional or modified requirements appropriate to the sector — where a sector-specific Code applies, it prevails over the General Code to the extent of any inconsistency. The General Code was updated in 2022 to reflect developments in data protection practice, the growth of digital processing, and to address emerging issues such as biometric data, IoT, and AI-driven processing.",
+  "applicableClasses": "All data controllers",
+  "summary": "The General Code of Practice 2022 provides the universal baseline for PDPA compliance across all sectors. It applies to all data controllers regardless of class. Sector-specific Codes supplement the General Code with additional or modified requirements appropriate to the sector — where a sector-specific Code applies, it prevails over the General Code to the extent of any inconsistency. The General Code was updated in 2022 to reflect developments in data protection practice, the growth of digital processing, and to address emerging issues such as biometric data, IoT, and AI-driven processing.",
   "provisions": [
     {
       "id": "cop-gen-s1",
       "title": "Application",
-      "content": "This Code applies to all data users processing personal data in Malaysia in connection with commercial transactions, regardless of whether they are required to register with the Commissioner. The Code provides practical guidance on implementing the seven Personal Data Protection Principles and other obligations under the Act. Where a sector-specific Code of Practice applies to a data user, the sector-specific Code prevails to the extent of any inconsistency with this General Code.",
+      "content": "This Code applies to all data controllers processing personal data in Malaysia in connection with commercial transactions, regardless of whether they are required to register with the Commissioner. The Code provides practical guidance on implementing the seven Personal Data Protection Principles and other obligations under the Act. Where a sector-specific Code of Practice applies to a data controller, the sector-specific Code prevails to the extent of any inconsistency with this General Code.",
       "requirements": [
-        "All data users must maintain a copy of the applicable Code(s) and ensure senior management are aware of their contents",
+        "All data controllers must maintain a copy of the applicable Code(s) and ensure senior management are aware of their contents",
         "Compliance with the Code must be reviewed at least annually",
         "Non-compliance with the Code may constitute a breach of the PDPA principles"
       ]
@@ -22,7 +22,7 @@
     {
       "id": "cop-gen-s2",
       "title": "Records of Processing Activities (ROPA)",
-      "content": "All data users must maintain a Records of Processing Activities (ROPA) documenting all personal data processing activities. The ROPA must include, for each processing activity: (a) the name and contact details of the data user and DPO (if appointed); (b) the purposes of the processing; (c) a description of the categories of data subjects and personal data; (d) the categories of recipients to whom the data has or will be disclosed; (e) any transfers to third countries and the transfer mechanisms used; (f) the intended retention period; and (g) a general description of the technical and organizational security measures in place. The ROPA must be available in electronic format and produced to the Commissioner within 5 working days of request.",
+      "content": "All data controllers must maintain a Records of Processing Activities (ROPA) documenting all personal data processing activities. The ROPA must include, for each processing activity: (a) the name and contact details of the data controller and DPO (if appointed); (b) the purposes of the processing; (c) a description of the categories of data subjects and personal data; (d) the categories of recipients to whom the data has or will be disclosed; (e) any transfers to third countries and the transfer mechanisms used; (f) the intended retention period; and (g) a general description of the technical and organizational security measures in place. The ROPA must be available in electronic format and produced to the Commissioner within 5 working days of request.",
       "requirements": [
         "ROPA must be initiated before processing commences",
         "ROPA must be updated within 30 days of any material change to processing activities",
@@ -33,7 +33,7 @@
     {
       "id": "cop-gen-s3",
       "title": "Lawful Basis Assessment and Documentation",
-      "content": "Before commencing any processing activity, data users must identify and document the lawful basis for each processing activity in the ROPA. The assessment must be specific to the processing purpose — a single lawful basis may not cover multiple distinct purposes. Where consent is the lawful basis, the data user must maintain records of how and when consent was obtained. Where legitimate interests is the lawful basis, a documented Legitimate Interest Assessment (LIA) must be conducted and retained. The lawful basis assessment must be reviewed whenever the nature or purpose of processing changes.",
+      "content": "Before commencing any processing activity, data controllers must identify and document the lawful basis for each processing activity in the ROPA. The assessment must be specific to the processing purpose — a single lawful basis may not cover multiple distinct purposes. Where consent is the lawful basis, the data controller must maintain records of how and when consent was obtained. Where legitimate interests is the lawful basis, a documented Legitimate Interest Assessment (LIA) must be conducted and retained. The lawful basis assessment must be reviewed whenever the nature or purpose of processing changes.",
       "requirements": [
         "Lawful basis must be identified before processing begins — retrospective identification is not permitted",
         "LIA must be documented using a structured three-part test: purpose, necessity, balance",
@@ -44,7 +44,7 @@
     {
       "id": "cop-gen-s4",
       "title": "Consent Management",
-      "content": "Where consent is the lawful basis for processing, data users must implement a consent management framework ensuring: (a) consent is freely given, specific, informed, and unambiguous; (b) consent is obtained through a clear affirmative act — pre-ticked boxes, silence, or inactivity do not constitute consent; (c) consent is granular — separate consent is obtained for separate purposes; (d) consent can be withdrawn as easily as it was given; (e) records of consent are maintained including the date, context, and version of notice; (f) where consent is withdrawn, processing ceases promptly and third parties are notified; and (g) consent obtained from or for minors under 13 years is subject to parental/guardian consent requirements.",
+      "content": "Where consent is the lawful basis for processing, data controllers must implement a consent management framework ensuring: (a) consent is freely given, specific, informed, and unambiguous; (b) consent is obtained through a clear affirmative act — pre-ticked boxes, silence, or inactivity do not constitute consent; (c) consent is granular — separate consent is obtained for separate purposes; (d) consent can be withdrawn as easily as it was given; (e) records of consent are maintained including the date, context, and version of notice; (f) where consent is withdrawn, processing ceases promptly and third parties are notified; and (g) consent obtained from or for minors under 13 years is subject to parental/guardian consent requirements.",
       "requirements": [
         "Pre-ticked checkboxes are prohibited for consent",
         "Bundled consent for multiple purposes is not valid — granular consent is required",
@@ -77,7 +77,7 @@
     {
       "id": "cop-gen-s7",
       "title": "Security Governance",
-      "content": "In addition to the minimum requirements of the Security Standards 2015, data users should implement: (a) a formal information security policy approved by senior management; (b) a data protection impact assessment (DPIA) process for new high-risk processing activities; (c) a supplier security management framework for all third parties processing personal data; (d) regular penetration testing for systems processing large volumes of personal data (at least annually for high-risk systems); (e) a privacy by design approach integrating data protection into new systems and processes from the outset; and (f) management reporting on data protection metrics including breach statistics, training completion rates, and audit findings.",
+      "content": "In addition to the minimum requirements of the Security Standards 2015, data controllers should implement: (a) a formal information security policy approved by senior management; (b) a data protection impact assessment (DPIA) process for new high-risk processing activities; (c) a supplier security management framework for all third parties processing personal data; (d) regular penetration testing for systems processing large volumes of personal data (at least annually for high-risk systems); (e) a privacy by design approach integrating data protection into new systems and processes from the outset; and (f) management reporting on data protection metrics including breach statistics, training completion rates, and audit findings.",
       "requirements": [
         "Information security policy must be reviewed annually and approved by a C-suite executive",
         "DPIA must be conducted for all new processing activities that are likely to result in a high risk",
@@ -110,7 +110,7 @@
     {
       "id": "cop-gen-s10",
       "title": "Data Subject Rights Management",
-      "content": "Data users must implement a formal procedure for managing data subject rights requests, including: (a) a designated contact channel (email, web form, or postal address) for data subject requests; (b) identity verification procedures proportionate to the sensitivity of the data held; (c) response within prescribed timeframes (21 days for access requests, 21 days for correction requests, 7 days for opt-out requests); (d) a log of all data subject requests and the data user's responses; (e) a refusal procedure for requests that can be lawfully refused; and (f) information for data subjects on how to escalate complaints to the Commissioner. The DPO (if appointed) must oversee the data subject rights management process.",
+      "content": "Data users must implement a formal procedure for managing data subject rights requests, including: (a) a designated contact channel (email, web form, or postal address) for data subject requests; (b) identity verification procedures proportionate to the sensitivity of the data held; (c) response within prescribed timeframes (21 days for access requests, 21 days for correction requests, 7 days for opt-out requests); (d) a log of all data subject requests and the data controller's responses; (e) a refusal procedure for requests that can be lawfully refused; and (f) information for data subjects on how to escalate complaints to the Commissioner. The DPO (if appointed) must oversee the data subject rights management process.",
       "requirements": [
         "Designated channel for data subject requests must be clearly communicated in the privacy notice",
         "Identity verification must not be so burdensome as to effectively prevent exercise of rights",
@@ -134,6 +134,6 @@
     "General Code", "ROPA", "Records of Processing Activities", "lawful basis", "consent management",
     "data protection notice", "purpose limitation", "security governance", "DPIA",
     "retention schedule", "data quality", "data subject rights", "sensitive personal data",
-    "privacy by design", "all data users", "Code of Practice"
+    "privacy by design", "all data controllers", "Code of Practice"
   ]
 }

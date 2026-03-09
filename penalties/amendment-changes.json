@@ -61,10 +61,10 @@
         "fine": "100%",
         "imprisonment": "0%"
       },
-      "rationale": "Operating outside the registration framework undermines the Commissioner's ability to supervise data users. The doubled fine reflects the seriousness of operating outside the regulatory perimeter."
+      "rationale": "Operating outside the registration framework undermines the Commissioner's ability to supervise data controllers. The doubled fine reflects the seriousness of operating outside the regulatory perimeter."
     },
     {
-      "section": "s129A",
+      "section": "s129",
       "sectionTitle": "Cross-Border Personal Data Transfer",
       "before": {
         "fine": "RM300,000",
@@ -105,7 +105,7 @@
     },
     {
       "section": "s132",
-      "sectionTitle": "Unauthorized Disclosure by Data User",
+      "sectionTitle": "Unauthorized Disclosure by Data Controller",
       "before": {
         "fine": "RM300,000",
         "imprisonment": "2 years",
@@ -198,7 +198,7 @@
       "percentageIncrease": {
         "fine": "400%"
       },
-      "rationale": "The five-fold increase in the daily fine for continuing offences is designed to create a strong financial incentive for data users to remediate violations promptly rather than accepting a small ongoing cost as a business expense."
+      "rationale": "The five-fold increase in the daily fine for continuing offences is designed to create a strong financial incentive for data controllers to remediate violations promptly rather than accepting a small ongoing cost as a business expense."
     },
     {
       "section": "s44",
@@ -235,7 +235,7 @@
       "compoundable": false
     },
     {
-      "section": "s143A(5)",
+      "section": "s12B(5)",
       "sectionTitle": "Failure to Notify Data Breach",
       "offence": "Failure to notify the Commissioner as soon as practicable, or failure to notify affected data subjects as soon as practicable, of a notifiable data breach",
       "note": "Note: The JPDP Guideline on Data Breach Notification 2025 (effective 1 June 2025) specifies 72 hours for initial notification to JPDP and 7 days for data subject notification — these are guideline timelines, not statutory requirements under the Act itself.",
@@ -244,13 +244,13 @@
         "imprisonment": "3 years",
         "or_both": true
       },
-      "rationale": "Mandatory data breach notification is a cornerstone of modern data protection law. Timely notification enables affected individuals to take protective action and allows the Commissioner to oversee the data user's response. Failure to notify denies data subjects the opportunity to protect themselves.",
+      "rationale": "Mandatory data breach notification is a cornerstone of modern data protection law. Timely notification enables affected individuals to take protective action and allows the Commissioner to oversee the data controller's response. Failure to notify denies data subjects the opportunity to protect themselves.",
       "compoundable": true
     },
     {
-      "section": "s129B(5)",
+      "section": "s12A(5)",
       "sectionTitle": "Failure to Appoint Data Protection Officer",
-      "offence": "Failure by a qualifying data user to appoint a DPO or to register the appointed DPO with the Commissioner",
+      "offence": "Failure by a qualifying data controller to appoint a DPO or to register the appointed DPO with the Commissioner",
       "penalty": {
         "fine": "RM250,000",
         "imprisonment": "2 years",

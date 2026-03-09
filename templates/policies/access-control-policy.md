@@ -49,7 +49,7 @@
 
 This Access Control Policy establishes the principles, requirements, and procedures governing access to personal data systems, databases, and information assets held by [Organization Name]. The policy ensures that access to personal data is granted only to authorized individuals, based on legitimate business need, and is managed throughout its entire lifecycle — from provisioning through to revocation.
 
-This policy supports [Organization Name]'s obligations as a data user under the **Personal Data Protection Act 2010 (PDPA)**, specifically the **Security Principle (Section 9)** and the **Access Principle (Section 12)**. It is designed to prevent unauthorized access, loss, misuse, modification, or disclosure of personal data processed by [Organization Name] in the course of its commercial transactions.
+This policy supports [Organization Name]'s obligations as a data controller under the **Personal Data Protection Act 2010 (PDPA)**, specifically the **Security Principle (Section 9)** and the **Access Principle (Section 12)**. It is designed to prevent unauthorized access, loss, misuse, modification, or disclosure of personal data processed by [Organization Name] in the course of its commercial transactions.
 
 ---
 
@@ -102,8 +102,8 @@ The following are excluded from this policy:
 
 | PDPA Section | Principle | Requirement Summary |
 |---|---|---|
-| **Section 9** | Security Principle | A data user shall take practical steps to protect personal data from any loss, misuse, modification, unauthorized or accidental access or disclosure, alteration, or destruction. |
-| **Section 12** | Access Principle | A data subject shall be given access to their personal data held by the data user and be able to correct that personal data where it is inaccurate, incomplete, misleading, or not up to date. |
+| **Section 9** | Security Principle | A data controller shall take practical steps to protect personal data from any loss, misuse, modification, unauthorized or accidental access or disclosure, alteration, or destruction. |
+| **Section 12** | Access Principle | A data subject shall be given access to their personal data held by the data controller and be able to correct that personal data where it is inaccurate, incomplete, misleading, or not up to date. |
 | **Section 5** | General Principle | Personal data shall not be processed unless the data subject has given consent or processing falls within a lawful ground. |
 
 ### 3.2 Related Standards and Frameworks
@@ -128,7 +128,7 @@ The following are excluded from this policy:
 | **Access Control** | The process of granting or denying specific requests to obtain and use information and related information processing services. |
 | **Authentication** | The process of verifying the identity of a user, process, or device as a prerequisite to allowing access to resources. |
 | **Authorization** | The process of granting a user, system, or entity permission to access a defined set of resources or perform specific actions. |
-| **Data User** | A person who processes personal data, or has control over, or authorizes the processing of any personal data; in this context, [Organization Name]. |
+| **Data Controller** | A person who processes personal data, or has control over, or authorizes the processing of any personal data; in this context, [Organization Name]. |
 | **Data Subject** | An individual who is the subject of personal data. |
 | **Least Privilege** | The principle that a user, process, or program should have only the minimum access rights necessary to perform its legitimate function. |
 | **Multi-Factor Authentication (MFA)** | An authentication method requiring the user to provide two or more verification factors (knowledge, possession, or inherence). |
@@ -789,7 +789,7 @@ This policy shall be reviewed:
 | **PDPA — Section 12 (Access Principle)** | Grants data subjects the right to access their personal data and request corrections |
 | **PDPA — Section 5 (General Principle)** | Governs the lawful basis for processing personal data |
 | **Personal Data Protection Regulations 2013** | Subsidiary regulations made under the PDPA |
-| **Personal Data Protection (Class of Data Users) Order 2013** | Identifies classes of data users required to register with the Commissioner |
+| **Personal Data Protection (Class of Data Controllers) Order 2013** | Identifies classes of data controllers required to register with the Commissioner |
 
 ### 17.2 Industry Standards and Frameworks
 

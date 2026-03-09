@@ -280,7 +280,7 @@
           "Register identifies each third party by name, categories of personal data shared, purpose, and specific s8(1) basis",
           "DPA reference number is recorded for each third-party recipient who is a data processor",
           "Register is updated whenever a new third-party disclosure arrangement is established",
-          "Cross-border transfers are flagged with the applicable s129A mechanism"
+          "Cross-border transfers are flagged with the applicable s129 mechanism"
         ],
         "commonGaps": [
           "No third-party disclosure register exists",
@@ -419,7 +419,7 @@
         ],
         "commonGaps": [
           "No formal security awareness training programme exists",
-          "Training has not been updated to include breach notification obligations under s143A",
+          "Training has not been updated to include breach notification obligations under s12B",
           "Training is conducted for IT staff only, not customer-facing or administrative staff",
           "Training is a one-time onboarding event with no annual refresh"
         ],
@@ -626,7 +626,7 @@
   "s13": {
     "sectionId": "s13",
     "part": "II",
-    "title": "Registration of Data Users",
+    "title": "Registration of Data Controllers",
     "obligationType": "mandatory",
     "auditorFocus": "JPDP inspectors will verify registration status at the outset of any inspection. A lapsed, expired, or absent registration when required is an immediate serious finding. Inspectors will also verify that the registered particulars match actual processing activities.",
     "evidenceItems": [
@@ -857,7 +857,7 @@
         "commonGaps": [
           "Register exists but major processors are missing (e.g., cloud hosting, email service, payroll processor)",
           "DPAs are in place for some processors but the organisation cannot identify when each was signed",
-          "Some processors are classified as independent data users when they are actually processors requiring a DPA"
+          "Some processors are classified as independent data controllers when they are actually processors requiring a DPA"
         ],
         "suggestedSources": [
           "Processor register (current version)",

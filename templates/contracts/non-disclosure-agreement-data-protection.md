@@ -40,7 +40,7 @@ This Non-Disclosure Agreement (Data Protection) ("Agreement") establishes the co
 
 This Agreement is executed in compliance with:
 
-- **Personal Data Protection Act 2010 (PDPA)** — in particular **Section 9 (Security Principle)**, which requires that a data processor shall not process personal data unless the data user has taken practical steps to ensure the personal data will be protected from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration or destruction
+- **Personal Data Protection Act 2010 (PDPA)** — in particular **Section 9 (Security Principle)**, which requires that a data processor shall not process personal data unless the data controller has taken practical steps to ensure the personal data will be protected from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration or destruction
 - **Personal Data Protection Regulations 2013**
 - [Organization Name]'s **Data Protection Policy** [Document ID Reference]
 - [Organization Name]'s **Information Security Policy** [Document ID Reference]
@@ -66,10 +66,10 @@ In this Agreement, unless the context otherwise requires:
 | Term | Definition |
 |---|---|
 | **"Confidential Information"** | All information disclosed by the Disclosing Party to the Receiving Party, whether in written, oral, electronic, or any other form, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and circumstances of disclosure. This expressly includes, but is not limited to, Personal Data, trade secrets, business strategies, financial data, customer information, employee records, technical documentation, and system access credentials. |
-| **"Personal Data"** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, or from that information and other information in the possession of a data user; as defined under **Section 4 of the PDPA 2010**. |
+| **"Personal Data"** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, or from that information and other information in the possession of a data controller; as defined under **Section 4 of the PDPA 2010**. |
 | **"Data Subject"** | The individual to whom Personal Data relates. |
-| **"Data User"** | [Organization Name], being the person who either alone or jointly or in common with other persons processes any personal data or has control over or authorises the processing of any personal data. |
-| **"Data Processor"** | The Receiving Party and any person who processes Personal Data solely on behalf of the Data User and does not process the Personal Data for any of the person's own purposes. |
+| **"Data Controller"** | [Organization Name], being the person who either alone or jointly or in common with other persons processes any personal data or has control over or authorises the processing of any personal data. |
+| **"Data Processor"** | The Receiving Party and any person who processes Personal Data solely on behalf of the Data Controller and does not process the Personal Data for any of the person's own purposes. |
 | **"Processing"** | Collecting, recording, holding, or storing Personal Data or carrying out any operation or set of operations on the Personal Data, including organising, adapting, altering, retrieving, consulting, disclosing, transferring, or erasing. |
 | **"Engagement"** | The specific services, project, or consultancy as described in [the Principal Service Agreement / Engagement Letter / Statement of Work] dated [Date], between the Parties. |
 | **"Data Incident"** | Any accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, Personal Data transmitted, stored, or otherwise processed. |
@@ -507,11 +507,11 @@ This template shall be reviewed **annually** and following any:
 | Reference | Description |
 |---|---|
 | **PDPA 2010, Section 9** | Security Principle — Data user must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access or disclosure, alteration or destruction |
-| **PDPA 2010, Section 4** | Definitions — Personal Data, Data User, Data Subject, Processing |
+| **PDPA 2010, Section 4** | Definitions — Personal Data, Data Controller, Data Subject, Processing |
 | **PDPA 2010, Section 129** | Offences by body corporate — personal liability of directors and officers |
 | **PDPA 2010, Section 39** | Transfer of personal data to places outside Malaysia |
 | **Personal Data Protection Regulations 2013** | Processing of sensitive personal data |
-| **Personal Data Protection (Class of Data Users) Order 2013** | Sector-specific obligations applicable to [Organization's industry class] |
+| **Personal Data Protection (Class of Data Controllers) Order 2013** | Sector-specific obligations applicable to [Organization's industry class] |
 | **[Organization Name] Data Protection Policy** | [Document ID] |
 | **[Organization Name] Information Security Policy** | [Document ID] |
 | **[Organization Name] Third Party Management Policy** | [Document ID] |

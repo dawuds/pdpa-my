@@ -2,7 +2,7 @@
   "id": "general",
   "section": 6,
   "name": "General Principle",
-  "summary": "A data user shall not process personal data about a data subject unless the data subject has given his consent to the processing, or the processing is necessary for one or more of the specified lawful purposes. This is the foundational principle that conditions all personal data processing under the PDPA.",
+  "summary": "A data controller shall not process personal data about a data subject unless the data subject has given his consent to the processing, or the processing is necessary for one or more of the specified lawful purposes. This is the foundational principle that conditions all personal data processing under the PDPA.",
   "obligations": [
     {
       "id": "general-O1",
@@ -30,7 +30,7 @@
     },
     {
       "id": "general-O5",
-      "obligation": "Where processing is based on legitimate interests, conduct and document a legitimate interest assessment (LIA) to verify that the interests of the data user are not overridden by the interests or rights of the data subject",
+      "obligation": "Where processing is based on legitimate interests, conduct and document a legitimate interest assessment (LIA) to verify that the interests of the data controller are not overridden by the interests or rights of the data subject",
       "basis": "Section 6(2)(f); 2024 Amendment Act",
       "type": "mandatory"
     },
@@ -46,13 +46,13 @@
       "id": "general-X1",
       "exception": "Processing necessary for the performance of a contract to which the data subject is a party",
       "basis": "Section 6(2)(a)",
-      "conditions": "The data subject must be a direct party to the contract; processing by a data user to fulfil obligations under a contract with a third party does not qualify under this exception"
+      "conditions": "The data subject must be a direct party to the contract; processing by a data controller to fulfil obligations under a contract with a third party does not qualify under this exception"
     },
     {
       "id": "general-X2",
-      "exception": "Processing necessary for compliance with a legal obligation to which the data user is subject, other than an obligation imposed by contract",
+      "exception": "Processing necessary for compliance with a legal obligation to which the data controller is subject, other than an obligation imposed by contract",
       "basis": "Section 6(2)(b)",
-      "conditions": "The legal obligation must arise from Malaysian law (statute, subsidiary legislation, court order, or regulatory directive); the data user must not be able to reasonably fulfil the obligation without processing the personal data"
+      "conditions": "The legal obligation must arise from Malaysian law (statute, subsidiary legislation, court order, or regulatory directive); the data controller must not be able to reasonably fulfil the obligation without processing the personal data"
     },
     {
       "id": "general-X3",
@@ -68,9 +68,9 @@
     },
     {
       "id": "general-X5",
-      "exception": "Processing necessary for the purposes of legitimate interests pursued by the data user or by a third party to whom the data is disclosed, except where such interests are overridden by the interests of the data subject",
+      "exception": "Processing necessary for the purposes of legitimate interests pursued by the data controller or by a third party to whom the data is disclosed, except where such interests are overridden by the interests of the data subject",
       "basis": "Section 6(2)(f); 2024 Amendment Act",
-      "conditions": "The data user must conduct a legitimate interest assessment; the processing must be necessary and proportionate; the data subject's reasonable expectations must be considered; a data subject may object to processing under this basis"
+      "conditions": "The data controller must conduct a legitimate interest assessment; the processing must be necessary and proportionate; the data subject's reasonable expectations must be considered; a data subject may object to processing under this basis"
     }
   ],
   "practicalGuidance": "Organizations should implement a consent management framework that captures, stores, and makes auditable the consent of every data subject. Consent mechanisms must be granular — separate consents for separate processing purposes — and must be as easy to withdraw as to give. Where relying on a lawful basis other than consent, the applicable basis must be documented in the organization's Records of Processing Activities (ROPA) before processing begins. The 2024 Amendment strengthened consent requirements by requiring that consent be explicit and distinguishable from other matters; pre-ticked boxes or silence will not constitute valid consent. Organizations with complex processing activities should maintain a processing register mapping each activity to its lawful basis. For the legitimate interests basis, a three-part test applies: (1) identify the legitimate interest; (2) assess necessity of the processing; (3) balance against the data subject's interests, rights, and freedoms.",

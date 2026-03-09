@@ -52,7 +52,7 @@ This Information Security Policy establishes the overarching framework through w
 
 This policy is established in fulfilment of the obligations imposed by:
 
-- **Section 9 (Security Principle)** of the **Personal Data Protection Act 2010 (PDPA)**, which requires data processors and data users to take practical steps to protect personal data from any loss, misuse, modification, unauthorized or accidental access or disclosure, alteration, or destruction.
+- **Section 9 (Security Principle)** of the **Personal Data Protection Act 2010 (PDPA)**, which requires data processors and data controllers to take practical steps to protect personal data from any loss, misuse, modification, unauthorized or accidental access or disclosure, alteration, or destruction.
 - The **Personal Data Protection Standards 2015** issued by the Department of Personal Data Protection (JPDP), which specify minimum technical and organizational measures applicable to personal data processing activities.
 - Applicable guidelines and circulars issued by **Bank Negara Malaysia (BNM)** and the **National Cyber Security Agency (NACSA)** where [Organization Name] is subject to their jurisdiction.
 
@@ -77,7 +77,7 @@ This policy applies to:
 **Geographic Coverage:**
 
 - All operational locations of [Organization Name] within Malaysia.
-- Processing activities conducted outside Malaysia where [Organization Name] remains the data user responsible for the personal data.
+- Processing activities conducted outside Malaysia where [Organization Name] remains the data controller responsible for the personal data.
 
 **Out of Scope:**
 
@@ -102,9 +102,9 @@ The Board of Directors and Senior Management of [Organization Name] endorse this
 
 | Term | Definition |
 |---|---|
-| **Data User** | A person who either alone, jointly, or in common with other persons processes any personal data, or has control over or authorizes the processing of any personal data, but does not include a data processor. |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user and does not process personal data for any of the data processor's own purposes. |
-| **Personal Data** | Any information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, that is recorded with the intention that it should be wholly or partly processed by means of such equipment, or that is recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, including any sensitive personal data and expression of opinion about the data subject (PDPA s4). |
+| **Data Controller** | A person who either alone, jointly, or in common with other persons processes any personal data, or has control over or authorizes the processing of any personal data, but does not include a data processor. |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller and does not process personal data for any of the data processor's own purposes. |
+| **Personal Data** | Any information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, that is recorded with the intention that it should be wholly or partly processed by means of such equipment, or that is recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, including any sensitive personal data and expression of opinion about the data subject (PDPA s4). |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject; his political opinions; his religious beliefs or other beliefs of a similar nature; the commission or alleged commission by him of any offence; or any other personal data as the Minister may determine (PDPA s40). |
 | **Processing** | Collecting, recording, holding or storing personal data or carrying out any operation or set of operations on personal data, including organizing, adapting, or altering; retrieving, consulting, or using; disclosing by transmitting, transferring, disseminating, or otherwise making available; or aligning, combining, correcting, erasing, or destroying personal data. |
 | **Information Asset** | Any data, system, application, infrastructure component, or knowledge resource that has value to [Organization Name] and requires protection. |
@@ -1019,7 +1019,7 @@ In the event of a business continuity incident affecting personal data processin
 
 ### 10.1 Third-Party Risk Management Framework
 
-*The PDPA imposes obligations on data users even when personal data is processed by a data processor. This section defines the framework for managing security risks introduced by third-party relationships.*
+*The PDPA imposes obligations on data controllers even when personal data is processed by a data processor. This section defines the framework for managing security risks introduced by third-party relationships.*
 
 [Organization Name] recognizes that personal data shared with or processed by third-party vendors and service providers remains subject to the same protection obligations under PDPA s9. Accordingly, [Organization Name] shall conduct due diligence on third parties prior to engaging them to process personal data, and shall monitor their security posture throughout the relationship.
 
@@ -1561,7 +1561,7 @@ Does it contain personal data as defined under the PDPA?
 
 | Term | PDPA Reference | Plain Language Explanation |
 |---|---|---|
-| Data User | s4 | The organization (or person) that decides why and how personal data is processed — i.e., [Organization Name] in most contexts |
+| Data Controller | s4 | The organization (or person) that decides why and how personal data is processed — i.e., [Organization Name] in most contexts |
 | Data Processor | s4 | A third party that processes personal data on behalf of [Organization Name], following [Organization Name]'s instructions |
 | Data Subject | s4 | The individual whose personal data is being processed — the customer, employee, or other natural person |
 | Personal Data | s4 | Any information relating to an identifiable living individual in the context of commercial transactions |

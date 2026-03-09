@@ -115,7 +115,7 @@ This report is prepared in accordance with, and addresses obligations arising fr
 |---|---|
 | Personal Data Protection Act 2010 (Act 709) | Primary data protection legislation; all seven principles |
 | Personal Data Protection Regulations 2013 | Processing standards and security measures |
-| Personal Data Protection (Class of Data Users) Order 2013 | Classification of [Organisation Name] as a data user in the [relevant] class |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Classification of [Organisation Name] as a data controller in the [relevant] class |
 | Personal Data Protection (Fees) Regulations 2013 | Registration and notification obligations |
 | [Other applicable BNM policy documents / PDPA subsidiary legislation] | [Relevance] |
 
@@ -158,7 +158,7 @@ The following are explicitly excluded from the scope of this report:
 
 ### 3.1 Overview of PDPA Obligations
 
-The PDPA establishes **seven data protection principles** that govern the collection, processing, and handling of personal data by data users in Malaysia. [Organisation Name] is registered as a data user under **[Class of Data User]** pursuant to the Personal Data Protection (Class of Data Users) Order 2013. The following table summarises the applicable principles and the primary internal controls through which compliance is maintained.
+The PDPA establishes **seven data protection principles** that govern the collection, processing, and handling of personal data by data controllers in Malaysia. [Organisation Name] is registered as a data controller under **[Class of Data Controller]** pursuant to the Personal Data Protection (Class of Data Controllers) Order 2013. The following table summarises the applicable principles and the primary internal controls through which compliance is maintained.
 
 | # | PDPA Principle | Statutory Provision | Primary Control(s) |
 |---|---|---|---|
@@ -813,7 +813,7 @@ By signing below, the approvers confirm that they have reviewed this Annual Data
 |---|---|---|
 | Act 709 | Personal Data Protection Act 2010 | All, with particular focus on s.5 (General Principle) and s.9 (Retention Principle) |
 | PU(A) 335/2013 | Personal Data Protection Regulations 2013 | Processing standards; security measures |
-| PU(A) 336/2013 | Personal Data Protection (Class of Data Users) Order 2013 | Classification of data users by sector |
+| PU(A) 336/2013 | Personal Data Protection (Class of Data Controllers) Order 2013 | Classification of data controllers by sector |
 | PU(A) 337/2013 | Personal Data Protection (Fees) Regulations 2013 | Registration fees and obligations |
 
 ### 13.2 Specific PDPA Provisions Referenced in This Report
@@ -963,11 +963,11 @@ By signing below, the approvers confirm that they have reviewed this Annual Data
 
 | Term | Definition |
 |---|---|
-| **Data User** | An organisation that processes personal data in connection with its business in Malaysia, as defined under PDPA s.4. |
+| **Data Controller** | An organisation that processes personal data in connection with its business in Malaysia, as defined under PDPA s.4. |
 | **Data Subject** | An individual who is the subject of personal data, as defined under PDPA s.4. |
-| **Personal Data** | Information in respect of commercial transactions that is processed directly by a data user, as defined under PDPA s.4. |
+| **Personal Data** | Information in respect of commercial transactions that is processed directly by a data controller, as defined under PDPA s.4. |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject; his political opinions; his religious beliefs or other beliefs of a similar nature; the commission or alleged commission of any offence; or any other personal data as the Minister may determine, as defined under PDPA s.40. |
-| **Data Processing Agreement (DPA)** | A contractual agreement between a data user and a third-party data processor establishing the terms under which personal data may be processed on behalf of the data user. |
+| **Data Processing Agreement (DPA)** | A contractual agreement between a data controller and a third-party data processor establishing the terms under which personal data may be processed on behalf of the data controller. |
 | **Data Protection Officer (DPO)** | The appointed officer responsible for overseeing [Organisation Name]'s PDPA compliance programme. |
 | **DPIA** | Data Protection Impact Assessment — a systematic process for identifying and mitigating data protection risks associated with new or changed processing activities. |
 | **DSR** | Data Subject Request — a request from a data subject to exercise their rights under the PDPA, including the right of access (s.30) and the right of correction (s.34). |

@@ -17,7 +17,7 @@
         {
           "id": "esec-1",
           "title": "Scope",
-          "content": "This Standard applies to all personal data processed by electronic means, including data stored in databases, email systems, cloud platforms, mobile applications, and any other electronic medium. It applies to all personal data processors acting on behalf of data users as well as to data users directly."
+          "content": "This Standard applies to all personal data processed by electronic means, including data stored in databases, email systems, cloud platforms, mobile applications, and any other electronic medium. It applies to all personal data processors acting on behalf of data controllers as well as to data controllers directly."
         },
         {
           "id": "esec-2",
@@ -55,18 +55,18 @@
         {
           "id": "esec-5",
           "title": "Security Incident Management",
-          "content": "Data users must establish a formal security incident management procedure including: (a) a documented incident response plan (IRP) covering detection, containment, eradication, recovery, and post-incident review; (b) a designated incident response team with defined roles and responsibilities; (c) a security incident register logging all security incidents, their nature, impact, and resolution; (d) escalation procedures for incidents that may constitute notifiable data breaches under s143A; (e) post-incident reviews for all significant incidents; and (f) annual testing of the IRP through tabletop exercises or simulations.",
+          "content": "Data users must establish a formal security incident management procedure including: (a) a documented incident response plan (IRP) covering detection, containment, eradication, recovery, and post-incident review; (b) a designated incident response team with defined roles and responsibilities; (c) a security incident register logging all security incidents, their nature, impact, and resolution; (d) escalation procedures for incidents that may constitute notifiable data breaches under s12B; (e) post-incident reviews for all significant incidents; and (f) annual testing of the IRP through tabletop exercises or simulations.",
           "requirements": [
             "Incident response plan must be documented and reviewed at least annually",
             "Security incident register must be maintained and available for Commissioner inspection",
             "Annual IRP testing is mandatory",
-            "Incidents potentially constituting notifiable data breaches must trigger the s143A notification process"
+            "Incidents potentially constituting notifiable data breaches must trigger the s12B notification process"
           ]
         },
         {
           "id": "esec-6",
           "title": "Third-Party and Cloud Processing",
-          "content": "Where personal data is processed by third parties (data processors) or in cloud environments, the data user must: (a) conduct due diligence on the cloud provider or processor's security certifications (ISO 27001, SOC 2 Type II, or equivalent); (b) ensure the service agreement includes security requirements equivalent to this Standard; (c) verify that cloud data is stored in Malaysia or in an adequate country, or that a cross-border transfer mechanism is in place; (d) retain the right to audit or obtain audit reports from the cloud provider or processor; and (e) ensure that data is deleted or returned at the end of the service relationship.",
+          "content": "Where personal data is processed by third parties (data processors) or in cloud environments, the data controller must: (a) conduct due diligence on the cloud provider or processor's security certifications (ISO 27001, SOC 2 Type II, or equivalent); (b) ensure the service agreement includes security requirements equivalent to this Standard; (c) verify that cloud data is stored in Malaysia or in an adequate country, or that a cross-border transfer mechanism is in place; (d) retain the right to audit or obtain audit reports from the cloud provider or processor; and (e) ensure that data is deleted or returned at the end of the service relationship.",
           "requirements": [
             "Cloud provider must have recognized security certification (ISO 27001 or equivalent)",
             "Data location must be verified and documented",
@@ -77,7 +77,7 @@
         {
           "id": "esec-7",
           "title": "Staff Training and Awareness",
-          "content": "Data users must ensure that all staff with access to personal data receive regular security awareness training. Training must cover: (a) PDPA obligations and the consequences of non-compliance; (b) phishing and social engineering awareness; (c) secure handling of personal data in electronic systems; (d) password management best practices; (e) incident reporting procedures; and (f) specific risks relevant to the data user's sector. Training must be conducted at induction and at least annually thereafter. Records of training must be maintained.",
+          "content": "Data users must ensure that all staff with access to personal data receive regular security awareness training. Training must cover: (a) PDPA obligations and the consequences of non-compliance; (b) phishing and social engineering awareness; (c) secure handling of personal data in electronic systems; (d) password management best practices; (e) incident reporting procedures; and (f) specific risks relevant to the data controller's sector. Training must be conducted at induction and at least annually thereafter. Records of training must be maintained.",
           "requirements": [
             "Induction training for all new staff with access to personal data",
             "Annual refresher training mandatory",
@@ -96,7 +96,7 @@
         {
           "id": "nesec-1",
           "title": "Scope",
-          "content": "This Standard applies to personal data processed in non-electronic form, including paper records, printed documents, handwritten files, microfiche, and any other tangible medium. It applies to data users and their data processors."
+          "content": "This Standard applies to personal data processed in non-electronic form, including paper records, printed documents, handwritten files, microfiche, and any other tangible medium. It applies to data controllers and their data processors."
         },
         {
           "id": "nesec-2",
@@ -142,7 +142,7 @@
         {
           "id": "ret-1",
           "title": "Scope",
-          "content": "This Standard applies to all personal data processed by data users in both electronic and non-electronic form. It establishes the framework for retention periods and the procedures for secure deletion and destruction at the end of the retention period."
+          "content": "This Standard applies to all personal data processed by data controllers in both electronic and non-electronic form. It establishes the framework for retention periods and the procedures for secure deletion and destruction at the end of the retention period."
         },
         {
           "id": "ret-2",
@@ -158,7 +158,7 @@
         {
           "id": "ret-3",
           "title": "Sector-Specific Retention Periods",
-          "content": "Where other written law mandates a minimum retention period (e.g., Companies Act 2016 — 7 years for financial records; AMLA 2001 — 6 years for KYC records; Employment Act 1955 — 6 years for payroll records), the data user must retain personal data for at least the statutory minimum period. Where the PDPA purpose-based retention would be shorter, the statutory minimum prevails. Where the PDPA purpose-based retention would be longer than the statutory minimum, the statutory minimum is the ceiling unless there is a separate PDPA-compliant purpose justifying extended retention.",
+          "content": "Where other written law mandates a minimum retention period (e.g., Companies Act 2016 — 7 years for financial records; AMLA 2001 — 6 years for KYC records; Employment Act 1955 — 6 years for payroll records), the data controller must retain personal data for at least the statutory minimum period. Where the PDPA purpose-based retention would be shorter, the statutory minimum prevails. Where the PDPA purpose-based retention would be longer than the statutory minimum, the statutory minimum is the ceiling unless there is a separate PDPA-compliant purpose justifying extended retention.",
           "requirements": [
             "Statutory retention requirements under other laws must be documented in the retention schedule",
             "Conflicts between PDPA purpose-limitation and statutory minimums must be resolved in favour of compliance with all applicable law",
@@ -187,7 +187,7 @@
         {
           "id": "ret-5",
           "title": "Retention for Legal Proceedings",
-          "content": "Where personal data is relevant to actual or reasonably anticipated legal proceedings (litigation hold), the data user may retain the data beyond the standard retention period for the duration of the proceedings. The legal hold must be documented, specifying the proceedings, the categories of data subject to the hold, and the expected duration. Data under a legal hold must be segregated or flagged to prevent accidental deletion. Once the proceedings are concluded, the data must be disposed of in accordance with the standard retention schedule.",
+          "content": "Where personal data is relevant to actual or reasonably anticipated legal proceedings (litigation hold), the data controller may retain the data beyond the standard retention period for the duration of the proceedings. The legal hold must be documented, specifying the proceedings, the categories of data subject to the hold, and the expected duration. Data under a legal hold must be segregated or flagged to prevent accidental deletion. Once the proceedings are concluded, the data must be disposed of in accordance with the standard retention schedule.",
           "requirements": [
             "Legal holds must be formally declared in writing",
             "Data subject to a legal hold must be identified and protected from routine deletion",
@@ -206,7 +206,7 @@
         {
           "id": "di-1",
           "title": "Scope",
-          "content": "This Standard applies to all personal data processed by data users in both electronic and non-electronic form. It requires data users to implement procedures to ensure that personal data remains accurate, complete, and current throughout the processing lifecycle."
+          "content": "This Standard applies to all personal data processed by data controllers in both electronic and non-electronic form. It requires data controllers to implement procedures to ensure that personal data remains accurate, complete, and current throughout the processing lifecycle."
         },
         {
           "id": "di-2",
@@ -226,14 +226,14 @@
           "requirements": [
             "Data quality audits must be conducted at least annually for high-volume processing",
             "Change logs must be retained for minimum 12 months",
-            "Multi-system data users must implement synchronization processes to prevent inconsistency",
+            "Multi-system data controllers must implement synchronization processes to prevent inconsistency",
             "Unauthorized modifications must be treated as security incidents"
           ]
         },
         {
           "id": "di-4",
           "title": "Handling Correction Requests",
-          "content": "Upon receipt of a data correction request from a data subject under s34 of the Act, the data user must: (a) verify the identity of the requesting data subject; (b) assess the accuracy of the correction claimed using available evidence; (c) where the correction is verified, update the personal data in all systems where it is held; (d) notify third parties to whom the inaccurate data was disclosed so they can also correct their records; (e) inform the data subject of the outcome within 21 days; and (f) where the correction is refused, allow the data subject to attach a statement of disagreement to the record.",
+          "content": "Upon receipt of a data correction request from a data subject under s34 of the Act, the data controller must: (a) verify the identity of the requesting data subject; (b) assess the accuracy of the correction claimed using available evidence; (c) where the correction is verified, update the personal data in all systems where it is held; (d) notify third parties to whom the inaccurate data was disclosed so they can also correct their records; (e) inform the data subject of the outcome within 21 days; and (f) where the correction is refused, allow the data subject to attach a statement of disagreement to the record.",
           "requirements": [
             "Correction must be propagated to all systems holding the inaccurate data",
             "Third-party notifications must be completed within 14 days of the correction",
@@ -244,7 +244,7 @@
         {
           "id": "di-5",
           "title": "Data Integrity in Automated Processing",
-          "content": "Where personal data is subject to automated processing including profiling, scoring, or automated decision-making, the data user must: (a) implement controls to ensure that inputs to automated systems are accurate and current; (b) regularly validate automated processing outputs against known benchmarks to detect systematic inaccuracies; (c) provide mechanisms for data subjects to contest automated decisions that significantly affect them; and (d) maintain audit trails of automated processing sufficient to reconstruct the basis for any individual decision.",
+          "content": "Where personal data is subject to automated processing including profiling, scoring, or automated decision-making, the data controller must: (a) implement controls to ensure that inputs to automated systems are accurate and current; (b) regularly validate automated processing outputs against known benchmarks to detect systematic inaccuracies; (c) provide mechanisms for data subjects to contest automated decisions that significantly affect them; and (d) maintain audit trails of automated processing sufficient to reconstruct the basis for any individual decision.",
           "requirements": [
             "Automated decision systems must be tested for accuracy and bias",
             "Input data quality controls are required for automated processing",

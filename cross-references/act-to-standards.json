@@ -111,7 +111,7 @@
       ]
     },
     {
-      "section": "s143A",
+      "section": "s12B",
       "sectionTitle": "Data Breach Notification",
       "part": "X",
       "standardReferences": [
@@ -119,7 +119,7 @@
           "standardId": "pdpa-standard-electronic-security-2015",
           "relevantProvisions": ["s6", "s7"],
           "relationship": "supports",
-          "notes": "The security incident logging and monitoring requirements of the Electronic Security Standard are prerequisites to effective data breach detection and notification under s143A. The Standard's requirements for incident response planning also support timely breach notification."
+          "notes": "The security incident logging and monitoring requirements of the Electronic Security Standard are prerequisites to effective data breach detection and notification under s12B. The Standard's requirements for incident response planning also support timely breach notification."
         }
       ]
     },

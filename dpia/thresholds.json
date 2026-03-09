@@ -1,147 +1,58 @@
 {
-  "sourceType": "constructed-indicative",
-  "title": "DPIA Screening Thresholds",
-  "description": "Criteria to determine when a Data Protection Impact Assessment is required under PDPA 2010",
-  "mandatoryTriggers": [
-    {
-      "id": "T1",
-      "criterion": "Large-scale processing of sensitive personal data",
-      "description": "Processing sensitive data (s4: physical/mental health, political opinions, religious beliefs, criminal offences) affecting more than 10,000 data subjects",
-      "pdpaSection": "s4",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T2",
-      "criterion": "Systematic monitoring of public areas",
-      "description": "CCTV, facial recognition, or location tracking covering public spaces or employee workplaces at scale",
-      "pdpaSection": "s6",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T3",
-      "criterion": "Automated decision-making with significant effects",
-      "description": "Processing that produces legal or similarly significant decisions about individuals without human intervention (credit scoring, employment screening, insurance underwriting)",
-      "pdpaSection": "s6",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T4",
-      "criterion": "Cross-border transfer to non-adequate jurisdictions",
-      "description": "Transfer of personal data outside Malaysia to countries not specified by the Minister under s129(3)",
-      "pdpaSection": "s129",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T5",
-      "criterion": "Processing of children's personal data",
-      "description": "Systematic processing of personal data of children under 18, particularly in educational technology, gaming, or social media contexts",
-      "pdpaSection": "s6",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T6",
-      "criterion": "Biometric data processing for identification",
-      "description": "Use of fingerprint, facial, iris, or voice biometrics for identification or authentication at scale",
-      "pdpaSection": "s4",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T7",
-      "criterion": "Data matching or combining from multiple sources",
-      "description": "Combining personal data from multiple databases, systems, or organizations to create profiles or derive new insights",
-      "pdpaSection": "s6",
-      "riskLevel": "medium"
-    },
-    {
-      "id": "T8",
-      "criterion": "Processing that could result in discrimination",
-      "description": "Use of personal data for profiling that could lead to exclusion, differential treatment, or social sorting based on protected characteristics",
-      "pdpaSection": "s6",
-      "riskLevel": "high"
-    },
-    {
-      "id": "T9",
-      "criterion": "New technology deployment",
-      "description": "First-time use of new technologies (AI/ML, IoT, blockchain, gene sequencing) for processing personal data where impact is not yet fully understood",
-      "pdpaSection": "s9",
-      "riskLevel": "medium"
-    },
-    {
-      "id": "T10",
-      "criterion": "Processing preventing data subjects from exercising rights",
-      "description": "Processing that could limit data subjects' ability to exercise their PDPA rights (access under s30, correction under s34, withdrawal of consent)",
-      "pdpaSection": "s30, s34",
-      "riskLevel": "high"
-    }
-  ],
-  "screeningQuestions": [
-    {
-      "id": "SQ1",
-      "question": "Does the processing involve sensitive personal data as defined in Section 4?",
-      "weight": 3,
-      "category": "data-sensitivity"
-    },
-    {
-      "id": "SQ2",
-      "question": "Will the processing affect more than 10,000 data subjects?",
-      "weight": 2,
-      "category": "scale"
-    },
-    {
-      "id": "SQ3",
-      "question": "Does the processing involve systematic monitoring of individuals?",
-      "weight": 3,
-      "category": "monitoring"
-    },
-    {
-      "id": "SQ4",
-      "question": "Will automated decisions be made that significantly affect individuals?",
-      "weight": 3,
-      "category": "automation"
-    },
-    {
-      "id": "SQ5",
-      "question": "Does the processing involve cross-border data transfers?",
-      "weight": 2,
-      "category": "cross-border"
-    },
-    {
-      "id": "SQ6",
-      "question": "Is this a new type of processing or use of new technology?",
-      "weight": 2,
-      "category": "novelty"
-    },
-    {
-      "id": "SQ7",
-      "question": "Does the processing involve data about children or vulnerable individuals?",
-      "weight": 3,
-      "category": "vulnerability"
-    },
-    {
-      "id": "SQ8",
-      "question": "Could the processing result in physical, financial, or reputational harm?",
-      "weight": 2,
-      "category": "impact"
-    },
-    {
-      "id": "SQ9",
-      "question": "Will personal data be combined from multiple sources?",
-      "weight": 2,
-      "category": "combination"
-    },
-    {
-      "id": "SQ10",
-      "question": "Does the processing involve biometric or genetic data?",
-      "weight": 3,
-      "category": "biometrics"
-    }
-  ],
-  "scoringGuide": {
-    "threshold": 8,
-    "bands": [
-      { "range": "0-4", "recommendation": "DPIA not required \u2014 document screening decision", "color": "#22c55e" },
-      { "range": "5-7", "recommendation": "DPIA recommended \u2014 consider voluntary assessment", "color": "#f59e0b" },
-      { "range": "8+", "recommendation": "DPIA required \u2014 proceed with full assessment", "color": "#ef4444" }
+  "sourceType": "official-aligned",
+  "title": "DPIA Thresholds & Triggers",
+  "description": "Criteria for determining when a Data Protection Impact Assessment (DPIA) is mandatory, based on JPDP PCP No. 1/2025.",
+  "mandate": {
+    "primary": "Processing operations LIKELY TO RESULT IN A HIGH RISK to the protection of personal data.",
+    "quantitative_thresholds": [
+      {
+        "category": "Sensitive Personal Data (including Biometric)",
+        "threshold": "Processing > 10,000 data subjects",
+        "rationale": "High impact due to data sensitivity"
+      },
+      {
+        "category": "Automated Decision-Making (ADM)",
+        "threshold": "Processing > 10,000 data subjects",
+        "rationale": "High impact due to lack of human intervention"
+      },
+      {
+        "category": "General Personal Data",
+        "threshold": "Processing > 20,000 data subjects",
+        "rationale": "High impact due to scale"
+      }
     ]
-  }
+  },
+  "qualitative_factors": [
+    {
+      "id": "Q1",
+      "factor": "Legal or Significant Effects",
+      "description": "Noticeable impact on individuals' legal status/rights or their financial status, health, reputation, or access to services."
+    },
+    {
+      "id": "Q2",
+      "factor": "Systematic Monitoring",
+      "description": "Publicly accessible areas (e.g., CCTV with profiling capability)."
+    },
+    {
+      "id": "Q3",
+      "factor": "Innovative Technology",
+      "description": "Use of fingerprint, face recognition, or other emerging technologies for enhanced access control/processing."
+    },
+    {
+      "id": "Q4",
+      "factor": "Denial or Restriction of Rights",
+      "description": "Using automated decision-making to approve or reject loan/insurance applications or other rights."
+    },
+    {
+      "id": "Q5",
+      "factor": "Tracking Location or Behaviour",
+      "description": "Eye-tracking, location tracking, or generating data to provide tailored direct marketing."
+    },
+    {
+      "id": "Q6",
+      "factor": "Targeting Vulnerable Individuals",
+      "description": "Processing data of children or other vulnerable subjects to offer services."
+    }
+  ],
+  "decision_logic": "DPIA is REQUIRED if (a) any Quantitative Threshold is met OR (b) based on the DPO's best judgment, any Qualitative Factor suggests high risk."
 }

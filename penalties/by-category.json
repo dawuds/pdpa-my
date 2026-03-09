@@ -10,8 +10,8 @@
     }
   },
   "registration": {
-    "label": "Registration of Data Users",
-    "description": "Offences relating to the failure to register as a data user or processing personal data without valid registration, as required under Part II Division 2",
+    "label": "Registration of Data Controllers",
+    "description": "Offences relating to the failure to register as a data controller or processing personal data without valid registration, as required under Part II Division 2",
     "offenceIds": ["pen-s5-2", "pen-s13"],
     "primarySection": "s13-16",
     "maxPenalty": {
@@ -31,7 +31,7 @@
   },
   "disclosure": {
     "label": "Unauthorized Disclosure",
-    "description": "Offences involving the unauthorized or unlawful disclosure of personal data, whether by data users, their employees, or by the Commissioner and regulatory officers",
+    "description": "Offences involving the unauthorized or unlawful disclosure of personal data, whether by data controllers, their employees, or by the Commissioner and regulatory officers",
     "offenceIds": ["pen-s130", "pen-s132", "pen-s135A"],
     "primarySection": "s130-135A",
     "maxPenalty": {
@@ -52,8 +52,8 @@
   "data-breach": {
     "label": "Data Breach Notification",
     "description": "Offences related to the mandatory data breach notification obligations introduced by the 2024 Amendment Act, including failure to notify the Commissioner within 72 hours and failure to notify affected data subjects",
-    "offenceIds": ["pen-s143A-5"],
-    "primarySection": "s143A",
+    "offenceIds": ["pen-s12B-5"],
+    "primarySection": "s12B",
     "maxPenalty": {
       "fine": "RM500,000",
       "imprisonment": "3 years"
@@ -61,9 +61,9 @@
   },
   "cross-border": {
     "label": "Cross-Border Personal Data Transfer",
-    "description": "Offences related to the unlawful transfer of personal data outside Malaysia without complying with the requirements under s129A, including transfers to non-approved countries and failure to implement adequate safeguards",
-    "offenceIds": ["pen-s129A"],
-    "primarySection": "s129A",
+    "description": "Offences related to the unlawful transfer of personal data outside Malaysia without complying with the requirements under s129, including transfers to non-approved countries and failure to implement adequate safeguards",
+    "offenceIds": ["pen-s129"],
+    "primarySection": "s129",
     "maxPenalty": {
       "fine": "RM1,000,000",
       "imprisonment": "3 years"

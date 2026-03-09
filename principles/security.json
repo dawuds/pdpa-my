@@ -2,7 +2,7 @@
   "id": "security",
   "section": 9,
   "name": "Security Principle",
-  "summary": "A data user shall take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction. The Security Principle applies to both the data user and, through the data user's obligations, to data processors acting on the data user's behalf. It is complemented by the Personal Data Protection Standards 2015, which set specific technical and organisational security requirements.",
+  "summary": "A data controller shall take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction. The Security Principle applies to both the data controller and, through the data controller's obligations, to data processors acting on the data controller's behalf. It is complemented by the Personal Data Protection Standards 2015, which set specific technical and organisational security requirements.",
   "obligations": [
     {
       "id": "security-O1",
@@ -18,7 +18,7 @@
     },
     {
       "id": "security-O3",
-      "obligation": "Ensure that data processors engaged by the data user provide sufficient guarantees with respect to technical and organisational security measures, and take reasonable steps to ensure compliance with those measures",
+      "obligation": "Ensure that data processors engaged by the data controller provide sufficient guarantees with respect to technical and organisational security measures, and take reasonable steps to ensure compliance with those measures",
       "basis": "Section 9(2); Section 43",
       "type": "mandatory"
     },
@@ -46,13 +46,13 @@
       "id": "security-X1",
       "exception": "The security obligation is qualified by the standard of 'practical steps' — it does not impose an absolute obligation to prevent all breaches, but rather requires measures proportionate to the risk",
       "basis": "Section 9(1)",
-      "conditions": "The data user must demonstrate that the measures taken were reasonable given the nature of the data, the state of technology, the cost of implementation, and the likelihood and severity of potential harm; a best-efforts standard applies"
+      "conditions": "The data controller must demonstrate that the measures taken were reasonable given the nature of the data, the state of technology, the cost of implementation, and the likelihood and severity of potential harm; a best-efforts standard applies"
     },
     {
       "id": "security-X2",
-      "exception": "Where a data breach occurs despite reasonable security measures, the data user may not be in violation of the Security Principle if it can demonstrate that appropriate controls were in place and the breach was caused by an unforeseen and unpreventable event",
+      "exception": "Where a data breach occurs despite reasonable security measures, the data controller may not be in violation of the Security Principle if it can demonstrate that appropriate controls were in place and the breach was caused by an unforeseen and unpreventable event",
       "basis": "Section 9(1) (proportionality of 'practical steps')",
-      "conditions": "The data user must have conducted prior risk assessments, have a documented security policy, and respond promptly and appropriately to the breach once discovered; a failure to respond adequately to a known breach will constitute a separate violation"
+      "conditions": "The data controller must have conducted prior risk assessments, have a documented security policy, and respond promptly and appropriately to the breach once discovered; a failure to respond adequately to a known breach will constitute a separate violation"
     }
   ],
   "practicalGuidance": "Organizations should adopt a risk-based approach to data security, calibrating the level of protection to the sensitivity of the data and the potential consequences of a breach. At a minimum, organisations should implement: (1) encryption of personal data at rest and in transit; (2) role-based access controls with the principle of least privilege; (3) multi-factor authentication for systems containing personal data; (4) regular staff training on data security and social engineering; (5) a documented incident response plan that assigns responsibilities and defines escalation paths. The Personal Data Protection Standards 2015 establish minimum standards for both electronic and non-electronic processing. For electronic processing: servers must be secured, access logs maintained, and anti-malware software deployed. For non-electronic processing (paper records): physical security controls such as locked cabinets, clean desk policies, and controlled visitor access are required. Following the 2024 Amendment, organisations must establish a data breach notification procedure that enables them to notify the Commissioner within the prescribed timeframe (details to be specified in subsidiary legislation). The engagement of any third-party processor should be preceded by a security due diligence review and governed by a data processing agreement that includes mandatory security standards.",

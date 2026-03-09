@@ -1,134 +1,89 @@
 {
-  "sourceType": "constructed-indicative",
-  "title": "DPIA Methodology",
-  "description": "Data Protection Impact Assessment methodology aligned with Malaysia PDPA 2010 and international best practices",
+  "sourceType": "official-aligned",
+  "title": "DPIA Methodology (DEICA)",
+  "description": "5-step Data Protection Impact Assessment methodology aligned with JPDP Public Consultation Paper No. 1/2025",
   "legalBasis": {
-    "pdpaSections": ["s6", "s9", "s129", "s129B"],
-    "description": "While PDPA 2010 does not explicitly mandate DPIAs, Sections 6 (General Principle), 9 (Security Principle), 129 (Cross-border transfers), and 129B (Data Protection Officer) collectively require organizations to assess and mitigate data protection risks"
+    "pdpaSections": ["s6", "s9", "s12A", "s12B", "s129", "s43A"],
+    "description": "Mandated by Section 12A of Act 709 (Amendment Act A1727) which requires Data Controllers to appoint a Data Protection Officer (DPO) whose responsibilities include providing support and advice on the implementation of DPIAs."
   },
   "phases": [
     {
       "id": "phase-1",
-      "name": "Screening",
-      "description": "Determine whether a DPIA is required based on processing characteristics",
+      "name": "Describe",
+      "description": "Describe the processing operations (DEICA - Step 1)",
       "steps": [
-        "Identify the data processing activity and its purpose",
-        "Determine categories of personal data involved (general vs sensitive under s4)",
-        "Assess scale of processing (number of data subjects, data volume, geographic scope)",
-        "Check against DPIA threshold criteria",
-        "Document screening decision with justification"
+        "Describe the nature, scope, context and purposes of the processing",
+        "Map the personal data flow (collection, storage, use, disclosure and disposal)",
+        "Identify the categories of personal data (general vs sensitive/biometric under s4)",
+        "Identify all data processors and third parties involved",
+        "Identify any cross-border data transfers (s129)"
       ],
-      "pdpaReferences": ["s4", "s6"],
-      "outputs": ["Screening decision record", "Processing activity description"]
+      "pdpaReferences": ["s4", "s6", "s129"],
+      "outputs": ["Data Flow Diagram", "Processing Activity Description"]
     },
     {
       "id": "phase-2",
-      "name": "Description",
-      "description": "Document the nature, scope, context, and purpose of the processing",
+      "name": "Evaluate",
+      "description": "Evaluate the necessity and proportionality (DEICA - Step 2)",
       "steps": [
-        "Map complete data flow from collection to deletion",
-        "Identify all data processors and third parties involved (s4 definitions)",
-        "Document lawful basis for processing under PDPA principles",
-        "Describe technical infrastructure and security measures",
-        "Identify cross-border data transfers if any (s129)"
+        "Assess if the processing is necessary for the stated purpose",
+        "Confirm the processing is proportionate and not excessive (s6)",
+        "Evaluate if the purpose can be achieved with less personal data",
+        "Verify the lawful basis for processing (consent vs legitimate interest s6(2))",
+        "Review data retention periods against the Retention Principle (s10)"
       ],
-      "pdpaReferences": ["s4", "s5", "s6", "s129"],
-      "outputs": ["Data flow diagram", "Processing register entry", "Third-party inventory"]
+      "pdpaReferences": ["s6", "s10"],
+      "outputs": ["Necessity & Proportionality Assessment"]
     },
     {
       "id": "phase-3",
-      "name": "Necessity & Proportionality",
-      "description": "Assess whether the processing is necessary and proportionate to its purpose",
+      "name": "Identify",
+      "description": "Identify and analyze the specific risks (DEICA - Step 3)",
       "steps": [
-        "Verify processing is necessary for stated purpose (General Principle, s6)",
-        "Confirm data collected is adequate, relevant, and not excessive (s6(1))",
-        "Assess data retention periods against purpose limitation",
-        "Evaluate whether purpose can be achieved with less personal data",
-        "Review consent mechanisms and data subject notice (s7)"
+        "Identify risks of unauthorized access or disclosure (s9)",
+        "Identify risks to data subject rights (access, correction, portability s30-s43A)",
+        "Identify risks of identity theft, fraud, or financial loss",
+        "Assess risks of physical harm or serious loss of confidentiality",
+        "Consider risks to vulnerable subjects (children, employees, patients)"
       ],
-      "pdpaReferences": ["s6", "s7"],
-      "outputs": ["Necessity assessment", "Proportionality analysis"]
+      "pdpaReferences": ["s9", "s30", "s43A"],
+      "outputs": ["Risk Identification Register", "Threat Assessment"]
     },
     {
       "id": "phase-4",
-      "name": "Risk Identification",
-      "description": "Identify risks to data subjects' rights and interests",
+      "name": "Consider",
+      "description": "Consider measures to address the identified risks (DEICA - Step 4)",
       "steps": [
-        "Identify threats to confidentiality (unauthorized access/disclosure)",
-        "Identify threats to integrity (unauthorized modification/corruption)",
-        "Identify threats to availability (loss/destruction of data)",
-        "Assess risks of function creep (processing beyond original purpose)",
-        "Evaluate discrimination or bias risks from processing outcomes",
-        "Consider vulnerable data subjects (children, employees, patients)"
+        "Identify technical measures (encryption, pseudonymization, access control)",
+        "Identify organizational measures (policies, training, DPO oversight)",
+        "Implement data minimization and retention controls",
+        "Establish data breach notification procedures (s12B)",
+        "Conduct cross-border transfer assessments where applicable"
       ],
-      "pdpaReferences": ["s9", "s6"],
-      "outputs": ["Risk register", "Threat assessment"]
+      "pdpaReferences": ["s9", "s12B", "s129"],
+      "outputs": ["Mitigation Plan", "Control Implementation Roadmap"]
     },
     {
       "id": "phase-5",
-      "name": "Risk Assessment",
-      "description": "Evaluate likelihood and severity of identified risks",
+      "name": "Assess",
+      "description": "Assess the overall residual risk level (DEICA - Step 5)",
       "steps": [
-        "Rate likelihood of each risk (1-5 scale)",
-        "Rate impact/severity on data subjects (1-5 scale)",
-        "Calculate risk score (likelihood \u00d7 impact)",
-        "Classify risks using organizational risk matrix",
-        "Prioritize risks requiring mitigation"
+        "Evaluate the likelihood and severity of risks after controls (1-5 scale)",
+        "Map residual risks to the Risk Matrix (Low, Medium, High)",
+        "Determine if the residual risk is acceptable to the organization",
+        "Notify the Commissioner (JPDP) if residual risk remains HIGH (Proposed requirement)",
+        "Obtain sign-off from the Data Protection Officer (DPO)"
       ],
-      "pdpaReferences": ["s9"],
-      "outputs": ["Risk assessment matrix", "Prioritized risk list"]
-    },
-    {
-      "id": "phase-6",
-      "name": "Mitigation",
-      "description": "Identify and implement measures to mitigate identified risks",
-      "steps": [
-        "Design technical controls (encryption, access control, pseudonymization)",
-        "Design organizational controls (policies, training, procedures)",
-        "Implement data minimization measures",
-        "Establish breach notification procedures (s12 Notice Principle alignment)",
-        "Define data retention and deletion schedules",
-        "Plan for data subject rights handling (access, correction, deletion under s30-s42)"
-      ],
-      "pdpaReferences": ["s9", "s12", "s30", "s31", "s32", "s33", "s34", "s36", "s38", "s40", "s42"],
-      "outputs": ["Mitigation plan", "Residual risk assessment", "Implementation timeline"]
-    },
-    {
-      "id": "phase-7",
-      "name": "Consultation",
-      "description": "Consult with stakeholders and the Data Protection Officer",
-      "steps": [
-        "Present DPIA findings to Data Protection Officer (s129B)",
-        "Consult with affected data subjects or their representatives where feasible",
-        "Engage information security team for technical review",
-        "Seek legal counsel on compliance gaps identified",
-        "Consider consulting JPDP (Commissioner) for high-risk processing"
-      ],
-      "pdpaReferences": ["s129B"],
-      "outputs": ["Consultation record", "DPO sign-off", "Stakeholder feedback"]
-    },
-    {
-      "id": "phase-8",
-      "name": "Decision & Review",
-      "description": "Make go/no-go decision and establish ongoing review",
-      "steps": [
-        "Document final risk assessment with residual risks",
-        "Obtain senior management approval for residual risk acceptance",
-        "Define review triggers (material change, incident, 12-month cycle)",
-        "Integrate DPIA into project governance lifecycle",
-        "Archive DPIA as compliance evidence"
-      ],
-      "pdpaReferences": ["s6", "s9"],
-      "outputs": ["DPIA report", "Approval record", "Review schedule"]
+      "pdpaReferences": ["s12A", "s12B"],
+      "outputs": ["Final DPIA Report", "DPO Sign-off", "Residual Risk Assessment"]
     }
   ],
   "reviewTriggers": [
     "Material change to processing purpose or scope",
-    "New categories of personal data collected",
+    "New categories of personal data (especially biometric/health data)",
     "New technology or processing method introduced",
-    "Data breach or security incident related to the processing",
+    "Data breach or security incident (s12B)",
     "Regulatory guidance or enforcement action by JPDP",
-    "Annual review cycle (minimum)",
-    "Change in data processor or cross-border transfer arrangements"
+    "At least every two (2) years (Proposed retention requirement)"
   ]
 }

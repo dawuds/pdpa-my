@@ -60,7 +60,7 @@ This procedure establishes the requirements and process for planning, delivering
 This procedure applies to:
 
 - **[Organization Name]** and all its business units, departments, and subsidiaries operating within Malaysia.
-- All personal data processing activities conducted by [Organization Name] as a **data user** under the PDPA.
+- All personal data processing activities conducted by [Organization Name] as a **data controller** under the PDPA.
 
 ### 2.2 Personnel in Scope
 
@@ -115,8 +115,8 @@ This procedure is established in fulfilment of obligations under the following r
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, as defined under s.4 PDPA. |
-| **Data User** | [Organization Name], being a person who either alone or jointly or in common with other persons processes any personal data or has control over or authorizes the processing of personal data, as defined under s.4 PDPA. |
+| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, as defined under s.4 PDPA. |
+| **Data Controller** | [Organization Name], being a person who either alone or jointly or in common with other persons processes any personal data or has control over or authorizes the processing of personal data, as defined under s.4 PDPA. |
 | **Data Subject** | An individual who is the subject of personal data. |
 | **Data Protection Officer (DPO)** | The designated individual within [Organization Name] responsible for overseeing PDPA compliance. |
 | **Training Register** | The official record maintained by Human Resources documenting all data protection training completions, assessment results, and remediation activities. |
@@ -308,7 +308,7 @@ In addition to mandatory training applicable to all staff, the following role gr
 
 | Training Requirement | Description | Frequency | Delivery Method |
 |---|---|---|---|
-| Consent Management | Obtaining, recording, and managing marketing consent under PDPA and Personal Data Protection (Class of Data Users) Order | Annual | E-learning |
+| Consent Management | Obtaining, recording, and managing marketing consent under PDPA and Personal Data Protection (Class of Data Controllers) Order | Annual | E-learning |
 | Direct Marketing Rules | PDPA Section 43 obligations; opt-out handling | Annual | E-learning |
 | Data Analytics and Profiling | Privacy risks in customer profiling, segmentation, and behavioral analytics | Annual | Workshop |
 | Third-Party Data Sources | Obligations when acquiring personal data from list brokers or partners | Annual | E-learning |
@@ -632,7 +632,7 @@ The DPO is responsible for initiating and managing the review process.
 | Act 709 | Personal Data Protection Act 2010 | Section 12 (Access Principle) — data subject access and correction rights |
 | Act 709 | Personal Data Protection Act 2010 | Section 43 (Direct Marketing) — right to opt out of direct marketing |
 | P.U.(A) 335/2013 | Personal Data Protection Regulations 2013 | Processing standards |
-| [P.U.(A) XXX] | Personal Data Protection (Class of Data Users) Order [Year] | Sector-specific obligations for [Organization Name]'s class of data user |
+| [P.U.(A) XXX] | Personal Data Protection (Class of Data Controllers) Order [Year] | Sector-specific obligations for [Organization Name]'s class of data controller |
 
 ### 15.2 Internal Policy Documents
 

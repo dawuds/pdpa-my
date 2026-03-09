@@ -378,7 +378,7 @@ Each evidence item:
 | `mappings[].frameworkProvision` | string | Framework provision name |
 | `mappings[].notes` | string | Comparison notes |
 
-**`data-user-classes.json`** — Array of 13 data user class objects with applicable instruments.
+**`data-user-classes.json`** — Array of 13 data controller class objects with applicable instruments.
 
 ## The 7 PDPA Principles
 
@@ -407,9 +407,9 @@ The Personal Data Protection (Amendment) Act 2024 (gazetted 17 October 2024, eff
 - **Unauthorized data sale** — New offence targeting data brokerage (new s135A)
 - **Expanded Commissioner powers** — Unannounced inspections, binding guidance, direct financial penalties
 
-## 13 Classes of Data Users
+## 13 Classes of Data Controllers
 
-As defined by the Personal Data Protection (Class of Data Users) Order 2013:
+As defined by the Personal Data Protection (Class of Data Controllers) Order 2013:
 
 1. Communications
 2. Banking & Financial Institutions

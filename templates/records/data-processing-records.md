@@ -71,7 +71,7 @@ These records apply to:
 | Personal Data Protection Act 2010 | Section 9 — Retention Principle | Personal data shall not be kept longer than is necessary for the fulfilment of the purpose |
 | Personal Data Protection Act 2010 | Section 11 — Data Integrity Principle | Reasonable steps shall be taken to ensure personal data is accurate, complete, not misleading, and kept up to date |
 | Personal Data Protection Act 2010 | Section 12 — Access Principle | Data subjects shall be given access to their personal data and the right to correct inaccurate data |
-| Personal Data Protection (Class of Data Users) Order 2013 | Applicable Class | [Specify applicable data user class, e.g., Finance and Insurance] |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Applicable Class | [Specify applicable data controller class, e.g., Finance and Insurance] |
 
 ---
 
@@ -377,14 +377,14 @@ These records are maintained continuously and undergo formal review on the follo
 | Personal Data Protection Act 2010 (Act 709) — **Section 5** | General Principle: Personal data shall only be processed in accordance with the consent of the data subject and for the purpose for which it was collected or a directly related purpose |
 | Personal Data Protection Act 2010 (Act 709) — **Section 9** | Retention Principle: Personal data shall not be kept longer than is necessary for fulfilment of the purpose, including any directly related purpose |
 | Personal Data Protection Act 2010 (Act 709) — **Section 11** | Data Integrity Principle: Data users shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up to date |
-| Personal Data Protection Act 2010 (Act 709) — **Section 12** | Access Principle: Data subjects shall be given access to their personal data held by the data user |
+| Personal Data Protection Act 2010 (Act 709) — **Section 12** | Access Principle: Data subjects shall be given access to their personal data held by the data controller |
 | Personal Data Protection Act 2010 (Act 709) — **Section 129** | Prohibition on transfer of personal data outside Malaysia except to places specified under the Act or approved by the Minister |
 
 ### 12.2 Subsidiary Legislation and Guidelines
 
 | Reference | Description |
 |---|---|
-| Personal Data Protection (Class of Data Users) Order 2013 | Specifies the classes of data users to which the PDPA applies, including [applicable class] |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Specifies the classes of data controllers to which the PDPA applies, including [applicable class] |
 | Personal Data Protection Regulations 2013 | Prescribed standards for processing, security, and retention of personal data |
 | Bank Negara Malaysia (BNM) Risk Management in Technology (RMiT) Policy Document | Cybersecurity and technology risk requirements applicable to financial institutions |
 | [Other applicable guideline] | [Description] |
@@ -433,9 +433,9 @@ These records are maintained continuously and undergo formal review on the follo
 | Term | Definition |
 |---|---|
 | **Automated Decision-Making (ADM)** | Decision-making processes carried out by automated means without meaningful human involvement, producing legal or similarly significant effects on data subjects |
-| **Data Processor** | A person who processes personal data solely on behalf of a data user, and not for any of the processor's own purposes |
+| **Data Processor** | A person who processes personal data solely on behalf of a data controller, and not for any of the processor's own purposes |
 | **Data Subject** | An individual who is the subject of personal data |
-| **Data User** | A person who processes or has control over or authorises the processing of any personal data in respect of commercial transactions |
+| **Data Controller** | A person who processes or has control over or authorises the processing of any personal data in respect of commercial transactions |
 | **De-identification** | The process of removing or modifying personal data such that individuals cannot be identified directly or indirectly |
 | **Personal Data** | Information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically, or recorded with the intention of being processed, that relates directly or indirectly to a data subject who can be identified from that information |
 | **Processing** | Collection, recording, holding or storage, retrieval, alignment, combination, correction, erasure, use, or disclosure by transmission, transfer, dissemination or otherwise making available of personal data |

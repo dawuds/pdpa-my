@@ -1,0 +1,38 @@
+[
+  {
+    "id": "s12A",
+    "part": "II",
+    "division": "II-1A",
+    "title": "Appointment of data protection officer",
+    "sectionNumber": "12A",
+    "obligationType": "mandatory",
+    "verbatim": "(1) A data controller shall appoint one or more data protection officers who shall be accountable to the data controller for the compliance with this Act.\n(2) Where the processing of personal data is carried out by a data processor on behalf of the data controller, the data processor shall appoint one or more data protection officers who shall be accountable to the data processor for the compliance with this Act.\n(3) The data controller shall notify the Commissioner on the appointment of data protection officer in the manner and form as determined by the Commissioner.\n(4) The appointment of data protection officer under subsections (1) and (2) shall not discharge the data controller or data processor from all duties and functions under this Act.",
+    "translation": "Mandatory DPO: Data controllers (and processors acting on their behalf) must appoint at least one DPO to ensure Act compliance. The Commissioner must be notified of the appointment. This appointment does not relieve the organization of its ultimate legal responsibilities under the Act.",
+    "amendedBy": "A1727 s6",
+    "effectiveDate": "Pending Ministerial Notification"
+  },
+  {
+    "id": "s12B",
+    "part": "II",
+    "division": "II-1A",
+    "title": "Data breach notification",
+    "sectionNumber": "12B",
+    "obligationType": "mandatory",
+    "verbatim": "(1) Where a data controller has reason to believe that a personal data breach has occurred, the data controller shall, as soon as practicable, notify the Commissioner in the manner and form as determined by the Commissioner.\n(2) Where the personal data breach under subsection (1) causes or likely to cause any significant harm to the data subject, the data controller shall notify the personal data breach to the data subject in the manner and form as determined by the Commissioner without unnecessary delay.",
+    "translation": "Mandatory Breach Notification: Data controllers must notify the Commissioner as soon as practicable upon believing a breach has occurred. If the breach is likely to cause significant harm, data subjects must also be notified without unnecessary delay.",
+    "amendedBy": "A1727 s6",
+    "effectiveDate": "Pending Ministerial Notification"
+  },
+  {
+    "id": "s43A",
+    "part": "II",
+    "division": "II-4A",
+    "title": "Rights to data portability",
+    "sectionNumber": "43A",
+    "obligationType": "rights-based",
+    "verbatim": "(1) Subject to subsection (2), a data subject may request the data controller to transmit his personal data to another data controller of his choice directly by giving a notice in writing by way of electronic means to the data controller.\n(2) The request for data portability referred to in subsection (1) is subject to technical feasibility and compatibility of the data format.\n(3) Upon receiving the request for data portability under subsection (1), the data controller shall complete the transmission of personal data within the period as may be prescribed.",
+    "translation": "Data Portability: Data subjects have the right to request that their personal data be transmitted directly from one data controller to another in an electronic format, provided it is technically feasible and the formats are compatible. The transmission must be completed within a prescribed timeframe.",
+    "amendedBy": "A1727 s9",
+    "effectiveDate": "Pending Ministerial Notification"
+  }
+]

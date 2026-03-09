@@ -20,19 +20,19 @@
 This Data Sharing Agreement ("Agreement") governs the sharing of personal data between the parties identified herein, in accordance with the **Personal Data Protection Act 2010 (PDPA)**, specifically:
 
 - **Section 8** — Disclosure principle, which prohibits disclosure of personal data to third parties except under lawful conditions
-- **Section 129A** — Provisions relating to data sharing arrangements between independent data users and their respective obligations
+- **Section 129A** — Provisions relating to data sharing arrangements between independent data controllers and their respective obligations
 
 This Agreement applies to all personal data exchanged between the parties from the Effective Date and remains in force for the duration of the sharing arrangement or until terminated in accordance with Section 11 of this Agreement.
 
-**Out of Scope:** This Agreement does not govern personal data processed by a data processor on behalf of a data user (which is subject to a separate Data Processing Agreement), nor does it govern internal data transfers within a single legal entity.
+**Out of Scope:** This Agreement does not govern personal data processed by a data processor on behalf of a data controller (which is subject to a separate Data Processing Agreement), nor does it govern internal data transfers within a single legal entity.
 
 ---
 
 ## 2. Parties and Their Roles
 
-*Identify each party to this agreement, their legal status, regulatory registration details, and their respective role as data user or recipient data user under the PDPA.*
+*Identify each party to this agreement, their legal status, regulatory registration details, and their respective role as data controller or recipient data controller under the PDPA.*
 
-### 2.1 Disclosing Party (Data User)
+### 2.1 Disclosing Party (Data Controller)
 
 | Field | Details |
 |-------|---------|
@@ -44,7 +44,7 @@ This Agreement applies to all personal data exchanged between the parties from t
 | **Contact Email** | [Email Address] |
 | **Contact Telephone** | [Telephone Number] |
 
-### 2.2 Receiving Party (Recipient Data User)
+### 2.2 Receiving Party (Recipient Data Controller)
 
 | Field | Details |
 |-------|---------|
@@ -327,7 +327,7 @@ Where a cross-border transfer is necessary and authorised in writing, it is perm
 
 - [ ] The destination country is listed in a Minister's Order under Section 129(2) PDPA as providing adequate protection
 - [ ] The data subject has consented to the transfer
-- [ ] The transfer is necessary for the performance of a contract between the data subject and the data user
+- [ ] The transfer is necessary for the performance of a contract between the data subject and the data controller
 - [ ] The transfer is for the benefit of the data subject and consent cannot reasonably be obtained, and the data subject would not reasonably object
 - [ ] The Receiving Party has provided adequate contractual safeguards (e.g., standard contractual clauses) approved by the Disclosing Party and, where required, by the relevant authority
 
@@ -419,7 +419,7 @@ The following legislative provisions and regulatory documents are directly refer
 | Reference | Description |
 |-----------|-------------|
 | Personal Data Protection Act 2010 (Act 709) — **Section 8** | Disclosure principle — prohibition on disclosure of personal data without data subject consent or statutory exemption |
-| Personal Data Protection Act 2010 (Act 709) — **Section 129A** | Data sharing arrangements between independent data users |
+| Personal Data Protection Act 2010 (Act 709) — **Section 129A** | Data sharing arrangements between independent data controllers |
 | Personal Data Protection Act 2010 (Act 709) — Section 6 | Consent principle |
 | Personal Data Protection Act 2010 (Act 709) — Section 9 | Security principle |
 | Personal Data Protection Act 2010 (Act 709) — Section 30 | Right of access to personal data |

@@ -1,4 +1,4 @@
-# Joint Data User Agreement
+# Joint Data Controller Agreement
 
 ---
 
@@ -17,13 +17,13 @@
 
 ## Parties to This Agreement
 
-This Joint Data User Agreement ("Agreement") is entered into as of **[Effective Date]** between:
+This Joint Data Controller Agreement ("Agreement") is entered into as of **[Effective Date]** between:
 
 **Party A:** [Full Legal Name of Organisation A], a company incorporated in Malaysia with registration number [Company Registration Number], having its registered address at [Registered Address] ("**[Short Name A]**")
 
 **Party B:** [Full Legal Name of Organisation B], a company incorporated in Malaysia with registration number [Company Registration Number], having its registered address at [Registered Address] ("**[Short Name B]**")
 
-[Party A and Party B are collectively referred to as the "**Joint Data Users**" and individually as a "**Party**".]
+[Party A and Party B are collectively referred to as the "**Joint Data Controllers**" and individually as a "**Party**".]
 
 ---
 
@@ -31,7 +31,7 @@ This Joint Data User Agreement ("Agreement") is entered into as of **[Effective 
 
 ### 1.1 Purpose
 
-This Agreement governs the joint processing of personal data by the Parties in their capacities as **joint data users** as contemplated under the **Personal Data Protection Act 2010 (PDPA)**, where both Parties jointly determine the purposes and means of processing personal data relating to identified or identifiable natural persons.
+This Agreement governs the joint processing of personal data by the Parties in their capacities as **joint data controllers** as contemplated under the **Personal Data Protection Act 2010 (PDPA)**, where both Parties jointly determine the purposes and means of processing personal data relating to identified or identifiable natural persons.
 
 This Agreement establishes:
 
@@ -72,17 +72,17 @@ This Agreement is made with reference to and in compliance with the following le
 
 ---
 
-## 2. Identification of Joint Data Users and Shared Processing Scope
+## 2. Identification of Joint Data Controllers and Shared Processing Scope
 
-*Confirm each Party's status as a data user and precisely define the shared data assets and processing operations that establish joint controllership. Attach a detailed data inventory as Appendix A.*
+*Confirm each Party's status as a data controller and precisely define the shared data assets and processing operations that establish joint controllership. Attach a detailed data inventory as Appendix A.*
 
-### 2.1 Confirmation of Joint Data User Status
+### 2.1 Confirmation of Joint Data Controller Status
 
 The Parties hereby confirm and acknowledge that, with respect to the processing activities described in Section 1.2, each Party:
 
 - jointly determines the **purposes** for which the personal data is processed;
 - jointly determines, or materially influences, the **means** by which such personal data is processed; and
-- accordingly holds the status of a **data user** within the meaning of the PDPA in respect of that personal data.
+- accordingly holds the status of a **data controller** within the meaning of the PDPA in respect of that personal data.
 
 ### 2.2 Description of Shared Personal Data
 
@@ -179,7 +179,7 @@ Data subjects may exercise their rights by contacting:
 
 ---
 
-## 5. Notification Obligations Between Joint Data Users
+## 5. Notification Obligations Between Joint Data Controllers
 
 *Establish clear internal notification duties to ensure each Party can meet its regulatory and contractual obligations in a timely manner. Failure to notify may result in PDPA breaches attributable to the non-notifying Party.*
 
@@ -319,13 +319,13 @@ The **transferring Party** bears primary responsibility for ensuring each transf
 
 ---
 
-## 9. Liability and Indemnification Between Joint Data Users
+## 9. Liability and Indemnification Between Joint Data Controllers
 
 *This section allocates financial and legal risk between the Parties. The allocation should reflect the Responsibility Allocation Matrix in Section 3.1 and be reviewed by each Party's legal counsel before execution.*
 
 ### 9.1 Independent Liability to Data Subjects and Regulators
 
-Each Party acknowledges that, as a joint data user, it may independently be subject to enforcement action by the PDPD or civil claims by data subjects. Each Party shall bear its own costs and liability arising from its independent non-compliance with the PDPA.
+Each Party acknowledges that, as a joint data controller, it may independently be subject to enforcement action by the PDPD or civil claims by data subjects. Each Party shall bear its own costs and liability arising from its independent non-compliance with the PDPA.
 
 ### 9.2 Shared Liability
 
@@ -365,7 +365,7 @@ Each Party ("**Indemnifying Party**") agrees to indemnify, defend, and hold harm
 
 The Parties shall ensure that data subjects whose personal data is jointly processed receive a clear, accessible, and accurate privacy notice that:
 
-- identifies **both** Parties as data users in relation to the jointly processed data, or identifies the Lead Party and discloses the existence of the joint processing arrangement;
+- identifies **both** Parties as data controllers in relation to the jointly processed data, or identifies the Lead Party and discloses the existence of the joint processing arrangement;
 - describes the purposes for which the personal data is jointly processed;
 - discloses the categories of third parties (including sub-processors) to whom personal data may be disclosed;
 - explains how data subjects may exercise their rights, including the Lead Party contact details; and
@@ -503,8 +503,8 @@ This Agreement may be executed in counterparts, each of which shall constitute a
 | Personal Data Protection Act 2010 (Act 709) — s8 | Security Principle: Obligation to protect personal data from loss, misuse, and unauthorised access |
 | Personal Data Protection Act 2010 (Act 709) — s9 | Retention Principle: Retention of personal data only as long as necessary |
 | Personal Data Protection Act 2010 (Act 709) — s30–s43 | Data subject rights: Access, correction, withdrawal of consent, and objection |
-| PDPA (Personal Data Protection Standards) Regulations 2012 | Minimum security standards for data users |
-| PDPA (Class of Data Users) Order 2013 | Classification of regulated data users by industry sector |
+| PDPA (Personal Data Protection Standards) Regulations 2012 | Minimum security standards for data controllers |
+| PDPA (Class of Data Controllers) Order 2013 | Classification of regulated data controllers by industry sector |
 | BNM Risk Management in Technology (RMiT) Policy Document | Technology and data security obligations for licensed financial institutions |
 | [Other applicable guideline] | [Description] |
 

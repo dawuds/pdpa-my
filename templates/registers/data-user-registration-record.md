@@ -1,4 +1,4 @@
-# Data User Registration Record
+# Data Controller Registration Record
 
 ---
 
@@ -37,25 +37,25 @@
 
 ### 1.1 Purpose
 
-This document serves as the official record of [Organization Name]'s registration as a **Data User** under the **Personal Data Protection Act 2010 (PDPA)**. It consolidates all registration-related information required by the Personal Data Protection Commissioner (the "Commissioner"), including the registration certificate particulars, registered data categories, processing activities, and a complete history of renewals, amendments, and material change notifications submitted pursuant to PDPA sections 13 through 16.
+This document serves as the official record of [Organization Name]'s registration as a **Data Controller** under the **Personal Data Protection Act 2010 (PDPA)**. It consolidates all registration-related information required by the Personal Data Protection Commissioner (the "Commissioner"), including the registration certificate particulars, registered data categories, processing activities, and a complete history of renewals, amendments, and material change notifications submitted pursuant to PDPA sections 13 through 16.
 
-This record is maintained to demonstrate ongoing compliance with the mandatory registration obligations applicable to data users operating in prescribed sectors under the PDPA, and to serve as primary evidence in regulatory inspections, audits, and enforcement inquiries.
+This record is maintained to demonstrate ongoing compliance with the mandatory registration obligations applicable to data controllers operating in prescribed sectors under the PDPA, and to serve as primary evidence in regulatory inspections, audits, and enforcement inquiries.
 
 ### 1.2 Scope
 
 This document applies to:
 
-- All personal data processing activities conducted by [Organization Name] that fall within the scope of the registered class of data users
+- All personal data processing activities conducted by [Organization Name] that fall within the scope of the registered class of data controllers
 - All departments, business units, subsidiaries, and third-party processors acting on behalf of [Organization Name] where such processing is covered under the registered activities
 - All personal data categories notified to the Commissioner under the registration and any subsequent amendments
 
-This record does **not** cover personal data processing activities explicitly exempted under the PDPA or activities falling outside the registered class of data users.
+This record does **not** cover personal data processing activities explicitly exempted under the PDPA or activities falling outside the registered class of data controllers.
 
 ### 1.3 Regulatory Basis
 
 | PDPA Section | Obligation |
 |---|---|
-| **Section 13** | Mandatory registration of data users in prescribed classes |
+| **Section 13** | Mandatory registration of data controllers in prescribed classes |
 | **Section 14** | Conditions and requirements for registration applications |
 | **Section 15** | Renewal of registration; conditions applicable upon renewal |
 | **Section 16** | Notification of material changes to registered particulars |
@@ -71,8 +71,8 @@ This record does **not** cover personal data processing activities explicitly ex
 | Field | Details |
 |-------|---------|
 | **Registration Certificate Number** | [Registration Certificate Number] |
-| **Class of Data User** | [Class, e.g., Financial Institutions / Insurance / Healthcare / etc.] |
-| **Registration Category** | [Category as prescribed under the Personal Data Protection (Class of Data Users) Order] |
+| **Class of Data Controller** | [Class, e.g., Financial Institutions / Insurance / Healthcare / etc.] |
+| **Registration Category** | [Category as prescribed under the Personal Data Protection (Class of Data Controllers) Order] |
 | **Registered Entity Name** | [Organization Full Legal Name] |
 | **Registered Address** | [Registered Business Address] |
 | **Date of Registration** | [DD Month YYYY] |
@@ -264,7 +264,7 @@ This record does **not** cover personal data processing activities explicitly ex
 
 | # | Event Type | Description | Date | Certificate / Reference No. | Processed By | Commissioner Reference | Outcome |
 |---|---|---|---|---|---|---|---|
-| 1 | Initial Registration | [Initial registration of [Organization Name] as data user] | [DD/MM/YYYY] | [Cert No.] | [Name] | [Ref No.] | [Registered — Certificate Issued] |
+| 1 | Initial Registration | [Initial registration of [Organization Name] as data controller] | [DD/MM/YYYY] | [Cert No.] | [Name] | [Ref No.] | [Registered — Certificate Issued] |
 | 2 | Renewal | [First renewal of registration — Year [YYYY]] | [DD/MM/YYYY] | [Cert No.] | [Name] | [Ref No.] | [Renewed — Certificate Issued] |
 | 3 | Amendment | [Amendment to registered data categories] | [DD/MM/YYYY] | [Amendment Ref] | [Name] | [Ref No.] | [Amendment Approved] |
 | 4 | Renewal | [Second renewal of registration — Year [YYYY]] | [DD/MM/YYYY] | [Cert No.] | [Name] | [Ref No.] | [Renewed — Certificate Issued] |
@@ -294,7 +294,7 @@ This record does **not** cover personal data processing activities explicitly ex
 
 ## 9. Roles and Responsibilities
 
-*The following RACI matrix defines accountability for maintaining this record and managing the organization's data user registration obligations under the PDPA.*
+*The following RACI matrix defines accountability for maintaining this record and managing the organization's data controller registration obligations under the PDPA.*
 
 **RACI Key:** R = Responsible | A = Accountable | C = Consulted | I = Informed
 
@@ -352,14 +352,14 @@ This record does **not** cover personal data processing activities explicitly ex
 
 | Reference | Description |
 |---|---|
-| **PDPA Section 13** | Mandatory registration — requirement for data users in prescribed classes to register with the Commissioner before processing personal data |
+| **PDPA Section 13** | Mandatory registration — requirement for data controllers in prescribed classes to register with the Commissioner before processing personal data |
 | **PDPA Section 14** | Registration requirements — conditions, documentation, and information to be provided in a registration application |
 | **PDPA Section 15** | Renewal of registration — obligations to renew registration on or before expiry; conditions applicable to renewal applications |
 | **PDPA Section 16** | Notification of changes — obligation to notify the Commissioner of any material change to registered particulars within the prescribed period |
 | **PDPA Section 129** | Restrictions on cross-border transfer of personal data outside Malaysia |
-| **Personal Data Protection (Class of Data Users) Order 2013** | Prescribes the classes of data users required to register under the PDPA |
-| **Personal Data Protection (Registration of Data User) Regulations 2013** | Procedural requirements for registration, renewal, and amendment applications |
-| **Personal Data Protection (Fees) Regulations 2013** | Registration and renewal fees applicable to each class of data user |
+| **Personal Data Protection (Class of Data Controllers) Order 2013** | Prescribes the classes of data controllers required to register under the PDPA |
+| **Personal Data Protection (Registration of Data Controller) Regulations 2013** | Procedural requirements for registration, renewal, and amendment applications |
+| **Personal Data Protection (Fees) Regulations 2013** | Registration and renewal fees applicable to each class of data controller |
 
 ### 11.2 Internal References
 

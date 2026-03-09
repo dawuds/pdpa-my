@@ -414,7 +414,7 @@ The following regulatory instruments, standards, and internal policies are refer
 | Personal Data Protection Act 2010 (Act 709) — **Section 9** | General Principle: requires personal data to be processed in a manner that upholds the rights of data subjects; underpins the obligation to ensure staff awareness and competency |
 | Personal Data Protection Act 2010 (Act 709) — **Section 3** | Scope of application of the PDPA to commercial transactions involving personal data |
 | Personal Data Protection Act 2010 (Act 709) — **Section 10** | Notice and Choice Principle: informs training content on requirements to notify data subjects |
-| Personal Data Protection (Class of Data Users) Order 2013 | Classification of data users subject to registration and compliance obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Classification of data controllers subject to registration and compliance obligations |
 | Personal Data Protection Standard — Principle 7 (Security) | Requires data processors to take practical steps to protect personal data, including through personnel training |
 | Bank Negara Malaysia (BNM) Risk Management in Technology (RMiT) — Section 10 | Cybersecurity awareness and training obligations applicable to financial institutions *(if applicable)* |
 | [Organization Name] Data Protection Policy | [Document ID] — Internal policy governing the handling of personal data |

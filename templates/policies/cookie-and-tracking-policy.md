@@ -110,8 +110,8 @@ This policy is grounded in the following statutory provisions:
 | Legislation / Regulation | Relevant Provisions | Obligation |
 |---|---|---|
 | Personal Data Protection Act 2010 (PDPA) | Section 6 — Consent Principle | Requires that personal data shall not be processed without the data subject's consent unless a statutory exception applies |
-| Personal Data Protection Act 2010 (PDPA) | Section 7 — Notice and Choice Principle | Requires data users to inform data subjects of the purposes of processing and their right to access, correct, and withdraw consent |
-| Personal Data Protection Act 2010 (PDPA) | Section 5 — General Principle | Personal data must be processed for a lawful purpose directly related to the data user's activities |
+| Personal Data Protection Act 2010 (PDPA) | Section 7 — Notice and Choice Principle | Requires data controllers to inform data subjects of the purposes of processing and their right to access, correct, and withdraw consent |
+| Personal Data Protection Act 2010 (PDPA) | Section 5 — General Principle | Personal data must be processed for a lawful purpose directly related to the data controller's activities |
 | Personal Data Protection Act 2010 (PDPA) | Section 10 — Retention Principle | Personal data shall not be kept longer than necessary for the purpose for which it was collected |
 | Personal Data Protection Act 2010 (PDPA) | Section 9 — Security Principle | Practical steps must be taken to protect personal data from unauthorised access or disclosure |
 
@@ -154,7 +154,7 @@ This policy is grounded in the following statutory provisions:
 | **Local Storage** | A browser-based storage mechanism that persists data beyond the current session and is accessible only by the originating domain. |
 | **Consent Management Platform (CMP)** | A technology solution that facilitates the collection, recording, storage, and management of data subject consent for tracking technologies. |
 | **Data Subject** | A natural person whose personal data is collected, processed, or stored by [Organisation Name]. |
-| **Data User** | [Organisation Name], in its capacity as the entity that processes personal data as defined under the PDPA. |
+| **Data Controller** | [Organisation Name], in its capacity as the entity that processes personal data as defined under the PDPA. |
 | **Data Processor** | A third party that processes personal data on behalf of [Organisation Name] under contract. |
 | **DPO** | Data Protection Officer — the individual designated by [Organisation Name] to oversee PDPA compliance. |
 | **Opt-In** | An affirmative action taken by a data subject to signal agreement to the placement or activation of tracking technologies. |
@@ -313,7 +313,7 @@ The cookie consent banner presented to data subjects upon first visit to [Organi
 
 **Content:**
 
-- The banner must clearly identify [Organisation Name] as the data user.
+- The banner must clearly identify [Organisation Name] as the data controller.
 - The banner must state the categories of tracking technologies used and their purposes in plain, non-technical language.
 - The banner must provide a clear mechanism to accept all, reject all, or customise consent at the category level.
 - The banner must include a link to the full Cookie and Tracking Technology Policy and to [Organisation Name]'s Privacy Notice.

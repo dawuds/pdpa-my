@@ -62,7 +62,7 @@
     {
       "type": "amended",
       "section": "s9",
-      "description": "Security Principle updated to explicitly require data users to implement appropriate technical and organisational measures, and to have procedures for detecting, reporting, and investigating data breaches.",
+      "description": "Security Principle updated to explicitly require data controllers to implement appropriate technical and organisational measures, and to have procedures for detecting, reporting, and investigating data breaches.",
       "amendmentSection": "A1727 s5",
       "impactLevel": "significant",
       "effectiveDate": "2025-04-01",
@@ -80,7 +80,7 @@
     {
       "type": "amended",
       "section": "s18",
-      "description": "Direct marketing provisions strengthened: data users must now provide clear opt-out mechanisms in all marketing communications. Opt-out must be as easy as opting in. Enhanced penalties apply.",
+      "description": "Direct marketing provisions strengthened: data controllers must now provide clear opt-out mechanisms in all marketing communications. Opt-out must be as easy as opting in. Enhanced penalties apply.",
       "amendmentSection": "A1727 s7",
       "impactLevel": "moderate",
       "effectiveDate": "2025-04-01",
@@ -143,7 +143,7 @@
     {
       "type": "amended",
       "section": "s40",
-      "description": "Children's data provisions significantly enhanced. Age of child defined at 18 years. Enhanced penalties (RM500,000 and/or 3 years). Requirement for data users to implement age verification measures where they know or ought to know services are likely to be used by children.",
+      "description": "Children's data provisions significantly enhanced. Age of child defined at 18 years. Enhanced penalties (RM500,000 and/or 3 years). Requirement for data controllers to implement age verification measures where they know or ought to know services are likely to be used by children.",
       "amendmentSection": "A1727 s14",
       "impactLevel": "significant",
       "effectiveDate": "2025-04-01",
@@ -152,7 +152,7 @@
     {
       "type": "new",
       "section": "s41",
-      "description": "New right to data portability introduced. Data subjects may request personal data in a structured, commonly used, machine-readable format. Where technically feasible, data may be transmitted directly to another data user. Applies to data processed by automated means on basis of consent or contract. 21-day compliance deadline.",
+      "description": "New right to data portability introduced. Data subjects may request personal data in a structured, commonly used, machine-readable format. Where technically feasible, data may be transmitted directly to another data controller. Applies to data processed by automated means on basis of consent or contract. 21-day compliance deadline.",
       "amendmentSection": "A1727 s15",
       "impactLevel": "significant",
       "effectiveDate": "2025-06-01",
@@ -170,7 +170,7 @@
     {
       "type": "new",
       "section": "s43",
-      "description": "New right to erasure (right to be forgotten) introduced. Grounds: data no longer necessary; consent withdrawn; unlawful processing; objection upheld; legal compliance. Where data made public, data user must notify other processors of erasure request. Exceptions for freedom of expression, legal compliance, public interest.",
+      "description": "New right to erasure (right to be forgotten) introduced. Grounds: data no longer necessary; consent withdrawn; unlawful processing; objection upheld; legal compliance. Where data made public, data controller must notify other processors of erasure request. Exceptions for freedom of expression, legal compliance, public interest.",
       "amendmentSection": "A1727 s17",
       "impactLevel": "significant",
       "effectiveDate": "2025-06-01",
@@ -250,7 +250,7 @@
     },
     {
       "type": "new",
-      "section": "s129A",
+      "section": "s129",
       "description": "New comprehensive cross-border transfer provision. Expands permitted transfer mechanisms beyond adequacy decisions to include: Commissioner-approved standard contractual clauses (SCCs), binding corporate rules (BCRs), certification schemes, and international arrangements. Commissioner to publish and maintain list of approved mechanisms. Contravention: RM500,000 fine and/or 3 years imprisonment.",
       "amendmentSection": "A1727 s26",
       "impactLevel": "significant",
@@ -259,8 +259,8 @@
     },
     {
       "type": "new",
-      "section": "s129B",
-      "description": "New mandatory Data Protection Officer (DPO) provision. Prescribed class data users must appoint a DPO. DPO functions: advise on obligations, monitor compliance, cooperate with Commissioner, act as data subject contact point. DPO must have adequate resources, data access, and independence. Failure to appoint: RM250,000 fine and/or 2 years imprisonment.",
+      "section": "s12A",
+      "description": "New mandatory Data Protection Officer (DPO) provision. Prescribed class data controllers must appoint a DPO. DPO functions: advise on obligations, monitor compliance, cooperate with Commissioner, act as data subject contact point. DPO must have adequate resources, data access, and independence. Failure to appoint: RM250,000 fine and/or 2 years imprisonment.",
       "amendmentSection": "A1727 s26A",
       "impactLevel": "significant",
       "effectiveDate": "2025-06-01",
@@ -305,7 +305,7 @@
     {
       "type": "new",
       "section": "s136",
-      "description": "New mandatory Data Protection Officer (DPO) provision. Prescribed class data users must appoint a DPO. DPO functions: advise on obligations, monitor compliance, cooperate with Commissioner, act as data subject contact point. DPO must have adequate resources, data access, and independence. Details must be registered with Commissioner and published. Failure to appoint: RM500,000 fine. DPO may be internal or external.",
+      "description": "New mandatory Data Protection Officer (DPO) provision. Prescribed class data controllers must appoint a DPO. DPO functions: advise on obligations, monitor compliance, cooperate with Commissioner, act as data subject contact point. DPO must have adequate resources, data access, and independence. Details must be registered with Commissioner and published. Failure to appoint: RM500,000 fine. DPO may be internal or external.",
       "amendmentSection": "A1727 s29",
       "impactLevel": "significant",
       "effectiveDate": "2025-06-01",
@@ -323,7 +323,7 @@
     {
       "type": "new",
       "section": "s138",
-      "description": "New mandatory Records of Processing Activities (RoPA) provision. Prescribed class data users must maintain comprehensive records including: data user and DPO details, processing purposes, data categories, recipients, cross-border transfers and safeguards, retention periods, security measures description. Must be made available to Commissioner on request. Failure to maintain: RM300,000 fine. Transitional period: 12 months.",
+      "description": "New mandatory Records of Processing Activities (RoPA) provision. Prescribed class data controllers must maintain comprehensive records including: data controller and DPO details, processing purposes, data categories, recipients, cross-border transfers and safeguards, retention periods, security measures description. Must be made available to Commissioner on request. Failure to maintain: RM300,000 fine. Transitional period: 12 months.",
       "amendmentSection": "A1727 s31",
       "impactLevel": "significant",
       "effectiveDate": "2025-06-01",
@@ -331,7 +331,7 @@
     },
     {
       "type": "new",
-      "section": "s143A",
+      "section": "s12B",
       "description": "New mandatory data breach notification provision — the single most operationally significant change in the 2024 Amendment. Requirements: (1) notify Commissioner within 72 hours of becoming aware of a breach likely to cause significant harm; (2) notify affected data subjects as soon as practicable. Commissioner notification must include: breach description, categories and number of data subjects and records affected, DPO contact details, likely consequences, remedial measures. Phased notifications permitted. Data subject notification must be in plain language and include self-protection recommendations. Delay permitted if notification would impede criminal investigation (law enforcement request required). All breaches must be recorded, including those not requiring notification. Failure to comply: RM500,000 fine and/or 3 years imprisonment.",
       "amendmentSection": "A1727 s32",
       "impactLevel": "critical",
@@ -356,8 +356,8 @@
     },
     {
       "theme": "Mandatory Breach Notification",
-      "description": "New section 143A introduces a 72-hour mandatory data breach notification regime — the first of its kind in Malaysian law. This represents the most operationally significant change for data users.",
-      "sections": ["s143A", "s9", "s136"]
+      "description": "New section 143A introduces a 72-hour mandatory data breach notification regime — the first of its kind in Malaysian law. This represents the most operationally significant change for data controllers.",
+      "sections": ["s12B", "s9", "s136"]
     },
     {
       "theme": "Data Protection by Design",
@@ -367,16 +367,16 @@
     {
       "theme": "Enhanced Penalties",
       "description": "Maximum fines increased from RM300,000 to RM500,000 (and up to RM1 million for serious cases under s121). Imprisonment increased to 3 years. Corporate penalties linked to turnover (RM3 million or 10% of turnover). These changes are intended to ensure penalties are proportionate and dissuasive for large organisations.",
-      "sections": ["s128", "s129", "s129A", "s130", "s143A", "s121"]
+      "sections": ["s128", "s129", "s129", "s130", "s12B", "s121"]
     },
     {
       "theme": "Expanded Cross-Border Transfer Mechanisms",
       "description": "New section 129A expands permitted cross-border transfer mechanisms beyond the original adequacy list to include SCCs, BCRs, certification schemes, and international arrangements, providing more practical options for international business.",
-      "sections": ["s129A", "s22"]
+      "sections": ["s129", "s22"]
     },
     {
       "theme": "Accountability and Governance",
-      "description": "Mandatory DPO appointments (s136), DPIA requirements (s137), and records of processing obligations (s138) establish an accountability framework requiring data users to demonstrate compliance proactively.",
+      "description": "Mandatory DPO appointments (s136), DPIA requirements (s137), and records of processing obligations (s138) establish an accountability framework requiring data controllers to demonstrate compliance proactively.",
       "sections": ["s136", "s137", "s138"]
     }
   ]

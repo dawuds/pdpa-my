@@ -5,25 +5,25 @@
   "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
   "effectiveDate": "2025-06-01",
   "parentAct": "Act 709",
-  "enablingSection": "s129B",
-  "summary": "This Guideline provides comprehensive guidance on the mandatory Data Protection Officer (DPO) requirement introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1727) through the insertion of section 129B into the PDPA. Certain categories of data users are required to appoint a qualified DPO and to register the DPO with the Commissioner. The DPO plays a central role in the data user's accountability framework, serving as the key point of contact for the Commissioner, data subjects, and internal stakeholders. The Guideline sets out the criteria for mandatory appointment, qualifications, tasks, independence requirements, and the registration process.",
+  "enablingSection": "s12A",
+  "summary": "This Guideline provides comprehensive guidance on the mandatory Data Protection Officer (DPO) requirement introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1727) through the insertion of section 129B into the PDPA. Certain categories of data controllers are required to appoint a qualified DPO and to register the DPO with the Commissioner. The DPO plays a central role in the data controller's accountability framework, serving as the key point of contact for the Commissioner, data subjects, and internal stakeholders. The Guideline sets out the criteria for mandatory appointment, qualifications, tasks, independence requirements, and the registration process.",
   "provisions": [
     {
       "id": "dpo-1",
       "title": "When is DPO Appointment Mandatory",
-      "content": "Appointment of a DPO is mandatory where a data user: (a) is a data user in a prescribed class under the Class of Data Users Order 2013 that regularly and systematically monitors data subjects on a large scale; (b) processes sensitive personal data (health data, biometric data, genetic data, or data relating to criminal convictions) on a large scale as a core activity; (c) processes the personal data of more than 200,000 data subjects; (d) processes personal data of minors or other vulnerable groups as a core business activity; or (e) has been directed by the Commissioner to appoint a DPO following an audit, investigation, or enforcement action. Data users not meeting these thresholds are encouraged but not required to appoint a DPO. Where doubt exists, the Commissioner recommends appointment.",
+      "content": "Appointment of a DPO is mandatory where a data controller: (a) is a data controller in a prescribed class under the Class of Data Users Order 2013 that regularly and systematically monitors data subjects on a large scale; (b) processes sensitive personal data (health data, biometric data, genetic data, or data relating to criminal convictions) on a large scale as a core activity; (c) processes the personal data of more than 200,000 data subjects; (d) processes personal data of minors or other vulnerable groups as a core business activity; or (e) has been directed by the Commissioner to appoint a DPO following an audit, investigation, or enforcement action. Data users not meeting these thresholds are encouraged but not required to appoint a DPO. Where doubt exists, the Commissioner recommends appointment.",
       "requirements": [
         "Self-assessment of DPO necessity must be documented",
         "Data users meeting thresholds must appoint a DPO before the effective date or within 6 months of meeting a threshold for the first time",
-        "The Commissioner may at any time direct a data user to appoint a DPO",
+        "The Commissioner may at any time direct a data controller to appoint a DPO",
         "Voluntary DPO appointments must meet the same standards as mandatory appointments"
       ],
-      "mandatoryAppointmentStatus": "The mandatory appointment criteria set out in this guideline are based on the Commissioner's 2023 DPO Guideline and represent the PDPC's current interpretation pending formal subsidiary legislation under s129B(2) of the PDPA (as amended by A1727). These criteria are not yet codified in subsidiary legislation and may be revised."
+      "mandatoryAppointmentStatus": "The mandatory appointment criteria set out in this guideline are based on the Commissioner's 2023 DPO Guideline and represent the PDPC's current interpretation pending formal subsidiary legislation under s12A(2) of the PDPA (as amended by A1727). These criteria are not yet codified in subsidiary legislation and may be revised."
     },
     {
       "id": "dpo-2",
       "title": "Qualifications and Skills of the DPO",
-      "content": "The DPO must possess: (a) expert knowledge of Malaysian data protection law and practice, including the PDPA, its subsidiary legislation, Codes of Practice, and guidelines; (b) familiarity with the data processing operations conducted by the data user, including information systems architecture and security measures; (c) knowledge of the regulatory environment applicable to the data user's sector; (d) relevant professional qualifications or certifications in data protection (e.g., CIPM, CIPP/A, or equivalent) are strongly recommended; and (e) demonstrated ability to fulfil the DPO's tasks. The DPO need not be a lawyer but must understand the legal obligations of the data user. The Commissioner will publish a list of recognized data protection certifications on the JPDP website.",
+      "content": "The DPO must possess: (a) expert knowledge of Malaysian data protection law and practice, including the PDPA, its subsidiary legislation, Codes of Practice, and guidelines; (b) familiarity with the data processing operations conducted by the data controller, including information systems architecture and security measures; (c) knowledge of the regulatory environment applicable to the data controller's sector; (d) relevant professional qualifications or certifications in data protection (e.g., CIPM, CIPP/A, or equivalent) are strongly recommended; and (e) demonstrated ability to fulfil the DPO's tasks. The DPO need not be a lawyer but must understand the legal obligations of the data controller. The Commissioner will publish a list of recognized data protection certifications on the JPDP website.",
       "requirements": [
         "DPO qualifications must be documented and verified before appointment",
         "Ongoing professional development is required to maintain currency with legal and technical developments",
@@ -34,10 +34,10 @@
     {
       "id": "dpo-3",
       "title": "Internal vs. External DPO",
-      "content": "A data user may appoint either: (a) an internal DPO — a permanent employee of the data user who holds the DPO role; or (b) an external DPO — an external service provider or consultant engaged to fulfil the DPO function under a service agreement. Both arrangements are permissible. Where an external DPO is appointed, the data user must: (a) ensure there is a written contract clearly setting out the DPO's tasks and scope; (b) designate a senior internal officer as the primary contact with the external DPO; and (c) ensure the external DPO has sufficient access to the data user's systems, processes, and senior management to effectively fulfil the role. Group companies may appoint a single shared DPO for all entities in the group, provided the DPO is accessible to each entity.",
+      "content": "A data controller may appoint either: (a) an internal DPO — a permanent employee of the data controller who holds the DPO role; or (b) an external DPO — an external service provider or consultant engaged to fulfil the DPO function under a service agreement. Both arrangements are permissible. Where an external DPO is appointed, the data controller must: (a) ensure there is a written contract clearly setting out the DPO's tasks and scope; (b) designate a senior internal officer as the primary contact with the external DPO; and (c) ensure the external DPO has sufficient access to the data controller's systems, processes, and senior management to effectively fulfil the role. Group companies may appoint a single shared DPO for all entities in the group, provided the DPO is accessible to each entity.",
       "requirements": [
         "The DPO's contact details (but not personal address) must be published and made available to data subjects",
-        "The data user must ensure the DPO is able to perform the role without conflicts of interest",
+        "The data controller must ensure the DPO is able to perform the role without conflicts of interest",
         "The external DPO's service agreement must not limit the DPO's ability to act independently",
         "Group-level DPO must be accessible to all entities in the group"
       ]
@@ -45,40 +45,40 @@
     {
       "id": "dpo-4",
       "title": "Tasks and Responsibilities of the DPO",
-      "content": "The DPO's responsibilities include: (a) informing and advising the data user and its employees of their obligations under the PDPA; (b) monitoring compliance with the PDPA, including the assignment of responsibilities, awareness-raising, staff training, and related audits; (c) advising on and monitoring data protection impact assessments (DPIAs) for high-risk processing activities; (d) cooperating with the Commissioner and acting as the primary contact point for the Commissioner on all PDPA matters; (e) acting as the contact point for data subjects on all matters related to the processing of their personal data and the exercise of their rights; (f) maintaining the data user's Records of Processing Activities (ROPA); and (g) advising on data breach response, including whether a breach is notifiable and the content of notifications.",
+      "content": "The DPO's responsibilities include: (a) informing and advising the data controller and its employees of their obligations under the PDPA; (b) monitoring compliance with the PDPA, including the assignment of responsibilities, awareness-raising, staff training, and related audits; (c) advising on and monitoring data protection impact assessments (DPIAs) for high-risk processing activities; (d) cooperating with the Commissioner and acting as the primary contact point for the Commissioner on all PDPA matters; (e) acting as the contact point for data subjects on all matters related to the processing of their personal data and the exercise of their rights; (f) maintaining the data controller's Records of Processing Activities (ROPA); and (g) advising on data breach response, including whether a breach is notifiable and the content of notifications.",
       "requirements": [
         "The DPO must be given access to all personal data processing activities and related documentation",
         "The DPO must have a direct reporting line to the most senior level of management",
         "The DPO must be involved in all matters relating to data protection at the earliest opportunity",
-        "The data user must not penalize or dismiss the DPO for performing their duties in good faith"
+        "The data controller must not penalize or dismiss the DPO for performing their duties in good faith"
       ]
     },
     {
       "id": "dpo-5",
       "title": "DPO Independence and Conflict of Interest",
-      "content": "The DPO must be able to perform their duties and tasks in an independent manner. The data user must ensure that the DPO: (a) does not receive any instructions regarding the exercise of their tasks as DPO; (b) is not dismissed or penalized for performing their tasks; (c) does not hold a position that creates a conflict of interest with the DPO role. Positions creating a conflict of interest include: Chief Executive Officer, Chief Financial Officer, Chief Technology Officer, Head of IT, Head of Human Resources, Head of Legal (where legal duties conflict with data protection advice), Head of Marketing (where marketing decisions involve data processing), and equivalent senior positions where the DPO would be supervising their own compliance.",
+      "content": "The DPO must be able to perform their duties and tasks in an independent manner. The data controller must ensure that the DPO: (a) does not receive any instructions regarding the exercise of their tasks as DPO; (b) is not dismissed or penalized for performing their tasks; (c) does not hold a position that creates a conflict of interest with the DPO role. Positions creating a conflict of interest include: Chief Executive Officer, Chief Financial Officer, Chief Technology Officer, Head of IT, Head of Human Resources, Head of Legal (where legal duties conflict with data protection advice), Head of Marketing (where marketing decisions involve data processing), and equivalent senior positions where the DPO would be supervising their own compliance.",
       "requirements": [
         "The DPO must not be the person who makes decisions about the purposes and means of processing",
         "Conflicts of interest must be identified and resolved before or upon appointment",
-        "Where a conflict arises during tenure, the data user must promptly address it",
+        "Where a conflict arises during tenure, the data controller must promptly address it",
         "The DPO's employment contract or service agreement must protect them from dismissal for exercising DPO duties"
       ]
     },
     {
       "id": "dpo-6",
       "title": "Registration of DPO with Commissioner",
-      "content": "A data user who is required to appoint a DPO must register the DPO with the Commissioner within 30 days of the DPO's appointment. The registration must be submitted using the prescribed form on the Commissioner's portal and must include: (a) full name and contact details of the DPO; (b) the data user's name and registration number; (c) the DPO's professional qualifications and certifications; (d) the DPO's role (internal or external); (e) the date of appointment; and (f) for group-level DPOs, the entities covered. Where the DPO changes, the Commissioner must be notified within 30 days of the change, including the reason for the change and details of the replacement DPO.",
+      "content": "A data controller who is required to appoint a DPO must register the DPO with the Commissioner within 30 days of the DPO's appointment. The registration must be submitted using the prescribed form on the Commissioner's portal and must include: (a) full name and contact details of the DPO; (b) the data controller's name and registration number; (c) the DPO's professional qualifications and certifications; (d) the DPO's role (internal or external); (e) the date of appointment; and (f) for group-level DPOs, the entities covered. Where the DPO changes, the Commissioner must be notified within 30 days of the change, including the reason for the change and details of the replacement DPO.",
       "requirements": [
         "Registration deadline: 30 days from appointment",
         "Change notification: 30 days from change",
         "The Commissioner maintains a public register of appointed DPOs accessible on the JPDP website",
-        "Data subjects may use the public register to identify the DPO contact for any registered data user"
+        "Data subjects may use the public register to identify the DPO contact for any registered data controller"
       ]
     },
     {
       "id": "dpo-7",
       "title": "Data Protection Impact Assessment (DPIA)",
-      "content": "The DPO has a central role in advising on and monitoring Data Protection Impact Assessments (DPIAs). A DPIA is required where the data user proposes to undertake a new processing activity that is likely to result in a high risk to the rights and freedoms of data subjects, including: (a) systematic and extensive evaluation of personal aspects, including profiling and automated decision-making; (b) large-scale processing of sensitive personal data; (c) systematic monitoring of publicly accessible areas on a large scale; (d) processing data of vulnerable groups; (e) new technologies with uncertain privacy implications; or (f) processing that could prevent data subjects from exercising a right or using a service. The DPO must advise whether a DPIA is required, review the DPIA methodology, and recommend measures to mitigate identified risks.",
+      "content": "The DPO has a central role in advising on and monitoring Data Protection Impact Assessments (DPIAs). A DPIA is required where the data controller proposes to undertake a new processing activity that is likely to result in a high risk to the rights and freedoms of data subjects, including: (a) systematic and extensive evaluation of personal aspects, including profiling and automated decision-making; (b) large-scale processing of sensitive personal data; (c) systematic monitoring of publicly accessible areas on a large scale; (d) processing data of vulnerable groups; (e) new technologies with uncertain privacy implications; or (f) processing that could prevent data subjects from exercising a right or using a service. The DPO must advise whether a DPIA is required, review the DPIA methodology, and recommend measures to mitigate identified risks.",
       "requirements": [
         "DPIA must be initiated before the processing activity commences",
         "DPO must be consulted and provide written advice on the DPIA",
@@ -89,12 +89,12 @@
     {
       "id": "dpo-8",
       "title": "DPO Cooperation with the Commissioner",
-      "content": "The DPO is the primary point of contact between the data user and the Commissioner. The DPO must: (a) facilitate and cooperate with Commissioner audits, inspections, and investigations; (b) respond to Commissioner enquiries within the timeframes specified; (c) facilitate the Commissioner's access to the data user's systems and records during authorized inspections; (d) coordinate the data user's response to enforcement notices; (e) ensure that data subject complaints referred by the Commissioner are responded to promptly; and (f) provide the Commissioner with regular compliance reports if required by registration conditions. The DPO is personally accountable to the Commissioner for the accuracy of information provided on behalf of the data user.",
+      "content": "The DPO is the primary point of contact between the data controller and the Commissioner. The DPO must: (a) facilitate and cooperate with Commissioner audits, inspections, and investigations; (b) respond to Commissioner enquiries within the timeframes specified; (c) facilitate the Commissioner's access to the data controller's systems and records during authorized inspections; (d) coordinate the data controller's response to enforcement notices; (e) ensure that data subject complaints referred by the Commissioner are responded to promptly; and (f) provide the Commissioner with regular compliance reports if required by registration conditions. The DPO is personally accountable to the Commissioner for the accuracy of information provided on behalf of the data controller.",
       "requirements": [
         "The DPO must not obstruct or mislead the Commissioner",
         "Providing false information to the Commissioner via the DPO is an offence under s134",
         "The DPO must ensure that internal information flows enable them to respond accurately to Commissioner requests",
-        "The DPO should maintain a log of all Commissioner interactions for the data user's records"
+        "The DPO should maintain a log of all Commissioner interactions for the data controller's records"
       ]
     }
   ],
@@ -102,11 +102,11 @@
     "initialAppointmentDeadline": "Before effective date (1 June 2025) or within 6 months of meeting threshold",
     "registrationWithCommissioner": "30 days from DPO appointment",
     "changeNotification": "30 days from change of DPO",
-    "vacancyPeriod": "Maximum 60 days between DPO tenures — the data user must actively recruit a replacement"
+    "vacancyPeriod": "Maximum 60 days between DPO tenures — the data controller must actively recruit a replacement"
   },
   "keywords": [
     "Data Protection Officer", "DPO", "mandatory appointment", "qualifications", "independence",
-    "conflict of interest", "DPIA", "data protection impact assessment", "s129B", "registration",
+    "conflict of interest", "DPIA", "data protection impact assessment", "s12A", "registration",
     "Commissioner contact", "DPO tasks", "group DPO", "external DPO", "ROPA"
   ]
 }

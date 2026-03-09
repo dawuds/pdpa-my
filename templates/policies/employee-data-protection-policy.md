@@ -116,7 +116,7 @@ The following are excluded from the scope of this policy:
 
 ### 3.1 Primary Legislation
 
-This policy is issued in compliance with the **Personal Data Protection Act 2010 (Act 709)** ("**PDPA**"), which governs the processing of personal data in commercial transactions within Malaysia. The PDPA establishes seven data protection principles to which [Organization Name] is bound as a data user.
+This policy is issued in compliance with the **Personal Data Protection Act 2010 (Act 709)** ("**PDPA**"), which governs the processing of personal data in commercial transactions within Malaysia. The PDPA establishes seven data protection principles to which [Organization Name] is bound as a data controller.
 
 | PDPA Principle | Statutory Reference | Summary |
 |---|---|---|
@@ -135,8 +135,8 @@ This policy is issued in compliance with the **Personal Data Protection Act 2010
 | Instrument | Issuing Body | Relevance |
 |---|---|---|
 | Personal Data Protection Regulations 2013 | Minister of Digital | Technical and organizational requirements |
-| Personal Data Protection (Class of Data Users) Order 2013 | Minister of Digital | Classification of [Organization Name] as a data user |
-| Personal Data Protection (Registration of Data Users) Regulations 2013 | PDPC | Registration obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Minister of Digital | Classification of [Organization Name] as a data controller |
+| Personal Data Protection (Registration of Data Controllers) Regulations 2013 | PDPC | Registration obligations |
 | [Sector-specific BNM Policy Document, if applicable] | Bank Negara Malaysia | Sector-specific data governance requirements |
 | [Any applicable NACSA guidelines, if applicable] | NACSA | National cybersecurity standards |
 
@@ -160,10 +160,10 @@ This policy is issued in compliance with the **Personal Data Protection Act 2010
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, including any sensitive personal data and expression of opinion about the data subject (PDPA, s. 4) |
+| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, including any sensitive personal data and expression of opinion about the data subject (PDPA, s. 4) |
 | **Sensitive Personal Data** | Personal data consisting of information about the physical or mental health or condition of a data subject; his political opinions; his religious beliefs or other beliefs of a similar nature; the commission or alleged commission of any offence; or any other personal data as the Minister may determine (PDPA, s. 4) |
-| **Data User** | A person who either alone, or jointly, or in common with other persons, processes any personal data or has control over, or authorizes, the processing of any personal data. [Organization Name] is a data user in respect of employee personal data |
-| **Data Processor** | Any person, other than an employee of the data user, who processes the personal data solely on behalf of the data user, and does not process the personal data for any of his own purposes |
+| **Data Controller** | A person who either alone, or jointly, or in common with other persons, processes any personal data or has control over, or authorizes, the processing of any personal data. [Organization Name] is a data controller in respect of employee personal data |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes the personal data solely on behalf of the data controller, and does not process the personal data for any of his own purposes |
 | **Processing** | Collecting, recording, holding, or storing personal data or carrying out any operation or set of operations on personal data — including organizing, adapting, altering, retrieving, combining, transmitting, erasing, or destroying it |
 | **Data Subject** | An individual who is the subject of personal data. In this policy, data subjects are Covered Persons as defined in Section 2.1 |
 | **Consent** | Any freely given, specific, and informed indication of a data subject's wishes by which, after being provided a written notice, the data subject signifies agreement to personal data relating to him being processed |
@@ -249,9 +249,9 @@ Under PDPA Section 6, [Organization Name] relies on the following lawful bases f
 |---|---|---|
 | **Consent** | s. 6(1) | The data subject has given consent to the processing of their personal data for one or more specific purposes |
 | **Contract** | s. 6(1)(b) | Processing is necessary for the performance of a contract to which the data subject is a party, or to take steps at the request of the data subject prior to entering into a contract |
-| **Legal obligation** | s. 6(1)(c) | Processing is necessary for compliance with a legal obligation to which the data user is subject |
+| **Legal obligation** | s. 6(1)(c) | Processing is necessary for compliance with a legal obligation to which the data controller is subject |
 | **Vital interests** | s. 6(1)(d) | Processing is necessary to protect the vital interests of the data subject |
-| **Legitimate interests** | s. 6(1)(f) | Processing is necessary for the purposes of the legitimate interests pursued by the data user or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject |
+| **Legitimate interests** | s. 6(1)(f) | Processing is necessary for the purposes of the legitimate interests pursued by the data controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject |
 
 ### 6.2 Processing Activity to Lawful Basis Mapping
 
@@ -294,7 +294,7 @@ Under PDPA Section 6, [Organization Name] relies on the following lawful bases f
 
 ## 7. Employee Data Protection Notice Requirements
 
-*PDPA Section 7 (Notice and Choice Principle) requires data users to inform data subjects of the matters listed in s. 7(1) before or at the time of collection. This section specifies how [Organization Name] fulfils that obligation across the employment lifecycle.*
+*PDPA Section 7 (Notice and Choice Principle) requires data controllers to inform data subjects of the matters listed in s. 7(1) before or at the time of collection. This section specifies how [Organization Name] fulfils that obligation across the employment lifecycle.*
 
 ### 7.1 Obligation to Issue Written Notice
 
@@ -328,7 +328,7 @@ Prior to or at the point of collecting personal data from any Covered Person, [O
 
 The Employee Privacy Notice issued at onboarding must address, at minimum, the following:
 
-- [ ] Identity and contact details of [Organization Name] as data user;
+- [ ] Identity and contact details of [Organization Name] as data controller;
 - [ ] Identity and contact details of the DPO;
 - [ ] All categories of personal data collected (aligned with Section 5 of this policy);
 - [ ] All purposes for which personal data is processed (aligned with Section 6);
@@ -530,7 +530,7 @@ Any covert monitoring conducted without proper authorization constitutes a disci
 
 ## 10. HR System Access Controls and Data Segregation
 
-*PDPA Section 9 (Security Principle) requires data users to take practical steps to protect personal data from loss, misuse, modification, unauthorized access or disclosure, and alteration. This section operationalises that obligation for HR systems.*
+*PDPA Section 9 (Security Principle) requires data controllers to take practical steps to protect personal data from loss, misuse, modification, unauthorized access or disclosure, and alteration. This section operationalises that obligation for HR systems.*
 
 ### 10.1 HR System Inventory
 
@@ -792,7 +792,7 @@ The DPO shall maintain a Breach Register documenting all personal data incidents
 
 ## 15. Third-Party and Processor Obligations
 
-*Under PDPA, the data user remains responsible for personal data processed by third parties on its behalf. Contractual controls over processors are essential.*
+*Under PDPA, the data controller remains responsible for personal data processed by third parties on its behalf. Contractual controls over processors are essential.*
 
 ### 15.1 Vendor Due Diligence
 
@@ -948,7 +948,7 @@ This policy shall be reviewed at minimum **annually** by the DPO in conjunction 
 |---|---|
 | Personal Data Protection Regulations 2013 | Technical implementation requirements |
 | Personal Data Protection (Transfer of Personal Data to Places Outside Malaysia) Order | Cross-border transfer controls |
-| Personal Data Protection (Class of Data Users) Order 2013 | [Organization Name]'s classification and registration requirements |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | [Organization Name]'s classification and registration requirements |
 | [BNM Policy Documents applicable to the organization] | Sector-specific data governance requirements |
 
 ### 19.3 Internal Documents
@@ -1083,7 +1083,7 @@ The current Applicant Privacy Notice is located at:
 
 | PDPA Reference | Provision | Summary |
 |---|---|---|
-| s. 4 | Interpretation | Definition of personal data, sensitive personal data, data user, data processor, processing |
+| s. 4 | Interpretation | Definition of personal data, sensitive personal data, data controller, data processor, processing |
 | s. 6 | General Principle | Personal data shall not be processed without consent or unless a lawful exception applies |
 | s. 7 | Notice and Choice Principle | Data users must provide written notice of data collection purposes; data subjects have the right to limit processing |
 | s. 8 | Disclosure Principle | Personal data shall not be disclosed without consent unless a statutory exception applies |
@@ -1091,7 +1091,7 @@ The current Applicant Privacy Notice is located at:
 | s. 10 | Retention Principle | Personal data shall not be retained longer than necessary |
 | s. 11 | Data Integrity Principle | Personal data must be accurate, complete, not misleading, and up to date |
 | s. 12 | Access Principle | Data subjects have the right to access and correct their personal data |
-| s. 38 | Direct marketing opt-out | Data subjects may instruct data users to cease processing for direct marketing purposes |
+| s. 38 | Direct marketing opt-out | Data subjects may instruct data controllers to cease processing for direct marketing purposes |
 
 ---
 

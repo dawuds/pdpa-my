@@ -5,8 +5,8 @@
   "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
   "effectiveDate": "2025-06-01",
   "parentAct": "Act 709",
-  "enablingSection": "s143A",
-  "summary": "This Guideline provides comprehensive guidance on the mandatory data breach notification obligations introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1727) through the insertion of section 143A into the PDPA. All data users are required to notify the Commissioner of a notifiable data breach within 72 hours of becoming aware of it, and in certain circumstances, to notify affected data subjects within 7 days. Failure to comply is an offence under s143A(5). The Guideline aligns Malaysia's breach notification framework with international standards, including the EU GDPR's breach notification requirements.",
+  "enablingSection": "s12B",
+  "summary": "This Guideline provides comprehensive guidance on the mandatory data breach notification obligations introduced by the Personal Data Protection (Amendment) Act 2024 (Act A1727) through the insertion of section 143A into the PDPA. All data controllers are required to notify the Commissioner of a notifiable data breach within 72 hours of becoming aware of it, and in certain circumstances, to notify affected data subjects within 7 days. Failure to comply is an offence under s12B(5). The Guideline aligns Malaysia's breach notification framework with international standards, including the EU GDPR's breach notification requirements.",
   "provisions": [
     {
       "id": "dbn-1",
@@ -33,9 +33,9 @@
     {
       "id": "dbn-3",
       "title": "Notification to the Commissioner — 72-Hour Requirement",
-      "content": "Where a data user has become aware of a notifiable data breach, it must notify the Commissioner within 72 hours of becoming so aware. The 72-hour clock starts when the data user has sufficient certainty that a breach has occurred and has a reasonable understanding of its nature and likely impact. Where full information is not available within 72 hours, an initial notification must be made with the information available, to be supplemented as further information becomes available. 'Becoming aware' means when the data user has reasonable certainty — a mere suspicion or preliminary indication does not trigger the clock, but a data user cannot unreasonably delay investigation to defer the start of the clock.",
+      "content": "Where a data controller has become aware of a notifiable data breach, it must notify the Commissioner within 72 hours of becoming so aware. The 72-hour clock starts when the data controller has sufficient certainty that a breach has occurred and has a reasonable understanding of its nature and likely impact. Where full information is not available within 72 hours, an initial notification must be made with the information available, to be supplemented as further information becomes available. 'Becoming aware' means when the data controller has reasonable certainty — a mere suspicion or preliminary indication does not trigger the clock, but a data controller cannot unreasonably delay investigation to defer the start of the clock.",
       "requirements": [
-        "72-hour clock starts from when the data user 'becomes aware' — not from the date of the breach itself",
+        "72-hour clock starts from when the data controller 'becomes aware' — not from the date of the breach itself",
         "Initial notification may be made with incomplete information — a 'phased' notification is acceptable",
         "Subsequent information must be provided to the Commissioner as it becomes available",
         "Reasons for any delay beyond 72 hours must be documented and communicated to the Commissioner"
@@ -54,13 +54,13 @@
         "Notification must be submitted using the prescribed form available on the JPDP website",
         "All mandatory fields must be completed — partial submissions will not be accepted",
         "Supporting evidence (logs, forensic reports) should be attached where available",
-        "A senior officer of the data user must certify the accuracy of the notification"
+        "A senior officer of the data controller must certify the accuracy of the notification"
       ]
     },
     {
       "id": "dbn-5",
       "title": "Notification to Data Subjects — 7-Day Requirement",
-      "content": "Where a personal data breach is likely to result in a high risk to the rights and freedoms of data subjects, the data user must communicate the breach to the affected data subjects without undue delay and in any case within 7 days of determining that the data subjects must be notified. Notification to data subjects is required where the breach is likely to result in: (a) significant financial harm (e.g., fraud, identity theft); (b) significant reputational harm; (c) physical harm or risk to safety; (d) discrimination or prejudice; or (e) significant distress or psychological harm. Notification to data subjects is not required where: the data was encrypted and the key is not compromised; the data user has taken subsequent measures that eliminate the high risk; or the Commissioner determines that individual notification would involve disproportionate effort, in which case a public communication may be substituted.",
+      "content": "Where a personal data breach is likely to result in a high risk to the rights and freedoms of data subjects, the data controller must communicate the breach to the affected data subjects without undue delay and in any case within 7 days of determining that the data subjects must be notified. Notification to data subjects is required where the breach is likely to result in: (a) significant financial harm (e.g., fraud, identity theft); (b) significant reputational harm; (c) physical harm or risk to safety; (d) discrimination or prejudice; or (e) significant distress or psychological harm. Notification to data subjects is not required where: the data was encrypted and the key is not compromised; the data controller has taken subsequent measures that eliminate the high risk; or the Commissioner determines that individual notification would involve disproportionate effort, in which case a public communication may be substituted.",
       "requirements": [
         "7-day clock for data subject notification starts from the determination that notification is required",
         "The determination itself must be made promptly — it cannot be deferred indefinitely",
@@ -76,7 +76,7 @@
     {
       "id": "dbn-6",
       "title": "Content of Notification to Data Subjects",
-      "content": "The notification to affected data subjects must include: (a) a clear description of the nature of the breach in plain language; (b) the name and contact details of the DPO or other data protection contact; (c) a description of the likely consequences of the breach for the data subject; (d) the steps the data user has taken or proposes to take to address the breach; (e) specific protective measures the data subject can take (e.g., changing passwords, monitoring accounts, placing a fraud alert); (f) where available, the types of personal data affected; and (g) a contact channel for data subjects to obtain further information. Notification must not be misleading, minimizing, or overly technical. Data users should make reasonable efforts to provide notifications in languages understood by affected data subjects.",
+      "content": "The notification to affected data subjects must include: (a) a clear description of the nature of the breach in plain language; (b) the name and contact details of the DPO or other data protection contact; (c) a description of the likely consequences of the breach for the data subject; (d) the steps the data controller has taken or proposes to take to address the breach; (e) specific protective measures the data subject can take (e.g., changing passwords, monitoring accounts, placing a fraud alert); (f) where available, the types of personal data affected; and (g) a contact channel for data subjects to obtain further information. Notification must not be misleading, minimizing, or overly technical. Data users should make reasonable efforts to provide notifications in languages understood by affected data subjects.",
       "requirements": [
         "Notification must be direct (email, SMS, post, or phone) to affected individuals where contact details are available",
         "Website notice alone is insufficient where direct communication is reasonably practicable",
@@ -98,7 +98,7 @@
     {
       "id": "dbn-8",
       "title": "Post-Breach Remediation and Review",
-      "content": "Following a personal data breach, the data user must: (a) implement immediate containment measures to prevent further access, exfiltration, or compromise; (b) conduct a root cause analysis to identify the technical or organizational failure that led to the breach; (c) implement remedial measures to address the root cause and prevent recurrence; (d) review and update security measures, policies, and procedures as necessary; (e) conduct staff training where human error was a contributing factor; and (f) report the outcome of the post-breach review to the Commissioner within 60 days of the initial notification. The Commissioner may require a follow-up audit to verify that remediation has been effective.",
+      "content": "Following a personal data breach, the data controller must: (a) implement immediate containment measures to prevent further access, exfiltration, or compromise; (b) conduct a root cause analysis to identify the technical or organizational failure that led to the breach; (c) implement remedial measures to address the root cause and prevent recurrence; (d) review and update security measures, policies, and procedures as necessary; (e) conduct staff training where human error was a contributing factor; and (f) report the outcome of the post-breach review to the Commissioner within 60 days of the initial notification. The Commissioner may require a follow-up audit to verify that remediation has been effective.",
       "requirements": [
         "Containment must be initiated immediately — remediation cannot be deferred pending notification",
         "Root cause analysis report must be submitted to the Commissioner within 60 days",
@@ -108,7 +108,7 @@
     }
   ],
   "timelines": {
-    "72HourNotificationToCommissioner": "72 hours from data user becoming aware of a notifiable breach",
+    "72HourNotificationToCommissioner": "72 hours from data controller becoming aware of a notifiable breach",
     "7DayNotificationToDataSubjects": "7 days from determination that data subject notification is required",
     "60DayPostBreachReport": "60 days from initial notification to Commissioner",
     "5YearRetention": "Data Breach Register retained for minimum 5 years",
@@ -117,6 +117,6 @@
   "keywords": [
     "data breach", "breach notification", "72 hours", "7 days", "Commissioner notification",
     "data subject notification", "Data Breach Register", "notifiable breach", "root cause analysis",
-    "containment", "remediation", "s143A", "Act A1727", "PDPA 2024 amendment"
+    "containment", "remediation", "s12B", "Act A1727", "PDPA 2024 amendment"
   ]
 }

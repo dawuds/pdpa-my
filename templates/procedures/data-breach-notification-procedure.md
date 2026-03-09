@@ -48,7 +48,7 @@
 
 This procedure establishes a structured, repeatable, and legally compliant process for [Organization Name] to detect, assess, contain, investigate, and notify relevant parties of personal data breaches in accordance with Malaysian law.
 
-The procedure fulfils the obligations of [Organization Name] as a **data user** under the **Personal Data Protection Act 2010 (PDPA)**, and gives effect to:
+The procedure fulfils the obligations of [Organization Name] as a **data controller** under the **Personal Data Protection Act 2010 (PDPA)**, and gives effect to:
 
 - **Section 9 (Security Principle)** — the obligation to protect personal data against loss, misuse, modification, unauthorised or accidental access, disclosure, alteration, or destruction.
 - **Section 143A (Notification of Personal Data Breach)** — the mandatory obligation to notify the Personal Data Protection Commissioner within **72 hours** of becoming aware of a personal data breach that is likely to result in significant harm to data subjects.
@@ -86,7 +86,7 @@ This procedure applies to:
 | Term | Definition |
 |---|---|
 | **Personal Data Breach** | A breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored, or otherwise processed by [Organization Name] or its data processors. |
-| **Data User** | [Organization Name], being the person who either alone or jointly or in common with other persons processes personal data or has control over or authorises the processing of personal data, as defined in PDPA s4. |
+| **Data Controller** | [Organization Name], being the person who either alone or jointly or in common with other persons processes personal data or has control over or authorises the processing of personal data, as defined in PDPA s4. |
 | **Data Processor** | Any person who processes personal data on behalf of [Organization Name], not being an employee of [Organization Name]. |
 | **Data Subject** | An individual who is the subject of personal data. |
 | **Commissioner** | The Personal Data Protection Commissioner appointed under PDPA s10. |
@@ -484,7 +484,7 @@ The PDPC notification must contain the following information:
 
 | Required Information | Content |
 |---|---|
-| **Identity of the Data User** | [Organization Name], registration number, and contact details. |
+| **Identity of the Data Controller** | [Organization Name], registration number, and contact details. |
 | **DPO Contact Details** | Name, email address, and telephone number of the DPO. |
 | **Nature of the Breach** | Description of how the breach occurred, the type of breach (confidentiality, integrity, availability), and the systems or processes involved. |
 | **Categories of Personal Data Affected** | Specific categories of personal data affected (e.g., name, IC number, financial data, health data). |
@@ -577,7 +577,7 @@ All data subject notifications must contain the following information in **plain
 
 | Required Element | Guidance |
 |---|---|
-| **Identity of the Data User** | Full name and contact details of [Organization Name] and the DPO. |
+| **Identity of the Data Controller** | Full name and contact details of [Organization Name] and the DPO. |
 | **Nature of the Breach** | A clear description of what happened, in non-technical language. |
 | **Categories of Personal Data Affected** | Specific types of personal data that were involved (e.g., "your name, email address, and account number"). |
 | **Likely Consequences** | The potential impact of the breach on the data subject (e.g., "Your details may have been accessed by an unauthorised person"). |

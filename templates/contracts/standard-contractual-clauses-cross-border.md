@@ -42,7 +42,7 @@ Represented by: [Name, Title]
 
 These Standard Contractual Clauses ("**SCCs**" or "**Clauses**") are entered into pursuant to **Section 129A of the Personal Data Protection Act 2010 (PDPA)** (Act 709) of Malaysia and the Personal Data Protection Commissioner's guidance on cross-border data transfer mechanisms.
 
-These Clauses apply where the Data Exporter, as a data user operating in Malaysia, transfers personal data to a Data Importer located in **[Recipient Country]**, which has not been designated by the Minister as having adequate personal data protection laws equivalent to the PDPA.
+These Clauses apply where the Data Exporter, as a data controller operating in Malaysia, transfers personal data to a Data Importer located in **[Recipient Country]**, which has not been designated by the Minister as having adequate personal data protection laws equivalent to the PDPA.
 
 These Clauses constitute appropriate safeguards for the cross-border transfer of personal data and are legally binding on both Parties. In the event of any conflict between these Clauses and any commercial agreement between the Parties, these Clauses shall prevail with respect to data protection obligations.
 
@@ -67,7 +67,7 @@ For the purposes of these Clauses, the following definitions apply:
 | Term | Definition |
 |---|---|
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, as defined under Section 4 of the PDPA 2010 |
-| **Data Exporter** | [Organization Name], the Malaysian data user transferring personal data to the Data Importer |
+| **Data Exporter** | [Organization Name], the Malaysian data controller transferring personal data to the Data Importer |
 | **Data Importer** | [Recipient Organization Name], the recipient of personal data located in [Recipient Country] |
 | **Data Subject** | The individual to whom the personal data relates |
 | **Processing** | Any operation performed on personal data, including collection, recording, holding, storage, use, disclosure, or erasure |
@@ -506,7 +506,7 @@ The following regulatory instruments, guidance, and standards are referenced in 
 | Act 709, s.6 | Personal Data Protection Act 2010 — Security Principle | Parliament of Malaysia | Data Importer security obligations |
 | Act 709, s.8 | Personal Data Protection Act 2010 — Access Principle | Parliament of Malaysia | Data subject access rights |
 | Act 709, s.9 | Personal Data Protection Act 2010 — Correction Principle | Parliament of Malaysia | Data subject correction rights |
-| PDP (Class of Data Users) Order 2013 | Classification of regulated data users | MITI / PDPC | Scope of regulated entities |
+| PDP (Class of Data Controllers) Order 2013 | Classification of regulated data controllers | MITI / PDPC | Scope of regulated entities |
 | [PDPC Transfer Guidance] | Commissioner's Guidance on Cross-Border Data Transfers | Personal Data Protection Commissioner | Transfer mechanism approval and requirements |
 | ISO/IEC 27001:2022 | Information Security Management Systems | ISO/IEC | Baseline security framework reference |
 | ISO/IEC 27701:2019 | Privacy Information Management | ISO/IEC | Privacy management system reference |

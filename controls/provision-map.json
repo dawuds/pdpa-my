@@ -149,7 +149,7 @@
     "s111": [
       "enforcement-notice-compliance"
     ],
-    "s129A": [
+    "s129": [
       "transfer-identification-and-mapping",
       "transfer-mechanism-selection",
       "transfer-impact-assessment",
@@ -157,14 +157,14 @@
       "processor-due-diligence",
       "data-processing-agreement-management"
     ],
-    "s129B": [
+    "s12A": [
       "dpo-appointment-and-functions",
       "board-reporting-and-accountability"
     ],
     "s133": [
       "enforcement-notice-compliance"
     ],
-    "s143A": [
+    "s12B": [
       "breach-detection-and-triage",
       "breach-notification-to-commissioner",
       "breach-containment-and-remediation",
@@ -192,7 +192,7 @@
     "access-control-and-identity-management": ["s9", "s12"],
     "encryption-and-data-protection-in-transit-at-rest": ["s9"],
     "vulnerability-and-patch-management": ["s9"],
-    "security-monitoring-and-siem": ["s9", "s143A"],
+    "security-monitoring-and-siem": ["s9", "s12B"],
     "physical-security-controls": ["s9"],
     "data-loss-prevention": ["s9"],
     "data-minimisation-control": ["s6", "s11"],
@@ -200,24 +200,24 @@
     "secure-data-disposal": ["s10"],
     "data-accuracy-and-quality": ["s11"],
     "purpose-limitation-enforcement": ["s5", "s6", "s8", "s11"],
-    "breach-detection-and-triage": ["s9", "s143A"],
-    "breach-notification-to-commissioner": ["s9", "s143A"],
-    "breach-containment-and-remediation": ["s9", "s143A"],
-    "data-subject-breach-notification": ["s9", "s143A"],
-    "transfer-identification-and-mapping": ["s129A"],
-    "transfer-mechanism-selection": ["s129A"],
-    "transfer-impact-assessment": ["s129A"],
-    "cross-border-transfer-monitoring": ["s129A"],
-    "processor-due-diligence": ["s9", "s129A"],
-    "data-processing-agreement-management": ["s9", "s129A"],
+    "breach-detection-and-triage": ["s9", "s12B"],
+    "breach-notification-to-commissioner": ["s9", "s12B"],
+    "breach-containment-and-remediation": ["s9", "s12B"],
+    "data-subject-breach-notification": ["s9", "s12B"],
+    "transfer-identification-and-mapping": ["s129"],
+    "transfer-mechanism-selection": ["s129"],
+    "transfer-impact-assessment": ["s129"],
+    "cross-border-transfer-monitoring": ["s129"],
+    "processor-due-diligence": ["s9", "s129"],
+    "data-processing-agreement-management": ["s9", "s129"],
     "processor-oversight-and-audit": ["s9"],
     "processor-offboarding": ["s9", "s10"],
-    "dpo-appointment-and-functions": ["s129B"],
+    "dpo-appointment-and-functions": ["s12A"],
     "privacy-policy-management": ["s5", "s9"],
     "staff-training-and-awareness": ["s9"],
     "privacy-by-design-and-default": ["s5", "s6", "s9"],
     "compliance-monitoring-and-audit": ["s5", "s9"],
-    "board-reporting-and-accountability": ["s5", "s129B"],
+    "board-reporting-and-accountability": ["s5", "s12A"],
     "data-user-registration-management": ["s13", "s14", "s15", "s16"],
     "regulatory-inspection-readiness": ["s101", "s102", "s103", "s104", "s105"],
     "enforcement-notice-compliance": ["s110", "s111", "s133"],

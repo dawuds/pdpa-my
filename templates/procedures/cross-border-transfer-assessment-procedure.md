@@ -120,7 +120,7 @@ The following activities are outside the scope of this procedure:
 
 | Instrument | Issuing Authority | Relevance |
 |---|---|---|
-| Personal Data Protection (Class of Data Users) Order 2013 | Minister of Digital | Registration obligations by sector |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Minister of Digital | Registration obligations by sector |
 | Personal Data Protection Regulations 2013 | Minister of Digital | Prescribed forms and procedures |
 | [Any applicable PDPC Codes of Practice] | PDPC | Sector-specific guidance on transfers |
 | BNM Risk Management in Technology (RMiT) Policy Document | Bank Negara Malaysia | Cloud and outsourcing obligations for financial institutions |
@@ -147,7 +147,7 @@ This procedure operates in conjunction with the following internal policies:
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, including any sensitive personal data and expression of opinion about the data subject (PDPA, Section 4). |
+| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, including any sensitive personal data and expression of opinion about the data subject (PDPA, Section 4). |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition, political opinions, religious beliefs or other beliefs of a similar nature, the commission or alleged commission of any offence, or any other personal data as the Minister may determine (PDPA, Section 4). |
 | **Cross-Border Transfer** | Any transmission, disclosure, or otherwise making available of personal data to a recipient or system located in a place outside Malaysia, including through cloud services, remote access, or intra-group sharing. |
 | **Transfer Mechanism** | A legally recognized basis that permits a cross-border transfer, including adequacy determination, Standard Contractual Clauses (SCCs), Binding Corporate Rules (BCRs), or explicit data subject consent. |
@@ -155,8 +155,8 @@ This procedure operates in conjunction with the following internal policies:
 | **Standard Contractual Clauses (SCCs)** | Contractual provisions approved by the Commissioner or Minister that impose data protection obligations equivalent to those under the PDPA on the foreign recipient. |
 | **Binding Corporate Rules (BCRs)** | Legally binding internal rules adopted by a group of companies for intra-group transfers of personal data, approved by the relevant supervisory authority. |
 | **Transfer Impact Assessment (TIA)** | A documented assessment evaluating whether the legal and practical circumstances in the destination country undermine the effectiveness of the chosen transfer mechanism. |
-| **Data Processor** | A person who processes personal data solely on behalf of a data user and does not process personal data for any of his own purposes (PDPA, Section 4). |
-| **Subprocessor** | A third party engaged by a data processor to carry out processing activities in respect of personal data on behalf of a data user. |
+| **Data Processor** | A person who processes personal data solely on behalf of a data controller and does not process personal data for any of his own purposes (PDPA, Section 4). |
+| **Subprocessor** | A third party engaged by a data processor to carry out processing activities in respect of personal data on behalf of a data controller. |
 | **Commissioner** | The Personal Data Protection Commissioner appointed under Section 7 of the PDPA. |
 | **DPO** | Data Protection Officer — the individual appointed by [Organization Name] with responsibility for overseeing PDPA compliance. |
 | **TIA Register** | The internal register maintained by the DPO recording all completed Transfer Impact Assessments and their outcomes. |
@@ -474,7 +474,7 @@ Based on the Phase 2 and Phase 3 assessments, the TIA shall conclude with one of
 Where Standard Contractual Clauses are selected as the transfer mechanism, the Organization shall use SCCs that:
 
 - Are approved or recognized under the PDPA or by the Commissioner;
-- Cover all mandatory data protection obligations equivalent to those imposed by the PDPA on data users;
+- Cover all mandatory data protection obligations equivalent to those imposed by the PDPA on data controllers;
 - Impose obligations directly enforceable by data subjects as third-party beneficiaries;
 - Require the foreign recipient to notify the Organization of any local laws that may affect its ability to comply;
 - Include provisions for data subject rights, security obligations, breach notification, audit rights, and data return or destruction upon termination.
@@ -487,8 +487,8 @@ The appropriate SCC module shall be selected based on the roles of the parties:
 
 | Transfer Scenario | SCC Module |
 |---|---|
-| Organization (Data User/Controller) → Foreign Processor | Controller-to-Processor module |
-| Organization (Data User/Controller) → Foreign Controller | Controller-to-Controller module |
+| Organization (Data Controller/Controller) → Foreign Processor | Controller-to-Processor module |
+| Organization (Data Controller/Controller) → Foreign Controller | Controller-to-Controller module |
 | Organization (Processor) → Foreign Subprocessor | Processor-to-Subprocessor module |
 
 ### 9.3 SCC Drafting and Negotiation Process
@@ -671,7 +671,7 @@ Where notification to the Commissioner is required in connection with SCC-based 
 
 | Notification Element | Details |
 |---|---|
-| Organization's registration number (as data user) | [Registration Reference] |
+| Organization's registration number (as data controller) | [Registration Reference] |
 | Name and contact details of DPO | [DPO Details] |
 | Nature and category of personal data transferred | [Data Categories] |
 | Category of data subjects | [Data Subject Categories] |
@@ -870,13 +870,13 @@ Reviews shall be initiated by the DPO and completed with Legal Counsel input pri
 | Reference | Description |
 |---|---|
 | **PDPA, Section 129A** | Prohibition on transfer of personal data outside Malaysia; conditions and mechanisms for lawful transfer |
-| **PDPA, Section 4** | Definitions including personal data, sensitive personal data, data user, data processor |
+| **PDPA, Section 4** | Definitions including personal data, sensitive personal data, data controller, data processor |
 | **PDPA, Section 6** | General principle — processing of personal data only with consent or applicable exception |
 | **PDPA, Section 8** | Retention principle — personal data not to be retained longer than necessary |
 | **PDPA, Section 10** | Security principle — practical steps to protect personal data from loss, misuse, modification, unauthorized access |
 | **PDPA, Section 40** | Processing of sensitive personal data — heightened requirements |
 | **PDPA First Schedule** | List of places outside Malaysia to which personal data may be transferred on adequacy basis |
-| **Personal Data Protection (Class of Data Users) Order 2013** | Sectors required to register as data users |
+| **Personal Data Protection (Class of Data Controllers) Order 2013** | Sectors required to register as data controllers |
 | **Personal Data Protection Regulations 2013** | Prescribed procedures and forms under the PDPA |
 | **BNM RMiT Policy Document** | Risk Management in Technology — cloud and outsourcing requirements for financial institutions |
 | **BNM Outsourcing Policy Document** | Oversight requirements for outsourcing arrangements including offshore |
@@ -1058,8 +1058,8 @@ Reviews shall be initiated by the DPO and completed with Legal Counsel input pri
 | **Consent** | Freely given, specific, informed, and unambiguous agreement by the data subject to the transfer of their personal data outside Malaysia. |
 | **Transfer Impact Assessment (TIA)** | A structured evaluation of whether the legal and practical conditions in the destination country undermine the effectiveness of the chosen transfer mechanism. |
 | **Supplementary Measures** | Technical (e.g., encryption), contractual (e.g., enhanced audit rights), or organizational (e.g., access controls) measures adopted to address residual risks identified in a TIA. |
-| **Data Processing Agreement (DPA)** | A contract between a data user and a data processor setting out the terms on which the processor may process personal data on behalf of the data user. |
-| **Subprocessor** | A third party engaged by a processor to carry out specific processing activities on behalf of the data user. |
+| **Data Processing Agreement (DPA)** | A contract between a data controller and a data processor setting out the terms on which the processor may process personal data on behalf of the data controller. |
+| **Subprocessor** | A third party engaged by a processor to carry out specific processing activities on behalf of the data controller. |
 | **Commissioner** | The Personal Data Protection Commissioner of Malaysia, responsible for enforcement and administration of the PDPA. |
 
 ---

@@ -16,10 +16,10 @@
         },
         {
           "id": "class-of-data-users-order-2013",
-          "title": "Personal Data Protection (Class of Data Users) Order 2013",
+          "title": "Personal Data Protection (Class of Data Controllers) Order 2013",
           "type": "order",
           "relevantProvisions": ["s1", "s2", "FirstSchedule"],
-          "notes": "Defines the 13 classes of data users required to register with the Commissioner. The definitions in s2 of the Act must be read alongside the class descriptions in this Order."
+          "notes": "Defines the 13 classes of data controllers required to register with the Commissioner. The definitions in s2 of the Act must be read alongside the class descriptions in this Order."
         }
       ]
     },
@@ -123,22 +123,22 @@
     },
     {
       "section": "s13",
-      "sectionTitle": "Registration of Data Users",
+      "sectionTitle": "Registration of Data Controllers",
       "part": "II",
       "regulations": [
         {
           "id": "registration-regulations-2013",
-          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "title": "Personal Data Protection (Registration of Data Controller) Regulations 2013",
           "type": "regulations",
           "relevantProvisions": ["reg3", "reg4", "reg5", "reg6", "reg7", "reg8"],
           "notes": "The primary subsidiary legislation governing the registration process. Sets out the application procedure, required information, and conditions for registration."
         },
         {
           "id": "class-of-data-users-order-2013",
-          "title": "Personal Data Protection (Class of Data Users) Order 2013",
+          "title": "Personal Data Protection (Class of Data Controllers) Order 2013",
           "type": "order",
           "relevantProvisions": ["FirstSchedule"],
-          "notes": "Identifies the 13 classes of data users required to register under s13. Only data users in these classes are subject to the registration requirement."
+          "notes": "Identifies the 13 classes of data controllers required to register under s13. Only data controllers in these classes are subject to the registration requirement."
         },
         {
           "id": "fees-regulations-2013",
@@ -156,7 +156,7 @@
       "regulations": [
         {
           "id": "registration-regulations-2013",
-          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "title": "Personal Data Protection (Registration of Data Controller) Regulations 2013",
           "type": "regulations",
           "relevantProvisions": ["reg3", "reg4", "reg5"],
           "notes": "Prescribes the form of the application, documents to be submitted, and the procedure for processing applications."
@@ -177,7 +177,7 @@
       "regulations": [
         {
           "id": "registration-regulations-2013",
-          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "title": "Personal Data Protection (Registration of Data Controller) Regulations 2013",
           "type": "regulations",
           "relevantProvisions": ["reg6", "reg7"],
           "notes": "Sets out the form of the certificate of registration, its validity period, and the conditions for renewal."
@@ -198,7 +198,7 @@
       "regulations": [
         {
           "id": "registration-regulations-2013",
-          "title": "Personal Data Protection (Registration of Data User) Regulations 2013",
+          "title": "Personal Data Protection (Registration of Data Controller) Regulations 2013",
           "type": "regulations",
           "relevantProvisions": ["reg8", "reg9"],
           "notes": "Sets out the procedure for revocation and suspension of registration, including notice requirements and the opportunity to be heard."
@@ -206,7 +206,7 @@
       ]
     },
     {
-      "section": "s129A",
+      "section": "s129",
       "sectionTitle": "Cross-Border Personal Data Transfer",
       "part": "X",
       "regulations": [
@@ -215,12 +215,12 @@
           "title": "Personal Data Protection Regulations 2013",
           "type": "regulations",
           "relevantProvisions": ["reg9", "reg10"],
-          "notes": "The Regulations supplement s129A by specifying the countries approved for data transfer and the conditions for each mechanism."
+          "notes": "The Regulations supplement s129 by specifying the countries approved for data transfer and the conditions for each mechanism."
         }
       ]
     },
     {
-      "section": "s143A",
+      "section": "s12B",
       "sectionTitle": "Data Breach Notification",
       "part": "X",
       "regulations": [
@@ -229,7 +229,7 @@
           "title": "Personal Data Protection (Compounding of Offences) Regulations 2016",
           "type": "regulations",
           "relevantProvisions": ["reg3", "Schedule"],
-          "notes": "Offences under s143A are compoundable under these regulations, providing a mechanism for out-of-court settlement for less serious breach notification failures."
+          "notes": "Offences under s12B are compoundable under these regulations, providing a mechanism for out-of-court settlement for less serious breach notification failures."
         }
       ]
     },
@@ -257,7 +257,7 @@
           "title": "Personal Data Protection Code of Practice (General) 2022",
           "type": "code-of-practice",
           "relevantProvisions": ["all"],
-          "notes": "Issued pursuant to the Commissioner's power under s57. Compliance with the Code is mandatory for all data users."
+          "notes": "Issued pursuant to the Commissioner's power under s57. Compliance with the Code is mandatory for all data controllers."
         }
       ]
     }

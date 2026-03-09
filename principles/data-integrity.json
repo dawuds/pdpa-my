@@ -2,7 +2,7 @@
   "id": "data-integrity",
   "section": 11,
   "name": "Data Integrity Principle",
-  "summary": "A data user shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up to date, having regard to the purpose, including any directly related purpose, for which the personal data was collected and further processed. The Data Integrity Principle is reinforced by the right of data subjects to correct inaccurate personal data under Section 34.",
+  "summary": "A data controller shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up to date, having regard to the purpose, including any directly related purpose, for which the personal data was collected and further processed. The Data Integrity Principle is reinforced by the right of data subjects to correct inaccurate personal data under Section 34.",
   "obligations": [
     {
       "id": "integrity-O1",
@@ -18,7 +18,7 @@
     },
     {
       "id": "integrity-O3",
-      "obligation": "Establish a process for data subjects to notify the data user of inaccuracies in their personal data and to have corrections made within a reasonable timeframe",
+      "obligation": "Establish a process for data subjects to notify the data controller of inaccuracies in their personal data and to have corrections made within a reasonable timeframe",
       "basis": "Section 11(1) read with Section 34 (right to correct personal data)",
       "type": "mandatory"
     },
@@ -38,24 +38,24 @@
   "exceptions": [
     {
       "id": "integrity-X1",
-      "exception": "The obligation to ensure accuracy is qualified by 'reasonable steps' and must be assessed having regard to the purpose for which the data is held; a data user is not required to verify personal data where verification is not reasonably practicable given the nature and volume of the data",
+      "exception": "The obligation to ensure accuracy is qualified by 'reasonable steps' and must be assessed having regard to the purpose for which the data is held; a data controller is not required to verify personal data where verification is not reasonably practicable given the nature and volume of the data",
       "basis": "Section 11(1)",
-      "conditions": "The data user must still have systems in place to correct data when inaccuracies are identified or reported; the 'reasonable steps' standard increases where the data is used to make significant decisions affecting the data subject (e.g., credit scoring, employment, insurance underwriting)"
+      "conditions": "The data controller must still have systems in place to correct data when inaccuracies are identified or reported; the 'reasonable steps' standard increases where the data is used to make significant decisions affecting the data subject (e.g., credit scoring, employment, insurance underwriting)"
     },
     {
       "id": "integrity-X2",
-      "exception": "Where a data user is required to retain personal data in its original form by or under any written law (e.g., for evidential integrity in legal proceedings), the duty to update the data does not extend to altering the legally required original record",
+      "exception": "Where a data controller is required to retain personal data in its original form by or under any written law (e.g., for evidential integrity in legal proceedings), the duty to update the data does not extend to altering the legally required original record",
       "basis": "Section 11(1) read with statutory retention obligations",
-      "conditions": "The original record may be retained in its original form; however, the data user should, where possible, maintain a separate updated record or annotation indicating the correction, so that the current position of the data subject is accurately reflected in any decision-making"
+      "conditions": "The original record may be retained in its original form; however, the data controller should, where possible, maintain a separate updated record or annotation indicating the correction, so that the current position of the data subject is accurately reflected in any decision-making"
     },
     {
       "id": "integrity-X3",
-      "exception": "A data user is not required to update personal data that is retained solely for historical, statistical, or research purposes where updating or correcting the data would prejudice the research or statistical purpose for which it is held",
+      "exception": "A data controller is not required to update personal data that is retained solely for historical, statistical, or research purposes where updating or correcting the data would prejudice the research or statistical purpose for which it is held",
       "basis": "Section 11(1); Section 45 (research and statistical exemptions)",
       "conditions": "The data must be used exclusively for the permitted research or statistical purpose and must not be used to make decisions affecting individual data subjects; appropriate technical safeguards (e.g., anonymisation or pseudonymisation) should be applied"
     }
   ],
-  "practicalGuidance": "Organizations should embed data quality practices at every stage of the data lifecycle. At the collection stage, use input validation to prevent obviously incorrect data from entering systems (e.g., format checks for identification numbers, email addresses, and phone numbers). For data that changes over time (e.g., addresses, employment status, contact details), implement periodic refresh procedures: for high-value data this may mean annual verification with the data subject; for lower-risk data, opportunistic verification at the next point of contact is acceptable. Where automated decisions with significant consequences are made based on personal data (e.g., credit limits, insurance premiums, eligibility for services), the accuracy obligations are heightened — consider implementing pre-decision data quality checks. Data subjects should be provided with a simple and accessible mechanism to report inaccuracies; the target response time for corrections under Section 34 is 21 days. The Personal Data Protection Standards 2015 (Data Integrity Standard) require data users to take into account the nature and purpose of the data when determining appropriate data quality measures.",
+  "practicalGuidance": "Organizations should embed data quality practices at every stage of the data lifecycle. At the collection stage, use input validation to prevent obviously incorrect data from entering systems (e.g., format checks for identification numbers, email addresses, and phone numbers). For data that changes over time (e.g., addresses, employment status, contact details), implement periodic refresh procedures: for high-value data this may mean annual verification with the data subject; for lower-risk data, opportunistic verification at the next point of contact is acceptable. Where automated decisions with significant consequences are made based on personal data (e.g., credit limits, insurance premiums, eligibility for services), the accuracy obligations are heightened — consider implementing pre-decision data quality checks. Data subjects should be provided with a simple and accessible mechanism to report inaccuracies; the target response time for corrections under Section 34 is 21 days. The Personal Data Protection Standards 2015 (Data Integrity Standard) require data controllers to take into account the nature and purpose of the data when determining appropriate data quality measures.",
   "commonViolations": [
     "Failing to update customer records when a data subject notifies the organisation of a change in address, name, or other personal details, resulting in decisions being made on the basis of outdated information",
     "Using data sourced from third parties (e.g., data brokers, credit bureaus) without verifying its accuracy or currency, and making consequential decisions based on that unverified data",

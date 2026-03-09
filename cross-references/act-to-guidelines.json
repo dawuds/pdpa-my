@@ -56,7 +56,7 @@
         {
           "guidelineId": "data-protection-notices-guideline",
           "relevantProvisions": ["dpn-1", "dpn-2", "dpn-3", "dpn-4", "dpn-5"],
-          "notes": "The Notice and Choice Principle requires data users to provide data subjects with written notice of prescribed information. The DPN Guideline sets out the format, content, language, timing, and method of delivery of data protection notices."
+          "notes": "The Notice and Choice Principle requires data controllers to provide data subjects with written notice of prescribed information. The DPN Guideline sets out the format, content, language, timing, and method of delivery of data protection notices."
         }
       ]
     },
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "section": "s129A",
+      "section": "s129",
       "sectionTitle": "Cross-Border Personal Data Transfer",
       "part": "X",
       "guidelines": [
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "section": "s129B",
+      "section": "s12A",
       "sectionTitle": "Appointment of Data Protection Officer",
       "part": "X",
       "guidelines": [
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "section": "s143A",
+      "section": "s12B",
       "sectionTitle": "Data Breach Notification",
       "part": "X",
       "guidelines": [

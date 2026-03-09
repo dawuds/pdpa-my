@@ -7,12 +7,12 @@
   "parentAct": "Act 709",
   "enablingSection": "s57",
   "applicableClasses": ["health"],
-  "summary": "This sector-specific Code applies to all data users in the Health class (Class 4 of the Class of Data Users Order 2013), including private hospitals, specialist centres, clinics, pharmacies, diagnostic laboratories, and other registered healthcare providers. Health data is sensitive personal data under s29 of the PDPA. This Code imposes enhanced obligations commensurate with the sensitivity of medical information and the significant harm that can result from its unauthorized disclosure. The Code takes into account requirements under the Private Healthcare Facilities and Services Act 1998, the Medical Act 1971, and professional ethics obligations.",
+  "summary": "This sector-specific Code applies to all data controllers in the Health class (Class 4 of the Class of Data Users Order 2013), including private hospitals, specialist centres, clinics, pharmacies, diagnostic laboratories, and other registered healthcare providers. Health data is sensitive personal data under s29 of the PDPA. This Code imposes enhanced obligations commensurate with the sensitivity of medical information and the significant harm that can result from its unauthorized disclosure. The Code takes into account requirements under the Private Healthcare Facilities and Services Act 1998, the Medical Act 1971, and professional ethics obligations.",
   "provisions": [
     {
       "id": "cop-health-s1",
       "title": "Scope and Application",
-      "content": "This Code applies to all Class 4 data users including private hospitals, specialist clinics, general practice clinics, dental practices, pharmacies, diagnostic laboratories, physiotherapy centres, and traditional and complementary medicine (TCM) practitioners registered under applicable health legislation. All health data is sensitive personal data under s29 of the PDPA. Health data users must comply with both this Code and all applicable professional ethics and confidentiality requirements under health profession legislation.",
+      "content": "This Code applies to all Class 4 data controllers including private hospitals, specialist clinics, general practice clinics, dental practices, pharmacies, diagnostic laboratories, physiotherapy centres, and traditional and complementary medicine (TCM) practitioners registered under applicable health legislation. All health data is sensitive personal data under s29 of the PDPA. Health data controllers must comply with both this Code and all applicable professional ethics and confidentiality requirements under health profession legislation.",
       "requirements": [
         "All patient data is sensitive personal data by definition — no case-by-case assessment needed",
         "Professional ethics obligations (doctor-patient confidentiality) apply alongside PDPA",
@@ -67,12 +67,12 @@
     {
       "id": "cop-health-s6",
       "title": "Telehealth and Digital Health",
-      "content": "Healthcare providers offering telehealth services must: (a) ensure that video consultations are conducted over encrypted platforms meeting minimum security standards; (b) not record telehealth consultations without explicit patient consent for the recording; (c) treat telehealth consultation notes as equivalent to in-person medical records; (d) ensure that patient data submitted through patient-facing applications (appointment booking, symptom checkers, e-prescriptions) is processed in accordance with this Code; and (e) conduct DPIAs for new telehealth platforms before deployment. Where telehealth providers are located outside Malaysia, cross-border transfer requirements under s129A must be complied with.",
+      "content": "Healthcare providers offering telehealth services must: (a) ensure that video consultations are conducted over encrypted platforms meeting minimum security standards; (b) not record telehealth consultations without explicit patient consent for the recording; (c) treat telehealth consultation notes as equivalent to in-person medical records; (d) ensure that patient data submitted through patient-facing applications (appointment booking, symptom checkers, e-prescriptions) is processed in accordance with this Code; and (e) conduct DPIAs for new telehealth platforms before deployment. Where telehealth providers are located outside Malaysia, cross-border transfer requirements under s129 must be complied with.",
       "requirements": [
         "Telehealth platforms must use end-to-end encrypted video conferencing",
         "Consultation recording consent must be specific and documented",
         "DPIA required before deploying new telehealth platforms",
-        "Overseas telehealth service providers must have s129A-compliant transfer mechanisms"
+        "Overseas telehealth service providers must have s129-compliant transfer mechanisms"
       ]
     },
     {

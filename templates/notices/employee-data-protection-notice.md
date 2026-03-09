@@ -17,7 +17,7 @@
 
 ## 1. Introduction
 
-[Organization Name] (hereinafter referred to as "the Company," "we," "us," or "our") is committed to protecting the personal data of its employees and job applicants in accordance with the **Personal Data Protection Act 2010 (PDPA)**, specifically the obligations set out under **Section 7** of the PDPA, which requires data users to inform data subjects of the purpose for which their personal data is being processed.
+[Organization Name] (hereinafter referred to as "the Company," "we," "us," or "our") is committed to protecting the personal data of its employees and job applicants in accordance with the **Personal Data Protection Act 2010 (PDPA)**, specifically the obligations set out under **Section 7** of the PDPA, which requires data controllers to inform data subjects of the purpose for which their personal data is being processed.
 
 This Notice is issued to all current employees, former employees, and job applicants (collectively referred to as "you") to explain how the Company collects, uses, discloses, retains, and protects your personal data throughout the employment lifecycle.
 

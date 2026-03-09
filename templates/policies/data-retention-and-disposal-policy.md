@@ -108,7 +108,7 @@ This Policy is informed by and must be read in conjunction with the following le
 | Personal Data Protection Act 2010 (Act 709) | Section 5 — General Principle | Obligation to protect personal data from unauthorized processing |
 | Personal Data Protection Act 2010 (Act 709) | Section 9 — Security Principle | Practical security measures including disposal security |
 | Personal Data Protection Act 2010 (Act 709) | Section 40 — Sensitive Personal Data | Enhanced protection obligations for sensitive categories |
-| Personal Data Protection (Class of Data Users) Order 2013 | All applicable classes | Sector-specific obligations for registered data user classes |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | All applicable classes | Sector-specific obligations for registered data controller classes |
 | Financial Services Act 2013 (Act 758) | Section 134 | Obligation to maintain records for regulatory inspection |
 | Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 (Act 613) | Section 17 | Mandatory customer record retention (minimum 6 years) |
 | [BNM Policy Document — [Applicable Title]] | [Relevant Paragraph] | [Relevance to this Organization] |
@@ -118,7 +118,7 @@ This Policy is informed by and must be read in conjunction with the following le
 
 Section 10 of the PDPA provides that:
 
-> *"A data user shall not retain personal data in a form that permits the identification of the data subject for any longer than is necessary for the fulfillment of the purpose, including any directly related purpose, for which the personal data was to be used."*
+> *"A data controller shall not retain personal data in a form that permits the identification of the data subject for any longer than is necessary for the fulfillment of the purpose, including any directly related purpose, for which the personal data was to be used."*
 
 The Organization interprets this obligation as requiring it to:
 
@@ -136,11 +136,11 @@ The Organization interprets this obligation as requiring it to:
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, or recorded with the intention that it should be wholly or partly processed by means of such equipment, or recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system, that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, including any sensitive personal data and expression of opinion about the data subject (as defined under PDPA s3). |
+| **Personal Data** | Any information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, or recorded with the intention that it should be wholly or partly processed by means of such equipment, or recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system, that relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, including any sensitive personal data and expression of opinion about the data subject (as defined under PDPA s3). |
 | **Sensitive Personal Data** | Personal data consisting of information relating to the physical or mental health or condition of a data subject; political opinions; religious beliefs or other beliefs of a similar nature; the commission or alleged commission by the data subject of any offence; or any other personal data as the Minister may determine. |
-| **Data User** | [Organization Name] in its capacity as an entity that processes personal data solely or jointly with others, and either processes personal data or authorizes the processing of personal data. |
+| **Data Controller** | [Organization Name] in its capacity as an entity that processes personal data solely or jointly with others, and either processes personal data or authorizes the processing of personal data. |
 | **Data Subject** | An individual who is the subject of the personal data. |
-| **Data Processor** | Any person, other than an employee of a data user, who processes personal data solely on behalf of the data user, and not for any of the person's own purposes. |
+| **Data Processor** | Any person, other than an employee of a data controller, who processes personal data solely on behalf of the data controller, and not for any of the person's own purposes. |
 | **Retention Period** | The defined period of time for which personal data is required to be kept for a specific lawful purpose before it must be disposed of or anonymized. |
 | **Legal Hold** | A suspension of the normal retention and disposal schedule applied to personal data that is, or is reasonably anticipated to be, relevant to litigation, regulatory investigation, or audit proceedings. |
 | **Disposal** | The permanent and irreversible destruction or deletion of personal data such that it cannot reasonably be recovered or reconstructed. |
@@ -782,7 +782,7 @@ The following legislative, regulatory, and standard references were consulted in
 |---|---|
 | Personal Data Protection Act 2010 (Act 709), **Section 10** | Retention Principle — core obligation underpinning this Policy |
 | Personal Data Protection Act 2010 (Act 709), Sections 5, 6, 9, 40 | General Principle, Consent Principle, Security Principle, Sensitive Personal Data |
-| Personal Data Protection (Class of Data Users) Order 2013 | Class-specific obligations for registered data users |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Class-specific obligations for registered data controllers |
 | Personal Data Protection (Compounding of Offences) Regulations 2013 | Penalty framework for PDPA breaches |
 | Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 (Act 613), Section 17 | Mandatory minimum retention for AML/CFT records (6 years) |
 | Financial Services Act 2013 (Act 758), Section 134 | Record-keeping obligations for licensed financial institutions |

@@ -142,7 +142,7 @@ This DPIA was triggered by the following condition(s):
 |---|---|---|
 | Personal Data Protection Act 2010 (Act 709) | Malaysia | Primary data protection legislation governing all commercial data processing activities |
 | Personal Data Protection Regulations 2013 | Malaysia | Supplementary regulations specifying security standards and procedures |
-| Personal Data Protection (Class of Data Users) Order 2013 | Malaysia | Classifies [Organization Name] as a registered data user in the [specify class] sector |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Malaysia | Classifies [Organization Name] as a registered data controller in the [specify class] sector |
 | Bank Negara Malaysia (BNM) Risk Management in Technology (RMiT) Policy | Malaysia | [If applicable — cross-reference to RMiT data governance requirements] |
 | ISO/IEC 27001:2022 | International | [If applicable — information security management alignment] |
 | [Other applicable law or standard] | [Jurisdiction] | [Relevance] |
@@ -823,12 +823,12 @@ This DPIA must be reviewed under any of the following circumstances:
 |---|---|---|
 | PDPA s5 | Personal Data Protection Act 2010 — General Principle | Establishes the foundational requirement that personal data must not be processed without consent or another applicable condition; central to the legal basis assessment in Section 3 |
 | PDPA s6 | Personal Data Protection Act 2010 — Sensitive Personal Data | Defines the categories of sensitive personal data requiring heightened protections and explicit consent; applicable where sensitive data is identified in the data inventory in Section 6 |
-| PDPA s9 | Personal Data Protection Act 2010 — Security Principle | Requires data users to take practical steps to protect personal data from loss, misuse, modification, unauthorized or accidental access, disclosure, alteration, and destruction; directly addressed by security risk mitigations in Section 8 |
+| PDPA s9 | Personal Data Protection Act 2010 — Security Principle | Requires data controllers to take practical steps to protect personal data from loss, misuse, modification, unauthorized or accidental access, disclosure, alteration, and destruction; directly addressed by security risk mitigations in Section 8 |
 | PDPA s29 | Personal Data Protection Act 2010 — Rights of Data Subjects | Establishes data subjects' rights to access, correct, and request cessation of processing of their personal data; addressed in the data subject rights risk assessment and mitigation measures |
 | PDPA s10 | Personal Data Protection Act 2010 — Retention Principle | Prohibits retention of personal data beyond the period necessary for the stated purpose; addressed in the data retention schedule in Section 6 and risk R-004 |
 | PDPA s7 | Personal Data Protection Act 2010 — Disclosure Principle | Restricts disclosure of personal data to third parties without consent; addressed in third-party processor assessment in Section 4 and risk R-003 |
-| PDP Regulations 2013 | Personal Data Protection Regulations 2013 | Supplementary regulations specifying minimum security standards for registered data users |
-| PDP (Class of Data Users) Order 2013 | Personal Data Protection (Class of Data Users) Order 2013 | Confirms [Organization Name]'s classification as a registered data user |
+| PDP Regulations 2013 | Personal Data Protection Regulations 2013 | Supplementary regulations specifying minimum security standards for registered data controllers |
+| PDP (Class of Data Controllers) Order 2013 | Personal Data Protection (Class of Data Controllers) Order 2013 | Confirms [Organization Name]'s classification as a registered data controller |
 
 ### 14.2 Internal Policies and Standards
 
@@ -985,10 +985,10 @@ This DPIA must be reviewed under any of the following circumstances:
 
 | Term | Definition |
 |---|---|
-| **Data Controller** | An organization that determines the purposes and means of processing personal data, as contemplated under the PDPA. Under the PDPA, this role is broadly equivalent to the term "data user." |
-| **Data Processor** | An organization that processes personal data on behalf of and under the instruction of a data user / data controller. |
+| **Data Controller** | An organization that determines the purposes and means of processing personal data, as contemplated under the PDPA. Under the PDPA, this role is broadly equivalent to the term "data controller." |
+| **Data Processor** | An organization that processes personal data on behalf of and under the instruction of a data controller / data controller. |
 | **Data Subject** | An individual who is the subject of personal data. |
-| **Data User** | A term used in the PDPA (Act 709) for an organization that processes personal data in the course of commercial transactions. Equivalent to "data controller" in other jurisdictions. |
+| **Data Controller** | A term used in the PDPA (Act 709) for an organization that processes personal data in the course of commercial transactions. Equivalent to "data controller" in other jurisdictions. |
 | **DPIA** | Data Protection Impact Assessment — a structured process to identify, assess, and mitigate privacy risks arising from a processing activity. |
 | **DPO** | Data Protection Officer — the individual responsible for overseeing data protection compliance within an organization. |
 | **LIA** | Legitimate Interests Assessment — a structured three-part test to determine whether legitimate interests may serve as the legal basis for processing personal data. |

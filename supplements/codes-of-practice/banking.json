@@ -7,7 +7,7 @@
   "parentAct": "Act 709",
   "enablingSection": "s57",
   "applicableClasses": ["banking-and-financial-institutions"],
-  "summary": "This sector-specific Code applies to all data users in the Banking and Financial Institutions class (Class 2 of the Class of Data Users Order 2013). It supplements the General Code 2022 with enhanced and sector-specific requirements reflecting the highly sensitive nature of financial personal data and the significant regulatory obligations applicable to the banking and financial sector. The Code takes into account requirements under the Financial Services Act 2013, the Islamic Financial Services Act 2013, Bank Negara Malaysia (BNM) policy documents, and the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001.",
+  "summary": "This sector-specific Code applies to all data controllers in the Banking and Financial Institutions class (Class 2 of the Class of Data Users Order 2013). It supplements the General Code 2022 with enhanced and sector-specific requirements reflecting the highly sensitive nature of financial personal data and the significant regulatory obligations applicable to the banking and financial sector. The Code takes into account requirements under the Financial Services Act 2013, the Islamic Financial Services Act 2013, Bank Negara Malaysia (BNM) policy documents, and the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001.",
   "provisions": [
     {
       "id": "cop-bank-s1",
@@ -66,7 +66,7 @@
     {
       "id": "cop-bank-s6",
       "title": "Data Security for Financial Institutions",
-      "content": "In addition to the Security Standards 2015, financial institutions must comply with: (a) Bank Negara Malaysia's Risk Management in Technology (RMiT) policy document on cybersecurity; (b) Payment Card Industry Data Security Standard (PCI DSS) for cardholder data; (c) SWIFT Customer Security Controls Framework for interbank messaging; and (d) the Commissioner's sector-specific data breach notification requirements. Security incidents affecting financial personal data must be reported to both the Commissioner under s143A and to BNM in accordance with BNM's incident reporting requirements.",
+      "content": "In addition to the Security Standards 2015, financial institutions must comply with: (a) Bank Negara Malaysia's Risk Management in Technology (RMiT) policy document on cybersecurity; (b) Payment Card Industry Data Security Standard (PCI DSS) for cardholder data; (c) SWIFT Customer Security Controls Framework for interbank messaging; and (d) the Commissioner's sector-specific data breach notification requirements. Security incidents affecting financial personal data must be reported to both the Commissioner under s12B and to BNM in accordance with BNM's incident reporting requirements.",
       "requirements": [
         "BNM RMiT compliance is required in addition to PDPA security obligations",
         "PCI DSS compliance required for all entities processing payment card data",

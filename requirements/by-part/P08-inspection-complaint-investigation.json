@@ -10,7 +10,7 @@
         {
           "id": "s101-L1",
           "requirement": "Cooperate fully with JPDP inspection officers exercising powers under s101, including providing access to premises, systems, records, and personnel as requested, and responding truthfully to inquiries",
-          "rationale": "Obstruction of a JPDP inspection is a criminal offence; cooperation is both a legal obligation and a factor that influences the Commissioner's assessment of the data user's good faith compliance",
+          "rationale": "Obstruction of a JPDP inspection is a criminal offence; cooperation is both a legal obligation and a factor that influences the Commissioner's assessment of the data controller's good faith compliance",
           "owner": "DPO / Legal Counsel / Senior Management",
           "frequency": "As required",
           "priority": "Critical",
@@ -74,7 +74,7 @@
     "title": "Complaint Procedures",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 104 provides for data subjects to lodge complaints with the Commissioner regarding non-compliance with the PDPA. Upon receipt of a complaint, the Commissioner may investigate the data user. Data users must be prepared to respond to Commissioner investigations arising from data subject complaints.",
+      "summary": "Section 104 provides for data subjects to lodge complaints with the Commissioner regarding non-compliance with the PDPA. Upon receipt of a complaint, the Commissioner may investigate the data controller. Data users must be prepared to respond to Commissioner investigations arising from data subject complaints.",
       "requirements": [
         {
           "id": "s104-L1",

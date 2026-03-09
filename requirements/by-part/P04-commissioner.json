@@ -22,7 +22,7 @@
         {
           "id": "s101-L2",
           "requirement": "Upon receipt of a complaint referral from the Commissioner, acknowledge receipt and cooperate with the Commissioner's complaint investigation, providing all requested information and documentation within the timeframes specified",
-          "rationale": "Section 103 requires the Commissioner to investigate complaints; the data user must cooperate with this process; failure to respond to complaint referrals is likely to result in an adverse finding",
+          "rationale": "Section 103 requires the Commissioner to investigate complaints; the data controller must cooperate with this process; failure to respond to complaint referrals is likely to result in an adverse finding",
           "owner": "DPO / Legal Counsel",
           "frequency": "On complaint referral",
           "priority": "Critical",
@@ -63,7 +63,7 @@
         {
           "id": "s101-T1",
           "requirement": "Maintain an up-to-date data inventory and ROPA that can be produced to the Commissioner within 5 working days of a request during an inspection or investigation",
-          "rationale": "The Commissioner's inspection powers under Part VIII are only effective if data users can produce accurate records; an incomplete or outdated inventory will impede the inspection and may be treated as non-cooperation",
+          "rationale": "The Commissioner's inspection powers under Part VIII are only effective if data controllers can produce accurate records; an incomplete or outdated inventory will impede the inspection and may be treated as non-cooperation",
           "owner": "DPO / IT",
           "frequency": "Maintained continuously; producible within 5 working days",
           "priority": "High",
@@ -92,11 +92,11 @@
         {
           "id": "s101-G1",
           "requirement": "Designate the DPO as the primary point of contact for all Commissioner communications, inspections, and investigations; ensure the DPO has authority to commit the organisation to compliance actions and to coordinate the organisation's response",
-          "rationale": "A single designated contact ensures that Commissioner communications are not lost or fragmented across the organisation; the DPO's role under s129B includes Commissioner cooperation",
+          "rationale": "A single designated contact ensures that Commissioner communications are not lost or fragmented across the organisation; the DPO's role under s12A includes Commissioner cooperation",
           "owner": "Board / DPO",
           "frequency": "Designated at DPO appointment; reviewed annually",
           "priority": "Critical",
-          "source": "s129B",
+          "source": "s12A",
           "sourceType": "act",
           "sector": null,
           "tightens": null
@@ -122,7 +122,7 @@
     "title": "Compliance with Enforcement Notices (s133)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 133 requires data users to comply with any enforcement notice issued by the Commissioner. An enforcement notice sets out specific actions the data user must take or cease, within a specified timeframe, to remedy a contravention of the Act. Failure to comply with an enforcement notice is a criminal offence under s133 carrying up to RM1,000,000 fine and/or 3 years imprisonment (as amended by A1727).",
+      "summary": "Section 133 requires data controllers to comply with any enforcement notice issued by the Commissioner. An enforcement notice sets out specific actions the data controller must take or cease, within a specified timeframe, to remedy a contravention of the Act. Failure to comply with an enforcement notice is a criminal offence under s133 carrying up to RM1,000,000 fine and/or 3 years imprisonment (as amended by A1727).",
       "requirements": [
         {
           "id": "s133-L1",
@@ -150,8 +150,8 @@
         },
         {
           "id": "s133-L3",
-          "requirement": "Where the data user disputes the enforcement notice, seek legal advice immediately and consider whether to appeal; an appeal does not automatically stay the enforcement notice unless the Commissioner or court orders otherwise",
-          "rationale": "Enforcement notices remain binding pending appeal unless a stay is granted; data users who ignore enforcement notices while pursuing an appeal risk offence liability",
+          "requirement": "Where the data controller disputes the enforcement notice, seek legal advice immediately and consider whether to appeal; an appeal does not automatically stay the enforcement notice unless the Commissioner or court orders otherwise",
+          "rationale": "Enforcement notices remain binding pending appeal unless a stay is granted; data controllers who ignore enforcement notices while pursuing an appeal risk offence liability",
           "owner": "Legal Counsel / DPO",
           "frequency": "On enforcement notice receipt if dispute arises",
           "priority": "Critical",
@@ -183,10 +183,10 @@
   "s135": {
     "sectionId": "s135",
     "part": "X",
-    "title": "Commissioner Enforcement Powers and Data User Response Obligations (s135)",
+    "title": "Commissioner Enforcement Powers and Data Controller Response Obligations (s135)",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 135 confers on the Commissioner powers to issue enforcement directions, require remediation of non-compliant processing, and take enforcement action against data users. Data users must respond to Commissioner enforcement powers by ceasing unlawful processing, implementing required safeguards, and cooperating with enforcement procedures. The Commissioner may require a data user to cease processing, correct or destroy data, or impose conditions on processing. Failure to comply with Commissioner enforcement actions constitutes an offence.",
+      "summary": "Section 135 confers on the Commissioner powers to issue enforcement directions, require remediation of non-compliant processing, and take enforcement action against data controllers. Data users must respond to Commissioner enforcement powers by ceasing unlawful processing, implementing required safeguards, and cooperating with enforcement procedures. The Commissioner may require a data controller to cease processing, correct or destroy data, or impose conditions on processing. Failure to comply with Commissioner enforcement actions constitutes an offence.",
       "requirements": [
         {
           "id": "s135-L1",
@@ -221,12 +221,12 @@
     "title": "Commissioner Appointment, Functions, and Powers — Reference (Part IV)",
     "obligationType": "informational",
     "legal": {
-      "summary": "Part IV of the PDPA (sections 47–60) establishes the Personal Data Protection Commissioner, sets out the Commissioner's functions and powers, and provides for the appointment of Deputy Commissioners and authorised officers. This Part does not directly impose obligations on data users but provides the legal basis for the Commissioner's regulatory authority. Data users should be familiar with these provisions to understand the scope of the Commissioner's investigative and enforcement powers.",
+      "summary": "Part IV of the PDPA (sections 47–60) establishes the Personal Data Protection Commissioner, sets out the Commissioner's functions and powers, and provides for the appointment of Deputy Commissioners and authorised officers. This Part does not directly impose obligations on data controllers but provides the legal basis for the Commissioner's regulatory authority. Data users should be familiar with these provisions to understand the scope of the Commissioner's investigative and enforcement powers.",
       "requirements": [
         {
           "id": "s47-R1",
           "requirement": "Familiarise senior management and the DPO with the Commissioner's functions under s48 (including registration, enforcement, promotion, and guidance), powers under s49 (including inspection, investigation, and enforcement direction), and authorised officer powers under s52",
-          "rationale": "Understanding the Commissioner's authority enables data users to respond appropriately to regulatory engagement; organisations that misunderstand the scope of Commissioner powers may inadvertently obstruct lawful regulatory activity",
+          "rationale": "Understanding the Commissioner's authority enables data controllers to respond appropriately to regulatory engagement; organisations that misunderstand the scope of Commissioner powers may inadvertently obstruct lawful regulatory activity",
           "owner": "DPO / Legal Counsel / Management",
           "frequency": "Induction; updated when Commissioner powers change",
           "priority": "Medium",

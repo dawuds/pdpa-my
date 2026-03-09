@@ -46,19 +46,19 @@ This record ensures that [Organization Name] maintains a complete, auditable, an
 
 This record covers all formal correspondence including but not limited to:
 
-- Correspondence arising from data user registration obligations under **PDPA s13**
+- Correspondence arising from data controller registration obligations under **PDPA s13**
 - Notifications, submissions, and responses related to enforcement proceedings under **PDPA s101**
 - Correspondence pertaining to data breach obligations, inspections, codes of practice, and DPO registration under **PDPA s143A** and related provisions
 
-This record applies to all business units, subsidiaries, and operational entities of [Organization Name] that process personal data under a single registered data user class or multiple classes, and encompasses correspondence in all formats: written, electronic, and through the JPDP portal.
+This record applies to all business units, subsidiaries, and operational entities of [Organization Name] that process personal data under a single registered data controller class or multiple classes, and encompasses correspondence in all formats: written, electronic, and through the JPDP portal.
 
 ### 1.3 Regulatory Context
 
-*This section should briefly describe [Organization Name]'s registration status and relevant PDPA obligations. Include the registered data user class(es) and registration number(s).*
+*This section should briefly describe [Organization Name]'s registration status and relevant PDPA obligations. Include the registered data controller class(es) and registration number(s).*
 
 | Item | Detail |
 |---|---|
-| **Data User Registration Number** | [Registration Number] |
+| **Data Controller Registration Number** | [Registration Number] |
 | **Registered Class(es)** | [e.g., Financial Institutions / Insurance / Communications] |
 | **Registration Date** | [Registration Date] |
 | **DPO Appointed** | [Yes / No] |
@@ -71,7 +71,7 @@ This record applies to all business units, subsidiaries, and operational entitie
 
 ### 2.1 Overview
 
-*This section records all correspondence related to the initial registration of [Organization Name] as a data user, subsequent renewal applications, class amendments, and any Commissioner responses or certificates issued under PDPA s13. Each entry should be logged at the time of submission or receipt.*
+*This section records all correspondence related to the initial registration of [Organization Name] as a data controller, subsequent renewal applications, class amendments, and any Commissioner responses or certificates issued under PDPA s13. Each entry should be logged at the time of submission or receipt.*
 
 ### 2.2 Registration Correspondence Log
 
@@ -379,7 +379,7 @@ This document is maintained on a continuous basis and formally reviewed **annual
 
 | Reference | Description |
 |---|---|
-| **PDPA s13** | Obligation to register as a data user; registration applications and certificate of registration issued by the Commissioner |
+| **PDPA s13** | Obligation to register as a data controller; registration applications and certificate of registration issued by the Commissioner |
 | **PDPA s101** | Enforcement notices issued by the Commissioner; requirements for compliance, grounds for appeal, and offences for non-compliance |
 | **PDPA s143A** | Data Protection Officer appointment and registration requirements; DPO obligations, qualifications, and correspondence with the Commissioner |
 

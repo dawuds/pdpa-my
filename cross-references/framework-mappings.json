@@ -13,7 +13,7 @@
         "gdprArticle": "Article 4",
         "gdprName": "Definitions",
         "similarity": "high",
-        "notes": "Both frameworks define core concepts including personal data, processing, data subject, data controller (data user in PDPA), and data processor. Key differences: PDPA uses 'data user' where GDPR uses 'controller'; PDPA 'data processor' aligns with GDPR 'processor'. PDPA's definition of personal data is substantially similar to GDPR's though somewhat narrower in its treatment of pseudonymous data."
+        "notes": "Both frameworks define core concepts including personal data, processing, data subject, data controller (data controller in PDPA), and data processor. Key differences: PDPA uses 'data controller' where GDPR uses 'controller'; PDPA 'data processor' aligns with GDPR 'processor'. PDPA's definition of personal data is substantially similar to GDPR's though somewhat narrower in its treatment of pseudonymous data."
       },
       {
         "pdpaSection": "s6",
@@ -80,7 +80,7 @@
         "notes": "Both identify special categories of data requiring enhanced protection. The categories are largely consistent: health data, racial/ethnic origin, political opinions, religious beliefs, trade union membership, and criminal convictions. Key differences: GDPR includes genetic data and biometric data as special categories; PDPA does not explicitly categorize these but may include them by interpretation. GDPR has 10 grounds for processing special categories; PDPA's grounds are narrower."
       },
       {
-        "pdpaSection": "s129A",
+        "pdpaSection": "s129",
         "pdpaName": "Cross-Border Personal Data Transfer",
         "gdprArticle": "Articles 44-49",
         "gdprName": "Transfers of personal data to third countries or international organisations",
@@ -88,7 +88,7 @@
         "notes": "Both establish a framework for international data transfers based on adequacy, appropriate safeguards, and derogations. Key differences: GDPR's adequacy mechanism (Article 45) is managed by the European Commission; PDPA's adequacy list is determined by the Malaysian Minister on the Commissioner's recommendation. GDPR's Standard Contractual Clauses (SCCs) and Binding Corporate Rules (BCRs) find equivalents in PDPA's post-2024 Amendment mechanisms. GDPR's BCR framework is more mature and the SCCs are more widely used internationally."
       },
       {
-        "pdpaSection": "s129B",
+        "pdpaSection": "s12A",
         "pdpaName": "Appointment of Data Protection Officer",
         "gdprArticle": "Articles 37-39",
         "gdprName": "Designation, position and tasks of the data protection officer",
@@ -96,7 +96,7 @@
         "notes": "Both establish mandatory DPO requirements for certain processing activities. The criteria for mandatory appointment are broadly comparable (large-scale processing of special categories, large-scale systematic monitoring). Key differences: GDPR's DPO appointment criteria are more clearly delineated; PDPA leaves more to the Commissioner's discretion via guidelines. GDPR's DPO must have expert knowledge of data protection law; PDPA's qualification criteria are similar but defined by the DPO Guideline 2025."
       },
       {
-        "pdpaSection": "s143A",
+        "pdpaSection": "s12B",
         "pdpaName": "Data Breach Notification",
         "gdprArticle": "Articles 33-34",
         "gdprName": "Notification of a personal data breach to the supervisory authority; Communication of a personal data breach to the data subject",
@@ -183,12 +183,12 @@
         "notes": "APEC's Accountability principle requires organizations to have a designated individual responsible for compliance and to have mechanisms for redress. PDPA implements this through the Commissioner's enforcement powers, mandatory registration, and codes of practice, rather than through a strictly company-level accountability framework."
       },
       {
-        "pdpaSection": "s129A",
+        "pdpaSection": "s129",
         "pdpaName": "Cross-Border Personal Data Transfer",
         "apecPrinciple": "Accountability (cross-border)",
         "apecPrincipleNumber": "IX",
         "similarity": "medium",
-        "notes": "The CBPR system is specifically designed to enable cross-border data flows within APEC while maintaining privacy standards. PDPA's s129A cross-border transfer framework is consistent with CBPR principles. Malaysia's participation in CBPR or its successor, the Global Cross-Border Privacy Rules (GCBPR) framework, would facilitate recognition of CBPR-certified transfers."
+        "notes": "The CBPR system is specifically designed to enable cross-border data flows within APEC while maintaining privacy standards. PDPA's s129 cross-border transfer framework is consistent with CBPR principles. Malaysia's participation in CBPR or its successor, the Global Cross-Border Privacy Rules (GCBPR) framework, would facilitate recognition of CBPR-certified transfers."
       }
     ]
   },
@@ -233,25 +233,25 @@
         "notes": "ISO 27701 provides specific controls for managing data subject requests and consent changes. PDPA's data subject rights provisions (access, correction, opt-out) and the associated procedural requirements in the General Code 2022 align with these ISO controls."
       },
       {
-        "pdpaSection": "s143A",
+        "pdpaSection": "s12B",
         "pdpaName": "Data Breach Notification",
         "isoClause": "6.13.1 (Management of information security incidents, including privacy breaches)",
         "similarity": "high",
         "notes": "ISO 27701 extends ISO 27001's incident management controls to address privacy breaches. Organizations implementing ISO 27701's incident management controls will have the foundational capabilities required to comply with PDPA's mandatory data breach notification obligations."
       },
       {
-        "pdpaSection": "s129A",
+        "pdpaSection": "s129",
         "pdpaName": "Cross-Border Personal Data Transfer",
         "isoClause": "8.5 (Privacy across jurisdictions and third-party transfers)",
         "similarity": "medium",
-        "notes": "ISO 27701 Clause 8.5 addresses privacy-specific controls for third-party data sharing and cross-border transfers. ISO 27701 certification can serve as evidence of 'adequate safeguards' for PDPA cross-border transfer purposes, supporting the 'appropriate safeguards' mechanism under s129A as amended by A1727."
+        "notes": "ISO 27701 Clause 8.5 addresses privacy-specific controls for third-party data sharing and cross-border transfers. ISO 27701 certification can serve as evidence of 'adequate safeguards' for PDPA cross-border transfer purposes, supporting the 'appropriate safeguards' mechanism under s129 as amended by A1727."
       },
       {
-        "pdpaSection": "s129B",
+        "pdpaSection": "s12A",
         "pdpaName": "Appointment of Data Protection Officer",
         "isoClause": "5.3 (Organizational roles, responsibilities and authorities)",
         "similarity": "medium",
-        "notes": "ISO 27701 requires clear assignment of privacy-related roles and responsibilities. The DPO role required under PDPA s129B can be mapped to the 'Privacy Officer' or 'Privacy Information Manager' roles in ISO 27701's organizational responsibility framework."
+        "notes": "ISO 27701 requires clear assignment of privacy-related roles and responsibilities. The DPO role required under PDPA s12A can be mapped to the 'Privacy Officer' or 'Privacy Information Manager' roles in ISO 27701's organizational responsibility framework."
       },
       {
         "pdpaSection": "ss5-12",

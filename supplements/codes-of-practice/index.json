@@ -11,7 +11,7 @@
       "title": "Personal Data Protection Code of Practice (General) 2022",
       "shortTitle": "General Code 2022",
       "type": "general",
-      "applicableClasses": "All data users regardless of class",
+      "applicableClasses": "All data controllers regardless of class",
       "effectiveDate": "2022-01-01",
       "filePath": "supplements/codes-of-practice/general-cop-2022.json",
       "status": "in-force",
@@ -88,5 +88,5 @@
       "status": "in-force"
     }
   ],
-  "notes": "Where a data user is subject to both the General Code and a sector-specific Code, the sector-specific Code prevails to the extent of any inconsistency. Codes are issued under s57 and compliance is mandated by s58 — non-compliance constitutes a breach of the Code which may be treated as a breach of the corresponding principle under s5."
+  "notes": "Where a data controller is subject to both the General Code and a sector-specific Code, the sector-specific Code prevails to the extent of any inconsistency. Codes are issued under s57 and compliance is mandated by s58 — non-compliance constitutes a breach of the Code which may be treated as a breach of the corresponding principle under s5."
 }

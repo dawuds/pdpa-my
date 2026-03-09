@@ -53,7 +53,7 @@
 
 This Personal Data Protection Policy ("Policy") establishes the principles, obligations, governance framework, and operational requirements by which [Organization Name] ("the Organisation") collects, processes, holds, transfers, and disposes of personal data. The Policy reflects the Organisation's commitment to protecting the privacy and rights of individuals whose personal data is handled in the course of business operations.
 
-This Policy is established in accordance with the **Personal Data Protection Act 2010 (Act 709)** ("PDPA") and its subsidiary legislation, as amended by the **Personal Data Protection (Amendment) Act 2024 (Act A1727)** ("the 2024 Amendment"). It operationalises the seven data protection principles prescribed under the PDPA and gives effect to the Organisation's legal, ethical, and reputational obligations as a data user.
+This Policy is established in accordance with the **Personal Data Protection Act 2010 (Act 709)** ("PDPA") and its subsidiary legislation, as amended by the **Personal Data Protection (Amendment) Act 2024 (Act A1727)** ("the 2024 Amendment"). It operationalises the seven data protection principles prescribed under the PDPA and gives effect to the Organisation's legal, ethical, and reputational obligations as a data controller.
 
 The Policy serves the following purposes:
 
@@ -116,7 +116,7 @@ This Policy does not apply to:
 | Instrument | Reference |
 |---|---|
 | Personal Data Protection Regulations 2013 | P.U.(A) 335/2013 |
-| Personal Data Protection (Class of Data Users) Order 2013 | P.U.(A) 336/2013 |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | P.U.(A) 336/2013 |
 | Personal Data Protection Standards 2015 | [Reference Number] |
 | [Other applicable regulations] | [Reference] |
 
@@ -156,11 +156,11 @@ The following terms, when used in this Policy, shall have the meanings assigned 
 | **Amendment Act** | The Personal Data Protection (Amendment) Act 2024 (Act A1727). |
 | **Commissioner** | The Personal Data Protection Commissioner appointed under the PDPA. |
 | **Consent** | A freely given, specific, informed, and unambiguous indication of the data subject's wishes by which the data subject, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to them. |
-| **Data Processor** | A person who processes personal data solely on behalf of a data user, and not for that person's own purposes. |
+| **Data Processor** | A person who processes personal data solely on behalf of a data controller, and not for that person's own purposes. |
 | **Data Subject** | An individual who is the subject of personal data; the natural person to whom the personal data relates. |
-| **Data User** | A person who either alone, jointly, or in common with other persons processes any personal data, or has control over or authorises the processing of any personal data. [Organization Name] is a data user in respect of all personal data it controls. |
+| **Data Controller** | A person who either alone, jointly, or in common with other persons processes any personal data, or has control over or authorises the processing of any personal data. [Organization Name] is a data controller in respect of all personal data it controls. |
 | **Data Protection Officer (DPO)** | The individual designated by [Organization Name] with responsibility for overseeing data protection compliance, as described in Section 7 of this Policy. |
-| **Personal Data** | Any information in respect of commercial transactions that: (a) is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose; (b) is recorded with the intention that it should be processed by means of such equipment; or (c) is recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system, which relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data user, including any sensitive personal data and expression of opinion about the data subject. (PDPA s4) |
+| **Personal Data** | Any information in respect of commercial transactions that: (a) is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose; (b) is recorded with the intention that it should be processed by means of such equipment; or (c) is recorded as part of a relevant filing system or with the intention that it should form part of a relevant filing system, which relates directly or indirectly to a data subject, who is identified or identifiable from that information or from that and other information in the possession of a data controller, including any sensitive personal data and expression of opinion about the data subject. (PDPA s4) |
 | **Processing** | Collecting, recording, holding, or storing personal data, or carrying out any operation on the personal data, including organising, adapting, altering, retrieving, consulting, disclosing, combining, correcting, erasing, or destroying. (PDPA s4) |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject; the political opinions of a data subject; the religious beliefs or other beliefs of a similar nature of a data subject; the commission or alleged commission of any offence by a data subject; or any other personal data as the Minister may determine. (PDPA s4, s12) |
 | **Data Breach** | A security incident in which personal data is accessed, disclosed, altered, lost, or destroyed without authorisation, or in a manner not permitted by this Policy or the PDPA. |
@@ -201,7 +201,7 @@ The objectives of this Policy are to:
 
 *This section summarises the Organisation's obligations under each of the seven data protection principles in the PDPA. For each principle, authors should document specific operational requirements. These summaries should be read alongside the detailed Standard Operating Procedures referenced in the appendices.*
 
-The PDPA prescribes seven data protection principles with which the Organisation, as a data user, must comply. The following subsections summarise the Organisation's interpretation of, and obligations under, each principle.
+The PDPA prescribes seven data protection principles with which the Organisation, as a data controller, must comply. The following subsections summarise the Organisation's interpretation of, and obligations under, each principle.
 
 ---
 
@@ -209,7 +209,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's approach to ensuring that personal data is processed only with consent or a lawful basis, and only for the specified, explicit, and legitimate purposes for which it was collected.*
 
-**Statutory Requirement (s5):** A data user shall not process personal data about a data subject unless the data subject has given consent to the processing of the personal data, except in the circumstances permitted by section 5(2).
+**Statutory Requirement (s5):** A data controller shall not process personal data about a data subject unless the data subject has given consent to the processing of the personal data, except in the circumstances permitted by section 5(2).
 
 **Organisational Obligations:**
 
@@ -224,7 +224,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 | Circumstance | Conditions |
 |---|---|
 | Performance of a contract | The processing is necessary for the performance of a contract to which the data subject is a party |
-| Legal obligation | The processing is necessary for compliance with a legal obligation to which the data user is subject |
+| Legal obligation | The processing is necessary for compliance with a legal obligation to which the data controller is subject |
 | Vital interests | The processing is necessary to protect the vital interests of the data subject |
 | Administration of justice | The processing is necessary for the administration of justice |
 | Exercise of statutory functions | The processing is necessary for the exercise of any functions conferred on any person by law |
@@ -236,7 +236,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's approach to informing data subjects about the collection and processing of their personal data, and to giving them a meaningful choice.*
 
-**Statutory Requirement (s6):** A data user shall inform the data subject of specified matters before collecting or processing personal data about the data subject.
+**Statutory Requirement (s6):** A data controller shall inform the data subject of specified matters before collecting or processing personal data about the data subject.
 
 **Organisational Obligations:**
 
@@ -267,7 +267,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's restrictions on disclosing personal data to third parties, including requirements for consent and contractual controls.*
 
-**Statutory Requirement (s7):** A data user shall not disclose personal data to any person other than the data subject without the consent of the data subject, except in the circumstances permitted by section 7.
+**Statutory Requirement (s7):** A data controller shall not disclose personal data to any person other than the data subject without the consent of the data subject, except in the circumstances permitted by section 7.
 
 **Organisational Obligations:**
 
@@ -294,7 +294,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's approach to implementing technical and organisational measures to protect personal data against loss, misuse, modification, or unauthorised access.*
 
-**Statutory Requirement (s8):** A data user shall take practical steps to protect the personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction.
+**Statutory Requirement (s8):** A data controller shall take practical steps to protect the personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction.
 
 **Organisational Obligations:**
 
@@ -361,7 +361,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's approach to maintaining the accuracy, completeness, and currency of personal data.*
 
-**Statutory Requirement (s10):** A data user shall take reasonable steps to ensure that the personal data is accurate, complete, not misleading, and kept up to date by having regard to the purpose, including any directly related purpose, for which the personal data was collected and further processed.
+**Statutory Requirement (s10):** A data controller shall take reasonable steps to ensure that the personal data is accurate, complete, not misleading, and kept up to date by having regard to the purpose, including any directly related purpose, for which the personal data was collected and further processed.
 
 **Organisational Obligations:**
 
@@ -387,7 +387,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's approach to providing data subjects with access to their personal data and the ability to correct inaccurate data.*
 
-**Statutory Requirement (s11):** A data subject shall be given access to his personal data held by a data user and be able to correct that personal data where the personal data is inaccurate, incomplete, misleading, or not up to date, except where compliance with a request to such access or correction is refused under this Act.
+**Statutory Requirement (s11):** A data subject shall be given access to his personal data held by a data controller and be able to correct that personal data where the personal data is inaccurate, incomplete, misleading, or not up to date, except where compliance with a request to such access or correction is refused under this Act.
 
 **Organisational Obligations:**
 
@@ -404,7 +404,7 @@ The PDPA prescribes seven data protection principles with which the Organisation
 
 *Summarise the Organisation's heightened obligations when processing sensitive personal data.*
 
-**Statutory Requirement (s12):** No data user shall process any sensitive personal data relating to a data subject except in the circumstances prescribed.
+**Statutory Requirement (s12):** No data controller shall process any sensitive personal data relating to a data subject except in the circumstances prescribed.
 
 The Organisation recognises that sensitive personal data carries a higher risk of harm to data subjects if mishandled and warrants heightened protection.
 
@@ -497,8 +497,8 @@ Under the PDPA (Act 709) as amended by Act A1727, data subjects are entitled to 
 | Right of Access | PDPA s11 | The right to request access to personal data held by the Organisation |
 | Right of Correction | PDPA s11 | The right to request correction of inaccurate, incomplete, or misleading personal data |
 | Right to Withdraw Consent | PDPA s5, s38 | The right to withdraw consent to the processing of personal data, subject to lawful processing exceptions |
-| Right to Prevent Processing (Direct Marketing) | PDPA s43 | The right to require the data user to cease or not begin processing personal data for direct marketing purposes |
-| Right to Data Portability | Act A1727 (Amendment) | The right (as introduced / enhanced by Act A1727) to receive personal data in a structured, commonly used, and machine-readable format and to transmit it to another data user |
+| Right to Prevent Processing (Direct Marketing) | PDPA s43 | The right to require the data controller to cease or not begin processing personal data for direct marketing purposes |
+| Right to Data Portability | Act A1727 (Amendment) | The right (as introduced / enhanced by Act A1727) to receive personal data in a structured, commonly used, and machine-readable format and to transmit it to another data controller |
 | Right to Lodge a Complaint | PDPA | The right to lodge a complaint with the Personal Data Protection Commissioner |
 
 ### 8.2 Data Subject Rights Request Handling Procedure
@@ -864,7 +864,7 @@ The following legislation, regulations, and guidance documents are referenced by
 | PDPA s11 | Access Principle | Section 6.7 and Section 8 of this Policy |
 | PDPA s12 | Sensitive Personal Data | Section 6.8 of this Policy |
 | P.U.(A) 335/2013 | Personal Data Protection Regulations 2013 | Subsidiary legislation |
-| P.U.(A) 336/2013 | Personal Data Protection (Class of Data Users) Order 2013 | Registration obligations |
+| P.U.(A) 336/2013 | Personal Data Protection (Class of Data Controllers) Order 2013 | Registration obligations |
 | — | BNM Risk Management in Technology (RMiT) | Technical security requirements |
 | — | BNM [Other Applicable Policy Documents] | [Relevance] |
 | — | [Other applicable law — e.g., Financial Services Act 2013] | [Relevance to data retention / disclosure] |

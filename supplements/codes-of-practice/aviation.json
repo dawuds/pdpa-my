@@ -14,15 +14,15 @@
       "title": "Scope and Application",
       "content": "This Code applies to airlines licensed to operate in or from Malaysia, airport operators (including the operator of Kuala Lumpur International Airport), and ground handling companies processing passenger personal data in connection with aviation operations. The Code addresses the unique privacy challenges of the aviation sector, including advance passenger information sharing with foreign authorities, biometric processing at airports, frequent flyer programme data, and the use of global distribution systems (GDS).",
       "requirements": [
-        "All aviation data users must ensure PDPA compliance is integrated into operations at Malaysian airports",
-        "Overseas airline operations involving Malaysian passengers must also comply with s129A where personal data is transferred to Malaysia",
+        "All aviation data controllers must ensure PDPA compliance is integrated into operations at Malaysian airports",
+        "Overseas airline operations involving Malaysian passengers must also comply with s129 where personal data is transferred to Malaysia",
         "This Code must be read together with the General Code 2022"
       ]
     },
     {
       "id": "cop-avi-s2",
       "title": "Passenger Name Records (PNR) and Advance Passenger Information (API)",
-      "content": "Airlines collecting and processing Passenger Name Records (PNR) and Advance Passenger Information (API) must: (a) disclose the collection and use of PNR/API data in the passenger privacy notice; (b) transmit API to the Immigration Department of Malaysia and foreign authorities only as required by applicable law and bilateral agreements; (c) limit PNR data elements to those specifically required by the receiving authority; (d) retain PNR data for no longer than required by applicable bilateral agreements; (e) implement access controls limiting PNR database access to authorized operations and compliance staff; and (f) document all cross-border transfers of PNR data under the appropriate s129A mechanism.",
+      "content": "Airlines collecting and processing Passenger Name Records (PNR) and Advance Passenger Information (API) must: (a) disclose the collection and use of PNR/API data in the passenger privacy notice; (b) transmit API to the Immigration Department of Malaysia and foreign authorities only as required by applicable law and bilateral agreements; (c) limit PNR data elements to those specifically required by the receiving authority; (d) retain PNR data for no longer than required by applicable bilateral agreements; (e) implement access controls limiting PNR database access to authorized operations and compliance staff; and (f) document all cross-border transfers of PNR data under the appropriate s129 mechanism.",
       "requirements": [
         "PNR collection must be disclosed in the passenger privacy notice at booking",
         "PNR transfers to foreign authorities are generally covered by the legal obligation or vital interests derogation",
@@ -55,7 +55,7 @@
     {
       "id": "cop-avi-s5",
       "title": "Security of Passenger Data Systems",
-      "content": "Aviation data users must implement appropriate security for passenger data systems including: (a) access controls and MFA for all reservation systems (Departure Control Systems, Global Distribution Systems); (b) encrypted transmission of passenger data between airline systems and GDS providers; (c) regular security assessments of all passenger data systems; (d) documented incident response plans covering aviation-specific scenarios (e.g., mass passenger data breaches); and (e) compliance with IATA Cyber Security Guidance and applicable civil aviation authority directives on IT security. Data breaches involving passenger data must be notified to the Commissioner under s143A and to the Civil Aviation Authority of Malaysia (CAAM) as required.",
+      "content": "Aviation data controllers must implement appropriate security for passenger data systems including: (a) access controls and MFA for all reservation systems (Departure Control Systems, Global Distribution Systems); (b) encrypted transmission of passenger data between airline systems and GDS providers; (c) regular security assessments of all passenger data systems; (d) documented incident response plans covering aviation-specific scenarios (e.g., mass passenger data breaches); and (e) compliance with IATA Cyber Security Guidance and applicable civil aviation authority directives on IT security. Data breaches involving passenger data must be notified to the Commissioner under s12B and to the Civil Aviation Authority of Malaysia (CAAM) as required.",
       "requirements": [
         "GDS access must be through encrypted and authenticated connections",
         "Aviation sector incident response plans must address large-scale passenger data breach scenarios",

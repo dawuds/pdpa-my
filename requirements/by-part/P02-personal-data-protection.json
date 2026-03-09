@@ -21,7 +21,7 @@
         },
         {
           "id": "s5-L2",
-          "requirement": "Ensure the organisation is registered as a data user if it falls within a prescribed class under the Personal Data Protection (Class of Data Users) Order 2013, and maintain a valid certificate of registration at all times",
+          "requirement": "Ensure the organisation is registered as a data controller if it falls within a prescribed class under the Personal Data Protection (Class of Data Controllers) Order 2013, and maintain a valid certificate of registration at all times",
           "rationale": "Section 5(2) makes processing without registration a criminal offence; penalties were increased to RM1,000,000 or 3 years imprisonment by the 2024 Amendment",
           "owner": "Legal Counsel / Company Secretary",
           "frequency": "At onboarding and upon any change in business activities",
@@ -264,7 +264,7 @@
         {
           "id": "s6-T1",
           "requirement": "Implement a consent management platform (CMP) or equivalent system that records the date, time, method, scope, and version of consent obtained from each data subject, with audit trail integrity",
-          "rationale": "The data user bears the burden of proving valid consent; an auditable CMP provides the evidentiary record required for JPDP inspections",
+          "rationale": "The data controller bears the burden of proving valid consent; an auditable CMP provides the evidentiary record required for JPDP inspections",
           "owner": "IT / Product",
           "frequency": "Implemented before processing commences; maintained continuously",
           "priority": "Critical",
@@ -572,7 +572,7 @@
     "title": "Disclosure Principle",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Personal data shall not be disclosed for any purpose other than the purpose disclosed at collection, or a directly related purpose, without data subject consent. Third-party disclosures must be governed by data processing agreements, and cross-border transfers must comply with the Transfer Order or s129A.",
+      "summary": "Personal data shall not be disclosed for any purpose other than the purpose disclosed at collection, or a directly related purpose, without data subject consent. Third-party disclosures must be governed by data processing agreements, and cross-border transfers must comply with the Transfer Order or s129.",
       "requirements": [
         {
           "id": "s8-L1",
@@ -737,7 +737,7 @@
     "title": "Security Principle",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Data users must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access, disclosure, alteration, or destruction. The obligation extends to data processors through s9(2). The 2024 Amendment introduced mandatory breach notification under s143A, reinforcing the security obligation.",
+      "summary": "Data users must take practical steps to protect personal data from loss, misuse, modification, unauthorised or accidental access, disclosure, alteration, or destruction. The obligation extends to data processors through s9(2). The 2024 Amendment introduced mandatory breach notification under s12B, reinforcing the security obligation.",
       "requirements": [
         {
           "id": "s9-L1",
@@ -753,8 +753,8 @@
         },
         {
           "id": "s9-L2",
-          "requirement": "Ensure all data processing agreements with data processors contain mandatory security standards at least equivalent to those the data user applies to its own processing, and conduct periodic security due diligence reviews of processors",
-          "rationale": "Section 9(2) makes the data user responsible for the security of personal data processed by processors on its behalf; a breach at a processor's systems may constitute a violation by the data user",
+          "requirement": "Ensure all data processing agreements with data processors contain mandatory security standards at least equivalent to those the data controller applies to its own processing, and conduct periodic security due diligence reviews of processors",
+          "rationale": "Section 9(2) makes the data controller responsible for the security of personal data processed by processors on its behalf; a breach at a processor's systems may constitute a violation by the data controller",
           "owner": "DPO / Legal / Procurement",
           "frequency": "At processor engagement; reviewed annually",
           "priority": "High",
@@ -806,8 +806,8 @@
         },
         {
           "id": "s9-T4",
-          "requirement": "Implement security monitoring and intrusion detection on all systems processing personal data, with alerting, logging, and incident triage capabilities sufficient to detect and respond to breaches within the timeframe required by s143A",
-          "rationale": "Detection capability is a prerequisite for timely breach notification under s143A; failure to detect a breach in a timely manner may indicate failure to take practical steps under s9",
+          "requirement": "Implement security monitoring and intrusion detection on all systems processing personal data, with alerting, logging, and incident triage capabilities sufficient to detect and respond to breaches within the timeframe required by s12B",
+          "rationale": "Detection capability is a prerequisite for timely breach notification under s12B; failure to detect a breach in a timely manner may indicate failure to take practical steps under s9",
           "owner": "IT Security / SOC",
           "frequency": "Implemented continuously; monitoring reviewed quarterly",
           "priority": "High",
@@ -854,7 +854,7 @@
         },
         {
           "id": "s9-ST4",
-          "requirement": "Maintain a documented Incident Response Plan with designated team, incident register, escalation to s143A process, and annual testing through tabletop exercises",
+          "requirement": "Maintain a documented Incident Response Plan with designated team, incident register, escalation to s12B process, and annual testing through tabletop exercises",
           "rationale": "Electronic Security Standard 2015, esec-5 \u2014 mandatory minimum under s9",
           "owner": "CISO / Incident Response Team",
           "frequency": "IRP reviewed annually; tested annually",
@@ -1035,11 +1035,11 @@
       ]
     },
     "governance": {
-      "summary": "Security governance must be formalised with clear ownership, regular reviews, staff training, and incident response procedures that link the Security Principle obligations to the breach notification requirements under s143A.",
+      "summary": "Security governance must be formalised with clear ownership, regular reviews, staff training, and incident response procedures that link the Security Principle obligations to the breach notification requirements under s12B.",
       "requirements": [
         {
           "id": "s9-G1",
-          "requirement": "Establish and test an incident response and data breach notification procedure that assigns roles, defines escalation paths, and ensures the organisation can meet its s143A notification obligations to the Commissioner and affected data subjects",
+          "requirement": "Establish and test an incident response and data breach notification procedure that assigns roles, defines escalation paths, and ensures the organisation can meet its s12B notification obligations to the Commissioner and affected data subjects",
           "rationale": "An untested incident response plan is unlikely to function effectively in a real breach; the Commissioner treats failure to have an IRP as evidence of inadequate security governance",
           "owner": "DPO / CISO / Legal",
           "frequency": "Annual tabletop exercise; updated after each incident",
@@ -1063,7 +1063,7 @@
         },
         {
           "id": "s9-GL1",
-          "requirement": "Integrate breach detection and response obligations from DBN Guideline into security operations: incident logging, escalation procedures, and IRP alignment with s143A notification timelines",
+          "requirement": "Integrate breach detection and response obligations from DBN Guideline into security operations: incident logging, escalation procedures, and IRP alignment with s12B notification timelines",
           "rationale": "DBN Guideline 2025, dbn-2/3 \u2014 security-to-breach response integration under s9",
           "owner": "CISO / DPO",
           "frequency": "Ongoing; IRP reviewed annually",
@@ -1135,7 +1135,7 @@
         {
           "id": "s10-L3",
           "requirement": "Align the retention schedule with all applicable legal, regulatory, and contractual retention obligations (e.g., tax records under the Income Tax Act, employment records under the Employment Act, AML records under AMLA), and document the basis for any retention extending beyond the PDPA minimum necessary period",
-          "rationale": "Where a separate law requires longer retention, that law provides the legal basis for extended retention; the data user must identify and document this basis to demonstrate that extended retention is not arbitrary",
+          "rationale": "Where a separate law requires longer retention, that law provides the legal basis for extended retention; the data controller must identify and document this basis to demonstrate that extended retention is not arbitrary",
           "owner": "Legal Counsel / DPO",
           "frequency": "At schedule creation; reviewed on any change in applicable law",
           "priority": "High",
@@ -1343,7 +1343,7 @@
     "title": "Data Integrity Principle",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data user shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up-to-date, having regard to the purpose for which it is collected and used. Data integrity obligations are continuous and must be supported by both technical and procedural controls.",
+      "summary": "A data controller shall take reasonable steps to ensure that personal data is accurate, complete, not misleading, and kept up-to-date, having regard to the purpose for which it is collected and used. Data integrity obligations are continuous and must be supported by both technical and procedural controls.",
       "requirements": [
         {
           "id": "s11-L1",
@@ -1508,7 +1508,7 @@
     "title": "Access Principle",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data user shall allow data subjects to access their personal data and correct any inaccuracies. The Access Principle is operationalised through ss 30-33, which establish the procedural framework for data access and correction requests. The principle creates an affirmative obligation to facilitate access, not merely to refrain from obstructing it.",
+      "summary": "A data controller shall allow data subjects to access their personal data and correct any inaccuracies. The Access Principle is operationalised through ss 30-33, which establish the procedural framework for data access and correction requests. The principle creates an affirmative obligation to facilitate access, not merely to refrain from obstructing it.",
       "requirements": [
         {
           "id": "s12-L1",
@@ -1634,14 +1634,14 @@
   "s13": {
     "sectionId": "s13",
     "part": "II",
-    "title": "Registration of Data Users",
+    "title": "Registration of Data Controllers",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Data users belonging to a prescribed class under the Personal Data Protection (Class of Data Users) Order 2013 must register with the Commissioner before processing personal data. Processing without registration is a criminal offence under s5(2) with penalties up to RM1,000,000 or 3 years imprisonment.",
+      "summary": "Data users belonging to a prescribed class under the Personal Data Protection (Class of Data Controllers) Order 2013 must register with the Commissioner before processing personal data. Processing without registration is a criminal offence under s5(2) with penalties up to RM1,000,000 or 3 years imprisonment.",
       "requirements": [
         {
           "id": "s13-L1",
-          "requirement": "Determine whether the organisation falls within any prescribed class of data users under the Personal Data Protection (Class of Data Users) Order 2013 (currently covering 11 industry sectors), and obtain registration before commencing processing of personal data",
+          "requirement": "Determine whether the organisation falls within any prescribed class of data controllers under the Personal Data Protection (Class of Data Controllers) Order 2013 (currently covering 11 industry sectors), and obtain registration before commencing processing of personal data",
           "rationale": "Processing without registration where required is an offence under s5(2); penalties were increased to RM1,000,000 or 3 years imprisonment by the 2024 Amendment",
           "owner": "Legal Counsel / Company Secretary",
           "frequency": "At establishment; on each material change of business",
@@ -1730,7 +1730,7 @@
     "title": "Application for Registration",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 14 specifies the requirements for a valid registration application. The application must contain accurate particulars of the data user's processing activities, categories of personal data processed, and purposes of processing. False or misleading information in an application is a separate offence.",
+      "summary": "Section 14 specifies the requirements for a valid registration application. The application must contain accurate particulars of the data controller's processing activities, categories of personal data processed, and purposes of processing. False or misleading information in an application is a separate offence.",
       "requirements": [
         {
           "id": "s14-L1",
@@ -1891,7 +1891,7 @@
     "title": "Right of Access to Personal Data",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data subject has the right to access their personal data processed by the data user. Section 30 establishes the substantive right; section 31 governs the procedure for compliance. Refusal to provide access without lawful justification is an offence.",
+      "summary": "A data subject has the right to access their personal data processed by the data controller. Section 30 establishes the substantive right; section 31 governs the procedure for compliance. Refusal to provide access without lawful justification is an offence.",
       "requirements": [
         {
           "id": "s30-L1",
@@ -2053,12 +2053,12 @@
     "title": "Right to Correct Personal Data",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "A data subject has the right to request the correction of inaccurate, incomplete, misleading, or outdated personal data. The data user must either make the correction or attach a correction statement, and must notify third parties to whom the data was disclosed of the correction.",
+      "summary": "A data subject has the right to request the correction of inaccurate, incomplete, misleading, or outdated personal data. The data controller must either make the correction or attach a correction statement, and must notify third parties to whom the data was disclosed of the correction.",
       "requirements": [
         {
           "id": "s32-L1",
           "requirement": "Upon receipt of a valid data correction request, either correct the personal data and notify the data subject and relevant third parties of the correction, or explain in writing why the data is not inaccurate and attach a correction statement to the data where the data subject insists on annotation",
-          "rationale": "Section 32 creates an enforceable right to correction; failure to process a correction request is an offence; the data user cannot simply reject a correction request without explanation and annotation",
+          "rationale": "Section 32 creates an enforceable right to correction; failure to process a correction request is an offence; the data controller cannot simply reject a correction request without explanation and annotation",
           "owner": "DPO / Operations",
           "frequency": "Per request",
           "priority": "Critical",
@@ -2099,7 +2099,7 @@
       ]
     },
     "governance": {
-      "summary": "The correction request process must include a clear dispute resolution pathway for cases where the data user disagrees with the data subject's claim of inaccuracy, and must maintain records of all correction requests and outcomes.",
+      "summary": "The correction request process must include a clear dispute resolution pathway for cases where the data controller disagrees with the data subject's claim of inaccuracy, and must maintain records of all correction requests and outcomes.",
       "requirements": [
         {
           "id": "s32-G1",
@@ -2122,12 +2122,12 @@
     "title": "Processing by Data Processor",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Where a data user engages a data processor to process personal data on its behalf, the data user remains responsible for ensuring that the data processor processes the data only on the data user's instructions and applies appropriate security measures. A written data processing agreement is mandatory.",
+      "summary": "Where a data controller engages a data processor to process personal data on its behalf, the data controller remains responsible for ensuring that the data processor processes the data only on the data controller's instructions and applies appropriate security measures. A written data processing agreement is mandatory.",
       "requirements": [
         {
           "id": "s43-L1",
           "requirement": "Execute a written data processing agreement (DPA) with every data processor engaged to process personal data on the organisation's behalf, prior to the commencement of processing, covering: instruction-only processing, confidentiality obligations, security requirements, sub-processing restrictions, breach notification obligations, and post-processing deletion or return",
-          "rationale": "Section 43 requires a written contract; absence of a DPA means the data user cannot meet its obligations under s8, s9, and s43 simultaneously; a DPA is a fundamental compliance document",
+          "rationale": "Section 43 requires a written contract; absence of a DPA means the data controller cannot meet its obligations under s8, s9, and s43 simultaneously; a DPA is a fundamental compliance document",
           "owner": "Legal Counsel / DPO / Procurement",
           "frequency": "Before each processor engagement; renewed at contract renewal",
           "priority": "Critical",
@@ -2138,8 +2138,8 @@
         },
         {
           "id": "s43-L2",
-          "requirement": "Restrict data processors contractually and technically to processing personal data only on the data user's documented instructions, and prohibit processors from processing the data for their own purposes or disclosing it to unauthorised third parties",
-          "rationale": "Section 43 requires instruction-only processing; a processor that processes data for its own purposes becomes a data user in its own right, creating additional legal complications",
+          "requirement": "Restrict data processors contractually and technically to processing personal data only on the data controller's documented instructions, and prohibit processors from processing the data for their own purposes or disclosing it to unauthorised third parties",
+          "rationale": "Section 43 requires instruction-only processing; a processor that processes data for its own purposes becomes a data controller in its own right, creating additional legal complications",
           "owner": "Legal Counsel / DPO",
           "frequency": "At contract execution; monitored continuously",
           "priority": "Critical",
@@ -2151,7 +2151,7 @@
         {
           "id": "s43-L3",
           "requirement": "Conduct periodic due diligence reviews of data processors to verify they have implemented the security measures required by the DPA, and take corrective action (including termination) where a processor fails to meet the required standards",
-          "rationale": "The data user remains responsible for processor compliance under s43; periodic reviews demonstrate the data user has exercised reasonable oversight",
+          "rationale": "The data controller remains responsible for processor compliance under s43; periodic reviews demonstrate the data controller has exercised reasonable oversight",
           "owner": "DPO / Procurement / CISO",
           "frequency": "Annual due diligence; ad hoc after incidents",
           "priority": "High",
@@ -2180,7 +2180,7 @@
         {
           "id": "s43-T2",
           "requirement": "Maintain an up-to-date processor register listing all engaged data processors, the categories of personal data they process, the services they provide, the DPA reference, and the data transfer mechanism used (where applicable for cross-border transfers)",
-          "rationale": "A processor register enables the data user to manage its processor relationships systematically and is a key document in JPDP inspections",
+          "rationale": "A processor register enables the data controller to manage its processor relationships systematically and is a key document in JPDP inspections",
           "owner": "DPO / Procurement",
           "frequency": "Maintained continuously; reviewed quarterly",
           "priority": "High",

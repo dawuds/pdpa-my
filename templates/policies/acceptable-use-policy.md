@@ -100,7 +100,7 @@ This Policy applies to all operations of [Organization Name] within Malaysia and
 
 ### 3.1 Personal Data Protection Act 2010 (PDPA)
 
-[Organization Name] is a **data user** as defined under the PDPA and is subject to the data protection principles set out in Part II of the Act. This Policy directly implements the following principles:
+[Organization Name] is a **data controller** as defined under the PDPA and is subject to the data protection principles set out in Part II of the Act. This Policy directly implements the following principles:
 
 | **PDPA Section** | **Principle** | **Policy Relevance** |
 |---|---|---|
@@ -132,7 +132,7 @@ This Policy applies to all operations of [Organization Name] within Malaysia and
 | **Term** | **Definition** |
 |---|---|
 | **Data Subject** | An individual who is the subject of personal data processed by [Organization Name], including customers, employees, and any other identified or identifiable natural person. |
-| **Data User** | [Organization Name], as an entity that either alone or jointly with others processes personal data or has personal data processed on its behalf. |
+| **Data Controller** | [Organization Name], as an entity that either alone or jointly with others processes personal data or has personal data processed on its behalf. |
 | **Data Processor** | A third party that processes personal data on behalf of [Organization Name] under a data processing agreement. |
 | **IT Systems** | All hardware, software, networks, applications, cloud services, and data storage infrastructure owned, licensed, or managed by [Organization Name]. |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject who is identified or identifiable from that information, as defined under Section 4 of the PDPA. |

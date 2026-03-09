@@ -15,14 +15,14 @@
 
 ---
 
-> **URGENT NOTICE:** This document constitutes a formal notification to the Personal Data Protection Commissioner pursuant to section 143A of the Personal Data Protection Act 2010 (PDPA). This report must be submitted **within 72 hours** of the data user becoming aware of a notifiable personal data breach. Where complete information is not yet available at the time of initial notification, a supplementary report must be filed as soon as practicable thereafter.
+> **URGENT NOTICE:** This document constitutes a formal notification to the Personal Data Protection Commissioner pursuant to section 143A of the Personal Data Protection Act 2010 (PDPA). This report must be submitted **within 72 hours** of the data controller becoming aware of a notifiable personal data breach. Where complete information is not yet available at the time of initial notification, a supplementary report must be filed as soon as practicable thereafter.
 
 ---
 
 ## Table of Contents
 
 1. [Purpose and Scope](#1-purpose-and-scope)
-2. [Data User Identity and Registration Details](#2-data-user-identity-and-registration-details)
+2. [Data Controller Identity and Registration Details](#2-data-user-identity-and-registration-details)
 3. [Data Protection Officer Contact Details](#3-data-protection-officer-contact-details)
 4. [Breach Discovery and Timeline](#4-breach-discovery-and-timeline)
 5. [Nature and Type of Breach](#5-nature-and-type-of-breach)
@@ -42,7 +42,7 @@
 
 ### 1.1 Purpose
 
-This report serves as the formal notification submitted by **[Organization Name]** ("the Data User") to the Personal Data Protection Commissioner of Malaysia in accordance with **section 143A of the Personal Data Protection Act 2010 (PDPA)**. It documents all prescribed particulars relating to the personal data breach identified as **[Breach Reference ID]**, and fulfils the statutory obligation to notify the Commissioner of a notifiable breach.
+This report serves as the formal notification submitted by **[Organization Name]** ("the Data Controller") to the Personal Data Protection Commissioner of Malaysia in accordance with **section 143A of the Personal Data Protection Act 2010 (PDPA)**. It documents all prescribed particulars relating to the personal data breach identified as **[Breach Reference ID]**, and fulfils the statutory obligation to notify the Commissioner of a notifiable breach.
 
 ### 1.2 Scope
 
@@ -59,15 +59,15 @@ This notification covers all personal data processed by [Organization Name] in t
 
 ---
 
-## 2. Data User Identity and Registration Details
+## 2. Data Controller Identity and Registration Details
 
-*Provide full legal identity and regulatory registration details for the data user submitting this notification. All fields must match official registration records.*
+*Provide full legal identity and regulatory registration details for the data controller submitting this notification. All fields must match official registration records.*
 
 ### 2.1 Organization Details
 
 | Field | Details |
 |---|---|
-| **Legal Name of Data User** | [Full Registered Legal Name] |
+| **Legal Name of Data Controller** | [Full Registered Legal Name] |
 | **Trading Name (if different)** | [Trading / Brand Name] |
 | **Company Registration Number** | [SSM Registration Number] |
 | **PDPA Registration Number** | [PDPC Registration Number, if applicable] |
@@ -82,7 +82,7 @@ This notification covers all personal data processed by [Organization Name] in t
 
 - **Business unit(s) involved:** [e.g., Customer Services Division, IT Infrastructure Department]
 - **Applicable data processing activities:** [Describe the specific processing activity affected, e.g., customer onboarding, payment processing, employee records management]
-- **Processing done as Data User or Data Processor:** ☐ Data User &nbsp;&nbsp; ☐ Data Processor acting on behalf of [Principal Data User Name]
+- **Processing done as Data Controller or Data Processor:** ☐ Data Controller &nbsp;&nbsp; ☐ Data Processor acting on behalf of [Principal Data Controller Name]
 
 ---
 

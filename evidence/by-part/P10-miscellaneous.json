@@ -1,20 +1,20 @@
 {
-  "s129A": {
-    "sectionId": "s129A",
+  "s129": {
+    "sectionId": "s129",
     "part": "X",
     "title": "Cross-Border Transfer of Personal Data (2024 Amendment)",
     "obligationType": "mandatory",
-    "auditorFocus": "Following the 2024 Amendment, JPDP inspectors will specifically assess cross-border data transfer compliance under s129A. The most common finding is inadvertent cross-border transfer through cloud services and SaaS platforms without a transfer mechanism. Data flow maps and transfer registers are the primary documents requested.",
+    "auditorFocus": "Following the 2024 Amendment, JPDP inspectors will specifically assess cross-border data transfer compliance under s129. The most common finding is inadvertent cross-border transfer through cloud services and SaaS platforms without a transfer mechanism. Data flow maps and transfer registers are the primary documents requested.",
     "evidenceItems": [
       {
-        "id": "s129A-E1",
+        "id": "s129-E1",
         "name": "Data flow map showing cross-border transfers",
         "description": "A visual or tabular map of all personal data flows, specifically identifying any flows that cross Malaysia's borders, including cloud service provider data centres and SaaS platform data storage locations",
         "whatGoodLooksLike": [
           "Data flow map identifies every system that stores or processes personal data and the country where data is stored",
           "All cloud service providers are identified with their specific data centre locations",
           "Map distinguishes between data stored in Malaysia, data in Transfer Order-approved countries, and data in non-approved countries requiring a separate transfer mechanism",
-          "Each cross-border flow is annotated with the s129A mechanism relied on (e.g., adequacy, SCC, consent, BCR)",
+          "Each cross-border flow is annotated with the s129 mechanism relied on (e.g., adequacy, SCC, consent, BCR)",
           "Map is updated whenever new systems are deployed or cloud service providers change their data centre configurations",
           "Data flow map was reviewed and updated after the 2024 Amendment came into force"
         ],
@@ -23,7 +23,7 @@
           "Data flow map covers only on-premises systems and does not capture cloud service or SaaS platform data locations",
           "Map was prepared at a point in time and has not been updated as new SaaS platforms were adopted",
           "Organisation is not aware that commonly used SaaS platforms (e.g., CRM, email marketing, video conferencing, HR systems) store data in non-Malaysian data centres",
-          "Map identifies overseas data centres but does not annotate the applicable s129A transfer mechanism for each"
+          "Map identifies overseas data centres but does not annotate the applicable s129 transfer mechanism for each"
         ],
         "suggestedSources": [
           "Data flow map (current version with date)",
@@ -36,11 +36,11 @@
         "retentionPeriod": "Current version plus prior 3 years"
       },
       {
-        "id": "s129A-E2",
+        "id": "s129-E2",
         "name": "Cross-border transfer register with applicable mechanisms",
         "description": "A register documenting all transfers of personal data outside Malaysia, the destination country, the transfer mechanism relied on, and supporting documentation",
         "whatGoodLooksLike": [
-          "Register lists all cross-border transfers with: destination country, recipient/processor, data categories transferred, approximate volume, transfer mechanism under s129A, date of first transfer, and supporting document reference",
+          "Register lists all cross-border transfers with: destination country, recipient/processor, data categories transferred, approximate volume, transfer mechanism under s129, date of first transfer, and supporting document reference",
           "For each transfer relying on SCCs: the executed SCC documents are referenced and on file",
           "For each transfer relying on adequacy: the Transfer Order listing is referenced",
           "For each transfer relying on consent: specific consent records are referenced",
@@ -49,7 +49,7 @@
         ],
         "commonGaps": [
           "No cross-border transfer register — the organisation has not identified its cross-border transfers as a distinct compliance category",
-          "Register lists transfers but does not specify the s129A mechanism relied on for each",
+          "Register lists transfers but does not specify the s129 mechanism relied on for each",
           "SCCs are referenced in the register but the executed SCC documents cannot be produced",
           "Transfers to non-approved countries are listed but the mechanism column is blank",
           "Register does not cover transfers through cloud-based SaaS platforms used by staff"
@@ -65,7 +65,7 @@
         "retentionPeriod": "Duration of transfer + 7 years"
       },
       {
-        "id": "s129A-E3",
+        "id": "s129-E3",
         "name": "Executed Standard Contractual Clauses (SCCs) with overseas recipients",
         "description": "Signed SCC agreements with all overseas processors and recipients where no adequacy basis exists, covering all mandatory clauses and executed before the transfer commenced",
         "whatGoodLooksLike": [
@@ -80,7 +80,7 @@
           "SCCs were executed but only after the transfer had already been in place for months or years",
           "SCCs were modified from the approved form in ways that dilute the protections, undermining their validity as a transfer mechanism",
           "SCCs were executed with the data processor but do not cover sub-processors engaged by that processor",
-          "The executed SCCs address data protection in general but do not specifically address the s129A cross-border transfer mechanism requirements"
+          "The executed SCCs address data protection in general but do not specifically address the s129 cross-border transfer mechanism requirements"
         ],
         "suggestedSources": [
           "Executed SCC documents for all overseas recipients (signed by both parties)",
@@ -99,19 +99,19 @@
       "Review the IT procurement records for the past 2 years and identify any new SaaS platforms adopted — verify each has been assessed for cross-border transfer implications"
     ]
   },
-  "s143A": {
-    "sectionId": "s143A",
+  "s12B": {
+    "sectionId": "s12B",
     "part": "X",
     "title": "Data Breach Notification (2024 Amendment)",
     "obligationType": "mandatory",
-    "auditorFocus": "JPDP inspectors will assess whether the organisation has the capability and documented procedures to notify the Commissioner of data breaches as required by s143A. The Incident Response Plan, breach log, tabletop exercise records, and any actual breach notification records are the primary evidence items. Absence of an IRP or any breach log is treated as a significant finding.",
+    "auditorFocus": "JPDP inspectors will assess whether the organisation has the capability and documented procedures to notify the Commissioner of data breaches as required by s12B. The Incident Response Plan, breach log, tabletop exercise records, and any actual breach notification records are the primary evidence items. Absence of an IRP or any breach log is treated as a significant finding.",
     "evidenceItems": [
       {
-        "id": "s143A-E1",
-        "name": "Incident Response Plan (IRP) with s143A notification procedures",
-        "description": "A documented Incident Response Plan specifically addressing data breach detection, assessment, containment, and notification obligations under s143A",
+        "id": "s12B-E1",
+        "name": "Incident Response Plan (IRP) with s12B notification procedures",
+        "description": "A documented Incident Response Plan specifically addressing data breach detection, assessment, containment, and notification obligations under s12B",
         "whatGoodLooksLike": [
-          "IRP specifically addresses s143A Commissioner notification requirements with a defined internal escalation timeline (e.g., internal confirmation within 24 hours, Commissioner notification within 72 hours of confirmation)",
+          "IRP specifically addresses s12B Commissioner notification requirements with a defined internal escalation timeline (e.g., internal confirmation within 24 hours, Commissioner notification within 72 hours of confirmation)",
           "IRP assigns named roles: DPO (notification decision), CISO (technical response), Legal (legal assessment), Communications (data subject notification), CEO (board escalation)",
           "IRP includes a breach severity assessment matrix to determine whether Commissioner and/or data subject notification is required",
           "IRP contains pre-drafted notification templates for Commissioner and data subject communications",
@@ -120,7 +120,7 @@
         ],
         "commonGaps": [
           "No IRP exists — the organisation has no documented plan for responding to data breaches",
-          "IRP exists but pre-dates the 2024 Amendment and does not reference s143A notification obligations",
+          "IRP exists but pre-dates the 2024 Amendment and does not reference s12B notification obligations",
           "IRP assigns notification responsibility but named persons have left the organisation and the IRP has not been updated",
           "IRP contains a notification procedure but no templates — staff would need to draft notifications from scratch during a breach",
           "IRP has never been tested and may not be operationally effective"
@@ -136,7 +136,7 @@
         "retentionPeriod": "Current version plus all prior versions"
       },
       {
-        "id": "s143A-E2",
+        "id": "s12B-E2",
         "name": "Tabletop exercise records and after-action reports",
         "description": "Records of annual tabletop breach simulation exercises testing the IRP, notification process, and communication templates",
         "whatGoodLooksLike": [
@@ -164,11 +164,11 @@
         "retentionPeriod": "7 years"
       },
       {
-        "id": "s143A-E3",
+        "id": "s12B-E3",
         "name": "Breach log and actual breach notification records",
         "description": "A centralised log of all actual data breaches and security incidents, including the assessments made, notification decisions, and copies of any notifications sent to the Commissioner or data subjects",
         "whatGoodLooksLike": [
-          "Breach log records all incidents (including near-misses and minor incidents) with date of discovery, date breach occurred (if known), nature, data categories affected, approximate number of data subjects, and s143A notification assessment",
+          "Breach log records all incidents (including near-misses and minor incidents) with date of discovery, date breach occurred (if known), nature, data categories affected, approximate number of data subjects, and s12B notification assessment",
           "For any notifiable breach: Commissioner notification is on file (copy of the notification and confirmation of receipt), and the notification was made within the required timeframe",
           "For any breach where data subject notification was required: notification evidence is on file (copy of communication and distribution records)",
           "For any incident assessed as not requiring notification: the assessment rationale is documented and approved by the DPO and Legal",
@@ -194,7 +194,7 @@
         "retentionPeriod": "7 years"
       },
       {
-        "id": "s143A-E4",
+        "id": "s12B-E4",
         "name": "Security monitoring and intrusion detection evidence",
         "description": "Technical evidence that the organisation has implemented monitoring and detection capabilities that would enable it to become aware of data breaches promptly, as a prerequisite for timely notification",
         "whatGoodLooksLike": [
@@ -226,7 +226,7 @@
       "Ask: 'Has the organisation experienced any data breaches or security incidents in the past 2 years?' — then ask to see the breach log and Commissioner notifications for each",
       "Request the IRP and check the last-revised date — was it updated after the 2024 Amendment came into force (April 2025)?",
       "Ask whether a tabletop exercise has been conducted in the past 12 months and request the after-action report",
-      "Identify the most recent entry in the breach log and trace through the IRP process — was the s143A assessment conducted within the required timeframe?",
+      "Identify the most recent entry in the breach log and trace through the IRP process — was the s12B assessment conducted within the required timeframe?",
       "Ask the CISO: 'How long does it typically take to detect an unauthorised access event?' — the answer reveals the adequacy of detection capability"
     ]
   },

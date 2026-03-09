@@ -8,7 +8,7 @@
   "issuedBy": "Minister charged with responsibility for Personal Data Protection",
   "enablingSection": "s139",
   "parentAct": "Act 709",
-  "summary": "These Regulations set out the fees payable for registration of data users, renewal of registration, replacement of certificates, data subject access requests, and other matters under the Personal Data Protection Act 2010. All fees collected are credited to the Personal Data Protection Fund established under Part V of the Act.",
+  "summary": "These Regulations set out the fees payable for registration of data controllers, renewal of registration, replacement of certificates, data subject access requests, and other matters under the Personal Data Protection Act 2010. All fees collected are credited to the Personal Data Protection Fund established under Part V of the Act.",
   "provisions": [
     {
       "id": "fees-1",
@@ -21,11 +21,11 @@
       "id": "fees-2",
       "regulation": "reg2",
       "title": "Registration Fees",
-      "content": "The fee payable for an application for registration as a data user is as specified in the First Schedule to these Regulations. Fees are differentiated by the class of data user and the size of the data user's operations, as determined by the number of data subjects whose data is processed or the annual revenue of the data user, whichever metric produces the higher fee category.",
+      "content": "The fee payable for an application for registration as a data controller is as specified in the First Schedule to these Regulations. Fees are differentiated by the class of data controller and the size of the data controller's operations, as determined by the number of data subjects whose data is processed or the annual revenue of the data controller, whichever metric produces the higher fee category.",
       "requirements": [
         "Fees must be paid at the time of submitting the application — applications without the correct fee will not be processed",
         "Fees are non-refundable once the application has been assessed",
-        "Large data users (more than 100,000 data subjects) pay a higher registration fee"
+        "Large data controllers (more than 100,000 data subjects) pay a higher registration fee"
       ],
       "feeSchedule": {
         "smallDataUser": {
@@ -41,7 +41,7 @@
           "annualFee": "RM2,000"
         },
         "multipleClasses": {
-          "description": "Additional fee per additional class of data user",
+          "description": "Additional fee per additional class of data controller",
           "additionalFeePerClass": "RM200"
         }
       }
@@ -50,7 +50,7 @@
       "id": "fees-3",
       "regulation": "reg3",
       "title": "Renewal Fees",
-      "content": "The fee payable for renewal of registration is the same as the initial registration fee applicable at the time of renewal. Where the data user's size category has changed since the previous registration, the fee applicable to the new category applies.",
+      "content": "The fee payable for renewal of registration is the same as the initial registration fee applicable at the time of renewal. Where the data controller's size category has changed since the previous registration, the fee applicable to the new category applies.",
       "requirements": [
         "Renewal fees must accompany the renewal application",
         "Fee category is assessed at the time of the renewal application based on current data subject numbers"
@@ -60,7 +60,7 @@
       "id": "fees-4",
       "regulation": "reg4",
       "title": "Replacement Certificate Fee",
-      "content": "The fee payable for the replacement of a lost, stolen, or defaced certificate of registration is RM100 per certificate. The data user must submit a statutory declaration attesting to the loss or defacement before a replacement will be issued.",
+      "content": "The fee payable for the replacement of a lost, stolen, or defaced certificate of registration is RM100 per certificate. The data controller must submit a statutory declaration attesting to the loss or defacement before a replacement will be issued.",
       "requirements": [
         "Statutory declaration required for lost or stolen certificates",
         "Replacement certificate has the same expiry date as the original"
@@ -70,10 +70,10 @@
       "id": "fees-5",
       "regulation": "reg5",
       "title": "Data Access Request Fee",
-      "content": "A data user may charge a fee for complying with a data access request under section 30 of the Act. The maximum fee is RM10 per access request, regardless of the quantity of data disclosed. No fee may be charged for correcting inaccurate data or for acknowledging receipt of an access request. Where a request is refused, no fee may be retained.",
+      "content": "A data controller may charge a fee for complying with a data access request under section 30 of the Act. The maximum fee is RM10 per access request, regardless of the quantity of data disclosed. No fee may be charged for correcting inaccurate data or for acknowledging receipt of an access request. Where a request is refused, no fee may be retained.",
       "requirements": [
         "The fee must be notified to the data subject before it is charged",
-        "If the data user charges a fee that exceeds RM10, the excess must be refunded",
+        "If the data controller charges a fee that exceeds RM10, the excess must be refunded",
         "Fee waiver is recommended for data subjects demonstrating financial hardship",
         "Where a request is refused, any fee paid must be refunded"
       ]
@@ -107,7 +107,7 @@
       "requirements": [
         "Electronic payment is the preferred method",
         "Payment receipts must be retained and submitted with the relevant application",
-        "Cheques are not accepted from data users outside Malaysia"
+        "Cheques are not accepted from data controllers outside Malaysia"
       ]
     }
   ],

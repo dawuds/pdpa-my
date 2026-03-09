@@ -5,7 +5,7 @@
     "title": "Enforcement Notices",
     "obligationType": "mandatory",
     "legal": {
-      "summary": "Section 110 empowers the Commissioner to issue enforcement notices requiring a data user to take specified steps to comply with the PDPA within a prescribed period. Non-compliance with an enforcement notice is a criminal offence. Data users have the right to appeal enforcement notices to the Appeal Tribunal under Part VII.",
+      "summary": "Section 110 empowers the Commissioner to issue enforcement notices requiring a data controller to take specified steps to comply with the PDPA within a prescribed period. Non-compliance with an enforcement notice is a criminal offence. Data users have the right to appeal enforcement notices to the Appeal Tribunal under Part VII.",
       "requirements": [
         {
           "id": "s110-L1",

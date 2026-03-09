@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "breach-notification-to-commissioner",
+    "auditRequirement": "Verify that the Data Controller notifies the Commissioner of any personal data breach 'as soon as practicable' (operationalized as 72 hours per JPDP Guidelines) upon becoming aware.",
+    "testingProcedure": [
+      "Examine the Incident Response Plan for specific notification timelines to JPDP.",
+      "Sample 3 recent security incidents and verify the timestamp of 'Discovery' vs 'JPDP Notification'.",
+      "Check if the notification includes mandatory fields prescribed by JPDP."
+    ],
+    "evidenceArtifacts": [
+      {
+        "name": "Data Breach Register",
+        "fields": ["Date of Discovery", "Nature of Breach", "Date of Notification to JPDP", "Reference Number"]
+      },
+      {
+        "name": "JPDP Notification Submission Proof",
+        "description": "Email confirmation or portal submission receipt from MyPDPA."
+      }
+    ],
+    "standardAlignment": {
+      "act": "Section 12B(1)",
+      "guideline": "DBN Guideline 2025 (72-hour window)"
+    }
+  },
+  {
+    "slug": "dpo-appointment-and-functions",
+    "auditRequirement": "Verify the appointment of at least one Data Protection Officer (DPO) and their subsequent registration with the JPDP Commissioner.",
+    "testingProcedure": [
+      "Examine the DPO Letter of Appointment and Job Description for independence and authority.",
+      "Verify the JPDP DPO Registration confirmation.",
+      "Review the DPO Annual Compliance Report to Management/Board."
+    ],
+    "evidenceArtifacts": [
+      {
+        "name": "DPO Letter of Appointment",
+        "description": "Formally signed appointment letter specifying roles and responsibilities."
+      },
+      {
+        "name": "JPDP DPO Registration Receipt",
+        "description": "Proof of notification to the Commissioner under Section 12A(3)."
+      },
+      {
+        "name": "DPO Annual Compliance Report",
+        "description": "Evidence of monitoring activities performed by the DPO."
+      }
+    ],
+    "standardAlignment": {
+      "act": "Section 12A",
+      "guideline": "DPO Guideline 2025"
+    }
+  }
+]

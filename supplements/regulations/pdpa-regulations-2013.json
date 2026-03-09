@@ -21,23 +21,23 @@
       "id": "pdpa-reg-2",
       "regulation": "reg2",
       "title": "Interpretation",
-      "content": "In these Regulations, unless the context otherwise requires: 'Act' means the Personal Data Protection Act 2010; 'Commissioner' means the Personal Data Protection Commissioner appointed under section 47 of the Act; 'certificate' means a certificate of registration issued under regulation 6 of the Personal Data Protection (Registration of Data User) Regulations 2013; 'prescribed form' means a form prescribed by the Commissioner and published in the Gazette.",
+      "content": "In these Regulations, unless the context otherwise requires: 'Act' means the Personal Data Protection Act 2010; 'Commissioner' means the Personal Data Protection Commissioner appointed under section 47 of the Act; 'certificate' means a certificate of registration issued under regulation 6 of the Personal Data Protection (Registration of Data Controller) Regulations 2013; 'prescribed form' means a form prescribed by the Commissioner and published in the Gazette.",
       "requirements": []
     },
     {
       "id": "pdpa-reg-3",
       "regulation": "reg3",
       "title": "Conditions for Processing Personal Data",
-      "content": "A data user may process personal data only if at least one of the following conditions is met: (a) the data subject has given his consent to the processing of the personal data for the stated purposes; (b) the processing is necessary for the performance of a contract to which the data subject is a party; (c) the processing is necessary for compliance with a legal obligation to which the data user is subject, other than an obligation imposed by contract; (d) the processing is necessary in order to protect the vital interests of the data subject; (e) the processing is necessary for the administration of justice or for the exercise of any functions conferred by or under any written law; or (f) the processing is necessary for the purposes of the legitimate interests pursued by the data user or by any third party to which the data is disclosed, except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject.",
+      "content": "A data controller may process personal data only if at least one of the following conditions is met: (a) the data subject has given his consent to the processing of the personal data for the stated purposes; (b) the processing is necessary for the performance of a contract to which the data subject is a party; (c) the processing is necessary for compliance with a legal obligation to which the data controller is subject, other than an obligation imposed by contract; (d) the processing is necessary in order to protect the vital interests of the data subject; (e) the processing is necessary for the administration of justice or for the exercise of any functions conferred by or under any written law; or (f) the processing is necessary for the purposes of the legitimate interests pursued by the data controller or by any third party to which the data is disclosed, except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject.",
       "requirements": [
         "At least one lawful basis must be satisfied before processing commences",
-        "The lawful basis relied upon must be identified and documented in the data user's records",
+        "The lawful basis relied upon must be identified and documented in the data controller's records",
         "Where consent is the basis, it must be freely given, specific, and informed",
         "Where legitimate interests is the basis, a documented legitimate interest assessment must be completed"
       ],
       "provisions": {
         "reg3f": {
-          "text": "The processing is necessary for the purposes of the legitimate interests pursued by the data user or by any third party to which the data is disclosed, except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject.",
+          "text": "The processing is necessary for the purposes of the legitimate interests pursued by the data controller or by any third party to which the data is disclosed, except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject.",
           "insertedBy": "A1727",
           "note": "This lawful basis (legitimate interests) was not in the original PDPA Regulations 2013. It was inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), effective 2025-04-01."
         }
@@ -47,7 +47,7 @@
       "id": "pdpa-reg-4",
       "regulation": "reg4",
       "title": "Conditions for Processing Sensitive Personal Data",
-      "content": "A data user shall not process sensitive personal data unless: (a) the data subject has given explicit consent to the processing for specified purposes; (b) the processing is necessary to protect the vital interests of the data subject or another person and the data subject is unable to give consent; (c) the processing is carried out in the course of its legitimate activities by a body or association not established or conducted for profit and the processing relates solely to the members of the body or association; (d) the information has been made public as a result of steps deliberately taken by the data subject; (e) the processing is necessary for legal proceedings, legal advice, or establishing, exercising, or defending legal rights; or (f) the processing is necessary for medical purposes and is undertaken by a health professional who owes a duty of confidentiality to the data subject.",
+      "content": "A data controller shall not process sensitive personal data unless: (a) the data subject has given explicit consent to the processing for specified purposes; (b) the processing is necessary to protect the vital interests of the data subject or another person and the data subject is unable to give consent; (c) the processing is carried out in the course of its legitimate activities by a body or association not established or conducted for profit and the processing relates solely to the members of the body or association; (d) the information has been made public as a result of steps deliberately taken by the data subject; (e) the processing is necessary for legal proceedings, legal advice, or establishing, exercising, or defending legal rights; or (f) the processing is necessary for medical purposes and is undertaken by a health professional who owes a duty of confidentiality to the data subject.",
       "requirements": [
         "Explicit (not implied or bundled) consent is required where consent is the basis",
         "Medical purposes processing must be by or under the supervision of a health professional",
@@ -59,7 +59,7 @@
       "id": "pdpa-reg-5",
       "regulation": "reg5",
       "title": "Content of Data Protection Notice",
-      "content": "A data protection notice provided to a data subject under section 7 of the Act (Notice and Choice Principle) must contain the following information: (a) a description of the personal data being collected or to be collected; (b) the purposes for which the personal data is being or is to be processed; (c) any information available to the data user as to the source of the personal data; (d) the right of the data subject to request access to and correction of the personal data; (e) the right of the data subject to limit the processing of the personal data; (f) any disclosure that the data user intends to make or may make of the personal data; (g) the class or description of any transferee that the data user intends to transfer the personal data outside Malaysia; (h) whether it is obligatory or voluntary for the data subject to supply the personal data and the consequences if the data subject fails to supply the personal data; and (i) the name, address and contact details of the data user.",
+      "content": "A data protection notice provided to a data subject under section 7 of the Act (Notice and Choice Principle) must contain the following information: (a) a description of the personal data being collected or to be collected; (b) the purposes for which the personal data is being or is to be processed; (c) any information available to the data controller as to the source of the personal data; (d) the right of the data subject to request access to and correction of the personal data; (e) the right of the data subject to limit the processing of the personal data; (f) any disclosure that the data controller intends to make or may make of the personal data; (g) the class or description of any transferee that the data controller intends to transfer the personal data outside Malaysia; (h) whether it is obligatory or voluntary for the data subject to supply the personal data and the consequences if the data subject fails to supply the personal data; and (i) the name, address and contact details of the data controller.",
       "requirements": [
         "Notice must be provided in Bahasa Malaysia and English",
         "Notice must be provided before or at the time of collection",
@@ -72,7 +72,7 @@
       "id": "pdpa-reg-6",
       "regulation": "reg6",
       "title": "Processing of Personal Data for Secondary Purposes",
-      "content": "Where a data user intends to process personal data for a purpose other than the purpose for which it was originally collected (secondary purpose), the data user must: (a) assess whether the secondary purpose is compatible with the original purpose by considering the link between the purposes, the nature of the data, the likely consequences for the data subject, and the existence of appropriate safeguards; (b) obtain fresh consent from the data subject for the secondary purpose where the processing is not compatible or necessary; and (c) update the data protection notice to reflect the additional purpose.",
+      "content": "Where a data controller intends to process personal data for a purpose other than the purpose for which it was originally collected (secondary purpose), the data controller must: (a) assess whether the secondary purpose is compatible with the original purpose by considering the link between the purposes, the nature of the data, the likely consequences for the data subject, and the existence of appropriate safeguards; (b) obtain fresh consent from the data subject for the secondary purpose where the processing is not compatible or necessary; and (c) update the data protection notice to reflect the additional purpose.",
       "requirements": [
         "Compatibility assessment must be documented",
         "Incompatible secondary processing requires fresh consent",
@@ -83,7 +83,7 @@
       "id": "pdpa-reg-7",
       "regulation": "reg7",
       "title": "Security Measures",
-      "content": "A data user must implement appropriate technical and organizational security measures to protect personal data against unauthorized or unlawful processing, accidental loss, destruction, or damage. Such measures must be appropriate to the harm that might result from unauthorized processing or accidental loss, destruction or damage, and to the nature of the data to be protected. As a minimum, data users must comply with the Personal Data Protection Standards 2015 relating to security of personal data, both electronic and non-electronic. Additional sector-specific security requirements may be prescribed in applicable Codes of Practice.",
+      "content": "A data controller must implement appropriate technical and organizational security measures to protect personal data against unauthorized or unlawful processing, accidental loss, destruction, or damage. Such measures must be appropriate to the harm that might result from unauthorized processing or accidental loss, destruction or damage, and to the nature of the data to be protected. As a minimum, data controllers must comply with the Personal Data Protection Standards 2015 relating to security of personal data, both electronic and non-electronic. Additional sector-specific security requirements may be prescribed in applicable Codes of Practice.",
       "requirements": [
         "Technical measures include: access controls, encryption, secure networks, intrusion detection, and vulnerability management",
         "Organizational measures include: staff training, data processing agreements with processors, access logging, and incident response plans",
@@ -95,20 +95,20 @@
       "id": "pdpa-reg-8",
       "regulation": "reg8",
       "title": "Processing by Data Processors",
-      "content": "Where a data user engages a data processor to process personal data on its behalf, the data user must: (a) ensure that the processing is carried out under a written contract or other legally binding instrument; (b) ensure that the contract requires the data processor to act only on the instructions of the data user; (c) ensure that the data processor implements appropriate security measures equivalent to those required of the data user; (d) carry out reasonable due diligence on the data processor before engagement; and (e) ensure that the data processor does not sub-process without prior written authorization from the data user.",
+      "content": "Where a data controller engages a data processor to process personal data on its behalf, the data controller must: (a) ensure that the processing is carried out under a written contract or other legally binding instrument; (b) ensure that the contract requires the data processor to act only on the instructions of the data controller; (c) ensure that the data processor implements appropriate security measures equivalent to those required of the data controller; (d) carry out reasonable due diligence on the data processor before engagement; and (e) ensure that the data processor does not sub-process without prior written authorization from the data controller.",
       "requirements": [
         "Written data processing agreement (DPA) is mandatory — verbal or implied arrangements are insufficient",
         "DPA must include subject matter, duration, nature and purpose of processing, type of data, and obligations of the processor",
         "Data user remains responsible to data subjects for all processing carried out by the processor",
         "Data users must maintain a register of all data processors",
-        "Processor must be required to notify the data user of any data breach without undue delay"
+        "Processor must be required to notify the data controller of any data breach without undue delay"
       ]
     },
     {
       "id": "pdpa-reg-9",
       "regulation": "reg9",
       "title": "Cross-Border Personal Data Transfer",
-      "content": "A data user shall not transfer personal data outside Malaysia unless the country to which the data is transferred is determined by the Minister to provide an adequate level of protection for personal data, or unless one of the following applies: (a) the data subject has consented to the transfer; (b) the transfer is necessary for the performance of a contract between the data subject and the data user; (c) the transfer is necessary for reasons of public interest or for legal proceedings; (d) the transfer is necessary to protect the vital interests of the data subject; or (e) the data user has implemented appropriate safeguards in accordance with section 129A of the Act as amended by Act A1727.",
+      "content": "A data controller shall not transfer personal data outside Malaysia unless the country to which the data is transferred is determined by the Minister to provide an adequate level of protection for personal data, or unless one of the following applies: (a) the data subject has consented to the transfer; (b) the transfer is necessary for the performance of a contract between the data subject and the data controller; (c) the transfer is necessary for reasons of public interest or for legal proceedings; (d) the transfer is necessary to protect the vital interests of the data subject; or (e) the data controller has implemented appropriate safeguards in accordance with section 129A of the Act as amended by Act A1727.",
       "requirements": [
         "The adequacy list must be checked before each transfer",
         "Consent for cross-border transfer must be specific to the transfer — general consent to data processing is insufficient",
@@ -120,7 +120,7 @@
       "id": "pdpa-reg-10",
       "regulation": "reg10",
       "title": "Retention and Disposal of Personal Data",
-      "content": "A data user must not retain personal data longer than is necessary for the fulfillment of the purpose for which the personal data was collected and is subsequently processed. Data users must establish a documented retention policy that: (a) specifies retention periods for each category of personal data; (b) identifies the legal or operational basis for each retention period; (c) provides for secure deletion or destruction at the end of the retention period; and (d) is reviewed at least annually. Retention periods must take into account any statutory minimum retention requirements under other written laws.",
+      "content": "A data controller must not retain personal data longer than is necessary for the fulfillment of the purpose for which the personal data was collected and is subsequently processed. Data users must establish a documented retention policy that: (a) specifies retention periods for each category of personal data; (b) identifies the legal or operational basis for each retention period; (c) provides for secure deletion or destruction at the end of the retention period; and (d) is reviewed at least annually. Retention periods must take into account any statutory minimum retention requirements under other written laws.",
       "requirements": [
         "Retention policy must be documented and maintained",
         "Disposal must be secure — paper records must be cross-cut shredded or incinerated; electronic data must be securely wiped or cryptographically erased",
@@ -132,7 +132,7 @@
       "id": "pdpa-reg-11",
       "regulation": "reg11",
       "title": "Response to Data Subject Access Requests",
-      "content": "Upon receipt of a data access request from a data subject under section 30 of the Act, a data user must: (a) acknowledge receipt of the request within 5 working days; (b) verify the identity of the data subject before responding; (c) provide the requested personal data or a written explanation for any refusal within 21 days of receiving the request; and (d) provide the information in a clear and intelligible form. A data user may charge a fee not exceeding the prescribed amount under the Fees Regulations for complying with the access request.",
+      "content": "Upon receipt of a data access request from a data subject under section 30 of the Act, a data controller must: (a) acknowledge receipt of the request within 5 working days; (b) verify the identity of the data subject before responding; (c) provide the requested personal data or a written explanation for any refusal within 21 days of receiving the request; and (d) provide the information in a clear and intelligible form. A data controller may charge a fee not exceeding the prescribed amount under the Fees Regulations for complying with the access request.",
       "requirements": [
         "Identity verification must not be disproportionate or burdensome to data subjects",
         "Access may be refused on specified grounds: national security, prevention of crime, legal proceedings, legal privilege",
@@ -144,10 +144,10 @@
       "id": "pdpa-reg-12",
       "regulation": "reg12",
       "title": "Response to Data Subject Correction Requests",
-      "content": "Upon receipt of a data correction request under section 34 of the Act, a data user must: (a) acknowledge receipt within 5 working days; (b) verify the accuracy of the correction claimed by the data subject; (c) where the correction is verified, correct the personal data and notify any third parties to whom the data was disclosed within 14 days; (d) where the correction is not verified, explain in writing the grounds for refusal; and (e) retain a record of all correction requests and the data user's response.",
+      "content": "Upon receipt of a data correction request under section 34 of the Act, a data controller must: (a) acknowledge receipt within 5 working days; (b) verify the accuracy of the correction claimed by the data subject; (c) where the correction is verified, correct the personal data and notify any third parties to whom the data was disclosed within 14 days; (d) where the correction is not verified, explain in writing the grounds for refusal; and (e) retain a record of all correction requests and the data controller's response.",
       "requirements": [
         "Data users cannot charge for handling correction requests",
-        "Where the data user refuses a correction, the data subject may attach a statement of disagreement to the record",
+        "Where the data controller refuses a correction, the data subject may attach a statement of disagreement to the record",
         "Third party notifications upon correction must include all recipients of the inaccurate data",
         "The correction process must be accessible to persons with disabilities"
       ]

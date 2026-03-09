@@ -1,0 +1,83 @@
+{
+  "s12A": {
+    "sectionId": "s12A",
+    "part": "II",
+    "title": "Appointment of Data Protection Officer",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors will verify whether the organisation has formally appointed a DPO and notified the Commissioner as required by Section 12A(3). They will also assess whether the DPO has sufficient authority and resources to perform their functions independently.",
+    "evidenceItems": [
+      {
+        "id": "s12A-E1",
+        "name": "DPO Appointment Letter & Job Description",
+        "description": "Formal documentation of the DPO's appointment, clearly defining their roles, responsibilities, and reporting line to senior management.",
+        "whatGoodLooksLike": [
+          "Document is signed by the CEO or Board",
+          "Explicitly mentions independence and avoidance of conflict of interest",
+          "Specifies duties aligned with JPDP DPO Guidelines 2025"
+        ],
+        "artifactSlugs": ["dpo-appointment-letter"]
+      },
+      {
+        "id": "s12A-E2",
+        "name": "JPDP DPO Registration Confirmation",
+        "description": "Proof that the DPO appointment was notified to the Commissioner via the MyPDPA portal or prescribed form.",
+        "artifactSlugs": ["dpo-registration-receipt"]
+      }
+    ]
+  },
+  "s12B": {
+    "sectionId": "s12B",
+    "part": "II",
+    "title": "Data Breach Notification",
+    "obligationType": "mandatory",
+    "auditorFocus": "Inspectors will verify the organization's capability to detect breaches and notify the Commissioner 'as soon as practicable'. They will check for a functioning breach register and evidence of 72-hour notification readiness.",
+    "evidenceItems": [
+      {
+        "id": "s12B-E1",
+        "name": "Personal Data Breach Register",
+        "description": "A log of all security incidents involving personal data, including the assessment of risk and notification decisions.",
+        "whatGoodLooksLike": [
+          "Includes timestamp of discovery and timestamp of notification",
+          "Records rationale for notifying or not notifying data subjects (harm test)"
+        ],
+        "artifactSlugs": ["data-breach-register"]
+      },
+      {
+        "id": "s12B-E2",
+        "name": "Commissioner Breach Notification Records",
+        "description": "Copies of all notifications sent to the JPDP within the required timeframe.",
+        "artifactSlugs": ["data-breach-notification-report-commissioner"]
+      }
+    ]
+  },
+  "s43A": {
+    "sectionId": "s43A",
+    "part": "II",
+    "title": "Right to Data Portability",
+    "obligationType": "rights-based",
+    "auditorFocus": "Inspectors will check whether the organization has a technical mechanism to transmit personal data to another controller in a structured format upon request.",
+    "evidenceItems": [
+      {
+        "id": "s43A-E1",
+        "name": "Data Portability Procedure & Technical Spec",
+        "description": "Documented process for handling portability requests and the data formats supported (e.g., CSV, JSON).",
+        "artifactSlugs": ["data-portability-procedure"]
+      }
+    ]
+  },
+  "s34": {
+    "sectionId": "s34",
+    "part": "II",
+    "title": "Right to Correct Personal Data",
+    "obligationType": "mandatory",
+    "auditorFocus": "Verification of the workflow for receiving and acting upon data correction requests within 21 days.",
+    "evidenceItems": [
+      {
+        "id": "s34-E1",
+        "name": "Correction Request Log",
+        "description": "Log of all correction requests received and evidence of propagation to third parties.",
+        "artifactSlugs": ["dsar-log"]
+      }
+    ]
+  }
+}

@@ -81,7 +81,7 @@ This procedure does **not** apply to processing activities for which another law
 | Primary | Personal Data Protection Act 2010 (Act 709) | s2 (Definitions), s6 (Consent as lawful basis), s7 (Notice requirement) |
 | Primary | Personal Data Protection Act 2010 (Act 709) | s10 (Sensitive personal data), s38 (Offences) |
 | Subsidiary | Personal Data Protection Regulations 2013 | Regulations 4–7 (Notice and consent requirements) |
-| Subsidiary | Personal Data Protection (Class of Data Users) Order 2013 | [Applicable data user class for [Organisation Name]] |
+| Subsidiary | Personal Data Protection (Class of Data Controllers) Order 2013 | [Applicable data controller class for [Organisation Name]] |
 | Regulatory | Bank Negara Malaysia — Risk Management in Technology (RMiT) | Applicable provisions on customer data management |
 | Internal | [Organisation Name] Privacy Policy | Version [X], dated [Date] |
 | Internal | [Organisation Name] Data Protection Policy | Version [X], dated [Date] |
@@ -97,7 +97,7 @@ This procedure does **not** apply to processing activities for which another law
 |---|---|
 | **Consent** | Any freely given, specific, informed, and unambiguous indication of the data subject's wishes by which they, by a statement or by a clear affirmative action, signify agreement to the processing of their personal data (s2, PDPA). |
 | **Data Subject** | An individual to whom personal data relates. |
-| **Data User** | [Organisation Name], being the person who either alone or jointly or in common with other persons processes any personal data, or has control over or authorises the processing of any personal data. |
+| **Data Controller** | [Organisation Name], being the person who either alone or jointly or in common with other persons processes any personal data, or has control over or authorises the processing of any personal data. |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject who is identified or identifiable from that information. |
 | **Sensitive Personal Data** | Any personal data consisting of information as to the physical or mental health or condition of a data subject, political opinions, religious beliefs or other beliefs of a similar nature, the commission or alleged commission of any offence, or any other personal data as the Minister may determine (s4, PDPA). |
 | **Consent Form** | Any instrument (physical or digital) through which consent is sought and recorded. |
@@ -187,13 +187,13 @@ This procedure does **not** apply to processing activities for which another law
 - Agents must be trained on this procedure and the requirements of the PDPA prior to collecting any consent.
 - Agents must use only [Organisation Name]-approved consent forms and scripts.
 - Agents must submit collected consent records to [Organisation Name] within [X] business days of collection.
-- [Organisation Name] retains liability as data user for any consent collected by agents on its behalf. Non-compliant collection by an agent must be reported to the DPO and addressed under the agent agreement.
+- [Organisation Name] retains liability as data controller for any consent collected by agents on its behalf. Non-compliant collection by an agent must be reported to the DPO and addressed under the agent agreement.
 
 ---
 
 ## 6. Mandatory Information to Include with Consent Requests (s7 Notice Elements)
 
-*Section 7 of the PDPA requires data users to inform data subjects of specified information before or at the time of collecting personal data. This section defines the minimum s7 notice elements that must accompany every consent request at [Organisation Name]. All consent forms and scripts must be audited against this checklist before deployment.*
+*Section 7 of the PDPA requires data controllers to inform data subjects of specified information before or at the time of collecting personal data. This section defines the minimum s7 notice elements that must accompany every consent request at [Organisation Name]. All consent forms and scripts must be audited against this checklist before deployment.*
 
 ### 6.1 Mandatory s7 Notice Checklist
 
@@ -201,7 +201,7 @@ Every consent request — regardless of channel — must be accompanied by a not
 
 | # | s7 Element | Description | Included in Template? |
 |---|---|---|---|
-| 1 | Identity of Data User | Full legal name and registered address of [Organisation Name] | [ ] Yes / [ ] No |
+| 1 | Identity of Data Controller | Full legal name and registered address of [Organisation Name] | [ ] Yes / [ ] No |
 | 2 | Purpose of Processing | The specific, stated purpose(s) for which personal data is being collected and processed | [ ] Yes / [ ] No |
 | 3 | Categories of Data | The type(s) of personal data being collected | [ ] Yes / [ ] No |
 | 4 | Right to Access | Information that the data subject has the right to request access to their personal data | [ ] Yes / [ ] No |
@@ -489,7 +489,7 @@ For the purposes of this procedure, a **child** is defined as a person under the
 |---|---|---|---|
 | Internal systems (CRM, marketing platform, analytics) | Yes | Automated flag / manual update | Within [X] business hours |
 | Third-party data processors | Yes | Formal written notification | Within [X] business days |
-| Third-party data users (where data was shared) | Yes (reasonable efforts) | Formal written notification | Within [X] business days |
+| Third-party data controllers (where data was shared) | Yes (reasonable efforts) | Formal written notification | Within [X] business days |
 | Regulators | Only if required by law or regulation | [Method] | Per regulatory requirement |
 
 **Step 6 — Closure and Confirmation:**
@@ -601,14 +601,14 @@ This procedure shall be reviewed:
 
 | # | Reference | Provision |
 |---|---|---|
-| 1 | Personal Data Protection Act 2010 (Act 709) | s2 — Definitions (consent, personal data, sensitive personal data, data user, data subject) |
+| 1 | Personal Data Protection Act 2010 (Act 709) | s2 — Definitions (consent, personal data, sensitive personal data, data controller, data subject) |
 | 2 | Personal Data Protection Act 2010 (Act 709) | s6 — Consent Principle (consent as a lawful basis for processing) |
 | 3 | Personal Data Protection Act 2010 (Act 709) | s7 — Notice and Choice Principle (mandatory information to be provided to data subjects) |
 | 4 | Personal Data Protection Act 2010 (Act 709) | s10 — Sensitive Personal Data (additional requirements for sensitive data processing) |
 | 5 | Personal Data Protection Act 2010 (Act 709) | s38 — Right to withdraw consent and data subject rights |
 | 6 | Personal Data Protection Act 2010 (Act 709) | s130–s133 — Offences and penalties |
 | 7 | Personal Data Protection Regulations 2013 | Regulations 4–7 — Notice, consent, and access requirements |
-| 8 | Personal Data Protection (Class of Data Users) Order 2013 | [Applicable class for [Organisation Name]] |
+| 8 | Personal Data Protection (Class of Data Controllers) Order 2013 | [Applicable class for [Organisation Name]] |
 | 9 | Bank Negara Malaysia — Risk Management in Technology (RMiT) Policy Document | Provisions on customer data management and cybersecurity |
 | 10 | [Organisation Name] Data Protection Policy | Version [X], dated [Date] |
 | 11 | [Organisation Name] Privacy Policy | Version [X], dated [Date] |

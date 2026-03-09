@@ -42,7 +42,7 @@
 
 ### 1.1 Purpose
 
-This Cross-Border Personal Data Transfer Register ("the Register") establishes a centralized, auditable record of all transfers of personal data by [Organization Name] to recipients located outside Malaysia. It is maintained to demonstrate ongoing compliance with Section 129A of the Personal Data Protection Act 2010 (PDPA) (as amended), which imposes obligations on data processors and data users to ensure that personal data transferred internationally is afforded a standard of protection equivalent to that provided under Malaysian law.
+This Cross-Border Personal Data Transfer Register ("the Register") establishes a centralized, auditable record of all transfers of personal data by [Organization Name] to recipients located outside Malaysia. It is maintained to demonstrate ongoing compliance with Section 129A of the Personal Data Protection Act 2010 (PDPA) (as amended), which imposes obligations on data processors and data controllers to ensure that personal data transferred internationally is afforded a standard of protection equivalent to that provided under Malaysian law.
 
 The Register enables [Organization Name] to:
 
@@ -77,7 +77,7 @@ This Register covers **all transfers of personal data** originating from [Organi
 | Personal Data Protection Act 2010 | Section 129A | Prohibition on transfer of personal data to places outside Malaysia except under prescribed conditions |
 | Personal Data Protection Act 2010 | Section 7 (General Principle) | Personal data shall not be used for any purpose other than that for which it was collected |
 | Personal Data Protection Act 2010 | Section 9 (Security Principle) | Practical steps to protect personal data from loss, misuse, or unauthorised disclosure |
-| Personal Data Protection (Class of Data Users) Order | [Applicable Class] | Sector-specific obligations applicable to [Organization Name]'s class of data user |
+| Personal Data Protection (Class of Data Controllers) Order | [Applicable Class] | Sector-specific obligations applicable to [Organization Name]'s class of data controller |
 | BNM Guidelines on Management of Customer Information and Permitted Disclosures | Para [X] | Requirements governing disclosure of customer information to overseas entities |
 | BNM Risk Management in Technology (RMiT) | Para [X] | Outsourcing and cloud arrangements involving cross-border data flows |
 
@@ -153,7 +153,7 @@ This Register covers **all transfers of personal data** originating from [Organi
 
 ### 4.3 Recipient Entity and Role
 
-*Identify the overseas recipient with sufficient specificity to enable accountability. The role classification (Processor, Joint Data User, or Independent Data User) determines the contractual and oversight obligations that apply.*
+*Identify the overseas recipient with sufficient specificity to enable accountability. The role classification (Processor, Joint Data Controller, or Independent Data Controller) determines the contractual and oversight obligations that apply.*
 
 **Recipient Entity Name:** [Full Legal Name of Overseas Recipient]
 
@@ -164,7 +164,7 @@ This Register covers **all transfers of personal data** originating from [Organi
 | **Registered Address** | [Full address in recipient country] |
 | **Registration / Incorporation Number** | [Company registration number] |
 | **Primary Contact (Data Protection)** | [Name, Title, Email] |
-| **Role Classification** | [Data Processor / Joint Data User / Independent Data User] |
+| **Role Classification** | [Data Processor / Joint Data Controller / Independent Data Controller] |
 | **Sub-Processors Engaged** | [Yes / No — if Yes, list in Appendix A] |
 | **Processing Activities Performed** | [Description of what the recipient does with the data] |
 | **Data Localisation Capability** | [Yes — data processed only in [Country] / No — further onward transfers possible] |
@@ -172,7 +172,7 @@ This Register covers **all transfers of personal data** originating from [Organi
 
 **Role Classification Rationale:**
 
-> *[State the basis on which the recipient has been classified as a processor, joint data user, or independent data user under the PDPA. This classification directly determines applicable contractual requirements and [Organization Name]'s ongoing obligations.]*
+> *[State the basis on which the recipient has been classified as a processor, joint data controller, or independent data controller under the PDPA. This classification directly determines applicable contractual requirements and [Organization Name]'s ongoing obligations.]*
 
 ---
 
@@ -448,7 +448,7 @@ This Register covers **all transfers of personal data** originating from [Organi
 | Reference | Title | Issued By |
 |---|---|---|
 | [PU(A) XXX] | Personal Data Protection Regulations 2013 | Minister of Digital |
-| [PU(A) XXX] | Personal Data Protection (Class of Data Users) Order | Minister of Digital |
+| [PU(A) XXX] | Personal Data Protection (Class of Data Controllers) Order | Minister of Digital |
 | [BNM/RH/PD XXX] | Guidelines on Management of Customer Information and Permitted Disclosures | Bank Negara Malaysia |
 | [BNM/RH/GL XXX] | Risk Management in Technology (RMiT) | Bank Negara Malaysia |
 | [BNM/RH/PD XXX] | Guidelines on Outsourcing | Bank Negara Malaysia |
@@ -488,7 +488,7 @@ This Register covers **all transfers of personal data** originating from [Organi
 | **Standard Contractual Clauses (SCC)** | Standardised contractual terms approved or recognised by the Commissioner that impose binding obligations on the recipient | Must incorporate Commissioner-approved modules; TIA required where adequacy not established |
 | **Binding Corporate Rules (BCR)** | Legally binding internal rules adopted by a corporate group, approved by the Commissioner or a recognised authority | Available only for intra-group transfers; approval must be current |
 | **Explicit Consent** | The data subject has given specific, informed, unambiguous, and freely given consent to the transfer | Consent must meet PDPA Notice and Choice Principle requirements; cannot be default or bundled |
-| **Contractual Necessity** | Transfer is necessary for performance of a contract between the data subject and the data user, or for pre-contractual steps at the data subject's request | Necessity must be genuine and documented; cannot be relied upon for data user convenience |
+| **Contractual Necessity** | Transfer is necessary for performance of a contract between the data subject and the data controller, or for pre-contractual steps at the data subject's request | Necessity must be genuine and documented; cannot be relied upon for data controller convenience |
 | **Vital Interests** | Transfer necessary to protect the vital interests of the data subject | Narrow exception; document compelling circumstances and inability to obtain consent |
 | **Commissioner Approval** | Specific approval granted by the Commissioner for the transfer | Application must be submitted with supporting documentation; approval is transfer-specific |
 

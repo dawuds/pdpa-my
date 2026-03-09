@@ -50,7 +50,7 @@ This Data Classification Policy establishes a structured and consistent framewor
 
 This policy is issued in compliance with the **Personal Data Protection Act 2010 (PDPA)**, specifically:
 
-- **Section 9** — Security Principle, which requires data users to take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration or destruction;
+- **Section 9** — Security Principle, which requires data controllers to take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration or destruction;
 - **Section 10** — Retention Principle, which prohibits the retention of personal data longer than is necessary; and
 - **Section 29** — which imposes enhanced obligations on the processing of sensitive personal data.
 
@@ -80,7 +80,7 @@ This policy covers all data assets owned, controlled, or processed by [Organisat
 - Financial records, transaction data, and audit trails;
 - Intellectual property, trade secrets, and proprietary business information;
 - System configuration data, network topology, and security-related information;
-- Third-party data processed on behalf of other data users; and
+- Third-party data processed on behalf of other data controllers; and
 - Physical documents, records, and printed materials containing any of the above.
 
 ### 2.3 Exclusions
@@ -103,7 +103,7 @@ The following are explicitly excluded from this policy:
 |---|---|---|
 | Personal Data Protection Act 2010 | Parliament of Malaysia | s9 (Security), s10 (Retention), s29 (Sensitive Personal Data) |
 | Personal Data Protection Regulations 2013 | Ministry of Digital | Data processing standards |
-| Personal Data Protection (Class of Data Users) Order 2013 | Ministry of Digital | Sector-specific obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Ministry of Digital | Sector-specific obligations |
 | Risk Management in Technology (RMiT) Policy Document | Bank Negara Malaysia | Para 10.x (Data Management), Para 11.x (Access Control) |
 | NACSA Cybersecurity Framework | NACSA | Data protection controls |
 | ISO/IEC 27001:2022 | ISO / IEC | Annex A.8.2 (Information Classification) |
@@ -118,8 +118,8 @@ The following are explicitly excluded from this policy:
 | Term | Definition |
 |---|---|
 | **Data Classification** | The process of organising data into categories based on its sensitivity level, value, and the consequences of unauthorised disclosure, modification, or destruction. |
-| **Data User** | As defined in PDPA s4: a person who either alone or jointly or in common with other persons processes any personal data, or has control over or authorises the processing of any personal data, but does not include a data processor. |
-| **Data Processor** | Any person who processes personal data solely on behalf of a data user, and does not process the personal data for any of the person's own purposes. |
+| **Data Controller** | As defined in PDPA s4: a person who either alone or jointly or in common with other persons processes any personal data, or has control over or authorises the processing of any personal data, but does not include a data processor. |
+| **Data Processor** | Any person who processes personal data solely on behalf of a data controller, and does not process the personal data for any of the person's own purposes. |
 | **Personal Data** | As defined in PDPA s4: information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information. |
 | **Sensitive Personal Data** | As defined in PDPA s4 and further specified in s29: personal data consisting of physical or mental health or condition, political opinions, religious beliefs or other beliefs of a similar nature, commission or alleged commission of any offence, or any other personal data as the Minister may determine. |
 | **Data Owner** | The senior individual or business unit head accountable for a data asset, including decisions about its classification, access, and acceptable use. |
@@ -618,8 +618,8 @@ The following legislation, regulatory instruments, and standards are referenced 
 | Reference | Title | Relevant Provisions |
 |---|---|---|
 | Personal Data Protection Act 2010 | Laws of Malaysia Act 709 | s9 (Security Principle), s10 (Retention Principle), s29 (Sensitive Personal Data) |
-| Personal Data Protection Regulations 2013 | P.U.(A) 335/2013 | Processing standards and data user obligations |
-| Personal Data Protection (Class of Data Users) Order 2013 | P.U.(A) 336/2013 | Financial sector data user classification |
+| Personal Data Protection Regulations 2013 | P.U.(A) 335/2013 | Processing standards and data controller obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | P.U.(A) 336/2013 | Financial sector data controller classification |
 | Bank Negara Malaysia — Risk Management in Technology (RMiT) | BNM/RH/PD 028-119 | Data management, access controls, and information security governance |
 | NACSA National Cybersecurity Policy | NACSA | Critical information infrastructure protection and data security |
 | ISO/IEC 27001:2022 | International Standard | Information security management systems; Annex A.8.2 (Information Classification) |

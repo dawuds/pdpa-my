@@ -75,9 +75,9 @@ This procedure applies to:
 | Term | Definition |
 |---|---|
 | **Data Subject** | An individual who is the subject of personal data processed by [Organization Name], as defined under the PDPA 2010. |
-| **Data User** | [Organization Name], being the entity that processes personal data for its own commercial transactions. |
+| **Data Controller** | [Organization Name], being the entity that processes personal data for its own commercial transactions. |
 | **Personal Data** | Any information in respect of commercial transactions which is being processed wholly or partly by means of equipment operating automatically, or recorded with the intention that it should be processed, that relates directly or indirectly to a data subject who is identified or identifiable. |
-| **Correction Request** | A formal request submitted by a data subject or their authorised representative under Section 34 of the PDPA to correct, complete, or update their personal data held by the data user. |
+| **Correction Request** | A formal request submitted by a data subject or their authorised representative under Section 34 of the PDPA to correct, complete, or update their personal data held by the data controller. |
 | **Data Correction Officer (DCO)** | The designated employee within [Organization Name] responsible for receiving, processing, and responding to data correction requests. |
 | **Data Protection Officer (DPO)** | The individual appointed by [Organization Name] with overall accountability for PDPA compliance, including oversight of data subject rights processes. |
 | **Statutory Period** | The period within which [Organization Name] must respond to a correction request, as prescribed by the PDPA or any regulations made thereunder. |
@@ -96,15 +96,15 @@ This procedure is primarily governed by the following provisions of the **Person
 | Section | Title | Relevance |
 |---|---|---|
 | **Section 34** | Right to Correct Personal Data | Confers on data subjects the right to request correction of inaccurate, incomplete, misleading, or not up-to-date personal data. |
-| **Section 35** | Data User's Duty to Correct Personal Data | Imposes an obligation on data users to correct personal data upon receiving a valid correction request. |
-| **Section 36** | Notification to Third Parties | Requires data users to notify third parties to whom inaccurate data was disclosed, upon correction of that data. |
+| **Section 35** | Data Controller's Duty to Correct Personal Data | Imposes an obligation on data controllers to correct personal data upon receiving a valid correction request. |
+| **Section 36** | Notification to Third Parties | Requires data controllers to notify third parties to whom inaccurate data was disclosed, upon correction of that data. |
 
 ### 3.2 Subsidiary Legislation and Guidelines
 
 *List any relevant subsidiary regulations, codes of practice, or regulatory guidelines that supplement the primary legislation.*
 
 - Personal Data Protection Regulations 2013;
-- Personal Data Protection (Class of Data Users) Order 2013;
+- Personal Data Protection (Class of Data Controllers) Order 2013;
 - [Any sector-specific BNM guidelines applicable to [Organization Name], e.g., Risk Management in Technology (RMiT) Policy Document];
 - [Organization Name] Data Protection Policy [Document ID];
 - [Organization Name] Privacy Notice [Document ID];
@@ -624,10 +624,10 @@ This procedure shall be reviewed **annually** by the Data Protection Officer, or
 | Reference | Description |
 |---|---|
 | Personal Data Protection Act 2010 (Act 709), **Section 34** | Right of data subject to request correction of personal data |
-| Personal Data Protection Act 2010 (Act 709), **Section 35** | Duty of data user to correct personal data and to attach a statement of correction upon refusal |
+| Personal Data Protection Act 2010 (Act 709), **Section 35** | Duty of data controller to correct personal data and to attach a statement of correction upon refusal |
 | Personal Data Protection Act 2010 (Act 709), **Section 36** | Obligation to notify third parties of correction made to personal data previously disclosed to them |
 | Personal Data Protection Regulations 2013 | Subsidiary regulations governing the implementation of the PDPA |
-| Personal Data Protection (Class of Data Users) Order 2013 | Sector-specific application of PDPA obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Sector-specific application of PDPA obligations |
 | [BNM / NACSA guidelines as applicable] | [Describe relevance] |
 | [Organization Name] Data Protection Policy [Document ID] | Organization's overarching data protection framework |
 | [Organization Name] Privacy Notice [Document ID] | Disclosure to data subjects of their rights including correction rights |

@@ -371,7 +371,7 @@ This register is **maintained on a continuous basis** as consent events occur. A
 | Reference | Description |
 |---|---|
 | **PDPA s6** | **Consent Principle** — Personal data of a data subject shall not be processed unless the data subject has given his consent to the processing of his personal data. |
-| **PDPA s7** | **Notice and Choice Principle** — A data user shall inform a data subject of the right to request access to and correct personal data, and the right to withdraw consent. |
+| **PDPA s7** | **Notice and Choice Principle** — A data controller shall inform a data subject of the right to request access to and correct personal data, and the right to withdraw consent. |
 | **PDPA s38** | Right of data subject to withdraw consent from processing of personal data at any time by giving written notice. |
 | **PDPA s10** | **Retention Principle** — Personal data shall not be kept longer than is necessary for the fulfilment of its purpose. |
 | **Personal Data Protection Commissioner's Guidance Notes** | [Reference specific guidance notes as issued and applicable] |

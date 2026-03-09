@@ -63,7 +63,7 @@
       "description": "Risk exceeds acceptable tolerance and requires priority treatment. Implement additional controls immediately. Treatment plans must be established within 30 days with interim measures in place.",
       "reviewFrequency": "Monthly",
       "escalation": "Senior management and DPO; Board Risk Committee if involving sensitive personal data",
-      "pdpaNote": "May trigger DPIA requirement under s137. Consider whether JPDP consultation is required. Ensure breach notification readiness under s143A."
+      "pdpaNote": "May trigger DPIA requirement under s137. Consider whether JPDP consultation is required. Ensure breach notification readiness under s12B."
     },
     {
       "band": "Critical",

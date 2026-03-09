@@ -31,7 +31,7 @@
     "section": "s5(2)",
     "part": "II",
     "offence": "Processing Personal Data Without Registration",
-    "description": "Processing personal data as a data user belonging to a class of data users required to register under the Act, without being registered or without a valid certificate of registration",
+    "description": "Processing personal data as a data controller belonging to a class of data controllers required to register under the Act, without being registered or without a valid certificate of registration",
     "originalPenalty": {
       "fine": "RM500,000",
       "fineNumeric": 500000,
@@ -51,14 +51,14 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Applies only to data users in a prescribed class under the Class of Data Users Order 2013. Non-registered classes are subject to the Act's principles but not the registration requirement."
+    "notes": "Applies only to data controllers in a prescribed class under the Class of Data Users Order 2013. Non-registered classes are subject to the Act's principles but not the registration requirement."
   },
   {
     "id": "pen-s13",
     "section": "s13",
     "part": "II",
-    "offence": "Failure to Register as Data User",
-    "description": "Failure by a data user in a prescribed class to apply for registration with the Commissioner before processing personal data, or continuing to process personal data after a registration is revoked or suspended",
+    "offence": "Failure to Register as Data Controller",
+    "description": "Failure by a data controller in a prescribed class to apply for registration with the Commissioner before processing personal data, or continuing to process personal data after a registration is revoked or suspended",
     "originalPenalty": {
       "fine": "RM500,000",
       "fineNumeric": 500000,
@@ -70,11 +70,11 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "Related to but distinct from s5(2). The registration obligation arises at the point a data user begins operations; s5(2) covers the ongoing processing without registration."
+    "notes": "Related to but distinct from s5(2). The registration obligation arises at the point a data controller begins operations; s5(2) covers the ongoing processing without registration."
   },
   {
-    "id": "pen-s129A",
-    "section": "s129A",
+    "id": "pen-s129",
+    "section": "s129",
     "part": "X",
     "offence": "Non-Compliance with Cross-Border Personal Data Transfer Requirements",
     "description": "Transfer or permitting the transfer of personal data to a place outside Malaysia without complying with the prescribed requirements, including transfers to countries not approved by the Minister and failure to implement adequate safeguards where required",
@@ -152,8 +152,8 @@
     "section": "s132",
     "sectionNumber": "132",
     "part": "X",
-    "offence": "Unauthorized Disclosure by Data User",
-    "description": "Disclosure of personal data by a data user, data processor, or their employees in contravention of the Act, including disclosure for unauthorized purposes, to unauthorized parties, or beyond the scope for which the data was collected and consented to",
+    "offence": "Unauthorized Disclosure by Data Controller",
+    "description": "Disclosure of personal data by a data controller, data processor, or their employees in contravention of the Act, including disclosure for unauthorized purposes, to unauthorized parties, or beyond the scope for which the data was collected and consented to",
     "originalPenalty": {
       "fine": "RM300,000",
       "fineNumeric": 300000,
@@ -175,7 +175,7 @@
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
     "verificationRequired": true,
     "notes": "Distinct from the Disclosure Principle (s8) violation. This provision targets deliberate unauthorized disclosures by persons who have access to personal data in the course of their employment or engagement.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure by data users. The pre-amendment 'Unauthorized Disclosure by Data User' offence may have been renumbered or consolidated into s129 ('Offences in relation to personal data') or s128 ('General offences'). Verify against the gazetted amended Act text before relying on this section reference."
+    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure by data controllers. The pre-amendment 'Unauthorized Disclosure by Data Controller' offence may have been renumbered or consolidated into s129 ('Offences in relation to personal data') or s128 ('General offences'). Verify against the gazetted amended Act text before relying on this section reference."
   },
   {
     "id": "pen-s29",
@@ -183,7 +183,7 @@
     "sectionNumber": "29",
     "part": "II",
     "offence": "Failure to Comply with Enforcement Notice",
-    "description": "Failure to comply with any requirement set out in an enforcement notice issued by the Commissioner, including notices requiring the data user to take specific remedial action, cease processing, or comply with any provision of the Act within a specified timeframe",
+    "description": "Failure to comply with any requirement set out in an enforcement notice issued by the Commissioner, including notices requiring the data controller to take specific remedial action, cease processing, or comply with any provision of the Act within a specified timeframe",
     "originalPenalty": {
       "fine": "RM300,000",
       "fineNumeric": 300000,
@@ -253,7 +253,7 @@
     "compoundAmount": null,
     "compoundRegulation": null,
     "verificationRequired": true,
-    "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data users, data subjects, data processors, and any other person providing information under the Act.",
+    "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data controllers, data subjects, data processors, and any other person providing information under the Act.",
     "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s134 is 'Public servants' (an administrative provision classifying Commissioner staff as public servants for Penal Code purposes), not an offence for false statements. The pre-amendment 'False Statements' offence may have been renumbered in the post-A1727 Act. Verify against the gazetted amended Act text to locate the correct section for this offence."
   },
   {
@@ -279,11 +279,11 @@
     "notes": "New offence inserted by the 2024 Amendment Act in response to growing concern over the commercial trade in personal data. Targets both the seller and any person who procures or facilitates the sale."
   },
   {
-    "id": "pen-s143A-5",
-    "section": "s143A(5)",
+    "id": "pen-s12B-5",
+    "section": "s12B(5)",
     "part": "X",
     "offence": "Failure to Notify Data Breach",
-    "description": "Failure by a data user to notify the Commissioner of a notifiable data breach as soon as practicable, or failure to notify affected data subjects as soon as practicable where required",
+    "description": "Failure by a data controller to notify the Commissioner of a notifiable data breach as soon as practicable, or failure to notify affected data subjects as soon as practicable where required",
     "originalPenalty": null,
     "amendedPenalty": {
       "fine": "RM500,000",
@@ -302,10 +302,10 @@
   },
   {
     "id": "pen-dpo",
-    "section": "s129B(5)",
+    "section": "s12A(5)",
     "part": "X",
     "offence": "Failure to Appoint Data Protection Officer",
-    "description": "Failure by a data user who is required under the Act and guidelines to appoint a Data Protection Officer (DPO) to do so, or failure to register the appointed DPO with the Commissioner within the prescribed period, or appointing a person who does not meet the prescribed qualifications",
+    "description": "Failure by a data controller who is required under the Act and guidelines to appoint a Data Protection Officer (DPO) to do so, or failure to register the appointed DPO with the Commissioner within the prescribed period, or appointing a person who does not meet the prescribed qualifications",
     "originalPenalty": null,
     "amendedPenalty": {
       "fine": "RM250,000",
@@ -320,7 +320,7 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "New obligation introduced by A1727. DPO appointment is mandatory for data users processing large volumes of data or processing sensitive personal data. The DPO Guideline 2025 sets out criteria for mandatory appointment."
+    "notes": "New obligation introduced by A1727. DPO appointment is mandatory for data controllers processing large volumes of data or processing sensitive personal data. The DPO Guideline 2025 sets out criteria for mandatory appointment."
   },
   {
     "id": "pen-s44",
@@ -328,7 +328,7 @@
     "sectionNumber": "44",
     "part": "II",
     "offence": "Contravention of Data Subject Rights",
-    "description": "Failure by a data user to comply with an access request, correction request, or opt-out request by a data subject within the prescribed time, or charging fees in excess of the prescribed amount, or refusing an access request without lawful grounds",
+    "description": "Failure by a data controller to comply with an access request, correction request, or opt-out request by a data subject within the prescribed time, or charging fees in excess of the prescribed amount, or refusing an access request without lawful grounds",
     "originalPenalty": {
       "fine": "RM100,000",
       "fineNumeric": 100000,
@@ -434,7 +434,7 @@
     "compoundable": false,
     "compoundAmount": null,
     "compoundRegulation": null,
-    "notes": "The continuing offence provision is critical for compelling compliance. Where a data user refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly.",
+    "notes": "The continuing offence provision is critical for compelling compliance. Where a data controller refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly.",
     "note": "If Act A1727 renumbered the original Continuing Offence provision to s139 or similar, the section reference in this entry should be updated accordingly. Verify against the gazetted amended Act text."
   },
   {
@@ -465,7 +465,7 @@
     "section": "s137",
     "part": "X",
     "offence": "Failure to Conduct Data Protection Impact Assessment",
-    "description": "Failure by a data user to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities as required under s137. High-risk processing includes large-scale processing of sensitive personal data, systematic monitoring of publicly accessible areas, and automated decision-making with significant effects on data subjects.",
+    "description": "Failure by a data controller to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities as required under s137. High-risk processing includes large-scale processing of sensitive personal data, systematic monitoring of publicly accessible areas, and automated decision-making with significant effects on data subjects.",
     "originalPenalty": null,
     "amendedPenalty": {
       "fine": "RM500,000",
@@ -489,7 +489,7 @@
     "section": "s138",
     "part": "X",
     "offence": "Failure to Maintain Records of Processing Activities (ROPA)",
-    "description": "Failure by a data user to maintain Records of Processing Activities as required for prescribed classes of data users. ROPA must record identity and contact details of the data user, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures.",
+    "description": "Failure by a data controller to maintain Records of Processing Activities as required for prescribed classes of data controllers. ROPA must record identity and contact details of the data controller, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures.",
     "originalPenalty": null,
     "amendedPenalty": {
       "fine": "RM300,000",
@@ -507,7 +507,7 @@
     "compoundable": true,
     "compoundAmount": "50% of maximum fine",
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
-    "notes": "ROPA must record: identity and contact details of data user, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures."
+    "notes": "ROPA must record: identity and contact details of data controller, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures."
   },
   {
     "id": "pen-s109",
@@ -528,7 +528,7 @@
     "compoundAmount": null,
     "compoundRegulation": null,
     "verificationRequired": true,
-    "notes": "Applies to both data users and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act.",
+    "notes": "Applies to both data controllers and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act.",
     "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s109 is 'Confidentiality of complaints' (an administrative obligation on the Commissioner), not an offence for failure to cooperate with investigation. The offence for failing to attend/answer questions under investigation is located at s104 ('Power to require attendance') in the post-A1727 database. Verify against the gazetted amended Act text to determine whether this entry should be updated to s104 or a different section."
   },
   {

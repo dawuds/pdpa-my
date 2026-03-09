@@ -50,7 +50,7 @@ This procedure establishes the systematic process by which [Organization Name] e
 
 The procedure ensures that [Organization Name] meets its obligations under the **Personal Data Protection Act 2010 (PDPA)**, specifically:
 
-- **Section 5** — General principle: personal data shall not be processed unless the data subject has given consent or processing is necessary for the legitimate interests of the data user, and data shall be processed in accordance with the rights of the data subject.
+- **Section 5** — General principle: personal data shall not be processed unless the data subject has given consent or processing is necessary for the legitimate interests of the data controller, and data shall be processed in accordance with the rights of the data subject.
 - **Section 6** — Notice and choice principle: data subjects must be informed of the nature of personal data collected, the purposes of collection, and their rights.
 - **Section 9** — Integrity principle: personal data shall be accurate, complete, not misleading, and kept up to date, having regard to the purpose for which it is to be used.
 
@@ -61,7 +61,7 @@ This procedure applies to:
 - All **new digital products, platforms, mobile applications, and web services** that collect, process, store, or transmit personal data of customers, employees, or third parties.
 - All **new or significantly modified internal systems** including core banking upgrades, HR systems, analytics platforms, and data lakes.
 - All **new business processes** that involve the processing of personal data, whether manual or automated.
-- All **third-party integrations and vendor-managed systems** where [Organization Name] remains the data user under the PDPA.
+- All **third-party integrations and vendor-managed systems** where [Organization Name] remains the data controller under the PDPA.
 - All **pilot programmes, proofs of concept (PoC), and minimum viable products (MVP)** that process real personal data.
 - All projects classified as **[Threshold — e.g., High or Critical Data Risk]** by the organisation's project risk classification framework.
 
@@ -83,8 +83,8 @@ The following are outside the scope of this procedure, though related controls m
 
 | Term | Definition |
 |---|---|
-| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, or from that information and other information in the possession of a data user (PDPA s. 4). |
-| **Data User** | [Organization Name] as the entity that processes personal data for its own purposes, alone or jointly with others. |
+| **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information, or from that information and other information in the possession of a data controller (PDPA s. 4). |
+| **Data Controller** | [Organization Name] as the entity that processes personal data for its own purposes, alone or jointly with others. |
 | **Data Subject** | An individual who is the subject of the personal data being processed. |
 | **Privacy by Design (PbD)** | An approach to systems engineering that considers privacy from the outset of product and process design, embedding data protection requirements into system architecture rather than addressing them after the fact. |
 | **Data Protection Impact Assessment (DPIA)** | A process to identify and mitigate privacy risks arising from a project before it goes live. |

@@ -6,12 +6,12 @@
     "title": "Exemptions",
     "sectionNumber": 45,
     "obligationType": "administrative",
-    "verbatim": "(1) The Minister may by order published in the Gazette exempt any data user or any class of data users from all or any of the provisions of this Act.\n(2) An exemption under subsection (1) may be given subject to conditions.\n(3) An exemption may be withdrawn by the Minister by order published in the Gazette if the data user breaches any condition imposed under subsection (2) or if the Minister considers it appropriate to do so.\n(4) Any data user who processes personal data in reliance on an exemption under this section and who breaches any condition imposed in respect of that exemption commits an offence and shall, on conviction, be liable—\n(a) to a fine not exceeding three hundred thousand ringgit;\n(b) to imprisonment for a term not exceeding two years; or\n(c) to both.",
-    "translation": "The Minister has broad power to exempt any data user or class of data users from all or any provisions of the Act, by Gazette order. Exemptions may be conditional and may be withdrawn. Breaching exemption conditions is a criminal offence. This ministerial power allows tailored regulatory flexibility.",
+    "verbatim": "(1) The Minister may by order published in the Gazette exempt any data controller or any class of data controllers from all or any of the provisions of this Act.\n(2) An exemption under subsection (1) may be given subject to conditions.\n(3) An exemption may be withdrawn by the Minister by order published in the Gazette if the data controller breaches any condition imposed under subsection (2) or if the Minister considers it appropriate to do so.\n(4) Any data controller who processes personal data in reliance on an exemption under this section and who breaches any condition imposed in respect of that exemption commits an offence and shall, on conviction, be liable—\n(a) to a fine not exceeding three hundred thousand ringgit;\n(b) to imprisonment for a term not exceeding two years; or\n(c) to both.",
+    "translation": "The Minister has broad power to exempt any data controller or class of data controllers from all or any provisions of the Act, by Gazette order. Exemptions may be conditional and may be withdrawn. Breaching exemption conditions is a criminal offence. This ministerial power allows tailored regulatory flexibility.",
     "amendedBy": null,
     "effectiveDate": "2013-11-15",
     "relatedPrinciple": null,
-    "keywords": ["exemption", "Minister", "gazette", "conditional exemption", "withdrawal", "offence", "class of data users"]
+    "keywords": ["exemption", "Minister", "gazette", "conditional exemption", "withdrawal", "offence", "class of data controllers"]
   },
   {
     "id": "s46",

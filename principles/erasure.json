@@ -2,7 +2,7 @@
   "id": "erasure",
   "section": 43,
   "name": "Right to Erasure",
-  "summary": "Section 43, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), grants data subjects the right to obtain from a data user the erasure of personal data concerning them without undue delay in specified circumstances. This right — sometimes called the 'right to be forgotten' — applies where the personal data is no longer necessary for the purpose for which it was collected, where consent has been withdrawn and no other lawful basis applies, where the data was processed unlawfully, or where erasure is required to comply with a legal obligation. The right is subject to important exceptions including legal claims and statutory obligations.",
+  "summary": "Section 43, inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727), grants data subjects the right to obtain from a data controller the erasure of personal data concerning them without undue delay in specified circumstances. This right — sometimes called the 'right to be forgotten' — applies where the personal data is no longer necessary for the purpose for which it was collected, where consent has been withdrawn and no other lawful basis applies, where the data was processed unlawfully, or where erasure is required to comply with a legal obligation. The right is subject to important exceptions including legal claims and statutory obligations.",
   "obligations": [
     {
       "id": "erasure-O1",
@@ -24,7 +24,7 @@
     },
     {
       "id": "erasure-O4",
-      "obligation": "Where the data has been shared with third parties (processors or other data users), notify those third parties of the erasure request and require erasure where reasonably practicable",
+      "obligation": "Where the data has been shared with third parties (processors or other data controllers), notify those third parties of the erasure request and require erasure where reasonably practicable",
       "basis": "Section 43; Disclosure Principle (s8)",
       "type": "mandatory"
     },
@@ -40,13 +40,13 @@
       "id": "erasure-X1",
       "exception": "Erasure may be refused where the processing is necessary for compliance with a legal obligation that requires processing under written law",
       "basis": "Section 43; applicable written laws (e.g., Companies Act, Employment Act, Income Tax Act)",
-      "conditions": "The legal obligation must be specific and applicable to the data in question; a general reference to legal compliance is insufficient; the data user must identify the specific provision requiring retention"
+      "conditions": "The legal obligation must be specific and applicable to the data in question; a general reference to legal compliance is insufficient; the data controller must identify the specific provision requiring retention"
     },
     {
       "id": "erasure-X2",
       "exception": "Erasure may be refused where the personal data is necessary for the establishment, exercise, or defence of legal claims",
       "basis": "Section 43",
-      "conditions": "The legal claim must be real and not merely hypothetical; the data user must have a genuine, active, or reasonably anticipated legal claim in which the data is relevant"
+      "conditions": "The legal claim must be real and not merely hypothetical; the data controller must have a genuine, active, or reasonably anticipated legal claim in which the data is relevant"
     },
     {
       "id": "erasure-X3",
@@ -61,7 +61,7 @@
       "conditions": "The expression exception is narrow; it must be weighed against the data subject's fundamental rights; this exception should not be invoked routinely"
     }
   ],
-  "practicalGuidance": "Data users should implement a structured erasure request process that: (1) acknowledges receipt of the request promptly; (2) assesses whether one of the s43 grounds is satisfied; (3) reviews applicable exceptions; (4) if no exception applies, executes secure deletion across all systems (primary, backup, archive) within a defined timeframe; (5) notifies third parties where applicable; (6) responds to the data subject in writing with the outcome. Secure deletion must be technically effective — logical deletion (marking as deleted in a database) that can be reversed does not constitute erasure. Data users should maintain deletion certificates for regulatory purposes. Note that backup tapes and archival systems present a practical challenge — data users should establish a policy for how erasure requests are handled for data that may be included in offline backups, typically by preventing the restoration of the specific record and purging it at the next backup rotation.",
+  "practicalGuidance": "Data users should implement a structured erasure request process that: (1) acknowledges receipt of the request promptly; (2) assesses whether one of the s43 grounds is satisfied; (3) reviews applicable exceptions; (4) if no exception applies, executes secure deletion across all systems (primary, backup, archive) within a defined timeframe; (5) notifies third parties where applicable; (6) responds to the data subject in writing with the outcome. Secure deletion must be technically effective — logical deletion (marking as deleted in a database) that can be reversed does not constitute erasure. Data users should maintain deletion certificates for regulatory purposes. Note that backup tapes and archival systems present a practical challenge — data controllers should establish a policy for how erasure requests are handled for data that may be included in offline backups, typically by preventing the restoration of the specific record and purging it at the next backup rotation.",
   "commonViolations": [
     "Refusing erasure requests without identifying a specific applicable exception",
     "Performing logical deletion (soft delete) and treating this as erasure without ensuring the data cannot be restored",

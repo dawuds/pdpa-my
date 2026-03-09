@@ -5,15 +5,15 @@
   "issuedBy": "Jabatan Perlindungan Data Peribadi (JPDP)",
   "effectiveDate": "2025-06-01",
   "parentAct": "Act 709",
-  "enablingSection": "s129A",
+  "enablingSection": "s129",
   "summary": "This Guideline provides comprehensive guidance on the cross-border personal data transfer framework substantially revised by the Personal Data Protection (Amendment) Act 2024 (Act A1727). Section 129A prohibits the transfer of personal data outside Malaysia unless the receiving country has an adequate level of data protection or appropriate safeguards are in place. The 2024 amendments introduced new transfer mechanisms including binding corporate rules (BCR), standard contractual clauses (SCC), certification schemes, and codes of conduct, providing organizations with flexible options for cross-border transfers while maintaining data subject protection. The Guideline supersedes the 2013 cross-border transfer guidance.",
   "provisions": [
     {
       "id": "cbpdt-1",
       "title": "Scope and Application",
-      "content": "This Guideline applies to all transfers of personal data from Malaysia to any place outside Malaysia, regardless of the method of transfer. A 'transfer' includes: (a) sending or transmitting personal data electronically (e.g., email, API, cloud upload); (b) physical transfer of devices or media containing personal data (e.g., laptops, USB drives, printed documents); (c) providing remote access to personal data stored in Malaysia by a person located outside Malaysia; and (d) disclosure of personal data to a person or organization located or established outside Malaysia. Transiting personal data through a foreign country's infrastructure is a transfer. Processing by a data processor located outside Malaysia on behalf of a Malaysian data user is a transfer and must comply with s129A.",
+      "content": "This Guideline applies to all transfers of personal data from Malaysia to any place outside Malaysia, regardless of the method of transfer. A 'transfer' includes: (a) sending or transmitting personal data electronically (e.g., email, API, cloud upload); (b) physical transfer of devices or media containing personal data (e.g., laptops, USB drives, printed documents); (c) providing remote access to personal data stored in Malaysia by a person located outside Malaysia; and (d) disclosure of personal data to a person or organization located or established outside Malaysia. Transiting personal data through a foreign country's infrastructure is a transfer. Processing by a data processor located outside Malaysia on behalf of a Malaysian data controller is a transfer and must comply with s129.",
       "requirements": [
-        "All cross-border data flows must be identified and mapped in the data user's Records of Processing Activities (ROPA)",
+        "All cross-border data flows must be identified and mapped in the data controller's Records of Processing Activities (ROPA)",
         "The transfer mechanism used for each data flow must be documented",
         "Data users must regularly review cross-border data flows to identify new or changed transfers",
         "Data processors outside Malaysia must implement equivalent data protection standards to those required under the PDPA"
@@ -25,7 +25,7 @@
       "content": "The Minister, on the recommendation of the Commissioner, may determine that a country or territory provides an adequate level of protection for personal data. Where such a determination is in force for a particular country, personal data may be transferred to that country without additional safeguards. The Minister assesses adequacy based on: (a) the country's law on the protection of personal data, including legislation, enforcement mechanisms, and judicial remedies; (b) the country's international commitments to data protection; (c) the presence of an independent data protection supervisory authority; and (d) the country's participation in international frameworks such as the APEC CBPR or the Global CBPR. The Commissioner maintains and publishes the current list of adequate countries on the JPDP website. Adequacy determinations may be suspended or revoked where a country's data protection standards deteriorate.",
       "requirements": [
         "Data users must check the current adequacy list before each transfer to a new destination country",
-        "Adequacy determinations can be revoked — data users must monitor the list for changes",
+        "Adequacy determinations can be revoked — data controllers must monitor the list for changes",
         "Transfer to a non-listed country requires an alternative transfer mechanism",
         "Current adequate countries include: UK, EU/EEA member states (post-Brexit UK adequacy), Japan, South Korea, New Zealand, Canada (PIPEDA-covered organizations)"
       ],
@@ -34,12 +34,12 @@
     {
       "id": "cbpdt-3",
       "title": "Standard Contractual Clauses (SCCs)",
-      "content": "Where no adequacy determination exists for the receiving country, a data user may transfer personal data to that country by incorporating the Commissioner's approved Standard Contractual Clauses into a binding agreement with the recipient. SCCs are pre-approved contract terms that impose data protection obligations on the data recipient equivalent to those under the PDPA. The Commissioner has issued two sets of SCCs: (a) Controller-to-Controller SCCs — for transfers between two data users (both controlling the processing); and (b) Controller-to-Processor SCCs — for transfers where the Malaysian data user is a controller and the overseas recipient is a processor. SCCs may be incorporated as a schedule to a broader commercial agreement. The terms of SCCs must not be modified without prior approval from the Commissioner.",
+      "content": "Where no adequacy determination exists for the receiving country, a data controller may transfer personal data to that country by incorporating the Commissioner's approved Standard Contractual Clauses into a binding agreement with the recipient. SCCs are pre-approved contract terms that impose data protection obligations on the data recipient equivalent to those under the PDPA. The Commissioner has issued two sets of SCCs: (a) Controller-to-Controller SCCs — for transfers between two data controllers (both controlling the processing); and (b) Controller-to-Processor SCCs — for transfers where the Malaysian data controller is a controller and the overseas recipient is a processor. SCCs may be incorporated as a schedule to a broader commercial agreement. The terms of SCCs must not be modified without prior approval from the Commissioner.",
       "requirements": [
         "SCCs must be executed before the transfer commences",
         "Executed SCC agreements must be retained and made available to the Commissioner on request",
         "Data users must conduct a Transfer Impact Assessment (TIA) to verify that SCCs can be effective in the receiving country",
-        "Where local law in the receiving country prevents compliance with SCCs, the data user must notify the Commissioner and suspend the transfer"
+        "Where local law in the receiving country prevents compliance with SCCs, the data controller must notify the Commissioner and suspend the transfer"
       ]
     },
     {
@@ -60,15 +60,15 @@
       "content": "Transfers may be made to a recipient in a non-adequate country where the recipient holds a valid certification from an approved certification body, indicating that the recipient meets data protection standards equivalent to the PDPA. The Commissioner maintains a register of approved certification schemes. Currently recognized schemes include: (a) ISO/IEC 27701 certification (Privacy Information Management System); (b) APEC Cross-Border Privacy Rules (CBPR) certification; (c) Global Cross-Border Privacy Rules (GCBPR) certification; and (d) any other scheme approved by the Commissioner and published on the JPDP website. Data users relying on certification must verify that the recipient's certification is current, covers the type of data being transferred, and has not been suspended or withdrawn.",
       "requirements": [
         "Certification validity must be verified before and during the transfer relationship",
-        "Certified recipients who lose their certification must immediately notify the data user",
+        "Certified recipients who lose their certification must immediately notify the data controller",
         "Data users must have a plan for data repatriation or alternative transfer mechanisms if certification lapses",
-        "Certification alone does not relieve the data user of responsibility for the transfer — monitoring of the certified recipient is still required"
+        "Certification alone does not relieve the data controller of responsibility for the transfer — monitoring of the certified recipient is still required"
       ]
     },
     {
       "id": "cbpdt-6",
       "title": "Derogations — Circumstances Where Transfer is Permitted Without Safeguards",
-      "content": "Even where no adequacy determination exists and no appropriate safeguards are in place, a transfer may be made in the following limited circumstances (derogations): (a) the data subject has given explicit consent to the transfer, having been informed of the possible risks due to the absence of an adequacy decision and appropriate safeguards; (b) the transfer is necessary for the performance of a contract between the data subject and the data user, or the implementation of pre-contractual measures taken at the data subject's request; (c) the transfer is necessary for the conclusion or performance of a contract concluded in the interest of the data subject between the data user and another person; (d) the transfer is necessary for important reasons of public interest; (e) the transfer is necessary for the establishment, exercise, or defense of legal claims; or (f) the transfer is necessary in order to protect the vital interests of the data subject or of other persons, where the data subject is physically or legally incapable of giving consent. Derogations must be used sparingly and are not intended to serve as a primary transfer mechanism.",
+      "content": "Even where no adequacy determination exists and no appropriate safeguards are in place, a transfer may be made in the following limited circumstances (derogations): (a) the data subject has given explicit consent to the transfer, having been informed of the possible risks due to the absence of an adequacy decision and appropriate safeguards; (b) the transfer is necessary for the performance of a contract between the data subject and the data controller, or the implementation of pre-contractual measures taken at the data subject's request; (c) the transfer is necessary for the conclusion or performance of a contract concluded in the interest of the data subject between the data controller and another person; (d) the transfer is necessary for important reasons of public interest; (e) the transfer is necessary for the establishment, exercise, or defense of legal claims; or (f) the transfer is necessary in order to protect the vital interests of the data subject or of other persons, where the data subject is physically or legally incapable of giving consent. Derogations must be used sparingly and are not intended to serve as a primary transfer mechanism.",
       "requirements": [
         "Derogations are intended for occasional, specific transfers — not systematic or repeated data flows",
         "Where the scale and frequency of transfers make derogations impractical, appropriate safeguards must be established",
@@ -79,7 +79,7 @@
     {
       "id": "cbpdt-7",
       "title": "Transfer Impact Assessment (TIA)",
-      "content": "Before relying on SCCs or BCRs for a cross-border transfer, a data user must conduct a Transfer Impact Assessment (TIA) to evaluate whether the transfer mechanism can be effective in the receiving country. The TIA must assess: (a) the legal framework in the receiving country, including data protection laws, national security laws, and powers of state access; (b) the track record of authorities in the receiving country in exercising state access powers; (c) any relevant decisions by the Commissioner or courts regarding data transfers to that country; and (d) whether practical measures (additional encryption, pseudonymization, access controls) can supplement the SCCs or BCRs to ensure effective protection. Where the TIA concludes that the transfer mechanism cannot be effective, the transfer must not proceed.",
+      "content": "Before relying on SCCs or BCRs for a cross-border transfer, a data controller must conduct a Transfer Impact Assessment (TIA) to evaluate whether the transfer mechanism can be effective in the receiving country. The TIA must assess: (a) the legal framework in the receiving country, including data protection laws, national security laws, and powers of state access; (b) the track record of authorities in the receiving country in exercising state access powers; (c) any relevant decisions by the Commissioner or courts regarding data transfers to that country; and (d) whether practical measures (additional encryption, pseudonymization, access controls) can supplement the SCCs or BCRs to ensure effective protection. Where the TIA concludes that the transfer mechanism cannot be effective, the transfer must not proceed.",
       "requirements": [
         "TIA must be documented and reviewed whenever there is a material change in the receiving country's legal framework",
         "TIA results must be retained with the SCC or BCR documentation",
@@ -90,7 +90,7 @@
     {
       "id": "cbpdt-8",
       "title": "Contractual Requirements with Overseas Data Processors",
-      "content": "Where personal data is transferred to an overseas data processor (i.e., a party processing data on behalf of the Malaysian data user), the data user must: (a) implement an appropriate transfer mechanism under s129A; (b) enter into a data processing agreement (DPA) as required under the Regulations; and (c) conduct due diligence on the processor's data protection practices before engagement and periodically thereafter. The DPA must require the overseas processor to: process data only on the data user's instructions; implement equivalent security measures; cooperate with audits and inspections; promptly notify the data user of any data breach; not transfer the data to sub-processors without prior authorization; and delete or return data at the end of the engagement.",
+      "content": "Where personal data is transferred to an overseas data processor (i.e., a party processing data on behalf of the Malaysian data controller), the data controller must: (a) implement an appropriate transfer mechanism under s129; (b) enter into a data processing agreement (DPA) as required under the Regulations; and (c) conduct due diligence on the processor's data protection practices before engagement and periodically thereafter. The DPA must require the overseas processor to: process data only on the data controller's instructions; implement equivalent security measures; cooperate with audits and inspections; promptly notify the data controller of any data breach; not transfer the data to sub-processors without prior authorization; and delete or return data at the end of the engagement.",
       "requirements": [
         "DPA must be in writing and signed before processing begins",
         "The transfer mechanism and the DPA must both be in place — one does not substitute for the other",
@@ -108,6 +108,6 @@
   "keywords": [
     "cross-border transfer", "adequacy determination", "standard contractual clauses", "SCC",
     "binding corporate rules", "BCR", "certification", "ISO 27701", "APEC CBPR", "derogations",
-    "transfer impact assessment", "TIA", "s129A", "overseas data processor", "adequate country list"
+    "transfer impact assessment", "TIA", "s129", "overseas data processor", "adequate country list"
   ]
 }

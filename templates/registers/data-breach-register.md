@@ -71,7 +71,7 @@ This Register applies to:
 | **Commissioner** | The Personal Data Protection Commissioner appointed under PDPA |
 | **DPO** | Data Protection Officer of [Organization Name] |
 | **CISO** | Chief Information Security Officer of [Organization Name] |
-| **Data Processor** | A person who processes personal data solely on behalf of a data user and does not process the personal data for any of their own purposes |
+| **Data Processor** | A person who processes personal data solely on behalf of a data controller and does not process the personal data for any of their own purposes |
 
 ---
 

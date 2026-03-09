@@ -10,7 +10,7 @@
     "id": "II",
     "name": "Personal Data Protection",
     "sections": "5-44",
-    "description": "Core data protection framework comprising the seven Personal Data Protection Principles (General, Notice and Choice, Disclosure, Security, Retention, Data Integrity, Access), consent requirements, sensitive personal data, registration of data users, processing requirements, and rights of data subjects",
+    "description": "Core data protection framework comprising the seven Personal Data Protection Principles (General, Notice and Choice, Disclosure, Security, Retention, Data Integrity, Access), consent requirements, sensitive personal data, registration of data controllers, processing requirements, and rights of data subjects",
     "divisions": [
       {
         "id": "II-1",
@@ -19,7 +19,7 @@
       },
       {
         "id": "II-2",
-        "name": "Registration of Data Users",
+        "name": "Registration of Data Controllers",
         "sections": "13-16"
       },
       {
@@ -87,14 +87,14 @@
     "id": "X",
     "name": "Miscellaneous",
     "sections": "128-144",
-    "description": "General offences and penalties, liability of body corporate, compounding of offences, protection of officers, service of notices, evidence, and general provisions. Includes s129A on cross-border data transfer mechanisms and s143A on mandatory data breach notification, both inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727)",
+    "description": "General offences and penalties, liability of body corporate, compounding of offences, protection of officers, service of notices, evidence, and general provisions. Includes s129 on cross-border data transfer mechanisms and s12B on mandatory data breach notification, both inserted by the Personal Data Protection (Amendment) Act 2024 (Act A1727)",
     "divisions": null
   },
   {
     "id": "XI",
     "name": "Savings and Transitional",
     "sections": "145-146",
-    "description": "Savings provisions and transitional arrangements for existing data users and ongoing proceedings upon commencement of the Act",
+    "description": "Savings provisions and transitional arrangements for existing data controllers and ongoing proceedings upon commencement of the Act",
     "divisions": null
   }
 ]

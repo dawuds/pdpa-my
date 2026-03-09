@@ -63,7 +63,7 @@ This document enables [Organization Name] to:
 
 This ROPA covers **all personal data processing activities** conducted by [Organization Name], including:
 
-- Processing carried out by [Organization Name] as a **data user** (as defined under s4 PDPA)
+- Processing carried out by [Organization Name] as a **data controller** (as defined under s4 PDPA)
 - Processing carried out by **third-party data processors** acting on behalf of [Organization Name]
 - Processing of personal data belonging to **customers, employees, vendors, contractors, and other data subjects**
 - Processing activities across all **business units, departments, and subsidiaries** of [Organization Name]
@@ -78,7 +78,7 @@ This ROPA does **not** cover:
 
 *This section identifies the specific legal provisions that mandate and govern the maintenance of this register.*
 
-[Organization Name] is a **data user** as defined under the PDPA and is registered under the data user registration regime applicable to [relevant commercial sector]. The maintenance of this inventory is required to demonstrate compliance with the following PDPA principles:
+[Organization Name] is a **data controller** as defined under the PDPA and is registered under the data controller registration regime applicable to [relevant commercial sector]. The maintenance of this inventory is required to demonstrate compliance with the following PDPA principles:
 
 | PDPA Section | Principle | Relevance to ROPA |
 |---|---|---|
@@ -101,8 +101,8 @@ This ROPA does **not** cover:
 |---|---|
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject (s4, PDPA) |
 | **Sensitive Personal Data** | Personal data consisting of physical or mental health information, political opinions, religious beliefs, commission of offences, or other prescribed categories (s4, PDPA) |
-| **Data User** | A person who processes personal data or has personal data processed on their behalf (s4, PDPA) — [Organization Name] |
-| **Data Processor** | Any person who processes personal data on behalf of a data user (s4, PDPA) |
+| **Data Controller** | A person who processes personal data or has personal data processed on their behalf (s4, PDPA) — [Organization Name] |
+| **Data Processor** | Any person who processes personal data on behalf of a data controller (s4, PDPA) |
 | **Data Subject** | An individual who is the subject of the personal data (s4, PDPA) |
 | **Processing** | Any operation performed on personal data including collection, recording, holding, storage, use, disclosure, or transfer (s4, PDPA) |
 | **DPIA** | Data Protection Impact Assessment — a structured assessment of data protection risks for high-risk processing activities |
@@ -148,7 +148,7 @@ This ROPA does **not** cover:
 | **Business Process** | [Name of the business process this activity supports] |
 | **Processing Purpose(s)** | [Clearly stated purpose(s), e.g., customer onboarding, credit risk assessment, fraud detection] |
 | **Legal or Regulatory Driver** | [Any specific law or regulatory requirement mandating this processing, e.g., Anti-Money Laundering Act, BAFIA, BNM guidelines] |
-| **Data User Contact** | [Name and title of the accountable data user representative] |
+| **Data Controller Contact** | [Name and title of the accountable data controller representative] |
 | **Activity Status** | Active / Under Review / Retired |
 | **Date First Documented** | [Date] |
 | **Date Last Updated** | [Date] |
@@ -356,7 +356,7 @@ This ROPA does **not** cover:
 
 #### 4.9 Security Measures and Access Controls
 
-*Under s8 PDPA, a data user shall take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction. Document the technical and organisational security measures applied to this processing activity.*
+*Under s8 PDPA, a data controller shall take practical steps to protect personal data from any loss, misuse, modification, unauthorised or accidental access or disclosure, alteration, or destruction. Document the technical and organisational security measures applied to this processing activity.*
 
 **Technical Security Measures:**
 
@@ -543,7 +543,7 @@ All material changes to this ROPA shall be:
 | Reference | Description |
 |---|---|
 | Personal Data Protection Regulations 2013 | Subsidiary regulations under the PDPA |
-| Personal Data Protection (Class of Data Users) Order 2013 | Registration requirements for specified classes of data users |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Registration requirements for specified classes of data controllers |
 | Personal Data Protection Standard 2015 | Minimum standards for data processors |
 | PDPC Guidance on Data Breach Notification | Guidance on reporting and managing data breaches |
 | [BNM Guideline Reference, if applicable] | [e.g., BNM/RH/GL 013-3 — Risk Management in Technology (RMiT)] |

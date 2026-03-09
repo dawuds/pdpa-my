@@ -421,7 +421,7 @@ The objectives of this audit cycle are to:
 | PDPA 2010 | Section 5 — General Principle | Lawful basis and conditions for processing personal data |
 | PDPA 2010 | Section 9 — Security Principle | Obligation to implement practical steps to protect personal data |
 | Personal Data Protection Regulations 2013 | Subsidiary legislation under PDPA 2010 | Processing conditions, registration requirements |
-| Personal Data Protection (Class of Data Users) Order 2013 | Prescribed data user classes | Sector-specific obligations |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Prescribed data controller classes | Sector-specific obligations |
 | ISO/IEC 27001:2022 | Information Security Management Systems | Annex A controls relevant to personal data security |
 | ISO 19011:2018 | Guidelines for Auditing Management Systems | Audit methodology and principles |
 | [BNM/RH/PD XXXX] | [Relevant BNM Policy Document — e.g., Risk Management in Technology (RMiT)] | [Relevant provisions if applicable] |
@@ -473,9 +473,9 @@ The objectives of this audit cycle are to:
 
 | Term | Definition |
 |---|---|
-| **Data Subject** | An individual who is the subject of personal data processed by the data user |
-| **Data User** | A person who either alone or jointly or in common with other persons processes any personal data, or has control over or authorizes the processing of any personal data |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user |
+| **Data Subject** | An individual who is the subject of personal data processed by the data controller |
+| **Data Controller** | A person who either alone or jointly or in common with other persons processes any personal data, or has control over or authorizes the processing of any personal data |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller |
 | **DPO** | Data Protection Officer — the individual designated to oversee the organization's PDPA compliance program |
 | **DSR** | Data Subject Request — a formal request by a data subject to access, correct, or withdraw consent for processing of their personal data |
 | **Personal Data** | Any information in respect of commercial transactions which is being processed wholly or partly by means of equipment operating automatically, relating directly or indirectly to a data subject, who is identified or identifiable from that information |

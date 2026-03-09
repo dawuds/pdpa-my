@@ -19,7 +19,7 @@
         ],
         "commonGaps": [
           "ROPA has not been updated since initial creation and no longer reflects actual processing activities",
-          "ROPA exists but contains no lawful basis analysis — just a list of data types",
+          "ROPA exists but contains no lawful basis analysis \u2014 just a list of data types",
           "Processing activities added after the initial ROPA creation are not recorded",
           "ROPA is a single document with no version control or last-reviewed date",
           "No named owner for individual processing activities, making accountability unclear"
@@ -100,7 +100,7 @@
     ],
     "auditTips": [
       "Ask for the ROPA and test a sample of 5 processing activities by requesting supporting documentation for the claimed lawful basis",
-      "Check the DPO appointment letter — is the DPO named in the ROPA? Can they explain the seven principles?",
+      "Check the DPO appointment letter \u2014 is the DPO named in the ROPA? Can they explain the seven principles?",
       "Ask when the PDPA compliance policy was last reviewed and whether this was after the 2024 Amendment (effective April 2025)",
       "Request the last Board or senior management meeting minutes where PDPA compliance was reported"
     ]
@@ -124,7 +124,7 @@
           "Withdrawal records are integrated, showing when consent was withdrawn and what processing stopped"
         ],
         "commonGaps": [
-          "Consent collected via pre-ticked boxes — records exist but consent is invalid under the 2024 Amendment definition",
+          "Consent collected via pre-ticked boxes \u2014 records exist but consent is invalid under the 2024 Amendment definition",
           "No record of when or how consent was obtained; only a flag showing 'consented: yes'",
           "Single bundled consent record for multiple unrelated purposes with no granularity",
           "Consent records show data subject provided consent but no record of what wording they were shown",
@@ -148,7 +148,7 @@
         "name": "Lawful basis register",
         "description": "A document mapping each processing activity in the ROPA to its s6(2) lawful basis, with supporting evidence for each basis claimed",
         "whatGoodLooksLike": [
-          "Each processing activity is mapped to a specific subsection of s6(2) (e.g., s6(2)(a) — contract, s6(2)(b) — legal obligation)",
+          "Each processing activity is mapped to a specific subsection of s6(2) (e.g., s6(2)(a) \u2014 contract, s6(2)(b) \u2014 legal obligation)",
           "For contract basis: a sample contract evidencing the data subject's party status is referenced",
           "For legal obligation basis: the specific law or regulation requiring the processing is identified",
           "For legitimate interests basis: a documented Legitimate Interest Assessment (LIA) is attached",
@@ -157,7 +157,7 @@
         "commonGaps": [
           "Processing activities list 'consent' as the lawful basis but no consent records can be produced",
           "Multiple processing activities claim 'legitimate interests' basis without any LIA",
-          "Register exists but is incomplete — only covers some processing activities",
+          "Register exists but is incomplete \u2014 only covers some processing activities",
           "Lawful basis claimed does not match the actual circumstances (e.g., claiming 'contract' for marketing activities not required under any contract)",
           "Register has never been reviewed since initial creation"
         ],
@@ -221,13 +221,13 @@
     "evidenceItems": [
       {
         "id": "s7-E1",
-        "name": "Privacy notice / Personal Data Protection Notice (current versions — BM and English)",
+        "name": "Privacy notice / Personal Data Protection Notice (current versions \u2014 BM and English)",
         "description": "The current versions of the organisation's privacy notice in both Bahasa Malaysia and English, covering all s7(1) elements, for each data collection channel",
         "whatGoodLooksLike": [
           "Both BM and English versions are substantively identical and dated with the last-updated date",
           "Notice explicitly covers all s7(1) elements: description of data collected, purposes, third party recipients, access/correction rights, contact details, obligatory/voluntary status",
           "Notice is accessible at every data collection point (website footer, registration form, paper form header)",
-          "Plain language is used — no excessive legal jargon; a layperson can understand the key information",
+          "Plain language is used \u2014 no excessive legal jargon; a layperson can understand the key information",
           "Version history is maintained showing previous versions and when changes were made"
         ],
         "commonGaps": [
@@ -262,9 +262,9 @@
         ],
         "commonGaps": [
           "Privacy notice is updated on the website but existing data subjects are never notified of changes",
-          "Online registration forms do not include any reference to the privacy notice — the notice is buried in the website footer only",
+          "Online registration forms do not include any reference to the privacy notice \u2014 the notice is buried in the website footer only",
           "No record exists of when any version of the notice was communicated to any data subject",
-          "Paper forms do not include the privacy notice — they only include a statement that 'a privacy policy exists on our website'"
+          "Paper forms do not include the privacy notice \u2014 they only include a statement that 'a privacy policy exists on our website'"
         ],
         "suggestedSources": [
           "Email campaign records showing privacy notice update communications to data subjects",
@@ -310,9 +310,9 @@
       }
     ],
     "auditTips": [
-      "Use the s7(1) element checklist against the actual privacy notices — verify each of the 7 required elements is present in both BM and English",
-      "Check the date on the privacy notice — was it updated after the 2024 Amendment came into force? If not, does the existing notice satisfy the new requirements?",
-      "Navigate to the organisation's website and test the registration journey — is the privacy notice visible and acknowledged before data submission?",
+      "Use the s7(1) element checklist against the actual privacy notices \u2014 verify each of the 7 required elements is present in both BM and English",
+      "Check the date on the privacy notice \u2014 was it updated after the 2024 Amendment came into force? If not, does the existing notice satisfy the new requirements?",
+      "Navigate to the organisation's website and test the registration journey \u2014 is the privacy notice visible and acknowledged before data submission?",
       "Ask to see the opt-out mechanism and test whether it functions immediately"
     ]
   },
@@ -321,7 +321,7 @@
     "part": "II",
     "title": "Disclosure Principle",
     "obligationType": "mandatory",
-    "auditorFocus": "JPDP inspectors will focus on third-party data sharing, particularly whether data processing agreements are in place and whether disclosures align with what was notified to data subjects. Cross-border transfers are a particular area of focus following the 2024 Amendment's introduction of s129A.",
+    "auditorFocus": "JPDP inspectors will focus on third-party data sharing, particularly whether data processing agreements are in place and whether disclosures align with what was notified to data subjects. Cross-border transfers are a particular area of focus following the 2024 Amendment's introduction of s129.",
     "evidenceItems": [
       {
         "id": "s8-E1",
@@ -331,13 +331,13 @@
           "Register identifies each third party by name, the categories of personal data shared, the purpose, and the specific s8(1) basis or exception",
           "DPA reference number is recorded for each third-party recipient who is a data processor",
           "Register is updated whenever a new third-party disclosure arrangement is established",
-          "Register is reconciled against the privacy notice — all categories of recipients listed in the register should be reflected in the notice",
-          "Cross-border transfers are flagged with the applicable s129A mechanism"
+          "Register is reconciled against the privacy notice \u2014 all categories of recipients listed in the register should be reflected in the notice",
+          "Cross-border transfers are flagged with the applicable s129 mechanism"
         ],
         "commonGaps": [
-          "No third-party disclosure register exists — the organisation cannot identify who receives its personal data",
-          "Register exists but is significantly incomplete — major vendors receiving personal data (e.g., cloud providers, analytics platforms) are not listed",
-          "Register does not distinguish between data processors (who require a DPA) and independent data users (who require data subject consent)",
+          "No third-party disclosure register exists \u2014 the organisation cannot identify who receives its personal data",
+          "Register exists but is significantly incomplete \u2014 major vendors receiving personal data (e.g., cloud providers, analytics platforms) are not listed",
+          "Register does not distinguish between data processors (who require a DPA) and independent data controllers (who require data subject consent)",
           "Third-party recipients listed in the privacy notice do not match the register"
         ],
         "suggestedSources": [
@@ -369,7 +369,7 @@
           "DPAs exist but are general-purpose NDAs without the specific data protection clauses required by s43",
           "DPAs were executed after processing had already commenced, meaning there was a period of processing without contractual protection",
           "DPAs have expired and have not been renewed, leaving an ongoing relationship without contractual protection",
-          "DPAs do not contain breach notification obligations, preventing the processor from notifying the data user of incidents"
+          "DPAs do not contain breach notification obligations, preventing the processor from notifying the data controller of incidents"
         ],
         "suggestedSources": [
           "Executed DPA documents for all processors (latest signed version)",
@@ -385,8 +385,8 @@
       }
     ],
     "auditTips": [
-      "Request the full list of vendors/third parties with access to personal data and cross-reference against DPA files — verify there are no gaps",
-      "Review a sample of 5 DPAs against the s43 requirements checklist — check particularly for breach notification, sub-processor controls, and deletion obligations",
+      "Request the full list of vendors/third parties with access to personal data and cross-reference against DPA files \u2014 verify there are no gaps",
+      "Review a sample of 5 DPAs against the s43 requirements checklist \u2014 check particularly for breach notification, sub-processor controls, and deletion obligations",
       "Compare third-party recipients listed in the privacy notice against the third-party disclosure register to verify alignment"
     ]
   },
@@ -395,7 +395,7 @@
     "part": "II",
     "title": "Security Principle",
     "obligationType": "mandatory",
-    "auditorFocus": "JPDP inspectors assess the Security Principle against the Personal Data Protection Standards 2015 (Security Standard), which sets specific requirements for both electronic and non-electronic processing. The 2024 Amendment's breach notification requirements under s143A make security governance even more critical — inspectors will also look for incident response readiness.",
+    "auditorFocus": "JPDP inspectors assess the Security Principle against the Personal Data Protection Standards 2015 (Security Standard), which sets specific requirements for both electronic and non-electronic processing. The 2024 Amendment's breach notification requirements under s12B make security governance even more critical \u2014 inspectors will also look for incident response readiness.",
     "evidenceItems": [
       {
         "id": "s9-E1",
@@ -409,11 +409,11 @@
           "Policy is communicated to all relevant staff and referenced in staff contracts or employment terms"
         ],
         "commonGaps": [
-          "No written data security policy exists — only an IT security policy that does not specifically address personal data",
+          "No written data security policy exists \u2014 only an IT security policy that does not specifically address personal data",
           "Policy exists but was approved more than 2 years ago and has not been reviewed since",
-          "Policy does not address non-electronic (paper) personal data — treats security as an IT-only concern",
+          "Policy does not address non-electronic (paper) personal data \u2014 treats security as an IT-only concern",
           "Policy does not include breach notification procedures, leaving staff without guidance on incident reporting",
-          "Policy is not communicated to staff — only held on file by the CISO and unknown to most of the organisation"
+          "Policy is not communicated to staff \u2014 only held on file by the CISO and unknown to most of the organisation"
         ],
         "suggestedSources": [
           "Data security policy document (current version with approval signature)",
@@ -441,7 +441,7 @@
         ],
         "commonGaps": [
           "No security risk assessment has been conducted in the past 2 years",
-          "Risk assessment exists but does not specifically address personal data risks — focuses only on general IT risks",
+          "Risk assessment exists but does not specifically address personal data risks \u2014 focuses only on general IT risks",
           "Critical vulnerabilities identified in risk assessments remain open with no remediation timeline",
           "Penetration testing has never been conducted on systems containing personal data",
           "Remediation tracker exists but shows overdue items with no escalation or management attention"
@@ -474,7 +474,7 @@
         "commonGaps": [
           "Encryption at rest is not applied to the primary customer database or HR system",
           "Some systems still use TLS 1.0 or 1.1 which are deprecated and vulnerable",
-          "MFA is not enforced for remote access — only password authentication is required",
+          "MFA is not enforced for remote access \u2014 only password authentication is required",
           "Access reviews are conducted annually rather than quarterly, and the last review showed significant numbers of former staff still with active accounts",
           "Mobile devices used to access personal data are not encrypted or enrolled in MDM"
         ],
@@ -505,9 +505,9 @@
           "Training materials are reviewed and updated to reflect current threats and PDPA amendments"
         ],
         "commonGaps": [
-          "No formal security awareness training programme exists — reliance on informal briefings only",
+          "No formal security awareness training programme exists \u2014 reliance on informal briefings only",
           "Training completion records are incomplete or cannot be produced for all staff",
-          "Training has not been updated since 2023 and does not include modules on breach notification obligations under s143A",
+          "Training has not been updated since 2023 and does not include modules on breach notification obligations under s12B",
           "Training is conducted for IT staff only and does not reach customer-facing or administrative staff who handle personal data",
           "Training is a one-time onboarding event with no annual refresh"
         ],
@@ -527,9 +527,9 @@
     ],
     "auditTips": [
       "Request access to the Personal Data Protection Standards 2015 (Security Standard) self-assessment checklist and ask the CISO to walk through it",
-      "Ask for the most recent penetration test report and focus on any high or critical findings — are they remediated?",
-      "Request the access review records from the last quarter — how many accounts were modified or removed?",
-      "Ask: 'What happens if a staff member loses a laptop containing customer data?' — the answer reveals the breach response process and device encryption policy"
+      "Ask for the most recent penetration test report and focus on any high or critical findings \u2014 are they remediated?",
+      "Request the access review records from the last quarter \u2014 how many accounts were modified or removed?",
+      "Ask: 'What happens if a staff member loses a laptop containing customer data?' \u2014 the answer reveals the breach response process and device encryption policy"
     ]
   },
   "s10": {
@@ -545,17 +545,17 @@
         "description": "A documented schedule specifying the retention period for each category of personal data, the legal or business basis for the period, and the approved disposal method",
         "whatGoodLooksLike": [
           "Schedule covers all categories of personal data processed by the organisation, cross-referenced with the ROPA",
-          "Each retention period is justified with a specific legal, regulatory, or business basis (e.g., 'Employment records: 7 years post-termination — Employment Act 1955 s60D' or 'Customer transaction records: 7 years — Income Tax Act requirement')",
+          "Each retention period is justified with a specific legal, regulatory, or business basis (e.g., 'Employment records: 7 years post-termination \u2014 Employment Act 1955 s60D' or 'Customer transaction records: 7 years \u2014 Income Tax Act requirement')",
           "Disposal method is specified for each category (e.g., 'certified electronic deletion', 'cross-cut shredding', 'incineration')",
           "Schedule distinguishes between active retention (data being used) and archival retention (data no longer actively used but retained for legal reasons)",
           "Schedule has been reviewed by Legal counsel and approved by the DPO"
         ],
         "commonGaps": [
-          "No retention schedule exists — the organisation retains all personal data indefinitely by default",
+          "No retention schedule exists \u2014 the organisation retains all personal data indefinitely by default",
           "Retention schedule exists but is aspirational and has never been operationalised (no automated controls or regular disposal runs)",
           "Schedule specifies retention periods but no disposal method, leaving disposal ad hoc and undocumented",
-          "Schedule does not cover all data categories — omits data held in email archives, backups, or legacy systems",
-          "Retention periods are not justified with legal bases — described as 'business needs' without specific reasoning"
+          "Schedule does not cover all data categories \u2014 omits data held in email archives, backups, or legacy systems",
+          "Retention periods are not justified with legal bases \u2014 described as 'business needs' without specific reasoning"
         ],
         "suggestedSources": [
           "Data Retention Schedule document (current version with legal counsel sign-off)",
@@ -581,10 +581,10 @@
           "Disposal process is signed off by the data owner before execution"
         ],
         "commonGaps": [
-          "No disposal has ever occurred — systems contain personal data from the organisation's inception with no documented deletion",
-          "Electronic deletion occurs but is not logged — no evidence of when data was deleted or what was deleted",
+          "No disposal has ever occurred \u2014 systems contain personal data from the organisation's inception with no documented deletion",
+          "Electronic deletion occurs but is not logged \u2014 no evidence of when data was deleted or what was deleted",
           "Certified destruction certificates cannot be produced for physical records destroyed by a third-party vendor",
-          "Backups and email archives are explicitly excluded from the retention schedule — data is retained indefinitely in these locations",
+          "Backups and email archives are explicitly excluded from the retention schedule \u2014 data is retained indefinitely in these locations",
           "Deletion is conducted by IT on an ad hoc basis without authorisation from the data owner or DPO"
         ],
         "suggestedSources": [
@@ -601,8 +601,8 @@
       }
     ],
     "auditTips": [
-      "Ask to see the oldest customer record in the primary CRM — is the retention period for that customer's data justified?",
-      "Check whether backups are covered by the retention schedule — a very common gap is personal data being retained indefinitely in backup archives",
+      "Ask to see the oldest customer record in the primary CRM \u2014 is the retention period for that customer's data justified?",
+      "Check whether backups are covered by the retention schedule \u2014 a very common gap is personal data being retained indefinitely in backup archives",
       "Request a disposal certificate from the last physical record destruction and verify the destruction method is appropriate for the sensitivity of the data"
     ]
   },
@@ -625,7 +625,7 @@
           "Process for systematic update of records when data subjects inform the organisation of changes"
         ],
         "commonGaps": [
-          "No input validation at collection — data entry allows any format for key fields, resulting in large numbers of unusable or inaccurate records",
+          "No input validation at collection \u2014 data entry allows any format for key fields, resulting in large numbers of unusable or inaccurate records",
           "Data quality has never been formally measured and no data quality reports have been produced",
           "Duplicate records abound in the CRM with no deduplication process, resulting in multiple conflicting records for the same data subject",
           "No systematic process for updating data when data subjects notify the organisation of changes to their contact details or other information"
@@ -654,7 +654,7 @@
           "Log is reviewed by the DPO monthly for systemic patterns indicating process gaps"
         ],
         "commonGaps": [
-          "No correction request log exists — requests are handled informally with no record",
+          "No correction request log exists \u2014 requests are handled informally with no record",
           "Log exists but shows a significant backlog of unanswered requests beyond the 21-day period",
           "Corrections are made in the primary system but not propagated to downstream systems or third parties",
           "Where corrections were disputed and a correction statement should have been attached, no such annotation is applied",
@@ -675,9 +675,9 @@
       }
     ],
     "auditTips": [
-      "Run a sample data quality check on a system containing personal data — ask to see the percentage of records with missing mandatory fields",
+      "Run a sample data quality check on a system containing personal data \u2014 ask to see the percentage of records with missing mandatory fields",
       "Select 5 data subjects who have previously submitted correction requests and trace the correction through all systems to verify propagation",
-      "Ask to see a correction statement annotation on a record where the correction was disputed — if it cannot be produced, this is a compliance gap"
+      "Ask to see a correction statement annotation on a record where the correction was disputed \u2014 if it cannot be produced, this is a compliance gap"
     ]
   },
   "s12": {
@@ -699,11 +699,11 @@
           "Internal procedure document details the steps the organisation takes from receipt to response"
         ],
         "commonGaps": [
-          "No published procedure — privacy notice states access requests can be submitted but provides no contact details or process",
+          "No published procedure \u2014 privacy notice states access requests can be submitted but provides no contact details or process",
           "Published contact email for access requests is unmonitered or goes to a generic inbox with no defined owner",
           "Procedure does not state the 21-day timeframe, leaving data subjects uncertain of when to expect a response",
           "Identity verification requirements are so onerous (e.g., requiring notarised copies of documents) that they effectively deter legitimate requests",
-          "Internal procedure is undocumented — requests are handled differently by different staff depending on who receives them"
+          "Internal procedure is undocumented \u2014 requests are handled differently by different staff depending on who receives them"
         ],
         "suggestedSources": [
           "Published data subject access request procedure (website screenshot)",
@@ -730,9 +730,9 @@
           "Log is reviewed by the DPO quarterly and reported to management"
         ],
         "commonGaps": [
-          "No request log exists — requests are handled informally on an ad hoc basis with no records",
+          "No request log exists \u2014 requests are handled informally on an ad hoc basis with no records",
           "Log exists but shows multiple requests that were not responded to within 21 days without any extension request",
-          "Log is incomplete — only email requests are captured; requests submitted via post or in-person are not recorded",
+          "Log is incomplete \u2014 only email requests are captured; requests submitted via post or in-person are not recorded",
           "Log shows requests were responded to within the timeframe but the response content is not logged (no copy of the response retained)",
           "Requests that resulted in refusal do not show evidence that written notification of refusal was provided"
         ],
@@ -750,16 +750,16 @@
       }
     ],
     "auditTips": [
-      "Navigate to the organisation's website and attempt to find the data subject access request procedure — is it easy to find? Are the contact details current?",
+      "Navigate to the organisation's website and attempt to find the data subject access request procedure \u2014 is it easy to find? Are the contact details current?",
       "Request the access request log for the past 2 years and verify all response times are within 21 days",
       "Select 3 sample access requests and request copies of the actual responses provided to verify completeness",
-      "Test the contact email address listed in the privacy notice — does someone respond within a reasonable timeframe?"
+      "Test the contact email address listed in the privacy notice \u2014 does someone respond within a reasonable timeframe?"
     ]
   },
   "s13": {
     "sectionId": "s13",
     "part": "II",
-    "title": "Registration of Data Users",
+    "title": "Registration of Data Controllers",
     "obligationType": "mandatory",
     "auditorFocus": "JPDP inspectors will verify the organisation's registration status at the outset of any inspection. A lapsed, expired, or absent registration when required is an immediate finding of serious non-compliance. Inspectors will also verify that the registered particulars match the organisation's actual processing activities.",
     "evidenceItems": [
@@ -775,7 +775,7 @@
           "Digital copy is stored in the compliance document repository and a physical copy is held by the Company Secretary"
         ],
         "commonGaps": [
-          "Certificate has expired and no renewal has been submitted — the organisation is processing personal data without valid registration",
+          "Certificate has expired and no renewal has been submitted \u2014 the organisation is processing personal data without valid registration",
           "Certificate covers only some of the industry sectors in which the organisation operates, leaving some processing activities unregistered",
           "Certificate is held by a former employee and the current organisation cannot locate it",
           "Certificate is for a predecessor legal entity and has not been updated to reflect a corporate restructuring or name change"
@@ -803,10 +803,10 @@
           "Historical evidence shows the organisation has consistently renewed before expiry"
         ],
         "commonGaps": [
-          "No compliance calendar — the organisation relies on the responsible officer's memory to track renewal dates",
+          "No compliance calendar \u2014 the organisation relies on the responsible officer's memory to track renewal dates",
           "Compliance calendar exists but the reminder emails were filtered as spam and not acted upon",
           "Renewal was submitted late (after expiry) because the responsible officer was on leave and no backup was designated",
-          "No record of previous renewal cycles — the organisation cannot demonstrate a history of timely renewals"
+          "No record of previous renewal cycles \u2014 the organisation cannot demonstrate a history of timely renewals"
         ],
         "suggestedSources": [
           "Compliance calendar screenshots showing registration expiry date and reminders",
@@ -822,9 +822,9 @@
       }
     ],
     "auditTips": [
-      "Request the PDPA Registration Certificate at the start of the inspection — this is the first item on the JPDP inspection checklist",
+      "Request the PDPA Registration Certificate at the start of the inspection \u2014 this is the first item on the JPDP inspection checklist",
       "Verify the certificate is in the name of the correct legal entity (registered company name matches the certificate)",
-      "Check the expiry date — if it has expired, ascertain when the renewal application was submitted and whether a gap period exists",
+      "Check the expiry date \u2014 if it has expired, ascertain when the renewal application was submitted and whether a gap period exists",
       "Cross-reference the industry sector on the certificate against the organisation's actual business activities"
     ]
   },
@@ -846,7 +846,7 @@
           "No material processing activities are described in the ROPA but absent from the registration application"
         ],
         "commonGaps": [
-          "Registration application describes significantly fewer processing activities than the ROPA — many activities were added since registration without change notification",
+          "Registration application describes significantly fewer processing activities than the ROPA \u2014 many activities were added since registration without change notification",
           "Registration application was prepared without reference to the ROPA, resulting in inconsistencies",
           "Change notifications have never been filed despite material changes to processing activities since the last registration",
           "No DPO or legal review of the registration application was conducted before submission"
@@ -866,7 +866,7 @@
       }
     ],
     "auditTips": [
-      "Compare the registration application against the ROPA — are there processing activities in the ROPA that are not mentioned in the application?",
+      "Compare the registration application against the ROPA \u2014 are there processing activities in the ROPA that are not mentioned in the application?",
       "Ask when the organisation last reviewed the registration application for accuracy and what triggered the review",
       "Check whether any corporate events (restructuring, name change, new business lines) occurred after registration that should have triggered a change notification"
     ]
@@ -912,7 +912,7 @@
     ],
     "auditTips": [
       "Submit a test data access request during or after the inspection and assess whether the response is received within 21 days and is complete",
-      "Select 3 sample responses from the request log and assess completeness — does the response cover all systems listed in the data map?",
+      "Select 3 sample responses from the request log and assess completeness \u2014 does the response cover all systems listed in the data map?",
       "Ask the organisation to demonstrate, live during the inspection, how a data access request would be handled from receipt to response"
     ]
   },
@@ -937,7 +937,7 @@
         "commonGaps": [
           "Request log shows multiple instances where the 21-day deadline was missed with no Commissioner extension request",
           "Request log is maintained in a shared email inbox rather than a structured tracking system, making it impossible to verify all requests are captured",
-          "Deadline tracking is manual — there are no automated alerts, and deadlines are frequently missed as a result",
+          "Deadline tracking is manual \u2014 there are no automated alerts, and deadlines are frequently missed as a result",
           "Log shows 'completed' for requests that were only partially fulfilled without explanation of what was withheld"
         ],
         "suggestedSources": [
@@ -954,7 +954,7 @@
       }
     ],
     "auditTips": [
-      "Count the days between 'date received' and 'date responded' for every entry in the request log — identify any exceeding 21 days",
+      "Count the days between 'date received' and 'date responded' for every entry in the request log \u2014 identify any exceeding 21 days",
       "For any 21-day deadline breach, verify whether an extension request was submitted to the Commissioner before the deadline",
       "Ask whether the organisation charges a fee for access requests, and if so, verify the fee is within the prescribed amount"
     ]
@@ -964,7 +964,7 @@
     "part": "II",
     "title": "Right to Correct Personal Data",
     "obligationType": "mandatory",
-    "auditorFocus": "JPDP inspectors will review the correction request log and test whether corrections are propagated to all relevant systems. The requirement to notify third parties of corrections is frequently overlooked — inspectors will specifically look for evidence of third-party notification.",
+    "auditorFocus": "JPDP inspectors will review the correction request log and test whether corrections are propagated to all relevant systems. The requirement to notify third parties of corrections is frequently overlooked \u2014 inspectors will specifically look for evidence of third-party notification.",
     "evidenceItems": [
       {
         "id": "s32-E1",
@@ -981,7 +981,7 @@
           "Corrections are made in the primary CRM but the corrected information is not pushed to integrated systems (e.g., the marketing platform, billing system, or customer portal retain the old data)",
           "Third parties who received the inaccurate data are never notified of the correction",
           "Where the organisation disputes the correction, no correction statement is attached to the record",
-          "No correction request log exists — corrections are handled via ad hoc emails to the customer service team"
+          "No correction request log exists \u2014 corrections are handled via ad hoc emails to the customer service team"
         ],
         "suggestedSources": [
           "Correction request log (last 3 years)",
@@ -998,9 +998,9 @@
       }
     ],
     "auditTips": [
-      "Select 3 correction request log entries and trace each correction through all downstream systems — is the corrected data consistent across all systems?",
+      "Select 3 correction request log entries and trace each correction through all downstream systems \u2014 is the corrected data consistent across all systems?",
       "Ask the organisation to identify the third parties who received the inaccurate data in each sample case and show evidence of notification",
-      "Look for correction statement annotations on disputed records — this is a specific requirement that is often not implemented"
+      "Look for correction statement annotations on disputed records \u2014 this is a specific requirement that is often not implemented"
     ]
   },
   "s43": {
@@ -1025,7 +1025,7 @@
           "Register exists but major processors are missing (e.g., the cloud hosting provider, email service provider, or HR system vendor are not listed as processors)",
           "DPAs are in place for some processors but the organisation cannot identify when each DPA was signed relative to when processing commenced",
           "Processor register has not been updated in over a year and no longer reflects the current vendor landscape",
-          "Some processors are classified as 'independent data users' (not requiring a DPA) when they are actually processing on the organisation's behalf (and do require a DPA)"
+          "Some processors are classified as 'independent data controllers' (not requiring a DPA) when they are actually processing on the organisation's behalf (and do require a DPA)"
         ],
         "suggestedSources": [
           "Processor register (current version)",
@@ -1050,13 +1050,13 @@
           "DPAs specify minimum security standards at least equivalent to the organisation's own security requirements",
           "DPAs require the processor to notify the organisation of any data breach within a defined timeframe (typically 24-48 hours)",
           "DPAs require deletion or return of all personal data at the end of the processing engagement",
-          "DPAs restrict sub-processing without prior written consent from the data user"
+          "DPAs restrict sub-processing without prior written consent from the data controller"
         ],
         "commonGaps": [
-          "DPAs are general-purpose service agreements or NDAs without specific data protection clauses — they do not address any of the s43 requirements",
-          "DPAs do not include breach notification obligations — the organisation has no contractual mechanism to be notified of processor-side breaches",
-          "DPAs permit sub-processing without restriction, meaning the processor can engage sub-processors the data user is unaware of",
-          "DPAs do not include post-contract deletion obligations — personal data may remain on processor systems after the relationship ends",
+          "DPAs are general-purpose service agreements or NDAs without specific data protection clauses \u2014 they do not address any of the s43 requirements",
+          "DPAs do not include breach notification obligations \u2014 the organisation has no contractual mechanism to be notified of processor-side breaches",
+          "DPAs permit sub-processing without restriction, meaning the processor can engage sub-processors the data controller is unaware of",
+          "DPAs do not include post-contract deletion obligations \u2014 personal data may remain on processor systems after the relationship ends",
           "DPA templates used are out of date and do not reflect the 2024 Amendment requirements"
         ],
         "suggestedSources": [
@@ -1082,10 +1082,10 @@
           "For critical processors, on-site audit rights under the DPA have been exercised at least once"
         ],
         "commonGaps": [
-          "No processor due diligence has ever been conducted — DPAs are signed but compliance with them is never verified",
+          "No processor due diligence has ever been conducted \u2014 DPAs are signed but compliance with them is never verified",
           "Due diligence is limited to collecting a security questionnaire but the responses are never reviewed or followed up",
           "ISO 27001 or SOC 2 certificates on file are expired (more than 12 months old)",
-          "A processor disclosed a breach to the data user but the data user did not escalate or investigate the implications for its own compliance"
+          "A processor disclosed a breach to the data controller but the data controller did not escalate or investigate the implications for its own compliance"
         ],
         "suggestedSources": [
           "Annual processor due diligence questionnaire responses",
@@ -1103,31 +1103,31 @@
       }
     ],
     "auditTips": [
-      "Ask for the processor register and cross-reference it against the IT vendor list — are all vendors with access to personal data listed?",
+      "Ask for the processor register and cross-reference it against the IT vendor list \u2014 are all vendors with access to personal data listed?",
       "Select 5 DPAs from different types of processors (cloud, marketing, HR, logistics) and check each against the s43 requirements checklist",
-      "Ask: 'Has any processor notified you of a data breach?' — the answer reveals both the state of processor breach notification and the organisation's own breach awareness"
+      "Ask: 'Has any processor notified you of a data breach?' \u2014 the answer reveals both the state of processor breach notification and the organisation's own breach awareness"
     ]
   },
-  "s129A": {
-    "sectionId": "s129A",
+  "s129": {
+    "sectionId": "s129",
     "part": "X",
     "title": "Cross-Border Transfer of Personal Data (2024 Amendment)",
     "obligationType": "mandatory",
-    "auditorFocus": "Following the 2024 Amendment, JPDP inspectors will specifically assess cross-border data transfer compliance under s129A. The most common finding is inadvertent cross-border transfer through cloud services and SaaS platforms without a transfer mechanism. Data flow maps and transfer registers are the primary documents requested.",
+    "auditorFocus": "Following the 2024 Amendment, JPDP inspectors will specifically assess cross-border data transfer compliance under s129. The most common finding is inadvertent cross-border transfer through cloud services and SaaS platforms without a transfer mechanism. Data flow maps and transfer registers are the primary documents requested.",
     "evidenceItems": [
       {
-        "id": "s129A-E1",
+        "id": "s129-E1",
         "name": "Data flow map showing cross-border transfers",
         "description": "A visual or tabular map of all personal data flows, specifically identifying any flows that cross Malaysia's borders, including cloud service provider data centres and SaaS platform data storage locations",
         "whatGoodLooksLike": [
           "Data flow map identifies every system that stores or processes personal data and the country where data is stored",
           "All cloud service providers are identified with their data centre locations",
           "Map distinguishes between data stored/processed in Malaysia, data in approved countries (Transfer Order), and data in non-approved countries requiring a transfer mechanism",
-          "Each cross-border flow is annotated with the s129A mechanism relied on",
+          "Each cross-border flow is annotated with the s129 mechanism relied on",
           "Map is updated whenever new systems are deployed or cloud service providers change their data centre configurations"
         ],
         "commonGaps": [
-          "No data flow map exists — the organisation has no visibility of where its personal data is stored or processed",
+          "No data flow map exists \u2014 the organisation has no visibility of where its personal data is stored or processed",
           "Data flow map covers only on-premises systems and does not capture cloud service or SaaS platform data locations",
           "Map was prepared at a point in time and has not been updated as new SaaS platforms were adopted",
           "Organisation is not aware that commonly used SaaS platforms (e.g., CRM, email marketing, video conferencing) store data in non-Malaysian data centres"
@@ -1146,19 +1146,19 @@
         ]
       },
       {
-        "id": "s129A-E2",
+        "id": "s129-E2",
         "name": "Cross-border transfer register with applicable mechanisms",
         "description": "A register documenting all transfers of personal data outside Malaysia, the destination country, the transfer mechanism relied on, and supporting documentation",
         "whatGoodLooksLike": [
-          "Register lists all cross-border transfers with: destination country, recipient/processor, data categories transferred, volume, transfer mechanism under s129A, and date of first transfer",
+          "Register lists all cross-border transfers with: destination country, recipient/processor, data categories transferred, volume, transfer mechanism under s129, and date of first transfer",
           "For each transfer relying on SCCs: executed SCC documents are referenced and on file",
           "For each transfer relying on adequacy: the Transfer Order listing is referenced",
           "For each transfer relying on consent: the specific consent records are referenced",
           "Register is reviewed annually and updated when new transfers commence or mechanisms change"
         ],
         "commonGaps": [
-          "No cross-border transfer register — the organisation has not identified its cross-border transfers as a distinct compliance category",
-          "Register lists transfers but does not specify the s129A mechanism relied on for each",
+          "No cross-border transfer register \u2014 the organisation has not identified its cross-border transfers as a distinct compliance category",
+          "Register lists transfers but does not specify the s129 mechanism relied on for each",
           "SCCs are referenced in the register but the executed SCC documents cannot be produced",
           "Transfers to non-approved countries are listed in the register but the 'mechanism' column is blank or states 'N/A'",
           "Register does not cover transfers that occur through cloud-based SaaS platforms used by staff (e.g., file-sharing with overseas colleagues via cloud storage)"
@@ -1179,119 +1179,38 @@
       }
     ],
     "auditTips": [
-      "Ask whether the organisation uses Google Workspace, Microsoft 365, Salesforce, or other major cloud platforms — then ask where the data is stored and what the transfer mechanism is",
-      "Request the executed SCCs for the top 5 overseas data processors — when were they executed relative to when processing commenced?",
-      "Ask the DPO to identify the destination country of the organisation's cloud hosting provider — if they cannot answer immediately, it indicates the cross-border transfer mapping has not been completed"
+      "Ask whether the organisation uses Google Workspace, Microsoft 365, Salesforce, or other major cloud platforms \u2014 then ask where the data is stored and what the transfer mechanism is",
+      "Request the executed SCCs for the top 5 overseas data processors \u2014 when were they executed relative to when processing commenced?",
+      "Ask the DPO to identify the destination country of the organisation's cloud hosting provider \u2014 if they cannot answer immediately, it indicates the cross-border transfer mapping has not been completed"
     ]
   },
-  "s143A": {
-    "sectionId": "s143A",
-    "part": "X",
-    "title": "Data Breach Notification (2024 Amendment)",
+  "s12B": {
+    "sectionId": "s12B",
+    "part": "II",
+    "title": "Data Breach Notification",
     "obligationType": "mandatory",
-    "auditorFocus": "JPDP inspectors will assess whether the organisation has the capability and documented procedures to notify the Commissioner of data breaches as required by s143A. The Incident Response Plan, breach log, tabletop exercise records, and any actual breach notification records are the primary evidence items. Absence of an IRP or any breach log is treated as a significant finding.",
+    "auditorFocus": "Inspectors will verify the organization's capability to detect breaches and notify the Commissioner 'as soon as practicable'. They will check for a functioning breach register and evidence of 72-hour notification readiness.",
     "evidenceItems": [
       {
-        "id": "s143A-E1",
-        "name": "Incident Response Plan (IRP) with s143A notification procedures",
-        "description": "A documented Incident Response Plan specifically addressing data breach detection, assessment, containment, and notification obligations under s143A",
+        "id": "s12B-E1",
+        "name": "Personal Data Breach Register",
+        "description": "A log of all security incidents involving personal data, including the assessment of risk and notification decisions.",
         "whatGoodLooksLike": [
-          "IRP specifically addresses s143A Commissioner notification requirements with a defined internal escalation timeline",
-          "IRP assigns named roles: DPO (notification decision), CISO (technical response), Legal (legal assessment), Communications (data subject notification)",
-          "IRP includes a breach severity assessment matrix to determine whether the breach triggers Commissioner and/or data subject notification",
-          "IRP contains pre-drafted notification templates for Commissioner and data subject communications",
-          "IRP has been reviewed and updated after the 2024 Amendment came into force (April 2025)",
-          "IRP version control shows it has been tested and revised after each test or actual incident"
+          "Includes timestamp of discovery and timestamp of notification",
+          "Records rationale for notifying or not notifying data subjects (harm test)"
         ],
-        "commonGaps": [
-          "No IRP exists — the organisation has no documented plan for responding to data breaches",
-          "IRP exists but pre-dates the 2024 Amendment and does not reference s143A notification obligations",
-          "IRP assigns notification responsibility but the named person has left the organisation and the IRP has not been updated",
-          "IRP contains a notification procedure but no notification templates — staff would need to draft notifications from scratch during a breach",
-          "IRP has never been tested and may not be operationally effective"
-        ],
-        "suggestedSources": [
-          "Incident Response Plan document (current version with approval date)",
-          "IRP review and update records post-2024 Amendment",
-          "Pre-drafted breach notification templates (Commissioner and data subject versions)",
-          "Named role assignments in the IRP with current incumbents confirmed"
-        ],
-        "format": "PDF / Word document",
-        "retentionPeriod": "Current version plus all prior versions",
         "artifactSlugs": [
-          "data-breach-response-policy",
-          "data-breach-notification-procedure"
+          "data-breach-register"
         ]
       },
       {
-        "id": "s143A-E2",
-        "name": "Tabletop exercise records and after-action reports",
-        "description": "Records of annual tabletop breach simulation exercises testing the IRP, notification process, and communication templates, with after-action reports documenting gaps identified and remediation actions taken",
-        "whatGoodLooksLike": [
-          "At least one tabletop exercise conducted in the past 12 months, simulating a significant personal data breach scenario",
-          "Exercise involves all key IRP roles: DPO, CISO, Legal, Communications, senior management",
-          "After-action report documents the gaps identified during the exercise and the remediation actions assigned",
-          "Remediation actions from prior exercises are tracked and completed before the next exercise",
-          "Exercise scenarios are varied year-on-year to test different breach types (ransomware, accidental disclosure, insider threat)"
-        ],
-        "commonGaps": [
-          "No tabletop exercise has ever been conducted",
-          "Exercise was conducted but only with the IT team and did not involve the DPO, Legal, or Communications teams",
-          "After-action report was produced but the remediation actions were never followed up or completed",
-          "Exercise tested only the technical response and did not test the regulatory notification process or the data subject communication",
-          "Last exercise was conducted more than 2 years ago"
-        ],
-        "suggestedSources": [
-          "Tabletop exercise scenario documents (last 2 years)",
-          "Attendance records showing which roles participated",
-          "After-action reports (last 2 years)",
-          "Remediation tracker showing status of post-exercise actions"
-        ],
-        "format": "PDF / Word document",
-        "retentionPeriod": "7 years",
+        "id": "s12B-E2",
+        "name": "Commissioner Breach Notification Records",
+        "description": "Copies of all notifications sent to the JPDP within the required timeframe.",
         "artifactSlugs": [
-          "data-breach-investigation-records"
-        ]
-      },
-      {
-        "id": "s143A-E3",
-        "name": "Breach log and actual breach notification records",
-        "description": "A centralised log of all actual data breaches and security incidents, including the assessments made, notification decisions, and copies of any notifications sent to the Commissioner or data subjects",
-        "whatGoodLooksLike": [
-          "Breach log records all incidents (including near-misses and minor incidents) with date of discovery, nature, data affected, and assessment of notification obligations",
-          "For any notifiable breach: Commissioner notification is on file (copy of the notification submitted and confirmation of receipt)",
-          "For any breach where data subject notification was required: notification evidence is on file (copy of communication and distribution records)",
-          "For any incident assessed as not requiring notification: the assessment rationale is documented and approved by the DPO and Legal",
-          "Breach log is reviewed at the quarterly compliance report to management",
-          "Log shows that breach response times have improved over time as the IRP has been refined"
-        ],
-        "commonGaps": [
-          "No breach log exists — the organisation cannot demonstrate whether it has experienced any data breaches",
-          "Breach log exists but is incomplete — only major incidents are logged; minor incidents and near-misses are not recorded",
-          "A breach occurred but no Commissioner notification was made — the breach was classified as not requiring notification without a documented assessment basis",
-          "Commissioner notification was made but the notification was incomplete (missing prescribed information)",
-          "Data subject notification was required but was not sent, or was sent significantly later than practicable"
-        ],
-        "suggestedSources": [
-          "Breach log (all incidents since the 2024 Amendment came into force, at minimum)",
-          "Copies of Commissioner breach notifications submitted",
-          "Copies of data subject breach notifications issued",
-          "Assessment memoranda for incidents determined not to require notification",
-          "Commissioner acknowledgement of receipt of breach notifications"
-        ],
-        "format": "Spreadsheet / PDF log / PDF notifications",
-        "retentionPeriod": "7 years",
-        "artifactSlugs": [
-          "data-breach-register",
           "data-breach-notification-report-commissioner"
         ]
       }
-    ],
-    "auditTips": [
-      "Ask: 'Has the organisation experienced any data breaches or security incidents in the past 2 years?' — then ask to see the breach log and the Commissioner notifications filed for each",
-      "Request the IRP and check the last-revised date — was it updated after the 2024 Amendment came into force?",
-      "Ask whether a tabletop exercise has been conducted in the past 12 months and request the after-action report",
-      "Identify the most recent entry in the breach log and trace through the IRP process — was the s143A assessment conducted within the required timeframe?"
     ]
   },
   "s101": {
@@ -1341,9 +1260,9 @@
           "Self-assessment report is presented to management to resource gap remediation"
         ],
         "commonGaps": [
-          "No inspection response procedure exists — the organisation has not planned for how it would respond to an unannounced inspection",
-          "No self-assessments have been conducted — the organisation will discover its compliance gaps only during an actual inspection",
-          "Self-assessment was conducted but findings were not acted upon — the same gaps are still present at the time of the actual inspection"
+          "No inspection response procedure exists \u2014 the organisation has not planned for how it would respond to an unannounced inspection",
+          "No self-assessments have been conducted \u2014 the organisation will discover its compliance gaps only during an actual inspection",
+          "Self-assessment was conducted but findings were not acted upon \u2014 the same gaps are still present at the time of the actual inspection"
         ],
         "suggestedSources": [
           "Inspection response procedure document",
@@ -1359,8 +1278,8 @@
       }
     ],
     "auditTips": [
-      "At the start of the inspection, ask the organisation to produce its compliance document index — assess how quickly documents are retrieved",
-      "Request the most recent self-assessment report and compare the findings with observations made during the current inspection — are the same gaps still present?",
+      "At the start of the inspection, ask the organisation to produce its compliance document index \u2014 assess how quickly documents are retrieved",
+      "Request the most recent self-assessment report and compare the findings with observations made during the current inspection \u2014 are the same gaps still present?",
       "Ask who the DPO is and verify they are the same person named in the inspection response procedure and available to assist during the inspection"
     ]
   },
@@ -1383,7 +1302,7 @@
           "Procedure is tested periodically to verify the contact details are working"
         ],
         "commonGaps": [
-          "No internal complaint procedure published — data subjects are directed immediately to the Commissioner without any internal resolution opportunity",
+          "No internal complaint procedure published \u2014 data subjects are directed immediately to the Commissioner without any internal resolution opportunity",
           "Complaint contact email or address is incorrect, unmonitered, or inactive",
           "Procedure does not specify any timeframe for response, leaving data subjects in uncertainty",
           "Procedure exists but is not linked from the privacy notice, making it inaccessible to most data subjects"
@@ -1411,7 +1330,7 @@
           "DPO reviews complaint log monthly and reports complaint metrics to management"
         ],
         "commonGaps": [
-          "No complaint log exists — complaints are handled informally with no records",
+          "No complaint log exists \u2014 complaints are handled informally with no records",
           "Log records complaints received but does not document investigation steps or outcomes",
           "Where the complaint reveals a genuine violation, no remediation is documented",
           "Complaint log shows a pattern of similar complaints (e.g., multiple complaints about unsubscribe mechanisms not working) that indicate a systemic issue that has not been addressed"
@@ -1431,9 +1350,9 @@
       }
     ],
     "auditTips": [
-      "Navigate to the organisation's website and attempt to find the complaint procedure — is it easily accessible? Are the contact details working?",
-      "Review the complaint log for patterns — recurring complaint types indicate systemic compliance issues that should have been addressed",
-      "Ask whether the organisation has received any complaints that were also lodged with the Commissioner — if so, verify the organisation cooperated fully with the Commissioner's investigation"
+      "Navigate to the organisation's website and attempt to find the complaint procedure \u2014 is it easily accessible? Are the contact details working?",
+      "Review the complaint log for patterns \u2014 recurring complaint types indicate systemic compliance issues that should have been addressed",
+      "Ask whether the organisation has received any complaints that were also lodged with the Commissioner \u2014 if so, verify the organisation cooperated fully with the Commissioner's investigation"
     ]
   },
   "s110": {
@@ -1457,7 +1376,7 @@
         "commonGaps": [
           "Organisation received an enforcement notice but cannot produce evidence of any remedial steps taken",
           "Remedial steps were taken after the deadline without seeking a Commissioner extension",
-          "Only some requirements from the notice were addressed — others were overlooked or deprioritised",
+          "Only some requirements from the notice were addressed \u2014 others were overlooked or deprioritised",
           "Evidence of compliance exists but was never formally submitted to the Commissioner, leaving the compliance confirmation on file in the organisation only"
         ],
         "suggestedSources": [
@@ -1476,9 +1395,73 @@
       }
     ],
     "auditTips": [
-      "Check the JPDP investigation history for the organisation — have any enforcement notices been issued? If so, verify full compliance evidence",
-      "Ask the DPO: 'Have you received any enforcement notices from the Commissioner?' — cross-reference the answer against the JPDP register if available",
+      "Check the JPDP investigation history for the organisation \u2014 have any enforcement notices been issued? If so, verify full compliance evidence",
+      "Ask the DPO: 'Have you received any enforcement notices from the Commissioner?' \u2014 cross-reference the answer against the JPDP register if available",
       "If an enforcement notice was received but compliance is claimed, test a sample of the remedial steps by independently verifying the technical changes were implemented"
+    ]
+  },
+  "s12A": {
+    "sectionId": "s12A",
+    "part": "II",
+    "title": "Appointment of Data Protection Officer",
+    "obligationType": "mandatory",
+    "auditorFocus": "JPDP inspectors will verify whether the organisation has formally appointed a DPO and notified the Commissioner as required by Section 12A(3). They will also assess whether the DPO has sufficient authority and resources to perform their functions independently.",
+    "evidenceItems": [
+      {
+        "id": "s12A-E1",
+        "name": "DPO Appointment Letter & Job Description",
+        "description": "Formal documentation of the DPO's appointment, clearly defining their roles, responsibilities, and reporting line to senior management.",
+        "whatGoodLooksLike": [
+          "Document is signed by the CEO or Board",
+          "Explicitly mentions independence and avoidance of conflict of interest",
+          "Specifies duties aligned with JPDP DPO Guidelines 2025"
+        ],
+        "artifactSlugs": [
+          "dpo-appointment-letter"
+        ]
+      },
+      {
+        "id": "s12A-E2",
+        "name": "JPDP DPO Registration Confirmation",
+        "description": "Proof that the DPO appointment was notified to the Commissioner via the MyPDPA portal or prescribed form.",
+        "artifactSlugs": [
+          "dpo-registration-receipt"
+        ]
+      }
+    ]
+  },
+  "s43A": {
+    "sectionId": "s43A",
+    "part": "II",
+    "title": "Right to Data Portability",
+    "obligationType": "rights-based",
+    "auditorFocus": "Inspectors will check whether the organization has a technical mechanism to transmit personal data to another controller in a structured format upon request.",
+    "evidenceItems": [
+      {
+        "id": "s43A-E1",
+        "name": "Data Portability Procedure & Technical Spec",
+        "description": "Documented process for handling portability requests and the data formats supported (e.g., CSV, JSON).",
+        "artifactSlugs": [
+          "data-portability-procedure"
+        ]
+      }
+    ]
+  },
+  "s34": {
+    "sectionId": "s34",
+    "part": "II",
+    "title": "Right to Correct Personal Data",
+    "obligationType": "mandatory",
+    "auditorFocus": "Verification of the workflow for receiving and acting upon data correction requests within 21 days.",
+    "evidenceItems": [
+      {
+        "id": "s34-E1",
+        "name": "Correction Request Log",
+        "description": "Log of all correction requests received and evidence of propagation to third parties.",
+        "artifactSlugs": [
+          "dsar-log"
+        ]
+      }
     ]
   }
 }

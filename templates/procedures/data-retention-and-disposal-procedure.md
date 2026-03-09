@@ -806,7 +806,7 @@ This procedure shall be reviewed at minimum **annually** by the DPO in conjuncti
 | Reference | Title | Relevant Provision |
 |---|---|---|
 | **Personal Data Protection Act 2010 (Act 709)** | Personal Data Protection Act 2010 | s4 (Definitions), s7 (Consent Principle), s10 (Retention Principle), s40 (Regulations) |
-| **Personal Data Protection Regulations 2013** | PDP (Class of Data Users) Regulations 2013 | Data user obligations by class |
+| **Personal Data Protection Regulations 2013** | PDP (Class of Data Controllers) Regulations 2013 | Data user obligations by class |
 | **Personal Data Protection (Compounding of Offences) Regulations 2016** | Compound offences under PDPA | Penalties for PDPA non-compliance |
 | **Employment Act 1955 (Act 265)** | Employment Act 1955 | Record-keeping obligations for employment data |
 | **Financial Services Act 2013 (Act 758)** | Financial Services Act 2013 | [Applicable section on record retention] |

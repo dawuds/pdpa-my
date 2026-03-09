@@ -1,9 +1,9 @@
 {
-  "description": "The 13 classes of data users required to register with the Commissioner under the Personal Data Protection (Class of Data Users) Order 2013, as amended by the Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+  "description": "The 13 classes of data controllers required to register with the Commissioner under the Personal Data Protection (Class of Data Controllers) Order 2013, as amended by the Personal Data Protection (Class of Data Controllers) (Amendment) Order 2016",
   "enablingSection": "s13",
-  "orderTitle": "Personal Data Protection (Class of Data Users) Order 2013",
+  "orderTitle": "Personal Data Protection (Class of Data Controllers) Order 2013",
   "orderReference": "P.U.(A) 168/2013",
-  "amendmentOrderTitle": "Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+  "amendmentOrderTitle": "Personal Data Protection (Class of Data Controllers) (Amendment) Order 2016",
   "amendmentOrderReference": "P.U.(A) 27/2016",
   "lastUpdated": "2025-06-01",
   "classes": [
@@ -136,7 +136,7 @@
         "Diagnostic laboratories",
         "Physiotherapy and rehabilitation centres",
         "Traditional and complementary medicine practitioners",
-        "Medical and dental software providers (acting as data users)"
+        "Medical and dental software providers (acting as data controllers)"
       ],
       "regulatoryOverlap": [
         "Ministry of Health Malaysia (MOH)",
@@ -211,7 +211,7 @@
         "Railway operators (KTM, RapidKL, KLIA Ekspres)",
         "Bus companies operating scheduled services",
         "Ferry operators",
-        "Taxi and e-hailing platform operators (acting as data users)",
+        "Taxi and e-hailing platform operators (acting as data controllers)",
         "Ride-hailing aggregators"
       ],
       "regulatoryOverlap": [
@@ -363,7 +363,7 @@
         "Real estate agencies and negotiators",
         "Property developers",
         "Property management companies",
-        "Real estate investment trusts (REITs) in their data user capacity",
+        "Real estate investment trusts (REITs) in their data controller capacity",
         "Online property portals",
         "Strata management companies"
       ],
@@ -402,7 +402,7 @@
         "Sabah Electricity Sdn Bhd (SESB)",
         "Syabas (Pengurusan Aset Air)",
         "State water utilities companies",
-        "Independent power producers (in their data user capacity)"
+        "Independent power producers (in their data controller capacity)"
       ],
       "regulatoryOverlap": [
         "Energy Commission Malaysia (Suruhanjaya Tenaga)",

@@ -78,7 +78,7 @@ This procedure does **not** apply to:
 | **Consent** | Any freely given, specific, and informed indication of a data subject's agreement to the processing of their personal data, as contemplated under PDPA s6(1)(a). |
 | **Withdrawal of Consent** | A data subject's revocation of previously granted consent, submitted through an approved intake channel, as provided under PDPA s38. |
 | **Data Subject** | An individual who is the subject of personal data processed by [Organization Name]. |
-| **Data User** | [Organization Name], in its capacity as the entity that processes personal data and determines the purposes and means of such processing. |
+| **Data Controller** | [Organization Name], in its capacity as the entity that processes personal data and determines the purposes and means of such processing. |
 | **Data Processor** | Any person or organization that processes personal data on behalf of [Organization Name] under a data processing agreement. |
 | **Third-Party Recipient** | Any external party to whom personal data has been disclosed by [Organization Name] other than as a Data Processor. |
 | **Suppression List** | A centrally maintained register of data subjects who have withdrawn consent, used to prevent further processing of their personal data for specified purposes. |
@@ -103,8 +103,8 @@ This procedure does **not** apply to:
 ### 3.2 Supporting Regulatory Instruments and Guidelines
 
 - Personal Data Protection Regulations 2013 (P.U.(A) 336/2013)
-- Personal Data Protection (Class of Data Users) Order 2013
-- Bank Negara Malaysia (BNM) Policy Document on Management of Customer Information and Permitted Disclosures (where applicable to financial sector data users)
+- Personal Data Protection (Class of Data Controllers) Order 2013
+- Bank Negara Malaysia (BNM) Policy Document on Management of Customer Information and Permitted Disclosures (where applicable to financial sector data controllers)
 - [Organization Name] Privacy Notice (Version [X.X], dated [Date])
 - [Organization Name] Data Protection Policy (Document ID: [Document ID])
 
@@ -215,7 +215,7 @@ Upon verification of a consent withdrawal request, the **DPO Office** shall init
 | Necessary for compliance with a legal obligation | s6(1)(c) | [Describe applicable legal or regulatory obligations] |
 | Necessary to protect vital interests of the data subject | s6(1)(d) | [Describe circumstances, e.g., fraud prevention] |
 | Necessary for administration of justice or exercise of statutory functions | s6(1)(e) | [Describe applicable scenarios] |
-| Necessary for legitimate interests of the data user or third party | s6(1)(f) | [Describe and document the legitimate interest assessment] |
+| Necessary for legitimate interests of the data controller or third party | s6(1)(f) | [Describe and document the legitimate interest assessment] |
 
 3. Document the assessment outcome in the **Consent Withdrawal Case Record** (Form CW-02, Appendix B).
 4. Where an alternative lawful basis is identified, update the **Data Processing Register** to reflect the new lawful basis.
@@ -330,7 +330,7 @@ Upon updating the central Suppression List, the Data Management Team shall propa
 
 ## 9. Notification to Data Processors and Third-Party Recipients
 
-*PDPA imposes obligations on data users to manage onward disclosures responsibly. This section governs how [Organization Name] notifies entities to whom it has shared the data subject's personal data of the consent withdrawal.*
+*PDPA imposes obligations on data controllers to manage onward disclosures responsibly. This section governs how [Organization Name] notifies entities to whom it has shared the data subject's personal data of the consent withdrawal.*
 
 ### 9.1 Notification Obligation
 

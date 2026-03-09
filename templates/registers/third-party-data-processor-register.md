@@ -41,7 +41,7 @@
 
 ### 1.1 Purpose
 
-This register establishes and maintains a comprehensive inventory of all third parties and data processors engaged by [Organization Name] to process personal data on its behalf. It serves as the authoritative record for demonstrating compliance with the **Personal Data Protection Act 2010 (PDPA)**, specifically the obligations of a data user when engaging data processors under **Section 9** and the enhanced processor accountability requirements under **Section 129A**.
+This register establishes and maintains a comprehensive inventory of all third parties and data processors engaged by [Organization Name] to process personal data on its behalf. It serves as the authoritative record for demonstrating compliance with the **Personal Data Protection Act 2010 (PDPA)**, specifically the obligations of a data controller when engaging data processors under **Section 9** and the enhanced processor accountability requirements under **Section 129A**.
 
 The register supports [Organization Name]'s obligation to ensure that any processing of personal data by a third party is conducted only pursuant to a written contract, that adequate security safeguards are in place, and that personal data subjects' rights are not undermined through the engagement of processors.
 
@@ -51,7 +51,7 @@ This register applies to:
 
 - All **data processors** engaged by [Organization Name] that process personal data on its behalf, whether wholly or partly
 - All **sub-processors** engaged by primary data processors where [Organization Name] has granted written authorisation
-- All **joint data users** where two or more parties jointly determine the purposes and means of processing personal data
+- All **joint data controllers** where two or more parties jointly determine the purposes and means of processing personal data
 - Processing activities carried out within Malaysia and any cross-border transfers of personal data to processors located outside Malaysia
 - All personal data categories as defined under the PDPA, including sensitive personal data
 
@@ -65,8 +65,8 @@ This register does **not** apply to:
 
 | Regulatory Instrument | Provision | Obligation |
 |---|---|---|
-| Personal Data Protection Act 2010 | Section 9 | Data processors must process personal data only under a written contract; data users remain responsible for processor compliance |
-| Personal Data Protection Act 2010 | Section 129A | Enhanced obligations for data users engaging data processors; mandatory contractual requirements and oversight |
+| Personal Data Protection Act 2010 | Section 9 | Data processors must process personal data only under a written contract; data controllers remain responsible for processor compliance |
+| Personal Data Protection Act 2010 | Section 129A | Enhanced obligations for data controllers engaging data processors; mandatory contractual requirements and oversight |
 | PDPA (Amendment) Act 2023 | Relevant Amendments | Updated processor obligations and accountability requirements |
 | Bank Negara Malaysia (BNM) Policy Document on Outsourcing | As applicable | Outsourcing risk management for licensed financial institutions |
 
@@ -78,10 +78,10 @@ This register does **not** apply to:
 
 | Term | Definition |
 |---|---|
-| **Data User** | [Organization Name], which processes personal data in the course of its commercial transaction |
+| **Data Controller** | [Organization Name], which processes personal data in the course of its commercial transaction |
 | **Data Processor** | Any person who processes personal data on behalf of [Organization Name] and does not process personal data for any of their own purposes |
 | **Sub-Processor** | A third party engaged by a data processor to carry out specific processing activities on behalf of the data processor in relation to [Organization Name]'s personal data |
-| **Joint Data User** | Any person who, together with [Organization Name], jointly and collectively determines the purposes and means of processing personal data |
+| **Joint Data Controller** | Any person who, together with [Organization Name], jointly and collectively determines the purposes and means of processing personal data |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject, who is identified or identifiable from that information |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject, political opinions, religious beliefs, and other categories as defined under the PDPA |
 | **Data Processing Agreement (DPA)** | A written contract between [Organization Name] and a data processor governing the terms of processing personal data, as required under Section 9 and Section 129A of the PDPA |
@@ -130,15 +130,15 @@ Completed register entries for offboarded processors must be retained for a mini
 
 | Ref # | Processor Name | Registered Address | Company Registration No. | Country of Incorporation | Classification | Engagement Start Date | Status |
 |---|---|---|---|---|---|---|---|
-| TP-001 | [Processor Legal Name] | [Registered Address] | [Co. Reg. No.] | [Country] | [Data Processor / Sub-Processor / Joint Data User] | [DD/MM/YYYY] | [Active / Offboarded] |
-| TP-002 | [Processor Legal Name] | [Registered Address] | [Co. Reg. No.] | [Country] | [Data Processor / Sub-Processor / Joint Data User] | [DD/MM/YYYY] | [Active / Offboarded] |
-| TP-003 | [Processor Legal Name] | [Registered Address] | [Co. Reg. No.] | [Country] | [Data Processor / Sub-Processor / Joint Data User] | [DD/MM/YYYY] | [Active / Offboarded] |
+| TP-001 | [Processor Legal Name] | [Registered Address] | [Co. Reg. No.] | [Country] | [Data Processor / Sub-Processor / Joint Data Controller] | [DD/MM/YYYY] | [Active / Offboarded] |
+| TP-002 | [Processor Legal Name] | [Registered Address] | [Co. Reg. No.] | [Country] | [Data Processor / Sub-Processor / Joint Data Controller] | [DD/MM/YYYY] | [Active / Offboarded] |
+| TP-003 | [Processor Legal Name] | [Registered Address] | [Co. Reg. No.] | [Country] | [Data Processor / Sub-Processor / Joint Data Controller] | [DD/MM/YYYY] | [Active / Offboarded] |
 
 **Classification Definitions:**
 
 - **Data Processor** — Processes personal data solely on behalf of [Organization Name] and only for purposes instructed by [Organization Name]
 - **Sub-Processor** — Engaged by a primary data processor; [Organization Name] has issued written authorisation for sub-processing (Ref: DPA clause [X])
-- **Joint Data User** — Jointly determines with [Organization Name] the purposes and means of processing; separate joint processing agreement applies
+- **Joint Data Controller** — Jointly determines with [Organization Name] the purposes and means of processing; separate joint processing agreement applies
 
 ---
 

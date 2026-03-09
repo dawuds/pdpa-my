@@ -97,12 +97,12 @@
       "slug": "data-breach-response-policy",
       "name": "Data Breach Response Policy",
       "category": "policies",
-      "description": "Policy establishing the organization's framework for detecting, assessing, containing, notifying, and remediating personal data breaches in compliance with PDPA s143A (mandatory breach notification) introduced by Amendment Act A1727",
+      "description": "Policy establishing the organization's framework for detecting, assessing, containing, notifying, and remediating personal data breaches in compliance with PDPA s12B (mandatory breach notification) introduced by Amendment Act A1727",
       "format": "PDF/DOCX, version-controlled, board-approved",
       "mandatory": true,
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer / Chief Information Security Officer",
       "reviewFrequency": "Annual or post-incident",
@@ -111,7 +111,7 @@
         "Breach definition and classification criteria",
         "Breach severity assessment matrix",
         "Roles and responsibilities during breach response",
-        "72-hour notification obligation to Commissioner (s143A)",
+        "72-hour notification obligation to Commissioner (s12B)",
         "Data subject notification requirements and thresholds",
         "Containment and remediation procedures",
         "Post-incident review and lessons learned process",
@@ -127,11 +127,11 @@
       "slug": "cross-border-data-transfer-policy",
       "name": "Cross-Border Data Transfer Policy",
       "category": "policies",
-      "description": "Policy governing transfers of personal data outside Malaysia, specifying approved transfer mechanisms, assessment requirements, and prohibited transfers, in compliance with PDPA s129A as amended by Act A1727",
+      "description": "Policy governing transfers of personal data outside Malaysia, specifying approved transfer mechanisms, assessment requirements, and prohibited transfers, in compliance with PDPA s129 as amended by Act A1727",
       "format": "PDF/DOCX, version-controlled",
       "mandatory": true,
       "sections": [
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer",
       "reviewFrequency": "Annual",
@@ -250,7 +250,7 @@
       "sections": [
         "s9",
         "s34",
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer / Procurement",
       "reviewFrequency": "Annual",
@@ -452,7 +452,7 @@
         "Assessment of accuracy and evidentiary requirements",
         "Amendment procedure across all relevant systems",
         "Notification to third parties who received the inaccurate data",
-        "Dispute resolution when data user disagrees with correction",
+        "Dispute resolution when data controller disagrees with correction",
         "Response to data subject within statutory period",
         "Record-keeping of correction requests and outcomes"
       ],
@@ -465,12 +465,12 @@
       "slug": "data-breach-notification-procedure",
       "name": "Data Breach Notification Procedure",
       "category": "procedures",
-      "description": "Detailed procedure for detecting, assessing, containing, and notifying a personal data breach, including the 72-hour mandatory notification obligation to the Commissioner under PDPA s143A and data subject notification requirements",
+      "description": "Detailed procedure for detecting, assessing, containing, and notifying a personal data breach, including the 72-hour mandatory notification obligation to the Commissioner under PDPA s12B and data subject notification requirements",
       "format": "SOP with decision trees, notification templates, and RACI",
       "mandatory": true,
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer / Chief Information Security Officer",
       "reviewFrequency": "Annual or post-incident",
@@ -554,11 +554,11 @@
       "slug": "cross-border-transfer-assessment-procedure",
       "name": "Cross-Border Transfer Assessment Procedure",
       "category": "procedures",
-      "description": "Procedure for assessing and approving proposed transfers of personal data outside Malaysia, including identification of the transfer mechanism, Transfer Impact Assessment (TIA), contractual safeguards, and registration or notification to Commissioner where required under PDPA s129A",
+      "description": "Procedure for assessing and approving proposed transfers of personal data outside Malaysia, including identification of the transfer mechanism, Transfer Impact Assessment (TIA), contractual safeguards, and registration or notification to Commissioner where required under PDPA s129",
       "format": "SOP with TIA template and transfer register",
       "mandatory": true,
       "sections": [
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer",
       "reviewFrequency": "Annual",
@@ -587,13 +587,13 @@
       "mandatory": true,
       "sections": [
         "s9",
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer / Procurement",
       "reviewFrequency": "Annual",
       "typicalPages": "15-25",
       "keyContents": [
-        "Third-party classification (data processor, joint data user, independent data user)",
+        "Third-party classification (data processor, joint data controller, independent data controller)",
         "Pre-engagement privacy questionnaire and assessment",
         "Security and compliance certification review",
         "Data processing agreement requirements and negotiation",
@@ -760,7 +760,7 @@
       "slug": "data-portability-request-procedure",
       "name": "Data Portability Request Procedure",
       "category": "procedures",
-      "description": "Procedure for handling data subject requests to receive their personal data in a structured, commonly used, machine-readable format and to transfer that data to another data user, where applicable under PDPA and emerging data portability rights",
+      "description": "Procedure for handling data subject requests to receive their personal data in a structured, commonly used, machine-readable format and to transfer that data to another data controller, where applicable under PDPA and emerging data portability rights",
       "format": "SOP with request form and data export templates",
       "mandatory": false,
       "sections": [
@@ -856,9 +856,9 @@
     },
     {
       "slug": "data-user-registration-record",
-      "name": "Data User Registration Record",
+      "name": "Data Controller Registration Record",
       "category": "registers",
-      "description": "Record documenting the organization's registration as a data user with the Personal Data Protection Commissioner, including registration certificate details, registration class, renewal dates, and any changes notified to the Commissioner under PDPA s13-s16",
+      "description": "Record documenting the organization's registration as a data controller with the Personal Data Protection Commissioner, including registration certificate details, registration class, renewal dates, and any changes notified to the Commissioner under PDPA s13-s16",
       "format": "Controlled document with certificate copies",
       "mandatory": true,
       "sections": [
@@ -916,12 +916,12 @@
       "slug": "data-breach-register",
       "name": "Data Breach Register",
       "category": "registers",
-      "description": "Register recording all confirmed and suspected personal data breaches, including breaches that were assessed as not notifiable, to maintain a complete breach history and support compliance with PDPA s143A breach notification obligations",
+      "description": "Register recording all confirmed and suspected personal data breaches, including breaches that were assessed as not notifiable, to maintain a complete breach history and support compliance with PDPA s12B breach notification obligations",
       "format": "Secure spreadsheet or GRC system, restricted access",
       "mandatory": true,
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer / Chief Information Security Officer",
       "reviewFrequency": "Continuous",
@@ -977,18 +977,18 @@
       "slug": "cross-border-transfer-register",
       "name": "Cross-Border Transfer Register",
       "category": "registers",
-      "description": "Register documenting all transfers of personal data to recipients outside Malaysia, recording the transfer mechanism used, recipient country, contractual safeguards, and transfer impact assessment outcomes to evidence compliance with PDPA s129A",
+      "description": "Register documenting all transfers of personal data to recipients outside Malaysia, recording the transfer mechanism used, recipient country, contractual safeguards, and transfer impact assessment outcomes to evidence compliance with PDPA s129",
       "format": "Spreadsheet or GRC system",
       "mandatory": true,
       "sections": [
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer",
       "reviewFrequency": "Quarterly / Upon new transfer arrangements",
       "keyContents": [
         "Transfer reference and date established",
         "Recipient country and legal system assessment",
-        "Recipient entity and role (processor, joint data user)",
+        "Recipient entity and role (processor, joint data controller)",
         "Personal data categories transferred",
         "Transfer mechanism (adequacy, SCC, BCR, consent, certification)",
         "Transfer Impact Assessment (TIA) reference and outcome",
@@ -1010,13 +1010,13 @@
       "mandatory": true,
       "sections": [
         "s9",
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer / Procurement",
       "reviewFrequency": "Continuous / Annual review",
       "keyContents": [
         "Processor name and registered address",
-        "Classification (data processor, sub-processor, joint data user)",
+        "Classification (data processor, sub-processor, joint data controller)",
         "Services provided and personal data categories processed",
         "Data processing agreement reference and expiry date",
         "Due diligence assessment date and outcome",
@@ -1294,12 +1294,12 @@
       "slug": "data-breach-investigation-records",
       "name": "Data Breach Investigation Records",
       "category": "records",
-      "description": "Comprehensive records of each data breach incident investigation, including initial report, forensic findings, remediation actions, notification correspondence, and lessons learned, retained to demonstrate compliance with PDPA s143A and for future reference",
+      "description": "Comprehensive records of each data breach incident investigation, including initial report, forensic findings, remediation actions, notification correspondence, and lessons learned, retained to demonstrate compliance with PDPA s12B and for future reference",
       "format": "Secure document repository, restricted access",
       "mandatory": true,
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer / Chief Information Security Officer",
       "reviewFrequency": "Created per incident; reviewed annually",
@@ -1440,7 +1440,7 @@
       "sections": [
         "s13",
         "s101",
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer / Legal / Company Secretary",
       "reviewFrequency": "Maintained continuously; reviewed annually",
@@ -1494,11 +1494,11 @@
       "slug": "data-breach-notification-report-commissioner",
       "name": "Data Breach Notification Report (to Commissioner)",
       "category": "reports",
-      "description": "Formal notification report submitted to the Personal Data Protection Commissioner within 72 hours of a notifiable personal data breach under PDPA s143A, containing all prescribed information about the breach nature, scope, impact, and remediation actions",
+      "description": "Formal notification report submitted to the Personal Data Protection Commissioner within 72 hours of a notifiable personal data breach under PDPA s12B, containing all prescribed information about the breach nature, scope, impact, and remediation actions",
       "format": "Commissioner's prescribed notification form (online portal or paper)",
       "mandatory": true,
       "sections": [
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer",
       "reviewFrequency": "Per incident",
@@ -1526,7 +1526,7 @@
       "format": "Email, letter, SMS, or in-app notification (as appropriate to channel)",
       "mandatory": false,
       "sections": [
-        "s143A"
+        "s12B"
       ],
       "owner": "Data Protection Officer / Communications",
       "reviewFrequency": "Per incident",
@@ -1580,11 +1580,11 @@
       "slug": "dpo-annual-report",
       "name": "DPO Annual Report",
       "category": "reports",
-      "description": "Annual report prepared by the Data Protection Officer on the performance of DPO functions, the organization's compliance progress, key risks, significant incidents, and recommendations for senior management and the board, as required under PDPA s129B",
+      "description": "Annual report prepared by the Data Protection Officer on the performance of DPO functions, the organization's compliance progress, key risks, significant incidents, and recommendations for senior management and the board, as required under PDPA s12A",
       "format": "Board report (PDF/DOCX)",
       "mandatory": true,
       "sections": [
-        "s129B"
+        "s12A"
       ],
       "owner": "Data Protection Officer",
       "reviewFrequency": "Annual",
@@ -1613,7 +1613,7 @@
       "mandatory": false,
       "sections": [
         "s9",
-        "s129A"
+        "s129"
       ],
       "owner": "Data Protection Officer / Information Security",
       "reviewFrequency": "Annual per high-risk processor",
@@ -1640,12 +1640,12 @@
       "slug": "data-processing-agreement",
       "name": "Data Processing Agreement (DPA)",
       "category": "contracts",
-      "description": "Formal agreement between the organization as data user and a third-party data processor, setting out the processor's obligations, the scope of processing, security requirements, breach notification obligations, audit rights, and data return or deletion requirements in compliance with PDPA",
+      "description": "Formal agreement between the organization as data controller and a third-party data processor, setting out the processor's obligations, the scope of processing, security requirements, breach notification obligations, audit rights, and data return or deletion requirements in compliance with PDPA",
       "format": "Legally executed agreement (PDF), schedule to main services agreement",
       "mandatory": true,
       "sections": [
         "s9",
-        "s129A"
+        "s129"
       ],
       "owner": "Legal / Data Protection Officer",
       "reviewFrequency": "Upon engagement and material change",
@@ -1656,8 +1656,8 @@
         "Security measures and minimum security standards",
         "Sub-processor authorization and notification requirements",
         "Data subject rights assistance obligations",
-        "Breach notification within 24 hours to data user",
-        "Audit and inspection rights of data user",
+        "Breach notification within 24 hours to data controller",
+        "Audit and inspection rights of data controller",
         "Data return, deletion, or destruction upon termination",
         "Cross-border transfer restrictions and safeguards"
       ],
@@ -1670,17 +1670,17 @@
       "slug": "data-sharing-agreement",
       "name": "Data Sharing Agreement",
       "category": "contracts",
-      "description": "Agreement governing the sharing of personal data between two or more independent data users, specifying the shared data categories, sharing purposes, recipient obligations, security measures, and restrictions on further disclosure or processing",
+      "description": "Agreement governing the sharing of personal data between two or more independent data controllers, specifying the shared data categories, sharing purposes, recipient obligations, security measures, and restrictions on further disclosure or processing",
       "format": "Legally executed agreement (PDF)",
       "mandatory": false,
       "sections": [
         "s8",
-        "s129A"
+        "s129"
       ],
       "owner": "Legal / Data Protection Officer",
       "reviewFrequency": "Upon each new sharing arrangement",
       "keyContents": [
-        "Parties and their roles (data user identities)",
+        "Parties and their roles (data controller identities)",
         "Categories of personal data to be shared",
         "Lawful basis for sharing and underlying purpose",
         "Permitted uses of shared data by recipient",
@@ -1700,11 +1700,11 @@
       "slug": "standard-contractual-clauses-cross-border",
       "name": "Standard Contractual Clauses (Cross-Border Data Transfer)",
       "category": "contracts",
-      "description": "Prescribed or approved standard contractual clauses for the transfer of personal data to recipients in countries without an adequacy determination, providing appropriate safeguards for cross-border transfers under PDPA s129A and the Commissioner's transfer mechanism guidance",
+      "description": "Prescribed or approved standard contractual clauses for the transfer of personal data to recipients in countries without an adequacy determination, providing appropriate safeguards for cross-border transfers under PDPA s129 and the Commissioner's transfer mechanism guidance",
       "format": "Legally executed agreement with prescribed SCC schedule",
       "mandatory": false,
       "sections": [
-        "s129A"
+        "s129"
       ],
       "owner": "Legal / Data Protection Officer",
       "reviewFrequency": "Upon each new cross-border transfer arrangement",
@@ -1754,9 +1754,9 @@
     },
     {
       "slug": "joint-data-user-agreement",
-      "name": "Joint Data User Agreement",
+      "name": "Joint Data Controller Agreement",
       "category": "contracts",
-      "description": "Agreement between two or more organizations that jointly determine the purposes and means of personal data processing, establishing each party's responsibilities for PDPA compliance, data subject rights handling, and liability allocation where both are data users for the same data",
+      "description": "Agreement between two or more organizations that jointly determine the purposes and means of personal data processing, establishing each party's responsibilities for PDPA compliance, data subject rights handling, and liability allocation where both are data controllers for the same data",
       "format": "Legally executed agreement (PDF)",
       "mandatory": false,
       "sections": [
@@ -1769,14 +1769,14 @@
       "owner": "Legal / Data Protection Officer",
       "reviewFrequency": "Upon establishment of joint processing arrangement",
       "keyContents": [
-        "Identification of joint data users and shared processing scope",
+        "Identification of joint data controllers and shared processing scope",
         "Allocation of PDPA compliance responsibilities between parties",
         "Designated lead party for data subject rights requests",
-        "Notification obligations between joint data users",
+        "Notification obligations between joint data controllers",
         "Breach notification and response coordination",
         "Data security responsibilities and minimum standards",
         "Cross-border transfer compliance allocation",
-        "Liability and indemnification between joint data users",
+        "Liability and indemnification between joint data controllers",
         "Transparency requirements to data subjects about arrangement"
       ],
       "controlSlugs": [

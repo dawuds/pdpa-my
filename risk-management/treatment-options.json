@@ -2,7 +2,7 @@
   "sourceType": "constructed-indicative",
   "title": "Risk Treatment Options",
   "description": "Four risk treatment strategies for managing data protection risks under the Malaysia PDPA 2010, with PDPA-specific examples and constraints. Note that certain PDPA requirements are mandatory and cannot be risk-accepted.",
-  "mandatoryComplianceNote": "The PDPA 2010 establishes mandatory obligations that must be met regardless of an organization's risk appetite. The following cannot be risk-accepted under any circumstances: the General Principle (s6 — lawful processing with consent), the Notice and Choice Principle (s7 — written notice to data subjects), the Security Principle (s9 — adequate security measures), mandatory data breach notification (s143A — 72-hour notification to Commissioner), DPIA for high-risk processing (s137), DPO appointment where prescribed (s129B), and data user registration with JPDP (s14-s16). Failure to comply with these mandatory requirements constitutes an offence under the Act regardless of risk assessment outcomes.",
+  "mandatoryComplianceNote": "The PDPA 2010 establishes mandatory obligations that must be met regardless of an organization's risk appetite. The following cannot be risk-accepted under any circumstances: the General Principle (s6 — lawful processing with consent), the Notice and Choice Principle (s7 — written notice to data subjects), the Security Principle (s9 — adequate security measures), mandatory data breach notification (s12B — 72-hour notification to Commissioner), DPIA for high-risk processing (s137), DPO appointment where prescribed (s12A), and data controller registration with JPDP (s14-s16). Failure to comply with these mandatory requirements constitutes an offence under the Act regardless of risk assessment outcomes.",
   "strategies": [
     {
       "strategy": "Mitigate",
@@ -16,7 +16,7 @@
         },
         {
           "risk": "Data breach notification delay",
-          "treatment": "Establish a formal incident response team, implement automated breach detection tools, pre-populate Commissioner notification templates, and conduct quarterly tabletop exercises to ensure 72-hour readiness under s143A",
+          "treatment": "Establish a formal incident response team, implement automated breach detection tools, pre-populate Commissioner notification templates, and conduct quarterly tabletop exercises to ensure 72-hour readiness under s12B",
           "controls": ["breach-detection-and-response-plan", "breach-notification-process"]
         },
         {
@@ -31,7 +31,7 @@
         },
         {
           "risk": "Cross-border transfer without safeguards",
-          "treatment": "Implement a transfer impact assessment process, execute standard contractual clauses for all transfers, deploy technical controls to detect unauthorized transfers, and maintain a cross-border transfer register under s129A",
+          "treatment": "Implement a transfer impact assessment process, execute standard contractual clauses for all transfers, deploy technical controls to detect unauthorized transfers, and maintain a cross-border transfer register under s129",
           "controls": ["transfer-mechanism-implementation", "transfer-impact-assessment"]
         }
       ],
@@ -50,12 +50,12 @@
     },
     {
       "strategy": "Transfer",
-      "description": "Transfer or share the risk with a third party, typically through insurance, outsourcing to a specialized processor, or contractual allocation. Note that under PDPA, the data user retains ultimate accountability even when processing is outsourced.",
-      "whenToUse": "When a specialized third party can manage the risk more effectively, or when residual risk should be financially transferred through insurance. Not appropriate for mandatory compliance obligations which remain the data user's responsibility.",
+      "description": "Transfer or share the risk with a third party, typically through insurance, outsourcing to a specialized processor, or contractual allocation. Note that under PDPA, the data controller retains ultimate accountability even when processing is outsourced.",
+      "whenToUse": "When a specialized third party can manage the risk more effectively, or when residual risk should be financially transferred through insurance. Not appropriate for mandatory compliance obligations which remain the data controller's responsibility.",
       "pdpaExamples": [
         {
           "risk": "Inadequate technical security capabilities",
-          "treatment": "Engage a managed security service provider (MSSP) with demonstrated PDPA compliance capabilities and ISO 27001 certification. Include PDPA-specific SLAs in the service agreement. Note: the data user remains liable under s9 for the processor's security failures",
+          "treatment": "Engage a managed security service provider (MSSP) with demonstrated PDPA compliance capabilities and ISO 27001 certification. Include PDPA-specific SLAs in the service agreement. Note: the data controller remains liable under s9 for the processor's security failures",
           "controls": ["processor-due-diligence-and-contracting"]
         },
         {
@@ -65,15 +65,15 @@
         },
         {
           "risk": "Complex cross-border transfer compliance",
-          "treatment": "Engage a specialist privacy consultancy or law firm to manage cross-border transfer assessments and maintain standard contractual clause documentation under s129A",
+          "treatment": "Engage a specialist privacy consultancy or law firm to manage cross-border transfer assessments and maintain standard contractual clause documentation under s129",
           "controls": ["transfer-impact-assessment"]
         }
       ],
       "constraints": [
-        "Accountability cannot be transferred — the data user remains responsible under PDPA even when processing is outsourced (s9)",
+        "Accountability cannot be transferred — the data controller remains responsible under PDPA even when processing is outsourced (s9)",
         "Transfer agreements must include PDPA-compliant data processing terms",
         "Insurance does not cover criminal penalties (imprisonment) under s128-s130",
-        "The Commissioner can still pursue the data user for the processor's failures",
+        "The Commissioner can still pursue the data controller for the processor's failures",
         "Officer liability under s133A cannot be transferred"
       ]
     },
@@ -137,9 +137,9 @@
         "  - General Principle (s6): Processing must have lawful basis and consent",
         "  - Notice and Choice Principle (s7): Written notice must be provided to data subjects",
         "  - Security Principle (s9): Adequate security measures must be implemented",
-        "  - Breach notification (s143A): 72-hour notification to Commissioner is mandatory",
+        "  - Breach notification (s12B): 72-hour notification to Commissioner is mandatory",
         "  - DPIA (s137): Must be completed for prescribed high-risk processing",
-        "  - DPO appointment (s129B): Mandatory for prescribed classes of data users",
+        "  - DPO appointment (s12A): Mandatory for prescribed classes of data controllers",
         "  - Registration (s14-s16): Data user registration with JPDP is mandatory",
         "Risk acceptance decisions must be documented with rationale and approved by the DPO and senior management",
         "Accepted risks must still be monitored and reviewed at each assessment cycle",

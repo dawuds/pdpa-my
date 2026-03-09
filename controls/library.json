@@ -1040,10 +1040,10 @@
       "domain": "data-security",
       "type": "detective",
       "layer": "technical",
-      "description": "Implement security monitoring capabilities to detect unauthorized access, unusual data access patterns, and potential personal data breaches in real time, enabling rapid response to security events before they escalate into notifiable breaches under PDPA s143A",
+      "description": "Implement security monitoring capabilities to detect unauthorized access, unusual data access patterns, and potential personal data breaches in real time, enabling rapid response to security events before they escalate into notifiable breaches under PDPA s12B",
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "keyActivities": [
         "Collect and centralize security logs from all personal data systems into a SIEM platform",
@@ -1054,7 +1054,7 @@
       ],
       "maturity": {
         "basic": "Server and firewall logs retained 90 days; IT administrator reviews logs on ad hoc basis; breach detected via user reports or system failure alerts",
-        "mature": "SIEM deployed with correlation rules for key threat scenarios; security alerts reviewed by IT security daily; documented incident response procedure; breach notification checklist aligned with s143A",
+        "mature": "SIEM deployed with correlation rules for key threat scenarios; security alerts reviewed by IT security daily; documented incident response procedure; breach notification checklist aligned with s12B",
         "advanced": "Managed SOC with 24/7 monitoring and 15-minute alert response SLA; UEBA for insider threat detection; threat intelligence integration; automated incident triage and severity classification; SOAR platform for automated containment actions; quarterly red team exercises"
       },
       "toolExamples": [
@@ -1518,10 +1518,10 @@
       "domain": "breach-response",
       "type": "detective",
       "layer": "technical",
-      "description": "Implement controls for the timely detection of personal data breaches from multiple sources (security alerts, employee reports, third-party notifications, vulnerability scans) and a rapid triage process to assess notifiability under PDPA s143A within the 72-hour window",
+      "description": "Implement controls for the timely detection of personal data breaches from multiple sources (security alerts, employee reports, third-party notifications, vulnerability scans) and a rapid triage process to assess notifiability under PDPA s12B within the 72-hour window",
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "keyActivities": [
         "Establish and publicise multiple breach reporting channels (IT helpdesk, DPO email, security hotline)",
@@ -1571,7 +1571,7 @@
       ],
       "sectorVariants": {
         "banking": {
-          "additionalRequirements": "Dual reporting to Commissioner under s143A and to BNM per incident reporting requirements",
+          "additionalRequirements": "Dual reporting to Commissioner under s12B and to BNM per incident reporting requirements",
           "relatedProvision": "cop-bank-s6"
         },
         "insurance": {
@@ -1590,9 +1590,9 @@
       "domain": "breach-response",
       "type": "operational",
       "layer": "process",
-      "description": "Implement a process to ensure mandatory notification of notifiable personal data breaches to the Personal Data Protection Commissioner within 72 hours of becoming aware, as required by PDPA s143A inserted by Amendment Act A1727, with all prescribed notification content",
+      "description": "Implement a process to ensure mandatory notification of notifiable personal data breaches to the Personal Data Protection Commissioner within 72 hours of becoming aware, as required by PDPA s12B inserted by Amendment Act A1727, with all prescribed notification content",
       "sections": [
-        "s143A"
+        "s12B"
       ],
       "keyActivities": [
         "Determine notifiability: assess whether breach is likely to result in harm to data subjects",
@@ -1603,13 +1603,13 @@
       ],
       "maturity": {
         "basic": "DPO prepares notification manually from Commissioner guidance; submitted via email or portal within 72 hours; copy filed in DPO records",
-        "mature": "Breach notification template pre-drafted against s143A requirements; notifiability assessment checklist; DPO and CISO jointly sign off on notification; legal review for significant breaches; timeline log documenting notification steps",
+        "mature": "Breach notification template pre-drafted against s12B requirements; notifiability assessment checklist; DPO and CISO jointly sign off on notification; legal review for significant breaches; timeline log documenting notification steps",
         "advanced": "Automated notification drafting from breach management platform data fields; real-time 72-hour countdown with alerts; legal and DPO review workflow integrated in platform; direct API submission to Commissioner portal where available; automated supplementary notification scheduling"
       },
       "toolExamples": [
         "OneTrust Incident Management",
         "Commissioner's MyPDPA portal",
-        "Breach notification templates aligned with s143A",
+        "Breach notification templates aligned with s12B",
         "DocuSign for internal sign-off"
       ],
       "iso27701": [
@@ -1628,7 +1628,7 @@
       "relatedStandards": [],
       "sectorVariants": {
         "banking": {
-          "additionalRequirements": "Dual reporting to Commissioner under s143A and to BNM per incident reporting requirements",
+          "additionalRequirements": "Dual reporting to Commissioner under s12B and to BNM per incident reporting requirements",
           "relatedProvision": "cop-bank-s6"
         },
         "insurance": {
@@ -1647,10 +1647,10 @@
       "domain": "breach-response",
       "type": "corrective",
       "layer": "process",
-      "description": "Implement documented containment and remediation procedures for personal data breaches by breach type, ensuring the breach is stopped, the root cause is identified and addressed, and recurrence is prevented, as part of the overall breach response obligation under PDPA s143A and s9",
+      "description": "Implement documented containment and remediation procedures for personal data breaches by breach type, ensuring the breach is stopped, the root cause is identified and addressed, and recurrence is prevented, as part of the overall breach response obligation under PDPA s12B and s9",
       "sections": [
         "s9",
-        "s143A"
+        "s12B"
       ],
       "keyActivities": [
         "Execute breach-type-specific containment playbooks (ransomware, unauthorized access, data loss, insider threat)",
@@ -1707,9 +1707,9 @@
       "domain": "breach-response",
       "type": "operational",
       "layer": "process",
-      "description": "Implement a process for notifying affected data subjects of a personal data breach where the breach is likely to result in harm to the data subjects, in compliance with PDPA s143A, including notification content, delivery methods, and timeline requirements",
+      "description": "Implement a process for notifying affected data subjects of a personal data breach where the breach is likely to result in harm to the data subjects, in compliance with PDPA s12B, including notification content, delivery methods, and timeline requirements",
       "sections": [
-        "s143A"
+        "s12B"
       ],
       "keyActivities": [
         "Assess harm likelihood and necessity of data subject notification based on breach nature and data type",
@@ -1754,9 +1754,9 @@
       "domain": "cross-border-transfer",
       "type": "detective",
       "layer": "process",
-      "description": "Identify and map all flows of personal data outside Malaysia including transfers to cloud services, SaaS platforms, offshore processors, group companies, and business partners, to ensure all cross-border transfers are subject to appropriate safeguards under PDPA s129A",
+      "description": "Identify and map all flows of personal data outside Malaysia including transfers to cloud services, SaaS platforms, offshore processors, group companies, and business partners, to ensure all cross-border transfers are subject to appropriate safeguards under PDPA s129",
       "sections": [
-        "s129A"
+        "s129"
       ],
       "keyActivities": [
         "Conduct data flow mapping to identify all cross-border transfers (including cloud, SaaS, and email)",
@@ -1794,11 +1794,11 @@
       "relatedStandards": [],
       "sectorVariants": {
         "aviation": {
-          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129; adequacy or derogation basis required",
           "relatedProvision": "cop-avi-s2"
         },
         "healthcare": {
-          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
       }
@@ -1809,16 +1809,16 @@
       "domain": "cross-border-transfer",
       "type": "preventive",
       "layer": "process",
-      "description": "Select and implement an appropriate transfer mechanism for each cross-border transfer of personal data under PDPA s129A, including adequacy determination, standard contractual clauses, binding corporate rules, explicit consent, or certification schemes, and document the selection rationale",
+      "description": "Select and implement an appropriate transfer mechanism for each cross-border transfer of personal data under PDPA s129, including adequacy determination, standard contractual clauses, binding corporate rules, explicit consent, or certification schemes, and document the selection rationale",
       "sections": [
-        "s129A"
+        "s129"
       ],
       "keyActivities": [
         "Determine whether the recipient country has an adequacy determination from the Malaysian Commissioner",
         "Where no adequacy exists, select appropriate alternative mechanism (SCCs, BCRs, consent, certification)",
         "Execute standard contractual clauses or other contractual safeguards before initiating transfer",
         "Obtain DPO approval for each transfer mechanism selection and document rationale",
-        "Register transfer mechanisms with the Commissioner where required under s129A"
+        "Register transfer mechanisms with the Commissioner where required under s129"
       ],
       "maturity": {
         "basic": "DPO manually checks approved country list before authorising transfers; SCCs executed for major non-approved country transfers; limited documentation of mechanism selection rationale",
@@ -1850,11 +1850,11 @@
       "relatedStandards": [],
       "sectorVariants": {
         "aviation": {
-          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129; adequacy or derogation basis required",
           "relatedProvision": "cop-avi-s2"
         },
         "healthcare": {
-          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
       }
@@ -1867,7 +1867,7 @@
       "layer": "process",
       "description": "Conduct Transfer Impact Assessments for transfers to third countries without adequacy determinations to assess whether the chosen transfer mechanism can effectively protect personal data in the destination country's legal environment, particularly assessing government access to data",
       "sections": [
-        "s129A"
+        "s129"
       ],
       "keyActivities": [
         "Assess the destination country's data protection law, government access powers, and enforcement environment",
@@ -1905,11 +1905,11 @@
       "relatedStandards": [],
       "sectorVariants": {
         "aviation": {
-          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129; adequacy or derogation basis required",
           "relatedProvision": "cop-avi-s2"
         },
         "healthcare": {
-          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
       }
@@ -1922,7 +1922,7 @@
       "layer": "process",
       "description": "Monitor existing cross-border transfer arrangements on an ongoing basis to ensure continued adequacy of transfer mechanisms, detect changes in the legal environment of destination countries, and identify new or unauthorized transfers requiring assessment and authorization",
       "sections": [
-        "s129A"
+        "s129"
       ],
       "keyActivities": [
         "Review cross-border transfer register quarterly for accuracy and completeness",
@@ -1960,11 +1960,11 @@
       "relatedStandards": [],
       "sectorVariants": {
         "aviation": {
-          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129A; adequacy or derogation basis required",
+          "additionalRequirements": "PNR/API transfers to foreign authorities require documentation under s129; adequacy or derogation basis required",
           "relatedProvision": "cop-avi-s2"
         },
         "healthcare": {
-          "additionalRequirements": "Overseas telehealth providers must have s129A-compliant transfer mechanisms",
+          "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
       }
@@ -2035,7 +2035,7 @@
       "domain": "third-party-management",
       "type": "preventive",
       "layer": "process",
-      "description": "Ensure all data processors are subject to a binding data processing agreement (DPA) containing the mandatory provisions required to ensure the processor processes personal data only on the data user's instructions and implements adequate security measures",
+      "description": "Ensure all data processors are subject to a binding data processing agreement (DPA) containing the mandatory provisions required to ensure the processor processes personal data only on the data controller's instructions and implements adequate security measures",
       "sections": [
         "s9"
       ],
@@ -2209,12 +2209,12 @@
       "domain": "governance-accountability",
       "type": "governance",
       "layer": "governance",
-      "description": "Appoint a qualified Data Protection Officer (DPO) as required under PDPA s129B (inserted by Amendment Act A1727), register the DPO with the Commissioner, and ensure the DPO performs all required functions including advising on compliance, monitoring implementation, and acting as contact point for data subjects and the Commissioner",
+      "description": "Appoint a qualified Data Protection Officer (DPO) as required under PDPA s12A (inserted by Amendment Act A1727), register the DPO with the Commissioner, and ensure the DPO performs all required functions including advising on compliance, monitoring implementation, and acting as contact point for data subjects and the Commissioner",
       "sections": [
-        "s129B"
+        "s12A"
       ],
       "keyActivities": [
-        "Assess mandatory DPO appointment obligation under s129B criteria and DPO Guideline 2025",
+        "Assess mandatory DPO appointment obligation under s12A criteria and DPO Guideline 2025",
         "Select and appoint DPO meeting minimum qualification requirements",
         "Register appointed DPO with the Commissioner within prescribed period",
         "Provide DPO with sufficient resources, authority, and independence to perform functions",
@@ -2493,7 +2493,7 @@
       "description": "Establish regular reporting of data protection compliance status, key risks, incidents, and emerging obligations to senior management and the board, ensuring leadership accountability for PDPA compliance and informed decision-making on data protection investment",
       "sections": [
         "s5",
-        "s129B"
+        "s12A"
       ],
       "keyActivities": [
         "Prepare and present DPO annual report to board covering compliance status, incidents, and recommendations",
@@ -2537,11 +2537,11 @@
   "registration-compliance": [
     {
       "slug": "data-user-registration-management",
-      "name": "Data User Registration Management",
+      "name": "Data Controller Registration Management",
       "domain": "registration-compliance",
       "type": "operational",
       "layer": "process",
-      "description": "Manage the organization's data user registration with the Personal Data Protection Commissioner under PDPA s13-s16, including initial registration, timely renewal, notification of material changes, and DPO registration, to ensure the organization operates with valid registration at all times",
+      "description": "Manage the organization's data controller registration with the Personal Data Protection Commissioner under PDPA s13-s16, including initial registration, timely renewal, notification of material changes, and DPO registration, to ensure the organization operates with valid registration at all times",
       "sections": [
         "s13",
         "s14",
@@ -2549,11 +2549,11 @@
         "s16"
       ],
       "keyActivities": [
-        "Determine registration obligation and class under the Personal Data Protection (Class of Data Users) Order 2013",
-        "Apply for registration before commencing processing activities as a registered class data user",
+        "Determine registration obligation and class under the Personal Data Protection (Class of Data Controllers) Order 2013",
+        "Apply for registration before commencing processing activities as a registered class data controller",
         "Monitor registration expiry date and submit renewal application before expiry",
         "Notify Commissioner of material changes to registered particulars within prescribed period",
-        "Register DPO with Commissioner as required under s129B"
+        "Register DPO with Commissioner as required under s12A"
       ],
       "maturity": {
         "basic": "DPO tracks registration renewal date manually; renewal submitted annually; certificate stored in compliance files; material changes notified when identified",

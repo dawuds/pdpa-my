@@ -1,6 +1,6 @@
 {
   "id": "class-of-data-users-amendment-2016",
-  "title": "Personal Data Protection (Class of Data Users) (Amendment) Order 2016",
+  "title": "Personal Data Protection (Class of Data Controllers) (Amendment) Order 2016",
   "type": "order",
   "reference": "P.U.(A) 27/2016",
   "gazetteDate": "2016-01-28",
@@ -9,13 +9,13 @@
   "enablingSection": "s13(3)",
   "parentAct": "Act 709",
   "parentInstrument": "class-of-data-users-order-2013",
-  "summary": "This Order amends the Personal Data Protection (Class of Data Users) Order 2013 to clarify the descriptions of certain prescribed classes of data users and to ensure consistency with developments in sector-specific licensing regimes. The amendments do not add or remove any of the 13 classes but provide additional precision in the class descriptions to reduce uncertainty about the scope of mandatory registration obligations.",
+  "summary": "This Order amends the Personal Data Protection (Class of Data Controllers) Order 2013 to clarify the descriptions of certain prescribed classes of data controllers and to ensure consistency with developments in sector-specific licensing regimes. The amendments do not add or remove any of the 13 classes but provide additional precision in the class descriptions to reduce uncertainty about the scope of mandatory registration obligations.",
   "provisions": [
     {
       "id": "cdu-amend-1",
       "article": "art1",
       "title": "Citation and Commencement",
-      "content": "This Order may be cited as the Personal Data Protection (Class of Data Users) (Amendment) Order 2016 and shall come into force on 29 January 2016.",
+      "content": "This Order may be cited as the Personal Data Protection (Class of Data Controllers) (Amendment) Order 2016 and shall come into force on 29 January 2016.",
       "requirements": []
     },
     {
@@ -53,7 +53,7 @@
       "id": "cdu-amend-5",
       "article": "art5",
       "title": "Transitional Provisions",
-      "content": "Any data user who falls within a class of data users by reason of the amendments made by this Order shall have 6 months from the commencement of this Order to apply for registration with the Commissioner. During the transitional period, such a data user may continue to process personal data without being registered, provided that it is otherwise in compliance with the Act.",
+      "content": "Any data controller who falls within a class of data controllers by reason of the amendments made by this Order shall have 6 months from the commencement of this Order to apply for registration with the Commissioner. During the transitional period, such a data controller may continue to process personal data without being registered, provided that it is otherwise in compliance with the Act.",
       "requirements": [
         "Transitional period: 29 January 2016 to 29 July 2016",
         "Processing during the transitional period does not constitute an offence under s5(2)",
@@ -62,7 +62,7 @@
     }
   ],
   "keywords": [
-    "amendment", "class of data users", "payment system operators", "e-hailing", "transport",
+    "amendment", "class of data controllers", "payment system operators", "e-hailing", "transport",
     "licensed valuers", "transitional provisions", "registration"
   ]
 }

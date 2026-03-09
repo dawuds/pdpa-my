@@ -41,7 +41,7 @@
 
 *Describe the intent of this procedure and the regulatory obligation it fulfills. Reference the specific Act and sections that give rise to this obligation.*
 
-This procedure establishes the process by which [Organization Name] ("the Organization") handles requests from data subjects to receive their personal data in a structured, commonly used, and machine-readable format, and — where technically and legally feasible — to have that data transmitted directly to another data user. The procedure supports the Organization's obligations under the **Personal Data Protection Act 2010 (PDPA)**, in particular Sections 30 and 31, and aligns with emerging data portability rights within Malaysia's evolving data governance landscape.
+This procedure establishes the process by which [Organization Name] ("the Organization") handles requests from data subjects to receive their personal data in a structured, commonly used, and machine-readable format, and — where technically and legally feasible — to have that data transmitted directly to another data controller. The procedure supports the Organization's obligations under the **Personal Data Protection Act 2010 (PDPA)**, in particular Sections 30 and 31, and aligns with emerging data portability rights within Malaysia's evolving data governance landscape.
 
 This procedure ensures that data portability requests are handled:
 
@@ -103,12 +103,12 @@ The following are outside the scope of this procedure:
 | Term | Definition |
 |---|---|
 | **Data Subject** | An individual who is the subject of personal data processed by the Organization, as defined under s.4 of the PDPA 2010. |
-| **Data User** | [Organization Name], being the person who either alone or jointly with another person processes personal data for the purposes of the data user's business. |
-| **Data Portability** | The right of a data subject to receive personal data they have provided to a data user in a structured, commonly used, machine-readable format, and to transmit that data to another data user. |
+| **Data Controller** | [Organization Name], being the person who either alone or jointly with another person processes personal data for the purposes of the data controller's business. |
+| **Data Portability** | The right of a data subject to receive personal data they have provided to a data controller in a structured, commonly used, machine-readable format, and to transmit that data to another data controller. |
 | **Portable Data** | Personal data that is (a) provided directly by the data subject, and (b) processed based on consent or contract, and (c) processed by automated means. |
 | **Machine-Readable Format** | A structured data format that can be automatically read and processed by software applications, including but not limited to CSV, JSON, and XML. |
 | **Authorized Representative** | A person legally authorized to act on behalf of a data subject, evidenced by a written letter of authorization, power of attorney, or equivalent document. |
-| **Third-Party Recipient** | Another data user or organization to whom the data subject requests their portable data be transmitted directly. |
+| **Third-Party Recipient** | Another data controller or organization to whom the data subject requests their portable data be transmitted directly. |
 | **DPO** | Data Protection Officer of [Organization Name]. |
 | **PDPA** | Personal Data Protection Act 2010 (Act 709), Malaysia. |
 | **NACSA** | National Cyber Security Agency, Malaysia. |
@@ -348,7 +348,7 @@ All exported data packages shall be encrypted using the following minimum standa
 
 ### 9.3 Third-Party Direct Transfer Procedure
 
-Where a data subject requests direct transmission of their portable data to a named third-party data user:
+Where a data subject requests direct transmission of their portable data to a named third-party data controller:
 
 1. **Verify the third-party identity:** Obtain the full legal name, registration number, and privacy contact of the receiving organization;
 2. **Confirm data subject consent:** Obtain explicit, documented consent from the data subject authorizing direct transfer to the named party;
@@ -381,7 +381,7 @@ The following categories of data are excluded from data portability responses an
 | Exclusion Category | Description | Justification |
 |---|---|---|
 | **Derived / Inferred Data** | Data generated through the Organization's own analysis, modelling, or inference (e.g., credit scores, risk ratings, propensity scores, behavioral segments) | Not "provided by" the data subject; represents proprietary analytical output |
-| **Third-Party Sourced Data** | Data obtained from external sources such as credit bureaus (e.g., CTOS, CCRIS), land registries, government databases | The Organization is not the primary data user for this data; re-transmission may breach third-party data agreements |
+| **Third-Party Sourced Data** | Data obtained from external sources such as credit bureaus (e.g., CTOS, CCRIS), land registries, government databases | The Organization is not the primary data controller for this data; re-transmission may breach third-party data agreements |
 | **Confidential Business Information** | Internal notes, assessments, fraud flags, AML/CFT markers, internal classifications | Disclosure may compromise regulatory obligations, fraud detection capabilities, or legal proceedings |
 | **Data Relating to Third Parties** | Any data within a record that identifies or relates to a person other than the requesting data subject | Portability of such data would infringe the privacy rights of third parties |
 | **Legally Privileged Information** | Data subject to legal professional privilege or regulatory reporting obligations | Subject to legal hold or non-disclosure requirements |

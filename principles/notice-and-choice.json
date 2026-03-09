@@ -2,7 +2,7 @@
   "id": "notice-and-choice",
   "section": 7,
   "name": "Notice and Choice Principle",
-  "summary": "A data user shall, before collecting personal data about a data subject, inform the data subject in writing of the matters set out in Section 7(1) and provide the data subject with a choice to decide whether to allow processing of the data for purposes beyond those directly required for the transaction. This principle underpins the transparency and autonomy of data subjects under the PDPA.",
+  "summary": "A data controller shall, before collecting personal data about a data subject, inform the data subject in writing of the matters set out in Section 7(1) and provide the data subject with a choice to decide whether to allow processing of the data for purposes beyond those directly required for the transaction. This principle underpins the transparency and autonomy of data subjects under the PDPA.",
   "obligations": [
     {
       "id": "notice-O1",
@@ -52,7 +52,7 @@
       "id": "notice-X1",
       "exception": "Notice is not required where it would involve a disproportionate effort relative to the purposes for which the data was collected",
       "basis": "Section 7(4)(a)",
-      "conditions": "The data user must document why providing notice would involve disproportionate effort; this exception cannot be used merely because notice would be inconvenient; it is most applicable to processing of publicly available data or historical records"
+      "conditions": "The data controller must document why providing notice would involve disproportionate effort; this exception cannot be used merely because notice would be inconvenient; it is most applicable to processing of publicly available data or historical records"
     },
     {
       "id": "notice-X2",
@@ -64,7 +64,7 @@
       "id": "notice-X3",
       "exception": "Notice is not required where the data subject already has the information described in Section 7(1)",
       "basis": "Section 7(4)(c)",
-      "conditions": "The data user bears the burden of demonstrating that the data subject had actual prior knowledge of all the required notice elements; a general awareness of data processing is insufficient"
+      "conditions": "The data controller bears the burden of demonstrating that the data subject had actual prior knowledge of all the required notice elements; a general awareness of data processing is insufficient"
     }
   ],
   "practicalGuidance": "Organizations should develop a layered privacy notice strategy: a short notice at the point of collection summarising key information, with a link or reference to a comprehensive privacy policy containing full details. The notice must be written in plain language accessible to the target audience — legalese and overly technical language undermines transparency. Both a Bahasa Malaysia and an English version are legally required; translation must be accurate and the content of both versions must be substantively identical. For online data collection, a link to the privacy notice embedded in a registration or checkout form is the minimum; the data subject should be required to affirmatively acknowledge receipt. Where data is collected indirectly (e.g., from a third party), notice must still be given to the data subject as soon as reasonably practicable after collection. The 2024 Amendment tightened the notice requirements by making it mandatory to disclose whether data provision is obligatory or voluntary, and to explain the consequences of non-provision.",

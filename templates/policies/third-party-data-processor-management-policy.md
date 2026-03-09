@@ -49,7 +49,7 @@
 
 *Describe why this policy exists, the regulatory drivers, and what it is designed to achieve for the organization.*
 
-This policy establishes the framework and requirements governing the selection, engagement, ongoing oversight, and offboarding of third parties and data processors who process personal data on behalf of [Organization Name] (hereinafter referred to as "the Organization"). It ensures that the Organization meets its obligations as a data user under the **Personal Data Protection Act 2010 (PDPA)**, particularly with respect to:
+This policy establishes the framework and requirements governing the selection, engagement, ongoing oversight, and offboarding of third parties and data processors who process personal data on behalf of [Organization Name] (hereinafter referred to as "the Organization"). It ensures that the Organization meets its obligations as a data controller under the **Personal Data Protection Act 2010 (PDPA)**, particularly with respect to:
 
 - The instruction and control of data processors in accordance with **PDPA Section 9**;
 - The lawful transfer of personal data outside Malaysia by or through processors under **PDPA Section 34**;
@@ -73,7 +73,7 @@ This policy applies to:
 
 **Out of Scope:**
 
-- Third parties engaged solely in their capacity as independent data users (i.e., parties processing data for their own purposes under their own authority);
+- Third parties engaged solely in their capacity as independent data controllers (i.e., parties processing data for their own purposes under their own authority);
 - Publicly available data sources where no personal data is disclosed by the Organization;
 - [Any other exclusions specific to Organization Name].
 
@@ -103,14 +103,14 @@ For the purposes of this policy, the following definitions shall apply:
 
 | Term | Definition |
 |---|---|
-| **Data User** | [Organization Name], in its capacity as a person who either alone or jointly or in common with other persons processes any personal data or has control over or authorises the processing of any personal data, as defined under PDPA Section 4. |
-| **Data Processor** | Any person, other than an employee of the data user, who processes personal data solely on behalf of the data user, and does not process personal data for any of the data processor's own purposes, as defined under PDPA Section 4. |
+| **Data Controller** | [Organization Name], in its capacity as a person who either alone or jointly or in common with other persons processes any personal data or has control over or authorises the processing of any personal data, as defined under PDPA Section 4. |
+| **Data Processor** | Any person, other than an employee of the data controller, who processes personal data solely on behalf of the data controller, and does not process personal data for any of the data processor's own purposes, as defined under PDPA Section 4. |
 | **Third Party** | Any external party engaged by the Organization, including vendors, suppliers, contractors, agents, and subcontractors, who may have access to or process personal data held by the Organization. |
 | **Personal Data** | Any information in respect of commercial transactions that is being processed wholly or partly by means of equipment operating automatically in response to instructions given for that purpose, processed otherwise than by such means that forms part of a relevant filing system, or is recorded with the intention that it should be so processed, as defined under PDPA Section 4. |
 | **Sensitive Personal Data** | Personal data consisting of information as to the physical or mental health or condition of a data subject, his political opinions, his religious beliefs or other beliefs of a similar nature, the commission or alleged commission by him of any offence, or any other personal data as the Minister may determine by order published in the Gazette, as per PDPA Section 4. |
 | **Processing** | Collecting, recording, holding, storing, adapting, altering, retrieving, using, disclosing, transferring, transmitting, publishing, correcting, erasing, or destroying personal data. |
-| **Data Processing Agreement (DPA)** | A legally binding contract between the Organization (as data user) and a data processor setting out the terms, conditions, and obligations governing the processing of personal data on the Organization's behalf. |
-| **Subprocessor** | A third party engaged by a data processor to carry out specific processing activities on behalf of the data user. |
+| **Data Processing Agreement (DPA)** | A legally binding contract between the Organization (as data controller) and a data processor setting out the terms, conditions, and obligations governing the processing of personal data on the Organization's behalf. |
+| **Subprocessor** | A third party engaged by a data processor to carry out specific processing activities on behalf of the data controller. |
 | **Cross-Border Transfer** | Any transfer of personal data to a place outside Malaysia. |
 | **Due Diligence** | The pre-engagement assessment process conducted by the Organization to evaluate the suitability, capability, and compliance posture of a prospective data processor before entering into a processing relationship. |
 | **Risk Tier** | A classification assigned to a third party or data processor based on the nature, volume, and sensitivity of personal data they process and the potential impact of a data breach or non-compliance event. |
@@ -124,7 +124,7 @@ For the purposes of this policy, the following definitions shall apply:
 
 *State the Organization's overarching commitment and position regarding third-party and data processor management.*
 
-[Organization Name] is committed to ensuring that personal data in its custody is protected at all times, including when processed by third parties and data processors acting on its behalf. The Organization recognises that, as the data user, it retains full legal accountability for the lawful and secure processing of personal data, regardless of whether such processing is carried out by internal staff or external processors.
+[Organization Name] is committed to ensuring that personal data in its custody is protected at all times, including when processed by third parties and data processors acting on its behalf. The Organization recognises that, as the data controller, it retains full legal accountability for the lawful and secure processing of personal data, regardless of whether such processing is carried out by internal staff or external processors.
 
 Accordingly, [Organization Name] shall:
 
@@ -273,7 +273,7 @@ The completed Due Diligence Assessment Report shall be retained in the **Third-P
 
 ### 6.1 Requirement to Execute a DPA
 
-Consistent with **PDPA Section 9**, [Organization Name] shall ensure that all data processors process personal data only on the basis of a written contract or legally binding act that is enforceable as between the data user and processor. No processing of personal data by a third party shall be permitted in the absence of a fully executed DPA.
+Consistent with **PDPA Section 9**, [Organization Name] shall ensure that all data processors process personal data only on the basis of a written contract or legally binding act that is enforceable as between the data controller and processor. No processing of personal data by a third party shall be permitted in the absence of a fully executed DPA.
 
 The DPA shall be signed by an authorized representative of the processor prior to, and as a condition of, commencement of any processing activities. The DPA template shall be maintained by the DPO and reviewed annually.
 
@@ -287,7 +287,7 @@ All DPAs executed by [Organization Name] shall contain, at minimum, the followin
 
 - A clear description of the subject matter, nature, purpose, and duration of the processing;
 - The type of personal data to be processed and the categories of data subjects;
-- The rights and obligations of the Organization as data user.
+- The rights and obligations of the Organization as data controller.
 
 #### 6.2.2 Processing Instructions
 
@@ -362,7 +362,7 @@ For Tier 1 — Critical and Tier 2 — High processors, the DPA shall additional
 
 ## 7. Audit and Inspection Rights Over Processors
 
-*This section defines the Organization's rights and procedures for auditing data processors to verify their compliance with the DPA and applicable data protection obligations. Effective audit oversight is a key mechanism for the Organization to fulfil its accountability obligations as a data user.*
+*This section defines the Organization's rights and procedures for auditing data processors to verify their compliance with the DPA and applicable data protection obligations. Effective audit oversight is a key mechanism for the Organization to fulfil its accountability obligations as a data controller.*
 
 ### 7.1 Right to Audit
 
@@ -438,7 +438,7 @@ An unscheduled audit may be initiated by the DPO at any time upon occurrence of 
 
 ## 8. Subprocessor Authorization and Notification Requirements
 
-*This section governs the Organization's approach to subprocessors — third parties engaged by the Organization's data processors to carry out specific processing activities. The Organization, as data user, retains accountability for subprocessor compliance.*
+*This section governs the Organization's approach to subprocessors — third parties engaged by the Organization's data processors to carry out specific processing activities. The Organization, as data controller, retains accountability for subprocessor compliance.*
 
 ### 8.1 General Authorization Requirement
 
@@ -531,8 +531,8 @@ The Organization recognises the following lawful bases for cross-border transfer
 |---|---|---|
 | **Whitelist Jurisdiction** | Transfer to a country or territory specified in the Minister's order as providing adequate protection | PDPA Section 34(1) |
 | **Data Subject Consent** | The data subject has given consent to the proposed transfer, with appropriate information provided | PDPA Section 34(2)(a) |
-| **Contractual Necessity** | Transfer is necessary for the performance of a contract between the data subject and the data user | PDPA Section 34(2)(b) |
-| **Data User Instruction** | Transfer is made on the instructions of the data user and is necessary for a contract between the data user and a third party | PDPA Section 34(2)(c) |
+| **Contractual Necessity** | Transfer is necessary for the performance of a contract between the data subject and the data controller | PDPA Section 34(2)(b) |
+| **Data Controller Instruction** | Transfer is made on the instructions of the data controller and is necessary for a contract between the data controller and a third party | PDPA Section 34(2)(c) |
 | **Adequate Safeguards** | Transfer is subject to adequate safeguards as may be determined by the Commissioner | PDPA Section 34(2)(d) — refer to current JPDP guidance |
 | **[Other basis per JPDP guidance]** | [Description] | [Reference] |
 
@@ -894,10 +894,10 @@ This policy shall be reviewed:
 | Reference | Description |
 |---|---|
 | **Personal Data Protection Act 2010 (Act 709)** | Principal legislation governing personal data protection in Malaysia |
-| **PDPA Section 9** | Obligations of data users with respect to data processors; requirement for written contract governing processor activities; processor's obligation to act only on data user instructions |
+| **PDPA Section 9** | Obligations of data controllers with respect to data processors; requirement for written contract governing processor activities; processor's obligation to act only on data controller instructions |
 | **PDPA Section 34** | Restrictions on the transfer of personal data to places outside Malaysia; conditions for lawful cross-border transfers |
 | **PDPA Section 129A** | [Insert description of the specific provision — e.g., accountability obligations, enforcement, or amended provision as per current PDPA text / amendment in force] |
-| **Personal Data Protection (Class of Data Users) Order [Year]** | Classification of data users subject to registration requirements |
+| **Personal Data Protection (Class of Data Controllers) Order [Year]** | Classification of data controllers subject to registration requirements |
 | **Personal Data Protection Regulations 2013** | Subsidiary regulations governing implementation of the PDPA |
 | **[Ministerial Order on Cross-Border Transfer Whitelist]** | List of countries to which personal data may be transferred under PDPA Section 34 |
 

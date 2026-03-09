@@ -9,11 +9,11 @@
       "title": "Guideline on Data Breach Notification 2025",
       "shortTitle": "DBN Guideline 2025",
       "effectiveDate": "2025-06-01",
-      "enablingSection": "s143A",
+      "enablingSection": "s12B",
       "status": "in-force",
       "subject": "Mandatory notification of notifiable data breaches to the Commissioner and affected data subjects",
       "filePath": "supplements/guidelines/dbn-data-breach-notification.json",
-      "relatedPenalty": "pen-s143A-5",
+      "relatedPenalty": "pen-s12B-5",
       "supersedes": null
     },
     {
@@ -21,7 +21,7 @@
       "title": "Guideline on Data Protection Officer 2025",
       "shortTitle": "DPO Guideline 2025",
       "effectiveDate": "2025-06-01",
-      "enablingSection": "s129B",
+      "enablingSection": "s12A",
       "status": "in-force",
       "subject": "Mandatory appointment, qualifications, responsibilities, and registration of Data Protection Officers",
       "filePath": "supplements/guidelines/dpo-data-protection-officer.json",
@@ -33,11 +33,11 @@
       "title": "Guideline on Cross-Border Personal Data Transfer 2025",
       "shortTitle": "CBPDT Guideline 2025",
       "effectiveDate": "2025-06-01",
-      "enablingSection": "s129A",
+      "enablingSection": "s129",
       "status": "in-force",
       "subject": "Transfer mechanisms, adequacy determinations, appropriate safeguards, and derogations for cross-border personal data transfers",
       "filePath": "supplements/guidelines/cbpdt-cross-border-transfer.json",
-      "relatedPenalty": "pen-s129A",
+      "relatedPenalty": "pen-s129",
       "supersedes": "cbpdt-guideline-2013"
     },
     {

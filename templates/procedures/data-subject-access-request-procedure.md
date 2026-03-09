@@ -56,7 +56,7 @@
 
 *Describe the intent of this procedure and the regulatory obligation it fulfils. Reference the specific PDPA sections and explain why the procedure is necessary for the organisation.*
 
-This procedure establishes the formal process by which [Organization Name] receives, validates, processes, and responds to Data Subject Access Requests (DSARs) submitted by individuals whose personal data is processed by [Organization Name] in its capacity as a data user. The procedure ensures [Organization Name] meets its statutory obligations under the **Personal Data Protection Act 2010 (PDPA)**, specifically:
+This procedure establishes the formal process by which [Organization Name] receives, validates, processes, and responds to Data Subject Access Requests (DSARs) submitted by individuals whose personal data is processed by [Organization Name] in its capacity as a data controller. The procedure ensures [Organization Name] meets its statutory obligations under the **Personal Data Protection Act 2010 (PDPA)**, specifically:
 
 - **Section 30** — Right of access to personal data
 - **Section 31** — Right to correct personal data
@@ -100,7 +100,7 @@ This procedure applies to:
 | Term | Definition |
 |---|---|
 | **Data Subject** | An individual who is the subject of personal data processed by [Organization Name] as defined under PDPA s.4 |
-| **Data User** | [Organization Name] in its capacity as an entity that processes personal data either alone or jointly with others, as defined under PDPA s.4 |
+| **Data Controller** | [Organization Name] in its capacity as an entity that processes personal data either alone or jointly with others, as defined under PDPA s.4 |
 | **Data Processor** | A third party that processes personal data on behalf of [Organization Name] |
 | **Personal Data** | Any information in respect of commercial transactions that relates directly or indirectly to a data subject who is identified or identifiable from that information, as defined under PDPA s.4 |
 | **Sensitive Personal Data** | Personal data consisting of information relating to physical or mental health, political opinions, religious beliefs, commission or alleged commission of offences, or any other personal data as the Minister may determine, per PDPA s.4 |
@@ -135,7 +135,7 @@ This procedure applies to:
 
 | Legislation | Section | Obligation |
 |---|---|---|
-| Personal Data Protection Act 2010 | s.30(1) | Data subject right to access personal data held by data user |
+| Personal Data Protection Act 2010 | s.30(1) | Data subject right to access personal data held by data controller |
 | Personal Data Protection Act 2010 | s.30(2) | Manner and form of access to be prescribed by regulations |
 | Personal Data Protection Act 2010 | s.30(3) | Data user to respond within prescribed period |
 | Personal Data Protection Act 2010 | s.31 | Right to correction of inaccurate personal data |
@@ -148,7 +148,7 @@ This procedure applies to:
 | Instrument | Relevance |
 |---|---|
 | Personal Data Protection Regulations 2013 | Prescribed forms, period, and fee for access requests |
-| Personal Data Protection (Class of Data Users) Order 2013 | Applicable class of data user for financial services |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Applicable class of data controller for financial services |
 | Personal Data Protection Standards 2015 | Security, retention, and processing standards applicable to personal data |
 
 ### 3.3 Related Internal Policies
@@ -439,10 +439,10 @@ The DPO shall conduct a formal exemption review for each DSAR after search resul
 | **Prevention, Detection, or Investigation of Crime** | s.32(1)(b) | Disclosure would prejudice the prevention, detection, investigation, or prosecution of any offence | [Legal Counsel] + [Compliance Officer] |
 | **Assessment or Collection of Tax or Duty** | s.32(1)(c) | Disclosure would prejudice tax or duty assessment or collection | [Legal Counsel] |
 | **Estimation of Government Revenue or Expenditure** | s.32(1)(d) | Disclosure would prejudice government financial functions | [Legal Counsel] |
-| **Ongoing Negotiations** | s.32(1)(e) | Data consists of records of the data user's intentions in relation to negotiations being carried on | [Legal Counsel] |
+| **Ongoing Negotiations** | s.32(1)(e) | Data consists of records of the data controller's intentions in relation to negotiations being carried on | [Legal Counsel] |
 | **Legal Privilege** | s.32(1)(f) | Data consists of information in respect of which legal professional privilege could be maintained in legal proceedings | [Legal Counsel] |
 | **Third-Party Rights** | s.32(1)(g) | Disclosure would involve disclosing information relating to another individual who has not consented and it is not reasonable to disclose without consent | [DPO] |
-| **Confidential References** | s.32(1)(h) | Data consists of a confidential reference given to the data user in connection with employment, supply of service, or education | [DPO] + [HR / Relevant Business Unit] |
+| **Confidential References** | s.32(1)(h) | Data consists of a confidential reference given to the data controller in connection with employment, supply of service, or education | [DPO] + [HR / Relevant Business Unit] |
 | **Regulatory Functions** | s.32(1)(i) | Disclosure would be likely to prejudice the discharge of regulatory or supervisory functions | [Legal Counsel] + [Compliance Officer] |
 
 ### 8.3 Partial Disclosure
@@ -550,7 +550,7 @@ Before dispatching the response, the DPO shall complete the following checks:
 
 ## 10. Prescribed Fees and Fee Waiver Considerations
 
-*PDPA s.33 permits data users to impose a prescribed fee for processing access requests. This section defines [Organization Name]'s fee policy, payment process, and circumstances in which fees may be waived.*
+*PDPA s.33 permits data controllers to impose a prescribed fee for processing access requests. This section defines [Organization Name]'s fee policy, payment process, and circumstances in which fees may be waived.*
 
 ### 10.1 Prescribed Fee
 
@@ -833,8 +833,8 @@ This procedure shall be reviewed **annually** by the DPO in consultation with Le
 | PDPA s.32 | Grounds for limiting or refusing access to personal data |
 | PDPA s.33 | Prescribed fee for data access requests |
 | Personal Data Protection Regulations 2013 | Prescribed forms, periods, and fees for DSAR processing |
-| Personal Data Protection (Class of Data Users) Order 2013 | Applicable data user classifications including financial services sector |
-| Personal Data Protection Standards 2015 | Processing standards applicable to data users |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Applicable data controller classifications including financial services sector |
+| Personal Data Protection Standards 2015 | Processing standards applicable to data controllers |
 
 ### 16.2 Regulatory Guidance
 

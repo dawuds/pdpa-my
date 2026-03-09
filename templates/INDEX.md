@@ -10,7 +10,7 @@
 |---|----------|-------|-----------|--------|
 | 1 | [Data Processing Agreement (DPA)](./contracts/data-processing-agreement.md) | Legal / Data Protection Officer | Yes | Upon engagement and material change |
 | 2 | [Data Sharing Agreement](./contracts/data-sharing-agreement.md) | Legal / Data Protection Officer | No | Upon each new sharing arrangement |
-| 3 | [Joint Data User Agreement](./contracts/joint-data-user-agreement.md) | Legal / Data Protection Officer | No | Upon establishment of joint processing arrangement |
+| 3 | [Joint Data Controller Agreement](./contracts/joint-data-user-agreement.md) | Legal / Data Protection Officer | No | Upon establishment of joint processing arrangement |
 | 4 | [Non-Disclosure Agreement (Data Protection)](./contracts/non-disclosure-agreement-data-protection.md) | Legal / Human Resources / Procurement | Yes | Template reviewed annually; executed per engagement |
 | 5 | [Standard Contractual Clauses (Cross-Border Data Transfer)](./contracts/standard-contractual-clauses-cross-border.md) | Legal / Data Protection Officer | No | Upon each new cross-border transfer arrangement |
 
@@ -82,7 +82,7 @@
 | 1 | [Consent Register](./registers/consent-register.md) | Data Protection Officer | Yes | Continuous |
 | 2 | [Cross-Border Transfer Register](./registers/cross-border-transfer-register.md) | Data Protection Officer | Yes | Quarterly / Upon new transfer arrangements |
 | 3 | [Data Breach Register](./registers/data-breach-register.md) | Data Protection Officer / Chief Information Security Officer | Yes | Continuous |
-| 4 | [Data User Registration Record](./registers/data-user-registration-record.md) | Data Protection Officer / Legal / Company Secretary | Yes | Annual / Upon material change |
+| 4 | [Data Controller Registration Record](./registers/data-user-registration-record.md) | Data Protection Officer / Legal / Company Secretary | Yes | Annual / Upon material change |
 | 5 | [Data Subject Access Request (DSAR) Log](./registers/dsar-log.md) | Data Protection Officer | Yes | Continuous |
 | 6 | [Personal Data Inventory / Record of Processing Activities (ROPA)](./registers/personal-data-inventory-ropa.md) | Data Protection Officer | Yes | Continuous / Quarterly review |
 | 7 | [Third-Party and Data Processor Register](./registers/third-party-data-processor-register.md) | Data Protection Officer / Procurement | Yes | Continuous / Annual review |

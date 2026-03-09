@@ -79,13 +79,13 @@ This register is maintained on a **continuous basis**. Records must be created o
 |---|---|---|
 | Personal Data Protection Act 2010 (Act 709) | Malaysia | ss. 6, 7, 38, 40 |
 | Personal Data Protection Regulations 2013 | Malaysia | All applicable regulations |
-| Personal Data Protection (Class of Data Users) Order 2013 | Malaysia | Applicable class of data user |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Malaysia | Applicable class of data controller |
 
 ### 2.2 Key Statutory Requirements
 
 **Section 6 — Consent Principle**
 
-*Section 6 of the PDPA provides that a data user shall not process personal data about a data subject unless the data subject has given his or her consent to the processing. This register directly evidences compliance with this requirement by recording the fact, scope, and circumstances of each consent.*
+*Section 6 of the PDPA provides that a data controller shall not process personal data about a data subject unless the data subject has given his or her consent to the processing. This register directly evidences compliance with this requirement by recording the fact, scope, and circumstances of each consent.*
 
 - Consent must be given freely, specifically, and informedly.
 - Consent must be obtained before or at the point of collection unless an exemption applies under the Second Schedule of the PDPA.
@@ -93,7 +93,7 @@ This register is maintained on a **continuous basis**. Records must be created o
 
 **Section 7 — Notice and Choice Principle**
 
-*Section 7 requires data users to inform data subjects, at or before the time of collection, of the purposes for which their personal data is being collected and processed. The notice version recorded in this register evidences that adequate notice was provided.*
+*Section 7 requires data controllers to inform data subjects, at or before the time of collection, of the purposes for which their personal data is being collected and processed. The notice version recorded in this register evidences that adequate notice was provided.*
 
 - The privacy notice presented at the time of consent must be documented and version-controlled.
 - Data subjects must be informed of their right to withdraw consent and to access or correct their data.
@@ -449,9 +449,9 @@ Any material change to [Organization Name]'s processing activities, privacy noti
 | Personal Data Protection Act 2010 (Act 709), **s. 6** | Consent Principle — requirement to obtain consent before or at the point of personal data collection |
 | Personal Data Protection Act 2010 (Act 709), **s. 7** | Notice and Choice Principle — obligation to inform data subjects of purposes at the time of collection |
 | Personal Data Protection Act 2010 (Act 709), **s. 38** | Rights of data subjects — access, correction, and withdrawal of consent |
-| Personal Data Protection Act 2010 (Act 709), **s. 40** | Obligations of data users on receipt of a withdrawal or restriction request |
+| Personal Data Protection Act 2010 (Act 709), **s. 40** | Obligations of data controllers on receipt of a withdrawal or restriction request |
 | Personal Data Protection Regulations 2013 | Supplementary procedural requirements for PDPA compliance |
-| Personal Data Protection (Class of Data Users) Order 2013 | Sector-specific obligations applicable to [Organization Name]'s class of data user |
+| Personal Data Protection (Class of Data Controllers) Order 2013 | Sector-specific obligations applicable to [Organization Name]'s class of data controller |
 | [Organization Name] Privacy Notice — v[X.X] | Current privacy notice presented to data subjects |
 | [Organization Name] Data Processing Register — [Document ID] | Record of processing activities linked to consent records in this register |
 | [Organization Name] Data Subject Rights Procedure — [Document ID] | Procedure governing responses to access, correction, and withdrawal requests |
@@ -542,7 +542,7 @@ Signature: _________________________ Date: ___________________
 |---|---|
 | **Consent** | Freely given, specific, informed, and unambiguous indication of a data subject's agreement to the processing of their personal data, as required under PDPA s. 6 |
 | **Data Subject** | An individual who is the subject of personal data held by [Organization Name] |
-| **Data User** | [Organization Name] in its capacity as an organisation that processes personal data for its own purposes, as defined under the PDPA |
+| **Data Controller** | [Organization Name] in its capacity as an organisation that processes personal data for its own purposes, as defined under the PDPA |
 | **Personal Data** | Any information that directly or indirectly identifies a living individual, as defined in the PDPA |
 | **Pseudonymisation** | The processing of personal data in such a way that it can no longer be attributed to a specific individual without the use of additional information kept separately |
 | **Purpose Limitation** | The principle that personal data may only be used for the specific purposes for which consent was obtained |
