@@ -6,7 +6,9 @@
   "effectiveDate": "2022-01-01",
   "parentAct": "Act 709",
   "enablingSection": "s57",
-  "applicableClasses": ["transport"],
+  "applicableClasses": [
+    "transport"
+  ],
   "summary": "This sector-specific Code applies to aviation operators in the Transport class (Class 6 of the Class of Data Users Order 2013), including airlines, airport operators, and ground handling companies operating in Malaysia. It supplements the General Code 2022 with enhanced and sector-specific requirements reflecting the significant volumes of sensitive passenger data processed by the aviation sector, including passport data, travel history, biometric data, and Passenger Name Records (PNR). The Code takes into account Malaysia's obligations under ICAO Annex 9 and bilateral advance passenger information (API) agreements.",
   "provisions": [
     {
@@ -28,6 +30,9 @@
         "PNR transfers to foreign authorities are generally covered by the legal obligation or vital interests derogation",
         "Retention of PNR for security purposes beyond the operational period requires specific legal basis",
         "PNR access log must be maintained"
+      ],
+      "controlSlugs": [
+        "consent-collection-mechanism"
       ]
     },
     {
@@ -35,7 +40,7 @@
       "title": "Biometric Data at Airports",
       "content": "Aviation operators using biometric technologies (facial recognition, fingerprint scanning, iris scanning) for passenger processing must: (a) treat biometric data as sensitive personal data requiring the highest level of protection; (b) obtain explicit consent for biometric processing, except where mandatory government-mandated biometric processing applies (e.g., immigration control); (c) provide clear notice of biometric processing, including alternatives where available; (d) implement strong access controls and encryption for all biometric data; (e) not retain biometric data beyond the processing session unless there is a specific lawful basis for longer retention; and (f) conduct a DPIA before deploying any new biometric system.",
       "requirements": [
-        "Biometric data is sensitive personal data — explicit consent required where not government-mandated",
+        "Biometric data is sensitive personal data \u2014 explicit consent required where not government-mandated",
         "Biometric templates must be encrypted at rest and in transit",
         "DPIA mandatory before deployment of biometric systems",
         "Government-mandated biometric processing (immigration) operates under statutory authority, not PDPA consent"
@@ -50,6 +55,9 @@
         "Alliance partner data sharing must be disclosed and covered by appropriate transfer mechanisms",
         "Account security must include MFA given the value of accumulated points",
         "Account closure and data deletion requests must be processed within 30 days"
+      ],
+      "controlSlugs": [
+        "data-integrity-assurance"
       ]
     },
     {
@@ -61,6 +69,9 @@
         "Aviation sector incident response plans must address large-scale passenger data breach scenarios",
         "CAAM and Commissioner must both be notified of significant passenger data breaches",
         "Annual security assessments of reservation systems are required"
+      ],
+      "controlSlugs": [
+        "breach-notification-to-commissioner"
       ]
     },
     {
@@ -76,8 +87,24 @@
     }
   ],
   "keywords": [
-    "aviation", "airline", "airport", "PNR", "passenger name records", "API", "advance passenger information",
-    "biometric", "facial recognition", "frequent flyer", "loyalty programme", "GDS", "global distribution system",
-    "CCTV", "surveillance", "CAAM", "ICAO", "Class 6", "transport"
+    "aviation",
+    "airline",
+    "airport",
+    "PNR",
+    "passenger name records",
+    "API",
+    "advance passenger information",
+    "biometric",
+    "facial recognition",
+    "frequent flyer",
+    "loyalty programme",
+    "GDS",
+    "global distribution system",
+    "CCTV",
+    "surveillance",
+    "CAAM",
+    "ICAO",
+    "Class 6",
+    "transport"
   ]
 }

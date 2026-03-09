@@ -6,7 +6,9 @@
   "effectiveDate": "2022-01-01",
   "parentAct": "Act 709",
   "enablingSection": "s57",
-  "applicableClasses": ["communications"],
+  "applicableClasses": [
+    "communications"
+  ],
   "summary": "This sector-specific Code applies to all licensees in the Communications class (Class 1 of the Class of Data Users Order 2013), including telecommunications companies, internet service providers, mobile network operators, and content application service providers. It supplements the General Code 2022 with enhanced requirements reflecting the uniquely large volumes and sensitivity of communications data, including call records, location data, and internet usage data. The Code takes into account requirements under the Communications and Multimedia Act 1998 and MCMC directions.",
   "provisions": [
     {
@@ -24,7 +26,7 @@
       "title": "Subscriber Registration Data",
       "content": "Personal data collected in the course of subscriber registration (including the mandatory SIM registration process) must be: (a) used only for the purposes of providing telecommunications services, regulatory compliance, and lawful interception; (b) not used for marketing purposes without separate consent; (c) verified for accuracy at the point of registration; (d) retained in accordance with MCMC and PDPA requirements; and (e) secured with the highest level of security given that SIM registration data includes identity card numbers and biometric data. SIM registration data must not be sold or disclosed to third parties except for regulatory purposes or fraud prevention.",
       "requirements": [
-        "SIM registration data is sensitive — treat as high-risk personal data",
+        "SIM registration data is sensitive \u2014 treat as high-risk personal data",
         "SIM registration data must not be used for commercial profiling without consent",
         "SIM registration retention: duration of subscription plus 2 years minimum",
         "Unauthorized disclosure of SIM registration data is a serious offence under both CMA and PDPA"
@@ -66,9 +68,9 @@
     {
       "id": "cop-comms-s6",
       "title": "Direct Marketing by Communications Providers",
-      "content": "Communications service providers engaging in direct marketing to subscribers must: (a) clearly distinguish between service communications (billing, service changes) and marketing communications; (b) obtain separate, specific consent for marketing communications including in-app notifications, SMS marketing, and email marketing; (c) honour opt-out requests within 7 days and cease all marketing channels unless the subscriber has provided separate consent for each; (d) comply with the Personal Data Protection (Amendment) Act 2024 requirements on marketing consent; and (e) not condition service provision on consent to marketing — subscribers must be able to reject marketing while retaining their service.",
+      "content": "Communications service providers engaging in direct marketing to subscribers must: (a) clearly distinguish between service communications (billing, service changes) and marketing communications; (b) obtain separate, specific consent for marketing communications including in-app notifications, SMS marketing, and email marketing; (c) honour opt-out requests within 7 days and cease all marketing channels unless the subscriber has provided separate consent for each; (d) comply with the Personal Data Protection (Amendment) Act 2024 requirements on marketing consent; and (e) not condition service provision on consent to marketing \u2014 subscribers must be able to reject marketing while retaining their service.",
       "requirements": [
-        "Separate consent required for marketing — service consent is not sufficient",
+        "Separate consent required for marketing \u2014 service consent is not sufficient",
         "Opt-out must be honoured within 7 days for all marketing channels",
         "Marketing must not be conditioned on service provision",
         "Suppression lists must be maintained and applied to all marketing campaigns"
@@ -76,8 +78,20 @@
     }
   ],
   "keywords": [
-    "communications", "telecommunications", "telco", "ISP", "CDR", "call detail records",
-    "location data", "SIM registration", "subscriber data", "MCMC", "CMA",
-    "lawful interception", "direct marketing", "Class 1", "metadata"
+    "communications",
+    "telecommunications",
+    "telco",
+    "ISP",
+    "CDR",
+    "call detail records",
+    "location data",
+    "SIM registration",
+    "subscriber data",
+    "MCMC",
+    "CMA",
+    "lawful interception",
+    "direct marketing",
+    "Class 1",
+    "metadata"
   ]
 }

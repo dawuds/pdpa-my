@@ -1,0 +1,19 @@
+{
+  "id": "cop-real-estate",
+  "title": "Personal Data Protection Code of Practice for the Real Estate Sector",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "Pending",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["real-estate"],
+  "summary": "Applies to housing developers and real estate agencies. Addresses the handling of property purchase documents and financial assessments.",
+  "provisions": [
+    {
+      "id": "cop-real-s1",
+      "title": "Booking Forms & Financial Data",
+      "content": "Personal data in booking forms and loan application documents must only be used for the property transaction and related financing.",
+      "controlSlugs": ["data-security-framework", "third-party-processor-oversight"]
+    }
+  ]
+}

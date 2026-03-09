@@ -6,7 +6,9 @@
   "effectiveDate": "2022-01-01",
   "parentAct": "Act 709",
   "enablingSection": "s57",
-  "applicableClasses": ["health"],
+  "applicableClasses": [
+    "health"
+  ],
   "summary": "This sector-specific Code applies to all data controllers in the Health class (Class 4 of the Class of Data Users Order 2013), including private hospitals, specialist centres, clinics, pharmacies, diagnostic laboratories, and other registered healthcare providers. Health data is sensitive personal data under s29 of the PDPA. This Code imposes enhanced obligations commensurate with the sensitivity of medical information and the significant harm that can result from its unauthorized disclosure. The Code takes into account requirements under the Private Healthcare Facilities and Services Act 1998, the Medical Act 1971, and professional ethics obligations.",
   "provisions": [
     {
@@ -14,7 +16,7 @@
       "title": "Scope and Application",
       "content": "This Code applies to all Class 4 data controllers including private hospitals, specialist clinics, general practice clinics, dental practices, pharmacies, diagnostic laboratories, physiotherapy centres, and traditional and complementary medicine (TCM) practitioners registered under applicable health legislation. All health data is sensitive personal data under s29 of the PDPA. Health data controllers must comply with both this Code and all applicable professional ethics and confidentiality requirements under health profession legislation.",
       "requirements": [
-        "All patient data is sensitive personal data by definition — no case-by-case assessment needed",
+        "All patient data is sensitive personal data by definition \u2014 no case-by-case assessment needed",
         "Professional ethics obligations (doctor-patient confidentiality) apply alongside PDPA",
         "Telehealth providers are subject to this Code for patient data processed in connection with Malaysian patients",
         "This Code must be read together with the General Code 2022"
@@ -23,12 +25,16 @@
     {
       "id": "cop-health-s2",
       "title": "Patient Consent for Health Data Processing",
-      "content": "Healthcare providers must obtain patient consent for the processing of health data in a manner that is: (a) specific to the purpose of processing (treatment, billing, insurance, research are each separate purposes); (b) documented, typically at the point of registration and updated when new purposes arise; (c) granular — separate consent for treatment, billing, insurance disclosure, and research; (d) meaningful — patients must understand what they are consenting to, in language and level of detail appropriate to them; and (e) revocable — patients must be able to withdraw consent for non-essential processing (e.g., research, marketing) without affecting their right to receive treatment. Where the patient is unable to give consent (emergency, incapacity), the vital interests exception applies.",
+      "content": "Healthcare providers must obtain patient consent for the processing of health data in a manner that is: (a) specific to the purpose of processing (treatment, billing, insurance, research are each separate purposes); (b) documented, typically at the point of registration and updated when new purposes arise; (c) granular \u2014 separate consent for treatment, billing, insurance disclosure, and research; (d) meaningful \u2014 patients must understand what they are consenting to, in language and level of detail appropriate to them; and (e) revocable \u2014 patients must be able to withdraw consent for non-essential processing (e.g., research, marketing) without affecting their right to receive treatment. Where the patient is unable to give consent (emergency, incapacity), the vital interests exception applies.",
       "requirements": [
         "Consent at registration must cover treatment, billing, and insurance as standard",
         "Research consent must be separate and specific to each research project",
         "Emergency processing under vital interests must be documented",
         "Minor patient consent requires parental/guardian consent for patients under 18"
+      ],
+      "controlSlugs": [
+        "consent-collection-mechanism",
+        "sensitive-data-explicit-consent"
       ]
     },
     {
@@ -47,10 +53,14 @@
       "title": "Disclosure to Insurers and Third Parties",
       "content": "Healthcare providers must obtain patient consent before disclosing health data to: (a) insurance companies and managed care organizations (MCOs) for claims purposes; (b) employers for occupational health assessments; (c) other healthcare providers outside the immediate treating team; (d) legal representatives in connection with litigation; and (e) researchers and academic institutions. Mandatory disclosures to public health authorities (Ministry of Health, state health departments) are governed by the Prevention and Control of Infectious Diseases Act 1988 and do not require patient consent. Disclosures to law enforcement require lawful authority.",
       "requirements": [
-        "Insurance disclosure consent must be specific to the claim — blanket consent is insufficient",
+        "Insurance disclosure consent must be specific to the claim \u2014 blanket consent is insufficient",
         "Employer occupational health disclosure requires specific consent for each disclosed item",
-        "Referring to another provider is within the treating purpose — no additional consent needed",
+        "Referring to another provider is within the treating purpose \u2014 no additional consent needed",
         "Research disclosures require research-specific consent or ethics board approved anonymization"
+      ],
+      "controlSlugs": [
+        "data-security-framework",
+        "access-control-framework"
       ]
     },
     {
@@ -58,9 +68,9 @@
       "title": "Medical Records Retention",
       "content": "Healthcare providers must retain medical records for the following minimum periods: (a) adult patient records: 7 years from the date of last treatment or consultation; (b) minor patient records: until the patient reaches the age of 25 or 7 years from the date of last treatment, whichever is later; (c) surgical records and operation notes: 10 years; (d) X-rays and medical imaging: 5 years from date of examination; (e) obstetric records: 25 years; and (f) records relating to deceased patients: 7 years from date of death. After expiry of the retention period, records must be securely destroyed with a documented disposal certificate.",
       "requirements": [
-        "Minimum retention periods are mandatory — premature disposal is a breach",
+        "Minimum retention periods are mandatory \u2014 premature disposal is a breach",
         "Patient records may be retained longer where legal proceedings are ongoing",
-        "Disposal must produce a certificate — not simply deleting the EHR record",
+        "Disposal must produce a certificate \u2014 not simply deleting the EHR record",
         "Legacy paper records converting to electronic format must be handled under appropriate security"
       ]
     },
@@ -78,7 +88,7 @@
     {
       "id": "cop-health-s7",
       "title": "Medical Research and Secondary Use",
-      "content": "Healthcare providers using patient data for medical research or allowing third parties to access patient data for research must: (a) obtain specific research consent from patients, or ensure the research is conducted on genuinely anonymized or pseudonymized data; (b) obtain ethics committee approval for research involving patient data; (c) implement data minimization — provide only the minimum data necessary for the research; (d) execute data sharing agreements with research institutions; and (e) not re-identify pseudonymized research data. Secondary uses of patient data for quality improvement, audit, and healthcare management within the organization are permitted without additional consent but must be disclosed in the privacy notice.",
+      "content": "Healthcare providers using patient data for medical research or allowing third parties to access patient data for research must: (a) obtain specific research consent from patients, or ensure the research is conducted on genuinely anonymized or pseudonymized data; (b) obtain ethics committee approval for research involving patient data; (c) implement data minimization \u2014 provide only the minimum data necessary for the research; (d) execute data sharing agreements with research institutions; and (e) not re-identify pseudonymized research data. Secondary uses of patient data for quality improvement, audit, and healthcare management within the organization are permitted without additional consent but must be disclosed in the privacy notice.",
       "requirements": [
         "Research consent must be specific to each research project",
         "Ethics committee approval is a prerequisite for any research using patient data",
@@ -89,7 +99,7 @@
     {
       "id": "cop-health-s8",
       "title": "Patient Rights in the Healthcare Context",
-      "content": "Healthcare providers must facilitate the exercise of patient data subject rights, including: (a) right of access — patients are entitled to a copy of their medical records; healthcare providers may charge a reasonable copying fee but must not obstruct access; (b) right of correction — inaccurate clinical records must be corrected, but a healthcare provider may document the basis for declining a correction where clinical judgment supports the original record; (c) opt-out from non-essential processing — patients may opt out of research, marketing, and other non-treatment processing; and (d) right to complain — the Commissioner must be identified in the privacy notice as the body to which patients may complain. Healthcare providers must not refuse treatment as a condition of data subject rights compliance.",
+      "content": "Healthcare providers must facilitate the exercise of patient data subject rights, including: (a) right of access \u2014 patients are entitled to a copy of their medical records; healthcare providers may charge a reasonable copying fee but must not obstruct access; (b) right of correction \u2014 inaccurate clinical records must be corrected, but a healthcare provider may document the basis for declining a correction where clinical judgment supports the original record; (c) opt-out from non-essential processing \u2014 patients may opt out of research, marketing, and other non-treatment processing; and (d) right to complain \u2014 the Commissioner must be identified in the privacy notice as the body to which patients may complain. Healthcare providers must not refuse treatment as a condition of data subject rights compliance.",
       "requirements": [
         "Medical records access must not be made practically difficult",
         "Copying fee for access requests must not exceed the prescribed amount",
@@ -99,9 +109,24 @@
     }
   ],
   "keywords": [
-    "healthcare", "medical records", "EHR", "patient data", "sensitive personal data", "s29",
-    "insurance disclosure", "medical research", "telehealth", "digital health", "consent",
-    "health principle", "doctor-patient confidentiality", "Class 4", "MOH", "private hospital",
-    "clinic", "pharmacy", "retention of medical records"
+    "healthcare",
+    "medical records",
+    "EHR",
+    "patient data",
+    "sensitive personal data",
+    "s29",
+    "insurance disclosure",
+    "medical research",
+    "telehealth",
+    "digital health",
+    "consent",
+    "health principle",
+    "doctor-patient confidentiality",
+    "Class 4",
+    "MOH",
+    "private hospital",
+    "clinic",
+    "pharmacy",
+    "retention of medical records"
   ]
 }

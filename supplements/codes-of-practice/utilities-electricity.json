@@ -1,12 +1,14 @@
 {
   "id": "cop-utilities-electricity",
-  "title": "Personal Data Protection Code of Practice (Utilities — Electricity) 2022",
+  "title": "Personal Data Protection Code of Practice (Utilities \u2014 Electricity) 2022",
   "type": "code-of-practice",
   "issuedBy": "Personal Data Protection Commissioner",
   "effectiveDate": "2022-01-01",
   "parentAct": "Act 709",
   "enablingSection": "s57",
-  "applicableClasses": ["utilities"],
+  "applicableClasses": [
+    "utilities"
+  ],
   "summary": "This sector-specific Code applies to electricity utility providers in the Utilities class (Class 11 of the Class of Data Users Order 2013), including Tenaga Nasional Berhad (TNB), Sarawak Energy Berhad, and Sabah Electricity Sdn Bhd. It supplements the General Code 2022 with requirements tailored to the electricity sector, particularly addressing the significant privacy implications of smart meter data, which can reveal detailed patterns of household occupancy, behaviour, and appliance usage. The Code takes into account requirements under the Electricity Supply Act 1990 and Energy Commission (Suruhanjaya Tenaga) regulations.",
   "provisions": [
     {
@@ -28,6 +30,9 @@
         "Interval data secondary use requires specific consent",
         "Aggregated or anonymized data may be shared without consent where re-identification is not possible",
         "13-month maximum retention for interval data without consent"
+      ],
+      "controlSlugs": [
+        "notice-and-choice-compliance"
       ]
     },
     {
@@ -36,7 +41,7 @@
       "content": "Consumer account data (name, NRIC, address, contact details, bank account for direct debit) must be: (a) collected only for the purposes of providing electricity supply and related services; (b) not used for marketing of third-party products without consent; (c) updated when consumers notify changes; (d) disclosed to the Energy Commission and other regulators only for regulatory purposes; and (e) retained for the duration of the consumer relationship plus 7 years for regulatory and billing dispute purposes.",
       "requirements": [
         "Consumer account data must not be used for third-party marketing without consent",
-        "Account data accuracy must be maintained — utilities must have a process for accepting consumer address/contact updates",
+        "Account data accuracy must be maintained \u2014 utilities must have a process for accepting consumer address/contact updates",
         "7-year post-relationship retention for billing records",
         "Energy Commission disclosures are mandatory and lawful under the Electricity Supply Act"
       ]
@@ -50,6 +55,9 @@
         "Pre-reporting notice to consumer is recommended",
         "Debt collectors must operate under DPAs",
         "Correction of credit bureau reports post-settlement must be made within 14 days"
+      ],
+      "controlSlugs": [
+        "data-security-framework"
       ]
     },
     {
@@ -65,8 +73,20 @@
     }
   ],
   "keywords": [
-    "electricity", "utilities", "smart meter", "interval data", "consumption data", "AMI",
-    "MDMS", "TNB", "Energy Commission", "Suruhanjaya Tenaga", "billing", "demand response",
-    "Class 11", "grid management", "consumer data"
+    "electricity",
+    "utilities",
+    "smart meter",
+    "interval data",
+    "consumption data",
+    "AMI",
+    "MDMS",
+    "TNB",
+    "Energy Commission",
+    "Suruhanjaya Tenaga",
+    "billing",
+    "demand response",
+    "Class 11",
+    "grid management",
+    "consumer data"
   ]
 }

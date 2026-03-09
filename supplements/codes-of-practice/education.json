@@ -1,0 +1,25 @@
+{
+  "id": "cop-education",
+  "title": "Personal Data Protection Code of Practice for the Education Sector",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "Pending",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["education"],
+  "summary": "This Code applies to private higher educational institutions, private schools, and language centres. It focuses on the protection of student records, parent information, and academic transcripts.",
+  "provisions": [
+    {
+      "id": "cop-edu-s1",
+      "title": "Student & Parent Consent",
+      "content": "Institutions must obtain explicit consent for the processing of student data, particularly for minors where parental consent is mandatory.",
+      "controlSlugs": ["consent-collection-mechanism", "sensitive-data-explicit-consent"]
+    },
+    {
+      "id": "cop-edu-s2",
+      "title": "Retention of Academic Records",
+      "content": "Academic transcripts and certificates must be retained indefinitely or for long-term periods as required by the Ministry of Higher Education.",
+      "controlSlugs": ["retention-and-disposal-management"]
+    }
+  ]
+}

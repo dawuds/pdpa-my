@@ -1,0 +1,25 @@
+{
+  "id": "cop-tourism",
+  "title": "Personal Data Protection Code of Practice for the Tourism and Hospitality Sector",
+  "type": "code-of-practice",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "Pending",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["tourism-and-hospitality"],
+  "summary": "Applies to hotels, travel agencies, and tour operators. Addresses the collection of passport data and guest preferences.",
+  "provisions": [
+    {
+      "id": "cop-tour-s1",
+      "title": "Collection of Identity Documents",
+      "content": "Collection of NRIC or Passport copies must be limited to legal requirements (e.g. Police/Immigration) and stored securely.",
+      "controlSlugs": ["data-security-framework", "access-control-framework"]
+    },
+    {
+      "id": "cop-tour-s2",
+      "title": "Guest Preference Profiles",
+      "content": "Processing of guest preferences for marketing must be based on valid consent with a clear opt-out mechanism.",
+      "controlSlugs": ["consent-withdrawal-management", "notice-and-choice-compliance"]
+    }
+  ]
+}
