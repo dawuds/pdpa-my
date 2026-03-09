@@ -80,7 +80,7 @@
       "residualImpact": 4,
       "residualRisk": 8,
       "treatment": "transfer",
-      "treatmentPlan": "Transfer residual breach risk by requiring all data processors to maintain cyber liability insurance covering PDPA breach scenarios. Engage a managed security service provider (MSSP) with ISO 27001 certification to monitor processor environments. Include contractual indemnification clauses and right-to-audit provisions. Note: under PDPA s9, the data controller retains ultimate accountability — transfer reduces financial exposure but not legal responsibility.",
+      "treatmentPlan": "Transfer residual breach risk by requiring all data processors to maintain cyber liability insurance covering PDPA breach scenarios. Engage a managed security service provider (MSSP) with ISO 27001 certification to monitor processor environments. Include contractual indemnification clauses and right-to-audit provisions. Note: under PDPA s9, the data controller retains ultimate accountability \u2014 transfer reduces financial exposure but not legal responsibility.",
       "owner": "Vendor Management / DPO",
       "reviewDate": "2025-07-01",
       "inherentRiskLevel": "High",
