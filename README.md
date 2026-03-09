@@ -21,6 +21,24 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 
 > **Disclaimer**: This is an indicative/educational resource. It does not constitute legal advice. Always refer to the official gazette text and seek professional counsel for compliance decisions. See [LEARNINGS.md](LEARNINGS.md) for data quality audit history.
 
+## Technical Architecture
+
+This repository follows the **GRC Portfolio v2.0 Standardized Schema**, optimized for machine-readability and dynamic SPA rendering.
+
+### The Compliance Chain
+Data is structured to maintain a strict bidirectional mapping:
+`PDPA Section (Act A1727)` $\leftrightarrow$ `Data Protection Control` $\leftrightarrow$ `Audit Evidence` $\leftrightarrow$ `Artifact Template`
+
+### Data Layers
+- **Controls (`/controls/library.json`):** 49 controls re-aligned to Act A1727 (Data Controller terminology) using the unified schema.
+- **Evidence (`/evidence/index.json`):** 161 items covering all 10 control domains and the new 2024/2025 requirements (s12A, s12B, s43A).
+- **Templates (`/templates/`):** 60+ Markdown artifacts including new specialized sectoral COPs (Banking, Insurance, etc.).
+
+### Consistency & Style
+- **Naming:** Kebab-case slugs; global migration from "Data User" to "Data Controller".
+- **Scoring:** Standardized 5x5 Likelihood/Impact risk matrix.
+- **Audit Ready:** DPIA module follows the official 5-step **DEICA** methodology.
+
 ## Repository Structure
 
 ```
