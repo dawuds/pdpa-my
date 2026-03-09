@@ -291,7 +291,7 @@
       "typicalPages": "10-20",
       "keyContents": [
         "Direct marketing consent requirements (s40)",
-        "Opt-out from direct marketing (s43) — right and obligation",
+        "Opt-out from direct marketing (s43) \u2014 right and obligation",
         "Channel-specific requirements (email, SMS, telemarketing, post)",
         "Suppression list management",
         "Do Not Call Registry compliance",
@@ -358,7 +358,7 @@
         "Lawful bases for employee data processing",
         "Employee data protection notice requirements",
         "Employee rights under PDPA (access, correction, opt-out)",
-        "Monitoring in the workplace — boundaries and disclosure",
+        "Monitoring in the workplace \u2014 boundaries and disclosure",
         "HR system access controls and data segregation",
         "Employee data retention schedule and disposal"
       ],
@@ -387,7 +387,7 @@
       "keyContents": [
         "Consent collection channels and method-specific requirements",
         "Mandatory information to include with consent request (s7 notice elements)",
-        "Granular consent design — one purpose per consent",
+        "Granular consent design \u2014 one purpose per consent",
         "Prohibition on bundled or pre-ticked consent",
         "Digital consent: timestamp, IP address, and version recording",
         "Physical consent: scan, storage, and linking to data subject record",
@@ -508,7 +508,7 @@
       "reviewFrequency": "Annual",
       "typicalPages": "15-25",
       "keyContents": [
-        "DPIA trigger criteria — when a DPIA is required",
+        "DPIA trigger criteria \u2014 when a DPIA is required",
         "DPIA screening questionnaire and threshold test",
         "DPIA methodology: describe, assess, consult, implement",
         "Risk assessment matrix for privacy risks",
@@ -654,7 +654,7 @@
         "Privacy design checklist for new systems and products",
         "DPIA trigger assessment at design stage",
         "Data minimisation requirements in system design",
-        "Default privacy settings — privacy by default principles",
+        "Default privacy settings \u2014 privacy by default principles",
         "DPO sign-off as pre-launch approval gate",
         "Post-launch privacy audit and review process",
         "Integration with SDLC and agile development workflows"
@@ -821,7 +821,7 @@
       "slug": "personal-data-inventory-ropa",
       "name": "Personal Data Inventory / Record of Processing Activities (ROPA)",
       "category": "registers",
-      "description": "Comprehensive inventory of all personal data processing activities conducted by the organization, documenting processing purposes, data categories, data flows, retention periods, security measures, and lawful bases — serving as the master compliance record under PDPA",
+      "description": "Comprehensive inventory of all personal data processing activities conducted by the organization, documenting processing purposes, data categories, data flows, retention periods, security measures, and lawful bases \u2014 serving as the master compliance record under PDPA",
       "format": "Spreadsheet or GRC system, version-controlled",
       "mandatory": true,
       "sections": [
@@ -1782,6 +1782,54 @@
       "controlSlugs": [
         "data-processing-agreement-management",
         "purpose-limitation-enforcement"
+      ]
+    }
+  ],
+  "sectoral": [
+    {
+      "slug": "banking-retention-schedule",
+      "name": "Banking Sector Data Retention Schedule",
+      "category": "sectoral",
+      "description": "Statutory retention schedule aligned with FSA/IFSA and the Banking Sector Code of Practice.",
+      "format": "Markdown / Spreadsheet",
+      "mandatory": true,
+      "sections": [
+        "s10"
+      ],
+      "owner": "Legal / Compliance",
+      "controlSlugs": [
+        "retention-and-disposal-management"
+      ]
+    },
+    {
+      "slug": "insurance-claims-data-consent",
+      "name": "Insurance Sector Specialized Data Consent Form",
+      "category": "sectoral",
+      "description": "Enhanced consent form for sensitive health data processing in insurance claims, aligned with the Insurance Sector COP.",
+      "format": "Markdown / PDF",
+      "mandatory": true,
+      "sections": [
+        "s6",
+        "s29"
+      ],
+      "owner": "Claims Department",
+      "controlSlugs": [
+        "sensitive-data-explicit-consent"
+      ]
+    },
+    {
+      "slug": "communications-call-log-policy",
+      "name": "Communications Sector CDR Policy",
+      "category": "sectoral",
+      "description": "Policy for the secure processing and lawful interception of Call Detail Records, aligned with the Communications Sector COP.",
+      "format": "Markdown / PDF",
+      "mandatory": true,
+      "sections": [
+        "s9"
+      ],
+      "owner": "Network Operations / Legal",
+      "controlSlugs": [
+        "data-security-framework"
       ]
     }
   ]
