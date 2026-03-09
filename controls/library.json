@@ -1,5 +1,62 @@
 {
-  "consent-management": [
+  "_meta": {
+    "version": "2.0.0",
+    "lastUpdated": "2026-03-09",
+    "alignment": "Act 709 / Act A1727"
+  },
+  "domains": [
+    {
+      "slug": "consent-management",
+      "name": "Consent Management",
+      "description": "Collection, validity, and withdrawal of consent."
+    },
+    {
+      "slug": "data-subject-rights",
+      "name": "Data Subject Rights",
+      "description": "Fulfillment of access, correction, and portability requests."
+    },
+    {
+      "slug": "notice-transparency",
+      "name": "Notice Transparency",
+      "description": "Notice and choice requirements."
+    },
+    {
+      "slug": "data-security",
+      "name": "Data Security",
+      "description": "Technical and physical security measures."
+    },
+    {
+      "slug": "data-lifecycle",
+      "name": "Data Lifecycle",
+      "description": "Retention and secure disposal of personal data."
+    },
+    {
+      "slug": "breach-response",
+      "name": "Breach Response",
+      "description": "Mandatory data breach detection and notification."
+    },
+    {
+      "slug": "cross-border-transfer",
+      "name": "Cross Border Transfer",
+      "description": "Conditions for data transmission outside Malaysia."
+    },
+    {
+      "slug": "third-party-management",
+      "name": "Third Party Management",
+      "description": "Data processor oversight and contracts."
+    },
+    {
+      "slug": "governance-accountability",
+      "name": "Governance Accountability",
+      "description": "Organizational data protection oversight and DPO functions."
+    },
+    {
+      "slug": "registration-compliance",
+      "name": "Registration Compliance",
+      "description": "Class of Data Users registration and fees."
+    }
+  ],
+  "controls": [
     {
       "slug": "consent-collection-mechanism",
       "name": "Consent Collection Mechanism",
@@ -174,7 +231,7 @@
       ],
       "keyActivities": [
         "Identify all processing activities involving sensitive personal data under s29 categories",
-        "Design explicit consent mechanisms for sensitive data — standalone, clearly highlighted, cannot be inferred from general consent",
+        "Design explicit consent mechanisms for sensitive data \u2014 standalone, clearly highlighted, cannot be inferred from general consent",
         "Train staff collecting sensitive data on the heightened consent standard",
         "Implement technical controls blocking sensitive data collection without affirmative explicit consent",
         "Implement enhanced access controls for stored sensitive personal data"
@@ -277,9 +334,7 @@
       ],
       "relatedStandards": [],
       "sectorVariants": {}
-    }
-  ],
-  "data-subject-rights": [
+    },
     {
       "slug": "dsar-intake-and-verification",
       "name": "Data Subject Rights Request Intake and Identity Verification",
@@ -556,9 +611,7 @@
       ],
       "relatedStandards": [],
       "sectorVariants": {}
-    }
-  ],
-  "notice-transparency": [
+    },
     {
       "slug": "privacy-notice-design",
       "name": "Privacy Notice Design and Content Compliance",
@@ -751,9 +804,7 @@
       ],
       "relatedStandards": [],
       "sectorVariants": {}
-    }
-  ],
-  "data-security": [
+    },
     {
       "slug": "information-security-risk-management",
       "name": "Information Security Risk Management",
@@ -1225,9 +1276,7 @@
         "pdpa-standard-nonelectronic-security-2015"
       ],
       "sectorVariants": {}
-    }
-  ],
-  "data-lifecycle": [
+    },
     {
       "slug": "data-minimisation-control",
       "name": "Data Minimisation at Collection",
@@ -1509,9 +1558,7 @@
         "pdpa-standard-data-integrity-2015"
       ],
       "sectorVariants": {}
-    }
-  ],
-  "breach-response": [
+    },
     {
       "slug": "breach-detection-and-triage",
       "name": "Data Breach Detection and Triage",
@@ -1745,9 +1792,7 @@
       ],
       "relatedStandards": [],
       "sectorVariants": {}
-    }
-  ],
-  "cross-border-transfer": [
+    },
     {
       "slug": "transfer-identification-and-mapping",
       "name": "Cross-Border Transfer Identification and Mapping",
@@ -1968,9 +2013,7 @@
           "relatedProvision": "cop-health-s6"
         }
       }
-    }
-  ],
-  "third-party-management": [
+    },
     {
       "slug": "processor-due-diligence",
       "name": "Data Processor Due Diligence",
@@ -2200,9 +2243,7 @@
         "pdpa-standard-retention-2015"
       ],
       "sectorVariants": {}
-    }
-  ],
-  "governance-accountability": [
+    },
     {
       "slug": "dpo-appointment-and-functions",
       "name": "Data Protection Officer Appointment and Functions",
@@ -2532,9 +2573,7 @@
       ],
       "relatedStandards": [],
       "sectorVariants": {}
-    }
-  ],
-  "registration-compliance": [
+    },
     {
       "slug": "data-user-registration-management",
       "name": "Data Controller Registration Management",
