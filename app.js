@@ -228,11 +228,11 @@ function renderPart(el, partId) {
     <div class="accordion">
       ${Object.entries(divisions).map(([div, secs]) => `
         <div class="accordion-item open">
-          <div class="accordion-header" data-accordion>
+          <button class="accordion-trigger" data-accordion>
             <span>${esc(div)} (${secs.length} sections)</span>
-            <span class="accordion-arrow">&#9654;</span>
+            <span class="chevron">&#9654;</span>
           </div>
-          <div class="accordion-body">
+          <div class="accordion-content">
             ${secs.map(s => `
               <a href="#section/${s.id}" class="section-link">
                 <span class="section-link-id">${s.id}</span>
@@ -771,11 +771,11 @@ async function renderControls(el) {
         if (activeSector && !filteredControls.length) return '';
         return `
           <div class="accordion-item${activeSector ? ' open' : ''}">
-            <div class="accordion-header" data-accordion>
+            <button class="accordion-trigger" data-accordion>
               <span>${esc(domain.name)} (${filteredControls.length}${activeSector ? '/' + controls.length : ''})</span>
-              <span class="accordion-arrow">&#9654;</span>
+              <span class="chevron">&#9654;</span>
             </div>
-            <div class="accordion-body">
+            <div class="accordion-content">
               <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(domain.description)}</p>
               ${filteredControls.map(c => {
                 const variant = activeSector && c.sectorVariants ? c.sectorVariants[activeSector] : null;
@@ -1207,11 +1207,11 @@ function renderSupplementContent(el, data, id) {
       <div class="accordion">
         ${data.provisions.map(p => `
           <div class="accordion-item">
-            <div class="accordion-header" data-accordion>
+            <button class="accordion-trigger" data-accordion>
               <span><span style="font-family:var(--mono);color:var(--accent);margin-right:0.5rem;">${esc(p.id)}</span>${esc(p.title)}</span>
-              <span class="accordion-arrow">&#9654;</span>
+              <span class="chevron">&#9654;</span>
             </div>
-            <div class="accordion-body">
+            <div class="accordion-content">
               <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(p.content || '')}</p>
               ${p.requirements && p.requirements.length ? `
                 <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
@@ -1531,16 +1531,21 @@ function riskBandColor(band) {
   return map[band] || '#6B7280';
 }
 
+function riskBandClass(band) {
+  const map = { Critical: 'risk-critical', High: 'risk-high', Medium: 'risk-medium', Low: 'risk-low' };
+  return map[band] || '';
+}
+
 function renderRMMethodology(meth, matrix) {
   if (!meth) return '<div class="empty-state"><div class="empty-state-text">Methodology data not available.</div></div>';
 
   const stepsHTML = (meth.riskAssessmentProcess?.steps || []).map(s => `
     <div class="accordion-item">
-      <div class="accordion-header" data-accordion>
+      <button class="accordion-trigger" data-accordion>
         <span><strong>Step ${s.step}:</strong> ${esc(s.name)}</span>
-        <span class="accordion-arrow">&#9654;</span>
+        <span class="chevron">&#9654;</span>
       </div>
-      <div class="accordion-body">
+      <div class="accordion-content">
         <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(s.description)}</p>
         <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
           ${(s.activities || []).map(a => `<li style="margin-bottom:0.25rem;">${esc(a)}</li>`).join('')}
@@ -1668,8 +1673,8 @@ function renderRiskMatrix(matrix) {
               <td><strong>${esc(l.label)}</strong> <span style="font-size:0.625rem;color:var(--text-muted);">(${l.level})</span></td>
               ${gridRow.map(score => {
                 const band = stb[String(score)] || 'Low';
-                const color = riskBandColor(band);
-                return `<td style="text-align:center;background:${color}15;"><span style="font-weight:600;color:${color};">${score}</span></td>`;
+                const cls = riskBandClass(band);
+                return `<td class="${cls}" style="text-align:center;"><span style="font-weight:600;">${score}</span></td>`;
               }).join('')}
             </tr>`;
           }).join('')}
@@ -1786,11 +1791,11 @@ function renderRMChecklist(checklist) {
     <div class="accordion">
       ${Object.entries(areas).map(([area, areaItems]) => `
         <div class="accordion-item open">
-          <div class="accordion-header" data-accordion>
+          <button class="accordion-trigger" data-accordion>
             <span>${esc(area)} (${areaItems.length})</span>
-            <span class="accordion-arrow">&#9654;</span>
+            <span class="chevron">&#9654;</span>
           </div>
-          <div class="accordion-body">
+          <div class="accordion-content">
             ${areaItems.map(item => `
               <div class="card" style="margin-bottom:0.5rem;">
                 <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.375rem;">
@@ -1925,11 +1930,11 @@ function renderDPIAMethodology(meth) {
 
   const phasesHTML = (meth.phases || []).map(p => `
     <div class="accordion-item">
-      <div class="accordion-header" data-accordion>
+      <button class="accordion-trigger" data-accordion>
         <span><strong>${esc(p.name)}</strong> <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">${esc(p.description)}</span></span>
-        <span class="accordion-arrow">&#9654;</span>
+        <span class="chevron">&#9654;</span>
       </div>
-      <div class="accordion-body">
+      <div class="accordion-content">
         <div class="dpia-phase">
           <div class="block-label">Steps</div>
           <ol style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
@@ -2004,15 +2009,15 @@ function renderDPIAScreening(thresholds) {
     <div class="accordion">
       ${oldTriggers.map(t => `
         <div class="accordion-item">
-          <div class="accordion-header" data-accordion>
+          <button class="accordion-trigger" data-accordion>
             <span>
               <span style="font-family:var(--mono);font-size:0.75rem;color:var(--accent);margin-right:0.5rem;">${esc(t.id)}</span>
               <strong>${esc(t.criterion)}</strong>
               <span class="badge ${t.riskLevel === 'high' ? 'badge-mandatory' : 'badge-procedural'}" style="margin-left:0.5rem;">${esc(t.riskLevel)}</span>
             </span>
-            <span class="accordion-arrow">&#9654;</span>
+            <span class="chevron">&#9654;</span>
           </div>
-          <div class="accordion-body">
+          <div class="accordion-content">
             <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(t.description)}</p>
             <div style="display:flex;gap:0.25rem;">
               <a href="#section/${Array.isArray(t.pdpaSection) ? t.pdpaSection[0] : t.pdpaSection}" class="badge badge-domain">${esc(Array.isArray(t.pdpaSection) ? t.pdpaSection.join(', ') : t.pdpaSection)}</a>
@@ -2204,16 +2209,16 @@ function renderDPIAExamples(examples) {
         const scoreColor = ex.screeningScore >= 8 ? '#ef4444' : ex.screeningScore >= 5 ? '#f59e0b' : '#22c55e';
         return `
           <div class="accordion-item">
-            <div class="accordion-header" data-accordion>
+            <button class="accordion-trigger" data-accordion>
               <span>
                 <span style="font-family:var(--mono);font-size:0.75rem;color:var(--accent);margin-right:0.5rem;">${esc(ex.id)}</span>
                 <strong>${esc(ex.title)}</strong>
                 <span class="badge badge-category" style="margin-left:0.5rem;">${esc(ex.sector)}</span>
                 <span style="font-family:var(--mono);font-size:0.75rem;font-weight:700;color:${scoreColor};margin-left:0.5rem;">Score: ${ex.screeningScore}</span>
               </span>
-              <span class="accordion-arrow">&#9654;</span>
+              <span class="chevron">&#9654;</span>
             </div>
-            <div class="accordion-body">
+            <div class="accordion-content">
               <div class="dpia-example">
                 <div class="card-body" style="margin-bottom:0.75rem;">${esc(ex.scenario)}</div>
 
