@@ -68,17 +68,17 @@ function parseRoute() {
   // Sectors routes
   if (hash === 'sectors') return { view: 'sectors' };
   if (hash.startsWith('sector/')) return { view: 'sector-detail', id: hash.slice(7) };
-  // Penalties
-  if (hash === 'penalties') return { view: 'penalties' };
-  // Supplements routes
-  if (hash === 'supplements') return { view: 'supplements' };
+  // Penalties — routed to Reference sub-tab
+  if (hash === 'penalties') return { view: 'reference', subtab: 'penalties' };
+  // Supplements — routed to Reference sub-tab
+  if (hash === 'supplements') return { view: 'reference', subtab: 'supplements' };
   if (hash.startsWith('supplement/')) return { view: 'supplement-detail', id: hash.slice(11) };
   // Reference routes (absorbs cross-references + framework mappings)
   if (hash === 'reference') return { view: 'reference' };
   if (hash.startsWith('reference/')) return { view: 'reference', sub: hash.slice(10) };
-  // DPIA routes
-  if (hash === 'dpia') return { view: 'dpia' };
-  if (hash.startsWith('dpia/')) return { view: 'dpia', sub: hash.slice(5) };
+  // DPIA — routed to Risk Management sub-tab
+  if (hash === 'dpia') return { view: 'risk', subtab: 'dpia' };
+  if (hash.startsWith('dpia/')) return { view: 'risk', subtab: 'dpia' };
   // Legacy redirects
   if (hash === 'artifacts') return { view: 'controls' };
   if (hash === 'cross-references') return { view: 'reference' };
@@ -128,11 +128,8 @@ function render() {
     case 'risk': renderRiskManagement(app); break;
     case 'sectors': renderSectors(app); break;
     case 'sector-detail': renderSectorDetail(app, state.route.id); break;
-    case 'penalties': renderPenalties(app); break;
-    case 'supplements': renderSupplements(app); break;
     case 'supplement-detail': renderSupplementDetail(app, state.route.id); break;
     case 'reference': renderReference(app); break;
-    case 'dpia': renderDPIA(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
   }
@@ -160,17 +157,8 @@ function updateNav() {
       case 'sectors':
         active = rv === 'sectors' || rv === 'sector-detail';
         break;
-      case 'penalties':
-        active = rv === 'penalties';
-        break;
-      case 'supplements':
-        active = rv === 'supplements' || rv === 'supplement-detail';
-        break;
       case 'reference':
-        active = rv === 'reference';
-        break;
-      case 'dpia':
-        active = rv === 'dpia';
+        active = rv === 'reference' || rv === 'supplement-detail';
         break;
     }
     el.classList.toggle('active', active);
@@ -1334,34 +1322,123 @@ async function renderReference(el) {
     state.crossRefs = { actToRegs, actToGuidelines, actToCodes, actToStandards, frameworkMappings, dataUserClasses };
   }
 
+  // Load penalties and supplements for sub-tabs
+  if (!state.penalties) {
+    state.penalties = await fetchJSON('penalties/index.json') || [];
+  }
+  if (!state.supplements) {
+    const [regs, guidelines, standards, codes] = await Promise.all([
+      fetchJSON('supplements/regulations/index.json'),
+      fetchJSON('supplements/guidelines/index.json'),
+      fetchJSON('supplements/standards/index.json'),
+      fetchJSON('supplements/codes-of-practice/index.json'),
+    ]);
+    state.supplements = {
+      regulations: (regs && regs.regulations) || (Array.isArray(regs) ? regs : []),
+      guidelines: (guidelines && guidelines.guidelines) || (Array.isArray(guidelines) ? guidelines : []),
+      standards: (standards && standards.standards) || (Array.isArray(standards) ? standards : []),
+      codesOfPractice: (codes && codes.codes) || (codes && codes.codesOfPractice) || (Array.isArray(codes) ? codes : []),
+    };
+  }
+
+  const subtab = state.route.subtab || 'cross-references';
+
   el.innerHTML = `
     <div class="page-title">Reference</div>
-    <div class="page-subtitle">Cross-framework mappings (GDPR, APEC CBPR, ISO 27701) and Act-to-subsidiary instrument cross-references</div>
+    <div class="page-subtitle">Cross-references, penalties, and subsidiary instruments for Act 709</div>
 
     <div class="sub-tabs">
-      <button class="sub-tab active" data-sub="frameworks">International Frameworks</button>
-      <button class="sub-tab" data-sub="regulations">Regulations</button>
-      <button class="sub-tab" data-sub="guidelines">Guidelines</button>
-      <button class="sub-tab" data-sub="codes">Codes of Practice</button>
-      <button class="sub-tab" data-sub="standards">Standards</button>
+      <button class="sub-tab${subtab === 'cross-references' ? ' active' : ''}" data-sub="cross-references">Cross-References</button>
+      <button class="sub-tab${subtab === 'penalties' ? ' active' : ''}" data-sub="penalties">Penalties</button>
+      <button class="sub-tab${subtab === 'supplements' ? ' active' : ''}" data-sub="supplements">Supplements</button>
     </div>
 
-    <div class="sub-panel active" data-subpanel="frameworks">
-      ${renderFrameworkMappings(state.crossRefs.frameworkMappings)}
+    <div class="sub-panel${subtab === 'cross-references' ? ' active' : ''}" data-subpanel="cross-references">
+      <div class="sub-tabs">
+        <button class="sub-tab active" data-sub="frameworks">International Frameworks</button>
+        <button class="sub-tab" data-sub="regulations">Regulations</button>
+        <button class="sub-tab" data-sub="guidelines">Guidelines</button>
+        <button class="sub-tab" data-sub="codes">Codes of Practice</button>
+        <button class="sub-tab" data-sub="standards">Standards</button>
+      </div>
+
+      <div class="sub-panel active" data-subpanel="frameworks">
+        ${renderFrameworkMappings(state.crossRefs.frameworkMappings)}
+      </div>
+      <div class="sub-panel" data-subpanel="regulations">
+        ${renderXrefMappings(state.crossRefs.actToRegs)}
+      </div>
+      <div class="sub-panel" data-subpanel="guidelines">
+        ${renderXrefMappings(state.crossRefs.actToGuidelines)}
+      </div>
+      <div class="sub-panel" data-subpanel="codes">
+        ${renderXrefMappings(state.crossRefs.actToCodes)}
+      </div>
+      <div class="sub-panel" data-subpanel="standards">
+        ${renderXrefMappings(state.crossRefs.actToStandards)}
+      </div>
     </div>
-    <div class="sub-panel" data-subpanel="regulations">
-      ${renderXrefMappings(state.crossRefs.actToRegs)}
+
+    <div class="sub-panel${subtab === 'penalties' ? ' active' : ''}" data-subpanel="penalties">
+      ${renderPenaltiesContent()}
     </div>
-    <div class="sub-panel" data-subpanel="guidelines">
-      ${renderXrefMappings(state.crossRefs.actToGuidelines)}
-    </div>
-    <div class="sub-panel" data-subpanel="codes">
-      ${renderXrefMappings(state.crossRefs.actToCodes)}
-    </div>
-    <div class="sub-panel" data-subpanel="standards">
-      ${renderXrefMappings(state.crossRefs.actToStandards)}
+
+    <div class="sub-panel${subtab === 'supplements' ? ' active' : ''}" data-subpanel="supplements">
+      ${renderSupplementsContent()}
     </div>
   `;
+}
+
+function renderPenaltiesContent() {
+  const categories = {};
+  for (const p of state.penalties) {
+    const cat = p.category || 'general';
+    if (!categories[cat]) categories[cat] = [];
+    categories[cat].push(p);
+  }
+  return `
+    <div class="stats-banner">
+      <div class="stat-card"><div class="stat-number">${state.penalties.length}</div><div class="stat-label">Offences</div></div>
+      <div class="stat-card"><div class="stat-number">${state.penalties.filter(p => p.amendedPenalty).length}</div><div class="stat-label">Enhanced (2024)</div></div>
+      <div class="stat-card"><div class="stat-number">RM1M</div><div class="stat-label">Max Fine</div></div>
+      <div class="stat-card"><div class="stat-number">3 yrs</div><div class="stat-label">Max Imprisonment</div></div>
+    </div>
+    <div class="filter-bar">
+      <span class="filter-chip active" data-filter="all">All</span>
+      ${Object.keys(categories).map(cat => `<span class="filter-chip" data-filter="${esc(cat)}">${esc(cat)}</span>`).join('')}
+    </div>
+    <div id="penalty-list">
+      ${state.penalties.map(p => renderPenaltyCard(p)).join('')}
+    </div>
+  `;
+}
+
+function renderSupplementsContent() {
+  const groups = [
+    { key: 'regulations', label: 'Regulations & Orders', color: '#1D4ED8' },
+    { key: 'guidelines', label: 'Guidelines', color: '#16A34A' },
+    { key: 'standards', label: 'Standards', color: '#D97706' },
+    { key: 'codesOfPractice', label: 'Codes of Practice', color: '#7C3AED' },
+  ];
+  return groups.map(g => {
+    const items = state.supplements[g.key] || [];
+    if (!items.length) return '';
+    return `
+      <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;color:${g.color};">${g.label}</h3>
+      <div class="control-grid" style="grid-template-columns:repeat(2,1fr);">
+        ${items.map(item => `
+          <div class="supplement-card" onclick="location.hash='#supplement/${item.id}'">
+            <div class="supplement-type" style="color:${g.color};">${esc(item.type || g.key)}</div>
+            <div class="supplement-title">${esc(item.title)}</div>
+            <div class="supplement-meta">
+              ${item.effectiveDate ? 'Effective: ' + esc(item.effectiveDate) : ''}
+              ${item.enablingSection ? ' &middot; Enabling: ' + esc(item.enablingSection) : ''}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }).join('');
 }
 
 function renderXrefMappings(data) {
@@ -1472,6 +1549,14 @@ async function renderRiskManagement(app) {
     return;
   }
 
+  // Load DPIA data
+  const [dpiaMethodology, dpiaThresholds, dpiaExamples, dpiaTemplates] = await Promise.all([
+    fetchJSON('dpia/methodology.json'),
+    fetchJSON('dpia/thresholds.json'),
+    fetchJSON('dpia/worked-examples.json'),
+    fetchJSON('dpia/templates.json'),
+  ]);
+
   // Compute stats from register
   const risks = (register && register.risks) || [];
   const categories = {};
@@ -1484,6 +1569,8 @@ async function renderRiskManagement(app) {
     bandCounts[band] = (bandCounts[band] || 0) + 1;
   }
 
+  const subtab = state.route.subtab || 'risk-main';
+
   app.innerHTML = `
     <div class="page-title">Risk Management</div>
     <div class="page-subtitle">PDPA-aligned data protection risk assessment methodology, risk register, and treatment options <span class="badge badge-ai" title="Constructed indicative content — not authoritative legal guidance">AI Generated</span></div>
@@ -1495,23 +1582,77 @@ async function renderRiskManagement(app) {
     </div>
 
     <div class="sub-tabs">
-      <button class="sub-tab active" data-sub="rm-methodology">Methodology</button>
-      <button class="sub-tab" data-sub="rm-register">Risk Register (${risks.length})</button>
-      <button class="sub-tab" data-sub="rm-checklist">Checklist</button>
-      <button class="sub-tab" data-sub="rm-treatment">Treatment Options</button>
+      <button class="sub-tab${subtab === 'risk-main' ? ' active' : ''}" data-sub="risk-main">Risk Assessment</button>
+      <button class="sub-tab${subtab === 'dpia' ? ' active' : ''}" data-sub="dpia">DPIA</button>
     </div>
 
-    <div class="sub-panel active" data-subpanel="rm-methodology">
-      ${renderRMMethodology(methodology, matrix)}
+    <div class="sub-panel${subtab === 'risk-main' ? ' active' : ''}" data-subpanel="risk-main">
+      <div class="sub-tabs">
+        <button class="sub-tab active" data-sub="rm-methodology">Methodology</button>
+        <button class="sub-tab" data-sub="rm-register">Risk Register (${risks.length})</button>
+        <button class="sub-tab" data-sub="rm-checklist">Checklist</button>
+        <button class="sub-tab" data-sub="rm-treatment">Treatment Options</button>
+      </div>
+
+      <div class="sub-panel active" data-subpanel="rm-methodology">
+        ${renderRMMethodology(methodology, matrix)}
+      </div>
+      <div class="sub-panel" data-subpanel="rm-register">
+        ${renderRMRegister(register, matrix)}
+      </div>
+      <div class="sub-panel" data-subpanel="rm-checklist">
+        ${renderRMChecklist(checklist)}
+      </div>
+      <div class="sub-panel" data-subpanel="rm-treatment">
+        ${renderRMTreatment(treatment)}
+      </div>
     </div>
-    <div class="sub-panel" data-subpanel="rm-register">
-      ${renderRMRegister(register, matrix)}
+
+    <div class="sub-panel${subtab === 'dpia' ? ' active' : ''}" data-subpanel="dpia">
+      ${renderDPIAContent(dpiaMethodology, dpiaThresholds, dpiaExamples, dpiaTemplates)}
     </div>
-    <div class="sub-panel" data-subpanel="rm-checklist">
-      ${renderRMChecklist(checklist)}
+  `;
+
+  // Attach DPIA screening interactivity if applicable
+  if (dpiaThresholds) initDPIAScreening(dpiaThresholds);
+}
+
+function renderDPIAContent(methodology, thresholds, examples, templates) {
+  if (!methodology && !thresholds && !examples && !templates) {
+    return '<div class="empty-state"><div class="empty-state-text">DPIA data not available.</div></div>';
+  }
+
+  const phases = (methodology && methodology.phases) || [];
+  const triggers = (thresholds && thresholds.mandatoryTriggers) || (thresholds && thresholds.mandate && thresholds.mandate.quantitative_thresholds) || [];
+  const questions = (thresholds && thresholds.screeningQuestions) || (thresholds && thresholds.qualitative_factors) || [];
+  const exampleList = (examples && examples.examples) || [];
+
+  return `
+    <div class="stats-banner">
+      <div class="stat-card"><div class="stat-number">${phases.length}</div><div class="stat-label">Assessment Phases</div></div>
+      <div class="stat-card"><div class="stat-number">${triggers.length}</div><div class="stat-label">Quantitative Thresholds</div></div>
+      <div class="stat-card"><div class="stat-number">${exampleList.length}</div><div class="stat-label">Worked Examples</div></div>
+      <div class="stat-card"><div class="stat-number">${(templates && templates.sections || []).length}</div><div class="stat-label">Template Sections</div></div>
     </div>
-    <div class="sub-panel" data-subpanel="rm-treatment">
-      ${renderRMTreatment(treatment)}
+
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="dpia-methodology">Methodology</button>
+      <button class="sub-tab" data-sub="dpia-screening">Screening Tool</button>
+      <button class="sub-tab" data-sub="dpia-examples">Worked Examples (${exampleList.length})</button>
+      <button class="sub-tab" data-sub="dpia-template">Assessment Template</button>
+    </div>
+
+    <div class="sub-panel active" data-subpanel="dpia-methodology">
+      ${renderDPIAMethodology(methodology)}
+    </div>
+    <div class="sub-panel" data-subpanel="dpia-screening">
+      ${renderDPIAScreening(thresholds)}
+    </div>
+    <div class="sub-panel" data-subpanel="dpia-examples">
+      ${renderDPIAExamples(examples)}
+    </div>
+    <div class="sub-panel" data-subpanel="dpia-template">
+      ${renderDPIATemplate(templates)}
     </div>
   `;
 }
