@@ -880,7 +880,7 @@
         "History of registration renewals and amendments"
       ],
       "controlSlugs": [
-        "data-user-registration-management"
+        "data-controller-registration-management"
       ]
     },
     {
@@ -1455,7 +1455,7 @@
         "Appeal Tribunal submissions and decisions"
       ],
       "controlSlugs": [
-        "data-user-registration-management",
+        "data-controller-registration-management",
         "breach-notification-to-commissioner"
       ]
     }

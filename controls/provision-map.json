@@ -67,17 +67,17 @@
       "access-control-and-identity-management"
     ],
     "s13": [
-      "data-user-registration-management",
+      "data-controller-registration-management",
       "regulatory-monitoring"
     ],
     "s14": [
-      "data-user-registration-management"
+      "data-controller-registration-management"
     ],
     "s15": [
-      "data-user-registration-management"
+      "data-controller-registration-management"
     ],
     "s16": [
-      "data-user-registration-management"
+      "data-controller-registration-management"
     ],
     "s29": [
       "sensitive-data-explicit-consent"
@@ -218,7 +218,7 @@
     "privacy-by-design-and-default": ["s5", "s6", "s9"],
     "compliance-monitoring-and-audit": ["s5", "s9"],
     "board-reporting-and-accountability": ["s5", "s12A"],
-    "data-user-registration-management": ["s13", "s14", "s15", "s16"],
+    "data-controller-registration-management": ["s13", "s14", "s15", "s16"],
     "regulatory-inspection-readiness": ["s101", "s102", "s103", "s104", "s105"],
     "enforcement-notice-compliance": ["s110", "s111", "s133"],
     "regulatory-monitoring": ["s13", "s101"]

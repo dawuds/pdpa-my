@@ -2575,7 +2575,7 @@
       "sectorVariants": {}
     },
     {
-      "slug": "data-user-registration-management",
+      "slug": "data-controller-registration-management",
       "name": "Data Controller Registration Management",
       "domain": "registration-compliance",
       "type": "operational",

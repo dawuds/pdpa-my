@@ -175,7 +175,7 @@
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
     "verificationRequired": true,
     "notes": "Distinct from the Disclosure Principle (s8) violation. This provision targets deliberate unauthorized disclosures by persons who have access to personal data in the course of their employment or engagement.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure by data controllers. The pre-amendment 'Unauthorized Disclosure by Data Controller' offence may have been renumbered or consolidated into s129 ('Offences in relation to personal data') or s128 ('General offences'). Verify against the gazetted amended Act text before relying on this section reference."
+    "note": "POST-A1727 DISCREPANCY: In the post-A1727 provisions database, s132 is 'Evidence' (a procedural provision), not an offence for unauthorized disclosure. The pre-amendment unauthorized disclosure offence has likely been consolidated into s129 ('Offences in relation to personal data') post-A1727. This section reference (s132) reflects the pre-amendment numbering and must be verified against the gazetted amended Act text."
   },
   {
     "id": "pen-s29",
@@ -254,7 +254,7 @@
     "compoundRegulation": null,
     "verificationRequired": true,
     "notes": "Covers both written and oral statements. Applies whether the false statement was made knowingly or recklessly. Applies to data controllers, data subjects, data processors, and any other person providing information under the Act.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s134 is 'Public servants' (an administrative provision classifying Commissioner staff as public servants for Penal Code purposes), not an offence for false statements. The pre-amendment 'False Statements' offence may have been renumbered in the post-A1727 Act. Verify against the gazetted amended Act text to locate the correct section for this offence."
+    "note": "POST-A1727 DISCREPANCY: In the post-A1727 provisions database, s134 is 'Public servants' (an administrative provision), not an offence for false statements. The pre-amendment false statements offence has likely been renumbered due to the insertion of new sections by A1727. This section reference (s134) reflects the pre-amendment numbering and must be verified against the gazetted amended Act text."
   },
   {
     "id": "pen-s135A",
@@ -350,7 +350,7 @@
     "compoundRegulation": "Personal Data Protection (Compounding of Offences) Regulations 2016",
     "verificationRequired": true,
     "notes": "Covers access requests (s30), correction requests (s34), and opt-out from direct marketing (s43). Each unanswered or improperly answered request may constitute a separate offence.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s44 is 'Right to restrict processing' (a rights-based provision conferring rights on data subjects), not a penalty/offence section for contravention of data subject rights. The pre-amendment offence for failing to comply with data subject rights requests may have been renumbered or may now be captured under s128 ('General offences') or another penalty provision. Verify against the gazetted amended Act text to locate the correct section."
+    "note": "POST-A1727 DISCREPANCY: In the post-A1727 provisions database, s44 is 'Right to restrict processing' (a new rights-based provision inserted by A1727 s18), not a penalty/offence section. The pre-amendment offence for contravention of data subject rights has been renumbered due to insertion of ss41-44 (new data subject rights). The penalty for non-compliance with data subject rights may now fall under s128 ('General offences'). This section reference (s44) reflects the pre-amendment numbering."
   },
   {
     "id": "pen-s17",
@@ -529,7 +529,7 @@
     "compoundRegulation": null,
     "verificationRequired": true,
     "notes": "Applies to both data controllers and third parties who may hold relevant information. Privilege against self-incrimination does not apply to the production of documents in administrative proceedings under the Act.",
-    "note": "SECTION REFERENCE UNVERIFIED: In the post-A1727 provisions database, s109 is 'Confidentiality of complaints' (an administrative obligation on the Commissioner), not an offence for failure to cooperate with investigation. The offence for failing to attend/answer questions under investigation is located at s104 ('Power to require attendance') in the post-A1727 database. Verify against the gazetted amended Act text to determine whether this entry should be updated to s104 or a different section."
+    "note": "POST-A1727 DISCREPANCY: In the post-A1727 provisions database, s109 is 'Confidentiality of complaints' (an administrative obligation), not an offence for failure to cooperate. The offence for failing to attend/answer questions under investigation is at s104 ('Power to require attendance') in the post-A1727 database. This section reference (s109) reflects the pre-amendment numbering and should likely be updated to s104."
   },
   {
     "id": "pen-s114",

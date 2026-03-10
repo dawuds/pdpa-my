@@ -16,6 +16,16 @@ const state = {
 };
 
 const cache = new Map();
+
+function renderFetchError(el, url, error) {
+  el.innerHTML = '<div class="fetch-error">' +
+    '<h2>Failed to load data</h2>' +
+    '<p>Could not fetch <strong>' + esc(url) + '</strong></p>' +
+    (error ? '<p class="error-detail">' + esc(String(error)) + '</p>' : '') +
+    '<button onclick="location.reload()">Retry</button>' +
+    '</div>';
+}
+
 async function fetchJSON(path) {
   if (cache.has(path)) return cache.get(path);
   try {
@@ -25,48 +35,75 @@ async function fetchJSON(path) {
     cache.set(path, data);
     return data;
   } catch (e) {
-    console.warn(`Failed to load ${path}:`, e);
+    console.error(`Failed to load ${path}:`, e);
+    const app = document.getElementById('app');
+    if (app) renderFetchError(app, path, e);
     return null;
   }
 }
 
 /* ===== ROUTING ===== */
+function navigate(hash) {
+  location.hash = '#' + hash;
+}
+
 function parseRoute() {
   const hash = location.hash.slice(1) || '';
-  if (!hash) return { view: 'overview' };
+  if (!hash || hash === 'overview') return { view: 'overview' };
   if (hash.startsWith('search/')) return { view: 'search', query: decodeURIComponent(hash.slice(7)) };
-  if (hash.startsWith('part/')) return { view: 'part', id: hash.slice(5) };
+  // Framework routes (absorbs principles, parts, sections)
+  if (hash === 'framework') return { view: 'framework' };
+  if (hash.startsWith('framework/')) return { view: 'framework-detail', id: hash.slice(10) };
+  // Legacy routes redirect to framework
+  if (hash.startsWith('part/')) return { view: 'framework-detail', id: hash.slice(5) };
   if (hash.startsWith('section/')) return { view: 'section', id: hash.slice(8) };
   if (hash.startsWith('principle/')) return { view: 'principle', id: hash.slice(10) };
-  if (hash === 'principles') return { view: 'principles' };
-  if (hash === 'penalties') return { view: 'penalties' };
+  if (hash === 'principles') return { view: 'framework' };
+  // Controls routes
   if (hash === 'controls') return { view: 'controls' };
   if (hash.startsWith('control/')) return { view: 'control-detail', slug: hash.slice(8) };
-  if (hash === 'artifacts') return { view: 'artifacts' };
+  // Risk management routes
+  if (hash === 'risk') return { view: 'risk' };
+  if (hash.startsWith('risk/')) return { view: 'risk', sub: hash.slice(5) };
+  // Sectors routes
+  if (hash === 'sectors') return { view: 'sectors' };
+  if (hash.startsWith('sector/')) return { view: 'sector-detail', id: hash.slice(7) };
+  // Penalties
+  if (hash === 'penalties') return { view: 'penalties' };
+  // Supplements routes
   if (hash === 'supplements') return { view: 'supplements' };
   if (hash.startsWith('supplement/')) return { view: 'supplement-detail', id: hash.slice(11) };
-  if (hash === 'cross-references') return { view: 'cross-references' };
-  if (hash === 'framework') return { view: 'framework' };
-  if (hash === 'risk-management') return { view: 'risk-management' };
+  // Reference routes (absorbs cross-references + framework mappings)
+  if (hash === 'reference') return { view: 'reference' };
+  if (hash.startsWith('reference/')) return { view: 'reference', sub: hash.slice(10) };
+  // DPIA routes
   if (hash === 'dpia') return { view: 'dpia' };
+  if (hash.startsWith('dpia/')) return { view: 'dpia', sub: hash.slice(5) };
+  // Legacy redirects
+  if (hash === 'artifacts') return { view: 'controls' };
+  if (hash === 'cross-references') return { view: 'reference' };
+  if (hash === 'risk-management') return { view: 'risk' };
   return { view: 'overview' };
 }
 
 /* ===== INIT ===== */
 async function init() {
-  const [parts, provisionsArr] = await Promise.all([
+  const [parts, provisionsArr, principlesArr] = await Promise.all([
     fetchJSON('provisions/parts.json'),
     fetchJSON('provisions/index.json'),
+    fetchJSON('principles/index.json'),
   ]);
   state.parts = parts || [];
   state.provisions = {};
   if (provisionsArr) {
     for (const s of provisionsArr) state.provisions[s.id] = s;
   }
+  state.principles = principlesArr || [];
   window.addEventListener('hashchange', render);
   document.addEventListener('click', handleClick);
   document.addEventListener('change', handleChange);
-  document.getElementById('search-input').addEventListener('input', debounce(handleSearch, 300));
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.addEventListener('input', debounce(handleSearch, 300));
   render();
 }
 
@@ -82,19 +119,19 @@ function render() {
   updateNav();
   switch (state.route.view) {
     case 'overview': renderOverview(app); break;
-    case 'part': renderPart(app, state.route.id); break;
+    case 'framework': renderFramework(app); break;
+    case 'framework-detail': renderPart(app, state.route.id); break;
     case 'section': renderSection(app, state.route.id); break;
-    case 'principles': renderPrinciples(app); break;
     case 'principle': renderPrinciple(app, state.route.id); break;
-    case 'penalties': renderPenalties(app); break;
     case 'controls': renderControls(app); break;
     case 'control-detail': renderControlDetail(app, state.route.slug); break;
-    case 'artifacts': renderArtifacts(app); break;
+    case 'risk': renderRiskManagement(app); break;
+    case 'sectors': renderSectors(app); break;
+    case 'sector-detail': renderSectorDetail(app, state.route.id); break;
+    case 'penalties': renderPenalties(app); break;
     case 'supplements': renderSupplements(app); break;
     case 'supplement-detail': renderSupplementDetail(app, state.route.id); break;
-    case 'cross-references': renderCrossReferences(app); break;
-    case 'framework': renderFramework(app); break;
-    case 'risk-management': renderRiskManagement(app); break;
+    case 'reference': renderReference(app); break;
     case 'dpia': renderDPIA(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
@@ -103,18 +140,40 @@ function render() {
 }
 
 function updateNav() {
+  const rv = state.route.view;
   document.querySelectorAll('.nav-link').forEach(el => {
     const view = el.dataset.view;
-    el.classList.toggle('active', view === state.route.view ||
-      (view === 'overview' && state.route.view === 'part') ||
-      (view === 'overview' && state.route.view === 'section') ||
-      (view === 'principles' && state.route.view === 'principle') ||
-      (view === 'controls' && state.route.view === 'control-detail') ||
-      (view === 'supplements' && state.route.view === 'supplement-detail') ||
-      (view === 'framework' && state.route.view === 'framework') ||
-      (view === 'risk-management' && state.route.view === 'risk-management') ||
-      (view === 'dpia' && state.route.view === 'dpia')
-    );
+    let active = false;
+    switch (view) {
+      case 'overview':
+        active = rv === 'overview';
+        break;
+      case 'framework':
+        active = rv === 'framework' || rv === 'framework-detail' || rv === 'section' || rv === 'principle';
+        break;
+      case 'controls':
+        active = rv === 'controls' || rv === 'control-detail';
+        break;
+      case 'risk':
+        active = rv === 'risk';
+        break;
+      case 'sectors':
+        active = rv === 'sectors' || rv === 'sector-detail';
+        break;
+      case 'penalties':
+        active = rv === 'penalties';
+        break;
+      case 'supplements':
+        active = rv === 'supplements' || rv === 'supplement-detail';
+        break;
+      case 'reference':
+        active = rv === 'reference';
+        break;
+      case 'dpia':
+        active = rv === 'dpia';
+        break;
+    }
+    el.classList.toggle('active', active);
   });
 }
 
@@ -129,17 +188,17 @@ function renderOverview(el) {
     <div class="stats-banner">
       <div class="stat-card"><div class="stat-number">${totalSections}</div><div class="stat-label">Sections</div></div>
       <div class="stat-card"><div class="stat-number">11</div><div class="stat-label">Parts</div></div>
-      <div class="stat-card"><div class="stat-number">11</div><div class="stat-label">Principles</div></div>
+      <div class="stat-card"><div class="stat-number">${state.principles ? state.principles.length : '…'}</div><div class="stat-label">Principles</div></div>
       <div class="stat-card"><div class="stat-number">${amended}</div><div class="stat-label">Amended (2024)</div></div>
     </div>
     <h2 style="font-size:1.125rem;font-weight:600;margin-bottom:1rem;">Browse by Part</h2>
-    <div class="part-grid">
+    <div class="control-grid">
       ${state.parts.map(p => {
         const sections = Object.values(state.provisions).filter(s => s.part === p.id);
-        return `<a href="#part/${p.id}" class="part-card" data-part="${p.id}">
-          <div class="part-card-id">Part ${p.id}</div>
-          <div class="part-card-name">${esc(p.name)}</div>
-          <div class="part-card-meta">${sections.length} sections &middot; ${p.sections}</div>
+        return `<a href="#framework/${p.id}" class="control-card" data-part="${p.id}" style="text-decoration:none;color:inherit;display:block;border-left:4px solid var(--accent);">
+          <div class="control-id">Part ${p.id}</div>
+          <h3 class="control-card-title">${esc(p.name)}</h3>
+          <div class="control-card-meta"><span class="badge badge-category">${sections.length} sections</span></div>
         </a>`;
       }).join('')}
     </div>
@@ -163,7 +222,7 @@ function renderPart(el, partId) {
   }
 
   el.innerHTML = `
-    <div class="breadcrumbs"><a href="#">Overview</a><span class="sep">/</span>Part ${partId}</div>
+    <div class="breadcrumbs"><a href="#framework">Framework</a><span class="sep">/</span><span class="current">Part ${partId}</span></div>
     <div class="page-title">Part ${partId}: ${esc(part.name)}</div>
     <div class="page-subtitle">${esc(part.description)} &middot; ${sections.length} sections</div>
     <div class="accordion">
@@ -199,9 +258,9 @@ function renderSection(el, sectionId) {
 
   el.innerHTML = `
     <div class="breadcrumbs">
-      <a href="#">Overview</a><span class="sep">/</span>
-      <a href="#part/${s.part}">Part ${s.part}${part ? ': ' + esc(part.name) : ''}</a><span class="sep">/</span>
-      ${s.id}
+      <a href="#framework">Framework</a><span class="sep">/</span>
+      <a href="#framework/${s.part}">Part ${s.part}${part ? ': ' + esc(part.name) : ''}</a><span class="sep">/</span>
+      <span class="current">${s.id}</span>
     </div>
     <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.25rem;">
       <span style="font-family:var(--mono);font-size:1rem;color:var(--accent);font-weight:600;">${s.id}</span>
@@ -274,7 +333,7 @@ async function activateTab(tabName, sectionId) {
         fetchJSON('controls/library.json'),
         fetchJSON('controls/provision-map.json'),
       ]);
-      state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || { sectionToControls: {}, controlToSections: {} } };
+      state.controls = { domains: domains || {}, library: normalizeControlsLibrary(library), provisionMap: provisionMap || { sectionToControls: {}, controlToSections: {} } };
     }
     const slugs = state.controls.provisionMap.sectionToControls?.[sectionId] || [];
     if (!slugs.length) {
@@ -443,9 +502,9 @@ function renderControlCard(c) {
       ` : ''}
       ${c.maturity ? `
         <div class="maturity-grid">
-          <div class="maturity-level basic"><div class="maturity-label">Basic</div>${esc(c.maturity.basic || '')}</div>
-          <div class="maturity-level mature"><div class="maturity-label">Mature</div>${esc(c.maturity.mature || '')}</div>
-          <div class="maturity-level advanced"><div class="maturity-label">Advanced</div>${esc(c.maturity.advanced || '')}</div>
+          <div class="maturity-card maturity-basic"><div class="maturity-label">Basic</div><p>${esc(c.maturity.basic || '')}</p></div>
+          <div class="maturity-card maturity-mature"><div class="maturity-label">Mature</div><p>${esc(c.maturity.mature || '')}</p></div>
+          <div class="maturity-card maturity-advanced"><div class="maturity-label">Advanced</div><p>${esc(c.maturity.advanced || '')}</p></div>
         </div>
       ` : ''}
       <div class="control-frameworks">
@@ -485,14 +544,14 @@ async function renderPrinciples(el) {
     state.principles = await fetchJSON('principles/index.json') || [];
   }
   el.innerHTML = `
-    <div class="page-title">The 7 PDPA Principles</div>
-    <div class="page-subtitle">Part II, Division 1 — Personal Data Protection Principles (Sections 5-12)</div>
-    <div class="part-grid" style="grid-template-columns:repeat(2,1fr);">
+    <div class="page-title">The ${state.principles.length} PDPA Principles &amp; Rights</div>
+    <div class="page-subtitle">Part II — Personal Data Protection Principles and Data Subject Rights</div>
+    <div class="control-grid" style="grid-template-columns:repeat(2,1fr);">
       ${state.principles.map(p => `
-        <a href="#principle/${p.id}" class="part-card" data-part="II">
-          <div class="part-card-id">Section ${p.section}</div>
-          <div class="part-card-name">${esc(p.name)}</div>
-          <div class="part-card-meta">${(p.obligations || []).length} obligations &middot; ${(p.exceptions || []).length} exceptions</div>
+        <a href="#principle/${p.id}" class="control-card" data-part="II">
+          <div class="control-card-id">Section ${p.section}</div>
+          <div class="control-card-name">${esc(p.name)}</div>
+          <div class="control-card-meta">${(p.obligations || []).length} obligations &middot; ${(p.exceptions || []).length} exceptions</div>
         </a>
       `).join('')}
     </div>
@@ -508,7 +567,7 @@ async function renderPrinciple(el, id) {
   if (!p) return renderNotFound(el);
 
   el.innerHTML = `
-    <div class="breadcrumbs"><a href="#">Overview</a><span class="sep">/</span><a href="#principles">Principles</a><span class="sep">/</span>${esc(p.name)}</div>
+    <div class="breadcrumbs"><a href="#framework">Framework</a><span class="sep">/</span><a href="#framework">Principles</a><span class="sep">/</span><span class="current">${esc(p.name)}</span></div>
     <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.25rem;">
       <span style="font-family:var(--mono);font-size:1rem;color:var(--accent);font-weight:600;">Section ${p.section}</span>
     </div>
@@ -653,6 +712,21 @@ function controlHasSector(control, sector) {
   return control.sectorVariants && Object.keys(control.sectorVariants).includes(sector);
 }
 
+function normalizeControlsLibrary(library) {
+  // If library has a flat {domains, controls} structure, group controls by domain slug
+  if (library && library.controls && Array.isArray(library.controls)) {
+    const grouped = {};
+    for (const c of library.controls) {
+      const d = c.domain || 'uncategorized';
+      if (!grouped[d]) grouped[d] = [];
+      grouped[d].push(c);
+    }
+    return grouped;
+  }
+  // Already domain-keyed object (or empty)
+  return library || {};
+}
+
 async function renderControls(el) {
   if (!state.controls) {
     const [domains, library, provisionMap] = await Promise.all([
@@ -660,7 +734,7 @@ async function renderControls(el) {
       fetchJSON('controls/library.json'),
       fetchJSON('controls/provision-map.json'),
     ]);
-    state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
+    state.controls = { domains: domains || {}, library: normalizeControlsLibrary(library), provisionMap: provisionMap || {} };
   }
   const totalControls = Object.values(state.controls.library).reduce((sum, arr) => sum + arr.length, 0);
   const domainEntries = Object.entries(state.controls.domains);
@@ -733,7 +807,7 @@ async function renderControlDetail(el, slug) {
       fetchJSON('controls/library.json'),
       fetchJSON('controls/provision-map.json'),
     ]);
-    state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
+    state.controls = { domains: domains || {}, library: normalizeControlsLibrary(library), provisionMap: provisionMap || {} };
   }
   if (!state.artifacts) {
     const [inventory, provisionMap] = await Promise.all([
@@ -791,87 +865,116 @@ async function renderControlDetail(el, slug) {
     }
   });
 
-  const auditPackageHTML = (linkedArtifacts.length || linkedEvidence.length) ? `
-    <div class="audit-package">
-      <div class="audit-package-title">AUDIT PACKAGE</div>
-      <div class="audit-package-summary">${linkedArtifacts.length} artifact${linkedArtifacts.length !== 1 ? 's' : ''} required, ${linkedEvidence.length} evidence item${linkedEvidence.length !== 1 ? 's' : ''}</div>
+  // --- Build Requirements section from state.requirements ---
+  if (!state.requirements) {
+    state.requirements = await fetchJSON('requirements/index.json') || {};
+  }
+  // Collect requirements for all mapped sections
+  const reqSections = control.sections || [];
+  const legalReqs = [], technicalReqs = [], governanceReqs = [];
+  for (const sid of reqSections) {
+    const req = state.requirements[sid];
+    if (!req) continue;
+    if (req.legal && req.legal.requirements) legalReqs.push(...req.legal.requirements);
+    if (req.technical && req.technical.requirements) technicalReqs.push(...req.technical.requirements);
+    if (req.governance && req.governance.requirements) governanceReqs.push(...req.governance.requirements);
+  }
+  const hasRequirements = legalReqs.length || technicalReqs.length || governanceReqs.length;
 
-      ${linkedArtifacts.length ? `
-        <div class="accordion">
-          <div class="accordion-item open">
-            <div class="accordion-header" data-accordion>
-              <span>Required Artifacts (${linkedArtifacts.length})</span>
-              <span class="accordion-arrow">&#9654;</span>
-            </div>
-            <div class="accordion-body">
-              ${linkedArtifacts.map(a => `
-                <div class="artifact-link-card">
-                  <div class="artifact-link-card-header">
-                    <span class="artifact-link-card-name">${esc(a.name)}</span>
-                    ${a.mandatory ? '<span class="badge badge-mandatory">Mandatory</span>' : ''}
-                    <span class="badge badge-category">${esc(a.category)}</span>
-                  </div>
-                  <div class="artifact-link-card-meta">
-                    <span>Owner: ${esc(a.owner || 'N/A')}</span>
-                    <span>Review: ${esc(a.reviewFrequency || 'N/A')}</span>
-                  </div>
-                  ${a.keyContents && a.keyContents.length ? `
-                    <ul class="artifact-link-card-checklist">
-                      ${a.keyContents.map(k => `<li>${esc(k)}</li>`).join('')}
-                    </ul>
-                  ` : ''}
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </div>
-      ` : ''}
+  // --- Build Framework Mappings ---
+  const fwMappings = [];
+  if (control.sections && control.sections.length) fwMappings.push({ label: 'PDPA (Act 709)', codes: control.sections.join(', ') });
+  if (control.iso27701 && control.iso27701.length) fwMappings.push({ label: 'ISO 27701', codes: control.iso27701.join(', ') });
+  if (control.gdpr && control.gdpr.length) fwMappings.push({ label: 'GDPR', codes: control.gdpr.join(', ') });
+  if (control.apecCBPR && control.apecCBPR.length) fwMappings.push({ label: 'APEC CBPR', codes: control.apecCBPR.join(', ') });
+  if (control.relatedCodes && control.relatedCodes.length) fwMappings.push({ label: 'Codes of Practice', codes: control.relatedCodes.join(', ') });
+  if (control.relatedGuidelines && control.relatedGuidelines.length) fwMappings.push({ label: 'Guidelines', codes: control.relatedGuidelines.join(', ') });
+  if (control.relatedStandards && control.relatedStandards.length) fwMappings.push({ label: 'Standards', codes: control.relatedStandards.join(', ') });
+
+  // --- Build Source Provisions with sector variants ---
+  const sectorVariantEntries = control.sectorVariants ? Object.entries(control.sectorVariants) : [];
+
+  // --- Build Audit Package HTML (Evidence FIRST, then Artifacts per standard) ---
+  const auditPackageHTML = (linkedArtifacts.length || linkedEvidence.length) ? `
+    <section class="audit-package">
+      <h2 class="audit-package-title">
+        Audit Package
+        <span class="audit-package-counts">
+          <span class="badge badge-evidence">${linkedEvidence.length} evidence item${linkedEvidence.length !== 1 ? 's' : ''}</span>
+          <span class="badge badge-artifacts">${linkedArtifacts.length} artifact${linkedArtifacts.length !== 1 ? 's' : ''}</span>
+        </span>
+      </h2>
 
       ${linkedEvidence.length ? `
         <div class="accordion">
-          <div class="accordion-item open">
-            <div class="accordion-header" data-accordion>
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="true">
               <span>Evidence Checklist (${linkedEvidence.length})</span>
-              <span class="accordion-arrow">&#9654;</span>
-            </div>
-            <div class="accordion-body">
+              <span class="accordion-icon">&#9660;</span>
+            </button>
+            <div class="accordion-content" role="region">
               ${linkedEvidence.map(item => `
-                <div class="evidence-checklist-item">
-                  <div class="evidence-checklist-item-header">
-                    <span class="evidence-checklist-item-name">${esc(item.name)}</span>
-                    <span class="badge badge-category">${esc(item.format || '')}</span>
-                    ${item.retentionPeriod ? `<span class="badge badge-layer">${esc(item.retentionPeriod)}</span>` : ''}
+                <div class="evidence-item">
+                  <div class="evidence-item-header">
+                    ${item.id ? `<span class="evidence-id">${esc(item.id)}</span>` : ''}
+                    <span class="evidence-item-name">${esc(item.name)}</span>
                   </div>
-                  <div class="evidence-checklist-item-desc">${esc(item.description)}</div>
-                  ${item.suggestedSources && item.suggestedSources.length ? `
-                    <div class="evidence-checklist-item-sources">
-                      <strong>Suggested Sources:</strong> ${item.suggestedSources.map(s => esc(s)).join('; ')}
+                  <p class="evidence-item-desc">${esc(item.description)}</p>
+                  ${(item.whatGoodLooksLike && item.whatGoodLooksLike.length) || (item.commonGaps && item.commonGaps.length) ? `
+                    <div class="evidence-detail-grid">
+                      ${item.whatGoodLooksLike && item.whatGoodLooksLike.length ? `
+                        <div class="evidence-block evidence-good">
+                          <div class="evidence-block-label">What Good Looks Like</div>
+                          <ul>${item.whatGoodLooksLike.map(g => `<li>${esc(g)}</li>`).join('')}</ul>
+                        </div>
+                      ` : ''}
+                      ${item.commonGaps && item.commonGaps.length ? `
+                        <div class="evidence-block evidence-gap">
+                          <div class="evidence-block-label">Common Gaps</div>
+                          <ul>${item.commonGaps.map(g => `<li>${esc(g)}</li>`).join('')}</ul>
+                        </div>
+                      ` : ''}
                     </div>
                   ` : ''}
-                  ${item.whatGoodLooksLike && item.whatGoodLooksLike.length ? `
-                    <div class="accordion">
-                      <div class="accordion-item">
-                        <div class="accordion-header" data-accordion>
-                          <span>What Good Looks Like (${item.whatGoodLooksLike.length})</span>
-                          <span class="accordion-arrow">&#9654;</span>
-                        </div>
-                        <div class="accordion-body">
-                          <ul class="evidence-good">${item.whatGoodLooksLike.map(g => `<li><span>${esc(g)}</span></li>`).join('')}</ul>
-                        </div>
-                      </div>
+                  <div class="evidence-item-meta">
+                    ${item.format ? `<span class="meta-item"><strong>Format:</strong> ${esc(item.format)}</span>` : ''}
+                    ${item.retentionPeriod ? `<span class="meta-item"><strong>Retention:</strong> ${esc(item.retentionPeriod)}</span>` : ''}
+                    ${item.suggestedSources && item.suggestedSources.length ? `<span class="meta-item"><strong>Source:</strong> ${item.suggestedSources.map(s => esc(s)).join(', ')}</span>` : ''}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
+      ${linkedArtifacts.length ? `
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="true">
+              <span>Required Artifacts (${linkedArtifacts.length})</span>
+              <span class="accordion-icon">&#9660;</span>
+            </button>
+            <div class="accordion-content" role="region">
+              ${linkedArtifacts.map(a => `
+                <div class="artifact-card">
+                  <div class="artifact-card-header">
+                    <span class="artifact-card-name">${esc(a.name)}</span>
+                    <div class="artifact-card-badges">
+                      ${a.mandatory ? '<span class="badge badge-mandatory">Mandatory</span>' : '<span class="badge badge-optional">Optional</span>'}
+                      <span class="badge badge-category">${esc(a.category)}</span>
                     </div>
-                  ` : ''}
-                  ${item.commonGaps && item.commonGaps.length ? `
-                    <div class="accordion">
-                      <div class="accordion-item">
-                        <div class="accordion-header" data-accordion>
-                          <span>Common Gaps (${item.commonGaps.length})</span>
-                          <span class="accordion-arrow">&#9654;</span>
-                        </div>
-                        <div class="accordion-body">
-                          <ul class="evidence-gap">${item.commonGaps.map(g => `<li><span>${esc(g)}</span></li>`).join('')}</ul>
-                        </div>
-                      </div>
+                  </div>
+                  <p class="artifact-card-desc">${esc(a.description || '')}</p>
+                  <div class="artifact-card-meta">
+                    <span class="meta-item"><strong>Owner:</strong> ${esc(a.owner || 'N/A')}</span>
+                    <span class="meta-item"><strong>Review:</strong> ${esc(a.reviewFrequency || 'N/A')}</span>
+                    ${a.format ? `<span class="meta-item"><strong>Format:</strong> ${esc(a.format)}</span>` : ''}
+                  </div>
+                  ${a.keyContents && a.keyContents.length ? `
+                    <div class="artifact-card-contents">
+                      <strong>Key Contents:</strong>
+                      <ul>${a.keyContents.map(k => `<li>${esc(k)}</li>`).join('')}</ul>
                     </div>
                   ` : ''}
                 </div>
@@ -880,94 +983,132 @@ async function renderControlDetail(el, slug) {
           </div>
         </div>
       ` : ''}
-    </div>
+    </section>
   ` : '';
 
+  // --- Render Control Detail: Auditor Flow ---
   el.innerHTML = `
-    <div class="breadcrumbs"><a href="#">Overview</a><span class="sep">/</span><a href="#controls">Controls</a><span class="sep">/</span>${esc(control.name)}</div>
-    ${renderComplianceToggle(slug)}
-    <div style="display:flex;gap:0.375rem;margin-bottom:0.25rem;">
-      <span class="badge badge-domain">${esc(domain.name || control.domain)}</span>
-      <span class="badge badge-type">${esc(control.type)}</span>
-      <span class="badge badge-layer">${esc(control.layer || '')}</span>
-    </div>
-    <div class="page-title">${esc(control.name)}</div>
-    <div class="page-subtitle">${esc(control.description)}</div>
-    ${renderControlCard(control)}
-    ${control.sections && control.sections.length ? `
-      <div class="card">
-        <div class="card-title">Mapped Sections</div>
-        <div style="display:flex;gap:0.375rem;flex-wrap:wrap;">
-          ${control.sections.map(s => `<a href="#section/${s}" class="badge badge-domain">${esc(s)}</a>`).join('')}
+    <article class="control-detail">
+
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs">
+        <a href="#controls">Controls</a>
+        <span class="sep">/</span>
+        <span class="current">${esc(control.name)}</span>
+      </nav>
+
+      <!-- Header -->
+      <header class="control-detail-header">
+        <div class="control-detail-id-row">
+          <span class="badge badge-domain" style="--domain-color: var(--accent)">${esc(domain.name || control.domain)}</span>
+          <span class="badge badge-type-${(control.type || '').toLowerCase().replace(/[^a-z]/g, '')}">${esc(control.type || '')}</span>
+          ${control.layer ? `<span class="badge badge-category">${esc(control.layer)}</span>` : ''}
         </div>
-      </div>
-    ` : ''}
-    ${hasStandards ? `
-      <div class="card">
-        <div class="card-title">Related Standards</div>
-        <div class="supplement-links">
-          ${control.relatedStandards.map(s => `<a href="#supplement/${s}" class="supplement-link-badge supplement-link-standard">${esc(s)}</a>`).join('')}
-        </div>
-      </div>
-    ` : ''}
-    ${hasGuidelines ? `
-      <div class="card">
-        <div class="card-title">Related Guidelines</div>
-        <div class="supplement-links">
-          ${control.relatedGuidelines.map(g => `<a href="#supplement/${g}" class="supplement-link-badge supplement-link-guideline">${esc(g)}</a>`).join('')}
-        </div>
-      </div>
-    ` : ''}
-    ${hasCodes ? `
-      <div class="card">
-        <div class="card-title">Related Codes of Practice</div>
-        <div class="supplement-links">
-          ${control.relatedCodes.map(c => `<a href="#supplement/${c}" class="supplement-link-badge supplement-link-code">${esc(c)}</a>`).join('')}
-        </div>
-      </div>
-    ` : ''}
-    ${hasSectorVariants ? `
-      <div class="card">
-        <div class="card-title">Sector-Specific Variants</div>
-        ${Object.entries(control.sectorVariants).map(([sector, variant]) => `
-          <div class="sector-variant-card">
-            <div class="sector-variant-name">${esc(sector)}</div>
-            <div class="sector-variant-reqs">${esc(variant.additionalRequirements || '')}</div>
-            ${variant.relatedProvision ? `<div class="sector-variant-provision">${esc(variant.relatedProvision)}</div>` : ''}
+        <h1 class="control-detail-title">${esc(control.name)}</h1>
+        <p class="control-detail-desc">${esc(control.description)}</p>
+      </header>
+
+      ${renderComplianceToggle(slug)}
+
+      <!-- ========== SECTION 1: Requirements ========== -->
+      ${hasRequirements ? `
+        <section class="detail-section">
+          <h2 class="detail-section-title">Requirements</h2>
+          <div class="requirements-grid">
+            <div class="requirement-block requirement-legal">
+              <div class="requirement-block-label">Legal / Regulatory</div>
+              ${legalReqs.length ? `<ul>${legalReqs.map(r => `<li>${esc(r.requirement)}</li>`).join('')}</ul>` : '<p style="color:var(--text-muted);font-size:var(--font-size-sm);">No legal requirements mapped.</p>'}
+            </div>
+            <div class="requirement-block requirement-technical">
+              <div class="requirement-block-label">Technical</div>
+              ${technicalReqs.length ? `<ul>${technicalReqs.map(r => `<li>${esc(r.requirement)}</li>`).join('')}</ul>` : '<p style="color:var(--text-muted);font-size:var(--font-size-sm);">No technical requirements mapped.</p>'}
+            </div>
+            <div class="requirement-block requirement-governance">
+              <div class="requirement-block-label">Governance</div>
+              ${governanceReqs.length ? `<ul>${governanceReqs.map(r => `<li>${esc(r.requirement)}</li>`).join('')}</ul>` : '<p style="color:var(--text-muted);font-size:var(--font-size-sm);">No governance requirements mapped.</p>'}
+            </div>
           </div>
-        `).join('')}
-      </div>
-    ` : ''}
-    ${auditPackageHTML}
-  `;
-}
+        </section>
+      ` : ''}
 
-/* ===== ARTIFACTS BROWSER ===== */
-async function renderArtifacts(el) {
-  if (!state.artifacts) {
-    const [inventory, provisionMap] = await Promise.all([
-      fetchJSON('artifacts/inventory.json'),
-      fetchJSON('artifacts/provision-map.json'),
-    ]);
-    state.artifacts = { inventory: inventory || {}, provisionMap: provisionMap || {} };
-  }
-  const cats = Object.entries(state.artifacts.inventory);
-  const total = cats.reduce((sum, [, arr]) => sum + arr.length, 0);
+      <!-- ========== SECTION 2: Key Activities ========== -->
+      ${control.keyActivities && control.keyActivities.length ? `
+        <section class="detail-section">
+          <h2 class="detail-section-title">Key Activities</h2>
+          <ul class="activity-list">
+            ${control.keyActivities.map(a => `<li>${esc(a)}</li>`).join('')}
+          </ul>
+        </section>
+      ` : ''}
 
-  el.innerHTML = `
-    <div class="page-title">Compliance Artifacts</div>
-    <div class="page-subtitle">${total} artifacts across ${cats.length} categories</div>
-    <div class="filter-bar">
-      <span class="filter-chip active" data-filter="all">All (${total})</span>
-      ${cats.map(([cat, arr]) => `<span class="filter-chip" data-filter="${esc(cat)}">${esc(cat)} (${arr.length})</span>`).join('')}
-    </div>
-    <div id="artifact-list">
-      ${cats.map(([cat, items]) => items.map(a => `
-        <div class="artifact-item" data-category="${esc(cat)}">
-          ${renderArtifactCard(a)}
-        </div>
-      `).join('')).join('')}
-    </div>
+      <!-- ========== SECTION 3: Maturity Levels ========== -->
+      ${control.maturity ? `
+        <section class="detail-section">
+          <h2 class="detail-section-title">Maturity Levels</h2>
+          <div class="maturity-grid">
+            <div class="maturity-card maturity-basic">
+              <div class="maturity-label">Basic</div>
+              <p>${esc(control.maturity.basic || '')}</p>
+            </div>
+            <div class="maturity-card maturity-mature">
+              <div class="maturity-label">Mature</div>
+              <p>${esc(control.maturity.mature || '')}</p>
+            </div>
+            <div class="maturity-card maturity-advanced">
+              <div class="maturity-label">Advanced</div>
+              <p>${esc(control.maturity.advanced || '')}</p>
+            </div>
+          </div>
+        </section>
+      ` : ''}
+
+      <!-- ========== SECTION 4: Audit Package ========== -->
+      ${auditPackageHTML}
+
+      <!-- ========== SECTION 5: Framework Mappings ========== -->
+      ${fwMappings.length ? `
+        <section class="detail-section">
+          <h2 class="detail-section-title">Framework Mappings</h2>
+          <div class="fw-mappings">
+            ${fwMappings.map(m => `
+              <div class="fw-mapping-row">
+                <span class="fw-label">${esc(m.label)}</span>
+                <span class="fw-codes">${esc(m.codes)}</span>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+      ` : ''}
+
+      <!-- ========== SECTION 6: Source Provisions ========== -->
+      ${control.sections && control.sections.length ? `
+        <section class="detail-section">
+          <h2 class="detail-section-title">Source Provisions</h2>
+          <div class="provision-links">
+            ${control.sections.map(sid => {
+              const prov = state.provisions[sid];
+              return `<a href="#section/${sid}" class="provision-link">
+                <span class="provision-id">${esc(sid)}</span>
+                <span class="provision-title">${prov ? esc(prov.title) : ''}</span>
+              </a>`;
+            }).join('')}
+          </div>
+          ${sectorVariantEntries.length ? `
+            <h3 style="font-size:0.9rem;font-weight:600;margin-top:1rem;margin-bottom:0.5rem;color:var(--text-secondary);">Sector-Specific Variants</h3>
+            <div class="provision-links">
+              ${sectorVariantEntries.map(([sector, variant]) => `
+                <div class="provision-link" style="cursor:default;">
+                  <span class="provision-id">${esc(sector)}</span>
+                  <span class="provision-title">${esc(variant.additionalRequirements || '')}</span>
+                  ${variant.relatedProvision ? `<span style="font-size:var(--font-size-xs);color:var(--text-muted);margin-top:0.25rem;display:block;">Ref: ${esc(variant.relatedProvision)}</span>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+        </section>
+      ` : ''}
+
+    </article>
   `;
 }
 
@@ -1003,7 +1144,7 @@ async function renderSupplements(el) {
       if (!items.length) return '';
       return `
         <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;color:${g.color};">${g.label}</h3>
-        <div class="part-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="control-grid" style="grid-template-columns:repeat(2,1fr);">
           ${items.map(item => `
             <div class="supplement-card" onclick="location.hash='#supplement/${item.id}'">
               <div class="supplement-type" style="color:${g.color};">${esc(item.type || g.key)}</div>
@@ -1103,8 +1244,90 @@ function renderSupplementContent(el, data, id) {
   `;
 }
 
-/* ===== CROSS-REFERENCES ===== */
-async function renderCrossReferences(el) {
+/* ===== SECTORS ===== */
+async function renderSectors(el) {
+  if (!state.crossRefs) {
+    const [actToRegs, actToGuidelines, actToCodes, actToStandards, frameworkMappings, dataUserClasses] = await Promise.all([
+      fetchJSON('cross-references/act-to-regulations.json'),
+      fetchJSON('cross-references/act-to-guidelines.json'),
+      fetchJSON('cross-references/act-to-codes.json'),
+      fetchJSON('cross-references/act-to-standards.json'),
+      fetchJSON('cross-references/framework-mappings.json'),
+      fetchJSON('cross-references/data-user-classes.json'),
+    ]);
+    state.crossRefs = { actToRegs, actToGuidelines, actToCodes, actToStandards, frameworkMappings, dataUserClasses };
+  }
+  const classes = (state.crossRefs.dataUserClasses && state.crossRefs.dataUserClasses.classes) || [];
+
+  el.innerHTML = `
+    <div class="page-title">Data Controller Classes</div>
+    <div class="page-subtitle">${classes.length} registered classes of data users under the Personal Data Protection (Class of Data Users) Order</div>
+    <div class="control-grid">
+      ${classes.map((c, i) => `
+        <div class="control-card" onclick="navigate('sector/${i}')" style="cursor:pointer;border-left:4px solid var(--accent);">
+          <div class="control-id">#${i + 1}</div>
+          <h3 class="control-card-title">${esc(c.name)}</h3>
+          <p class="control-card-desc">${esc(c.description || '')}</p>
+          <div class="control-card-meta">
+            <span class="badge badge-category">${esc(c.orderReference || '')}</span>
+            ${c.applicableCode ? `<span class="badge badge-evidence">${esc(c.applicableCode)}</span>` : '<span class="badge badge-artifacts">General COP</span>'}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+async function renderSectorDetail(el, id) {
+  if (!state.crossRefs) {
+    const [actToRegs, actToGuidelines, actToCodes, actToStandards, frameworkMappings, dataUserClasses] = await Promise.all([
+      fetchJSON('cross-references/act-to-regulations.json'),
+      fetchJSON('cross-references/act-to-guidelines.json'),
+      fetchJSON('cross-references/act-to-codes.json'),
+      fetchJSON('cross-references/act-to-standards.json'),
+      fetchJSON('cross-references/framework-mappings.json'),
+      fetchJSON('cross-references/data-user-classes.json'),
+    ]);
+    state.crossRefs = { actToRegs, actToGuidelines, actToCodes, actToStandards, frameworkMappings, dataUserClasses };
+  }
+  const classes = (state.crossRefs.dataUserClasses && state.crossRefs.dataUserClasses.classes) || [];
+  const idx = parseInt(id, 10);
+  const c = classes[idx];
+  if (!c) return renderNotFound(el);
+
+  el.innerHTML = `
+    <nav class="breadcrumbs">
+      <a href="#sectors">Sectors</a>
+      <span class="sep">/</span>
+      <span class="current">${esc(c.name)}</span>
+    </nav>
+    <div class="page-title">${esc(c.name)}</div>
+    <div class="page-subtitle">${esc(c.description || '')}</div>
+    <div class="detail-section">
+      <div class="fw-mappings">
+        <div class="fw-mapping-row">
+          <span class="fw-label">Order Reference</span>
+          <span class="fw-codes">${esc(c.orderReference || 'N/A')}</span>
+        </div>
+        <div class="fw-mapping-row">
+          <span class="fw-label">Applicable Code</span>
+          <span class="fw-codes">${c.applicableCode ? `<a href="#supplement/${c.applicableCode}">${esc(c.applicableCode)}</a>` : 'General Code of Practice'}</span>
+        </div>
+      </div>
+    </div>
+    ${c.obligations && c.obligations.length ? `
+      <div class="detail-section">
+        <h2 class="detail-section-title">Obligations</h2>
+        <ul class="activity-list">
+          ${c.obligations.map(o => `<li>${esc(typeof o === 'string' ? o : o.obligation || JSON.stringify(o))}</li>`).join('')}
+        </ul>
+      </div>
+    ` : ''}
+  `;
+}
+
+/* ===== REFERENCE (absorbs Cross-References + Framework Mappings) ===== */
+async function renderReference(el) {
   if (!state.crossRefs) {
     const [actToRegs, actToGuidelines, actToCodes, actToStandards, frameworkMappings, dataUserClasses] = await Promise.all([
       fetchJSON('cross-references/act-to-regulations.json'),
@@ -1118,35 +1341,31 @@ async function renderCrossReferences(el) {
   }
 
   el.innerHTML = `
-    <div class="page-title">Cross-References</div>
-    <div class="page-subtitle">Mappings between Act sections and subsidiary instruments, plus international framework comparisons</div>
+    <div class="page-title">Reference</div>
+    <div class="page-subtitle">Cross-framework mappings (GDPR, APEC CBPR, ISO 27701) and Act-to-subsidiary instrument cross-references</div>
 
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="xref-regulations">Regulations</button>
-      <button class="tab-btn" data-tab="xref-guidelines">Guidelines</button>
-      <button class="tab-btn" data-tab="xref-codes">Codes of Practice</button>
-      <button class="tab-btn" data-tab="xref-standards">Standards</button>
-      <button class="tab-btn" data-tab="xref-frameworks">International Frameworks</button>
-      <button class="tab-btn" data-tab="xref-classes">Data Controller Classes</button>
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="frameworks">International Frameworks</button>
+      <button class="sub-tab" data-sub="regulations">Regulations</button>
+      <button class="sub-tab" data-sub="guidelines">Guidelines</button>
+      <button class="sub-tab" data-sub="codes">Codes of Practice</button>
+      <button class="sub-tab" data-sub="standards">Standards</button>
     </div>
 
-    <div class="tab-panel active" id="tab-xref-regulations">
-      ${renderXrefMappings(state.crossRefs.actToRegs)}
-    </div>
-    <div class="tab-panel" id="tab-xref-guidelines">
-      ${renderXrefMappings(state.crossRefs.actToGuidelines)}
-    </div>
-    <div class="tab-panel" id="tab-xref-codes">
-      ${renderXrefMappings(state.crossRefs.actToCodes)}
-    </div>
-    <div class="tab-panel" id="tab-xref-standards">
-      ${renderXrefMappings(state.crossRefs.actToStandards)}
-    </div>
-    <div class="tab-panel" id="tab-xref-frameworks">
+    <div class="sub-panel active" data-subpanel="frameworks">
       ${renderFrameworkMappings(state.crossRefs.frameworkMappings)}
     </div>
-    <div class="tab-panel" id="tab-xref-classes">
-      ${renderDataUserClasses(state.crossRefs.dataUserClasses)}
+    <div class="sub-panel" data-subpanel="regulations">
+      ${renderXrefMappings(state.crossRefs.actToRegs)}
+    </div>
+    <div class="sub-panel" data-subpanel="guidelines">
+      ${renderXrefMappings(state.crossRefs.actToGuidelines)}
+    </div>
+    <div class="sub-panel" data-subpanel="codes">
+      ${renderXrefMappings(state.crossRefs.actToCodes)}
+    </div>
+    <div class="sub-panel" data-subpanel="standards">
+      ${renderXrefMappings(state.crossRefs.actToStandards)}
     </div>
   `;
 }
@@ -1160,7 +1379,7 @@ function renderXrefMappings(data) {
           <span class="xref-section" onclick="location.hash='#section/${m.section}'">${esc(m.section)}</span>
           <div class="xref-targets">
             <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.25rem;">${esc(m.sectionTitle || '')}</div>
-            ${(m.regulations || m.guidelines || m.codes || m.standards || []).map(r => `
+            ${(m.regulations || m.guidelines || m.codes || m.codeReferences || m.standards || m.standardReferences || []).map(r => `
               <span class="xref-tag" onclick="location.hash='#supplement/${r.id}'">${esc(r.title || r.id)}</span>
             `).join('')}
           </div>
@@ -1197,242 +1416,48 @@ function renderFrameworkMappings(data) {
   }).join('');
 }
 
-function renderDataUserClasses(data) {
-  if (!data || !data.classes) return '<div class="empty-state"><div class="empty-state-text">No data controller classes available.</div></div>';
-  return `
-    <div class="data-table-wrap" style="overflow-x:auto;">
-      <table class="data-table">
-        <thead><tr><th>#</th><th>Class</th><th>Order Reference</th><th>Applicable Code</th><th>Description</th></tr></thead>
-        <tbody>
-          ${data.classes.map((c, i) => `
-            <tr>
-              <td>${i + 1}</td>
-              <td><strong>${esc(c.name)}</strong></td>
-              <td style="font-family:var(--mono);font-size:0.75rem;">${esc(c.orderReference || '')}</td>
-              <td>${c.applicableCode ? `<span class="xref-tag" onclick="location.hash='#supplement/${c.applicableCode}'">${esc(c.applicableCode)}</span>` : 'General COP'}</td>
-              <td style="font-size:0.8125rem;color:var(--text-secondary);">${esc(c.description || '')}</td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    </div>
-  `;
-}
-
 /* ===== FRAMEWORK EXPLORER ===== */
 async function renderFramework(el) {
-  // Ensure requirements data is loaded for counts
-  if (!state.requirements) {
-    state.requirements = await fetchJSON('requirements/index.json') || {};
+  if (!state.principles) {
+    state.principles = await fetchJSON('principles/index.json') || [];
   }
-  if (!state.controls) {
-    const [domains, library, provisionMap] = await Promise.all([
-      fetchJSON('controls/domains.json'),
-      fetchJSON('controls/library.json'),
-      fetchJSON('controls/provision-map.json'),
-    ]);
-    state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
-  }
-
-  // Count requirements by sourceType
-  let totalReqs = 0, actReqs = 0, stdReqs = 0, glReqs = 0, gcReqs = 0, scReqs = 0;
-  for (const sec of Object.values(state.requirements)) {
-    for (const perspective of ['legal', 'technical', 'governance']) {
-      const reqs = sec[perspective]?.requirements || [];
-      for (const r of reqs) {
-        totalReqs++;
-        switch (r.sourceType) {
-          case 'standard': stdReqs++; break;
-          case 'guideline': glReqs++; break;
-          case 'general-code': gcReqs++; break;
-          case 'sector-code': scReqs++; break;
-          default: actReqs++;
-        }
-      }
-    }
-  }
-
-  const totalControls = Object.values(state.controls.library).reduce((sum, arr) => sum + arr.length, 0);
+  const totalSections = Object.keys(state.provisions).length;
 
   el.innerHTML = `
-    <div class="page-title">Compliance Framework Architecture</div>
-    <div class="page-subtitle">How the PDPA ecosystem connects: from sources through requirements to controls, evidence, and artifacts</div>
+    <div class="page-title">PDPA Framework</div>
+    <div class="page-subtitle">Personal Data Protection Act 2010 (Act 709) — ${state.parts.length} Parts, ${totalSections} sections, ${state.principles.length} principles</div>
 
-    <!-- Section 1: Compliance Chain Flow -->
-    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Compliance Chain</h3>
-    <div class="framework-flow">
-      <div class="framework-step" onclick="location.hash='#framework'">
-        <div class="framework-step-label">Sources</div>
-        <div class="framework-step-count">Act + 22 supplements</div>
-      </div>
-      <div class="framework-step" onclick="location.hash='#framework'">
-        <div class="framework-step-label">Requirements</div>
-        <div class="framework-step-count">${totalReqs} obligations</div>
-      </div>
-      <div class="framework-step" onclick="location.hash='#controls'">
-        <div class="framework-step-label">Controls</div>
-        <div class="framework-step-count">${totalControls} controls</div>
-      </div>
-      <div class="framework-step" onclick="location.hash='#framework'">
-        <div class="framework-step-label">Evidence</div>
-        <div class="framework-step-count">40 evidence items</div>
-      </div>
-      <div class="framework-step" onclick="location.hash='#artifacts'">
-        <div class="framework-step-label">Artifacts</div>
-        <div class="framework-step-count">60 documents</div>
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="parts">Parts (${state.parts.length})</button>
+      <button class="sub-tab" data-sub="principles">Principles (${state.principles.length})</button>
+    </div>
+
+    <div class="sub-panel active" data-subpanel="parts">
+      <div class="control-grid">
+        ${state.parts.map(p => {
+          const sections = Object.values(state.provisions).filter(s => s.part === p.id);
+          return `<a href="#framework/${p.id}" class="control-card" data-part="${p.id}" style="text-decoration:none;color:inherit;display:block;border-left:4px solid var(--accent);">
+            <div class="control-id">Part ${p.id}</div>
+            <h3 class="control-card-title">${esc(p.name)}</h3>
+            <p class="control-card-desc">${esc(p.description || '')}</p>
+            <div class="control-card-meta"><span class="badge badge-category">${sections.length} sections</span></div>
+          </a>`;
+        }).join('')}
       </div>
     </div>
 
-    <!-- Section 2: Source Hierarchy -->
-    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Source Hierarchy</h3>
-    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
-      Each tier adds increasingly specific requirements. Sector codes don't replace higher tiers — they tighten or extend the base obligations for specific industries.
-    </p>
-    <div class="source-hierarchy">
-      <div class="source-tier" data-tier="1">
-        <div class="source-tier-num">Tier 1</div>
-        <div class="source-tier-name">Act 709</div>
-        <div class="source-tier-desc">Primary legislation — 151 sections establishing core data protection obligations</div>
-        <div class="source-tier-badge"><span class="badge badge-source-act">${actReqs} reqs</span></div>
-      </div>
-      <div class="source-tier" data-tier="2">
-        <div class="source-tier-num">Tier 2</div>
-        <div class="source-tier-name">Standards 2015</div>
-        <div class="source-tier-desc">Mandatory technical minimums implementing s9 (Security), s10 (Retention), s11 (Integrity)</div>
-        <div class="source-tier-badge"><span class="badge badge-source-standard">${stdReqs} reqs</span></div>
-      </div>
-      <div class="source-tier" data-tier="3">
-        <div class="source-tier-num">Tier 3</div>
-        <div class="source-tier-name">Guidelines</div>
-        <div class="source-tier-desc">Procedural guidance for s7 (Notices), s129A (Cross-Border), s129B (DPO), s143A (Breach)</div>
-        <div class="source-tier-badge"><span class="badge badge-source-guideline">${glReqs} reqs</span></div>
-      </div>
-      <div class="source-tier" data-tier="4">
-        <div class="source-tier-num">Tier 4</div>
-        <div class="source-tier-name">General Code 2022</div>
-        <div class="source-tier-desc">Implementation baseline for all sectors — ROPA, consent, notices, security governance</div>
-        <div class="source-tier-badge"><span class="badge badge-source-general-code">${gcReqs} reqs</span></div>
-      </div>
-      <div class="source-tier" data-tier="5">
-        <div class="source-tier-num">Tier 5</div>
-        <div class="source-tier-name">Sector Codes (7)</div>
-        <div class="source-tier-desc">Sector-specific tightening for banking, healthcare, communications, insurance, aviation, electricity, water</div>
-        <div class="source-tier-badge"><span class="badge badge-source-sector-code">${scReqs} reqs</span></div>
-      </div>
-    </div>
-
-    <!-- Section 3: Worked Example (s9 Security Principle) -->
-    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Worked Example: s9 Security Principle</h3>
-    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">
-      Tracing the full compliance chain for the Security Principle shows how each layer builds on the previous.
-    </p>
-    <div class="framework-trace">
-      <div class="framework-trace-col">
-        <div class="framework-trace-col-header">Sources</div>
-        <div class="framework-trace-col-body">
-          <div class="trace-item"><span class="badge badge-source-act" style="font-size:0.625rem;">Act</span> s9</div>
-          <div class="trace-item"><span class="badge badge-source-standard" style="font-size:0.625rem;">Standard</span> esec-2..7</div>
-          <div class="trace-item"><span class="badge badge-source-standard" style="font-size:0.625rem;">Standard</span> nesec-2..4</div>
-          <div class="trace-item"><span class="badge badge-source-guideline" style="font-size:0.625rem;">Guideline</span> dbn-1, dbn-8</div>
-          <div class="trace-item"><span class="badge badge-source-general-code" style="font-size:0.625rem;">Gen Code</span> cop-gen-s7</div>
-          <div class="trace-item"><span class="badge badge-source-sector-code" style="font-size:0.625rem;">Banking</span> cop-bank-s6</div>
-          <div class="trace-item"><span class="badge badge-source-sector-code" style="font-size:0.625rem;">Health</span> cop-health-s3</div>
-        </div>
-      </div>
-      <div class="framework-trace-col">
-        <div class="framework-trace-col-header">Requirements</div>
-        <div class="framework-trace-col-body">
-          <div class="trace-item"><span class="badge badge-source-act" style="font-size:0.625rem;">Act</span> s9-L1..T3, G1..G2</div>
-          <div class="trace-item"><span class="badge badge-source-standard" style="font-size:0.625rem;">Std</span> s9-ST1..ST11</div>
-          <div class="trace-item"><span class="badge badge-source-guideline" style="font-size:0.625rem;">GL</span> s9-GL1</div>
-          <div class="trace-item"><span class="badge badge-source-general-code" style="font-size:0.625rem;">CG</span> s9-CG1..CG2</div>
-          <div class="trace-item"><span class="badge badge-source-sector-code" style="font-size:0.625rem;">CS</span> s9-CS-BNK1, HLT1, COM1, INS1, AVI1, ELC1, WTR1</div>
-        </div>
-      </div>
-      <div class="framework-trace-col">
-        <div class="framework-trace-col-header">Controls</div>
-        <div class="framework-trace-col-body">
-          <div class="trace-item"><a href="#control/encryption-and-data-protection-in-transit-at-rest" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Encryption</a></div>
-          <div class="trace-item"><a href="#control/access-control-and-identity-management" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Access Control</a></div>
-          <div class="trace-item"><a href="#control/security-monitoring-and-siem" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Security Monitoring</a></div>
-          <div class="trace-item"><a href="#control/vulnerability-and-patch-management" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Vulnerability Mgmt</a></div>
-          <div class="trace-item"><a href="#control/physical-security-controls" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Physical Security</a></div>
-          <div class="trace-item"><a href="#control/data-loss-prevention" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">DLP</a></div>
-        </div>
-      </div>
-      <div class="framework-trace-col">
-        <div class="framework-trace-col-header">Evidence</div>
-        <div class="framework-trace-col-body">
-          <div class="trace-item">Security policy document</div>
-          <div class="trace-item">Access control logs</div>
-          <div class="trace-item">Vulnerability scan reports</div>
-          <div class="trace-item">Penetration test results</div>
-          <div class="trace-item">Incident response records</div>
-          <div class="trace-item">Training records</div>
-        </div>
-      </div>
-      <div class="framework-trace-col">
-        <div class="framework-trace-col-header">Artifacts</div>
-        <div class="framework-trace-col-body">
-          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Information Security Policy</a></div>
-          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Incident Response Plan</a></div>
-          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Encryption Register</a></div>
-          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Access Control Matrix</a></div>
-          <div class="trace-item"><a href="#artifacts" style="color:var(--accent);text-decoration:none;font-size:0.75rem;">Vendor Security Assessment</a></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 4: 8-Layer Summary Grid -->
-    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">8-Layer Data Architecture</h3>
-    <div class="layer-grid">
-      <div class="layer-card" onclick="location.hash='#'">
-        <div class="layer-card-num">1</div>
-        <div class="layer-card-name">Provisions</div>
-        <div class="layer-card-count">151 sections</div>
-        <div class="layer-card-desc">Act verbatim text + plain-language translation across 11 Parts</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#principles'">
-        <div class="layer-card-num">2</div>
-        <div class="layer-card-name">Principles</div>
-        <div class="layer-card-count">11 principles</div>
-        <div class="layer-card-desc">Deep dive into obligations, exceptions, and practical guidance</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#framework'">
-        <div class="layer-card-num">3</div>
-        <div class="layer-card-name">Requirements</div>
-        <div class="layer-card-count">${totalReqs} obligations</div>
-        <div class="layer-card-desc">Three-perspective breakdowns with source tracking from Act + supplements</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#framework'">
-        <div class="layer-card-num">4</div>
-        <div class="layer-card-name">Evidence</div>
-        <div class="layer-card-count">40 items</div>
-        <div class="layer-card-desc">Compliance evidence guidance with auditor focus and audit tips</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#artifacts'">
-        <div class="layer-card-num">5</div>
-        <div class="layer-card-name">Artifacts</div>
-        <div class="layer-card-count">60 documents</div>
-        <div class="layer-card-desc">Compliance document inventory across 7 categories</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#controls'">
-        <div class="layer-card-num">6</div>
-        <div class="layer-card-name">Controls</div>
-        <div class="layer-card-count">${totalControls} controls</div>
-        <div class="layer-card-desc">10 domains with maturity levels, supplement links, and sector variants</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#penalties'">
-        <div class="layer-card-num">7</div>
-        <div class="layer-card-name">Penalties</div>
-        <div class="layer-card-count">22 offences</div>
-        <div class="layer-card-desc">Offences with original and 2024-amended penalties</div>
-      </div>
-      <div class="layer-card" onclick="location.hash='#cross-references'">
-        <div class="layer-card-num">8</div>
-        <div class="layer-card-name">Cross-References</div>
-        <div class="layer-card-count">31 mappings</div>
-        <div class="layer-card-desc">Act to subsidiary instruments, GDPR, ISO 27701, APEC CBPR</div>
+    <div class="sub-panel" data-subpanel="principles">
+      <div class="control-grid" style="grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));">
+        ${state.principles.map(p => `
+          <a href="#principle/${p.id}" class="control-card" style="text-decoration:none;color:inherit;display:block;border-left:4px solid var(--accent);">
+            <div class="control-id">Section ${p.section}</div>
+            <h3 class="control-card-title">${esc(p.name)}</h3>
+            <div class="control-card-meta">
+              <span class="badge badge-evidence">${(p.obligations || []).length} obligations</span>
+              <span class="badge badge-category">${(p.exceptions || []).length} exceptions</span>
+            </div>
+          </a>
+        `).join('')}
       </div>
     </div>
   `;
@@ -1475,23 +1500,23 @@ async function renderRiskManagement(app) {
       <div class="stat-card"><div class="stat-number" style="color:#F97316;">${bandCounts.High}</div><div class="stat-label">High (Residual)</div></div>
     </div>
 
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="rm-methodology">Methodology</button>
-      <button class="tab-btn" data-tab="rm-register">Risk Register</button>
-      <button class="tab-btn" data-tab="rm-checklist">Checklist</button>
-      <button class="tab-btn" data-tab="rm-treatment">Treatment Options</button>
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="rm-methodology">Methodology</button>
+      <button class="sub-tab" data-sub="rm-register">Risk Register (${risks.length})</button>
+      <button class="sub-tab" data-sub="rm-checklist">Checklist</button>
+      <button class="sub-tab" data-sub="rm-treatment">Treatment Options</button>
     </div>
 
-    <div class="tab-panel active" id="tab-rm-methodology">
+    <div class="sub-panel active" data-subpanel="rm-methodology">
       ${renderRMMethodology(methodology, matrix)}
     </div>
-    <div class="tab-panel" id="tab-rm-register">
+    <div class="sub-panel" data-subpanel="rm-register">
       ${renderRMRegister(register, matrix)}
     </div>
-    <div class="tab-panel" id="tab-rm-checklist">
+    <div class="sub-panel" data-subpanel="rm-checklist">
       ${renderRMChecklist(checklist)}
     </div>
-    <div class="tab-panel" id="tab-rm-treatment">
+    <div class="sub-panel" data-subpanel="rm-treatment">
       ${renderRMTreatment(treatment)}
     </div>
   `;
@@ -1861,8 +1886,9 @@ async function renderDPIA(app) {
   }
 
   const phases = (methodology && methodology.phases) || [];
-  const triggers = (thresholds && thresholds.mandatoryTriggers) || [];
-  const questions = (thresholds && thresholds.screeningQuestions) || [];
+  // Support both old (mandatoryTriggers) and new (mandate.quantitative_thresholds) structures
+  const triggers = (thresholds && thresholds.mandatoryTriggers) || (thresholds && thresholds.mandate && thresholds.mandate.quantitative_thresholds) || [];
+  const questions = (thresholds && thresholds.screeningQuestions) || (thresholds && thresholds.qualitative_factors) || [];
   const exampleList = (examples && examples.examples) || [];
 
   app.innerHTML = `
@@ -1870,28 +1896,28 @@ async function renderDPIA(app) {
     <div class="page-subtitle">DPIA methodology, screening tool, worked examples, and assessment template aligned with PDPA 2010 <span class="badge badge-ai" title="Constructed indicative content — not authoritative legal guidance">AI Generated</span></div>
     <div class="stats-banner">
       <div class="stat-card"><div class="stat-number">${phases.length}</div><div class="stat-label">Assessment Phases</div></div>
-      <div class="stat-card"><div class="stat-number">${triggers.length}</div><div class="stat-label">Mandatory Triggers</div></div>
+      <div class="stat-card"><div class="stat-number">${triggers.length}</div><div class="stat-label">Quantitative Thresholds</div></div>
       <div class="stat-card"><div class="stat-number">${exampleList.length}</div><div class="stat-label">Worked Examples</div></div>
       <div class="stat-card"><div class="stat-number">${(templates && templates.sections || []).length}</div><div class="stat-label">Template Sections</div></div>
     </div>
 
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="dpia-methodology">Methodology</button>
-      <button class="tab-btn" data-tab="dpia-screening">Screening Tool</button>
-      <button class="tab-btn" data-tab="dpia-examples">Worked Examples</button>
-      <button class="tab-btn" data-tab="dpia-template">Assessment Template</button>
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="dpia-methodology">Methodology</button>
+      <button class="sub-tab" data-sub="dpia-screening">Screening Tool</button>
+      <button class="sub-tab" data-sub="dpia-examples">Worked Examples (${exampleList.length})</button>
+      <button class="sub-tab" data-sub="dpia-template">Assessment Template</button>
     </div>
 
-    <div class="tab-panel active" id="tab-dpia-methodology">
+    <div class="sub-panel active" data-subpanel="dpia-methodology">
       ${renderDPIAMethodology(methodology)}
     </div>
-    <div class="tab-panel" id="tab-dpia-screening">
+    <div class="sub-panel" data-subpanel="dpia-screening">
       ${renderDPIAScreening(thresholds)}
     </div>
-    <div class="tab-panel" id="tab-dpia-examples">
+    <div class="sub-panel" data-subpanel="dpia-examples">
       ${renderDPIAExamples(examples)}
     </div>
-    <div class="tab-panel" id="tab-dpia-template">
+    <div class="sub-panel" data-subpanel="dpia-template">
       ${renderDPIATemplate(templates)}
     </div>
   `;
@@ -1969,20 +1995,20 @@ function renderDPIAMethodology(meth) {
 function renderDPIAScreening(thresholds) {
   if (!thresholds) return '<div class="empty-state"><div class="empty-state-text">Screening data not available.</div></div>';
 
-  const questions = thresholds.screeningQuestions || [];
-  const triggers = thresholds.mandatoryTriggers || [];
+  // Support both old (mandatoryTriggers/screeningQuestions) and new (mandate/qualitative_factors) structures
+  const oldTriggers = thresholds.mandatoryTriggers || [];
+  const quantThresholds = (thresholds.mandate && thresholds.mandate.quantitative_thresholds) || [];
+  const oldQuestions = thresholds.screeningQuestions || [];
+  const qualFactors = thresholds.qualitative_factors || [];
   const bands = (thresholds.scoringGuide && thresholds.scoringGuide.bands) || [];
+  const hasOldFormat = oldTriggers.length > 0 || oldQuestions.length > 0;
 
-  return `
-    <div class="card" style="margin-bottom:1rem;">
-      <div class="card-title">${esc(thresholds.title)}</div>
-      <div class="card-body">${esc(thresholds.description)}</div>
-    </div>
-
+  // Old-format triggers section
+  const oldTriggersHTML = oldTriggers.length ? `
     <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Mandatory Triggers</h3>
     <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">If any of the following criteria are met, a DPIA is required regardless of the screening score.</p>
     <div class="accordion">
-      ${triggers.map(t => `
+      ${oldTriggers.map(t => `
         <div class="accordion-item">
           <div class="accordion-header" data-accordion>
             <span>
@@ -2001,11 +2027,58 @@ function renderDPIAScreening(thresholds) {
         </div>
       `).join('')}
     </div>
+  ` : '';
 
+  // New-format quantitative thresholds section
+  const quantHTML = quantThresholds.length ? `
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Quantitative Thresholds</h3>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(thresholds.mandate.primary || 'A DPIA is mandatory when any of the following quantitative thresholds are met.')}</p>
+    <div class="data-table-wrap" style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>Category</th><th>Threshold</th><th>Rationale</th></tr></thead>
+        <tbody>
+          ${quantThresholds.map(t => `
+            <tr>
+              <td><strong>${esc(t.category)}</strong></td>
+              <td>${esc(t.threshold)}</td>
+              <td style="font-size:0.8125rem;color:var(--text-secondary);">${esc(t.rationale)}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  ` : '';
+
+  // New-format qualitative factors as screening checklist
+  const qualHTML = qualFactors.length ? `
+    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Qualitative Risk Factors</h3>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">Check applicable factors. If any factor applies, a DPIA should be considered based on the DPO's best judgment.</p>
+    <div class="dpia-screening" id="dpia-screening-form">
+      ${qualFactors.map(q => `
+        <label class="dpia-screening-question" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.5rem;cursor:pointer;transition:all 0.15s;">
+          <input type="checkbox" data-weight="1" data-sq-id="${esc(q.id)}" style="margin-top:0.25rem;flex-shrink:0;">
+          <div style="flex:1;">
+            <div style="font-size:0.8125rem;font-weight:500;margin-bottom:0.125rem;">${esc(q.factor)}</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);">${esc(q.description)}</div>
+          </div>
+        </label>
+      `).join('')}
+    </div>
+    <div class="dpia-score" id="dpia-score-display" style="margin-top:1rem;">
+      <div class="card" style="text-align:center;padding:1.5rem;">
+        <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:0.5rem;">Factors Applicable</div>
+        <div id="dpia-score-value" style="font-family:var(--mono);font-size:2.5rem;font-weight:700;color:var(--green);line-height:1;">0</div>
+        <div id="dpia-score-recommendation" style="font-size:0.875rem;font-weight:500;color:var(--green);margin-top:0.5rem;">No qualitative factors selected — assess quantitative thresholds</div>
+      </div>
+    </div>
+  ` : '';
+
+  // Old-format screening questionnaire with weights
+  const oldQuestionsHTML = oldQuestions.length ? `
     <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Screening Questionnaire</h3>
     <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">Check all that apply. The total weighted score determines whether a DPIA is required.</p>
     <div class="dpia-screening" id="dpia-screening-form">
-      ${questions.map(q => `
+      ${oldQuestions.map(q => `
         <label class="dpia-screening-question" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.5rem;cursor:pointer;transition:all 0.15s;">
           <input type="checkbox" data-weight="${q.weight}" data-sq-id="${esc(q.id)}" style="margin-top:0.25rem;flex-shrink:0;">
           <div style="flex:1;">
@@ -2018,7 +2091,6 @@ function renderDPIAScreening(thresholds) {
         </label>
       `).join('')}
     </div>
-
     <div class="dpia-score" id="dpia-score-display" style="margin-top:1rem;">
       <div class="card" style="text-align:center;padding:1.5rem;">
         <div style="font-size:0.6875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:0.5rem;">Screening Score</div>
@@ -2026,16 +2098,37 @@ function renderDPIAScreening(thresholds) {
         <div id="dpia-score-recommendation" style="font-size:0.875rem;font-weight:500;color:var(--green);margin-top:0.5rem;">DPIA not required — document screening decision</div>
       </div>
     </div>
+  ` : '';
 
-    <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Scoring Guide</h3>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      ${bands.map(b => `
-        <div style="flex:1;min-width:200px;padding:0.75rem 1rem;border-radius:var(--radius);border-left:4px solid ${b.color};background:${b.color}10;">
-          <div style="font-family:var(--mono);font-size:1rem;font-weight:700;color:${b.color};margin-bottom:0.25rem;">${esc(b.range)}</div>
-          <div style="font-size:0.8125rem;color:var(--text-secondary);">${esc(b.recommendation)}</div>
-        </div>
-      `).join('')}
+  // Decision logic (new format)
+  const decisionHTML = thresholds.decision_logic ? `
+    <div class="card" style="margin-top:1.5rem;border-left:3px solid var(--accent);">
+      <div class="card-title">Decision Logic</div>
+      <div class="card-body">${esc(thresholds.decision_logic)}</div>
     </div>
+  ` : '';
+
+  return `
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="card-title">${esc(thresholds.title)}</div>
+      <div class="card-body">${esc(thresholds.description)}</div>
+    </div>
+    ${oldTriggersHTML}
+    ${quantHTML}
+    ${oldQuestionsHTML}
+    ${qualHTML}
+    ${decisionHTML}
+    ${bands.length ? `
+      <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Scoring Guide</h3>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        ${bands.map(b => `
+          <div style="flex:1;min-width:200px;padding:0.75rem 1rem;border-radius:var(--radius);border-left:4px solid ${b.color};background:${b.color}10;">
+            <div style="font-family:var(--mono);font-size:1rem;font-weight:700;color:${b.color};margin-bottom:0.25rem;">${esc(b.range)}</div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);">${esc(b.recommendation)}</div>
+          </div>
+        `).join('')}
+      </div>
+    ` : ''}
   `;
 }
 
@@ -2045,6 +2138,7 @@ function initDPIAScreening(thresholds) {
   if (!form) return;
 
   const bands = (thresholds.scoringGuide && thresholds.scoringGuide.bands) || [];
+  const isQualitativeMode = !!(thresholds.qualitative_factors && !thresholds.screeningQuestions);
 
   form.addEventListener('change', function() {
     const checkboxes = form.querySelectorAll('input[type="checkbox"]');
@@ -2061,13 +2155,26 @@ function initDPIAScreening(thresholds) {
 
     // Determine band
     let color = '#22c55e';
-    let recommendation = 'DPIA not required — document screening decision';
-    if (score >= 8) {
-      color = '#ef4444';
-      recommendation = 'DPIA required — proceed with full assessment';
-    } else if (score >= 5) {
-      color = '#f59e0b';
-      recommendation = 'DPIA recommended — consider voluntary assessment';
+    let recommendation;
+    if (isQualitativeMode) {
+      // Qualitative factor mode: any factor checked suggests DPIA consideration
+      recommendation = 'No qualitative factors selected — assess quantitative thresholds';
+      if (score >= 2) {
+        color = '#ef4444';
+        recommendation = 'Multiple risk factors present — DPIA strongly recommended';
+      } else if (score >= 1) {
+        color = '#f59e0b';
+        recommendation = 'Risk factor present — consider DPIA based on DPO judgment';
+      }
+    } else {
+      recommendation = 'DPIA not required — document screening decision';
+      if (score >= 8) {
+        color = '#ef4444';
+        recommendation = 'DPIA required — proceed with full assessment';
+      } else if (score >= 5) {
+        color = '#f59e0b';
+        recommendation = 'DPIA recommended — consider voluntary assessment';
+      }
     }
 
     // Override from bands data if available
@@ -2321,7 +2428,7 @@ async function renderSearch(el, query) {
       fetchJSON('controls/library.json'),
       fetchJSON('controls/provision-map.json'),
     ]);
-    state.controls = { domains: domains || {}, library: library || {}, provisionMap: provisionMap || {} };
+    state.controls = { domains: domains || {}, library: normalizeControlsLibrary(library), provisionMap: provisionMap || {} };
   }
   if (state.controls && state.controls.library) {
     for (const [domain, ctrls] of Object.entries(state.controls.library)) {
@@ -2347,7 +2454,7 @@ async function renderSearch(el, query) {
       for (const a of items) {
         const fields = [a.name, a.description, a.slug, cat].join(' ').toLowerCase();
         if (fields.includes(q)) {
-          results.push({ type: 'artifact', id: `[Artifact] ${cat}`, title: a.name, snippet: getSnippet(a.description, q), href: `#artifacts` });
+          results.push({ type: 'artifact', id: `[Artifact] ${cat}`, title: a.name, snippet: getSnippet(a.description, q), href: `#controls` });
         }
       }
     }
@@ -2445,7 +2552,18 @@ function handleClick(e) {
     return;
   }
 
-  // Tab switching
+  // Sub-tab switching (standard)
+  const subTab = e.target.closest('.sub-tab');
+  if (subTab) {
+    const subName = subTab.dataset.sub;
+    const container = subTab.closest('.sub-tabs')?.parentElement;
+    if (!container) return;
+    container.querySelectorAll('.sub-tab').forEach(b => b.classList.toggle('active', b === subTab));
+    container.querySelectorAll('.sub-panel').forEach(p => p.classList.toggle('active', p.dataset.subpanel === subName));
+    return;
+  }
+
+  // Tab switching (legacy section detail tabs)
   const tabBtn = e.target.closest('.tab-btn');
   if (tabBtn) {
     const tabName = tabBtn.dataset.tab;
@@ -2459,6 +2577,16 @@ function handleClick(e) {
     if (sectionId && ['requirements', 'evidence', 'controls', 'artifacts'].includes(tabName)) {
       activateTab(tabName, sectionId);
     }
+    return;
+  }
+
+  // Accordion toggle (standard)
+  const accTrigger = e.target.closest('.accordion-trigger');
+  if (accTrigger) {
+    const content = accTrigger.nextElementSibling;
+    const expanded = accTrigger.getAttribute('aria-expanded') === 'true';
+    accTrigger.setAttribute('aria-expanded', !expanded);
+    if (content) content.hidden = expanded;
     return;
   }
 
@@ -2543,7 +2671,7 @@ function badgeFor(type) {
 /* ===== BOOTSTRAP ===== */
 init().catch(err => {
   console.error('Failed to initialize:', err);
-  document.getElementById('app').innerHTML = '<div class="empty-state"><div class="empty-state-text">Failed to load PDPA data. Please check the console for errors.</div></div>';
+  document.getElementById('app').innerHTML = '<div class="error-state"><h2>Failed to load data</h2><p class="error-message">Could not initialize PDPA application</p><button onclick="location.reload()">Retry</button></div>';
 });
 
 // === Export Functions ===
@@ -2558,12 +2686,18 @@ function exportToCSV() {
   let filename = `export-${view}-${new Date().toISOString().slice(0,10)}.csv`;
 
   if (view === 'controls') {
-    const list = state.controls.library || state.controls;
+    const lib = state.controls && state.controls.library ? state.controls.library : {};
+    const list = [];
+    for (const [domain, ctrls] of Object.entries(lib)) {
+      if (Array.isArray(ctrls)) {
+        for (const c of ctrls) list.push(c);
+      }
+    }
     data = list.map(c => ({
-      ID: c.id || '',
+      ID: c.slug || '',
       Name: c.name,
       Domain: c.domain,
-      Description: c.description.replace(/\n/g, ' ')
+      Description: (c.description || '').replace(/\n/g, ' ')
     }));
   } else if (view === 'risk-management') {
     const list = state.riskManagement?.register || [];
@@ -2610,7 +2744,7 @@ function setComplianceStatus(slug, status) {
   const data = JSON.parse(localStorage.getItem('pdpa_compliance_status') || '{}');
   data[slug] = status;
   localStorage.setItem('pdpa_compliance_status', JSON.stringify(data));
-  router(); // Refresh UI
+  render(); // Refresh UI
 }
 
 function renderComplianceToggle(slug) {

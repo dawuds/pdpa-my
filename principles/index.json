@@ -123,6 +123,67 @@
     "summary": "A data controller shall allow a data subject to have access to and correct their personal data."
   },
   {
+    "id": "withdrawal-of-consent",
+    "section": 42,
+    "name": "Right to Withdraw Consent",
+    "summary": "A data subject has the right to withdraw consent at any time. Withdrawal must be as easy as giving consent. The data controller must cease processing upon receipt of withdrawal notice unless compelling legitimate grounds exist. Withdrawal does not affect the lawfulness of processing carried out prior to withdrawal.",
+    "basis": "Section 42; Act A1727",
+    "effectiveDate": "2025-06-01",
+    "obligations": [
+      {
+        "id": "withdrawal-O1",
+        "obligation": "Provide a mechanism for data subjects to withdraw consent that is as easy as the mechanism for giving consent",
+        "basis": "Section 42(1); Act A1727",
+        "type": "mandatory"
+      },
+      {
+        "id": "withdrawal-O2",
+        "obligation": "Cease processing personal data upon receipt of a valid withdrawal of consent, unless compelling legitimate grounds exist",
+        "basis": "Section 42(2); Act A1727",
+        "type": "mandatory"
+      }
+    ]
+  },
+  {
+    "id": "right-to-erasure",
+    "section": 43,
+    "name": "Right to Erasure / Right to be Forgotten",
+    "summary": "A data subject has the right to request erasure of personal data where the data is no longer necessary for its original purpose, consent has been withdrawn, processing is unlawful, an objection has been upheld, or erasure is required for legal compliance. Where the data has been made public, the data controller must take reasonable steps to inform other processors of the erasure request. Exceptions apply for freedom of expression, legal compliance, and public interest.",
+    "basis": "Section 43; Act A1727",
+    "effectiveDate": "2025-06-01",
+    "obligations": [
+      {
+        "id": "erasure-O1",
+        "obligation": "Erase personal data without undue delay upon a valid erasure request where one of the statutory grounds is met",
+        "basis": "Section 43(1); Act A1727",
+        "type": "mandatory"
+      },
+      {
+        "id": "erasure-O2",
+        "obligation": "Where personal data has been made public, take reasonable steps to notify other data controllers processing the data of the erasure request",
+        "basis": "Section 43(2); Act A1727",
+        "type": "mandatory"
+      }
+    ],
+    "exceptions": [
+      {
+        "id": "erasure-X1",
+        "exception": "Freedom of expression and information",
+        "basis": "Section 43(3)(a); Act A1727"
+      },
+      {
+        "id": "erasure-X2",
+        "exception": "Compliance with a legal obligation",
+        "basis": "Section 43(3)(b); Act A1727"
+      },
+      {
+        "id": "erasure-X3",
+        "exception": "Public interest (archiving, research, statistical purposes)",
+        "basis": "Section 43(3)(c); Act A1727"
+      }
+    ]
+  },
+  {
     "id": "data-portability",
     "section": "43A",
     "name": "Right to Data Portability",
