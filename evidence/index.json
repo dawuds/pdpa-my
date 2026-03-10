@@ -1442,7 +1442,7 @@
         "name": "Data Portability Procedure & Technical Spec",
         "description": "Documented process for handling portability requests and the data formats supported (e.g., CSV, JSON).",
         "artifactSlugs": [
-          "data-portability-procedure"
+          "data-portability-request-procedure"
         ]
       }
     ]

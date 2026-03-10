@@ -213,6 +213,7 @@
     "description": "Where a body corporate commits an offence under the Act, any director, chief executive officer, chief operating officer, manager, secretary or other similar officer, or any person purporting to act in that capacity, who consented to, connived in, or whose neglect contributed to the commission of the offence, is also guilty of the offence",
     "originalPenalty": {
       "fine": "Same penalty as body corporate",
+      "fineNumeric": 0,
       "imprisonment": "Same penalty as body corporate",
       "or_both": true
     },
@@ -263,6 +264,12 @@
     "offence": "Unauthorized Sale of Personal Data",
     "description": "Selling, offering to sell, or procuring for sale any personal data in contravention of the Act, including bulk sales of personal data obtained without the consent of the data subjects, or selling data in breach of the purpose limitation or disclosure restrictions",
     "originalPenalty": null,
+    "penalty": {
+      "fine": "RM1,000,000",
+      "fineNumeric": 1000000,
+      "imprisonment": "3 years",
+      "or_both": true
+    },
     "amendedPenalty": {
       "fine": "RM1,000,000",
       "fineNumeric": 1000000,
@@ -285,6 +292,12 @@
     "offence": "Failure to Notify Data Breach",
     "description": "Failure by a data controller to notify the Commissioner of a notifiable data breach as soon as practicable, or failure to notify affected data subjects as soon as practicable where required",
     "originalPenalty": null,
+    "penalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true
+    },
     "amendedPenalty": {
       "fine": "RM500,000",
       "fineNumeric": 500000,
@@ -307,6 +320,12 @@
     "offence": "Failure to Appoint Data Protection Officer",
     "description": "Failure by a data controller who is required under the Act and guidelines to appoint a Data Protection Officer (DPO) to do so, or failure to register the appointed DPO with the Commissioner within the prescribed period, or appointing a person who does not meet the prescribed qualifications",
     "originalPenalty": null,
+    "penalty": {
+      "fine": "RM250,000",
+      "fineNumeric": 250000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
     "amendedPenalty": {
       "fine": "RM250,000",
       "fineNumeric": 250000,
@@ -444,6 +463,12 @@
     "offence": "Body Corporate Contravention — Turnover-Based Penalty",
     "description": "Where a body corporate commits an offence under the Act, the body corporate is liable to a penalty calculated on the basis of annual Malaysian turnover. This is the primary corporate liability provision and applies in addition to any fine imposed on individual officers under s133A.",
     "originalPenalty": null,
+    "penalty": {
+      "fine": "Greater of RM3,000,000 or 10% of annual gross turnover in Malaysia",
+      "fineNumeric": 3000000,
+      "imprisonment": null,
+      "or_both": false
+    },
     "amendedPenalty": {
       "fine": "Greater of RM3,000,000 or 10% of annual gross turnover in Malaysia",
       "fineNumeric": 3000000,
@@ -467,6 +492,12 @@
     "offence": "Failure to Conduct Data Protection Impact Assessment",
     "description": "Failure by a data controller to conduct a Data Protection Impact Assessment (DPIA) before undertaking high-risk processing activities as required under s137. High-risk processing includes large-scale processing of sensitive personal data, systematic monitoring of publicly accessible areas, and automated decision-making with significant effects on data subjects.",
     "originalPenalty": null,
+    "penalty": {
+      "fine": "RM500,000",
+      "fineNumeric": 500000,
+      "imprisonment": "3 years",
+      "or_both": true
+    },
     "amendedPenalty": {
       "fine": "RM500,000",
       "fineNumeric": 500000,
@@ -491,6 +522,12 @@
     "offence": "Failure to Maintain Records of Processing Activities (ROPA)",
     "description": "Failure by a data controller to maintain Records of Processing Activities as required for prescribed classes of data controllers. ROPA must record identity and contact details of the data controller, DPO contact, purposes of processing, categories of data subjects and data, recipients, cross-border transfers, retention periods, and security measures.",
     "originalPenalty": null,
+    "penalty": {
+      "fine": "RM300,000",
+      "fineNumeric": 300000,
+      "imprisonment": "2 years",
+      "or_both": true
+    },
     "amendedPenalty": {
       "fine": "RM300,000",
       "fineNumeric": 300000,
