@@ -117,14 +117,30 @@
       "filePath": "supplements/codes-of-practice/real-estate.json"
     },
     {
-      "id": "cop-professional",
-      "title": "Professional Services COP",
-      "filePath": "supplements/codes-of-practice/professional-services.json"
+      "id": "cop-direct-selling",
+      "title": "Personal Data Protection Code of Practice for the Direct Selling Sector",
+      "shortTitle": "Direct Selling Code",
+      "type": "sector",
+      "sourceType": "constructed-indicative",
+      "applicableClasses": [
+        "direct-selling"
+      ],
+      "effectiveDate": "Pending",
+      "filePath": "supplements/codes-of-practice/direct-selling.json",
+      "status": "constructed-indicative"
     },
     {
-      "id": "cop-direct-selling",
-      "title": "Direct Selling Sector COP",
-      "filePath": "supplements/codes-of-practice/direct-selling.json"
+      "id": "cop-services",
+      "title": "Personal Data Protection Code of Practice for the Services Sector",
+      "shortTitle": "Services Code",
+      "type": "sector",
+      "sourceType": "constructed-indicative",
+      "applicableClasses": [
+        "services"
+      ],
+      "effectiveDate": "Pending",
+      "filePath": "supplements/codes-of-practice/services.json",
+      "status": "constructed-indicative"
     }
   ],
   "notes": "Where a data controller is subject to both the General Code and a sector-specific Code, the sector-specific Code prevails to the extent of any inconsistency. Codes are issued under s57 and compliance is mandated by s58 \u2014 non-compliance constitutes a breach of the Code which may be treated as a breach of the corresponding principle under s5."

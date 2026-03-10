@@ -282,7 +282,7 @@
       "name": "Direct Selling",
       "orderReference": "First Schedule, Class 8",
       "description": "Direct sales companies and distributors licensed under the Direct Sales and Anti-Pyramid Scheme Act 1993, including multi-level marketing (MLM) organizations",
-      "applicableCode": "general-cop-2022",
+      "applicableCode": "cop-direct-selling",
       "registrationRequired": true,
       "examples": [
         "Multi-level marketing (MLM) companies",
@@ -316,7 +316,7 @@
       "name": "Services",
       "orderReference": "First Schedule, Class 9",
       "description": "Licensed professional service providers including legal, audit, accountancy, engineering, and architecture firms registered with their respective professional bodies",
-      "applicableCode": "general-cop-2022",
+      "applicableCode": "cop-services",
       "registrationRequired": true,
       "examples": [
         "Law firms (advocates and solicitors)",

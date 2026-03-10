@@ -829,12 +829,6 @@ async function renderControlDetail(el, slug) {
 
   const domain = state.controls.domains[control.domain] || {};
 
-  // Build supplement links sections
-  const hasStandards = control.relatedStandards && control.relatedStandards.length;
-  const hasGuidelines = control.relatedGuidelines && control.relatedGuidelines.length;
-  const hasCodes = control.relatedCodes && control.relatedCodes.length;
-  const hasSectorVariants = control.sectorVariants && Object.keys(control.sectorVariants).length;
-
   // --- Audit Package: resolve linked artifacts and evidence (direct mapping) ---
   const controlSlug = control.slug;
   const sections = control.sections || [];
@@ -2677,7 +2671,9 @@ init().catch(err => {
 // === Export Functions ===
 
 function exportToPDF() {
+  document.body.classList.add('printing');
   window.print();
+  document.body.classList.remove('printing');
 }
 
 function exportToCSV() {

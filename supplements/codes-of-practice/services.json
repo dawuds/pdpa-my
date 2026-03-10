@@ -1,0 +1,110 @@
+{
+  "id": "cop-services",
+  "title": "Personal Data Protection Code of Practice for the Services Sector",
+  "type": "code-of-practice",
+  "sourceType": "constructed-indicative",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "Pending",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["services"],
+  "summary": "This Code applies to all data controllers in the Services class (Class 9 of the Class of Data Controllers Order 2013), including licensed professional service providers such as law firms, audit firms, accountancy practices, engineering consultancies, and architecture firms. It also provides guidance for IT service providers, management consultancies, and other professional service firms. The Code addresses the unique data protection challenges arising from professional privilege, client confidentiality obligations, long retention requirements, and the handling of sensitive commercial and personal information in the course of professional engagements.",
+  "provisions": [
+    {
+      "id": "cop-svc-s1",
+      "title": "Scope and Application",
+      "content": "This Code applies to all Class 9 data controllers registered with their respective professional bodies, including advocates and solicitors, auditors and accountants registered with the Malaysian Institute of Accountants (MIA), professional engineers registered with the Board of Engineers Malaysia (BEM), architects registered with the Board of Architects Malaysia (LAM), quantity surveyors, licensed valuers, IT service providers, and management consultancies. Where professional obligations under sector-specific legislation (e.g., Legal Profession Act 1976, Accountants Act 1967) impose higher standards of confidentiality, those obligations apply in addition to this Code.",
+      "requirements": [
+        "Professional service firms must identify all applicable professional regulatory requirements relevant to data protection",
+        "Where professional confidentiality obligations exceed PDPA requirements, the higher standard applies",
+        "This Code must be read together with the General Code 2022"
+      ]
+    },
+    {
+      "id": "cop-svc-s2",
+      "title": "Client Engagement and Privacy Notice",
+      "content": "Professional service providers must provide a clear privacy notice to clients at the commencement of each engagement, whether through a letter of engagement, client retainer agreement, or separate privacy notice. The notice must: (a) specify the categories of personal data that will be collected in the course of the engagement; (b) identify all third parties to whom data may be disclosed (e.g., regulatory bodies, sub-contractors, correspondent firms); (c) state the legal basis for processing, including any obligations under professional regulations or statutory requirements (e.g., AML/CFT reporting by lawyers and accountants); (d) inform clients of their rights under the PDPA including the right of access and correction; and (e) be provided in a language understood by the client.",
+      "requirements": [
+        "Privacy notice must be provided at commencement of engagement",
+        "Third-party disclosures must be specifically identified",
+        "Legal basis for processing must be clearly stated",
+        "Notice must be in a language understood by the client"
+      ],
+      "controlSlugs": ["notice-and-choice-compliance"]
+    },
+    {
+      "id": "cop-svc-s3",
+      "title": "Professional Privilege and Access Rights",
+      "content": "Where personal data is subject to legal professional privilege (solicitor-client privilege) or other professional confidentiality obligations, the service provider must: (a) clearly identify privileged material and maintain it separately or with appropriate access controls; (b) not disclose privileged data in response to a data access request under s30 of the PDPA where the privilege applies — but must inform the data subject of the existence of the data and the grounds for withholding; (c) obtain client instructions before disclosing any client data to third parties, except where disclosure is mandated by law (e.g., suspicious transaction reports under AMLA); and (d) ensure that the waiver of privilege by a client is documented and informed. Professional privilege belongs to the client, not the service provider.",
+      "requirements": [
+        "Privileged material must be identified and access-controlled",
+        "Privilege may be a valid ground for withholding data from an access request — but the data subject must be informed",
+        "Client instructions required before third-party disclosure except where mandated by law",
+        "Privilege waiver must be documented and informed — privilege belongs to the client"
+      ],
+      "controlSlugs": ["access-control-framework"]
+    },
+    {
+      "id": "cop-svc-s4",
+      "title": "Retention of Professional Records",
+      "content": "Professional service providers must establish retention schedules that balance PDPA retention principle requirements with professional regulatory obligations. Specifically: (a) legal files must be retained for a minimum of 7 years after conclusion of the matter, or longer where required by the Malaysian Bar Council or applicable limitation periods; (b) audit working papers must be retained for a minimum of 7 years in accordance with MIA requirements and the Companies Act 2016; (c) engineering and architecture project files must be retained for the duration of any applicable defects liability period plus the relevant limitation period; (d) client personal data that is no longer necessary for the original purpose or any legal obligation must be securely disposed of; and (e) a formal review and disposal process must be established and documented.",
+      "requirements": [
+        "Legal files: minimum 7 years after matter conclusion",
+        "Audit working papers: minimum 7 years per MIA and Companies Act requirements",
+        "Engineering/architecture files: retained for defects liability plus limitation period",
+        "Formal disposal process must be established and documented",
+        "Retention schedule must be reviewed annually"
+      ],
+      "controlSlugs": ["retention-and-disposal-management"]
+    },
+    {
+      "id": "cop-svc-s5",
+      "title": "IT Services and Data Processor Obligations",
+      "content": "IT service providers, managed service providers, cloud service providers, and systems integrators acting as data processors for their clients must: (a) enter into a written data processing agreement with each client specifying the scope, purpose, and duration of processing; (b) process personal data only on the documented instructions of the client (data controller); (c) implement security measures appropriate to the sensitivity of the data processed, including encryption, access controls, and vulnerability management; (d) not engage sub-processors without the prior written consent of the client and ensure sub-processors are bound by equivalent obligations; (e) assist the client in responding to data subject access requests and data breach notifications; and (f) return or securely delete all personal data upon termination of the engagement, as instructed by the client.",
+      "requirements": [
+        "Written data processing agreement required for all client engagements",
+        "Processing only on documented client instructions",
+        "Sub-processor engagement requires prior written client consent",
+        "All personal data must be returned or deleted upon engagement termination",
+        "Security measures must be proportionate to data sensitivity"
+      ],
+      "controlSlugs": ["third-party-processor-oversight", "data-security-framework"]
+    },
+    {
+      "id": "cop-svc-s6",
+      "title": "Security of Client Data and Confidential Information",
+      "content": "Professional service providers must implement security measures appropriate to the highly confidential nature of client engagement data. This includes: (a) logical and physical access controls restricting access to client files to the engagement team and authorised personnel only; (b) information barriers (ethical walls) between engagement teams where conflicts of interest exist; (c) encryption of client data at rest and in transit, particularly for data shared via email or collaboration platforms; (d) secure disposal of physical files including shredding of paper documents; (e) multi-factor authentication for access to client data management systems; and (f) regular security awareness training for all staff handling client personal data.",
+      "requirements": [
+        "Access to client files restricted to engagement team and authorised personnel",
+        "Information barriers must be maintained where conflicts of interest exist",
+        "Client data must be encrypted at rest and in transit",
+        "Paper documents containing personal data must be securely shredded",
+        "MFA required for client data management systems",
+        "Annual security awareness training for all staff"
+      ],
+      "controlSlugs": ["data-security-framework", "access-control-framework", "multi-factor-authentication"]
+    }
+  ],
+  "keywords": [
+    "services",
+    "professional services",
+    "legal",
+    "law firm",
+    "audit",
+    "accountancy",
+    "engineering",
+    "architecture",
+    "IT services",
+    "managed services",
+    "consulting",
+    "solicitor-client privilege",
+    "professional privilege",
+    "client confidentiality",
+    "data processor",
+    "Class 9",
+    "MIA",
+    "BEM",
+    "LAM",
+    "Malaysian Bar"
+  ]
+}

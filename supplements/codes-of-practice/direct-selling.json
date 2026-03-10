@@ -1,0 +1,105 @@
+{
+  "id": "cop-direct-selling",
+  "title": "Personal Data Protection Code of Practice for the Direct Selling Sector",
+  "type": "code-of-practice",
+  "sourceType": "constructed-indicative",
+  "issuedBy": "Personal Data Protection Commissioner",
+  "effectiveDate": "Pending",
+  "parentAct": "Act 709",
+  "enablingSection": "s57",
+  "applicableClasses": ["direct-selling"],
+  "summary": "This Code applies to all data controllers in the Direct Selling class (Class 8 of the Class of Data Controllers Order 2013), including licensed direct sales companies and their distributors operating under the Direct Sales and Anti-Pyramid Scheme Act 1993 (Act 500). It addresses the unique data protection challenges arising from high-volume direct marketing, telemarketing, door-to-door sales, multi-level distributor networks, and the consent requirements for commercial communications under the PDPA.",
+  "provisions": [
+    {
+      "id": "cop-ds-s1",
+      "title": "Scope and Application",
+      "content": "This Code applies to all Class 8 data controllers licensed under the Direct Sales and Anti-Pyramid Scheme Act 1993, including multi-level marketing (MLM) companies, door-to-door sales companies, direct catalogue retailers, and their networks of authorised distributors and agents. Distributors who independently process personal data of their customers are data controllers in their own right and must comply with this Code. This Code must be read together with the General Code 2022.",
+      "requirements": [
+        "Direct selling companies must ensure their distributor agreements include PDPA compliance obligations",
+        "Distributors processing customer data independently are data controllers subject to this Code",
+        "This Code must be read together with the General Code 2022 and applicable KPDN guidelines"
+      ]
+    },
+    {
+      "id": "cop-ds-s2",
+      "title": "Consent for Direct Marketing and Commercial Communications",
+      "content": "Direct selling companies and their distributors must obtain valid, informed consent before sending any commercial communications including telemarketing calls, SMS messages, emails, social media messages, and messaging application communications. Consent must be: (a) specific to the type of communication channel (telephone, SMS, email, social media); (b) obtained separately from the consent to purchase goods or services — bundled consent is not valid; (c) documented with a record of when, how, and through which channel consent was obtained; (d) renewed if there has been no contact with the data subject for a period exceeding 12 months; and (e) compliant with the Personal Data Protection (Amendment) Act 2024 requirements on marketing consent. Cold calling and unsolicited commercial communications to individuals who have not provided prior consent is prohibited.",
+      "requirements": [
+        "Separate consent required for each marketing channel — bundled consent is not valid",
+        "Consent records must include date, method, and channel",
+        "Consent lapses after 12 months of no contact and must be renewed",
+        "Cold calling without prior consent is prohibited under this Code",
+        "Opt-out requests must be honoured within 7 days across all channels"
+      ],
+      "controlSlugs": ["consent-collection-mechanism", "notice-and-choice-compliance"]
+    },
+    {
+      "id": "cop-ds-s3",
+      "title": "Opt-Out and Suppression Lists",
+      "content": "Direct selling companies must maintain and apply suppression lists of individuals who have exercised their right to opt out of commercial communications under s43 of the PDPA. Suppression lists must: (a) be applied before every marketing campaign, telemarketing session, or batch of commercial communications; (b) be shared with and applied by all distributors and agents acting on behalf of the company; (c) be updated within 7 days of receiving an opt-out request; (d) be retained indefinitely — removal from the suppression list requires fresh consent from the data subject; and (e) include the Do Not Call Registry maintained by the Commissioner, where applicable. Any commercial communication must include a clear and accessible opt-out mechanism.",
+      "requirements": [
+        "Suppression lists must be checked before every campaign",
+        "All distributors must have access to and apply the company suppression list",
+        "Opt-out requests processed within 7 days",
+        "Suppression list entries are permanent unless fresh consent is obtained",
+        "Every commercial communication must include an opt-out mechanism"
+      ],
+      "controlSlugs": ["consent-withdrawal-management"]
+    },
+    {
+      "id": "cop-ds-s4",
+      "title": "Door-to-Door and In-Person Sales",
+      "content": "Where personal data is collected during door-to-door visits, roadshow events, or other in-person sales encounters, the direct selling company must ensure that: (a) the distributor or agent provides a written privacy notice at the point of data collection, even where the transaction is conducted verbally; (b) the data subject is informed of the purpose of data collection, the identity of the data controller, and the right to withdraw consent; (c) identity documents (NRIC, passport) are not photographed or copied unless strictly necessary for the transaction and with explicit consent; (d) personal data collected on paper forms is securely transferred to the company's systems and the paper forms are securely destroyed within 30 days; and (e) personal data is not shared with other distributors or third parties without the data subject's consent.",
+      "requirements": [
+        "Written privacy notice must be provided at point of collection even for in-person transactions",
+        "Identity document copying only with explicit consent and strict necessity",
+        "Paper forms must be digitised and securely destroyed within 30 days",
+        "Personal data must not be shared laterally between distributors without consent"
+      ],
+      "controlSlugs": ["notice-and-choice-compliance", "data-security-framework"]
+    },
+    {
+      "id": "cop-ds-s5",
+      "title": "Distributor Network Data Sharing",
+      "content": "Multi-level marketing and network marketing companies must implement controls on the sharing of personal data within their distributor networks. Specifically: (a) customer personal data must not be shared with upline or downline distributors unless the customer has been informed and has consented; (b) distributor personal data (earnings, commission, network position) must be treated as personal data and protected accordingly; (c) where distributor data is used for recruitment or performance tracking, the distributor must be informed of such use in the distributor agreement; (d) the direct selling company must have a data processing agreement with each distributor who processes customer data; and (e) network hierarchy data that reveals individual distributor performance must be subject to access controls preventing unauthorized access by other distributors.",
+      "requirements": [
+        "Customer data must not flow through the distributor hierarchy without consent",
+        "Distributor earnings and commission data is personal data requiring protection",
+        "Data processing agreements required between company and each distributor",
+        "Access controls must prevent unauthorized lateral or hierarchical data access"
+      ],
+      "controlSlugs": ["third-party-processor-oversight", "access-control-framework"]
+    },
+    {
+      "id": "cop-ds-s6",
+      "title": "Telemarketing and Automated Communications",
+      "content": "Direct selling companies using telemarketing, auto-diallers, robocalls, or automated messaging systems must: (a) only contact data subjects who have provided prior consent for telephone marketing; (b) identify the caller and the company at the beginning of every call; (c) maintain a call recording policy that is disclosed to the data subject at the beginning of the call; (d) not use automated calling systems that do not allow for immediate opt-out or connection to a live agent; (e) restrict telemarketing hours to between 9:00 AM and 9:00 PM on weekdays and 10:00 AM to 6:00 PM on weekends and public holidays; and (f) ensure that telemarketing scripts include the required privacy disclosures.",
+      "requirements": [
+        "Prior consent required before any telemarketing contact",
+        "Caller must identify themselves and the company at the start of each call",
+        "Call recording requires disclosure at the beginning of the call",
+        "Automated systems must allow immediate opt-out",
+        "Telemarketing restricted to 9 AM–9 PM weekdays, 10 AM–6 PM weekends"
+      ],
+      "controlSlugs": ["consent-collection-mechanism"]
+    }
+  ],
+  "keywords": [
+    "direct selling",
+    "direct sales",
+    "MLM",
+    "multi-level marketing",
+    "network marketing",
+    "door-to-door",
+    "telemarketing",
+    "commercial communications",
+    "opt-out",
+    "suppression list",
+    "distributor",
+    "cold calling",
+    "direct marketing",
+    "Class 8",
+    "Act 500",
+    "KPDN"
+  ]
+}
