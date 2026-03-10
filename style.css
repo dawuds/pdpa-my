@@ -195,7 +195,10 @@
 }
 .accordion-item.open .chevron { transform: rotate(90deg); }
 .accordion-content { display: none; padding: 0 1rem 0.75rem; }
-.accordion-item.open .accordion-content { display: block; }
+.accordion-item.open > .accordion-content { display: block; }
+/* Allow aria-expanded accordions to work independently */
+.accordion-content[role="region"] { display: block; }
+.accordion-trigger[aria-expanded="false"] + .accordion-content[role="region"] { display: none; }
 
 /* ---------- PDPA Badges (extend base) ---------- */
 .badge-administrative { background: var(--surface-hover); color: var(--text-secondary); }

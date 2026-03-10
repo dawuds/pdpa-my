@@ -231,7 +231,7 @@ function renderPart(el, partId) {
           <button class="accordion-trigger" data-accordion>
             <span>${esc(div)} (${secs.length} sections)</span>
             <span class="chevron">&#9654;</span>
-          </div>
+          </button>
           <div class="accordion-content">
             ${secs.map(s => `
               <a href="#section/${s.id}" class="section-link">
@@ -774,7 +774,7 @@ async function renderControls(el) {
             <button class="accordion-trigger" data-accordion>
               <span>${esc(domain.name)} (${filteredControls.length}${activeSector ? '/' + controls.length : ''})</span>
               <span class="chevron">&#9654;</span>
-            </div>
+            </button>
             <div class="accordion-content">
               <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(domain.description)}</p>
               ${filteredControls.map(c => {
@@ -1210,7 +1210,7 @@ function renderSupplementContent(el, data, id) {
             <button class="accordion-trigger" data-accordion>
               <span><span style="font-family:var(--mono);color:var(--accent);margin-right:0.5rem;">${esc(p.id)}</span>${esc(p.title)}</span>
               <span class="chevron">&#9654;</span>
-            </div>
+            </button>
             <div class="accordion-content">
               <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(p.content || '')}</p>
               ${p.requirements && p.requirements.length ? `
@@ -1544,7 +1544,7 @@ function renderRMMethodology(meth, matrix) {
       <button class="accordion-trigger" data-accordion>
         <span><strong>Step ${s.step}:</strong> ${esc(s.name)}</span>
         <span class="chevron">&#9654;</span>
-      </div>
+      </button>
       <div class="accordion-content">
         <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(s.description)}</p>
         <ul style="padding-left:1.25rem;font-size:0.8125rem;color:var(--text-secondary);">
@@ -1794,7 +1794,7 @@ function renderRMChecklist(checklist) {
           <button class="accordion-trigger" data-accordion>
             <span>${esc(area)} (${areaItems.length})</span>
             <span class="chevron">&#9654;</span>
-          </div>
+          </button>
           <div class="accordion-content">
             ${areaItems.map(item => `
               <div class="card" style="margin-bottom:0.5rem;">
@@ -1933,7 +1933,7 @@ function renderDPIAMethodology(meth) {
       <button class="accordion-trigger" data-accordion>
         <span><strong>${esc(p.name)}</strong> <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">${esc(p.description)}</span></span>
         <span class="chevron">&#9654;</span>
-      </div>
+      </button>
       <div class="accordion-content">
         <div class="dpia-phase">
           <div class="block-label">Steps</div>
@@ -2016,7 +2016,7 @@ function renderDPIAScreening(thresholds) {
               <span class="badge ${t.riskLevel === 'high' ? 'badge-mandatory' : 'badge-procedural'}" style="margin-left:0.5rem;">${esc(t.riskLevel)}</span>
             </span>
             <span class="chevron">&#9654;</span>
-          </div>
+          </button>
           <div class="accordion-content">
             <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(t.description)}</p>
             <div style="display:flex;gap:0.25rem;">
@@ -2217,7 +2217,7 @@ function renderDPIAExamples(examples) {
                 <span style="font-family:var(--mono);font-size:0.75rem;font-weight:700;color:${scoreColor};margin-left:0.5rem;">Score: ${ex.screeningScore}</span>
               </span>
               <span class="chevron">&#9654;</span>
-            </div>
+            </button>
             <div class="accordion-content">
               <div class="dpia-example">
                 <div class="card-body" style="margin-bottom:0.75rem;">${esc(ex.scenario)}</div>
@@ -2579,12 +2579,12 @@ function handleClick(e) {
     return;
   }
 
-  // Accordion toggle (standard)
-  const accTrigger = e.target.closest('.accordion-trigger');
+  // Accordion toggle (aria-expanded triggers only, e.g. audit package)
+  const accTrigger = e.target.closest('.accordion-trigger[aria-expanded]');
   if (accTrigger) {
-    const content = accTrigger.nextElementSibling;
     const expanded = accTrigger.getAttribute('aria-expanded') === 'true';
     accTrigger.setAttribute('aria-expanded', !expanded);
+    const content = accTrigger.nextElementSibling;
     if (content) content.hidden = expanded;
     return;
   }
