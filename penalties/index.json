@@ -288,7 +288,7 @@
   {
     "id": "pen-s12B-5",
     "section": "s12B(5)",
-    "part": "X",
+    "part": "II",
     "offence": "Failure to Notify Data Breach",
     "description": "Failure by a data controller to notify the Commissioner of a notifiable data breach as soon as practicable, or failure to notify affected data subjects as soon as practicable where required",
     "originalPenalty": null,
@@ -316,7 +316,7 @@
   {
     "id": "pen-dpo",
     "section": "s12A(5)",
-    "part": "X",
+    "part": "II",
     "offence": "Failure to Appoint Data Protection Officer",
     "description": "Failure by a data controller who is required under the Act and guidelines to appoint a Data Protection Officer (DPO) to do so, or failure to register the appointed DPO with the Commissioner within the prescribed period, or appointing a person who does not meet the prescribed qualifications",
     "originalPenalty": null,
@@ -428,7 +428,7 @@
   },
   {
     "id": "pen-s138",
-    "section": "s138",
+    "section": "s128(3)",
     "part": "X",
     "offence": "Continuing Offence",
     "description": "Where a person is convicted of an offence under the Act and the contravention continues after the conviction, that person commits a further offence for each day or part of a day during which the contravention continues, rendering the person liable to a daily fine in addition to the original penalty",
@@ -454,7 +454,7 @@
     "compoundAmount": null,
     "compoundRegulation": null,
     "notes": "The continuing offence provision is critical for compelling compliance. Where a data controller refuses or is slow to remedy a violation, the accumulating daily fine creates strong financial incentive to comply promptly.",
-    "note": "If Act A1727 renumbered the original Continuing Offence provision to s139 or similar, the section reference in this entry should be updated accordingly. Verify against the gazetted amended Act text."
+    "note": "Section reference corrected from s138 (which, post-A1727, is 'Records of processing activities') to s128(3) where the continuing offence provision resides in the post-A1727 provisions database."
   },
   {
     "id": "pen-s130-turnover",

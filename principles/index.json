@@ -145,7 +145,7 @@
     ]
   },
   {
-    "id": "right-to-erasure",
+    "id": "erasure",
     "section": 43,
     "name": "Right to Erasure / Right to be Forgotten",
     "summary": "A data subject has the right to request erasure of personal data where the data is no longer necessary for its original purpose, consent has been withdrawn, processing is unlawful, an objection has been upheld, or erasure is required for legal compliance. Where the data has been made public, the data controller must take reasonable steps to inform other processors of the erasure request. Exceptions apply for freedom of expression, legal compliance, and public interest.",
