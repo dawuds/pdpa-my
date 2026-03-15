@@ -4,6 +4,12 @@
     "lastUpdated": "2026-03-09",
     "alignment": "Act 709 / Act A1727"
   },
+  "_source": {
+    "sourceDocument": "Personal Data Protection Act 2010 (Act 709) + Amendment A1727",
+    "sourceVersion": "Act 709 / Amendment A1727",
+    "sourceDate": "2024-01-01",
+    "sourceURL": "https://www.pdp.gov.my"
+  },
   "domains": [
     {
       "slug": "consent-management",
@@ -231,7 +237,7 @@
       ],
       "keyActivities": [
         "Identify all processing activities involving sensitive personal data under s29 categories",
-        "Design explicit consent mechanisms for sensitive data \u2014 standalone, clearly highlighted, cannot be inferred from general consent",
+        "Design explicit consent mechanisms for sensitive data — standalone, clearly highlighted, cannot be inferred from general consent",
         "Train staff collecting sensitive data on the heightened consent standard",
         "Implement technical controls blocking sensitive data collection without affirmative explicit consent",
         "Implement enhanced access controls for stored sensitive personal data"
