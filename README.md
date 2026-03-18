@@ -569,3 +569,5 @@ CC-BY-4.0 — see [LICENSE](LICENSE).
 
 This database is a structured representation of publicly available Malaysian legislation and regulatory guidance. The original texts are copyright of the Government of Malaysia. This structured compilation is provided for informational and compliance purposes.
 
+<!-- last-deploy: 2026-03-19 -->
+
