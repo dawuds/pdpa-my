@@ -1,0 +1,38 @@
+# PDPA-MY — Personal Data Protection Act 2010
+
+## What This Is
+Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments. SPA explorer with JSON data layers.
+
+## Architecture
+- **SPA**: `index.html` + `app.js` + `style.css` (vanilla JS, no build step)
+- **Data**: 83 JSON files across 10 layers
+- **Schema**: GRC Portfolio v2.0 Standardized Schema
+
+## Key Data Files
+- `controls/library.json` — 49 controls across 10 domains
+- `controls/domains.json` — 10 domains (consent, rights, notice, security, lifecycle, breach, cross-border, third-party, governance, registration)
+- `provisions/index.json` — 154 sections (Act 709 + A1727 amendments)
+- `principles/` — 7 Data Protection Principles + 4 new A1727 rights
+- `dpia/` — DPIA methodology, thresholds, worked examples, templates
+
+## Conventions
+- Kebab-case slugs
+- "Data Controller" terminology (migrated from "Data User" per A1727)
+- Bidirectional: Section <-> Control <-> Evidence <-> Artifact
+- Cross-references include GDPR, ISO 27701, APEC CBPR mappings
+
+## Important
+- **A1727 amendments** are tracked in `provisions/amendment-tracker.json`
+- **Breach notification** (s143A): 72 hours to Commissioner — key interaction with NACSA 6-hour obligation
+- Controls overlap with NACSA: 14 direct overlap, 12 supplementary (see `nacsa/cross-references/framework-mappings.json`)
+- **DPO requirement** under A1727 — separate from CISO under Act 854
+
+## Validation
+```bash
+node validate.js
+```
+
+## Related Repos
+- `nacsa/` — 12 PDPA-to-NACSA mappings in framework-mappings.json
+- `Tech-Audit/NACSA/Appendices/PDPA-Integration.md` — Full 49-control mapping to NACSA CoP
+- `grc/` — Portfolio hub
