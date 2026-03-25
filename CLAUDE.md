@@ -3,7 +3,10 @@
 **Last updated:** 2026-03-25
 
 ## What This Is
-Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments. SPA explorer with JSON data layers.
+Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments. SPA explorer with JSON data layers. **Tier 1 Focus Area** in the GRC portfolio.
+
+## Portfolio Role
+One of 5 Tier 1 focus areas. Primary data protection framework for Malaysian organisations. Cross-references NACSA (dual-regulation for NCII entities), AI-Governance (AI data processing), IESP (data protection in assessments), and SC-GTRM (client data in capital markets).
 
 ## Architecture
 - **SPA**: `index.html` + `app.js` + `style.css` (vanilla JS, no build step)
@@ -35,7 +38,9 @@ node validate.js
 ```
 
 ## Related Repos
-
-- [nacsa](https://github.com/dawuds/nacsa) — 12 PDPA-to-NACSA mappings in framework-mappings.json
-- [Tech-Audit](https://github.com/dawuds/Tech-Audit) — Full 49-control mapping to NACSA CoP
+- [nacsa](https://github.com/dawuds/nacsa) — 12 PDPA-to-NACSA mappings; dual-regulation for NCII entities (Tier 1)
+- [iesp](https://github.com/dawuds/IESP) — BNM IESP assessments include data protection scope (Tier 1)
+- [AI-Governance](https://github.com/dawuds/AI-Governance) — PDPA applies to AI data processing, automated decisions (Tier 1)
+- [sc-gtrm](https://github.com/dawuds/sc-gtrm) — PDPA applies to capital market client data (Tier 1)
+- [Tech-Audit](https://github.com/dawuds/Tech-Audit) — Full 49-control mapping to NACSA CoP + general audit methodology
 - [grc](https://github.com/dawuds/grc) — Portfolio hub
