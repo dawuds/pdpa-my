@@ -1,5 +1,7 @@
 # PDPA-MY — Personal Data Protection Act 2010
 
+**Last updated:** 2026-03-25
+
 ## What This Is
 Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments. SPA explorer with JSON data layers.
 
@@ -33,6 +35,7 @@ node validate.js
 ```
 
 ## Related Repos
-- `nacsa/` — 12 PDPA-to-NACSA mappings in framework-mappings.json
-- `Tech-Audit/NACSA/Appendices/PDPA-Integration.md` — Full 49-control mapping to NACSA CoP
-- `grc/` — Portfolio hub
+
+- [nacsa](https://github.com/dawuds/nacsa) — 12 PDPA-to-NACSA mappings in framework-mappings.json
+- [Tech-Audit](https://github.com/dawuds/Tech-Audit) — Full 49-control mapping to NACSA CoP
+- [grc](https://github.com/dawuds/grc) — Portfolio hub
