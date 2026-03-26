@@ -1,0 +1,465 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-26",
+    "source": "PDPA Act 709 + A1727",
+    "techAuditDomain": "PDPA",
+    "techAuditPath": "Tech-Audit/PDPA/",
+    "description": "Maps 49 PDPA controls to Tech-Audit/PDPA audit procedures"
+  },
+  "domainMappings": [
+    {
+      "domainSlug": "consent-management",
+      "domainName": "Consent Management",
+      "techAuditPrefix": "CM",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "consent-collection-mechanism",
+          "controlName": "Consent Collection Mechanism",
+          "procedureRefs": ["CM-01", "CM-02"],
+          "pbcItems": ["1.1", "1.2", "1.8"],
+          "relatedProvisions": ["s6", "s7"]
+        },
+        {
+          "controlSlug": "consent-record-keeping",
+          "controlName": "Consent Record-Keeping and Evidence Management",
+          "procedureRefs": ["CM-01", "CM-02"],
+          "pbcItems": ["1.3", "1.8"],
+          "relatedProvisions": ["s6", "s7"]
+        },
+        {
+          "controlSlug": "consent-withdrawal-management",
+          "controlName": "Consent Withdrawal Management",
+          "procedureRefs": ["CM-03"],
+          "pbcItems": ["1.4", "1.5"],
+          "relatedProvisions": ["s6", "s38", "s42"]
+        },
+        {
+          "controlSlug": "sensitive-data-explicit-consent",
+          "controlName": "Sensitive Personal Data Explicit Consent Control",
+          "procedureRefs": ["CM-04"],
+          "pbcItems": ["1.6", "1.7"],
+          "relatedProvisions": ["s6", "s29"]
+        },
+        {
+          "controlSlug": "consent-validity-assessment",
+          "controlName": "Consent Validity Assessment and Remediation",
+          "procedureRefs": ["CM-01", "CM-02"],
+          "pbcItems": ["1.1", "1.3", "1.8"],
+          "relatedProvisions": ["s6", "s7"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "data-subject-rights",
+      "domainName": "Data Subject Rights",
+      "techAuditPrefix": "DSR",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "dsar-intake-and-verification",
+          "controlName": "Data Subject Rights Request Intake and Identity Verification",
+          "procedureRefs": ["DSR-01", "DSR-02"],
+          "pbcItems": ["2.1", "2.2"],
+          "relatedProvisions": ["s30", "s34", "s38", "s43"]
+        },
+        {
+          "controlSlug": "access-request-fulfillment",
+          "controlName": "Data Subject Access Request Fulfilment",
+          "procedureRefs": ["DSR-01"],
+          "pbcItems": ["2.1", "2.2", "2.3"],
+          "relatedProvisions": ["s30", "s31", "s32", "s33"]
+        },
+        {
+          "controlSlug": "correction-request-handling",
+          "controlName": "Data Correction Request Handling",
+          "procedureRefs": ["DSR-02"],
+          "pbcItems": ["2.4", "2.5"],
+          "relatedProvisions": ["s34", "s35", "s36"]
+        },
+        {
+          "controlSlug": "direct-marketing-opt-out",
+          "controlName": "Direct Marketing Opt-Out Management",
+          "procedureRefs": ["DSR-01", "DSR-05"],
+          "pbcItems": ["2.1", "2.8"],
+          "relatedProvisions": ["s40", "s43"]
+        },
+        {
+          "controlSlug": "dsar-deadline-management",
+          "controlName": "DSAR Deadline and Escalation Management",
+          "procedureRefs": ["DSR-01", "DSR-02", "DSR-03", "DSR-04", "DSR-05"],
+          "pbcItems": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+          "relatedProvisions": ["s30", "s34", "s44"]
+        },
+        {
+          "controlSlug": "rights-awareness-communication",
+          "controlName": "Data Subject Rights Awareness Communication",
+          "procedureRefs": ["DSR-01", "DSR-02", "DSR-03", "DSR-04", "DSR-05"],
+          "pbcItems": ["2.1"],
+          "relatedProvisions": ["s7", "s30", "s34", "s38", "s43"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "notice-transparency",
+      "domainName": "Notice and Transparency",
+      "techAuditPrefix": "NT",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "privacy-notice-design",
+          "controlName": "Privacy Notice Design and Content Compliance",
+          "procedureRefs": ["NT-01", "NT-02"],
+          "pbcItems": ["3.1", "3.2", "3.5"],
+          "relatedProvisions": ["s7"]
+        },
+        {
+          "controlSlug": "notice-delivery-mechanism",
+          "controlName": "Privacy Notice Delivery and Accessibility",
+          "procedureRefs": ["NT-01"],
+          "pbcItems": ["3.1", "3.3", "3.4"],
+          "relatedProvisions": ["s7"]
+        },
+        {
+          "controlSlug": "notice-review-cycle",
+          "controlName": "Privacy Notice Review and Update Cycle",
+          "procedureRefs": ["NT-02"],
+          "pbcItems": ["3.2"],
+          "relatedProvisions": ["s7"]
+        },
+        {
+          "controlSlug": "cctv-and-monitoring-disclosure",
+          "controlName": "CCTV and Monitoring Disclosure",
+          "procedureRefs": ["NT-01", "NT-03"],
+          "pbcItems": ["3.1", "3.6", "3.7"],
+          "relatedProvisions": ["s7"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "data-security",
+      "domainName": "Data Security",
+      "techAuditPrefix": "SEC",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "information-security-risk-management",
+          "controlName": "Information Security Risk Management",
+          "procedureRefs": ["SEC-01"],
+          "pbcItems": ["4.1", "4.2"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "access-control-and-identity-management",
+          "controlName": "Access Control and Identity Management",
+          "procedureRefs": ["SEC-03"],
+          "pbcItems": ["4.3", "4.4", "4.5"],
+          "relatedProvisions": ["s9", "s12"]
+        },
+        {
+          "controlSlug": "encryption-and-data-protection-in-transit-at-rest",
+          "controlName": "Encryption and Data Protection In-Transit and At-Rest",
+          "procedureRefs": ["SEC-02"],
+          "pbcItems": ["4.6"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "vulnerability-and-patch-management",
+          "controlName": "Vulnerability and Patch Management",
+          "procedureRefs": ["SEC-04"],
+          "pbcItems": ["4.7", "4.8"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "security-monitoring-and-siem",
+          "controlName": "Security Monitoring and Incident Detection",
+          "procedureRefs": ["SEC-01", "SEC-04"],
+          "pbcItems": ["4.1", "4.7"],
+          "relatedProvisions": ["s9", "s12B"]
+        },
+        {
+          "controlSlug": "physical-security-controls",
+          "controlName": "Physical Security Controls for Personal Data",
+          "procedureRefs": ["SEC-01"],
+          "pbcItems": ["4.1", "4.2"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "data-loss-prevention",
+          "controlName": "Data Loss Prevention (DLP)",
+          "procedureRefs": ["SEC-01", "SEC-02"],
+          "pbcItems": ["4.1", "4.6"],
+          "relatedProvisions": ["s9"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "data-lifecycle",
+      "domainName": "Data Lifecycle Management",
+      "techAuditPrefix": "DLC",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "data-minimisation-control",
+          "controlName": "Data Minimisation at Collection",
+          "procedureRefs": ["DLC-02"],
+          "pbcItems": ["5.4", "5.6"],
+          "relatedProvisions": ["s6", "s11"]
+        },
+        {
+          "controlSlug": "retention-schedule-management",
+          "controlName": "Retention Schedule Management and Enforcement",
+          "procedureRefs": ["DLC-01"],
+          "pbcItems": ["5.1", "5.2", "5.3"],
+          "relatedProvisions": ["s10"]
+        },
+        {
+          "controlSlug": "secure-data-disposal",
+          "controlName": "Secure Data Disposal",
+          "procedureRefs": ["DLC-01", "DLC-03"],
+          "pbcItems": ["5.2", "5.3"],
+          "relatedProvisions": ["s10"]
+        },
+        {
+          "controlSlug": "data-accuracy-and-quality",
+          "controlName": "Data Accuracy and Quality Management",
+          "procedureRefs": ["DLC-02"],
+          "pbcItems": ["5.4", "5.5", "5.6"],
+          "relatedProvisions": ["s11"]
+        },
+        {
+          "controlSlug": "purpose-limitation-enforcement",
+          "controlName": "Purpose Limitation Enforcement",
+          "procedureRefs": ["DLC-01", "DLC-02"],
+          "pbcItems": ["5.1", "5.4"],
+          "relatedProvisions": ["s6", "s8", "s11"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "breach-response",
+      "domainName": "Breach Response",
+      "techAuditPrefix": "BR",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "breach-detection-and-triage",
+          "controlName": "Data Breach Detection and Triage",
+          "procedureRefs": ["BR-01", "BR-02", "BR-05"],
+          "pbcItems": ["6.1", "6.2", "6.5"],
+          "relatedProvisions": ["s9", "s12B"]
+        },
+        {
+          "controlSlug": "breach-notification-to-commissioner",
+          "controlName": "Mandatory Breach Notification to Commissioner",
+          "procedureRefs": ["BR-02"],
+          "pbcItems": ["6.3", "6.5", "6.6"],
+          "relatedProvisions": ["s12B"]
+        },
+        {
+          "controlSlug": "breach-containment-and-remediation",
+          "controlName": "Breach Containment and Remediation",
+          "procedureRefs": ["BR-01", "BR-04"],
+          "pbcItems": ["6.1", "6.7", "6.8"],
+          "relatedProvisions": ["s9", "s12B"]
+        },
+        {
+          "controlSlug": "data-subject-breach-notification",
+          "controlName": "Data Subject Breach Notification",
+          "procedureRefs": ["BR-03"],
+          "pbcItems": ["6.4", "6.5", "6.6"],
+          "relatedProvisions": ["s12B"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "cross-border-transfer",
+      "domainName": "Cross-Border Data Transfer",
+      "techAuditPrefix": "CBT",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "transfer-identification-and-mapping",
+          "controlName": "Cross-Border Transfer Identification and Mapping",
+          "procedureRefs": ["CBT-01"],
+          "pbcItems": ["7.1", "7.2", "7.6"],
+          "relatedProvisions": ["s129"]
+        },
+        {
+          "controlSlug": "transfer-mechanism-selection",
+          "controlName": "Transfer Mechanism Selection and Implementation",
+          "procedureRefs": ["CBT-02"],
+          "pbcItems": ["7.3", "7.4", "7.7"],
+          "relatedProvisions": ["s129"]
+        },
+        {
+          "controlSlug": "transfer-impact-assessment",
+          "controlName": "Transfer Impact Assessment (TIA)",
+          "procedureRefs": ["CBT-03"],
+          "pbcItems": ["7.5"],
+          "relatedProvisions": ["s129"]
+        },
+        {
+          "controlSlug": "cross-border-transfer-monitoring",
+          "controlName": "Ongoing Cross-Border Transfer Monitoring",
+          "procedureRefs": ["CBT-01", "CBT-04"],
+          "pbcItems": ["7.1", "7.2", "7.6", "7.7"],
+          "relatedProvisions": ["s129"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "third-party-management",
+      "domainName": "Third-Party and Processor Management",
+      "techAuditPrefix": "TPM",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "processor-due-diligence",
+          "controlName": "Data Processor Due Diligence",
+          "procedureRefs": ["TPM-01", "TPM-03"],
+          "pbcItems": ["8.1", "8.3", "8.4", "8.5"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "data-processing-agreement-management",
+          "controlName": "Data Processing Agreement Lifecycle Management",
+          "procedureRefs": ["TPM-02"],
+          "pbcItems": ["8.2", "8.7"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "processor-oversight-and-audit",
+          "controlName": "Ongoing Processor Oversight and Audit",
+          "procedureRefs": ["TPM-03"],
+          "pbcItems": ["8.5", "8.6"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "processor-offboarding",
+          "controlName": "Data Processor Offboarding and Data Return",
+          "procedureRefs": ["TPM-01", "TPM-02"],
+          "pbcItems": ["8.1", "8.2"],
+          "relatedProvisions": ["s9", "s10"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "governance-accountability",
+      "domainName": "Governance and Accountability",
+      "techAuditPrefix": "GOV",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "dpo-appointment-and-functions",
+          "controlName": "Data Protection Officer Appointment and Functions",
+          "procedureRefs": ["GOV-01"],
+          "pbcItems": ["9.1", "9.2", "9.3", "9.4"],
+          "relatedProvisions": ["s12A"]
+        },
+        {
+          "controlSlug": "privacy-policy-management",
+          "controlName": "Privacy Policy and Procedure Management",
+          "procedureRefs": ["GOV-04", "GOV-05"],
+          "pbcItems": ["9.9", "9.10", "9.11", "9.15"],
+          "relatedProvisions": ["s5", "s9"]
+        },
+        {
+          "controlSlug": "staff-training-and-awareness",
+          "controlName": "Staff Training and Awareness Programme",
+          "procedureRefs": ["GOV-04"],
+          "pbcItems": ["9.9", "9.10", "9.11"],
+          "relatedProvisions": ["s9"]
+        },
+        {
+          "controlSlug": "privacy-by-design-and-default",
+          "controlName": "Privacy by Design and Default",
+          "procedureRefs": ["GOV-02"],
+          "pbcItems": ["9.5", "9.6", "9.7"],
+          "relatedProvisions": ["s5", "s6", "s9"]
+        },
+        {
+          "controlSlug": "compliance-monitoring-and-audit",
+          "controlName": "Compliance Monitoring and Internal Audit",
+          "procedureRefs": ["GOV-03", "GOV-04"],
+          "pbcItems": ["9.8", "9.9", "9.10"],
+          "relatedProvisions": ["s5", "s9"]
+        },
+        {
+          "controlSlug": "board-reporting-and-accountability",
+          "controlName": "Board and Senior Management Reporting and Accountability",
+          "procedureRefs": ["GOV-05"],
+          "pbcItems": ["9.12", "9.13", "9.14"],
+          "relatedProvisions": ["s5", "s12A"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "registration-compliance",
+      "domainName": "Registration and Regulatory Compliance",
+      "techAuditPrefix": "REG",
+      "workProgramFile": "Tech-Audit/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/PDPA/Templates/Finding-Template.md",
+      "controlMappings": [
+        {
+          "controlSlug": "data-controller-registration-management",
+          "controlName": "Data Controller Registration Management",
+          "procedureRefs": ["REG-01", "REG-02"],
+          "pbcItems": ["10.1", "10.2", "10.3"],
+          "relatedProvisions": ["s13", "s14", "s15", "s16"]
+        },
+        {
+          "controlSlug": "regulatory-inspection-readiness",
+          "controlName": "Regulatory Inspection Readiness",
+          "procedureRefs": ["REG-04"],
+          "pbcItems": ["10.4", "10.7"],
+          "relatedProvisions": ["s101", "s102", "s103", "s104", "s105"]
+        },
+        {
+          "controlSlug": "enforcement-notice-compliance",
+          "controlName": "Enforcement Notice Compliance Management",
+          "procedureRefs": ["REG-04"],
+          "pbcItems": ["10.4", "10.7"],
+          "relatedProvisions": ["s110", "s111", "s133"]
+        },
+        {
+          "controlSlug": "regulatory-monitoring",
+          "controlName": "Regulatory Monitoring and Change Management",
+          "procedureRefs": ["REG-03", "REG-05"],
+          "pbcItems": ["10.5", "10.6", "10.8"],
+          "relatedProvisions": ["s13", "s101"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,15 @@
 # PDPA-MY — Personal Data Protection Act 2010
 
-**Last updated:** 2026-03-25
+**Last updated:** 2026-03-26
 
 ## What This Is
 Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments. SPA explorer with JSON data layers. **Tier 1 Focus Area** in the GRC portfolio.
 
 ## Portfolio Role
 One of 5 Tier 1 focus areas. Primary data protection framework for Malaysian organisations. Cross-references NACSA (dual-regulation for NCII entities), AI-Governance (AI data processing), IESP (data protection in assessments), and SC-GTRM (client data in capital markets).
+
+## Quick Start
+Open `index.html` in a browser. Run `node validate.js` to check data integrity.
 
 ## Architecture
 - **SPA**: `index.html` + `app.js` + `style.css` (vanilla JS, no build step)
