@@ -1,9 +1,11 @@
 {
   "_meta": {
-    "version": "2.0.0",
-    "lastUpdated": "2026-03-09",
+    "version": "3.0.0",
+    "lastUpdated": "2026-03-31",
     "alignment": "Act 709 / Act A1727",
-    "sourceType": "official-paraphrase"
+    "sourceType": "official-paraphrase",
+    "controlCount": 49,
+    "note": "v3.0 adds context fields to all controls: riskTier, controlObjective, whatGoodLooksLike, keyRiskIfAbsent, samplingGuidance. These fields support audit work programme integration and provide auditors with control-level testing guidance."
   },
   "_source": {
     "sourceDocument": "Personal Data Protection Act 2010 (Act 709) + Amendment A1727",
@@ -121,7 +123,12 @@
           "additionalRequirements": "Granular patient consent: separate for treatment, billing, insurance, research; emergency vital interests exception documented",
           "relatedProvision": "cop-health-s2"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Ensure all personal data collection is supported by valid, freely given, specific, informed, and unambiguous consent under s6 General Principle, with separate consent obtained for each distinct processing purpose as defined in s2.",
+      "whatGoodLooksLike": "Every data collection channel (web, mobile, physical, call centre) has a consent mechanism with granular, purpose-specific options. No pre-ticked boxes or bundled consent. Each consent record captures a timestamp, the notice version presented, the channel used, and the specific purposes consented to. Consent forms are reviewed against s7 requirements at least annually.",
+      "keyRiskIfAbsent": "Processing without valid consent violates the General Principle (s6). Commissioner may issue enforcement notice under s108. Potential fine up to RM300,000 and/or imprisonment up to 2 years under s5(2). Data subjects may lodge complaints triggering investigation.",
+      "samplingGuidance": "Sample 25 consent records from the last 12 months across at least 3 collection channels. Verify each record has timestamp, notice version, purpose-specific consent fields, and no pre-ticked defaults. For digital channels, test the live consent flow on 3 forms."
     },
     {
       "slug": "consent-record-keeping",
@@ -175,7 +182,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Maintain auditable evidence that valid consent was obtained for all personal data processing, enabling the organization to demonstrate compliance with s6 if challenged by data subjects or the Commissioner.",
+      "whatGoodLooksLike": "Consent records are stored in a searchable system linked to data subject identity. Each record includes the exact notice version presented, the options selected, the collection channel and timestamp, and the full consent lifecycle (grant, modification, withdrawal). Records are tamper-evident and retained for the processing period plus applicable limitation periods.",
+      "keyRiskIfAbsent": "Inability to demonstrate valid consent when challenged by data subjects or the Commissioner. Burden of proof lies with the data user under s6. Without records, every DSAR and complaint becomes a compliance exposure. Commissioner may treat unproven consent as no consent.",
+      "samplingGuidance": "Select 20 data subjects from the DSAR log or customer database. For each, retrieve the consent record and verify it contains the notice version, timestamp, channel, and purpose selections. Confirm withdrawal history is recorded where applicable."
     },
     {
       "slug": "consent-withdrawal-management",
@@ -223,7 +235,12 @@
       ],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Enable data subjects to withdraw consent as easily as it was given under s38, and ensure all downstream processing ceases and processors are notified upon withdrawal, preserving the data subject's autonomy over their personal data.",
+      "whatGoodLooksLike": "Withdrawal mechanisms are available on every channel used for consent collection. Withdrawal requests are confirmed to data subjects within 14 days. The consent register is updated and withdrawal status is propagated to all processing systems and downstream recipients. Where processing has been shared with processors, they are notified of the withdrawal. Alternative lawful basis assessment is documented before any continued processing.",
+      "keyRiskIfAbsent": "Continued processing after withdrawal violates s6 and s38. Data subject complaints to Commissioner are likely upheld. Enforcement notice risk under s108. Reputational harm from public perception of ignoring data subject preferences.",
+      "samplingGuidance": "Sample 15 withdrawal requests from the last 12 months. Verify each was processed within 14 days, consent register updated, downstream systems notified, and confirmation sent to the data subject. Check 3 cases where processing continued post-withdrawal to verify alternative lawful basis documentation."
     },
     {
       "slug": "sensitive-data-explicit-consent",
@@ -288,7 +305,12 @@
           "additionalRequirements": "SIM registration biometric data treated as high-risk; location data consent specific per purpose",
           "relatedProvision": "cop-comms-s2"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Apply heightened consent protections for sensitive personal data under s29 (health data, political opinions, religious beliefs, criminal offences, biometric data), ensuring explicit and specific consent that cannot be inferred from general consent.",
+      "whatGoodLooksLike": "All processing activities involving s29 sensitive data categories are identified in the ROPA. Explicit consent mechanisms are standalone and clearly highlighted, separate from general consent. Staff collecting sensitive data are specifically trained on the heightened standard. Technical controls prevent sensitive data collection without an affirmative explicit consent token. Enhanced access controls restrict stored sensitive data to authorised roles only.",
+      "keyRiskIfAbsent": "Processing sensitive personal data without explicit consent is a direct violation of s29. Higher penalty exposure given the nature of the data. Commissioner may prioritize enforcement action. Significant reputational harm from mishandling health, biometric, or religious data in the Malaysian context.",
+      "samplingGuidance": "Identify all s29 sensitive data processing activities from the ROPA. For each, verify explicit consent mechanism exists and is separate from general consent. Sample 10 sensitive data consent records and verify explicit consent was obtained before processing. Test 2 systems for technical blocking of sensitive data collection without consent."
     },
     {
       "slug": "consent-validity-assessment",
@@ -340,7 +362,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Periodically verify that existing consent records meet current PDPA validity standards under s6 and s7, identifying and remediating deficient consents (pre-ticked boxes, bundled consents, legacy practices) to maintain a lawful processing basis.",
+      "whatGoodLooksLike": "Annual consent validity review is conducted against current PDPA requirements and Commissioner guidance. Deficient consents are identified, quantified, and prioritised for re-consent. Re-consent campaigns are executed for affected data subjects with tracking of response rates. Processing ceases for data subjects who do not re-consent where no alternative lawful basis applies. Assessment findings feed back into consent mechanism design improvements.",
+      "keyRiskIfAbsent": "Legacy consents may not meet current standards, creating a growing pool of unlawful processing. Risk compounds over time as regulatory expectations evolve. Re-consent becomes progressively harder as data ages. Commissioner investigation could expose systemic non-compliance.",
+      "samplingGuidance": "Review the last annual consent validity assessment report. Verify scope covered all consent mechanisms. Sample 15 consent records predating the last major PDPA guidance change and assess validity against current standards. Review re-consent campaign evidence for any identified deficiencies."
     },
     {
       "slug": "dsar-intake-and-verification",
@@ -388,7 +415,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Provide accessible channels for data subjects to exercise their rights under s30, s34, s38, and s43, with proportionate identity verification and systematic logging to ensure all requests are tracked against statutory deadlines.",
+      "whatGoodLooksLike": "Multiple accessible request channels are available (web form, email, post, in-person) and clearly communicated in privacy notices. All requests are acknowledged within 3 business days with a unique reference number. Identity verification is proportionate to the sensitivity of data held. A DSAR register logs each request with receipt date, type, and 21-day statutory deadline. Requests are assigned to handlers and the DPO is notified.",
+      "keyRiskIfAbsent": "Failure to process DSARs within 21 days under s30 is a direct compliance breach. Data subjects may complain to Commissioner. Commissioner may issue enforcement notice. Potential fine up to RM200,000 under s5(2). Repeated failures indicate systemic governance weakness.",
+      "samplingGuidance": "Review the DSAR register for the last 12 months. Sample 15 requests across all types (access, correction, withdrawal, marketing opt-out). For each, verify acknowledgement within 3 days, identity verification performed, deadline correctly calculated, and handler assigned. Test 2 request channels to confirm accessibility."
     },
     {
       "slug": "access-request-fulfillment",
@@ -433,7 +465,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Fulfil data subject access requests under s30 within the 21-day statutory period, providing a complete and accurate compilation of personal data held while applying lawful exemptions under s31-s33 where applicable.",
+      "whatGoodLooksLike": "A structured search playbook covers all systems identified in the ROPA. Search results are compiled and reviewed for third-party data redaction and applicable exemptions (s31-s33). Responses are provided in clear, plain language within 21 days. The search scope, exemptions applied, and redaction rationale are documented for each request. Fee assessment follows prescribed limits.",
+      "keyRiskIfAbsent": "Failure to respond within 21 days violates s30. Incomplete searches risk missing personal data, undermining data subject trust. Improper exemption claims may be overturned on appeal under s104. Commissioner enforcement action for systematic non-compliance.",
+      "samplingGuidance": "Sample 10 completed access requests from the last 12 months. For each, verify response within 21 days, search scope against ROPA systems, exemption rationale documentation, and third-party data redaction. Compare 3 access responses against the actual data held in source systems to verify completeness."
     },
     {
       "slug": "correction-request-handling",
@@ -476,7 +513,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Process data correction requests under s34 within statutory timelines, ensuring inaccurate or incomplete personal data is amended across all relevant systems and downstream recipients are notified under s36.",
+      "whatGoodLooksLike": "Correction requests are logged with clear evidentiary requirements communicated to data subjects. Accuracy assessment is performed against evidence provided. Corrections are propagated to all systems holding the relevant data, not just the presenting system. Data processors and third-party recipients are notified of corrections. Outcomes are communicated to data subjects with explanation where correction is declined.",
+      "keyRiskIfAbsent": "Failure to correct inaccurate data violates s34 and the Data Integrity Principle (s11). Inaccurate data may cause harm to data subjects (credit decisions, medical records). Commissioner may issue enforcement notice. Data subjects may appeal refusal to correction under s36.",
+      "samplingGuidance": "Sample 10 correction requests from the last 12 months. Verify each was completed within 21 days, corrections propagated to all relevant systems, downstream recipients notified, and outcome communicated to the data subject. For 3 declined corrections, review the rationale documentation."
     },
     {
       "slug": "direct-marketing-opt-out",
@@ -519,7 +561,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Enable data subjects to opt out of direct marketing under s43 and ensure opt-outs are processed promptly with suppression lists maintained and applied across all marketing channels, respecting do-not-contact preferences.",
+      "whatGoodLooksLike": "Every direct marketing communication includes a clear, easy-to-use opt-out mechanism. Opt-outs are processed within 10 business days. A central suppression list is maintained and applied before each marketing send across all channels. Third-party marketing lists are cross-referenced against the suppression list before use. Opt-out compliance is monitored and re-opt-in rates are reviewed periodically.",
+      "keyRiskIfAbsent": "Sending marketing to opted-out data subjects violates s43 and erodes trust. Data subjects may complain to Commissioner. Enforcement notice risk. Marketing sent to MCMC Do Not Call Registry numbers triggers additional regulatory exposure. Reputational harm from perceived spam.",
+      "samplingGuidance": "Sample 15 opt-out requests from the last 6 months. Verify each was processed within 10 business days and the data subject added to the suppression list. Select 3 recent marketing campaigns and verify the suppression list was applied before send. Test the opt-out mechanism on 2 marketing channels."
     },
     {
       "slug": "dsar-deadline-management",
@@ -564,7 +611,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Monitor and enforce statutory response deadlines for all data subject rights requests, ensuring the 21-day response period under s30 and s34 is met consistently through automated alerts and escalation procedures.",
+      "whatGoodLooksLike": "Every DSAR has its 21-day statutory deadline automatically calculated and displayed. A tiered alert system fires at day 10, day 16, and day 20 to the handler and DPO. Extension grounds are documented and communicated to data subjects before the deadline expires. DSAR response performance (on-time rate, average response time) is reported to management quarterly.",
+      "keyRiskIfAbsent": "Missed statutory deadlines are a direct compliance breach. Risk of data subject complaints to Commissioner. Pattern of late responses may trigger Commissioner investigation or enforcement action. Management loses visibility of DSAR performance.",
+      "samplingGuidance": "Review DSAR performance metrics for the last 12 months: on-time rate, average response days, number of extensions. For 10 sampled DSARs, verify deadline was correctly calculated, alerts were generated, and any extensions were justified and communicated to the data subject before the original deadline."
     },
     {
       "slug": "rights-awareness-communication",
@@ -617,7 +669,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Ensure data subjects are clearly informed of their rights under PDPA (access, correction, withdrawal, marketing opt-out) in all privacy notices and at relevant touchpoints, in plain language accessible to the intended audience including in Bahasa Malaysia per s7.",
+      "whatGoodLooksLike": "All privacy notices contain a clear description of data subject rights with practical instructions for exercising each right. Rights information is available in Bahasa Malaysia and English. DPO contact information is prominently displayed in all notices and on the organization's website. A dedicated 'Your Rights' page or section provides step-by-step guidance. Rights communication is reviewed periodically for clarity and accessibility.",
+      "keyRiskIfAbsent": "Data subjects unaware of their rights cannot exercise them, undermining the PDPA's protective purpose. Privacy notices lacking rights information fail s7 requirements. Commissioner may view inadequate rights communication as a systemic compliance deficiency.",
+      "samplingGuidance": "Review all current privacy notices (customer, employee, website) for rights information completeness. Verify BM and EN versions are consistent. Check the website for DPO contact details and rights exercise guidance. Test 2 rights exercise instructions for clarity by following them as a data subject would."
     },
     {
       "slug": "privacy-notice-design",
@@ -666,7 +723,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure all privacy notices contain the mandatory elements required by s7 (Notice and Choice Principle) — controller identity, purposes, consent rights, disclosure categories, transfer information, and data subject rights — in clear, intelligible language in BM and EN.",
+      "whatGoodLooksLike": "All data collection touchpoints have an associated s7-compliant privacy notice. Each notice includes all 6 mandatory elements. Notices are drafted in plain language at an accessible reading level. Bilingual (BM and EN) versions are maintained in sync and translation accuracy is verified. Notices are version-controlled with review dates. Purpose-specific or audience-specific notices are used where appropriate (employee, customer, website).",
+      "keyRiskIfAbsent": "Non-compliant notices mean data subjects cannot make informed decisions about their data. Commissioner may issue enforcement notice under s108. Consent obtained under a deficient notice may be invalid, undermining the lawful basis for all processing. Fine up to RM300,000 and/or imprisonment up to 2 years under s5(2).",
+      "samplingGuidance": "Obtain all current privacy notices. For each, verify against the s7 mandatory elements checklist (controller identity, purposes, consent rights, disclosures, transfers, data subject rights). Compare BM and EN versions for consistency. Verify version control and last review date. Sample 3 collection touchpoints to confirm notice is presented before data collection."
     },
     {
       "slug": "notice-delivery-mechanism",
@@ -715,7 +777,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Ensure data protection notices are delivered to data subjects at or before the time of personal data collection through appropriate channels and remain accessible throughout the processing relationship, in compliance with s7 timing requirements.",
+      "whatGoodLooksLike": "Every data collection touchpoint is mapped to its applicable notice. Digital channels have technical checks ensuring notice is presented before data submission. Physical collection points maintain printed notice copies. The notice is accessible year-round on the organization's website. A notice change communication process notifies data subjects of material changes. Mandatory notice acknowledgement is required for new customer onboarding.",
+      "keyRiskIfAbsent": "Notice delivered after data collection fails the s7 timing requirement, potentially invalidating consent. Data subjects who never received a notice may complain to Commissioner. Systemic failure to deliver notices before collection undermines the entire consent framework.",
+      "samplingGuidance": "Map 10 data collection touchpoints to their notices. For digital channels, test 3 forms to verify notice is displayed before data submission. For physical locations, visit or photograph 2 collection points to confirm printed notices are present. Verify notice is accessible on the website. Review 5 new customer onboarding records for notice acknowledgement."
     },
     {
       "slug": "notice-review-cycle",
@@ -762,7 +829,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Maintain regular review of all privacy notices and data protection disclosures to ensure they remain accurate, complete, and aligned with current processing activities, regulatory guidance, and organizational changes under s7.",
+      "whatGoodLooksLike": "Annual review of all notices is conducted with DPO sign-off as minimum. Ad hoc reviews are triggered by new processing activities, new disclosure categories, system changes, regulatory guidance updates, or organizational restructure. Notice content is compared against the ROPA to identify gaps. Version history and effective dates are maintained for all notices. Material changes requiring data subject notification are documented.",
+      "keyRiskIfAbsent": "Stale notices that no longer reflect actual processing activities breach s7. Data subjects consent based on outdated information, potentially invalidating consent. Commissioner may view failure to update notices as evidence of negligence.",
+      "samplingGuidance": "Review the notice review log for the last 2 years. Verify at least one annual review was completed with DPO sign-off. Compare 3 current notices against the ROPA to identify any gaps or inaccuracies. Check for ad hoc reviews triggered by known processing changes in the last 12 months."
     },
     {
       "slug": "cctv-and-monitoring-disclosure",
@@ -810,7 +882,12 @@
         "data-protection-notices-guideline"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Ensure transparent disclosure of workplace and premises surveillance (CCTV, access monitoring, email monitoring, location tracking) through physical notices and applicable privacy notices, in compliance with s7 transparency requirements.",
+      "whatGoodLooksLike": "All monitoring and surveillance technologies are inventoried. CCTV notices compliant with Commissioner guidance are installed at camera locations and premises entrances. Employee data protection notices and acceptable use policies cover all forms of monitoring. CCTV disclosure includes purposes, retention period, and access procedures. Monitoring disclosure adequacy is reviewed annually and when monitoring scope changes.",
+      "keyRiskIfAbsent": "Covert monitoring without disclosure may violate s7 and constitute unfair collection under s6. Employee trust is damaged. Data subjects may complain to Commissioner. CCTV footage obtained without proper disclosure may be challenged as evidence. Potential enforcement action for systematic non-disclosure.",
+      "samplingGuidance": "Obtain the monitoring inventory. Verify CCTV signage at 5 camera locations and all building entrances. Review employee privacy notice and AUP for monitoring disclosures. Verify CCTV notice content includes purposes, retention period, and access procedures. Check for annual review evidence."
     },
     {
       "slug": "information-security-risk-management",
@@ -868,7 +945,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Implement a structured information security risk management process to identify, assess, treat, and monitor risks to personal data, ensuring security measures are proportionate to the risk of harm as required under s9 Security Principle.",
+      "whatGoodLooksLike": "Annual information security risk assessment is scoped to personal data processing activities. A risk register is maintained with risk ratings, treatment plans, and risk owners. Security controls are selected proportionate to assessed risk levels. The risk register is reviewed quarterly and updated following incidents or material changes. Top security risks are reported to senior management and board annually.",
+      "keyRiskIfAbsent": "Security measures may be disproportionate to actual risk — either over-investing or, more dangerously, under-protecting high-risk data. A breach caused by inadequate risk-informed security controls demonstrates failure of the s9 Security Principle. Commissioner may view absence of risk assessment as negligence.",
+      "samplingGuidance": "Review the current risk register. Verify it covers personal data processing activities. Sample 5 risk entries and verify risk ratings, treatment plans, and assigned owners. Confirm quarterly review evidence for the last 4 quarters. Review the most recent annual risk report to management."
     },
     {
       "slug": "access-control-and-identity-management",
@@ -941,7 +1023,12 @@
           "additionalRequirements": "Privileged access management with MFA and additional logging for network admin accounts",
           "relatedProvision": "cop-comms-s5"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Implement role-based access controls applying least-privilege and need-to-know principles for all systems processing personal data, minimizing the risk of unauthorized access under s9 Security Principle and s12 Access Principle.",
+      "whatGoodLooksLike": "System access is assigned based on job role with minimum necessary data access. MFA is implemented for all systems processing personal data. Quarterly access reviews are conducted and unnecessary permissions revoked. Access is de-provisioned immediately upon employee departure or role change. Access logs for personal data systems are maintained and anomalies reviewed monthly.",
+      "keyRiskIfAbsent": "Excessive access permissions increase breach exposure. Insider threat risk is elevated without least-privilege controls. Failure to de-provision leavers creates unauthorized access risk. A breach traced to poor access controls demonstrates failure of s9, with penalty exposure up to RM300,000 fine and/or 2 years imprisonment.",
+      "samplingGuidance": "Select 3 personal data systems. For each, review RBAC configuration and verify least-privilege alignment. Sample 15 user accounts and verify access is appropriate for current role. Review the last 2 quarterly access review records. Check 5 recent leavers against active account lists to verify de-provisioning. Verify MFA is enforced."
     },
     {
       "slug": "encryption-and-data-protection-in-transit-at-rest",
@@ -1020,7 +1107,12 @@
           "additionalRequirements": "Encrypted smart meter communications; segregated AMI/MDMS networks",
           "relatedProvision": "cop-elec-s5"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Protect personal data during transmission and at rest through encryption, reducing the risk of unauthorized disclosure from interception, theft, or unauthorized access, as required by s9 Security Principle and the Personal Data Protection Standards 2015.",
+      "whatGoodLooksLike": "All personal data in transit is encrypted using TLS 1.2 or higher. Personal data at rest is encrypted using AES-256 or equivalent in databases, file systems, and backup media. Full-disk encryption is deployed on all laptops, mobile devices, and portable media. Encryption keys are managed with dedicated processes including key rotation. Transmission of personal data via unencrypted channels (plain email, FTP, HTTP) is prohibited and blocked.",
+      "keyRiskIfAbsent": "Unencrypted personal data in transit or at rest is exposed to interception, theft, and unauthorized access. A breach involving unencrypted data demonstrates clear failure of s9. Significantly higher harm to data subjects and regulatory scrutiny. Penalty exposure up to RM300,000 and/or 2 years imprisonment.",
+      "samplingGuidance": "Scan 5 web-facing services to verify TLS 1.2+ enforcement. Review encryption-at-rest configuration for 3 primary personal data databases. Verify full-disk encryption on a sample of 10 endpoints (laptops/mobile). Review key management procedures and last key rotation date. Test for unencrypted transmission channels (scan for FTP, HTTP on internal network)."
     },
     {
       "slug": "vulnerability-and-patch-management",
@@ -1090,7 +1182,12 @@
           "additionalRequirements": "Annual penetration testing of EHR systems",
           "relatedProvision": "cop-health-s3"
         }
-      }
+      },
+      "riskTier": "standard",
+      "controlObjective": "Maintain a systematic process for identifying, assessing, and remediating vulnerabilities in systems processing personal data, ensuring software is patched against known exploits that could lead to a personal data breach under s9.",
+      "whatGoodLooksLike": "Automated vulnerability scanning runs on all personal data systems at least monthly. Vulnerabilities are triaged by CVSS score and personal data exposure. Critical patches are applied within 72 hours, high-severity within 14 days, medium within 30 days. Patch compliance rates are tracked and non-compliance escalated. Annual penetration testing covers internet-facing applications handling personal data.",
+      "keyRiskIfAbsent": "Unpatched vulnerabilities are a primary breach vector. A breach traced to a known, unpatched vulnerability demonstrates clear negligence under s9. Penalty exposure plus significant reputational harm. Commissioner and data subjects may pursue maximum enforcement.",
+      "samplingGuidance": "Review vulnerability scan reports for the last 3 months. Verify scanning frequency meets monthly minimum. Sample 10 critical/high vulnerabilities and verify remediation within SLA (72 hours for critical, 14 days for high). Review overall patch compliance rate. Obtain the most recent penetration test report and verify scope covers personal data systems."
     },
     {
       "slug": "security-monitoring-and-siem",
@@ -1162,7 +1259,12 @@
           "additionalRequirements": "AMI network attack scenario coverage in IRP; comprehensive audit logging for consumption data access",
           "relatedProvision": "cop-elec-s5"
         }
-      }
+      },
+      "riskTier": "standard",
+      "controlObjective": "Detect unauthorized access, unusual data access patterns, and potential personal data breaches in real time through security monitoring, enabling rapid response before events escalate into notifiable breaches under s12B.",
+      "whatGoodLooksLike": "Security logs from all personal data systems are centralized in a SIEM platform. Detection rules cover unauthorized access, bulk data export, and anomalous behaviour. A security monitoring capability (internal or managed SOC) operates with defined SLAs for alert response. Incident response playbooks exist for common breach scenarios. Detection rules are reviewed and tuned quarterly based on threat intelligence and incident history.",
+      "keyRiskIfAbsent": "Without monitoring, breaches may go undetected for weeks or months, increasing harm to data subjects and regulatory exposure. Late detection means the 72-hour notification window under s12B may be missed. Commissioner may view absence of monitoring as failure of s9 security obligation.",
+      "samplingGuidance": "Review SIEM coverage to verify all personal data systems are logging. Test 3 detection rules by reviewing recent alerts and false positive rates. Verify alert response SLA and review 5 recent alert handling records. Obtain evidence of quarterly detection rule review. Review 2 incident response playbooks for completeness."
     },
     {
       "slug": "physical-security-controls",
@@ -1224,7 +1326,12 @@
           "additionalRequirements": "CCTV notices at all camera locations; general footage max 30 days; incident footage subject to legal hold",
           "relatedProvision": "cop-avi-s6"
         }
-      }
+      },
+      "riskTier": "standard",
+      "controlObjective": "Protect personal data in physical locations (server rooms, offices, record storage) through physical access controls, preventing unauthorized physical access to systems and documents containing personal data under s9.",
+      "whatGoodLooksLike": "Physical access to server rooms and data centres is restricted to authorised personnel using access cards or biometric controls. Paper records containing personal data are secured in locked storage with controlled access. A clear desk policy is enforced for workstations accessing personal data. Visitor access to areas processing personal data is controlled. Physical access logs are maintained for server rooms and sensitive areas.",
+      "keyRiskIfAbsent": "Unauthorized physical access enables data theft, unauthorized copying, or tampering with personal data. Physical breaches may bypass all electronic security controls. A physical security failure that leads to a breach demonstrates non-compliance with s9 Security Principle.",
+      "samplingGuidance": "Inspect the server room for access control mechanisms and verify only authorised personnel have access (check access list against current role holders). Verify CCTV coverage and access log retention. Inspect 3 work areas for clear desk policy compliance. Check paper record storage security at 2 locations. Review visitor access logs for the last 3 months."
     },
     {
       "slug": "data-loss-prevention",
@@ -1282,7 +1389,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Detect and prevent unauthorized exfiltration or disclosure of personal data through digital channels (email, cloud, removable media, web) using DLP technology, reducing the risk of personal data breaches under s9.",
+      "whatGoodLooksLike": "DLP policies are defined for key personal data categories (name, NRIC, financial data, health data). DLP is deployed at email gateway, endpoint, and web proxy. DLP alerts on bulk personal data transfers or exports from personal data systems. Removable media is controlled (USB block or encryption enforcement). DLP policies are reviewed and tuned monthly to manage false positive and false negative rates.",
+      "keyRiskIfAbsent": "Without DLP, unauthorized data exfiltration may go undetected. Insiders can extract personal data via email, USB, or cloud storage without controls. A breach caused by data exfiltration without DLP in place demonstrates inadequate s9 security measures.",
+      "samplingGuidance": "Review DLP policy definitions and verify coverage of key personal data categories. Review DLP alert volume and false positive rates for the last 3 months. Test DLP by attempting to send a test file containing sample NRIC patterns via email. Verify USB/removable media controls on 5 endpoints. Review 5 recent DLP incidents and their resolution."
     },
     {
       "slug": "data-minimisation-control",
@@ -1331,7 +1443,12 @@
       "relatedStandards": [
         "pdpa-standard-data-integrity-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Ensure only personal data that is adequate, relevant, and necessary for the specified processing purpose is collected, aligned with the General Principle (s6) necessity requirement and the Data Integrity Principle (s11).",
+      "whatGoodLooksLike": "Data minimisation reviews are conducted for all data collection forms and systems before deployment. Each data field collected has a documented business justification linked to a specified processing purpose. Fields not strictly necessary are removed or made optional. Existing collection forms are periodically reviewed for minimisation opportunities. Data minimisation review is a mandatory step in DPIA and privacy by design processes.",
+      "keyRiskIfAbsent": "Collecting excessive data increases breach impact, storage costs, and regulatory exposure. Over-collection violates the necessity element of s6 and may be viewed as disproportionate by the Commissioner. Excessive data holdings also increase DSAR response complexity.",
+      "samplingGuidance": "Select 5 data collection forms (web, physical, employee onboarding). For each, review the data field justification register and verify each field has a documented purpose. Identify any fields that appear unnecessary for the stated purpose. Review 2 recent DPIA reports for evidence of data minimisation assessment."
     },
     {
       "slug": "retention-schedule-management",
@@ -1405,7 +1522,12 @@
           "additionalRequirements": "Billing records 7yr post-relationship; field service max 5yr; field vehicle CCTV max 30 days",
           "relatedProvision": "cop-water-s2"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Implement and enforce a comprehensive personal data retention schedule aligned with s10 Retention Principle, ensuring personal data is not retained longer than necessary for the purpose for which it was collected, subject to legal hold requirements.",
+      "whatGoodLooksLike": "A data retention schedule covers all personal data categories and processing activities with defined retention periods. Automated deletion or anonymisation is configured at retention period expiry in key systems. The retention schedule is annually reviewed against regulatory and legal retention obligations. A legal hold process suspends automatic deletion for data subject to litigation or investigation. An annual disposal report documents data categories disposed of and disposal methods.",
+      "keyRiskIfAbsent": "Retaining personal data beyond the necessary period violates s10. Over-retention increases breach impact and DSAR complexity. Commissioner may view indefinite retention as evidence of governance failure. Potential fine up to RM300,000 and/or 2 years imprisonment under s5(2).",
+      "samplingGuidance": "Review the retention schedule for completeness against ROPA processing activities. Sample 5 data categories and verify retention periods are justified and documented. For 3 systems, verify automated deletion or anonymisation is configured. Check for active legal holds and verify they are documented. Review the most recent annual disposal report."
     },
     {
       "slug": "secure-data-disposal",
@@ -1464,7 +1586,12 @@
           "additionalRequirements": "Financial records disposal must be documented with certificates of destruction",
           "relatedProvision": "cop-bank-s7"
         }
-      }
+      },
+      "riskTier": "standard",
+      "controlObjective": "Ensure personal data that has reached end of retention or is no longer needed is securely disposed of so it cannot be recovered, in compliance with s10 Retention Principle, covering electronic media, hardware, cloud platforms, and paper records.",
+      "whatGoodLooksLike": "Disposal follows NIST 800-88 or equivalent standards for electronic media. Disposal certificates are maintained for all disposed media, hardware, and paper records. Certified data destruction services are used for physical hardware and paper. Deletion of personal data from cloud and SaaS platforms is verified on contract termination. A disposal log tracks date, method, data categories, and certification reference for all disposals.",
+      "keyRiskIfAbsent": "Insecure disposal enables data recovery and potential breach. Disposed hardware or media found to contain personal data creates regulatory and reputational exposure. Without disposal certificates, the organization cannot demonstrate compliance with s10.",
+      "samplingGuidance": "Review the disposal log for the last 12 months. Sample 10 disposal entries and verify certificates of destruction are on file. For cloud/SaaS terminations, verify 3 cases where deletion was requested and confirmed. Inspect disposal procedures for compliance with NIST 800-88 or equivalent standards."
     },
     {
       "slug": "data-accuracy-and-quality",
@@ -1511,7 +1638,12 @@
       "relatedStandards": [
         "pdpa-standard-data-integrity-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Maintain the accuracy and completeness of personal data throughout its lifecycle, aligned with s11 Data Integrity Principle, which requires personal data to be accurate, complete, not misleading, and kept up to date.",
+      "whatGoodLooksLike": "Data validation rules are implemented at point of collection to prevent inaccurate data entry. Periodic data quality reviews are conducted for critical personal data stores. Data subject correction mechanisms function as a data quality input. Duplicate detection and merge processes prevent conflicting records. Staff are trained on data accuracy obligations under s11.",
+      "keyRiskIfAbsent": "Inaccurate personal data can cause harm to data subjects (incorrect credit decisions, wrong medical records). Violates s11 Data Integrity Principle. Data subjects may exercise correction rights and complain to Commissioner if data quality is poor. Inaccurate data undermines business decision-making.",
+      "samplingGuidance": "Review data quality reports for the last 12 months from primary personal data systems (CRM, HR). Sample 20 data subject records and verify accuracy of key fields (name, contact, NRIC). Review duplicate detection results and merge rates. Verify data validation rules are active on 3 data entry forms."
     },
     {
       "slug": "purpose-limitation-enforcement",
@@ -1564,7 +1696,12 @@
       "relatedStandards": [
         "pdpa-standard-data-integrity-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure personal data collected for a specified purpose is not processed in a manner incompatible with that purpose, aligned with the General Principle (s6) and Disclosure Principle (s8), protecting data subjects from unexpected secondary uses of their data.",
+      "whatGoodLooksLike": "Permitted purposes for each data category are documented in the ROPA and consent records. Technical access controls prevent use of personal data for non-authorised purposes. Purpose compatibility assessments are conducted before any new use of existing personal data. Staff training covers purpose limitation obligations. Data processing agreements include purpose limitation requirements.",
+      "keyRiskIfAbsent": "Using personal data for purposes beyond what was consented to violates s6 and s8. Data subjects lose trust when data is used unexpectedly. Commissioner may issue enforcement notice. Purpose creep is a common audit finding that demonstrates governance weakness.",
+      "samplingGuidance": "Review the ROPA for documented permitted purposes per data category. Sample 5 processing activities and verify they fall within the documented purposes. Request evidence of purpose compatibility assessments for any new uses of existing data in the last 12 months. Review 3 data processing agreements for purpose limitation clauses."
     },
     {
       "slug": "breach-detection-and-triage",
@@ -1636,7 +1773,12 @@
           "additionalRequirements": "Notify both Commissioner and CAAM for significant passenger data breaches",
           "relatedProvision": "cop-avi-s5"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Enable timely detection of personal data breaches from multiple sources and rapid triage to assess notifiability under s12B within the 72-hour window, ensuring the organization can meet its mandatory notification obligation.",
+      "whatGoodLooksLike": "Multiple breach reporting channels are established and publicised (IT helpdesk, DPO email, security hotline). Staff are trained on breach indicators and reporting obligations. Automated security monitoring includes breach-specific alert rules. Initial triage is conducted within 4 hours of breach report: confirm, classify, assess notifiability. Triage outcomes including decisions not to notify are documented with rationale.",
+      "keyRiskIfAbsent": "Late detection means the 72-hour notification clock under s12B is compressed or missed. Failure to notify a notifiable breach carries a fine of up to RM500,000 under s12B. Undetected breaches cause ongoing harm to data subjects. Commissioner may view poor detection capability as evidence of s9 non-compliance.",
+      "samplingGuidance": "Review the breach register for the last 24 months. For all recorded breaches, verify triage was completed within 4 hours and notifiability assessment documented. Review breach reporting channels and verify they are published in training materials. Test staff awareness by reviewing the most recent security awareness training content for breach reporting coverage."
     },
     {
       "slug": "breach-notification-to-commissioner",
@@ -1693,7 +1835,12 @@
           "additionalRequirements": "Notify both Commissioner and CAAM for significant passenger data breaches",
           "relatedProvision": "cop-avi-s5"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Ensure mandatory notification of notifiable personal data breaches to the Commissioner within 72 hours of becoming aware, as required by s12B (inserted by A1727), with all prescribed notification content, to comply with the highest-penalty obligation in the PDPA.",
+      "whatGoodLooksLike": "Notifiability is assessed against s12B harm criteria. Notification is prepared using the Commissioner's prescribed format with all mandatory content. Notification is submitted within 72 hours of becoming aware. Supplementary notifications are submitted when full information becomes available. Copies of all notifications, submissions, and Commissioner correspondence are retained.",
+      "keyRiskIfAbsent": "Failure to notify a notifiable breach within 72 hours carries the highest penalty in the PDPA: fine up to RM500,000 and/or imprisonment up to 3 years under s12B. Commissioner may publicize non-compliance. Reputational damage is compounded by the appearance of a cover-up.",
+      "samplingGuidance": "Review all breach notifications submitted to the Commissioner in the last 24 months. For each, verify submission within 72 hours, prescribed content completeness, and supplementary notification where applicable. Review 3 breaches assessed as non-notifiable and verify the rationale documentation is robust."
     },
     {
       "slug": "breach-containment-and-remediation",
@@ -1753,7 +1900,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Stop active breaches, identify root causes, and prevent recurrence through documented containment and remediation procedures, fulfilling the ongoing security obligation under s9 and supporting the breach response framework under s12B.",
+      "whatGoodLooksLike": "Breach-type-specific containment playbooks exist (ransomware, unauthorized access, data loss, insider threat). Evidence is preserved for forensic investigation before containment actions where possible. Root cause analysis identifies the technical, process, or human failure that enabled the breach. A remediation action plan addresses identified root causes. Post-incident review is completed within 30 days with lessons learned implemented.",
+      "keyRiskIfAbsent": "Without containment, breaches escalate causing greater harm and regulatory exposure. Without root cause analysis, breaches recur. Repeated breaches of the same type demonstrate systemic s9 failure. Commissioner may view inadequate remediation as aggravating factor in enforcement.",
+      "samplingGuidance": "Review all breach incidents from the last 24 months. For each, verify containment actions were taken, root cause analysis completed, remediation plan documented and tracked to closure, and post-incident review completed within 30 days. Review 2 containment playbooks for completeness against common breach scenarios."
     },
     {
       "slug": "data-subject-breach-notification",
@@ -1798,7 +1950,12 @@
         "dbn-guideline-2025"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Notify affected data subjects of personal data breaches likely to result in harm, as required by s12B, with clear information about the breach, data affected, potential harm, and protective steps they should take.",
+      "whatGoodLooksLike": "Harm likelihood assessment determines the necessity of data subject notification. Notifications are drafted in plain language explaining the breach, data affected, potential harm, and protective steps. Appropriate notification channels are selected based on the affected population (email, letter, SMS, in-app, website). Notification is delivered without undue delay. A dedicated helpline or contact point is established for affected data subjects.",
+      "keyRiskIfAbsent": "Failure to notify affected data subjects denies them the opportunity to take protective action (change passwords, monitor accounts, freeze credit). Commissioner may direct notification and publicize the failure. Data subjects who suffer harm without notification may pursue legal remedies. Severe reputational damage.",
+      "samplingGuidance": "Review all data subject breach notifications issued in the last 24 months. For each, verify harm assessment was documented, notification content included all required elements, delivery was timely, and a contact point was established. For breaches where data subject notification was not made, review the rationale documentation."
     },
     {
       "slug": "transfer-identification-and-mapping",
@@ -1853,7 +2010,12 @@
           "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Identify and map all flows of personal data outside Malaysia — including transfers to cloud services, SaaS platforms, offshore processors, group companies, and business partners — to ensure all cross-border transfers are subject to appropriate safeguards under s129.",
+      "whatGoodLooksLike": "A comprehensive data flow mapping exercise identifies all cross-border transfers including cloud, SaaS, and email. Transfers are classified by recipient country, recipient type, and data categories. All identified transfers are recorded in a cross-border transfer register. The register is reviewed quarterly for new or changed transfers. Transfers lacking adequate transfer mechanisms are identified and prioritised for remediation.",
+      "keyRiskIfAbsent": "Unknown cross-border transfers operate without safeguards, violating s129. Commissioner may impose transfer restrictions. Cloud and SaaS usage often involves cross-border transfers that go undetected without mapping. Non-compliance with s129 carries penalty exposure up to RM300,000 and/or 2 years imprisonment.",
+      "samplingGuidance": "Review the cross-border transfer register for completeness. Compare against the ROPA and vendor register to identify any unmapped transfers. Sample 10 vendors and verify whether they transfer data outside Malaysia. For cloud/SaaS services, verify data residency and any cross-border transfer disclosure. Confirm quarterly review evidence for the last 4 quarters."
     },
     {
       "slug": "transfer-mechanism-selection",
@@ -1909,7 +2071,12 @@
           "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
-      }
+      },
+      "riskTier": "critical",
+      "controlObjective": "Select and implement an appropriate transfer mechanism for each cross-border transfer under s129 — including adequacy determination, standard contractual clauses, binding corporate rules, or explicit consent — and document the selection rationale.",
+      "whatGoodLooksLike": "Each cross-border transfer has an identified transfer mechanism (adequacy, SCCs, BCRs, consent, certification). Where no adequacy exists, alternative mechanisms are in place before transfer commences. Standard contractual clauses or other contractual safeguards are executed before initiating transfers. DPO approval is obtained for each mechanism selection with documented rationale. Transfer mechanisms are registered with the Commissioner where required.",
+      "keyRiskIfAbsent": "Transferring personal data without a valid transfer mechanism violates s129. Commissioner may order the transfer to cease. Contractual gaps with foreign recipients leave personal data unprotected. Penalty exposure up to RM300,000 and/or 2 years imprisonment under s5(2).",
+      "samplingGuidance": "Review the cross-border transfer register. For 10 transfers, verify the selected transfer mechanism is documented and appropriate. For adequacy-based transfers, confirm the recipient country is on the Commissioner's approved list. For SCC-based transfers, obtain copies of executed SCCs. Verify DPO approval documentation for 5 mechanism selections."
     },
     {
       "slug": "transfer-impact-assessment",
@@ -1964,7 +2131,12 @@
           "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
-      }
+      },
+      "riskTier": "conditional",
+      "controlObjective": "Assess whether the chosen transfer mechanism can effectively protect personal data in the destination country's legal environment for transfers to countries without adequacy determinations, particularly evaluating government access risks to personal data.",
+      "whatGoodLooksLike": "A Transfer Impact Assessment is conducted for each transfer to a non-adequate country. The TIA assesses the destination country's data protection law, government access powers, and enforcement environment. Supplementary measures (encryption, pseudonymisation, contractual enhancements) are identified where the TIA reveals gaps. TIA findings, supplementary measures, and residual risk acceptance are documented. TIAs are reviewed when significant changes occur in the destination country's legal environment.",
+      "keyRiskIfAbsent": "Transfer mechanisms may be ineffective in the destination country's legal environment. Government access to personal data may undermine contractual protections. Without TIA, the organization cannot demonstrate it assessed transfer risk. Commissioner may view untested transfers as reckless.",
+      "samplingGuidance": "Identify all transfers to non-adequate countries from the transfer register. Sample 5 and verify a TIA was conducted. Review TIA content for assessment of local law, government access, and supplementary measures. Verify TIA review triggers are defined. For 2 TIAs, assess whether identified supplementary measures were implemented."
     },
     {
       "slug": "cross-border-transfer-monitoring",
@@ -2019,7 +2191,12 @@
           "additionalRequirements": "Overseas telehealth providers must have s129-compliant transfer mechanisms",
           "relatedProvision": "cop-health-s6"
         }
-      }
+      },
+      "riskTier": "standard",
+      "controlObjective": "Monitor existing cross-border transfer arrangements on an ongoing basis to ensure continued adequacy of transfer mechanisms, detect changes in destination country legal environments, and identify new or unauthorized transfers requiring assessment under s129.",
+      "whatGoodLooksLike": "The cross-border transfer register is reviewed quarterly for accuracy and completeness. Commissioner announcements and regulatory updates affecting the approved country list are monitored. Legal developments in key transfer destination countries are tracked. Annual re-assessment is conducted for significant cross-border transfers. A process exists for employees to declare new cross-border data flows before implementation.",
+      "keyRiskIfAbsent": "Transfer mechanisms may become inadequate due to legal changes in destination countries. New unauthorized transfers may commence without assessment. Approved country list changes may not be detected, leaving transfers operating on an invalid basis.",
+      "samplingGuidance": "Review evidence of quarterly transfer register reviews for the last 4 quarters. Verify the monitoring process for Commissioner announcements and adequacy list changes. Sample 3 significant transfers and verify annual re-assessment was conducted. Check for any new vendors onboarded in the last 6 months and verify cross-border transfer assessment was completed."
     },
     {
       "slug": "processor-due-diligence",
@@ -2077,7 +2254,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Assess prospective data processors' technical and organizational measures before engagement, ensuring they can protect personal data and support the organization's PDPA compliance obligations under s9.",
+      "whatGoodLooksLike": "All third parties are classified by data access level and processing sensitivity. A privacy due diligence questionnaire covering security, privacy practices, subprocessors, and cross-border transfers is sent to all significant processors. Security certifications (ISO 27001, SOC 2 Type II) are reviewed. The processor's ability to support DSARs and breach notification is assessed. Assessment findings and risk rating are documented before contract execution.",
+      "keyRiskIfAbsent": "Engaging a processor without due diligence exposes personal data to unknown security risks. The data user remains liable under PDPA for processor failures. A breach at an unvetted processor reflects poorly on the organization's s9 compliance. Commissioner may view absence of due diligence as negligence.",
+      "samplingGuidance": "Review the processor register. Sample 10 processors and verify due diligence was completed before engagement. For each, verify questionnaire completion, certification review, and documented risk rating. Review 3 high-risk processor assessments in detail. Verify the due diligence process is integrated with vendor onboarding."
     },
     {
       "slug": "data-processing-agreement-management",
@@ -2135,7 +2317,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure all data processors are bound by a data processing agreement containing mandatory provisions for processing instructions, security measures, subprocessor controls, breach notification, and audit rights, protecting personal data throughout the processing chain.",
+      "whatGoodLooksLike": "A DPA template incorporating all minimum required provisions is maintained. DPA execution is required before any personal data is processed by a third party. The DPA template is reviewed annually or following material regulatory changes. DPA execution status and renewal dates are tracked in the processor register. DPAs with subprocessors meet equivalent standards.",
+      "keyRiskIfAbsent": "Without a DPA, the data user has no contractual basis to enforce security standards or processing instructions on the processor. Breach notification obligations may not flow through to the processor. The organization cannot demonstrate it took reasonable steps under s9 to secure data processed by third parties.",
+      "samplingGuidance": "Review the processor register. For 15 processors, verify a DPA is executed and on file. Review 5 DPAs for mandatory clause completeness (processing instructions, security, subprocessors, breach notification, audit rights, data return/deletion). Verify the DPA template was reviewed in the last 12 months. Check for any processors processing data without a DPA."
     },
     {
       "slug": "processor-oversight-and-audit",
@@ -2192,7 +2379,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Maintain ongoing oversight of data processors through annual reassessments, certification reviews, and exercise of contractual audit rights, ensuring processors continue to meet data protection requirements under s9.",
+      "whatGoodLooksLike": "Annual reassessment of high-risk processors uses an updated security questionnaire. Processor security certifications are reviewed for continued validity and scope coverage. Contractual audit rights are exercised for critical processors handling large volumes of sensitive data. Processor incident and breach reports are reviewed for organizational impact. Processor compliance issues are escalated with documented remediation requirements.",
+      "keyRiskIfAbsent": "Processor security posture may deteriorate after initial onboarding. Expired certifications may indicate lapsed security controls. Without ongoing oversight, the organization is blind to processor compliance drift. A breach at an unsupervised processor exposes the organization to enforcement action under s9.",
+      "samplingGuidance": "Review the processor oversight schedule. Sample 10 processors and verify annual reassessment was completed for the current year. For 5 processors, verify certification validity and scope. Review evidence of contractual audit right exercise for the top 3 critical processors. Review 3 processor incident reports and organizational impact assessments."
     },
     {
       "slug": "processor-offboarding",
@@ -2249,7 +2441,12 @@
         "pdpa-standard-nonelectronic-security-2015",
         "pdpa-standard-retention-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Ensure all personal data held by outgoing processors is returned or securely deleted upon contract termination, with access revoked and deletion certified, in compliance with DPA terms and s10 Retention Principle.",
+      "whatGoodLooksLike": "An offboarding checklist is initiated at contract termination. Data return or deletion is requested per DPA provisions. A written certificate of data deletion is obtained from the outgoing processor. All system access and API credentials are revoked on the effective termination date. DPA, due diligence records, and offboarding documentation are archived in the processor register.",
+      "keyRiskIfAbsent": "Personal data remains with former processors without contractual controls or security obligations. Data may be retained indefinitely or misused. Access credentials may remain active, creating unauthorized access risk. Without deletion certificates, the organization cannot demonstrate compliance with s10.",
+      "samplingGuidance": "Review processor offboarding records for the last 12 months. For all offboarded processors, verify the offboarding checklist was completed, deletion certificate obtained, and access credentials revoked. For 3 cases, verify data return or deletion was confirmed. Check for any processors terminated more than 30 days ago without completed offboarding."
     },
     {
       "slug": "dpo-appointment-and-functions",
@@ -2295,7 +2492,12 @@
         "dpo-guideline-2025"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Appoint a qualified DPO as required under s12A (inserted by A1727), register the DPO with the Commissioner, and ensure the DPO performs all statutory functions including compliance monitoring, advice, and acting as contact point for data subjects and the Commissioner.",
+      "whatGoodLooksLike": "DPO appointment obligation is assessed against s12A criteria and DPO Guideline 2025. A qualified DPO is appointed and registered with the Commissioner within the prescribed period. The DPO has sufficient resources, authority, and independence. The DPO performs annual compliance monitoring and reports to senior management. DPO contact information is published in all privacy notices and on the organization's website.",
+      "keyRiskIfAbsent": "Failure to appoint a mandatory DPO violates s12A. Commissioner may issue enforcement notice. The organization lacks a designated compliance function for data protection. Without DPO registration, the Commissioner cannot communicate regulatory requirements. Penalty exposure under s12A provisions.",
+      "samplingGuidance": "Verify DPO appointment documentation and registration with Commissioner. Review DPO qualifications against s12A requirements. Verify DPO has a documented job description, reporting line, and resource allocation. Review the DPO's most recent annual compliance report. Verify DPO contact details are published in privacy notices and on the website."
     },
     {
       "slug": "privacy-policy-management",
@@ -2352,7 +2554,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Maintain a comprehensive suite of data protection policies covering all PDPA obligations, approved at appropriate levels, communicated to staff, and regularly reviewed to reflect the current regulatory environment including Amendment A1727.",
+      "whatGoodLooksLike": "A policy inventory covers all data protection obligations under PDPA. Annual review of all policies against current requirements and Commissioner guidance is conducted with DPO sign-off. The overarching Data Protection Policy has board or senior management approval. Policy updates are communicated to affected staff within a reasonable period. Superseded policies are retired and archived with effective dates.",
+      "keyRiskIfAbsent": "Outdated or incomplete policies leave staff without guidance on current obligations. New A1727 requirements (breach notification, DPO, data portability) may not be operationalised without policy updates. Commissioner may view absence of policies as evidence of governance failure under s5.",
+      "samplingGuidance": "Review the policy inventory for completeness against PDPA domains. Sample 5 policies and verify annual review with DPO sign-off in the last 12 months. Verify board approval for the overarching Data Protection Policy. Check policy communication records for the most recent update. Verify superseded policy archive with version history."
     },
     {
       "slug": "staff-training-and-awareness",
@@ -2411,7 +2618,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Ensure all employees understand their PDPA obligations through structured training covering personal data identification, data subject request handling, and breach reporting, reducing human error as a breach vector under s9.",
+      "whatGoodLooksLike": "Mandatory data protection induction training is delivered to all new employees within 30 days. Annual refresher training covers key PDPA obligations and organizational policies. Role-specific training modules exist for DPO, IT security, HR, marketing, and customer service. Training completions are tracked and non-completions followed up. Training effectiveness is assessed through knowledge tests and linked to breach/DSAR performance metrics.",
+      "keyRiskIfAbsent": "Untrained staff are the primary source of human-error breaches (misdirected emails, improper disclosure, lost devices). Staff who cannot recognize DSARs cause missed deadlines. Commissioner may view absence of training as failure to implement adequate organizational measures under s9.",
+      "samplingGuidance": "Review training completion rates for the last 12 months. Verify 90%+ completion rate for mandatory training. Sample 10 new employees and verify induction training was completed within 30 days. Review role-specific training content for 2 high-risk roles (HR, customer service). Review knowledge assessment pass rates and remediation for failures."
     },
     {
       "slug": "privacy-by-design-and-default",
@@ -2470,7 +2682,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Embed privacy considerations into the design of new products, services, and systems from inception, ensuring data protection requirements are addressed by design rather than as an afterthought, aligned with PDPA accountability principles under s5, s6, and s9.",
+      "whatGoodLooksLike": "Privacy by design trigger criteria are defined for new projects and material changes. A privacy design review using a structured checklist is conducted at the design/architecture stage. DPIA is performed for high-risk processing activities identified at design stage. DPO sign-off is a mandatory gate before go-live. Privacy design decisions and accepted residual risks are documented.",
+      "keyRiskIfAbsent": "Privacy requirements bolted on after development are costly to implement and often incomplete. Systems launched without privacy review may violate PDPA from day one. DPIAs not conducted for high-risk processing miss the opportunity to mitigate risk before harm occurs. Commissioner may view absence of privacy by design as governance failure.",
+      "samplingGuidance": "Review the project register for the last 12 months. Identify all projects that involved personal data processing. For 5 projects, verify a privacy design review was conducted, DPIA completed where triggered, and DPO sign-off obtained before go-live. Review 2 DPIA reports for quality and completeness."
     },
     {
       "slug": "compliance-monitoring-and-audit",
@@ -2530,7 +2747,12 @@
         "pdpa-standard-electronic-security-2015",
         "pdpa-standard-nonelectronic-security-2015"
       ],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Identify compliance gaps and assess control effectiveness through a structured compliance monitoring programme and annual internal audit of data protection practices, providing management with accurate information on PDPA compliance posture.",
+      "whatGoodLooksLike": "An annual data protection audit programme is developed based on risk priorities. Compliance is assessed against PDPA obligations using a structured checklist. Samples of consent records, DSARs, breach records, and training completions are reviewed. Findings are rated by severity with agreed remediation timelines. Audit findings and management responses are reported to the board or audit committee.",
+      "keyRiskIfAbsent": "Without monitoring, compliance gaps go undetected until a breach or complaint triggers investigation. Management lacks accurate information for decision-making on data protection investment. Commissioner may view absence of self-monitoring as evidence of negligence. Audit findings from Commissioner inspection will be more severe.",
+      "samplingGuidance": "Review the annual audit programme and verify it was executed. Review the most recent audit report. Verify findings are rated by severity and remediation timelines agreed. Track 5 audit findings to closure. Review board/audit committee reporting on data protection audit results. Verify the audit scope covers all PDPA domains."
     },
     {
       "slug": "board-reporting-and-accountability",
@@ -2579,7 +2801,12 @@
         "dpo-guideline-2025"
       ],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Provide senior management and the board with regular reporting on data protection compliance status, risks, incidents, and emerging obligations, ensuring leadership accountability under s5 and informed decision-making on data protection investment.",
+      "whatGoodLooksLike": "The DPO annual report is presented to the board covering compliance status, incidents, and recommendations. Quarterly management reporting covers key metrics (breach incidents, DSAR performance, training rates). Material data breaches are reported to the board within 24 hours of the notification decision. Data protection risk is included in the organizational risk register with board visibility. Regulatory changes and enforcement actions are escalated to the board with impact assessment.",
+      "keyRiskIfAbsent": "Leadership is uninformed about compliance status and exposure. Data protection is not factored into strategic decisions. Board members face personal liability risk under s130-s131 (officer liability for corporate offences). Absence of board reporting suggests data protection is not treated as an organizational priority.",
+      "samplingGuidance": "Review the DPO annual report for the last 2 years. Verify quarterly management reporting with key metrics. Check board meeting minutes for data protection agenda items. Verify material breach reporting to board within 24 hours. Review the organizational risk register for data protection risk entries with board visibility."
     },
     {
       "slug": "data-controller-registration-management",
@@ -2623,7 +2850,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Maintain valid registration with the Commissioner under s13-s16, including initial registration, timely renewal, notification of material changes, and DPO registration, ensuring the organization operates lawfully at all times.",
+      "whatGoodLooksLike": "Registration obligation and class are determined under the Class of Data Controllers Order 2013. Registration is obtained before commencing processing. Registration expiry is monitored and renewal submitted before expiry. Material changes to registered particulars are notified to the Commissioner within the prescribed period. DPO registration is maintained current under s12A.",
+      "keyRiskIfAbsent": "Operating without valid registration is a criminal offence under s5(1) of the PDPA. Penalty of fine up to RM500,000 and/or imprisonment up to 3 years. Lapsed registration creates a period of unlawful processing. Commissioner may publicize non-registration.",
+      "samplingGuidance": "Verify current registration certificate and expiry date. Confirm renewal was submitted before the last expiry. Verify registered particulars match current organizational details. Confirm DPO registration is current. Review process for monitoring registration expiry and material change notification."
     },
     {
       "slug": "regulatory-inspection-readiness",
@@ -2670,7 +2902,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "standard",
+      "controlObjective": "Maintain the organization in a state of readiness for JPDP Commissioner inspections and investigations under Part VIII (s101-s109), with pre-organized evidence, a trained response team, and documented procedures to ensure cooperative and orderly engagement.",
+      "whatGoodLooksLike": "A compliance evidence repository contains current copies of all key policies, registers, and records. An inspection response team is designated and trained, including DPO, legal counsel, and IT representative. Annual mock inspection exercises test readiness and identify gaps. Inspection response procedures document immediate notification, document preservation, and liaison protocols. The readiness plan is updated following each regulatory engagement.",
+      "keyRiskIfAbsent": "Disorganized response to Commissioner inspection creates a negative impression and extends the inspection duration. Key evidence may not be locatable under time pressure. Staff may inadvertently disclose privileged information. Obstruction of an inspection is a criminal offence under s105.",
+      "samplingGuidance": "Review the compliance evidence repository for currency and completeness. Verify the inspection response team is designated with defined roles. Check for evidence of annual mock inspection exercise. Review the inspection response procedure document. Verify the last regulatory engagement (if any) resulted in an updated readiness plan."
     },
     {
       "slug": "enforcement-notice-compliance",
@@ -2713,7 +2950,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "conditional",
+      "controlObjective": "Manage compliance with enforcement notices issued by the Commissioner under Part IX (s110-s111), developing and executing a compliance roadmap within the notice period, to avoid the criminal offence of non-compliance under s133.",
+      "whatGoodLooksLike": "Enforcement notices are immediately escalated to DPO, senior management, and legal counsel. Legal advice is obtained on notice requirements, compliance obligations, and appeal grounds. A costed compliance roadmap with milestones is developed within the notice compliance period. Regular communication with the Commissioner on compliance progress is maintained. Compliance evidence is compiled and submitted by the required deadline.",
+      "keyRiskIfAbsent": "Non-compliance with an enforcement notice is a criminal offence under s133, carrying a fine up to RM500,000 and/or imprisonment up to 3 years. Commissioner may pursue prosecution. Non-compliance may also trigger registration revocation. Public disclosure of enforcement action causes severe reputational damage.",
+      "samplingGuidance": "Review any enforcement notices received in the last 3 years. If received, verify legal review was conducted, compliance roadmap developed, milestones tracked, Commissioner communications maintained, and evidence submitted by deadline. If no notices received, review the enforcement notice response procedure for completeness and test via tabletop exercise."
     },
     {
       "slug": "regulatory-monitoring",
@@ -2757,7 +2999,12 @@
       "relatedCodes": [],
       "relatedGuidelines": [],
       "relatedStandards": [],
-      "sectorVariants": {}
+      "sectorVariants": {},
+      "riskTier": "conditional",
+      "controlObjective": "Systematically monitor PDPA regulatory developments — Commissioner guidelines, codes of practice, subsidiary legislation, enforcement actions, and court decisions — to assess impact on the compliance programme and implement required changes proactively.",
+      "whatGoodLooksLike": "JPDP Commissioner publications, press releases, and enforcement announcements are reviewed regularly. Parliament Hansard and Gazette are monitored for PDPA amendments and subsidiary legislation. Impact of each regulatory development on organizational policies, procedures, and controls is assessed. Required compliance changes are implemented within appropriate timeframes. Management and board are briefed on material regulatory developments.",
+      "keyRiskIfAbsent": "Regulatory changes may go undetected, leaving the organization non-compliant. New Commissioner guidelines may impose additional requirements that are not implemented. Enforcement actions against other organizations may signal Commissioner priorities that the organization fails to address. Management is uninformed about the evolving regulatory landscape.",
+      "samplingGuidance": "Review the regulatory monitoring log for the last 12 months. Verify key regulatory developments were captured (Commissioner guidelines, A1727 implementation guidance, enforcement actions). Sample 3 regulatory developments and verify impact assessment was conducted and any required changes implemented. Review management briefing records on material developments."
     }
   ]
 }
