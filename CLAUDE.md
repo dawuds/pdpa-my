@@ -1,6 +1,6 @@
 # PDPA-MY — Personal Data Protection Act 2010
 
-**Last updated:** 2026-03-26
+**Last updated:** 2026-03-31
 
 ## What This Is
 Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments. SPA explorer with JSON data layers. **Tier 1 Focus Area** in the GRC portfolio.
@@ -17,11 +17,12 @@ Open `index.html` in a browser. Run `node validate.js` to check data integrity.
 - **Schema**: GRC Portfolio v2.0 Standardized Schema
 
 ## Key Data Files
-- `controls/library.json` — 49 controls across 10 domains
+- `controls/library.json` — 49 controls (v3.0, with riskTier, controlObjective, whatGoodLooksLike, keyRiskIfAbsent, samplingGuidance; 20 critical / 26 standard / 3 conditional)
 - `controls/domains.json` — 10 domains (consent, rights, notice, security, lifecycle, breach, cross-border, third-party, governance, registration)
 - `provisions/index.json` — 154 sections (Act 709 + A1727 amendments)
 - `principles/` — 7 Data Protection Principles + 4 new A1727 rights
 - `dpia/` — DPIA methodology, thresholds, worked examples, templates
+- `audit-integration.json` — Maps 49 controls to Tech-Audit/PDPA audit procedures
 
 ## Conventions
 - Kebab-case slugs
@@ -34,6 +35,7 @@ Open `index.html` in a browser. Run `node validate.js` to check data integrity.
 - **Breach notification** (s143A): 72 hours to Commissioner — key interaction with NACSA 6-hour obligation
 - Controls overlap with NACSA: 14 direct overlap, 12 supplementary (see `nacsa/cross-references/framework-mappings.json`)
 - **DPO requirement** under A1727 — separate from CISO under Act 854
+- AWP artifacts (Excel workbook, generators, report template, evidence folder structure) are in Tech-Audit/PDPA/ (private repo). This repo contains compliance data only.
 
 ## Validation
 ```bash
