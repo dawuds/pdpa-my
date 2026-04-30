@@ -1,0 +1,484 @@
+{
+  "description": "Sector comparison layer — normalised taxonomy for comparing PDPA Codes of Practice across 7 regulated sectors",
+  "lastUpdated": "2025-06-01",
+  "sectors": [
+    {
+      "id": "banking",
+      "name": "Banking & Financial Institutions",
+      "classNumber": 2,
+      "copId": "cop-banking",
+      "copTitle": "Banking Code 2022",
+      "color": "#1D4ED8",
+      "regulator": "Bank Negara Malaysia (BNM)",
+      "sectorLegislation": ["Financial Services Act 2013", "AMLA 2001"],
+      "topicCount": 7,
+      "provisionCount": 7,
+      "filePath": "sectors/banking.json"
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "classNumber": 4,
+      "copId": "cop-healthcare",
+      "copTitle": "Healthcare Code 2022",
+      "color": "#059669",
+      "regulator": "Ministry of Health (MOH)",
+      "sectorLegislation": ["Private Healthcare Facilities and Services Act 1998", "Medical Act 1971"],
+      "topicCount": 8,
+      "provisionCount": 8,
+      "filePath": "sectors/healthcare.json"
+    },
+    {
+      "id": "communications",
+      "name": "Communications",
+      "classNumber": 1,
+      "copId": "cop-communications",
+      "copTitle": "Communications Code 2022",
+      "color": "#7C3AED",
+      "regulator": "Malaysian Communications and Multimedia Commission (MCMC)",
+      "sectorLegislation": ["Communications and Multimedia Act 1998"],
+      "topicCount": 4,
+      "provisionCount": 6,
+      "filePath": "sectors/communications.json"
+    },
+    {
+      "id": "insurance",
+      "name": "Insurance & Takaful",
+      "classNumber": 3,
+      "copId": "cop-insurance-takaful",
+      "copTitle": "Insurance Code 2022",
+      "color": "#D97706",
+      "regulator": "Bank Negara Malaysia (BNM)",
+      "sectorLegislation": ["Financial Services Act 2013", "Islamic Financial Services Act 2013"],
+      "topicCount": 6,
+      "provisionCount": 7,
+      "filePath": "sectors/insurance.json"
+    },
+    {
+      "id": "aviation",
+      "name": "Aviation",
+      "classNumber": 6,
+      "copId": "cop-aviation",
+      "copTitle": "Aviation Code 2022",
+      "color": "#0891B2",
+      "regulator": "Civil Aviation Authority of Malaysia (CAAM)",
+      "sectorLegislation": ["Civil Aviation Act 1969"],
+      "topicCount": 5,
+      "provisionCount": 6,
+      "filePath": "sectors/aviation.json"
+    },
+    {
+      "id": "electricity",
+      "name": "Electricity Utilities",
+      "classNumber": 11,
+      "copId": "cop-utilities-electricity",
+      "copTitle": "Electricity Utilities Code 2022",
+      "color": "#DC2626",
+      "regulator": "Energy Commission Malaysia",
+      "sectorLegislation": ["Electricity Supply Act 1990"],
+      "topicCount": 3,
+      "provisionCount": 5,
+      "filePath": "sectors/electricity.json"
+    },
+    {
+      "id": "water",
+      "name": "Water Utilities",
+      "classNumber": 11,
+      "copId": "cop-utilities-water",
+      "copTitle": "Water Utilities Code 2022",
+      "color": "#2563EB",
+      "regulator": "National Water Services Commission (SPAN)",
+      "sectorLegislation": ["Water Services Industry Act 2006"],
+      "topicCount": 3,
+      "provisionCount": 5,
+      "filePath": "sectors/water.json"
+    }
+  ],
+  "taxonomy": [
+    {
+      "id": "security",
+      "label": "Security",
+      "baseline": "s9",
+      "applicableSectors": ["banking", "healthcare", "communications", "insurance", "aviation", "electricity", "water"],
+      "dimensions": ["encryption", "mfaScope", "penTestFrequency", "breachTargets", "additionalFrameworks", "networkSegmentation"]
+    },
+    {
+      "id": "retention",
+      "label": "Retention Periods",
+      "baseline": "s10",
+      "applicableSectors": ["banking", "healthcare", "communications", "insurance", "electricity", "water"],
+      "dimensions": ["dataCategories"]
+    },
+    {
+      "id": "sensitiveData",
+      "label": "Sensitive Data",
+      "baseline": "s29",
+      "applicableSectors": ["healthcare", "insurance", "aviation", "communications"],
+      "dimensions": ["specialCategories", "protectionLevel", "storageSegregation"]
+    },
+    {
+      "id": "disclosure",
+      "label": "Disclosure",
+      "baseline": "s8",
+      "applicableSectors": ["banking", "healthcare", "insurance"],
+      "dimensions": ["thirdPartyTypes", "regulatoryReporting", "consentRequirements"]
+    },
+    {
+      "id": "consent",
+      "label": "Consent",
+      "baseline": "s6",
+      "applicableSectors": ["banking", "healthcare"],
+      "dimensions": ["granularity", "separateConsents", "emergencyProvisions"]
+    },
+    {
+      "id": "breachNotification",
+      "label": "Breach Notification",
+      "baseline": "s143A",
+      "applicableSectors": ["banking", "insurance", "aviation"],
+      "dimensions": ["reportingTargets", "additionalRegulator"]
+    },
+    {
+      "id": "crossBorder",
+      "label": "Cross-Border",
+      "baseline": "s129A",
+      "applicableSectors": ["aviation", "healthcare"],
+      "dimensions": ["transferScenarios", "mechanisms"]
+    },
+    {
+      "id": "dataIntegrity",
+      "label": "Data Integrity",
+      "baseline": "s11",
+      "applicableSectors": ["banking"],
+      "dimensions": ["accuracyRequirements", "correctionSLAs", "verificationFrequency"]
+    },
+    {
+      "id": "accessRights",
+      "label": "Access Rights",
+      "baseline": "s12",
+      "applicableSectors": ["healthcare"],
+      "dimensions": ["accessProcess", "feeRestrictions", "clinicalCorrection"]
+    },
+    {
+      "id": "sectorSpecific",
+      "label": "Sector-Specific",
+      "baseline": null,
+      "applicableSectors": ["banking", "healthcare", "communications", "insurance", "aviation", "electricity", "water"],
+      "dimensions": ["provisions"]
+    }
+  ],
+  "comparisonMatrix": {
+    "security": {
+      "baseline": {
+        "encryption": "Practical steps per Security Standard 2015",
+        "mfaScope": "Not mandated at baseline",
+        "penTestFrequency": "Recommended but not specified",
+        "breachTargets": ["Commissioner (s143A)"],
+        "additionalFrameworks": ["Security Standards 2015"],
+        "networkSegmentation": "Not specified"
+      },
+      "sectors": {
+        "banking": {
+          "encryption": "End-to-end for all transactions",
+          "mfaScope": "All online/mobile banking per BNM RMiT",
+          "penTestFrequency": "Annual",
+          "breachTargets": ["Commissioner (s143A)", "BNM"],
+          "additionalFrameworks": ["BNM RMiT", "PCI DSS", "SWIFT CSCF"],
+          "networkSegmentation": "Per BNM RMiT"
+        },
+        "healthcare": {
+          "encryption": "AES-256 at rest, TLS 1.2+ in transit for EHR",
+          "mfaScope": "2FA for EHR access; auto-logout 10 min",
+          "penTestFrequency": "Annual",
+          "breachTargets": ["Commissioner (s143A)"],
+          "additionalFrameworks": ["MOH Guidelines"],
+          "networkSegmentation": "Clinical systems isolated"
+        },
+        "communications": {
+          "encryption": "End-to-end for subscriber data",
+          "mfaScope": "MFA for network admin accounts",
+          "penTestFrequency": "Twice yearly",
+          "breachTargets": ["Commissioner (s143A)"],
+          "additionalFrameworks": ["MCMC Guidelines"],
+          "networkSegmentation": "Subscriber data segregated from internet-facing"
+        },
+        "insurance": {
+          "encryption": "All health data encrypted at rest and in transit",
+          "mfaScope": "Role-based access for health/medical data",
+          "penTestFrequency": "Not specified beyond baseline",
+          "breachTargets": ["Commissioner (s143A)", "BNM"],
+          "additionalFrameworks": ["BNM Guidelines"],
+          "networkSegmentation": "Not specified beyond baseline"
+        },
+        "aviation": {
+          "encryption": "Encrypted PNR transmission; GDS encryption",
+          "mfaScope": "MFA for reservation systems (DCS, GDS)",
+          "penTestFrequency": "Annual",
+          "breachTargets": ["Commissioner (s143A)", "CAAM"],
+          "additionalFrameworks": ["ICAO Annex 9"],
+          "networkSegmentation": "Not specified beyond baseline"
+        },
+        "electricity": {
+          "encryption": "Encrypted smart meter communications",
+          "mfaScope": "MFA for customer portals and AMI access",
+          "penTestFrequency": "Annual for AMI/MDMS",
+          "breachTargets": ["Commissioner (s143A)"],
+          "additionalFrameworks": ["Energy Commission Guidelines"],
+          "networkSegmentation": "AMI/MDMS networks segregated"
+        },
+        "water": {
+          "encryption": "Encrypted field device communications",
+          "mfaScope": "MFA for consumer portals",
+          "penTestFrequency": "Not specified beyond baseline",
+          "breachTargets": ["Commissioner (s143A)"],
+          "additionalFrameworks": ["SPAN Guidelines"],
+          "networkSegmentation": "Not specified beyond baseline"
+        }
+      }
+    },
+    "retention": {
+      "baseline": {
+        "dataCategories": [
+          {"category": "General personal data", "period": "As long as necessary for purpose", "trigger": "Purpose fulfilment", "legalBasis": "s10 PDPA"}
+        ]
+      },
+      "sectors": {
+        "banking": {
+          "dataCategories": [
+            {"category": "KYC/CDD records", "period": "6 years", "trigger": "End of relationship", "legalBasis": "AMLA"},
+            {"category": "Transaction records", "period": "6 years", "trigger": "Transaction date", "legalBasis": "AMLA"},
+            {"category": "Credit agreements", "period": "7 years", "trigger": "End of agreement", "legalBasis": "Evidence Act 1950"},
+            {"category": "CCTV footage", "period": "90 days", "trigger": "Date of recording", "legalBasis": "BNM RMiT"}
+          ]
+        },
+        "healthcare": {
+          "dataCategories": [
+            {"category": "Adult patient records", "period": "7 years", "trigger": "Post-treatment", "legalBasis": "MOH Guidelines"},
+            {"category": "Minor patient records", "period": "Until age 25 or 7 years", "trigger": "Whichever is later", "legalBasis": "MOH Guidelines"},
+            {"category": "Surgical records", "period": "10 years", "trigger": "Post-procedure", "legalBasis": "MOH Guidelines"},
+            {"category": "Obstetric records", "period": "25 years", "trigger": "Date of delivery", "legalBasis": "MOH Guidelines"},
+            {"category": "Medical imaging", "period": "5 years", "trigger": "Date of imaging", "legalBasis": "MOH Guidelines"}
+          ]
+        },
+        "communications": {
+          "dataCategories": [
+            {"category": "CDRs/billing data", "period": "12 months maximum", "trigger": "Date of record", "legalBasis": "CMA 1998"},
+            {"category": "SIM registration data", "period": "Subscription + 2 years", "trigger": "End of subscription", "legalBasis": "MCMC Regulations"},
+            {"category": "Location data", "period": "3 months maximum", "trigger": "Date of record", "legalBasis": "COP"}
+          ]
+        },
+        "insurance": {
+          "dataCategories": [
+            {"category": "Underwriting records", "period": "Policy term + 7 years", "trigger": "End of policy", "legalBasis": "FSA 2013"},
+            {"category": "Claims records", "period": "Settlement + 7 years", "trigger": "Date of settlement", "legalBasis": "FSA 2013"},
+            {"category": "Telematics data", "period": "Operational + 2 years", "trigger": "End of monitoring", "legalBasis": "COP"}
+          ]
+        },
+        "electricity": {
+          "dataCategories": [
+            {"category": "Smart meter interval data", "period": "13 months maximum", "trigger": "Date of recording", "legalBasis": "COP"},
+            {"category": "Consumer account data", "period": "7 years", "trigger": "End of relationship", "legalBasis": "ESA 1990"}
+          ]
+        },
+        "water": {
+          "dataCategories": [
+            {"category": "Billing records", "period": "7 years", "trigger": "End of relationship", "legalBasis": "WSIA 2006"},
+            {"category": "Field service records", "period": "5 years maximum", "trigger": "Date of service", "legalBasis": "COP"},
+            {"category": "Field vehicle CCTV", "period": "30 days", "trigger": "Date of recording", "legalBasis": "COP"}
+          ]
+        }
+      }
+    },
+    "sensitiveData": {
+      "baseline": {
+        "specialCategories": "Health, political, religious, criminal, biometric per s4 definition",
+        "protectionLevel": "Explicit consent required (s29)",
+        "storageSegregation": "Not specified"
+      },
+      "sectors": {
+        "healthcare": {
+          "specialCategories": "All patient data is sensitive by definition",
+          "protectionLevel": "Explicit consent per processing purpose; ethics committee for research",
+          "storageSegregation": "Clinical systems isolated from administrative"
+        },
+        "insurance": {
+          "specialCategories": "Health data for underwriting; genetic data; biometric authentication",
+          "protectionLevel": "Genetic data access limited to named officers; biometric not cross-used for underwriting",
+          "storageSegregation": "Enhanced access controls for health/genetic data"
+        },
+        "aviation": {
+          "specialCategories": "Biometric data (facial recognition, fingerprint); PNR",
+          "protectionLevel": "Explicit consent except government-mandated immigration; DPIA before deployment",
+          "storageSegregation": "Not specified beyond baseline"
+        },
+        "communications": {
+          "specialCategories": "SIM registration biometrics; location data treated as high-risk",
+          "protectionLevel": "High-risk classification; location consent specific per purpose",
+          "storageSegregation": "Subscriber data segregated from internet-facing systems"
+        }
+      }
+    },
+    "disclosure": {
+      "baseline": {
+        "thirdPartyTypes": "Data processors, service providers",
+        "regulatoryReporting": "Commissioner disclosures",
+        "consentRequirements": "Within purpose stated in notice (s8)"
+      },
+      "sectors": {
+        "banking": {
+          "thirdPartyTypes": "Credit bureaus (CCRIS, CTOS), regulators, law enforcement",
+          "regulatoryReporting": "BNM reporting; CCRIS mandatory reporting",
+          "consentRequirements": "Credit bureau reporting per legal obligation; customer consent for product offerings"
+        },
+        "healthcare": {
+          "thirdPartyTypes": "Insurers, referring providers, research institutions",
+          "regulatoryReporting": "MOH public health reporting",
+          "consentRequirements": "Specific consent per insurer disclosure; referral consent"
+        },
+        "insurance": {
+          "thirdPartyTypes": "Reinsurers, loss adjusters, MTA/PIAM (anti-fraud)",
+          "regulatoryReporting": "BNM regulatory reporting",
+          "consentRequirements": "Anti-fraud sharing per privacy notice; reinsurance disclosure documented"
+        }
+      }
+    },
+    "consent": {
+      "baseline": {
+        "granularity": "General consent for stated purposes (s6)",
+        "separateConsents": "Not mandated",
+        "emergencyProvisions": "Vital interests exception (s6(2))"
+      },
+      "sectors": {
+        "banking": {
+          "granularity": "Lawful basis assessment per processing activity",
+          "separateConsents": "KYC may fall under legal obligation vs. explicit consent",
+          "emergencyProvisions": "Fraud prevention basis available"
+        },
+        "healthcare": {
+          "granularity": "Granular per processing purpose",
+          "separateConsents": "Separate for treatment, billing, insurance, research",
+          "emergencyProvisions": "Vital interests exception for emergency treatment; documented post-hoc"
+        }
+      }
+    },
+    "breachNotification": {
+      "baseline": {
+        "reportingTargets": ["Commissioner (s143A)"],
+        "additionalRegulator": "None"
+      },
+      "sectors": {
+        "banking": {
+          "reportingTargets": ["Commissioner (s143A)", "BNM"],
+          "additionalRegulator": "Bank Negara Malaysia"
+        },
+        "insurance": {
+          "reportingTargets": ["Commissioner (s143A)", "BNM"],
+          "additionalRegulator": "Bank Negara Malaysia"
+        },
+        "aviation": {
+          "reportingTargets": ["Commissioner (s143A)", "CAAM"],
+          "additionalRegulator": "Civil Aviation Authority of Malaysia"
+        }
+      }
+    },
+    "crossBorder": {
+      "baseline": {
+        "transferScenarios": "General cross-border transfer requirements (s129A)",
+        "mechanisms": "Adequacy determination or derogation basis"
+      },
+      "sectors": {
+        "aviation": {
+          "transferScenarios": "PNR/API transfers to foreign authorities; GDS partner data sharing",
+          "mechanisms": "s129A documentation; adequacy or derogation for PNR/API; ICAO Annex 9 compliance"
+        },
+        "healthcare": {
+          "transferScenarios": "Overseas telehealth providers; international referrals",
+          "mechanisms": "s129A-compliant transfer mechanisms; telehealth platform assessment"
+        }
+      }
+    },
+    "dataIntegrity": {
+      "baseline": {
+        "accuracyRequirements": "Reasonable steps to ensure accuracy (s11)",
+        "correctionSLAs": "14 days to respond to correction request",
+        "verificationFrequency": "Not specified"
+      },
+      "sectors": {
+        "banking": {
+          "accuracyRequirements": "KYC data refresh cycles; credit bureau data correction",
+          "correctionSLAs": "Correct inaccurate credit bureau data within reasonable time",
+          "verificationFrequency": "Periodic KYC refresh per BNM requirements"
+        }
+      }
+    },
+    "accessRights": {
+      "baseline": {
+        "accessProcess": "Written request per s12; respond within 21 days",
+        "feeRestrictions": "Prescribed fee per regulations",
+        "clinicalCorrection": "Not applicable"
+      },
+      "sectors": {
+        "healthcare": {
+          "accessProcess": "Patients may request copy of medical records",
+          "feeRestrictions": "Reasonable copying fee only",
+          "clinicalCorrection": "Clinical notes: addendum model (no deletion of clinical observations)"
+        }
+      }
+    },
+    "sectorSpecific": {
+      "baseline": {
+        "provisions": []
+      },
+      "sectors": {
+        "banking": {
+          "provisions": [
+            {"title": "KYC/CDD Data", "summary": "Customer due diligence requirements under AMLA with 6-year retention"},
+            {"title": "Credit Bureau Reporting", "summary": "CCRIS/CTOS mandatory reporting and correction obligations"},
+            {"title": "Online/Mobile Banking Security", "summary": "MFA mandatory per BNM RMiT for all digital channels"}
+          ]
+        },
+        "healthcare": {
+          "provisions": [
+            {"title": "Electronic Health Records", "summary": "AES-256 encryption, 2FA access, break-glass emergency procedures"},
+            {"title": "Telehealth & Digital Health", "summary": "Encrypted platforms, DPIA required, s129A for overseas providers"},
+            {"title": "Medical Research", "summary": "Ethics committee approval; separate consent per research project"}
+          ]
+        },
+        "communications": {
+          "provisions": [
+            {"title": "SIM Registration Data", "summary": "High-risk sensitive data including biometrics"},
+            {"title": "Call Detail Records", "summary": "12-month maximum retention for billing CDRs"},
+            {"title": "Location Data", "summary": "Most sensitive category; 3-month max without consent; purpose-specific consent"}
+          ]
+        },
+        "insurance": {
+          "provisions": [
+            {"title": "Underwriting Data", "summary": "Health data requires enhanced protections; genetic data most restricted"},
+            {"title": "Anti-Fraud Data Sharing", "summary": "MTA/PIAM sharing per privacy notice; fraud flagging protocols"},
+            {"title": "Telematics & UBI", "summary": "Separate consent from policy; DPIA required; operational + 2yr retention"}
+          ]
+        },
+        "aviation": {
+          "provisions": [
+            {"title": "Passenger Name Records (PNR)", "summary": "Mandatory sharing with immigration authorities under ICAO Annex 9"},
+            {"title": "Biometric Data at Airports", "summary": "Explicit consent except government-mandated; DPIA before deployment"},
+            {"title": "Frequent Flyer Programmes", "summary": "Alliance partner data sharing with documented agreements"}
+          ]
+        },
+        "electricity": {
+          "provisions": [
+            {"title": "Smart Meter Data", "summary": "15/30-min interval data reveals occupancy patterns; 13-month max retention"},
+            {"title": "AMI Network Security", "summary": "Segregated networks for advanced metering infrastructure"},
+            {"title": "Secondary Use Consent", "summary": "Energy programs, demand response, research require explicit consent"}
+          ]
+        },
+        "water": {
+          "provisions": [
+            {"title": "Consumer Account Data", "summary": "Billing and usage data with 7-year retention post-relationship"},
+            {"title": "Field Service Records", "summary": "Maintenance history with 5-year maximum retention"},
+            {"title": "Debt Management", "summary": "Credit bureau reporting with pre-notification; collection agents require DPAs"}
+          ]
+        }
+      }
+    }
+  }
+}

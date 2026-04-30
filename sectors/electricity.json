@@ -1,0 +1,56 @@
+{
+  "id": "electricity",
+  "name": "Electricity Utilities",
+  "classNumber": 11,
+  "copId": "cop-utilities-electricity",
+  "copTitle": "Personal Data Protection Code of Practice (Utilities — Electricity) 2022",
+  "regulator": "Energy Commission Malaysia",
+  "sectorLegislation": ["Electricity Supply Act 1990"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-elec-s5"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-ELC1"],
+      "controls": ["encryption-and-data-protection-in-transit-at-rest", "security-monitoring-and-siem"],
+      "encryption": "Encrypted smart meter communications",
+      "mfaScope": "MFA for customer portals and AMI access",
+      "penTestFrequency": "Annual for AMI/MDMS",
+      "breachTargets": ["Commissioner (s143A)"],
+      "additionalFrameworks": ["Energy Commission Guidelines"],
+      "networkSegmentation": "AMI/MDMS networks segregated",
+      "deltaFromBaseline": [
+        "AMI/MDMS network segregation mandatory",
+        "Encrypted smart meter communications required",
+        "Annual security assessments for AMI/MDMS systems",
+        "Comprehensive audit logging for consumption data access"
+      ]
+    },
+    "retention": {
+      "copProvisions": ["cop-elec-s2", "cop-elec-s3"],
+      "baselineRequirement": "s10",
+      "sectorRequirements": ["s10-CS-ELC1"],
+      "controls": ["retention-schedule-management"],
+      "dataCategories": [
+        {"category": "Smart meter interval data", "period": "13 months maximum", "trigger": "Date of recording", "legalBasis": "COP"},
+        {"category": "Consumer account data", "period": "7 years", "trigger": "End of relationship", "legalBasis": "ESA 1990"}
+      ],
+      "deltaFromBaseline": [
+        "Smart meter interval data 13-month hard maximum",
+        "Secondary uses require explicit consent",
+        "Consumer account data 7-year retention"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-elec-s1", "cop-elec-s2", "cop-elec-s3", "cop-elec-s4"],
+      "baselineRequirement": null,
+      "sectorRequirements": [],
+      "controls": [],
+      "provisions": [
+        {"title": "Smart Meter Data", "summary": "15/30-min interval data reveals occupancy patterns; 13-month max retention"},
+        {"title": "AMI Network Security", "summary": "Segregated networks for advanced metering infrastructure"},
+        {"title": "Secondary Use Consent", "summary": "Energy programs, demand response, research require explicit consent"},
+        {"title": "Debt Management", "summary": "Credit bureau reporting with pre-notification recommended"}
+      ]
+    }
+  }
+}

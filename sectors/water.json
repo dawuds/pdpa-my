@@ -1,0 +1,55 @@
+{
+  "id": "water",
+  "name": "Water Utilities",
+  "classNumber": 11,
+  "copId": "cop-utilities-water",
+  "copTitle": "Personal Data Protection Code of Practice (Utilities — Water) 2022",
+  "regulator": "National Water Services Commission (SPAN)",
+  "sectorLegislation": ["Water Services Industry Act 2006"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-water-s5"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-WTR1"],
+      "controls": [],
+      "encryption": "Encrypted field device communications",
+      "mfaScope": "MFA for consumer portals",
+      "penTestFrequency": "Not specified beyond baseline",
+      "breachTargets": ["Commissioner (s143A)"],
+      "additionalFrameworks": ["SPAN Guidelines"],
+      "networkSegmentation": "Not specified beyond baseline",
+      "deltaFromBaseline": [
+        "MFA required for consumer online portals",
+        "Encrypted field device communications",
+        "Cross-cut shredding for paper records"
+      ]
+    },
+    "retention": {
+      "copProvisions": ["cop-water-s2", "cop-water-s3"],
+      "baselineRequirement": "s10",
+      "sectorRequirements": ["s10-CS-WTR1"],
+      "controls": ["retention-schedule-management"],
+      "dataCategories": [
+        {"category": "Billing records", "period": "7 years", "trigger": "End of relationship", "legalBasis": "WSIA 2006"},
+        {"category": "Field service records", "period": "5 years maximum", "trigger": "Date of service", "legalBasis": "COP"},
+        {"category": "Field vehicle CCTV", "period": "30 days", "trigger": "Date of recording", "legalBasis": "COP"}
+      ],
+      "deltaFromBaseline": [
+        "Billing records 7-year retention post-relationship",
+        "Field service records 5-year maximum",
+        "Field vehicle CCTV 30-day maximum"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-water-s1", "cop-water-s2", "cop-water-s3", "cop-water-s4"],
+      "baselineRequirement": null,
+      "sectorRequirements": [],
+      "controls": [],
+      "provisions": [
+        {"title": "Consumer Account Data", "summary": "Billing and usage data with 7-year retention post-relationship"},
+        {"title": "Field Service Records", "summary": "Maintenance history with 5-year maximum retention"},
+        {"title": "Debt Management", "summary": "Credit bureau reporting with pre-notification; collection agents require DPAs"}
+      ]
+    }
+  }
+}

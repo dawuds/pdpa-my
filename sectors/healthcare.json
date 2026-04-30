@@ -1,0 +1,128 @@
+{
+  "id": "healthcare",
+  "name": "Healthcare",
+  "classNumber": 4,
+  "copId": "cop-healthcare",
+  "copTitle": "Personal Data Protection Code of Practice (Health) 2022",
+  "regulator": "Ministry of Health (MOH)",
+  "sectorLegislation": ["Private Healthcare Facilities and Services Act 1998", "Medical Act 1971"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-health-s3", "cop-health-s6"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-HLT1"],
+      "controls": ["access-control-and-identity-management", "encryption-and-data-protection-in-transit-at-rest", "vulnerability-and-patch-management"],
+      "encryption": "AES-256 at rest, TLS 1.2+ in transit for EHR",
+      "mfaScope": "2FA for EHR access; auto-logout 10 min",
+      "penTestFrequency": "Annual",
+      "breachTargets": ["Commissioner (s143A)"],
+      "additionalFrameworks": ["MOH Guidelines"],
+      "networkSegmentation": "Clinical systems isolated",
+      "deltaFromBaseline": [
+        "AES-256 mandatory for EHR data at rest",
+        "TLS 1.2+ mandatory for all data in transit",
+        "2FA required for EHR access",
+        "Auto-logout after 10 minutes of inactivity",
+        "Break-glass emergency access with automatic privacy officer alert"
+      ]
+    },
+    "retention": {
+      "copProvisions": ["cop-health-s5"],
+      "baselineRequirement": "s10",
+      "sectorRequirements": ["s10-CS-HLT1"],
+      "controls": ["retention-schedule-management", "secure-data-disposal"],
+      "dataCategories": [
+        {"category": "Adult patient records", "period": "7 years", "trigger": "Post-treatment", "legalBasis": "MOH Guidelines"},
+        {"category": "Minor patient records", "period": "Until age 25 or 7 years", "trigger": "Whichever is later", "legalBasis": "MOH Guidelines"},
+        {"category": "Surgical records", "period": "10 years", "trigger": "Post-procedure", "legalBasis": "MOH Guidelines"},
+        {"category": "Obstetric records", "period": "25 years", "trigger": "Date of delivery", "legalBasis": "MOH Guidelines"},
+        {"category": "Medical imaging", "period": "5 years", "trigger": "Date of imaging", "legalBasis": "MOH Guidelines"}
+      ],
+      "deltaFromBaseline": [
+        "Extended retention for minors (until age 25)",
+        "25-year retention for obstetric records",
+        "10-year surgical record retention",
+        "Disposal certificates mandatory"
+      ]
+    },
+    "sensitiveData": {
+      "copProvisions": ["cop-health-s1", "cop-health-s7", "cop-health-s8"],
+      "baselineRequirement": "s29",
+      "sectorRequirements": ["s29-CS-HLT1"],
+      "controls": ["sensitive-data-explicit-consent"],
+      "specialCategories": "All patient data is sensitive by definition",
+      "protectionLevel": "Explicit consent per processing purpose; ethics committee for research",
+      "storageSegregation": "Clinical systems isolated from administrative",
+      "deltaFromBaseline": [
+        "All patient data classified as sensitive regardless of content",
+        "Ethics committee approval prerequisite for research use",
+        "Research consent specific per project"
+      ]
+    },
+    "disclosure": {
+      "copProvisions": ["cop-health-s4"],
+      "baselineRequirement": "s8",
+      "sectorRequirements": ["s8-CS-HLT1"],
+      "controls": [],
+      "thirdPartyTypes": "Insurers, referring providers, research institutions",
+      "regulatoryReporting": "MOH public health reporting",
+      "consentRequirements": "Specific consent per insurer disclosure; referral consent",
+      "deltaFromBaseline": [
+        "Specific consent required for each insurance disclosure",
+        "Referral to treating providers requires documented consent",
+        "Doctor-patient confidentiality overlays PDPA requirements"
+      ]
+    },
+    "consent": {
+      "copProvisions": ["cop-health-s2"],
+      "baselineRequirement": "s6",
+      "sectorRequirements": ["s6-CS-HLT1"],
+      "controls": ["consent-collection-mechanism"],
+      "granularity": "Granular per processing purpose",
+      "separateConsents": "Separate for treatment, billing, insurance, research",
+      "emergencyProvisions": "Vital interests exception for emergency treatment; documented post-hoc",
+      "deltaFromBaseline": [
+        "Four separate consent categories: treatment, billing, insurance, research",
+        "Emergency vital interests exception with post-hoc documentation",
+        "Research consent requires ethics committee approval"
+      ]
+    },
+    "crossBorder": {
+      "copProvisions": ["cop-health-s6"],
+      "baselineRequirement": "s129A",
+      "sectorRequirements": [],
+      "controls": ["transfer-identification-and-mapping", "transfer-mechanism-selection", "transfer-impact-assessment", "cross-border-transfer-monitoring"],
+      "transferScenarios": "Overseas telehealth providers; international referrals",
+      "mechanisms": "s129A-compliant transfer mechanisms; telehealth platform assessment",
+      "deltaFromBaseline": [
+        "Overseas telehealth providers must demonstrate s129A compliance",
+        "International referral transfers require documented mechanism"
+      ]
+    },
+    "accessRights": {
+      "copProvisions": ["cop-health-s8"],
+      "baselineRequirement": "s12",
+      "sectorRequirements": ["s12-CS-HLT1"],
+      "controls": [],
+      "accessProcess": "Patients may request copy of medical records",
+      "feeRestrictions": "Reasonable copying fee only",
+      "clinicalCorrection": "Clinical notes: addendum model (no deletion of clinical observations)",
+      "deltaFromBaseline": [
+        "Medical record copying fee restricted to reasonable amount",
+        "Clinical notes use addendum correction model",
+        "No deletion of original clinical observations"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-health-s1", "cop-health-s6", "cop-health-s7"],
+      "baselineRequirement": null,
+      "sectorRequirements": [],
+      "controls": [],
+      "provisions": [
+        {"title": "Electronic Health Records", "summary": "AES-256 encryption, 2FA access, break-glass emergency procedures"},
+        {"title": "Telehealth & Digital Health", "summary": "Encrypted platforms, DPIA required, s129A for overseas providers"},
+        {"title": "Medical Research", "summary": "Ethics committee approval; separate consent per research project"}
+      ]
+    }
+  }
+}

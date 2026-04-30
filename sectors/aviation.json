@@ -1,0 +1,80 @@
+{
+  "id": "aviation",
+  "name": "Aviation",
+  "classNumber": 6,
+  "copId": "cop-aviation",
+  "copTitle": "Personal Data Protection Code of Practice (Aviation) 2022",
+  "regulator": "Civil Aviation Authority of Malaysia (CAAM)",
+  "sectorLegislation": ["Civil Aviation Act 1969"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-avi-s5"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-AVI1"],
+      "controls": ["physical-security-controls"],
+      "encryption": "Encrypted PNR transmission; GDS encryption",
+      "mfaScope": "MFA for reservation systems (DCS, GDS)",
+      "penTestFrequency": "Annual",
+      "breachTargets": ["Commissioner (s143A)", "CAAM"],
+      "additionalFrameworks": ["ICAO Annex 9"],
+      "networkSegmentation": "Not specified beyond baseline",
+      "deltaFromBaseline": [
+        "MFA for all reservation systems (DCS, GDS)",
+        "Encrypted PNR transmission mandatory",
+        "Annual security assessments for passenger data systems",
+        "CCTV 30-day maximum retention for general surveillance"
+      ]
+    },
+    "sensitiveData": {
+      "copProvisions": ["cop-avi-s3"],
+      "baselineRequirement": "s29",
+      "sectorRequirements": ["s29-CS-AVI1"],
+      "controls": ["sensitive-data-explicit-consent"],
+      "specialCategories": "Biometric data (facial recognition, fingerprint); PNR",
+      "protectionLevel": "Explicit consent except government-mandated immigration; DPIA before deployment",
+      "storageSegregation": "Not specified beyond baseline",
+      "deltaFromBaseline": [
+        "Biometric data requires explicit consent except government-mandated",
+        "DPIA mandatory before biometric system deployment",
+        "Government-mandated immigration biometrics exempt from consent"
+      ]
+    },
+    "breachNotification": {
+      "copProvisions": ["cop-avi-s5"],
+      "baselineRequirement": "s143A",
+      "sectorRequirements": [],
+      "controls": ["breach-detection-and-triage", "breach-notification-to-commissioner"],
+      "reportingTargets": ["Commissioner (s143A)", "CAAM"],
+      "additionalRegulator": "Civil Aviation Authority of Malaysia",
+      "deltaFromBaseline": [
+        "Dual reporting to Commissioner AND CAAM",
+        "Significant passenger data breaches require CAAM notification"
+      ]
+    },
+    "crossBorder": {
+      "copProvisions": ["cop-avi-s2"],
+      "baselineRequirement": "s129A",
+      "sectorRequirements": [],
+      "controls": ["transfer-identification-and-mapping", "transfer-mechanism-selection", "transfer-impact-assessment", "cross-border-transfer-monitoring"],
+      "transferScenarios": "PNR/API transfers to foreign authorities; GDS partner data sharing",
+      "mechanisms": "s129A documentation; adequacy or derogation for PNR/API; ICAO Annex 9 compliance",
+      "deltaFromBaseline": [
+        "PNR/API transfers to foreign authorities require s129A documentation",
+        "ICAO Annex 9 compliance for international passenger data sharing",
+        "GDS partner sharing requires documented transfer agreements"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-avi-s1", "cop-avi-s2", "cop-avi-s4", "cop-avi-s6"],
+      "baselineRequirement": null,
+      "sectorRequirements": [],
+      "controls": [],
+      "provisions": [
+        {"title": "Passenger Name Records (PNR)", "summary": "Mandatory sharing with immigration authorities under ICAO Annex 9"},
+        {"title": "Biometric Data at Airports", "summary": "Explicit consent except government-mandated; DPIA before deployment"},
+        {"title": "Frequent Flyer Programmes", "summary": "Alliance partner data sharing with documented agreements"},
+        {"title": "CCTV and Surveillance", "summary": "Notices at all camera locations; general footage 30-day max retention"}
+      ]
+    }
+  }
+}

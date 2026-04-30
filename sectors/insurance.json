@@ -1,0 +1,95 @@
+{
+  "id": "insurance",
+  "name": "Insurance & Takaful",
+  "classNumber": 3,
+  "copId": "cop-insurance-takaful",
+  "copTitle": "Personal Data Protection Code of Practice (Insurance and Takaful) 2022",
+  "regulator": "Bank Negara Malaysia (BNM)",
+  "sectorLegislation": ["Financial Services Act 2013", "Islamic Financial Services Act 2013"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-ins-s5"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-INS1"],
+      "controls": ["encryption-and-data-protection-in-transit-at-rest"],
+      "encryption": "All health data encrypted at rest and in transit",
+      "mfaScope": "Role-based access for health/medical data",
+      "penTestFrequency": "Not specified beyond baseline",
+      "breachTargets": ["Commissioner (s143A)", "BNM"],
+      "additionalFrameworks": ["BNM Guidelines"],
+      "networkSegmentation": "Not specified beyond baseline",
+      "deltaFromBaseline": [
+        "All health data encrypted at rest and in transit",
+        "Role-based access controls for health/medical data",
+        "DPIA before telematics/wearable/AI underwriting"
+      ]
+    },
+    "retention": {
+      "copProvisions": ["cop-ins-s2", "cop-ins-s3"],
+      "baselineRequirement": "s10",
+      "sectorRequirements": ["s10-CS-INS1"],
+      "controls": ["retention-schedule-management"],
+      "dataCategories": [
+        {"category": "Underwriting records", "period": "Policy term + 7 years", "trigger": "End of policy", "legalBasis": "FSA 2013"},
+        {"category": "Claims records", "period": "Settlement + 7 years", "trigger": "Date of settlement", "legalBasis": "FSA 2013"},
+        {"category": "Telematics data", "period": "Operational + 2 years", "trigger": "End of monitoring", "legalBasis": "COP"}
+      ],
+      "deltaFromBaseline": [
+        "7-year post-policy retention for underwriting records",
+        "7-year post-settlement retention for claims records",
+        "Telematics data limited to operational + 2 years"
+      ]
+    },
+    "sensitiveData": {
+      "copProvisions": ["cop-ins-s7"],
+      "baselineRequirement": "s29",
+      "sectorRequirements": ["s29-CS-INS1"],
+      "controls": ["sensitive-data-explicit-consent"],
+      "specialCategories": "Health data for underwriting; genetic data; biometric authentication",
+      "protectionLevel": "Genetic data access limited to named officers; biometric not cross-used for underwriting",
+      "storageSegregation": "Enhanced access controls for health/genetic data",
+      "deltaFromBaseline": [
+        "Genetic data access limited to named officers only",
+        "Biometric authentication data cannot be cross-used for underwriting",
+        "Health data for underwriting requires enhanced protections"
+      ]
+    },
+    "disclosure": {
+      "copProvisions": ["cop-ins-s4"],
+      "baselineRequirement": "s8",
+      "sectorRequirements": ["s8-CS-INS1"],
+      "controls": [],
+      "thirdPartyTypes": "Reinsurers, loss adjusters, MTA/PIAM (anti-fraud)",
+      "regulatoryReporting": "BNM regulatory reporting",
+      "consentRequirements": "Anti-fraud sharing per privacy notice; reinsurance disclosure documented",
+      "deltaFromBaseline": [
+        "Anti-fraud data sharing with MTA/PIAM per privacy notice",
+        "Reinsurance disclosure requires documentation",
+        "Loss adjuster disclosure for claims assessment"
+      ]
+    },
+    "breachNotification": {
+      "copProvisions": ["cop-ins-s5"],
+      "baselineRequirement": "s143A",
+      "sectorRequirements": [],
+      "controls": ["breach-detection-and-triage", "breach-notification-to-commissioner"],
+      "reportingTargets": ["Commissioner (s143A)", "BNM"],
+      "additionalRegulator": "Bank Negara Malaysia",
+      "deltaFromBaseline": [
+        "Dual reporting to Commissioner AND BNM",
+        "Significant security incidents require BNM notification"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-ins-s1", "cop-ins-s2", "cop-ins-s4", "cop-ins-s6"],
+      "baselineRequirement": null,
+      "sectorRequirements": [],
+      "controls": [],
+      "provisions": [
+        {"title": "Underwriting Data", "summary": "Health data requires enhanced protections; genetic data most restricted"},
+        {"title": "Anti-Fraud Data Sharing", "summary": "MTA/PIAM sharing per privacy notice; fraud flagging protocols"},
+        {"title": "Telematics & UBI", "summary": "Separate consent from policy; DPIA required; operational + 2yr retention"}
+      ]
+    }
+  }
+}

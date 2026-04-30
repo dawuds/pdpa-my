@@ -1,0 +1,111 @@
+{
+  "id": "banking",
+  "name": "Banking & Financial Institutions",
+  "classNumber": 2,
+  "copId": "cop-banking",
+  "copTitle": "Personal Data Protection Code of Practice (Banking and Financial Institutions) 2022",
+  "regulator": "Bank Negara Malaysia (BNM)",
+  "sectorLegislation": ["Financial Services Act 2013", "Islamic Financial Services Act 2013", "AMLA 2001"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-bank-s4", "cop-bank-s6"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-BNK1"],
+      "controls": ["access-control-and-identity-management", "encryption-and-data-protection-in-transit-at-rest", "vulnerability-and-patch-management", "security-monitoring-and-siem"],
+      "encryption": "End-to-end for all transactions",
+      "mfaScope": "All online/mobile banking per BNM RMiT",
+      "penTestFrequency": "Annual",
+      "breachTargets": ["Commissioner (s143A)", "BNM"],
+      "additionalFrameworks": ["BNM RMiT", "PCI DSS", "SWIFT CSCF"],
+      "networkSegmentation": "Per BNM RMiT",
+      "deltaFromBaseline": [
+        "MFA mandatory for all online/mobile banking",
+        "Dual breach reporting to Commissioner AND BNM",
+        "PCI DSS compliance for cardholder data",
+        "Annual penetration testing required",
+        "Real-time fraud detection and anomaly monitoring"
+      ]
+    },
+    "retention": {
+      "copProvisions": ["cop-bank-s7"],
+      "baselineRequirement": "s10",
+      "sectorRequirements": ["s10-CS-BNK1"],
+      "controls": ["retention-schedule-management", "secure-data-disposal"],
+      "dataCategories": [
+        {"category": "KYC/CDD records", "period": "6 years", "trigger": "End of relationship", "legalBasis": "AMLA"},
+        {"category": "Transaction records", "period": "6 years", "trigger": "Transaction date", "legalBasis": "AMLA"},
+        {"category": "Credit agreements", "period": "7 years", "trigger": "End of agreement", "legalBasis": "Evidence Act 1950"},
+        {"category": "CCTV footage", "period": "90 days", "trigger": "Date of recording", "legalBasis": "BNM RMiT"}
+      ],
+      "deltaFromBaseline": [
+        "AMLA 6-year statutory minimum for KYC/CDD",
+        "CCTV 90 days (vs general 30 days)",
+        "Financial records disposal requires certificates of destruction"
+      ]
+    },
+    "disclosure": {
+      "copProvisions": ["cop-bank-s3", "cop-bank-s5"],
+      "baselineRequirement": "s8",
+      "sectorRequirements": ["s8-CS-BNK1"],
+      "controls": [],
+      "thirdPartyTypes": "Credit bureaus (CCRIS, CTOS), regulators, law enforcement",
+      "regulatoryReporting": "BNM reporting; CCRIS mandatory reporting",
+      "consentRequirements": "Credit bureau reporting per legal obligation; customer consent for product offerings",
+      "deltaFromBaseline": [
+        "Mandatory CCRIS credit bureau reporting without data subject consent",
+        "Inter-bank disclosure for correspondent banking",
+        "BNM regulatory reporting obligations"
+      ]
+    },
+    "consent": {
+      "copProvisions": ["cop-bank-s2", "cop-bank-s3"],
+      "baselineRequirement": "s6",
+      "sectorRequirements": ["s6-CS-BNK1"],
+      "controls": [],
+      "granularity": "Lawful basis assessment per processing activity",
+      "separateConsents": "KYC may fall under legal obligation vs. explicit consent",
+      "emergencyProvisions": "Fraud prevention basis available",
+      "deltaFromBaseline": [
+        "KYC/AML processing may rely on legal obligation rather than consent",
+        "Separate lawful basis identification per processing activity"
+      ]
+    },
+    "breachNotification": {
+      "copProvisions": ["cop-bank-s6"],
+      "baselineRequirement": "s143A",
+      "sectorRequirements": [],
+      "controls": ["breach-detection-and-triage", "breach-notification-to-commissioner"],
+      "reportingTargets": ["Commissioner (s143A)", "BNM"],
+      "additionalRegulator": "Bank Negara Malaysia",
+      "deltaFromBaseline": [
+        "Dual reporting to Commissioner AND BNM",
+        "BNM incident reporting per RMiT requirements"
+      ]
+    },
+    "dataIntegrity": {
+      "copProvisions": ["cop-bank-s2"],
+      "baselineRequirement": "s11",
+      "sectorRequirements": ["s11-CS-BNK1"],
+      "controls": [],
+      "accuracyRequirements": "KYC data refresh cycles; credit bureau data correction",
+      "correctionSLAs": "Correct inaccurate credit bureau data within reasonable time",
+      "verificationFrequency": "Periodic KYC refresh per BNM requirements",
+      "deltaFromBaseline": [
+        "Mandatory KYC data accuracy refresh cycles",
+        "Credit bureau data correction obligations (CCRIS/CTOS)",
+        "Periodic verification per BNM requirements"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-bank-s1", "cop-bank-s2", "cop-bank-s3", "cop-bank-s4"],
+      "baselineRequirement": null,
+      "sectorRequirements": [],
+      "controls": [],
+      "provisions": [
+        {"title": "KYC/CDD Data", "summary": "Customer due diligence requirements under AMLA with 6-year retention"},
+        {"title": "Credit Bureau Reporting", "summary": "CCRIS/CTOS mandatory reporting and correction obligations"},
+        {"title": "Online/Mobile Banking Security", "summary": "MFA mandatory per BNM RMiT for all digital channels"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "communications",
+  "name": "Communications",
+  "classNumber": 1,
+  "copId": "cop-communications",
+  "copTitle": "Personal Data Protection Code of Practice (Communications) 2022",
+  "regulator": "Malaysian Communications and Multimedia Commission (MCMC)",
+  "sectorLegislation": ["Communications and Multimedia Act 1998"],
+  "topics": {
+    "security": {
+      "copProvisions": ["cop-comms-s5"],
+      "baselineRequirement": "s9",
+      "sectorRequirements": ["s9-CS-COM1"],
+      "controls": ["access-control-and-identity-management", "encryption-and-data-protection-in-transit-at-rest", "vulnerability-and-patch-management", "security-monitoring-and-siem"],
+      "encryption": "End-to-end for subscriber data",
+      "mfaScope": "MFA for network admin accounts",
+      "penTestFrequency": "Twice yearly",
+      "breachTargets": ["Commissioner (s143A)"],
+      "additionalFrameworks": ["MCMC Guidelines"],
+      "networkSegmentation": "Subscriber data segregated from internet-facing",
+      "deltaFromBaseline": [
+        "Penetration testing twice yearly (vs annual/unspecified)",
+        "SIEM for real-time subscriber data monitoring",
+        "Network segregation for subscriber data systems",
+        "Threat intelligence sharing with MCMC"
+      ]
+    },
+    "retention": {
+      "copProvisions": ["cop-comms-s3"],
+      "baselineRequirement": "s10",
+      "sectorRequirements": ["s10-CS-COM1"],
+      "controls": ["retention-schedule-management"],
+      "dataCategories": [
+        {"category": "CDRs/billing data", "period": "12 months maximum", "trigger": "Date of record", "legalBasis": "CMA 1998"},
+        {"category": "SIM registration data", "period": "Subscription + 2 years", "trigger": "End of subscription", "legalBasis": "MCMC Regulations"},
+        {"category": "Location data", "period": "3 months maximum", "trigger": "Date of record", "legalBasis": "COP"}
+      ],
+      "deltaFromBaseline": [
+        "CDR maximum retention cap of 12 months",
+        "Location data 3-month hard maximum without consent",
+        "SIM registration data tied to subscription lifecycle"
+      ]
+    },
+    "sensitiveData": {
+      "copProvisions": ["cop-comms-s2", "cop-comms-s4"],
+      "baselineRequirement": "s29",
+      "sectorRequirements": ["s29-CS-COM1"],
+      "controls": ["sensitive-data-explicit-consent"],
+      "specialCategories": "SIM registration biometrics; location data treated as high-risk",
+      "protectionLevel": "High-risk classification; location consent specific per purpose",
+      "storageSegregation": "Subscriber data segregated from internet-facing systems",
+      "deltaFromBaseline": [
+        "SIM registration biometrics treated as high-risk sensitive data",
+        "Location data requires purpose-specific consent",
+        "Not classified as s29 sensitive but treated at equivalent protection level"
+      ]
+    },
+    "sectorSpecific": {
+      "copProvisions": ["cop-comms-s1", "cop-comms-s2", "cop-comms-s4", "cop-comms-s6"],
+      "baselineRequirement": null,
+      "sectorRequirements": ["s7-CS-COM1"],
+      "controls": [],
+      "provisions": [
+        {"title": "SIM Registration Data", "summary": "High-risk sensitive data including biometrics"},
+        {"title": "Call Detail Records", "summary": "12-month maximum retention for billing CDRs"},
+        {"title": "Location Data", "summary": "Most sensitive category; 3-month max without consent; purpose-specific consent"},
+        {"title": "Direct Marketing", "summary": "7-day opt-out window for marketing communications"}
+      ]
+    }
+  }
+}
