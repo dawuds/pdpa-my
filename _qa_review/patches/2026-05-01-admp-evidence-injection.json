@@ -1,0 +1,12 @@
+{
+  "target": "automated-decisions/index.json",
+  "action": "inject",
+  "key": "evidenceExpectations",
+  "value": [
+    "ADMP Threshold Assessment (Ambang ADMP) documentation",
+    "DPO Design-Engagement Records (§5.1 mandatory earliest involvement)",
+    "Transparency Disclosure Log (including Trade Secret/IP carve-out rationales)",
+    "AI Operator Training Registry (records of mandatory staff training)",
+    "DPIA Report for ADMP (regardless of subject count)"
+  ]
+}

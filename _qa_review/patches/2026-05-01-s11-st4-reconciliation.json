@@ -1,0 +1,9 @@
+{
+  "target": "requirements/index.json",
+  "id": "s11-ST4",
+  "action": "modify",
+  "change": {
+    "priority": "Standard",
+    "guidelineVariance": "Note: While the Data Integrity Standard 2015 mandates human review, the April 2026 ADMP Guideline has softened this to a permissive best-practice. Treat as Standard priority for PDPA; High/Critical for AI Governance Bill compliance."
+  }
+}
