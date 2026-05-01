@@ -1,7 +1,8 @@
 {
-  "sourceType": "official-aligned",
+  "sourceType": "official-aligned-with-analyst-extension",
   "title": "DPbD Lifecycle Integration",
   "description": "How DPbD is operationalised across the data processing lifecycle. Each stage has design-time decisions, technical/organisational measures, and evidence expectations.",
+  "lifecycleNote": "The issued JPDP DPbD Guideline definition (Section 3.1) names FOUR lifecycle stages: design, development, deployment, decommissioning. The 'operation' stage between deployment and decommissioning is an analyst-added stage retained here for operational completeness — it covers continuous monitoring, periodic access reviews, and ongoing privacy maintenance which are required practice but not separately named in the issued definition.",
   "stages": [
     {
       "id": "design",

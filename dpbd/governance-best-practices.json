@@ -1,0 +1,68 @@
+{
+  "sourceType": "official-aligned",
+  "title": "DPbD Governance Best Practices (Section 13)",
+  "description": "Section 13 'Amalan Terbaik bagi Tadbir Urus DPbD' of the JPDP DPbD Guideline (April 2026) consolidates governance expectations that the PCP scattered across Cavoukian P1. This is new explicit content in the issued guideline.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan DPbD, JPDP April 2026, Bahagian J Section 13",
+    "noteOnVerb": "The issued guideline frames Section 13 as 'amalan terbaik' (best practices). While the verb softens the legal force, the issued guideline names these expectations explicitly — they are not mere analyst suggestions."
+  },
+  "practices": [
+    {
+      "id": "GOV-1",
+      "name": "Board-level data protection expertise",
+      "rule": "Ensure there is at least one director or board member with data protection expertise OR ensure all directors receive appropriate training in personal data protection."
+    },
+    {
+      "id": "GOV-2",
+      "name": "Board-resourced DPbD measures",
+      "rule": "Directors allocate adequate resources to the personal data protection programme."
+    },
+    {
+      "id": "GOV-3",
+      "name": "Senior accountability assignment",
+      "rule": "Designate at least one senior manager (Head of Department) to be accountable for the organisation's personal data protection compliance."
+    },
+    {
+      "id": "GOV-4",
+      "name": "Performance evaluation integration",
+      "rule": "Incorporate personal data protection compliance as part of senior management's performance evaluation and compensation."
+    },
+    {
+      "id": "GOV-5",
+      "name": "Periodic board reporting",
+      "rule": "Require personal data protection assessments and audits to be undertaken and reported to the board on a regular basis."
+    },
+    {
+      "id": "GOV-6",
+      "name": "DPO meeting cadence",
+      "rule": "Conduct periodic meetings with the DPO at senior management level."
+    },
+    {
+      "id": "GOV-7",
+      "name": "Periodic policy audits",
+      "rule": "Conduct regular audits on personal data protection policies to verify their effectiveness in practice."
+    },
+    {
+      "id": "GOV-8",
+      "name": "Systematic DPIA",
+      "rule": "Develop systematic methods including personal data protection impact assessments to assess privacy risks and correct any negative impacts before they occur."
+    },
+    {
+      "id": "GOV-9",
+      "name": "Culture of continuous improvement",
+      "rule": "Foster a culture and environment where all stakeholders, including users, are encouraged to suggest improvements to personal data protection practices, with suggestions systematically reviewed and appropriately adopted."
+    }
+  ],
+  "evidenceExpectations": [
+    "Board minutes showing data protection discussions and director training records",
+    "Senior accountability assignment memo (board-approved designation)",
+    "Performance evaluation framework explicitly including data protection KPIs",
+    "Periodic board reporting deck on data protection programme status",
+    "DPO meeting cadence and minutes",
+    "Audit reports with findings and remediation tracker",
+    "DPIA register with cross-link to dpia/ module",
+    "Culture surveys, suggestion-tracking system, or improvement log"
+  ],
+  "auditMappingNote": "These best practices map directly to PBC items 11.10–11.12 (Tech-Audit/Regulatory/PDPA/Document-Requests/PBC-Request-List.md) and to test step 'verify alignment with issued §13 governance expectations' in DPB-01 of the audit work program."
+}

@@ -1,69 +1,71 @@
 {
-  "sourceType": "official-aligned",
-  "title": "ADMP Data Subject Rights (ADM Restrictions)",
-  "description": "Three rights provided to data subjects where automated decision-making (and by extension profiling) produces legal effects or significantly affects the data subject. Collectively the 'ADM Restrictions'. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
-  "rights": [
-    {
-      "id": "ADM-R1",
-      "name": "Right to Refuse",
-      "summary": "Data subjects have the right to refuse to be subjected to a decision based solely on automated decision-making (including profiling) which produces legal effects concerning them or significantly affects them.",
-      "scope": {
-        "basedSolelyOn": "A decision-making process that is entirely automated such that human influence is excluded. A process may still be considered solely automated if a human merely inputs the data and the decision-making is then carried out by an automated system."
+  "sourceType": "official-aligned-with-pcp-flagged",
+  "title": "ADMP Data Subject Mechanisms — Section 7 Notice + Section 38 Withdrawal",
+  "description": "The April 2026 issued ADMP Guideline does NOT name 'Right to Refuse', 'Right to Information', and 'Right to Human Review' as the PCP did. The issued guideline anchors data subject mechanisms in the existing Act 709 statute: Section 7 (notice and choice) and Section 38 (withdrawal of consent). PCP-derived rights are flagged below as cross-jurisdictional best practice, NOT JPDP-issued requirements.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan ADMP, JPDP April 2026, Sections 9.2–9.10",
+    "criticalDivergence": "The PCP's three named 'ADM Restrictions' framework was REPLACED by anchoring in s7 and s38. This is the most important divergence in the document."
+  },
+  "issuedRequirements": {
+    "description": "What the issued guideline actually obligates. Cite these for findings.",
+    "mechanisms": [
+      {
+        "id": "ADM-Notice-Mandatory",
+        "name": "ADM/Profiling Notification (Section 7 + §9.3)",
+        "rule": "Mandatory ('hendaklah'). The data controller must, by written notice, notify the data subject that ADM/profiling is involved in the processing.",
+        "scope": "The FACT of ADM/profiling is mandatorily disclosed.",
+        "bmQuote": "Sekiranya pemprosesan tersebut turut melibatkan ADM atau Pemprofilan, pengawal data hendaklah memaklumkan perkara tersebut"
       },
-      "controllerObligations": [
-        "Provide a clear mechanism for the data subject to exercise the Right to Refuse",
-        "Where refusal is exercised, provide an alternative non-automated path or stop the processing",
-        "Document the refusal and the alternative provided"
-      ],
-      "exceptionsApply": true,
-      "exceptionsNote": "Right to Refuse can be excluded where Exceptions apply (contract necessity, legal compliance, explicit consent)."
-    },
-    {
-      "id": "ADM-R2",
-      "name": "Right to Information",
-      "summary": "A right to information on the automated decision-making being undertaken — the transparency requirement.",
-      "controllerObligations": [
-        "Notify the data subject where processing involves automated decision-making",
-        "Provide meaningful information about the logic involved",
-        "Explain the importance and potential impact of the processing"
-      ],
-      "meaningfulInformationLogic": [
-        "The type of information collected or used in creating the profile or making the automated decision",
-        "Why this information is relevant",
-        "What the likely impact will be / how it is likely to affect the data subject"
-      ],
-      "exceptionsApply": false,
-      "exceptionsNote": "The Right to Information is RETAINED even where Exceptions apply. Transparency is mandatory regardless of Exception or Exemption status — so that any explicit consent (where relied on as an Exception) is informed."
-    },
-    {
-      "id": "ADM-R3",
-      "name": "Right to Human Review",
-      "summary": "A right to request a human review of the automated decision-making.",
-      "controllerObligations": [
-        "Provide an appropriate mechanism for the data subject to request review",
-        "Provide a process for individuals to challenge or appeal a decision and the grounds on which they can appeal",
-        "If requested, provide justification and/or reasons for the decision made",
-        "Act upon requests within specific timelines (illustrative: within 21 days of receipt; extension by 14 days where complex or multiple requests)"
-      ],
-      "reviewerRequirements": [
-        "Has appropriate authority and capability to change the decision",
-        "Conducts a thorough assessment of all relevant data, including any additional information the data subject provides",
-        "Active and meaningful — not 'rubber-stamping' the AI recommendation",
-        "Has authority and competence to go against the automated recommendation",
-        "Evaluates and interprets the recommendation; considers all input data and other additional factors"
-      ],
-      "exceptionsApply": true,
-      "exceptionsNote": "Right to Human Review can be excluded where Exceptions apply."
-    }
-  ],
+      {
+        "id": "ADM-Notice-Permissive",
+        "name": "ADM/Profiling Explanation (§9.4)",
+        "rule": "Permissive ('boleh'). The data controller may, by written notice, explain the type of decisions made through ADM, the reasons for the decisions, and the likely impact. Information provided shall be reasonable and practical, but NEED NOT include any confidential information, trade secrets, intellectual property, or proprietary rights.",
+        "scope": "Logic, reasons, and likely impact may be disclosed at the controller's discretion, subject to substantial commercial carve-outs.",
+        "carveOuts": ["Confidential information (maklumat sulit)", "Trade secrets (rahsia perdagangan)", "Intellectual property (harta intelek)", "Proprietary rights (hak pemilikan)"]
+      },
+      {
+        "id": "ADM-Withdrawal",
+        "name": "Withdrawal of Consent (Section 38 + §9.6–9.8)",
+        "rule": "Where consent is the lawful basis, data subjects may withdraw consent under s38. The withdrawal mechanism must be as easy to use as the mechanism for giving consent.",
+        "scope": "Operates as the 'opt-out' mechanism for ADMP where consent is the basis. Where contract necessity or legal compliance is the basis, withdrawal does not apply."
+      }
+    ]
+  },
   "sensitivePersonalData": {
-    "rule": "Automated decision-making involving sensitive personal data is only allowed where (a) explicit consent has been obtained from the data subject OR processing is necessary for reasons of public interest; AND (b) the data controller has put suitable measures in place to safeguard the data subject's rights.",
-    "explicitConsentRequirement": "Consent must be clear, specific, and require a direct action from the data subject (e.g., checking a tick box, signing a document)."
+    "rule": "Automated decision-making involving sensitive personal data is governed by Section 40 of Act 709. Process only where (a) the data subject has given EXPLICIT CONSENT (s40(1)(a) — 'persetujuan secara nyata') OR (b) one of the s40(1)(b) conditions applies: necessary for employment law obligation, vital interests of the data subject, medical purposes, legal proceedings or legal advice. The issued guideline (§8.2) says controllers 'boleh mempertimbangkan' (may consider) implementing technical (encryption, access controls) and organisational protective measures — permissive, not mandatory.",
+    "explicitConsentRequirement": "Section 8.2 requires 'persetujuan secara nyata' (explicit consent) for sensitive PD ADMP. NOTE: For the general ADMP Exception under §9.9.3, the issued guideline uses plain 'persetujuan' (consent) — NOT 'persetujuan secara nyata'. PCP §2.18's proposal to require explicit consent for the general ADMP Exception was NOT adopted.",
+    "deviationFromPCP": "PCP §2.17 said 'public interest' and 'suitable measures... in place' (mandatory). Issued guideline replaces 'public interest' with the s40(1)(b) list and softens safeguards to permissive."
+  },
+  "pcpDerivedRightsForReference": {
+    "description": "The PCP's three named 'ADM Restrictions' did NOT survive into the issued guideline. They are retained here for cross-jurisdictional alignment (GDPR Article 22, UK GDPR, ICO guidance). DO NOT cite the JPDP ADMP Guideline for these — cite the actual sources of the obligation (Act 709 s7, s38, s40 for issued; or external standards for analyst guidance).",
+    "rights": [
+      {
+        "id": "ADM-R1-Refuse",
+        "name": "Right to Refuse (PCP-derived only)",
+        "summary": "PCP §2.13(a) proposed a standalone Right to Refuse to be subjected to a decision based solely on automated decision-making producing legal/significant effects. The issued guideline does NOT adopt this as a standalone right. Where consent is the basis, s38 withdrawal of consent is the operative mechanism. Where contract or legal compliance is the basis, no refusal right is created.",
+        "status": "NOT in issued JPDP guideline. Cross-reference GDPR Article 22(1) for the EU-style equivalent."
+      },
+      {
+        "id": "ADM-R2-Information",
+        "name": "Right to Information (PCP-derived doctrine partially adopted)",
+        "summary": "PCP §2.13(b) and §2.16 proposed mandatory disclosure of meaningful logic, even where Exceptions apply. The issued guideline §9.3 mandates only the FACT of ADM/profiling disclosure; §9.4 makes logic/reasons/impact PERMISSIVE with trade-secret/IP carve-outs. The 'retained even under Exceptions' doctrine is not stated in the issued text.",
+        "status": "Partially adopted. Cite §9.3 (mandatory: fact of ADM) and §9.4 (permissive: explanation), NOT the PCP doctrine."
+      },
+      {
+        "id": "ADM-R3-HumanReview",
+        "name": "Right to Human Review (PCP-derived only)",
+        "summary": "PCP §2.13(c) proposed a Right to Human Review with an illustrative 21-day SLA + 14-day extension. The issued guideline does NOT contain a Right to Human Review or any SLA. Treat as cross-jurisdictional best practice (GDPR Article 22(3)) — DO NOT cite the JPDP ADMP Guideline.",
+        "status": "NOT in issued JPDP guideline."
+      }
+    ]
   },
   "implementationGuidance": [
-    "Maintain a log of all automated decisions affecting data subjects, with the basis for any decision (model version, input data, output, override/review history)",
-    "Build the human review pathway into the same system that produces the automated decision — not as a separate manual process",
-    "Train reviewers in the operation of the model so they can meaningfully override recommendations",
-    "Make the privacy notice describe the automated decision-making in plain language with the meaningful logic above"
+    "Maintain a log of all in-scope ADMP operations with the basis for any decision (model version, input data, output, override/review history)",
+    "Update the privacy notice (s7) to disclose the FACT of ADM/profiling for every in-scope operation",
+    "Where the controller chooses to provide explanation, build it into the same system that produces the decision; document trade-secret/IP redactions",
+    "Where consent is the lawful basis, ensure the s38 withdrawal mechanism is operational and as easy as giving consent",
+    "Where sensitive PD is processed via ADMP, document the s40 lawful condition relied upon (explicit consent or s40(1)(b) ground)",
+    "Engage DPO from earliest design stage; trigger DPIA regardless of subject count"
   ]
 }

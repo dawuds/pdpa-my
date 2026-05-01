@@ -1,8 +1,12 @@
 {
   "sourceType": "official-aligned",
   "title": "AI and Generative AI as ADM Tools",
-  "description": "Use of AI (including Generative AI) for training and output is expressly identified as an 'automated decision-making' tool. Where its use has legal effects on the data subject or significantly impacts the data subject, the ADM Restrictions apply. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
-  "rule": "Use of AI and Generative AI by data controllers, where it has legal effects on the data subject or significantly impacts the data subject, is subject to the ADM Restrictions (Right to Refuse, Right to Information, Right to Human Review).",
+  "description": "Use of AI (including Generative AI) for processing personal data involving ADMP is within scope of the ADMP Guideline. The issued guideline frames the AI-specific items as 'amalan terbaik' (best practices) using permissive verb 'boleh menerapkan' (may apply) — softer than the PCP's mandatory framing.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan ADMP, JPDP April 2026, Section 10 (Kecerdasan Buatan)"
+  },
+  "rule": "Where AI is used for ADMP (processing personal data with legal or significant effects on data subjects), the ADMP Guideline applies — including the s7 notice obligation and (where consent is the basis) s38 withdrawal of consent. The 7 AI-specific best practices (§10.2) are permissive ('boleh').",
   "scopingNotes": [
     "Not all use of AI involves automated decision-making and profiling",
     "AI chatbot generating responses based on patterns learned from training data, without making decisions about users, is generally outside the trigger",
@@ -18,38 +22,54 @@
       "description": "Training data, the trained model, and output may all contain personal information. Difficult to access or correct; risk of disclosure or output influencing outcomes for individuals in response to particular prompts. The ADM Restrictions help address this."
     }
   ],
-  "additionalAiSafeguards": [
-    {
-      "id": "AI-1",
-      "name": "Dignity and accuracy",
-      "rule": "When using AI for profiling that significantly affects personal rights and benefits, AI must be used in a way that respects the dignity of individuals, maintains the utmost accuracy of output, recognises the limitations of AI predictions/recommendations/judgments, and considers possible disadvantages — and must not be used for inappropriate purposes."
-    },
-    {
-      "id": "AI-2",
-      "name": "No manipulation",
-      "rule": "Do not develop, provide, or use AI systems and services to manipulate human decision-making, recognition, or emotion, or to control individuals without their awareness. Take countermeasures against the risk of over-dependence on AI (automated bias)."
-    },
-    {
-      "id": "AI-3",
-      "name": "Risk assessment before deployment",
-      "rule": "Before deploying AI solutions, decide commercial objectives and weigh them against the risks of using AI in the organisation's decision-making."
-    },
-    {
-      "id": "AI-4",
-      "name": "Operator training",
-      "rule": "Where the AI system is intended for autonomous decision-making, provide training or clear explanation so organisations using the AI system properly understand how it operates."
-    },
-    {
-      "id": "AI-5",
-      "name": "Not the only factor",
-      "rule": "AI must not be implemented as the only factor in policies and/or decisions concerning people. Prevent racism and avoid actions harming people."
-    },
-    {
-      "id": "AI-6",
-      "name": "Meaningful human review",
-      "rule": "Human reviewers must check the system's recommendation and not just apply to individuals automatically. Reviewer involvement must be active — not for show. Reviewers must have actual meaningful influence (authority and competence) to go against the automated recommendation. They must evaluate and interpret the recommendation, consider all input data, and take into account other additional factors."
+  "issuedBestPractices": {
+    "framing": "Section 10.2 of the issued guideline lists 7 best practices the controller 'boleh menerapkan' (may apply). Permissive verb — these are not strict obligations.",
+    "items": [
+      {
+        "id": "10.2.1",
+        "name": "Risk assessment before deployment",
+        "rule": "Before deploying AI solutions, decide commercial objectives and weigh them against the risks of using AI in the organisation's decision-making."
+      },
+      {
+        "id": "10.2.2",
+        "name": "Dignity, accuracy, limitations, no inappropriate use",
+        "rule": "When using AI for profiling that significantly affects personal rights and benefits, AI must be used in a way that respects the dignity of individuals, maintains the utmost accuracy of output, recognises the limitations of AI predictions/recommendations/judgments, and considers possible disadvantages — and must not be used for inappropriate purposes."
+      },
+      {
+        "id": "10.2.3",
+        "name": "Inform data subject of AI use",
+        "rule": "Disclose AI use in the privacy / personal data protection notice. Notice should be scoped to be useful without being excessively long or technical.",
+        "newInIssued": true
+      },
+      {
+        "id": "10.2.4",
+        "name": "Mitigate over-reliance / automation bias",
+        "rule": "When developing, providing, or using an AI system or service, pay attention and take necessary countermeasures against the risk of depending too much on AI (automated bias)."
+      },
+      {
+        "id": "10.2.5",
+        "name": "Operator training",
+        "rule": "Where the AI system is intended for autonomous decision-making, provide training or clear explanation so organisations using the AI system properly understand how it operates."
+      },
+      {
+        "id": "10.2.6",
+        "name": "AI not the only factor",
+        "rule": "AI must not be implemented as the only factor in policies and/or decisions concerning people. Prevent racism and avoid actions harming people."
+      },
+      {
+        "id": "10.2.7",
+        "name": "Trained reviewers (proactive, purposeful, authoritative, competent)",
+        "rule": "Appoint trained human reviewers who are 'proaktif, bermatlamat, berautoriti dan kompeten'. Reviewers must check the system's recommendation, not rubber-stamp it. They must have actual meaningful influence (authority and competence) to go against the automated recommendation."
+      }
+    ]
+  },
+  "removedFromPCP": {
+    "noManipulation": {
+      "pcpReference": "PCP §2.25(b) first sentence",
+      "pcpText": "Do not develop, provide, or use AI systems and services to manipulate human decision-making, recognition, or emotion, or to control individuals without their awareness.",
+      "issuedStatus": "DROPPED — not in the issued guideline. Treat as cross-jurisdictional best practice (cf. EU AI Act Article 5, NIST AI RMF GOVERN-2.1)."
     }
-  ],
+  },
   "exampleHighImpactUseCases": [
     "Financial Services — generative AI determining creditworthiness, affecting access to loans/mortgages/credit cards",
     "Healthcare Diagnostics — AI predicting disease likelihood, impacting insurance premiums and eligibility",

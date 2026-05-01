@@ -1,53 +1,68 @@
 {
   "sourceType": "official-aligned",
   "title": "DPIA Thresholds & Triggers",
-  "description": "Criteria for determining when a Data Protection Impact Assessment (DPIA) is mandatory. Aligned with the JPDP DPIA Guideline issued 30 April 2026 (PCP No. 1/2025 substantive content).",
+  "description": "Criteria for determining when a Data Protection Impact Assessment (DPIA) is mandatory. Verified against the JPDP DPIA Guideline issued 30 April 2026 (BM-only). PCP No. 1/2025 quantitative threshold for Automated Decision-Making was REMOVED in the issued guideline — ADM is now a qualitative factor (Q7).",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan Penilaian Impak Perlindungan Data (DPIA), Jabatan Perlindungan Data Peribadi, April 2026",
+    "materialDivergencesFromPCP": [
+      "ADM quantitative threshold removed; ADM moved to qualitative factor 7.6(g)",
+      "Sensitive personal data threshold explicitly extended to include financial information (maklumat kewangan)",
+      "Q2 Systematic Monitoring no longer limited to publicly accessible areas — broader scope including commercial settings and online behaviour",
+      "Commissioner-portal notification (PCP Para 2.18) removed — high residual risk reported to senior management; Commissioner gets on-request access only",
+      "DPIA validity period of 2 years introduced (must be redone, not just reviewed)",
+      "Retention is 2 years from cessation of processing operation (not from DPIA completion)"
+    ]
+  },
   "postDpiaObligations": {
     "implement": "Implement the measures proposed in the DPIA to manage the specific risks identified.",
-    "monitor": "Monitor developments which may impact the processing operations and the risks (e.g., modified purposes, new vulnerabilities).",
-    "retain": "Retain all DPIAs and relevant documents for at least two (2) years and make them available upon request by the Commissioner.",
-    "notify": "If overall residual risk is HIGH, notify the Commissioner via the online portal (https://daftar.pdp.gov.my/) — notification only; Commissioner approval is not required to proceed."
+    "monitor": "Monitor developments which may impact the processing operations and the risks (e.g., modified purposes, new vulnerabilities) per Section 11.3.",
+    "retain": "Retain DPIAs and supporting documentation for at least two (2) years FROM THE CESSATION of the processing operation (i.e., processing duration + 2 years; e.g., a 5-year processing operation requires 7 years of total retention). Records must be produced to the Commissioner upon request (Section 12.2).",
+    "report": "If overall residual risk is HIGH, the findings shall be reported to senior management of the data controller (Section 9). Senior management decides on additional mitigations, resource allocation, and acceptance of residual risk. The issued guideline does NOT impose Commissioner notification for high residual risk."
+  },
+  "dpiaValidity": {
+    "rule": "A completed DPIA is valid for two (2) years from the date of completion (Section 11.2). Upon expiry, a new DPIA shall be conducted — not merely reviewed.",
+    "earlyTriggers": "DPIA must be redone earlier than the 2-year cycle on any of the review triggers (material change to processing; new categories of data; new technology; data breach affecting the operation; regulatory guidance from JPDP)."
   },
   "mandate": {
     "primary": "Processing operations LIKELY TO RESULT IN A HIGH RISK to the protection of personal data.",
     "quantitative_thresholds": [
       {
-        "category": "Sensitive Personal Data (including Biometric)",
+        "category": "Sensitive Personal Data (including Biometric Data and Financial Information)",
         "threshold": "Processing > 10,000 data subjects",
-        "rationale": "High impact due to data sensitivity"
-      },
-      {
-        "category": "Automated Decision-Making (ADM)",
-        "threshold": "Processing > 10,000 data subjects",
-        "rationale": "High impact due to lack of human intervention"
+        "rationale": "High impact due to data sensitivity. Issued Section 7.5 explicitly includes maklumat kewangan (financial information) within the sensitive-data trigger."
       },
       {
         "category": "General Personal Data",
         "threshold": "Processing > 20,000 data subjects",
-        "rationale": "High impact due to scale"
+        "rationale": "High impact due to scale of processing"
       }
-    ]
+    ],
+    "removedFromQuantitative": {
+      "category": "Automated Decision-Making (ADM)",
+      "rationale": "PCP Para 2.10(b) proposed a quantitative threshold of >10,000 ADM data subjects. The issued guideline (Section 7.5) does NOT include this as a quantitative threshold. ADM is instead Qualitative Factor Q7."
+    }
   },
   "qualitative_factors": [
     {
       "id": "Q1",
       "factor": "Legal or Significant Effects",
-      "description": "Noticeable impact on individuals' legal status/rights or their financial status, health, reputation, or access to services."
+      "description": "Potential legal or significant effects on data subjects (e.g., noticeable impact on individuals' legal status/rights, financial status, health, reputation, or access to services)."
     },
     {
       "id": "Q2",
       "factor": "Systematic Monitoring",
-      "description": "Publicly accessible areas (e.g., CCTV with profiling capability)."
+      "description": "Systematic monitoring of data subjects, including but not limited to publicly accessible areas, commercial settings (e.g., retail facial recognition), and online behaviour. The issued guideline broadened this from PCP's 'publicly accessible area' qualifier."
     },
     {
       "id": "Q3",
       "factor": "Innovative Technology",
-      "description": "Use of fingerprint, face recognition, or other emerging technologies for enhanced access control/processing."
+      "description": "Use of fingerprint, face recognition, or other emerging/innovative technologies for enhanced access control or processing."
     },
     {
       "id": "Q4",
       "factor": "Denial or Restriction of Rights",
-      "description": "Using automated decision-making to approve or reject loan/insurance applications or other rights."
+      "description": "Processing that denies or restricts data subject rights (e.g., using automated decision-making to approve or reject loan/insurance applications)."
     },
     {
       "id": "Q5",
@@ -58,6 +73,11 @@
       "id": "Q6",
       "factor": "Targeting Vulnerable Individuals",
       "description": "Processing data of children or other vulnerable subjects to offer services."
+    },
+    {
+      "id": "Q7",
+      "factor": "Automated Decision-Making and Profiling (high risk)",
+      "description": "Automated decision-making and profiling that may give rise to high risk to the data subject. Per issued Section 7.6(g) — moved from PCP's quantitative threshold into qualitative factors. DPO judgment required."
     }
   ],
   "decision_logic": "DPIA is REQUIRED if (a) any Quantitative Threshold is met OR (b) based on the DPO's best judgment, any Qualitative Factor suggests high risk."

@@ -1,7 +1,12 @@
 {
-  "sourceType": "official-aligned",
-  "title": "Biometric Data Measures (under ADMP Guideline)",
-  "description": "Biometric data is sensitive personal data under Section 4 of Act 709 (post-A1727). The ADMP Guideline imposes additional measures whether or not the ADM Restrictions are triggered. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "sourceType": "pcp-derived-pending-issuance",
+  "title": "Biometric Data Measures (PCP-derived, NOT in issued ADMP Guideline)",
+  "description": "PCP No. 3/2025 §2.26-2.32 proposed 6 biometric-data-specific measures and a list of 7 biometric categories. The April 2026 issued ADMP Guideline does NOT contain these measures. Biometric data is referenced only in §8.1 as falling within sensitive personal data under s40. The detailed biometric measures are likely deferred to a separate forthcoming JPDP biometric guideline.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "JPDP ADMP Guideline (April 2026) §8.1 — biometric data is sensitive PD under s40. No separate biometric-specific measures.",
+    "criticalNote": "DO NOT cite the JPDP ADMP Guideline for the 6 measures below. They are PCP-derived best practice retained as analyst reference. Use s17 / s40 statutory obligations as the citation source for any biometric-data finding until JPDP issues a dedicated biometric guideline."
+  },
   "definitionCrossReference": "automated-decisions/definitions.json — biometric data definition and examples",
   "additionalMeasures": [
     {

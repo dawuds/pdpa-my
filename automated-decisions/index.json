@@ -6,7 +6,8 @@
     "issued": "2026-04-30",
     "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",
     "consultationPaper": "PCP No. 3/2025 (20 March 2025 – 19 May 2025)",
-    "verificationNote": "Module reflects the March 2025 consultation paper. Verify against issued PDF when available at https://www.pdp.gov.my/ppdpv1/akta/garis-panduan-ms/."
+    "verified": "2026-05-01",
+    "verificationNote": "Verified against issued JPDP ADMP Guideline (April 2026, BM-only, 731 lines vs PCP 1039 lines). The issued guideline is materially NARROWER than the PCP. Major divergences: (a) the three named ADM Restrictions (Right to Refuse / Information / Human Review) are NOT carried as named rights — replaced with s7 notice + s38 withdrawal anchoring; (b) Right to Human Review and 21-day SLA NOT in issued text; (c) Right to Information softened from 'shall' to 'may' (boleh) with trade-secret/IP carve-out; (d) Biometric data measures (PCP §2.26-2.32) DROPPED entirely; (e) CCTV measures (PCP §2.33-2.35) DROPPED entirely; (f) AI 'no manipulation' safeguard DROPPED; (g) 'explicit consent' (PCP §2.18) downgraded to plain 'persetujuan' for ADMP exception; (h) NEW: ADMP triggers DPIA regardless of subject count (§6.1)."
   },
   "legalBasis": {
     "pdpaSections": ["s4", "s5", "s6", "s17", "s45"],
@@ -22,15 +23,28 @@
     "cctv": "automated-decisions/cctv.json — CCTV use for biometric processing"
   },
   "coreObligations": [
-    "Identify which processing operations constitute automated decision-making or profiling",
-    "Assess whether each operation legally affects or significantly affects data subjects (the regulatory trigger)",
-    "Where triggered: implement Right to Refuse, Right to Information, and Right to Human Review",
-    "Where Exceptions apply: still maintain Right to Information (transparency) — this right is not subject to Exceptions",
-    "For sensitive personal data: only process under explicit consent or public interest, with safeguards",
-    "Children: do not profile or apply automated decision-making for advertising/marketing unless demonstrably in their best interests",
-    "Biometric data: special storage, security, accuracy, transparency, and disposal measures",
-    "AI / Generative AI deemed an ADM tool — additional safeguards (dignity, accuracy, no manipulation, human oversight, no pure-AI policy decisions)"
+    "Identify which processing operations constitute automated decision-making or profiling (Ambang ADMP — §7.1)",
+    "Assess whether each operation produces legal effects (kesan undang-undang) or significantly affects (kesan signifikan) data subjects",
+    "Where triggered: notify data subject of the FACT of ADM/profiling under s7 (mandatory). Explanation of logic, reasons, and likely impact is permissive ('boleh') and may be withheld for confidentiality, trade secret, IP, or proprietary rights",
+    "Engage DPO from earliest stage of any ADMP design (§5.1)",
+    "Conduct DPIA for any ADMP regardless of nature or extent (§6.1) — quantitative threshold is supplementary, not gating",
+    "For sensitive personal data: process only under s40 conditions (explicit consent OR s40(1)(b) grounds — employment law / vital interests / medical / legal proceedings); controllers MAY consider technical and organisational safeguards",
+    "Where consent is the lawful basis: Section 38 withdrawal of consent is the operative right (the issued guideline does not create a standalone Right to Refuse beyond s38)",
+    "AI / Generative AI used for ADMP: 7 best-practice items (Section 10.2.1–10.2.7) — risk assessment before deployment, dignity/accuracy/no-inappropriate-use, AI-disclosure in privacy notice, mitigate over-reliance, operator training, AI not the only factor, trained reviewers"
   ],
+  "removedFromPCP": {
+    "note": "These provisions appeared in PCP No. 3/2025 but did NOT survive into the issued guideline. They are retained in this repo as PCP-derived analyst content, NOT JPDP-issued requirements.",
+    "items": [
+      "Right to Refuse as a standalone named right (s38 withdrawal of consent is the operative mechanism)",
+      "Right to Human Review (no equivalent in issued text; no 21-day SLA)",
+      "Right to Information 'retained even where Exceptions apply' (PCP §2.16) — issued guideline weakens transparency obligation to permissive 'boleh' with carve-outs",
+      "Explicit consent requirement for ADMP exception (PCP §2.18) — downgraded to plain consent",
+      "Biometric data 7 categories and 6 measures (PCP §2.26-2.32) — likely deferred to a separate biometric guideline",
+      "CCTV 8 measures (PCP §2.33-2.35) — likely deferred",
+      "AI 'no manipulation' safeguard (PCP §2.25(b) first sentence)",
+      "Children/minors-in-ADMP discussion — no equivalent in issued text"
+    ]
+  },
   "internationalAlignment": {
     "gdpr": "Article 22 (right not to be subject to a decision based solely on automated processing); Article 4(4) (definition of profiling)",
     "uk": "UK GDPR Article 22 + ICO guidance",

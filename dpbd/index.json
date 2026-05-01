@@ -6,7 +6,8 @@
     "issued": "2026-04-30",
     "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",
     "consultationPaper": "PCP No. 2/2025 (20 March 2025 – 19 May 2025)",
-    "verificationNote": "Module reflects the March 2025 consultation paper. Verify against issued PDF when available at https://www.pdp.gov.my/ppdpv1/akta/garis-panduan-ms/."
+    "verified": "2026-05-01",
+    "verificationNote": "Verified against issued JPDP DPbD Guideline (April 2026, BM-only). Material divergences from PCP have been incorporated: (a) Cavoukian's 7 foundational principles condensed to 4 elements, (b) standalone children's privacy chapter REMOVED — children addressed only in Sections 5.3, 10.2, 11.2 with parental consent and accessible parent/guardian rights mechanisms, (c) prohibition on profiling/ADM of children for advertising/marketing NOT carried into issued text (PCP-only — leading practice), (d) no explicit citation of GDPR Article 25, ISO 27701, Cavoukian framework, or UN Convention, (e) new Section 13 'Amalan Terbaik bagi Tadbir Urus DPbD' (governance best practices), (f) new Lampiran A 18-item Data-Oriented + Process-Oriented checklist."
   },
   "legalBasis": {
     "pdpaSections": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
@@ -19,16 +20,18 @@
     "lifecycleStages": ["design", "development", "deployment", "operation", "decommissioning"]
   },
   "structure": {
-    "principles": "dpbd/principles.json — 7 foundational principles of DPbD",
+    "principles": "dpbd/principles.json — 4 elements of DPbD per Section 4 of the issued Guideline (NOT 7 Cavoukian principles)",
     "pdpPrincipleIntegration": "dpbd/pdp-principle-integration.json — DPbD elements per PDP Principle (General, Notice, Disclosure, Security, Retention, Data Integrity, Access)",
-    "lifecycle": "dpbd/lifecycle.json — design → development → deployment → operation → decommissioning",
-    "childrensPrivacy": "dpbd/childrens-privacy.json — special protections for processing of children's personal data"
+    "lifecycle": "dpbd/lifecycle.json — design → development → deployment → (operation analyst-added) → decommissioning. Note: the issued definition (§3.1) names only design, development, deployment, decommissioning; 'operation' is an analyst-added stage between deployment and decommissioning.",
+    "childrensPrivacy": "dpbd/childrens-privacy.json — children's content in the issued guideline is EMBEDDED in Sections 5.3, 10.2, 11.2 (NOT a stand-alone chapter as in PCP). File preserves PCP-derived analyst guidance separately from issued requirements.",
+    "governance": "dpbd/governance-best-practices.json — Section 13 Tadbir Urus best practices (board expertise/training, senior accountability assignment, performance KPIs, board reporting, DPO meetings)"
   },
-  "internationalAlignment": {
-    "gdpr": "Article 25 (Data protection by design and by default)",
-    "philippines": "NPC Circular 2023-06 (Privacy by Design / Privacy by Default)",
-    "iso": "ISO 27701 A.7.4 (Privacy by design and privacy by default)",
-    "ipcOntario": "7 foundational principles by Dr. Ann Cavoukian (referenced in JPDP guideline)"
+  "internationalAlignmentNote": "The issued JPDP DPbD Guideline does NOT explicitly cite GDPR Article 25, ISO 27701, Cavoukian framework, or UN Convention on the Rights of the Child. References below are analyst-supplied for cross-jurisdictional comparison only.",
+  "internationalAlignmentAnalyst": {
+    "gdpr": "Article 25 (Data protection by design and by default) — analyst reference, not cited in issued JPDP guideline",
+    "philippines": "NPC Circular 2023-06 (Privacy by Design / Privacy by Default) — analyst reference",
+    "iso": "ISO 27701 A.7.4 (Privacy by design and privacy by default) — analyst reference",
+    "ipcOntario": "7 foundational principles by Dr. Ann Cavoukian — historical influence on the field, NOT cited in the issued JPDP guideline"
   },
   "keyOperationalElements": [
     "Senior leadership commitment and accountability",

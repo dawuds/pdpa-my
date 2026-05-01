@@ -1,71 +1,81 @@
 {
-  "sourceType": "official-aligned",
+  "sourceType": "split-issued-vs-analyst",
   "title": "Children's Privacy under DPbD",
-  "description": "Special protections for processing personal data of children, as proposed in the JPDP DPbD Guideline (issued 30 April 2026; PCP No. 2/2025 substantive content). Children merit specific protection due to lower awareness of risks, consequences, safeguards, and rights.",
-  "scope": {
-    "appliesTo": "Providers of products or services directed at, intended for, or likely to be accessed by children — including offline (educational, sports, social clubs, health/social support) and digital (websites, apps, IoT, social media, gaming, entertainment, advocacy).",
-    "scopeNote": "Covers services that a significant number of children use in reality, even if not primarily intended for children."
+  "description": "Children's privacy provisions split between (a) issuedRequirements — what the JPDP DPbD Guideline (April 2026) actually obligates, and (b) analystGuidance — leading-practice content from PCP No. 2/2025 that did NOT survive into the issued text. Mark findings carefully — do not cite the JPDP guideline for obligations the issued text does not contain.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan Mereka Bentuk Berdasarkan Perlindungan Data (DPbD), JPDP April 2026, Sections 5.3 (General), 10.2 (Data Integrity), 11.2 (Access)",
+    "criticalDivergence": "PCP No. 2/2025 had a comprehensive standalone children's privacy chapter [D] (Paras 2.38–2.57) including: scope test (likely accessed by children), best-interests-of-child analysis (UN CRC Article 3), 8 age-verification mechanisms, anti-lockout principle, and a PROHIBITION on profiling/ADM of children for advertising/marketing. Almost none of this is in the issued guideline. Children are addressed in only three short paragraphs."
   },
-  "bestInterestsOfChild": {
-    "principle": "Data controllers must take into account the best interests of children as a primary consideration where any conflict arises. Source: Article 3 of the UN Convention on the Rights of the Child.",
-    "considerations": [
-      "Keep children safe from exploitation (commercial, sexual, abuse)",
-      "Protect and support health and wellbeing",
-      "Protect and support physical, psychological, emotional development",
-      "Protect children's need to develop their own views and identity",
-      "Protect freedom of association and play",
-      "Support the needs of children with disabilities",
-      "Recognise the role of parents in protecting and promoting children's best interests",
-      "Recognise the evolving capacity of the child to form their own view"
+  "issuedRequirements": {
+    "description": "These are the only children-specific requirements in the issued JPDP DPbD Guideline. Use these for findings citing the issued guideline.",
+    "rules": [
+      {
+        "section": "5.3",
+        "principle": "General Principle",
+        "rule": "DPbD on the General Principle requires data controllers to apply privacy considerations to data of subjects under 18 years old, ensuring valid consent is obtained on behalf of such subjects from the parent, guardian, or person with parental responsibility.",
+        "bmQuote": "Pendekatan DPbD dalam pematuhan Prinsip Am juga menghendaki pengawal data untuk menerapkan pertimbangan privasi terhadap data peribadi subjek data yang berumur di bawah lapan belas (18) tahun dengan memastikan persetujuan yang sah diperoleh bagi pihak subjek data tersebut. Persetujuan… hendaklah diperoleh daripada ibu bapa, penjaga atau seseorang yang mempunyai tanggungjawab ibu bapa…"
+      },
+      {
+        "section": "10.2",
+        "principle": "Data Integrity Principle",
+        "rule": "Correction mechanisms must be easily usable by parents/guardians/persons with parental responsibility for under-18 data subjects."
+      },
+      {
+        "section": "11.2",
+        "principle": "Access Principle",
+        "rule": "Access mechanisms must be easily usable by parents/guardians/persons with parental responsibility for under-18 data subjects."
+      }
     ]
   },
-  "ageVerification": {
-    "obligation": "Data controllers must make reasonable efforts to verify they have received consent to process children's personal data; in certain circumstances this entails establishing age verification mechanisms. Approach should be proportionate and risk-based — greater stringency where processing carries higher risk.",
-    "mechanisms": [
-      {
-        "type": "Self-declaration",
-        "note": "Most common but easily bypassed; suitable only for low-risk processing or as one of several techniques."
-      },
-      {
-        "type": "Credit card verification",
-        "note": "Used by e-commerce sites for adult products. Cannot ascertain card user is owner; minimum credit card age varies by country."
-      },
-      {
-        "type": "Biometrics (e.g., facial recognition)",
-        "note": "AI-powered. Accuracy issues, privacy concerns due to sensitive data use, risk of profiling."
-      },
-      {
-        "type": "Inferential age verification",
-        "note": "Browsing history, maturity questionnaires, online content/purchase analysis."
-      },
-      {
-        "type": "Offline verification",
-        "note": "Scratch cards or in-situ ID checks at retail outlets."
-      },
-      {
-        "type": "Verification of parental consent",
-        "note": "Traditional ID document checks; for higher-risk: proof of ID; for lower-risk: confirmation email."
-      },
-      {
-        "type": "Vouching",
-        "note": "Third party (not parent) confirms child's age."
-      },
-      {
-        "type": "Digital ID",
-        "note": "State-issued tools (China, Canada, Australia, EU digital identity wallet)."
-      }
-    ],
-    "antiLockoutPrinciple": "Compliance does not justify locking children out of services or providing inferior two-tier offerings. Doing so risks driving children to lie about their age and access services without child-appropriate protections."
-  },
-  "dpbdElementsForChildren": {
-    "language": "Clear, concise, child-friendly language explaining what is done with their personal data.",
-    "accessibility": "Information in obvious, easy-to-find places. Not in tiny writing. Not designed to nudge acceptance. Consider device used (phone, computer, IoT, toys), use of cartoons/videos, layered/hover/pop-up notices.",
-    "context": "Not only at sign-up. Just-in-time notifications when data is shared (e.g., before posting, before changing default privacy settings).",
-    "parentalDashboard": "Where appropriate, provide parents with overall view of activity and settings.",
-    "rightsExercise": "Dedicated, clear, child-friendly user flows. For automated tools handling DSARs, design for circumstances requiring individual (non-automated) assessment for child subjects."
-  },
-  "prohibitionOnProfiling": {
-    "rule": "Data controllers must not profile children, engage in automated decision-making concerning children, or use their personal data for advertising/marketing purposes — unless they can clearly demonstrate how and why it is in the best interests of children to do so.",
-    "crossReference": "automated-decisions/index.json — ADMP module covers the general rule on automated decision-making and profiling; this section adds the children-specific prohibition."
+  "analystGuidance": {
+    "description": "Content below is from PCP No. 2/2025 (March 2025 consultation paper) that did NOT survive into the issued April 2026 guideline. Retained here as leading practice / cross-jurisdictional alignment, but MUST NOT be cited as JPDP-issued requirements. May reappear in a future Tata Amalan / Code of Practice for children's data — monitor JPDP announcements.",
+    "scope": {
+      "appliesTo": "(PCP-derived) Providers of products or services directed at, intended for, or likely to be accessed by children — including offline (educational, sports, social clubs, health/social support) and digital (websites, apps, IoT, social media, gaming, entertainment, advocacy).",
+      "scopeNote": "Covers services that a significant number of children use in reality, even if not primarily intended for children.",
+      "status": "PCP-only; not in issued JPDP guideline"
+    },
+    "bestInterestsOfChild": {
+      "principle": "(PCP-derived) Data controllers must take into account the best interests of children as a primary consideration where any conflict arises. Source: Article 3 of the UN Convention on the Rights of the Child.",
+      "considerations": [
+        "Keep children safe from exploitation (commercial, sexual, abuse)",
+        "Protect and support health and wellbeing",
+        "Protect and support physical, psychological, emotional development",
+        "Protect children's need to develop their own views and identity",
+        "Protect freedom of association and play",
+        "Support the needs of children with disabilities",
+        "Recognise the role of parents in protecting and promoting children's best interests",
+        "Recognise the evolving capacity of the child to form their own view"
+      ],
+      "status": "PCP-only; not in issued JPDP guideline. UN CRC Article 3 is not cited in the issued guideline."
+    },
+    "ageVerification": {
+      "obligation": "(PCP-derived) Data controllers should make reasonable efforts to verify they have received consent to process children's personal data; in higher-risk circumstances this entails establishing age verification mechanisms.",
+      "mechanisms": [
+        { "type": "Self-declaration", "note": "Most common but easily bypassed; suitable only for low-risk processing." },
+        { "type": "Credit card verification", "note": "Used by e-commerce sites for adult products. Cannot ascertain card user is owner; minimum credit card age varies by country." },
+        { "type": "Biometrics (e.g., facial recognition)", "note": "AI-powered. Accuracy issues, privacy concerns due to sensitive data use, risk of profiling." },
+        { "type": "Inferential age verification", "note": "Browsing history, maturity questionnaires, online content/purchase analysis." },
+        { "type": "Offline verification", "note": "Scratch cards or in-situ ID checks at retail outlets." },
+        { "type": "Verification of parental consent", "note": "Traditional ID document checks; for higher-risk: proof of ID; for lower-risk: confirmation email." },
+        { "type": "Vouching", "note": "Third party (not parent) confirms child's age." },
+        { "type": "Digital ID", "note": "State-issued tools (China, Canada, Australia, EU digital identity wallet)." }
+      ],
+      "antiLockoutPrinciple": "(PCP-derived) Compliance does not justify locking children out of services or providing inferior two-tier offerings. Doing so risks driving children to lie about their age and access services without child-appropriate protections.",
+      "status": "PCP-only; not in issued JPDP guideline."
+    },
+    "dpbdElementsForChildren": {
+      "language": "Clear, concise, child-friendly language explaining what is done with their personal data.",
+      "accessibility": "Information in obvious, easy-to-find places. Not in tiny writing. Not designed to nudge acceptance.",
+      "context": "Just-in-time notifications when data is shared (e.g., before posting, before changing default privacy settings).",
+      "parentalDashboard": "Where appropriate, provide parents with overall view of activity and settings.",
+      "rightsExercise": "Dedicated, clear, child-friendly user flows.",
+      "status": "PCP-derived leading practice. Not all elements are in the issued JPDP guideline."
+    },
+    "prohibitionOnProfiling": {
+      "rule": "(PCP-derived, NOT in issued guideline) Data controllers must not profile children, engage in automated decision-making concerning children, or use their personal data for advertising/marketing purposes — unless they can clearly demonstrate how and why it is in the best interests of children to do so.",
+      "criticalNote": "This is a load-bearing rule that did NOT survive into the April 2026 issued guideline. The April 2026 issued ADMP Guideline also does not address children. Treat as cross-jurisdictional best practice (GDPR Recital 38; UK ICO Children's Code; EU DSA Article 28). DO NOT cite the JPDP DPbD or ADMP Guidelines for this prohibition.",
+      "status": "PCP-only; not in issued JPDP guideline."
+    }
   }
 }

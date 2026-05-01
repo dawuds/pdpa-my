@@ -1,7 +1,13 @@
 {
   "sourceType": "official-aligned",
-  "title": "ADMP Regulatory Trigger",
-  "description": "ADMP regulation only applies where the use of automated decision-making (or profiling) results in legal effects concerning the data subject or significantly affects the data subject. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "title": "ADMP Regulatory Trigger (Ambang ADMP)",
+  "description": "ADMP regulation only applies where the use of automated decision-making (or profiling) results in legal effects (kesan undang-undang) concerning the data subject or significantly affects (kesan signifikan) the data subject. Verified against the JPDP ADMP Guideline (April 2026) Section 7 'Ambang ADMP'.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan ADMP, JPDP April 2026, Section 7 (Ambang ADMP)"
+  },
+  "dpoEngagement": "DPO must be involved at the earliest stage of any ADMP design (§5.1). The DPO's involvement is not optional and not deferred to fieldwork.",
+  "dpiaTrigger": "ADMP triggers a mandatory DPIA REGARDLESS OF NATURE OR EXTENT of the ADMP processing (§6.1: 'tanpa mengambil kira sifat atau tahap penggunaan ADMP'). The dpia/thresholds.json quantitative threshold (>10,000 subjects) is supplementary, NOT gating, where ADMP is in scope.",
   "trigger": {
     "rule": "Automated decision-making and profiling are regulated only if their use results in legal effects concerning the data subject OR significantly affects the data subject.",
     "twoConditions": [
@@ -44,10 +50,11 @@
   },
   "scopingFlow": [
     "1. Identify all processing operations involving automated decisions or profiling",
-    "2. For each, assess whether it is solely automated (no human in the loop) — if a human only inputs data and the system decides, it remains 'solely automated'",
-    "3. For each solely-automated operation, assess whether it produces legal effects OR significantly affects the data subject",
-    "4. If yes to both: ADM Restrictions apply (Right to Refuse, Right to Information, Right to Human Review)",
-    "5. If only Right to Information applies under an Exception, transparency is still mandatory",
-    "6. Cross-check DPIA threshold — ADM processing involving >10,000 subjects also triggers a mandatory DPIA"
+    "2. For each, assess whether it is fully or partially automated (issued §3.2 confirms partial automation is in scope; if a human only inputs data and the system decides, it remains in scope)",
+    "3. For each in-scope operation, assess whether it produces legal effects (kesan undang-undang) OR significantly affects (kesan signifikan) the data subject",
+    "4. If yes: ADMP Threshold (Ambang ADMP) is met — apply Section 7 notice obligation (mandatory: notify data subject of the FACT of ADMP) and Section 38 withdrawal of consent (where consent is the basis)",
+    "5. Provide explanation of logic/reasons/impact (§9.4) — permissive ('boleh'); may withhold confidential information, trade secrets, IP, or proprietary rights",
+    "6. DPIA is mandatory regardless of nature or extent of ADMP (§6.1) — the >10,000 subject threshold in dpia/thresholds.json is supplementary, not gating",
+    "7. Engage DPO from the earliest stage of design (§5.1)"
   ]
 }

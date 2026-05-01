@@ -3,26 +3,34 @@
   "title": "ADMP Exceptions and Exemptions",
   "description": "Exceptions disapply Right to Refuse and Right to Human Review (but not Right to Information). Exemptions disapply all ADM Restrictions. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
   "exceptions": {
-    "scope": "Exceptions disapply the Right to Refuse and Right to Human Review. The Right to Information is RETAINED — transparency obligations remain.",
+    "scope": "Exceptions ('Kekecualian', §9.9 of issued guideline) disapply the rights that are not codified in the issued guideline (Right to Refuse, Right to Human Review). The Section 7 NOTICE obligation that ADMP is occurring remains mandatory; explanation of logic is permissive ('boleh') under §9.4 with trade-secret/IP carve-outs.",
+    "guidelineStatus": {
+      "verified": "2026-05-01",
+      "issuedReference": "Garis Panduan ADMP, JPDP April 2026, Section 9.9"
+    },
     "list": [
       {
         "id": "EX-1",
         "name": "Contract necessity",
-        "rule": "Where the processing is necessary for entering into, or performance of, a contract between the data subject and a data controller."
+        "rule": "Where the processing is necessary for entering into, or performance of, a contract between the data subject and a data controller (§9.9.1)."
       },
       {
         "id": "EX-2",
         "name": "Legal compliance",
-        "rule": "Where the processing is necessary for compliance with laws."
+        "rule": "Where the processing is necessary for compliance with laws (§9.9.2)."
       },
       {
         "id": "EX-3",
-        "name": "Explicit consent",
-        "rule": "Where the data subject has given prior explicit consent.",
-        "explicitConsentRequirement": "Consent must be clear, specific, and require a direct action from the data subject (e.g., checking a tick box, signing a document)."
+        "name": "Consent",
+        "rule": "Where the data subject has given consent (§9.9.3 — 'subjek data telah memberikan persetujuan').",
+        "consentDowngradeNote": "PCP §2.18 proposed 'prior explicit consent' (persetujuan secara nyata). The issued guideline uses plain 'persetujuan' (consent) for this Exception. Explicit consent is required only for sensitive PD under s40(1)(a). The PCP's heightened consent standard for the general ADMP Exception was NOT adopted in the issued guideline."
       }
-    ],
-    "sensitiveDataAdditionalRule": "Automated decision-making involving sensitive personal data is only allowed where (a) explicit consent OR processing necessary for public interest; AND (b) suitable safeguards in place."
+    ]
+  },
+  "sensitiveDataRule": {
+    "rule": "Automated decision-making involving sensitive personal data is governed by s40 of Act 709 — process only where (a) explicit consent (s40(1)(a) 'persetujuan secara nyata') OR (b) one of the s40(1)(b) conditions applies (employment law obligation / vital interests / medical purposes / legal proceedings or advice).",
+    "additionalSafeguards": "Per issued §8.2, controllers 'boleh mempertimbangkan' (may consider) implementing technical measures (encryption, access controls) and organisational measures. The issued guideline frames safeguards as permissive, not mandatory. PCP §2.17 framed safeguards as mandatory.",
+    "deviationFromPCP": "PCP §2.17(a) proposed 'explicit consent OR public interest'; issued guideline replaces 'public interest' with the s40(1)(b) statutory list."
   },
   "exemptions": {
     "scope": "Exemptions disapply ALL ADM Restrictions (including the Right to Information). Based on Section 45 of Act 709.",
@@ -60,10 +68,9 @@
     ]
   },
   "decisionLogic": [
-    "Step 1: Does an Exemption apply (Section 45-derived)? → If YES: no ADM Restrictions apply.",
-    "Step 2: Does an Exception apply (contract / legal compliance / explicit consent)? → If YES: Right to Refuse and Right to Human Review do not apply BUT Right to Information still applies.",
-    "Step 3: Otherwise: all three ADM Restrictions apply.",
-    "Step 4: For sensitive personal data: even with an Exception, processing is only allowed under explicit consent or public interest, with suitable safeguards.",
-    "Step 5: For children: profiling and ADM for advertising/marketing is prohibited unless demonstrably in the child's best interests — see dpbd/childrens-privacy.json."
+    "Step 1: Does an Exemption apply (Section 45-derived)? → If YES: no ADMP Guideline obligations apply.",
+    "Step 2: Does an Exception apply (contract / legal compliance / consent)? → Note: (a) the issued guideline does not codify a Right to Refuse or Right to Human Review for those to be 'disapplied' under Exceptions — the PCP framework was replaced with s7 notice + s38 withdrawal; (b) §9.9.3 uses plain 'persetujuan' (consent), NOT 'persetujuan secara nyata' (explicit consent).",
+    "Step 3: For sensitive personal data: process only under s40 conditions (explicit consent under s40(1)(a) or s40(1)(b) grounds: employment law / vital interests / medical / legal proceedings).",
+    "Step 4: Children — the issued ADMP Guideline does NOT address children. Cross-reference dpbd/childrens-privacy.json — but note the PCP profiling/ADM prohibition for children was NOT carried into the DPbD issued guideline either. Treat as cross-jurisdictional best practice pending future Tata Amalan / Code of Practice."
   ]
 }

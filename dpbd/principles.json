@@ -1,70 +1,42 @@
 {
   "sourceType": "official-aligned",
-  "title": "7 Foundational Principles of Data Protection by Design",
-  "description": "The seven foundational DPbD principles referenced by the JPDP DPbD Guideline (issued 30 April 2026). Originally articulated by Dr. Ann Cavoukian (Information and Privacy Commissioner of Ontario). Provide a guiding framework for operationalising DPbD; not exhaustive.",
-  "principles": [
+  "title": "4 Elements of Data Protection by Design (per JPDP DPbD Guideline, April 2026)",
+  "description": "The four DPbD elements adopted by JPDP in Section 4 of the issued DPbD Guideline. The issued guideline does NOT adopt Cavoukian's 7 foundational principles framework — this is a material departure from PCP No. 2/2025 and from common analyst frameworks. Privacy-as-default is folded into Element 1 (Proactiveness); Privacy-Embedded-in-Design and Positive-Sum disappear as named principles.",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Garis Panduan Mereka Bentuk Berdasarkan Perlindungan Data (DPbD), Jabatan Perlindungan Data Peribadi, April 2026, Section 4",
+    "structuralDivergenceFromPCP": "PCP No. 2/2025 listed seven foundational principles (Cavoukian framework). The issued guideline condenses to four elements. Audit narratives, control libraries, and policy documents that reference 'the 7 foundational principles' should be updated to reference these 4 elements."
+  },
+  "elements": [
     {
-      "id": "P1",
-      "name": "Proactive not reactive; preventative not remedial",
-      "summary": "Anticipate and prevent privacy risks before they occur; build processes to prevent breaches rather than reacting after the fact.",
+      "id": "E1",
+      "name": "Sifat Proaktif (Proactiveness)",
+      "summary": "Anticipate and prevent privacy risks before they occur. Encompasses both proactive prevention (formerly Cavoukian P1) AND privacy-as-default (formerly Cavoukian P2 — folded in here).",
+      "subElements": {
+        "4.2.1": "Proactive prevention — privacy considerations integrated at the earliest possible stage of any processing design.",
+        "4.2.2": "Privacy as the default setting — most privacy-protective configuration is the default; data subjects need not act to protect their privacy."
+      },
       "operationalisation": [
-        "Senior leadership commitment to a strong proactive privacy programme",
-        "Director-level training and personal data protection expertise on the board",
+        "Senior leadership commitment to a strong proactive privacy programme (Section 13 governance practices)",
         "Adequate resourcing for the privacy programme",
         "Personal data protection compliance in senior management performance evaluation",
         "Regular audits and DPIAs reported to the board",
-        "Culture and environment where stakeholders can suggest improvements",
-        "Systematic methods to recognise poor designs and correct negative impacts before they occur"
+        "Default to no collection unless a specific compelling purpose is defined",
+        "Opt-in consent for non-essential processing",
+        "Pre-tick only strictly-necessary cookies",
+        "Most privacy-protective default settings across system configuration"
       ]
     },
     {
-      "id": "P2",
-      "name": "Privacy as the default setting",
-      "summary": "Personal data is automatically protected in any system. Even if the individual does nothing, their privacy remains secure — protection is built in, by default.",
+      "id": "E2",
+      "name": "Perlindungan Hujung-ke-hujung (End-to-end Protection)",
+      "summary": "Ensure data security throughout the entire processing lifecycle — secure retention and secure destruction at end of process. No gaps in protection or accountability.",
       "operationalisation": [
-        "Begin with no collection of personal data unless a specific compelling purpose is defined",
-        "Purpose specification: communicate purposes at or before collection, clear/limited/relevant",
-        "Collection limitation: lawful and limited to what is necessary",
-        "Data minimisation: collection kept to a strict minimum; default to non-identifiable interactions",
-        "Use, retention, disclosure limitation: only for identified/consented purposes; retain only as long as necessary",
-        "Adopt opt-in consent systems",
-        "Where need is unclear: presumption of privacy and precautionary principle apply (most privacy-protective default)",
-        "Technological/policy/procedural barriers to data linkage; isolate data processed for different purposes"
-      ]
-    },
-    {
-      "id": "P3",
-      "name": "Privacy embedded into design",
-      "summary": "Integrate privacy into technologies, operations, and information architectures in a holistic, integrative, and creative way.",
-      "operationalisation": [
-        "Systemic, principled approach using established standards and frameworks",
-        "Allow for external reviews and audits",
-        "Apply PDP Principles consistently throughout design and operation",
-        "Conduct detailed DPIAs documenting risks and mitigation",
-        "Personal data protections that minimise risk and cannot be easily compromised through use, misconfiguration, or error"
-      ]
-    },
-    {
-      "id": "P4",
-      "name": "Full functionality – positive sum, not zero sum",
-      "summary": "Accommodate all legitimate interests in a manner that benefits all stakeholders — privacy can coexist with other legitimate business interests; reject false trade-offs.",
-      "operationalisation": [
-        "Acknowledge that multiple legitimate business interests can coexist",
-        "Engage in communication, consultation, and collaboration",
-        "Pursue innovative solutions to achieve multiple functionalities",
-        "Embed privacy without impairing full functionality",
-        "Document and articulate all interests, objectives, desired functions, and metrics"
-      ]
-    },
-    {
-      "id": "P5",
-      "name": "End-to-end security – full lifecycle protection",
-      "summary": "Ensure data security throughout the entire lifecycle: securely retained and securely destroyed at end of process. No gaps in protection or accountability.",
-      "operationalisation": [
-        "TLS for data in transit; AES-256 (or equivalent) for data at rest",
+        "Encryption in transit (TLS 1.2+) and at rest (AES-256 or equivalent)",
         "Encryption keys managed in a dedicated key management system",
-        "Automated, encrypted backups with disaster recovery plan",
         "MFA for staff access; role-based access control with least privilege",
+        "Pseudonymisation as soon as direct identifiability no longer needed",
+        "Automated, encrypted backups with disaster recovery plan",
         "Anonymisation and aggregation for analytics where possible",
         "Endpoint protection; staff training on privacy and security",
         "Clear retention policies with secure deletion methods at end of retention",
@@ -72,13 +44,14 @@
       ]
     },
     {
-      "id": "P6",
-      "name": "Visibility and transparency – keep it open",
-      "summary": "Demonstrate accountability for personal data processing. Handle data per stated promises, subject to independent verification.",
+      "id": "E3",
+      "name": "Ketelusan (Transparency)",
+      "summary": "Demonstrate accountability for personal data processing. Handle data per stated promises, subject to verification. Encompasses both visibility/openness and accountability.",
       "operationalisation": [
-        "Accountability: documented privacy-related policies and procedures, assigned to a specified individual; equivalent protection ensured for third-party transfers",
-        "Openness: information about data management policies and practices made readily available",
-        "Compliance: complaint and redress mechanisms established and clearly communicated",
+        "Documented privacy-related policies and procedures, assigned to a specified individual",
+        "Information about data management policies and practices made readily available",
+        "Equivalent protection ensured for third-party transfers (contractual or other)",
+        "Complaint and redress mechanisms established and clearly communicated",
         "Just-in-time notices when data is collected (e.g., account creation, order placement)",
         "Layered notices: key points emphasised, link to detailed information",
         "Pop-up notices for automatically collected data (cookies, beacons, tracking scripts)",
@@ -86,18 +59,25 @@
       ]
     },
     {
-      "id": "P7",
-      "name": "Respect for user privacy – keep it user-centric",
+      "id": "E4",
+      "name": "Berpusatkan Pengguna (User-centricity)",
       "summary": "Keep the interests of the individual paramount through strong privacy defaults, appropriate notice, and empowering user-friendly options.",
       "operationalisation": [
         "Consent: free and specific; quality of consent scales with data sensitivity; withdrawable",
-        "Accuracy: data accurate, complete, up-to-date as necessary",
-        "Access: data subjects can access, challenge accuracy, and amend their data",
-        "Compliance: complaint and redress mechanisms with appeal escalation",
+        "Personal data accurate, complete, up-to-date as necessary",
+        "Data subjects can access, challenge accuracy, and amend their data",
+        "Complaint and redress mechanisms with appeal escalation",
         "Privacy dashboard with clear options (toggle data points, customise preferences)",
         "Separate consent for different processing purposes",
         "In-app/timely notifications about policy changes before they take effect"
       ]
     }
-  ]
+  ],
+  "principlesNotAdoptedFromCavoukian": {
+    "note": "The following Cavoukian foundational principles are NOT named in the issued JPDP guideline. They remain useful analyst frameworks but should not be cited as JPDP-issued requirements.",
+    "principles": [
+      "P3: Privacy embedded into design (folded into E1 Proactiveness implicitly)",
+      "P4: Full functionality – positive sum, not zero sum (no equivalent in issued guideline)"
+    ]
+  }
 }

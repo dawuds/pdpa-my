@@ -1,7 +1,12 @@
 {
-  "sourceType": "official-aligned",
-  "title": "CCTV — Use for Biometric Processing under ADMP",
-  "description": "Where CCTV is used to derive biometric data or to process biometric data for automated decision-making and profiling, the ADMP Guideline requires specific measures. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "sourceType": "pcp-derived-pending-issuance",
+  "title": "CCTV Measures for Biometric Processing (PCP-derived, NOT in issued ADMP Guideline)",
+  "description": "PCP No. 3/2025 §2.33-2.35 proposed 8 CCTV-specific measures. The April 2026 issued ADMP Guideline does NOT contain CCTV measures. The 8 measures below are retained as analyst reference and cross-jurisdictional best practice (cf. UK ICO CCTV Code, Singapore PDPC Guide on CCTV).",
+  "guidelineStatus": {
+    "verified": "2026-05-01",
+    "issuedReference": "Not addressed in JPDP ADMP Guideline (April 2026). Likely deferred to a separate biometric/CCTV guideline.",
+    "criticalNote": "DO NOT cite the JPDP ADMP Guideline for these measures. Use s7 (notice — CCTV signage), s9 (security), s10 (retention) for any CCTV finding under PDPA, and treat the specific measures as best practice."
+  },
   "measures": [
     {
       "id": "CCTV-1",

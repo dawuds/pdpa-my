@@ -1,6 +1,6 @@
 # PDPA-MY — Personal Data Protection Act 2010
 
-**Last updated:** 2026-04-30
+**Last updated:** 2026-05-01 (JPDP April 2026 Guidelines verified against issued PDFs)
 
 ## What This Is
 Structured compliance database for Malaysia's PDPA (Act 709) including A1727 amendments and the **JPDP DPIA, DPbD, and ADMP Guidelines issued 30 April 2026**. SPA explorer with JSON data layers. **Tier 1 Focus Area** in the GRC portfolio.
@@ -38,9 +38,13 @@ Open `index.html` in a browser. Run `node validate.js` to check data integrity.
 - Controls overlap with NACSA: 14 direct overlap, 12 supplementary (see `nacsa/cross-references/framework-mappings.json`)
 - **DPO requirement** under A1727 — separate from CISO under Act 854
 - AWP artifacts (Excel workbook, generators, report template, evidence folder structure) are in Tech-Audit/Regulatory/PDPA/ (private repo). This repo contains compliance data only.
-- **JPDP April 2026 Guidelines** — DPIA, DPbD, and ADMP Guidelines issued by Commissioner Shariffah Rashidah Syed Othman on 30 April 2026. Substantive content reflects PCP Nos. 1, 2, and 3 of 2025; verify against issued PDFs at https://www.pdp.gov.my/ppdpv1/akta/garis-panduan-ms/ when available. Commissioner has signalled education-first enforcement posture; compounds up to RM100,000 for non-compliance.
-- **ADMP regulatory trigger** — automated decision-making and profiling are regulated only where the use produces legal effects concerning the data subject OR significantly affects them. AI/Generative AI use is expressly identified as an ADM tool when it has those effects.
-- **DPbD prohibition for children** — no profiling or automated decision-making concerning children for advertising/marketing unless demonstrably in their best interests.
+- **JPDP April 2026 Guidelines (VERIFIED 2026-05-01 against issued PDFs)** — DPIA, DPbD, and ADMP Guidelines issued by Commissioner Shariffah Rashidah Syed Othman on 30 April 2026, all in Bahasa Malaysia only. The issued versions DIVERGE from PCP Nos. 1-3 of 2025 in several material respects:
+  - **DPIA**: ADM removed from quantitative threshold (now Q7 qualitative); sensitive-data threshold extended to financial information; Commissioner-portal notification REMOVED (reporting to senior management only); new 2-year DPIA validity period; retention from cessation of processing.
+  - **DPbD**: 7 Cavoukian principles condensed to **4 elements** (Sifat Proaktif / Perlindungan Hujung-ke-hujung / Ketelusan / Berpusatkan Pengguna). Standalone children's privacy chapter REMOVED — only §5.3 parental consent, §10.2 accessible parent/guardian correction, §11.2 accessible parent/guardian access remain. PCP §2.57 prohibition on profiling/ADM of children for advertising/marketing was NOT carried into the issued text — treat as cross-jurisdictional best practice. New Section 13 governance practices.
+  - **ADMP**: Three named ADM Restrictions (Refuse/Information/Human Review) NOT carried — anchored in s7 notice + s38 withdrawal. Right to Human Review and 21-day SLA dropped. Right to Information softened from 'shall' to 'may' (boleh) with trade-secret/IP carve-out. Biometric and CCTV measures DROPPED entirely (likely separate guideline forthcoming). Explicit consent downgraded to plain consent for §9.9.3 Exception. New: §6.1 mandates DPIA for any in-scope ADMP regardless of subject count; §5.1 mandates DPO engagement from earliest design.
+  - Education-first enforcement posture; compounds up to RM100,000 for non-compliance.
+- **ADMP regulatory trigger (Ambang ADMP)** — regulated only where ADMP produces legal effects (kesan undang-undang) OR significantly affects (kesan signifikan) the data subject. Fully or partially automated processing in scope.
+- **AI as ADMP tool** — where AI is used for processing personal data involving ADMP, the §10.2 7 best practices apply (permissive — 'boleh menerapkan'). PCP §2.25(b) 'no manipulation' safeguard was DROPPED.
 
 ## Validation
 ```bash

@@ -6,7 +6,15 @@
     "issued": "2026-04-30",
     "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",
     "consultationPaper": "PCP No. 1/2025 (20 March 2025 – 19 May 2025)",
-    "verificationNote": "Methodology and thresholds reflect the March 2025 consultation paper. Substantive verification against the issued PDF (https://www.pdp.gov.my/ppdpv1/akta/garis-panduan-ms/) pending. Update if issued text materially diverges from PCP."
+    "verified": "2026-05-01",
+    "verificationNote": "Verified against issued JPDP DPIA Guideline (April 2026, BM-only). DEICA 5-step methodology retained verbatim. Material divergences from PCP have been incorporated: (a) ADM quantitative threshold removed (now Q7 qualitative), (b) sensitive-data threshold extended to financial information, (c) Q2 systematic monitoring broadened beyond public spaces, (d) Commissioner-portal notification removed (reporting to senior management only), (e) new 2-year DPIA validity period requiring re-execution, (f) retention extended to 2 years from cessation of processing."
+  },
+  "roles": {
+    "dataController": "Has the absolute obligation to conduct DPIA where the regulatory trigger is met (Section 6.1, issued guideline).",
+    "dataProcessor": "Must provide reasonable assistance to the data controller (Section 6.2). Not the obligated party.",
+    "dpo": "Provides advisory support; reviews DPIA outputs; ensures DPO sign-off for completed DPIAs.",
+    "dpiaLeadImplementer": "Ketua Pelaksana DPIA — explicit role introduced by the issued guideline (Section 6.5–6.6) to lead day-to-day execution of the DPIA. Distinct from DPO. Optional for smaller organisations.",
+    "seniorManagement": "Holds ultimate accountability for DPIA execution and outcomes (Section 6.3 — 'Tanggungjawab mutlak'). Reviews high residual risk findings and decides on additional mitigations and acceptance."
   },
   "legalBasis": {
     "pdpaSections": ["s6", "s9", "s12A", "s12B", "s129", "s43A"],
@@ -74,14 +82,14 @@
       "name": "Assess",
       "description": "Assess the overall residual risk level (DEICA - Step 5)",
       "steps": [
-        "Evaluate the likelihood and severity of risks after controls (1-5 scale)",
-        "Map residual risks to the Risk Matrix (Low, Medium, High)",
+        "Evaluate the likelihood and severity of risks after controls using the issued 3x3 risk matrix (Likelihood 1-3 x Impact 1-3 = Low 1-2 / Medium 3-4 / High 6-9)",
         "Determine if the residual risk is acceptable to the organization",
-        "Notify the Commissioner (JPDP) if residual risk remains HIGH (Proposed requirement)",
+        "Where residual risk is HIGH, report findings to senior management of the data controller (Section 9, issued guideline). Senior management decides on additional mitigations, resource allocation, and acceptance.",
         "Obtain sign-off from the Data Protection Officer (DPO)"
       ],
       "pdpaReferences": ["s12A", "s12B"],
-      "outputs": ["Final DPIA Report", "DPO Sign-off", "Residual Risk Assessment"]
+      "outputs": ["Final DPIA Report", "DPO Sign-off", "Senior Management Report (where HIGH residual risk)", "Residual Risk Assessment"],
+      "note": "PCP Para 2.18 proposed Commissioner notification via online portal (https://daftar.pdp.gov.my/) for HIGH residual risk. The issued guideline does NOT impose this. Records must be produced to the Commissioner upon request only (Section 12.2)."
     }
   ],
   "reviewTriggers": [
@@ -90,6 +98,6 @@
     "New technology or processing method introduced",
     "Data breach or security incident (s12B)",
     "Regulatory guidance or enforcement action by JPDP",
-    "At least every two (2) years (Proposed retention requirement)"
+    "Mandatory re-execution upon DPIA's two-year validity expiry (Section 11.2 — DPIA must be redone, not merely reviewed)"
   ]
 }
