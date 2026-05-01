@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "version": "3.0.0",
-    "lastUpdated": "2026-03-31",
-    "alignment": "Act 709 / Act A1727",
+    "version": "3.1.0",
+    "lastUpdated": "2026-04-30",
+    "alignment": "Act 709 / Act A1727 + JPDP Guidelines (DPIA, DPbD, ADMP issued 30 April 2026)",
     "sourceType": "official-paraphrase",
-    "controlCount": 49,
-    "note": "v3.0 adds context fields to all controls: riskTier, controlObjective, whatGoodLooksLike, keyRiskIfAbsent, samplingGuidance. These fields support audit work programme integration and provide auditors with control-level testing guidance."
+    "controlCount": 57,
+    "note": "v3.1 adds 2 new domains (data-protection-by-design, automated-decisions-profiling) and 8 new controls reflecting the JPDP DPbD and ADMP Guidelines issued 30 April 2026. v3.0 introduced context fields (riskTier, controlObjective, whatGoodLooksLike, keyRiskIfAbsent, samplingGuidance) supporting audit work programme integration."
   },
   "_source": {
     "sourceDocument": "Personal Data Protection Act 2010 (Act 709) + Amendment A1727",
@@ -63,6 +63,16 @@
       "slug": "registration-compliance",
       "name": "Registration Compliance",
       "description": "Class of Data Users registration and fees."
+    },
+    {
+      "slug": "data-protection-by-design",
+      "name": "Data Protection by Design",
+      "description": "Embedding data protection into the entire lifecycle of a processing activity (design, development, deployment, operation, decommissioning) per the JPDP DPbD Guideline."
+    },
+    {
+      "slug": "automated-decisions-profiling",
+      "name": "Automated Decision-Making and Profiling",
+      "description": "Regulation of solely-automated decisions and profiling that legally affect or significantly affect data subjects, including AI/Generative AI use, biometric data, and CCTV-based biometric processing per the JPDP ADMP Guideline."
     }
   ],
   "controls": [
@@ -3005,6 +3015,297 @@
       "whatGoodLooksLike": "JPDP Commissioner publications, press releases, and enforcement announcements are reviewed regularly. Parliament Hansard and Gazette are monitored for PDPA amendments and subsidiary legislation. Impact of each regulatory development on organizational policies, procedures, and controls is assessed. Required compliance changes are implemented within appropriate timeframes. Management and board are briefed on material regulatory developments.",
       "keyRiskIfAbsent": "Regulatory changes may go undetected, leaving the organization non-compliant. New Commissioner guidelines may impose additional requirements that are not implemented. Enforcement actions against other organizations may signal Commissioner priorities that the organization fails to address. Management is uninformed about the evolving regulatory landscape.",
       "samplingGuidance": "Review the regulatory monitoring log for the last 12 months. Verify key regulatory developments were captured (Commissioner guidelines, A1727 implementation guidance, enforcement actions). Sample 3 regulatory developments and verify impact assessment was conducted and any required changes implemented. Review management briefing records on material developments."
+    },
+    {
+      "slug": "dpbd-lifecycle-integration",
+      "name": "DPbD Lifecycle Integration",
+      "domain": "data-protection-by-design",
+      "type": "preventive",
+      "layer": "process",
+      "description": "Embed data protection considerations across the full processing lifecycle — design, development, deployment, operation, and decommissioning — so privacy is built in rather than retrofitted. Aligned with the JPDP DPbD Guideline (issued 30 April 2026) and the 7 foundational DPbD principles.",
+      "sections": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+      "keyActivities": [
+        "Adopt a DPbD policy/standard signed off by senior management",
+        "Embed a DPbD checklist in the SDLC requirements gate (and in procurement for vendor-developed solutions)",
+        "Conduct DPIA where the processing meets the quantitative or qualitative thresholds (cross-link with dpia/)",
+        "Build privacy controls (encryption, pseudonymisation, access control, audit logging, rights-handling) into the system from day one",
+        "Operate go-live gate with DPO/security/legal sign-off before deployment",
+        "Maintain RoPA reflecting the lifecycle stage of each processing activity",
+        "Run periodic DPbD validation reviews on operational systems",
+        "Apply secure decommissioning with certificates of destruction and third-party deletion attestations"
+      ],
+      "maturity": {
+        "basic": "DPbD considered ad-hoc by IT/legal at major project milestones; no formal checklist; DPIA conducted reactively when external pressure surfaces",
+        "mature": "DPbD policy in place; checklist embedded at SDLC requirements and go-live gates; DPIAs triggered systematically; DPO sign-off recorded; lifecycle stage tracked in RoPA",
+        "advanced": "DPbD integrated into automated governance (policy-as-code in CI/CD); pre-commit privacy linting; automated DPIA scoring; central DPbD compliance dashboard; vendor onboarding gated on DPbD attestation; lifecycle-aware retention triggers and decommissioning automation"
+      },
+      "toolExamples": ["OneTrust DataGuidance", "PrivacyOps platforms (BigID, Securiti.ai)", "GitHub/GitLab privacy linters", "ServiceNow GRC", "Custom DPbD checklist embedded in JIRA/Azure DevOps"],
+      "iso27701": ["A.7.4"],
+      "gdpr": ["Article 25(1)"],
+      "apecCBPR": ["Accountability Principle"],
+      "relatedCodes": [],
+      "relatedGuidelines": ["dpbd-guideline-2026", "dpia-guideline-2026"],
+      "relatedStandards": ["ISO 27701", "NIST Privacy Framework"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure data protection is integrated into every stage of every processing activity's lifecycle — from initial design through to decommissioning — so privacy outcomes are built in by default, evidenced, and auditable.",
+      "whatGoodLooksLike": "DPbD policy approved at senior management. DPbD checklist embedded in SDLC requirements gate and go-live gate. DPIA triggered systematically per dpia/thresholds.json. DPO sign-off recorded for high-risk projects. Lifecycle stage tracked in RoPA. Decommissioning followed with certificates of destruction and backup purge attestations. Periodic DPbD validation reviews of operational systems with documented findings and remediation.",
+      "keyRiskIfAbsent": "Privacy controls retrofitted (or absent), creating gaps that materialise as data breaches, unlawful processing, excessive collection, indefinite retention, and inability to honour data subject rights. DPIA either skipped or conducted superficially. Decommissioning leaves orphan data in backups and third-party systems. Senior management cannot demonstrate accountability under s5.",
+      "samplingGuidance": "Sample 5 projects launched in the last 12 months. For each, verify (1) DPbD checklist completed at requirements gate, (2) DPIA conducted where threshold met, (3) DPO sign-off prior to go-live, (4) RoPA entry created and maintained, (5) operational privacy monitoring in place. Review the most recent DPbD policy review. Sample 2 decommissioned systems and verify destruction certificates and backup purge."
+    },
+    {
+      "slug": "dpbd-default-and-data-minimisation",
+      "name": "Privacy as Default and Data Minimisation",
+      "domain": "data-protection-by-design",
+      "type": "preventive",
+      "layer": "process",
+      "description": "Configure all processing systems so that the most privacy-protective settings apply by default and only the minimum personal data necessary for each specified purpose is collected, used, retained, and disclosed. Operationalises DPbD Principle 2 (Privacy as the Default) and the data minimisation requirement under the General Principle (s6).",
+      "sections": ["s6", "s7", "s8", "s10"],
+      "keyActivities": [
+        "Default to no collection unless a specific compelling purpose is defined and documented",
+        "Implement opt-in (not opt-out) consent for non-essential processing",
+        "Pre-tick only strictly-necessary cookies; secondary cookies require affirmative consent",
+        "Set the most privacy-protective defaults across system configuration (visibility, sharing, profile)",
+        "Differentiate mandatory vs optional fields on collection forms and minimise mandatory fields",
+        "Apply purpose limitation enforcement: separate databases or logical isolation between purposes",
+        "Apply pseudonymisation as soon as direct identification is no longer needed",
+        "Periodic review of data fields against necessity for current purposes; delete redundant fields"
+      ],
+      "maturity": {
+        "basic": "Forms collect everything that 'might be useful'; consent bundled; default settings inherited from vendor templates",
+        "mature": "Mandatory vs optional fields distinguished and justified; opt-in for non-essential; purpose-specific consent implemented; periodic field-necessity reviews",
+        "advanced": "Automated data minimisation lints at collection forms; purpose-isolated data stores enforced by access control; pseudonymisation pipelines for analytics; default-privacy A/B testing"
+      },
+      "toolExamples": ["OneTrust Cookie Compliance", "Usercentrics", "Data minimisation linters in form builders", "Privacy-preserving analytics (Plausible, Matomo)", "Pseudonymisation services"],
+      "iso27701": ["A.7.4.4", "A.7.4.5"],
+      "gdpr": ["Article 25(2)", "Article 5(1)(c)"],
+      "apecCBPR": ["Collection Limitation Principle"],
+      "relatedCodes": [],
+      "relatedGuidelines": ["dpbd-guideline-2026"],
+      "relatedStandards": ["ISO 27701"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure default settings on all systems and processes processing personal data are the most privacy-protective option, and that the volume of personal data collected, used, retained, and disclosed is the minimum necessary for the specified purpose.",
+      "whatGoodLooksLike": "Forms differentiate mandatory and optional fields with justification for each mandatory field. Cookie banners default to strictly-necessary only; secondary cookies require affirmative opt-in. Profile visibility, data sharing, and notification preferences default to most-private setting. Pseudonymisation applied to analytics datasets. Periodic field-necessity reviews remove fields no longer needed. Consent is granular and specific per purpose.",
+      "keyRiskIfAbsent": "Excessive collection beyond what is necessary breaches the General Principle (s6). Bundled consent fails consent validity tests. Default-public profile settings lead to inadvertent disclosure. Unjustified retention of optional fields creates breach exposure and complicates DSARs.",
+      "samplingGuidance": "Sample 5 active data collection forms (web, app, paper) and verify (1) mandatory fields are justified, (2) optional fields are clearly marked, (3) consent is unbundled where required, (4) default cookie state is privacy-protective. Inspect default profile/sharing settings on the customer-facing platform. Review the last data field necessity review and confirm redundant fields were deleted."
+    },
+    {
+      "slug": "dpbd-childrens-data-protection",
+      "name": "Children's Data Protection by Design",
+      "domain": "data-protection-by-design",
+      "type": "preventive",
+      "layer": "process",
+      "description": "Apply the strictest privacy settings, age-appropriate notice, age verification (proportionate to risk), and 'best interests of the child' considerations when processing personal data of children — for any product or service directed at, intended for, or likely to be accessed by children. Per the JPDP DPbD Guideline children's privacy section.",
+      "sections": ["s5", "s6", "s7", "s9"],
+      "keyActivities": [
+        "Identify whether the product/service is directed at, intended for, or likely to be accessed by children (in reality, not just by design)",
+        "Implement age verification mechanism proportionate to processing risk (self-declaration, credit card, biometrics, inferential, parental consent, vouching, digital ID)",
+        "Apply strictest privacy defaults to all child-accessible services",
+        "Use clear, concise, child-friendly language in notices and consent flows",
+        "Provide just-in-time notifications before key data-sharing actions",
+        "Where appropriate, provide a parental dashboard with activity history and settings",
+        "Provide dedicated child-friendly user flows for data subject rights (access, correction, deletion)",
+        "Conduct best-interests-of-child assessment, especially before any profiling or ADM decision involving children",
+        "Do NOT engage in profiling or automated decision-making of children for advertising/marketing unless demonstrably in their best interests"
+      ],
+      "maturity": {
+        "basic": "Generic notice for all users; age field with self-declaration; no special handling for children",
+        "mature": "Age verification proportionate to risk; child-friendly notice variant; parental consent for under-18 with email confirmation; rights flows include child-appropriate language",
+        "advanced": "Risk-based age verification (digital ID, biometric with anti-spoofing for high-risk); parental dashboard with full activity history; automated detection of likely-child users; profiling/ADM disabled by default for child accounts; best-interests assessment built into product approval"
+      },
+      "toolExamples": ["Yoti Digital ID", "Verifymy.io", "Persona age estimation", "Parental control SaaS", "Custom child-account flag in user model"],
+      "iso27701": ["A.7.2.1"],
+      "gdpr": ["Article 8", "Recital 38"],
+      "apecCBPR": ["Notice Principle"],
+      "relatedCodes": [],
+      "relatedGuidelines": ["dpbd-guideline-2026"],
+      "relatedStandards": ["UN Convention on the Rights of the Child Article 3 (best interests)"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure processing of personal data of children meets the strictest privacy standards, with proportionate age verification, age-appropriate transparency, parental involvement where appropriate, and explicit best-interests-of-child consideration before any automated decision-making or profiling.",
+      "whatGoodLooksLike": "Service identifies whether children are in scope (in reality, not just nominally). Age verification mechanism is proportionate to processing risk. Privacy defaults are most-protective for child accounts. Notices use child-friendly language. Parental consent obtained where required, with reasonable verification. Rights flows accommodate non-automated handling of child requests. Profiling and ADM for advertising/marketing disabled for children unless best-interests assessment justifies otherwise.",
+      "keyRiskIfAbsent": "Processing of children's personal data without age-appropriate safeguards. Profiling/ADM creating discriminatory or harmful outcomes for children. Inability to demonstrate compliance with the best-interests-of-child principle. Adverse Commissioner findings, parental complaints, and reputational harm.",
+      "samplingGuidance": "Identify whether the service is in scope. If yes: review the age verification mechanism design and proportionality assessment. Sample 5 child-accessible flows (sign-up, profile, default settings, notice, rights) and verify child-appropriate handling. Review best-interests-of-child assessments for any profiling or ADM operation that could touch children. Confirm profiling/marketing-ADM is disabled for child accounts."
+    },
+    {
+      "slug": "admp-trigger-and-scoping",
+      "name": "ADMP Trigger Identification and Scoping",
+      "domain": "automated-decisions-profiling",
+      "type": "preventive",
+      "layer": "process",
+      "description": "Identify all processing operations involving automated decision-making and profiling, assess which produce legal effects or significantly affect data subjects (the regulatory trigger), and document the basis on which each operation is in or out of scope of the ADM Restrictions.",
+      "sections": ["s5", "s6"],
+      "keyActivities": [
+        "Inventory all processing operations involving solely-automated decisions or profiling",
+        "For each, assess: solely automated? legal effects? significantly affects?",
+        "Document scoping decisions with rationale, signed off by DPO",
+        "Cross-check DPIA threshold (>10,000 subjects for ADM triggers DPIA per dpia/thresholds.json)",
+        "Maintain an ADM register: name, purpose, model/algorithm, in-scope status, basis, lawful ground, exception/exemption claimed",
+        "Review register quarterly and on every model or process change"
+      ],
+      "maturity": {
+        "basic": "Ad-hoc identification; no formal register",
+        "mature": "Formal ADM register; scoping criteria documented; DPO sign-off; quarterly review",
+        "advanced": "Automated discovery from system telemetry; integration with model registry; change-triggered re-scoping; ADM register linked to RoPA"
+      },
+      "toolExamples": ["MLflow / Vertex AI model registry", "Custom ADM register in GRC platform", "Algorithmia / Domino", "Manual ADM inventory spreadsheet"],
+      "iso27701": [],
+      "gdpr": ["Article 22(1)"],
+      "apecCBPR": [],
+      "relatedCodes": [],
+      "relatedGuidelines": ["admp-guideline-2026", "dpia-guideline-2026"],
+      "relatedStandards": ["NIST AI RMF GOVERN-1.1"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Ensure all automated decision-making and profiling operations are inventoried, assessed against the regulatory trigger (legal effects or significant effects), and scoped accurately so that ADM Restrictions are applied where required.",
+      "whatGoodLooksLike": "ADM register exists and is current. Each operation has a documented scoping decision: in/out of scope, basis, exception/exemption (if any). DPO has signed off. Cross-link to RoPA and (where threshold met) DPIA records. Register is reviewed quarterly and on every material change.",
+      "keyRiskIfAbsent": "ADM operations operate unidentified, with no Right to Information, Right to Refuse, or Right to Human Review. Hidden bias and discriminatory outcomes go unmonitored. DPIA threshold missed. Commissioner enforcement on a triggered process the controller never recognised.",
+      "samplingGuidance": "Obtain the ADM register. Cross-reference against system inventory and RoPA — verify completeness. Sample 5 entries and verify scoping rationale, lawful basis, and exception/exemption claim. Inspect the most recent quarterly review. Walk through 1 process not on the register that uses ML/AI to confirm exclusion is justified."
+    },
+    {
+      "slug": "admp-transparency-and-information",
+      "name": "ADMP Transparency and Right to Information",
+      "domain": "automated-decisions-profiling",
+      "type": "preventive",
+      "layer": "process",
+      "description": "Provide data subjects with meaningful information about automated decision-making and profiling — including the type of information collected, why it is relevant, and the likely impact. The Right to Information is RETAINED even where Exceptions apply.",
+      "sections": ["s7"],
+      "keyActivities": [
+        "Update privacy notice(s) to disclose all in-scope ADM and profiling operations",
+        "For each operation, describe the meaningful logic: data inputs, why relevant, likely impact",
+        "Provide just-in-time notice at the moment of an automated decision (e.g., loan application form, credit decision page, hiring portal)",
+        "Maintain version history of ADM disclosures",
+        "Train customer-facing staff to explain the automated decision in plain language",
+        "Establish escalation route for data subject queries about specific automated decisions"
+      ],
+      "maturity": {
+        "basic": "Generic mention of 'automated processing' in privacy notice",
+        "mature": "Specific disclosure per ADM operation with meaningful logic; just-in-time notice at decision points",
+        "advanced": "Per-decision explainability — every individual decision is accompanied by a personalised explanation referencing inputs and impact; integrated with model explainability tools"
+      },
+      "toolExamples": ["SHAP / LIME explainability", "Privacy notice management (OneTrust, TrustArc)", "Layered/just-in-time notice tooling", "Custom decision-explanation UI"],
+      "iso27701": ["A.7.3.2"],
+      "gdpr": ["Articles 13(2)(f), 14(2)(g), 15(1)(h)"],
+      "apecCBPR": ["Notice Principle"],
+      "relatedCodes": [],
+      "relatedGuidelines": ["admp-guideline-2026"],
+      "relatedStandards": ["NIST AI RMF GOVERN-3.1"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Provide data subjects with meaningful, accessible information about every in-scope automated decision-making and profiling operation that affects them, including the logic, relevance of inputs, and likely impact — at the time of decision and on request.",
+      "whatGoodLooksLike": "Privacy notice lists each in-scope ADM operation with description, meaningful logic, and likely impact. Just-in-time notice appears at the decision moment. Customer service can explain a specific decision when asked. Notice is in plain language and accessible to non-technical readers. Disclosures version-controlled.",
+      "keyRiskIfAbsent": "Data subjects unable to understand why a decision was made — cannot meaningfully exercise refusal, review, or correction rights. Commissioner finding of breach of s7 (Notice and Choice) and ADM Restrictions. Reputational harm from opacity.",
+      "samplingGuidance": "Review the privacy notice for ADM disclosures. For each in-scope operation in the ADM register, verify a corresponding disclosure exists. Sample 3 just-in-time notices in production user flows. Test customer service ability to explain a sample automated decision in plain language. Review version history of disclosures."
+    },
+    {
+      "slug": "admp-human-review-mechanism",
+      "name": "ADMP Human Review Mechanism",
+      "domain": "automated-decisions-profiling",
+      "type": "corrective",
+      "layer": "process",
+      "description": "Provide a meaningful human review pathway for automated decisions — with reviewer authority and competence to override the system, defined timelines (illustrative: 21 days, extendable by 14 days), and documented justification on request.",
+      "sections": ["s5", "s9"],
+      "keyActivities": [
+        "Build the review request mechanism into the same system that produces the automated decision (not a separate manual process)",
+        "Assign trained reviewers with authority to overturn the recommendation",
+        "Train reviewers in the model's logic so they can meaningfully override (not rubber-stamp)",
+        "Define the review SLA (illustrative: 21 days; extension by 14 days where complex)",
+        "Maintain a review log: original decision, reviewer, additional information considered, outcome, justification",
+        "Sample-test reviewers' override rate; investigate near-zero override rates",
+        "Provide reasons in writing where the data subject requests them"
+      ],
+      "maturity": {
+        "basic": "Review on request goes to general support inbox; no formal SLA",
+        "mature": "Defined SLA, trained reviewers, override authority, review log",
+        "advanced": "Automated routing to qualified reviewers; reviewer training tracked; periodic calibration sessions to align overrides; statistical monitoring of reviewer-decision agreement to detect rubber-stamping"
+      },
+      "toolExamples": ["ServiceNow case management", "Salesforce Service Cloud", "Custom review workflow", "Model registry with override hooks"],
+      "iso27701": ["A.7.3.10"],
+      "gdpr": ["Article 22(3)"],
+      "apecCBPR": ["Access and Correction Principle"],
+      "relatedCodes": [],
+      "relatedGuidelines": ["admp-guideline-2026"],
+      "relatedStandards": ["NIST AI RMF MANAGE-2.4"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Provide a substantive human review of automated decisions on request — with qualified reviewers, defined timelines, written justification, and meaningful override authority — so that human oversight is real, not theatrical.",
+      "whatGoodLooksLike": "Review mechanism is integrated with the decision system. Reviewers are named, trained, and demonstrably qualified. SLA defined and met. Review log captures original decision, additional information, and reviewer outcome with justification. Reviewer override rate is non-zero and analysed. Written justifications provided on request.",
+      "keyRiskIfAbsent": "Reviews are rubber-stamped; the right is hollow. Reviewers lack authority or competence to overturn. SLA breaches. No documented justification. Commissioner finding of breach. Loss of trust where adverse decisions cannot be meaningfully challenged.",
+      "samplingGuidance": "Sample 10 review requests from the last 12 months. Verify SLA met, reviewer was qualified, review log complete, justification documented, written reasons provided where requested. Compute the reviewer override rate; investigate if near zero. Walk through a live review to confirm the workflow integrates with the decision system."
+    },
+    {
+      "slug": "admp-refusal-and-alternatives",
+      "name": "ADMP Right to Refuse and Alternative Pathways",
+      "domain": "automated-decisions-profiling",
+      "type": "preventive",
+      "layer": "process",
+      "description": "Provide a clear mechanism for data subjects to refuse to be subjected to a decision based solely on automated decision-making, and offer a non-automated alternative path (or stop the processing). Subject to Exceptions (contract necessity, legal compliance, explicit consent).",
+      "sections": ["s5", "s6"],
+      "keyActivities": [
+        "Provide a refusal mechanism at the decision point and in the privacy notice",
+        "Where refusal is exercised: route the request to a non-automated path (e.g., human-handled application) or cease processing",
+        "Document refusal events: who refused, what processing, alternative provided",
+        "Where Exceptions are claimed (contract necessity / legal compliance / explicit consent): document the claimed exception and verify the conditions are met",
+        "For sensitive personal data: require explicit consent OR public interest necessity AND suitable safeguards before processing",
+        "Disable refusal route only when Exception is genuinely satisfied — not as a default suppression"
+      ],
+      "maturity": {
+        "basic": "Refusal handled ad-hoc via customer service; no formal alternative path",
+        "mature": "Refusal mechanism exposed at decision point; non-automated path defined and operational",
+        "advanced": "Refusal triggers automatic routing to alternative processing; refusal log integrated with consent platform; Exception claims peer-reviewed before invocation"
+      },
+      "toolExamples": ["Consent management platforms with refusal hooks", "Workflow tools with non-automated lane (Camunda, Pega)", "Custom alternative-path UI"],
+      "iso27701": [],
+      "gdpr": ["Article 22(1)"],
+      "apecCBPR": [],
+      "relatedCodes": [],
+      "relatedGuidelines": ["admp-guideline-2026"],
+      "relatedStandards": [],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Provide an effective Right to Refuse to be subjected to solely-automated decision-making for in-scope operations, with a non-automated alternative pathway and documented Exception handling where ADM continues to apply.",
+      "whatGoodLooksLike": "Refusal mechanism visible at the decision point and in the privacy notice. Non-automated alternative path operates and meets the data subject's needs. Refusal events logged with alternative provided. Exception claims (contract necessity / legal compliance / explicit consent) documented per operation, peer-reviewed, and revisited if circumstances change. Sensitive personal data ADM operates only under explicit consent or public interest with safeguards.",
+      "keyRiskIfAbsent": "Right to Refuse is theoretical; data subjects forced into automated processing without recourse. Exception claims invalid or stale. Sensitive personal data processed in breach of s17. Commissioner enforcement action.",
+      "samplingGuidance": "Inspect the refusal mechanism in the user flow at the decision point. Sample 5 refusal events; verify alternative path and outcome. Review Exception claims for 3 in-scope operations; verify the conditions are met (signed contract, statutory requirement, valid explicit consent). For any sensitive-data ADM, verify explicit consent or public interest plus safeguards."
+    },
+    {
+      "slug": "admp-bias-monitoring-and-ai-safeguards",
+      "name": "ADMP Bias Monitoring and AI/Generative AI Safeguards",
+      "domain": "automated-decisions-profiling",
+      "type": "detective",
+      "layer": "technology",
+      "description": "Monitor automated decisions and profiling (including AI / Generative AI) for accuracy, bias, and discriminatory outcomes, and apply additional safeguards specific to AI use — dignity, no manipulation, risk assessment before deployment, operator training, AI not as the only factor, meaningful human review.",
+      "sections": ["s5", "s9", "s11"],
+      "keyActivities": [
+        "Monitor model accuracy and bias on a defined cadence (e.g., quarterly or per major model update)",
+        "Track output disparities across protected attributes (race, gender, age, disability) where lawful and applicable",
+        "Investigate near-zero override rates by human reviewers as a signal of rubber-stamping",
+        "For AI/Generative AI: weigh commercial objectives against risks before deployment",
+        "Train operators on the AI system's logic and limitations",
+        "Ensure AI is not the only factor in policy or individual decisions",
+        "Embed countermeasures against over-reliance / automation bias",
+        "Maintain a model card or system documentation: version, training data summary, accuracy metrics, known limitations, intended use",
+        "Test against synthetic adversarial inputs and edge cases (especially for biometric anti-spoofing)"
+      ],
+      "maturity": {
+        "basic": "Accuracy reviewed at deployment; no ongoing bias testing",
+        "mature": "Quarterly accuracy and bias review; remediation tracked; operator training records; model cards maintained",
+        "advanced": "Continuous bias monitoring with alerting; A/B testing for fairness improvements; adversarial testing and red-team exercises; fairness scorecards reported to senior management"
+      },
+      "toolExamples": ["IBM AI Fairness 360", "Google What-If Tool", "Microsoft Fairlearn", "Aequitas", "Custom monitoring dashboards", "Liveness detection (anti-spoofing) for biometric systems"],
+      "iso27701": [],
+      "gdpr": ["Recital 71"],
+      "apecCBPR": [],
+      "relatedCodes": [],
+      "relatedGuidelines": ["admp-guideline-2026"],
+      "relatedStandards": ["NIST AI RMF MEASURE-2.11", "ISO/IEC 23894 AI risk management"],
+      "sectorVariants": {},
+      "riskTier": "critical",
+      "controlObjective": "Continuously monitor automated decisions and profiling — including AI/Generative AI — for accuracy, bias, and discriminatory outcomes, and apply the JPDP-prescribed additional safeguards for AI use.",
+      "whatGoodLooksLike": "Bias and accuracy metrics monitored on a defined cadence. Disparities investigated and remediated. Reviewer override rates analysed. AI deployment risk-assessed against commercial objectives. Operators trained. AI not the only factor in policy decisions. Model cards documented. Adversarial and edge-case testing conducted. Fairness reporting to management.",
+      "keyRiskIfAbsent": "Discriminatory outcomes (HR, credit, healthcare). Inaccurate predictions causing real harm. Automation bias suppresses human override. AI outcomes manipulate users without awareness. Identity spoofing in biometric systems. Commissioner enforcement; civil claims; reputational damage.",
+      "samplingGuidance": "Obtain the most recent bias/accuracy report for an in-scope ADM operation. Verify cadence aligns with policy. Inspect remediation actions for prior findings. Review model cards for 3 systems. Confirm operator training records. For AI deployments, verify pre-deployment risk assessment exists. For biometric systems, verify anti-spoofing measures and accuracy testing."
     }
   ]
 }

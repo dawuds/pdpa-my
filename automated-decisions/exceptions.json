@@ -1,0 +1,69 @@
+{
+  "sourceType": "official-aligned",
+  "title": "ADMP Exceptions and Exemptions",
+  "description": "Exceptions disapply Right to Refuse and Right to Human Review (but not Right to Information). Exemptions disapply all ADM Restrictions. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "exceptions": {
+    "scope": "Exceptions disapply the Right to Refuse and Right to Human Review. The Right to Information is RETAINED — transparency obligations remain.",
+    "list": [
+      {
+        "id": "EX-1",
+        "name": "Contract necessity",
+        "rule": "Where the processing is necessary for entering into, or performance of, a contract between the data subject and a data controller."
+      },
+      {
+        "id": "EX-2",
+        "name": "Legal compliance",
+        "rule": "Where the processing is necessary for compliance with laws."
+      },
+      {
+        "id": "EX-3",
+        "name": "Explicit consent",
+        "rule": "Where the data subject has given prior explicit consent.",
+        "explicitConsentRequirement": "Consent must be clear, specific, and require a direct action from the data subject (e.g., checking a tick box, signing a document)."
+      }
+    ],
+    "sensitiveDataAdditionalRule": "Automated decision-making involving sensitive personal data is only allowed where (a) explicit consent OR processing necessary for public interest; AND (b) suitable safeguards in place."
+  },
+  "exemptions": {
+    "scope": "Exemptions disapply ALL ADM Restrictions (including the Right to Information). Based on Section 45 of Act 709.",
+    "list": [
+      {
+        "id": "EXM-1",
+        "name": "Personal/family/household",
+        "rule": "Personal data processed for individual's personal, family or household affairs, including recreational purposes."
+      },
+      {
+        "id": "EXM-2",
+        "name": "Crime prevention/detection/prosecution",
+        "rule": "Personal data processed for: (i) prevention or detection of crime or for the purpose of investigations; (ii) apprehension or prosecution of offenders; or (iii) the assessment or collection of any tax or duty or any other imposition of a similar nature."
+      },
+      {
+        "id": "EXM-3",
+        "name": "Statistics or research",
+        "rule": "Personal data processed for preparing statistics or carrying out research, provided that such data is not processed for any other purpose and the resulting statistics/research are not made available in a form which identifies the data subject."
+      },
+      {
+        "id": "EXM-4",
+        "name": "Court order or judgment",
+        "rule": "Personal data necessary for the purpose of or in connection with any order or judgment of a court."
+      },
+      {
+        "id": "EXM-5",
+        "name": "Regulatory functions",
+        "rule": "Personal data processed for the purpose of discharging regulatory functions."
+      },
+      {
+        "id": "EXM-6",
+        "name": "Journalism, literature, art",
+        "rule": "Processed only for journalistic, literary or artistic purposes, provided that: (i) processing is undertaken with a view to publication; (ii) the data controller reasonably believes publication would be in the public interest considering freedom of expression; and (iii) the data controller reasonably believes compliance with the relevant provision is incompatible with the journalistic/literary/artistic purpose."
+      }
+    ]
+  },
+  "decisionLogic": [
+    "Step 1: Does an Exemption apply (Section 45-derived)? → If YES: no ADM Restrictions apply.",
+    "Step 2: Does an Exception apply (contract / legal compliance / explicit consent)? → If YES: Right to Refuse and Right to Human Review do not apply BUT Right to Information still applies.",
+    "Step 3: Otherwise: all three ADM Restrictions apply.",
+    "Step 4: For sensitive personal data: even with an Exception, processing is only allowed under explicit consent or public interest, with suitable safeguards.",
+    "Step 5: For children: profiling and ADM for advertising/marketing is prohibited unless demonstrably in the child's best interests — see dpbd/childrens-privacy.json."
+  ]
+}

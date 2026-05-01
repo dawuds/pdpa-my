@@ -1,0 +1,103 @@
+{
+  "sourceType": "official-aligned",
+  "title": "7 Foundational Principles of Data Protection by Design",
+  "description": "The seven foundational DPbD principles referenced by the JPDP DPbD Guideline (issued 30 April 2026). Originally articulated by Dr. Ann Cavoukian (Information and Privacy Commissioner of Ontario). Provide a guiding framework for operationalising DPbD; not exhaustive.",
+  "principles": [
+    {
+      "id": "P1",
+      "name": "Proactive not reactive; preventative not remedial",
+      "summary": "Anticipate and prevent privacy risks before they occur; build processes to prevent breaches rather than reacting after the fact.",
+      "operationalisation": [
+        "Senior leadership commitment to a strong proactive privacy programme",
+        "Director-level training and personal data protection expertise on the board",
+        "Adequate resourcing for the privacy programme",
+        "Personal data protection compliance in senior management performance evaluation",
+        "Regular audits and DPIAs reported to the board",
+        "Culture and environment where stakeholders can suggest improvements",
+        "Systematic methods to recognise poor designs and correct negative impacts before they occur"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Privacy as the default setting",
+      "summary": "Personal data is automatically protected in any system. Even if the individual does nothing, their privacy remains secure — protection is built in, by default.",
+      "operationalisation": [
+        "Begin with no collection of personal data unless a specific compelling purpose is defined",
+        "Purpose specification: communicate purposes at or before collection, clear/limited/relevant",
+        "Collection limitation: lawful and limited to what is necessary",
+        "Data minimisation: collection kept to a strict minimum; default to non-identifiable interactions",
+        "Use, retention, disclosure limitation: only for identified/consented purposes; retain only as long as necessary",
+        "Adopt opt-in consent systems",
+        "Where need is unclear: presumption of privacy and precautionary principle apply (most privacy-protective default)",
+        "Technological/policy/procedural barriers to data linkage; isolate data processed for different purposes"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Privacy embedded into design",
+      "summary": "Integrate privacy into technologies, operations, and information architectures in a holistic, integrative, and creative way.",
+      "operationalisation": [
+        "Systemic, principled approach using established standards and frameworks",
+        "Allow for external reviews and audits",
+        "Apply PDP Principles consistently throughout design and operation",
+        "Conduct detailed DPIAs documenting risks and mitigation",
+        "Personal data protections that minimise risk and cannot be easily compromised through use, misconfiguration, or error"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Full functionality – positive sum, not zero sum",
+      "summary": "Accommodate all legitimate interests in a manner that benefits all stakeholders — privacy can coexist with other legitimate business interests; reject false trade-offs.",
+      "operationalisation": [
+        "Acknowledge that multiple legitimate business interests can coexist",
+        "Engage in communication, consultation, and collaboration",
+        "Pursue innovative solutions to achieve multiple functionalities",
+        "Embed privacy without impairing full functionality",
+        "Document and articulate all interests, objectives, desired functions, and metrics"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "End-to-end security – full lifecycle protection",
+      "summary": "Ensure data security throughout the entire lifecycle: securely retained and securely destroyed at end of process. No gaps in protection or accountability.",
+      "operationalisation": [
+        "TLS for data in transit; AES-256 (or equivalent) for data at rest",
+        "Encryption keys managed in a dedicated key management system",
+        "Automated, encrypted backups with disaster recovery plan",
+        "MFA for staff access; role-based access control with least privilege",
+        "Anonymisation and aggregation for analytics where possible",
+        "Endpoint protection; staff training on privacy and security",
+        "Clear retention policies with secure deletion methods at end of retention",
+        "Logging and audit trail with regular review"
+      ]
+    },
+    {
+      "id": "P6",
+      "name": "Visibility and transparency – keep it open",
+      "summary": "Demonstrate accountability for personal data processing. Handle data per stated promises, subject to independent verification.",
+      "operationalisation": [
+        "Accountability: documented privacy-related policies and procedures, assigned to a specified individual; equivalent protection ensured for third-party transfers",
+        "Openness: information about data management policies and practices made readily available",
+        "Compliance: complaint and redress mechanisms established and clearly communicated",
+        "Just-in-time notices when data is collected (e.g., account creation, order placement)",
+        "Layered notices: key points emphasised, link to detailed information",
+        "Pop-up notices for automatically collected data (cookies, beacons, tracking scripts)",
+        "Accessible link to comprehensive notice on every web page"
+      ]
+    },
+    {
+      "id": "P7",
+      "name": "Respect for user privacy – keep it user-centric",
+      "summary": "Keep the interests of the individual paramount through strong privacy defaults, appropriate notice, and empowering user-friendly options.",
+      "operationalisation": [
+        "Consent: free and specific; quality of consent scales with data sensitivity; withdrawable",
+        "Accuracy: data accurate, complete, up-to-date as necessary",
+        "Access: data subjects can access, challenge accuracy, and amend their data",
+        "Compliance: complaint and redress mechanisms with appeal escalation",
+        "Privacy dashboard with clear options (toggle data points, customise preferences)",
+        "Separate consent for different processing purposes",
+        "In-app/timely notifications about policy changes before they take effect"
+      ]
+    }
+  ]
+}

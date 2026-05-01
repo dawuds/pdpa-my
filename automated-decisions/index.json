@@ -1,0 +1,55 @@
+{
+  "sourceType": "official-aligned",
+  "title": "Automated Decision-Making and Profiling (ADMP)",
+  "description": "Regulatory regime for automated decision-making and profiling (including AI / Generative AI use), data subject rights, exceptions, and special protections for biometric data and CCTV. Aligned with the JPDP ADMP Guideline issued 30 April 2026 (PCP No. 3/2025 substantive content).",
+  "guidelineStatus": {
+    "issued": "2026-04-30",
+    "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",
+    "consultationPaper": "PCP No. 3/2025 (20 March 2025 – 19 May 2025)",
+    "verificationNote": "Module reflects the March 2025 consultation paper. Verify against issued PDF when available at https://www.pdp.gov.my/ppdpv1/akta/garis-panduan-ms/."
+  },
+  "legalBasis": {
+    "pdpaSections": ["s4", "s5", "s6", "s17", "s45"],
+    "description": "Act 709 does not yet specifically address automated decision-making and profiling. The ADMP Guideline introduces the regulatory regime under the Commissioner's authority. Cross-references s4 (definition of biometric data, included in sensitive personal data per A1727), s5 (mandatory PDP Principles compliance), s6 (consent), s17 (sensitive personal data conditions), s45 (general exemptions, replicated for ADMP exemptions)."
+  },
+  "structure": {
+    "definitions": "automated-decisions/definitions.json — automated decision-making, profiling, biometric data",
+    "triggers": "automated-decisions/triggers.json — when ADMP regulation applies (legal effects / significantly affects)",
+    "rights": "automated-decisions/data-subject-rights.json — Right to Refuse, Right to Information, Right to Human Review",
+    "exceptions": "automated-decisions/exceptions.json — Exceptions and Exemptions",
+    "ai": "automated-decisions/ai-generative-ai.json — AI/Generative AI as ADM tool",
+    "biometric": "automated-decisions/biometric-data.json — biometric data measures",
+    "cctv": "automated-decisions/cctv.json — CCTV use for biometric processing"
+  },
+  "coreObligations": [
+    "Identify which processing operations constitute automated decision-making or profiling",
+    "Assess whether each operation legally affects or significantly affects data subjects (the regulatory trigger)",
+    "Where triggered: implement Right to Refuse, Right to Information, and Right to Human Review",
+    "Where Exceptions apply: still maintain Right to Information (transparency) — this right is not subject to Exceptions",
+    "For sensitive personal data: only process under explicit consent or public interest, with safeguards",
+    "Children: do not profile or apply automated decision-making for advertising/marketing unless demonstrably in their best interests",
+    "Biometric data: special storage, security, accuracy, transparency, and disposal measures",
+    "AI / Generative AI deemed an ADM tool — additional safeguards (dignity, accuracy, no manipulation, human oversight, no pure-AI policy decisions)"
+  ],
+  "internationalAlignment": {
+    "gdpr": "Article 22 (right not to be subject to a decision based solely on automated processing); Article 4(4) (definition of profiling)",
+    "uk": "UK GDPR Article 22 + ICO guidance",
+    "philippines": "NPC Circular on automated decision-making",
+    "indonesia": "Personal Data Protection Law profiling provisions",
+    "china": "Personal Information Protection Law (PIPL) automated decision-making provisions",
+    "euAiAct": "Risk-based AI regulation overlapping where AI systems make decisions affecting individuals",
+    "euDsa": "Digital Services Act — bans profiling-based ads for special category data; bans targeted ads to minors"
+  },
+  "relatedControls": [
+    "admp-trigger-and-scoping",
+    "admp-transparency-and-information",
+    "admp-human-review-mechanism",
+    "admp-refusal-and-alternatives",
+    "admp-bias-monitoring-and-ai-safeguards"
+  ],
+  "crossRepoLinks": {
+    "AI-Governance": "Cross-link AI/Gen-AI controls — ADMP triggers AI accountability obligations",
+    "dpia": "DPIA quantitative threshold of >10,000 subjects for ADM means most regulated ADMP also requires DPIA",
+    "dpbd": "DPbD principles for sensitive data and children's processing apply to ADMP design"
+  }
+}

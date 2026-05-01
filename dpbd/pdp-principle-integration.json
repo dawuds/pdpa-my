@@ -1,0 +1,132 @@
+{
+  "sourceType": "official-aligned",
+  "title": "DPbD Integration with the 7 PDP Principles",
+  "description": "Operationalisation of DPbD for each of the 7 PDP Principles under Act 709 (Sections 6–12). Source: JPDP DPbD Guideline (issued 30 April 2026; PCP No. 2/2025 substantive content).",
+  "integrations": [
+    {
+      "principle": "general",
+      "section": "s6",
+      "principleName": "General Principle",
+      "dpbdElements": [
+        "Data minimisation: only process if necessary; aggregate or anonymise where possible",
+        "Predetermination: purpose and legal basis established before processing",
+        "Specificity: purposes specified and explicit",
+        "Data avoidance: avoid processing personal data altogether where possible",
+        "Differentiation: legal basis and purpose differentiated per processing activity",
+        "Relevance: legal basis applied correctly and connected to specific purpose",
+        "Necessity: each data type necessary for specified purpose",
+        "Limitation: no further processing beyond original purposes; technical/organisational measures (hashing, encryption, contracts)",
+        "Review: regular reviews of necessity",
+        "Cessation: cease processing when legal basis no longer applies",
+        "Adjust: modify processing if legal basis validly changes",
+        "Allocation of responsibility: clear apportionment between joint controllers",
+        "Privacy enhancing technologies",
+        "Consent: freely given, specific, informed, unambiguous; withdrawal as easy as giving consent"
+      ]
+    },
+    {
+      "principle": "notice-and-choice",
+      "section": "s7",
+      "principleName": "Notice and Choice Principle",
+      "dpbdElements": [
+        "Clarity: clear, plain, concise, intelligible language",
+        "Semantics: clear meaning to the audience",
+        "Accessibility: easily accessible to data subject",
+        "Contextual: provided at the relevant time and in the appropriate form",
+        "Relevance: applicable to the specific data subject",
+        "Universal design: accessible to all subjects, including machine-readable formats",
+        "Comprehensible: fair understanding for children/vulnerable groups",
+        "Multi-channel: provided across multiple channels and media",
+        "Layered: balances completeness and understanding"
+      ],
+      "deceptivePatterns": ["Overloading", "Skipping", "Stirring", "Obstructing", "Fickle (inconsistent design)", "Left in the dark"],
+      "deceptivePatternsNote": "All deceptive design patterns are prohibited under DPbD."
+    },
+    {
+      "principle": "disclosure",
+      "section": "s8",
+      "principleName": "Disclosure Principle",
+      "dpbdElements": [
+        "Predetermination: legal basis of disclosure established before disclosure",
+        "Data avoidance: pseudonymised/aggregated data preferred",
+        "Differentiation: legal basis per disclosure activity",
+        "Relevance: legal basis correctly applied; data relevant to disclosure",
+        "Necessity: disclosure only if not possible to fulfil purpose otherwise",
+        "Review: regular reviews of necessity",
+        "Cessation: cease disclosure when legal basis ceases; require third party to securely destroy",
+        "Adjust: modify disclosure when legal basis validly changes",
+        "Security: technical (hashing, encryption) and organisational (policies, contracts) measures"
+      ]
+    },
+    {
+      "principle": "security",
+      "section": "s9",
+      "principleName": "Security Principle",
+      "dpbdElements": [
+        "ISMS: operative means of managing security policies and procedures",
+        "Risk analysis: threat modelling and attack surface analysis",
+        "Security by design: security requirements early in system design and development",
+        "Maintenance: regular review and testing of software, hardware, systems, services",
+        "Access control management: only authorised personnel; differentiated privileges",
+        "Access limitation (number): minimal number of people with access",
+        "Access limitation (content): only attributes needed for the operation",
+        "Access segregation: no single individual has comprehensive access to all subjects' data",
+        "Secure transfers and secure storage with risk-based isolation",
+        "Pseudonymisation as soon as direct identifiability no longer needed; identification keys stored separately",
+        "Backups/logs protected with audit trails reviewed regularly",
+        "Disaster recovery and business continuity",
+        "Protection according to risk: data presenting special risks isolated where possible",
+        "Security incident response management: detect, contain, handle, report, learn",
+        "Incident management with notification to supervisory authority and data subjects"
+      ]
+    },
+    {
+      "principle": "retention",
+      "section": "s10",
+      "principleName": "Retention Principle",
+      "dpbdElements": [
+        "Data minimisation: periodically consider whether data is still adequate, relevant, necessary",
+        "Deletion and anonymisation: clear internal procedures and functionalities",
+        "Effectiveness: ensure anonymised data cannot be re-identified; deleted data cannot be recovered (test this)",
+        "Automation: deletion of certain data should be automated",
+        "Retention criteria: data and length of retention defined per purpose",
+        "Justification: rationale and legal grounds disclosed",
+        "Enforcement of retention policies with internal tests",
+        "Backups/logs: retention defined for backups and logs",
+        "Data flow: limit temporary storage; minimise copies"
+      ]
+    },
+    {
+      "principle": "data-integrity",
+      "section": "s11",
+      "principleName": "Data Integrity Principle",
+      "dpbdElements": [
+        "Data source: reliable sources",
+        "Degree of accuracy: as accurate as necessary for purpose",
+        "Measurably accurate: reduce false positives/negatives, including in automated decisions and AI",
+        "Verification: verify correctness with data subject at different processing stages",
+        "Rectification: facilitate rectification without delay on request",
+        "Error propagation avoidance: mitigate accumulated error in processing chain",
+        "Access (linked): data subjects given information and access to control accuracy",
+        "Continued accuracy: tests of accuracy at critical steps",
+        "Up to date: update where necessary for purpose",
+        "Data design: predetermined choices instead of free text where helpful"
+      ]
+    },
+    {
+      "principle": "access",
+      "section": "s12",
+      "principleName": "Access Principle",
+      "dpbdElements": [
+        "Clarity: clear, plain, concise, intelligible information about how to exercise rights",
+        "Accessibility: mechanisms easily accessible",
+        "Contextual: at relevant time and appropriate form",
+        "Universal design: machine-readable formats included",
+        "Comprehensible: fair understanding of rights and limits",
+        "Multi-channel: rights mechanisms across multiple channels and media",
+        "Quick options in account profile: download, edit, delete",
+        "Tracking and contact for further support"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "sourceType": "official-aligned",
+  "title": "DPbD Lifecycle Integration",
+  "description": "How DPbD is operationalised across the data processing lifecycle. Each stage has design-time decisions, technical/organisational measures, and evidence expectations.",
+  "stages": [
+    {
+      "id": "design",
+      "name": "Design",
+      "objectives": [
+        "Identify the lawful basis and specific purpose(s) before any processing is contemplated",
+        "Determine whether the purpose can be achieved without personal data, or with anonymised/aggregated data",
+        "Define data minimisation envelope: what data, what frequency, what retention",
+        "Build privacy considerations into requirements, user stories, system architecture, data models",
+        "Conduct a DPIA where the processing meets the DPIA quantitative or qualitative thresholds"
+      ],
+      "techMeasures": ["Pseudonymisation strategy", "Encryption-by-default in data models", "Data segmentation and isolation between purposes"],
+      "orgMeasures": ["DPbD checklist signed off at requirements gate", "DPO consulted on design", "Threat model and attack surface analysis"],
+      "evidence": ["Design documents with DPbD section", "DPIA (where required)", "DPO sign-off on design", "Threat model"]
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "objectives": [
+        "Implement privacy controls as first-class features (not as an afterthought patch)",
+        "Default settings: most privacy-protective option pre-selected; opt-in for additional collection",
+        "Validation rules at point of collection (mandatory vs optional fields, format checks)",
+        "Build access controls (RBAC, least privilege) into the system from day one",
+        "Make data subject rights mechanisms (access, correction, portability, erasure, withdrawal) part of the system from day one"
+      ],
+      "techMeasures": ["Encryption at rest implemented", "Encryption in transit (TLS 1.2+)", "Key management integration", "Audit logging built in", "Self-service rights portal stub"],
+      "orgMeasures": ["Code review with privacy checklist", "Security testing including privacy test cases", "Documentation of data flows and processing operations"],
+      "evidence": ["Code review records", "Security/privacy test results", "Data flow diagram", "RoPA entry created"]
+    },
+    {
+      "id": "deployment",
+      "name": "Deployment",
+      "objectives": [
+        "Pre-launch DPIA / DPbD validation against design intent",
+        "Verify default settings before go-live (opt-in defaults, minimum collection)",
+        "Privacy notice deployed and visible at all collection touchpoints before any data is collected",
+        "Onboarding training for staff handling personal data",
+        "Breach response plan and incident playbooks operational"
+      ],
+      "techMeasures": ["Production encryption keys provisioned and rotated", "Backups and disaster recovery tested", "Monitoring and alerting active"],
+      "orgMeasures": ["Go-live gate sign-off (DPO, security, legal)", "Privacy notice live and accessible", "Staff training records up to date"],
+      "evidence": ["Go-live sign-off record", "Pre-launch DPIA validation", "Privacy notice live in production", "Staff training register"]
+    },
+    {
+      "id": "operation",
+      "name": "Operation",
+      "objectives": [
+        "Continuous monitoring of processing against the original purpose",
+        "Periodic accuracy reviews and rectification on data subject request",
+        "Periodic access reviews; deprovisioning on role change or termination",
+        "Incident detection and breach response readiness (drills, tabletops)",
+        "Regular audits of policy effectiveness; suggestions reviewed and adopted"
+      ],
+      "techMeasures": ["Vulnerability and patch management", "DLP and security monitoring", "Automated retention triggers", "Backup integrity testing"],
+      "orgMeasures": ["Quarterly access review", "Annual policy review", "Annual DPIA refresh for high-risk processing", "Annual breach response exercise"],
+      "evidence": ["Access review records", "Audit logs and review evidence", "Patch management records", "Breach drill records"]
+    },
+    {
+      "id": "decommissioning",
+      "name": "Decommissioning",
+      "objectives": [
+        "Identify all data stores (primary, replicas, backups, third-party copies, dev/test)",
+        "Securely destroy or anonymise personal data per the retention schedule",
+        "Notify third parties to whom data was disclosed of the cessation; require their secure deletion",
+        "Issue certificates of destruction; update RoPA to reflect cessation",
+        "Conduct lessons-learned review for next system"
+      ],
+      "techMeasures": ["Cryptographic erasure or physical media destruction", "Backup purge with verification", "Third-party deletion attestation"],
+      "orgMeasures": ["Authorised disposal record signed by data owner", "RoPA updated", "Third-party offboarding"],
+      "evidence": ["Certificates of destruction", "Backup purge records", "Third-party deletion confirmations", "Updated RoPA"]
+    }
+  ]
+}

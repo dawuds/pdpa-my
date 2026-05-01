@@ -1,0 +1,58 @@
+{
+  "sourceType": "official-aligned",
+  "title": "Data Protection by Design (DPbD)",
+  "description": "Personal data protection integrated into the entire lifecycle of a processing activity, from design through development, deployment to decommissioning. Aligned with the JPDP DPbD Guideline issued 30 April 2026 (PCP No. 2/2025 substantive content).",
+  "guidelineStatus": {
+    "issued": "2026-04-30",
+    "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",
+    "consultationPaper": "PCP No. 2/2025 (20 March 2025 – 19 May 2025)",
+    "verificationNote": "Module reflects the March 2025 consultation paper. Verify against issued PDF when available at https://www.pdp.gov.my/ppdpv1/akta/garis-panduan-ms/."
+  },
+  "legalBasis": {
+    "pdpaSections": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+    "description": "DPbD is not expressly referenced in Act 709 but its principles are inherently reflected in the 7 Personal Data Protection Principles (Sections 6–12). The DPbD Guideline operationalises Section 5 (mandatory PDP Principles compliance) by requiring data controllers to embed protection into the design of processing activities rather than retrofit it."
+  },
+  "definition": "Data protection by design means an approach that incorporates appropriate technical and organisational measures, which are designed to implement the Personal Data Protection Principles, into the entire lifecycle of a processing activity, from design, development, deployment to decommissioning.",
+  "scope": {
+    "appliesTo": ["data-controller", "data-processor"],
+    "appliesWhen": "All processing activities — DPbD is not triggered by a specific threshold; it is a continuous obligation across the lifecycle.",
+    "lifecycleStages": ["design", "development", "deployment", "operation", "decommissioning"]
+  },
+  "structure": {
+    "principles": "dpbd/principles.json — 7 foundational principles of DPbD",
+    "pdpPrincipleIntegration": "dpbd/pdp-principle-integration.json — DPbD elements per PDP Principle (General, Notice, Disclosure, Security, Retention, Data Integrity, Access)",
+    "lifecycle": "dpbd/lifecycle.json — design → development → deployment → operation → decommissioning",
+    "childrensPrivacy": "dpbd/childrens-privacy.json — special protections for processing of children's personal data"
+  },
+  "internationalAlignment": {
+    "gdpr": "Article 25 (Data protection by design and by default)",
+    "philippines": "NPC Circular 2023-06 (Privacy by Design / Privacy by Default)",
+    "iso": "ISO 27701 A.7.4 (Privacy by design and privacy by default)",
+    "ipcOntario": "7 foundational principles by Dr. Ann Cavoukian (referenced in JPDP guideline)"
+  },
+  "keyOperationalElements": [
+    "Senior leadership commitment and accountability",
+    "Privacy as default (no action required from data subject)",
+    "Data minimisation at collection and throughout processing",
+    "Pseudonymisation and encryption as standard technical measures",
+    "Privacy embedded into system architecture, not bolted on",
+    "Full lifecycle protection — secure storage and secure destruction",
+    "Visibility and transparency — accountable to data subjects and regulator",
+    "User-centric design respecting data subject rights"
+  ],
+  "evidenceExpectations": [
+    "DPbD policy or standard signed off by senior management",
+    "DPbD checklist embedded in SDLC and procurement processes",
+    "DPIA records (cross-link with dpia/) for high-risk projects",
+    "Default settings configuration evidence (opt-in, minimum collection)",
+    "Pseudonymisation/encryption inventory across systems",
+    "Retention automation evidence (auto-deletion at end of period)",
+    "Children's data processing inventory and age verification mechanism evidence (where applicable)"
+  ],
+  "relatedControls": [
+    "dpbd-lifecycle-integration",
+    "dpbd-default-and-data-minimisation",
+    "dpbd-childrens-data-protection",
+    "privacy-by-design-and-default"
+  ]
+}

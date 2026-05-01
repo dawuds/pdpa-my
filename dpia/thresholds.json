@@ -1,7 +1,13 @@
 {
   "sourceType": "official-aligned",
   "title": "DPIA Thresholds & Triggers",
-  "description": "Criteria for determining when a Data Protection Impact Assessment (DPIA) is mandatory, based on JPDP PCP No. 1/2025.",
+  "description": "Criteria for determining when a Data Protection Impact Assessment (DPIA) is mandatory. Aligned with the JPDP DPIA Guideline issued 30 April 2026 (PCP No. 1/2025 substantive content).",
+  "postDpiaObligations": {
+    "implement": "Implement the measures proposed in the DPIA to manage the specific risks identified.",
+    "monitor": "Monitor developments which may impact the processing operations and the risks (e.g., modified purposes, new vulnerabilities).",
+    "retain": "Retain all DPIAs and relevant documents for at least two (2) years and make them available upon request by the Commissioner.",
+    "notify": "If overall residual risk is HIGH, notify the Commissioner via the online portal (https://daftar.pdp.gov.my/) — notification only; Commissioner approval is not required to proceed."
+  },
   "mandate": {
     "primary": "Processing operations LIKELY TO RESULT IN A HIGH RISK to the protection of personal data.",
     "quantitative_thresholds": [

@@ -1,0 +1,53 @@
+{
+  "sourceType": "official-aligned",
+  "title": "ADMP Regulatory Trigger",
+  "description": "ADMP regulation only applies where the use of automated decision-making (or profiling) results in legal effects concerning the data subject or significantly affects the data subject. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "trigger": {
+    "rule": "Automated decision-making and profiling are regulated only if their use results in legal effects concerning the data subject OR significantly affects the data subject.",
+    "twoConditions": [
+      "Decisions are being made by technological means without human involvement; AND",
+      "Such decisions may legally or significantly affect an individual."
+    ]
+  },
+  "legalEffects": {
+    "definition": "Something that affects a person's legal status or their legal rights.",
+    "examples": [
+      "Cancellation of contract or entitlement",
+      "Denial of social benefit granted by law"
+    ]
+  },
+  "significantlyAffects": {
+    "definition": "Produces an effect that is equivalent or similarly significant in its impact.",
+    "examples": [
+      "Automatic refusal of an online credit application without human intervention",
+      "Automated e-recruiting practices without human intervention"
+    ],
+    "decisionMustHavePotentialTo": [
+      "Significantly affect the circumstances, behaviour or choices of the individuals concerned",
+      "Have a prolonged or permanent impact on the data subject",
+      "At its most extreme, lead to the exclusion or discrimination of individuals"
+    ],
+    "exampleDomains": [
+      "Decisions affecting financial circumstances (credit eligibility)",
+      "Decisions affecting access to health services",
+      "Decisions denying employment opportunity or causing serious disadvantage",
+      "Decisions resulting in price discrimination between data subjects",
+      "Decisions affecting access to education (e.g., university admissions)"
+    ]
+  },
+  "outsideTrigger": {
+    "rule": "ADMP that has no real impact on the individual is not regulated.",
+    "examples": [
+      "Researchers using automated profiling for sociological studies of city vs suburban residents (general trend analysis, no individual impact)",
+      "Customer 'stickiness' analysis used to improve services overall (not discriminating between user categories)"
+    ]
+  },
+  "scopingFlow": [
+    "1. Identify all processing operations involving automated decisions or profiling",
+    "2. For each, assess whether it is solely automated (no human in the loop) — if a human only inputs data and the system decides, it remains 'solely automated'",
+    "3. For each solely-automated operation, assess whether it produces legal effects OR significantly affects the data subject",
+    "4. If yes to both: ADM Restrictions apply (Right to Refuse, Right to Information, Right to Human Review)",
+    "5. If only Right to Information applies under an Exception, transparency is still mandatory",
+    "6. Cross-check DPIA threshold — ADM processing involving >10,000 subjects also triggers a mandatory DPIA"
+  ]
+}

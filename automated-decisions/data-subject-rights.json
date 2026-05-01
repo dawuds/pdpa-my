@@ -1,0 +1,69 @@
+{
+  "sourceType": "official-aligned",
+  "title": "ADMP Data Subject Rights (ADM Restrictions)",
+  "description": "Three rights provided to data subjects where automated decision-making (and by extension profiling) produces legal effects or significantly affects the data subject. Collectively the 'ADM Restrictions'. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "rights": [
+    {
+      "id": "ADM-R1",
+      "name": "Right to Refuse",
+      "summary": "Data subjects have the right to refuse to be subjected to a decision based solely on automated decision-making (including profiling) which produces legal effects concerning them or significantly affects them.",
+      "scope": {
+        "basedSolelyOn": "A decision-making process that is entirely automated such that human influence is excluded. A process may still be considered solely automated if a human merely inputs the data and the decision-making is then carried out by an automated system."
+      },
+      "controllerObligations": [
+        "Provide a clear mechanism for the data subject to exercise the Right to Refuse",
+        "Where refusal is exercised, provide an alternative non-automated path or stop the processing",
+        "Document the refusal and the alternative provided"
+      ],
+      "exceptionsApply": true,
+      "exceptionsNote": "Right to Refuse can be excluded where Exceptions apply (contract necessity, legal compliance, explicit consent)."
+    },
+    {
+      "id": "ADM-R2",
+      "name": "Right to Information",
+      "summary": "A right to information on the automated decision-making being undertaken — the transparency requirement.",
+      "controllerObligations": [
+        "Notify the data subject where processing involves automated decision-making",
+        "Provide meaningful information about the logic involved",
+        "Explain the importance and potential impact of the processing"
+      ],
+      "meaningfulInformationLogic": [
+        "The type of information collected or used in creating the profile or making the automated decision",
+        "Why this information is relevant",
+        "What the likely impact will be / how it is likely to affect the data subject"
+      ],
+      "exceptionsApply": false,
+      "exceptionsNote": "The Right to Information is RETAINED even where Exceptions apply. Transparency is mandatory regardless of Exception or Exemption status — so that any explicit consent (where relied on as an Exception) is informed."
+    },
+    {
+      "id": "ADM-R3",
+      "name": "Right to Human Review",
+      "summary": "A right to request a human review of the automated decision-making.",
+      "controllerObligations": [
+        "Provide an appropriate mechanism for the data subject to request review",
+        "Provide a process for individuals to challenge or appeal a decision and the grounds on which they can appeal",
+        "If requested, provide justification and/or reasons for the decision made",
+        "Act upon requests within specific timelines (illustrative: within 21 days of receipt; extension by 14 days where complex or multiple requests)"
+      ],
+      "reviewerRequirements": [
+        "Has appropriate authority and capability to change the decision",
+        "Conducts a thorough assessment of all relevant data, including any additional information the data subject provides",
+        "Active and meaningful — not 'rubber-stamping' the AI recommendation",
+        "Has authority and competence to go against the automated recommendation",
+        "Evaluates and interprets the recommendation; considers all input data and other additional factors"
+      ],
+      "exceptionsApply": true,
+      "exceptionsNote": "Right to Human Review can be excluded where Exceptions apply."
+    }
+  ],
+  "sensitivePersonalData": {
+    "rule": "Automated decision-making involving sensitive personal data is only allowed where (a) explicit consent has been obtained from the data subject OR processing is necessary for reasons of public interest; AND (b) the data controller has put suitable measures in place to safeguard the data subject's rights.",
+    "explicitConsentRequirement": "Consent must be clear, specific, and require a direct action from the data subject (e.g., checking a tick box, signing a document)."
+  },
+  "implementationGuidance": [
+    "Maintain a log of all automated decisions affecting data subjects, with the basis for any decision (model version, input data, output, override/review history)",
+    "Build the human review pathway into the same system that produces the automated decision — not as a separate manual process",
+    "Train reviewers in the operation of the model so they can meaningfully override recommendations",
+    "Make the privacy notice describe the automated decision-making in plain language with the meaningful logic above"
+  ]
+}

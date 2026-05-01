@@ -1,0 +1,40 @@
+{
+  "sourceType": "official-aligned",
+  "title": "CCTV — Use for Biometric Processing under ADMP",
+  "description": "Where CCTV is used to derive biometric data or to process biometric data for automated decision-making and profiling, the ADMP Guideline requires specific measures. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "measures": [
+    {
+      "id": "CCTV-1",
+      "rule": "Assess whether the use of CCTV is appropriate in the circumstances, considering reasonable expectations of the individuals whose data are processed and the potential impact on their rights and freedoms."
+    },
+    {
+      "id": "CCTV-2",
+      "rule": "Only use CCTVs in locations where they achieve the specific purpose."
+    },
+    {
+      "id": "CCTV-3",
+      "rule": "Place notices at prominent locations to notify individuals that security cameras are in operation and the reason for such operation (e.g., security). Signs should be more prominent and frequent in areas where people are less likely to expect surveillance."
+    },
+    {
+      "id": "CCTV-4",
+      "rule": "Only use audio recording where there is an evidenced and justified need."
+    },
+    {
+      "id": "CCTV-5",
+      "rule": "Avoid capturing footage that intrudes into spaces where individuals have a reasonable expectation of privacy."
+    },
+    {
+      "id": "CCTV-6",
+      "rule": "Manage access to footage and database to prevent unauthorised access (limit storage facility access; limit who can access systems and databases via password protection)."
+    },
+    {
+      "id": "CCTV-7",
+      "rule": "Implement a process to delete or overwrite footage on a regular basis when it is not required for investigative or other lawful purposes."
+    },
+    {
+      "id": "CCTV-8",
+      "rule": "Provide adequate training to staff and vendors for handling access requests to data."
+    }
+  ],
+  "applicabilityNote": "These measures apply when CCTV is used to derive biometric data (e.g., facial recognition) or to process biometric data via CCTV for ADMP purposes. General CCTV use without biometric processing remains subject to PDPA general principles (notice, security, retention)."
+}

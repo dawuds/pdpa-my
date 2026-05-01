@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "version": "1.0.0",
-    "lastUpdated": "2026-03-26",
-    "source": "PDPA Act 709 + A1727",
+    "version": "1.1.0",
+    "lastUpdated": "2026-04-30",
+    "source": "PDPA Act 709 + A1727 + JPDP Guidelines DPIA/DPbD/ADMP (issued 30 April 2026)",
     "techAuditDomain": "PDPA",
-    "techAuditPath": "Tech-Audit/PDPA/",
-    "description": "Maps 49 PDPA controls to Tech-Audit/PDPA audit procedures"
+    "techAuditPath": "Tech-Audit/Regulatory/PDPA/",
+    "description": "Maps 57 PDPA controls (49 base + 8 from DPbD/ADMP) to Tech-Audit/Regulatory/PDPA audit procedures across 12 domains"
   },
   "domainMappings": [
     {
@@ -458,6 +458,86 @@
           "procedureRefs": ["REG-03", "REG-05"],
           "pbcItems": ["10.5", "10.6", "10.8"],
           "relatedProvisions": ["s13", "s101"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "data-protection-by-design",
+      "domainName": "Data Protection by Design (DPbD)",
+      "techAuditPrefix": "DPB",
+      "workProgramFile": "Tech-Audit/Regulatory/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/Regulatory/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/Regulatory/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/Regulatory/PDPA/Templates/Finding-Template.md",
+      "guidelineRef": "JPDP DPbD Guideline issued 30 April 2026 (PCP No. 2/2025)",
+      "controlMappings": [
+        {
+          "controlSlug": "dpbd-lifecycle-integration",
+          "controlName": "DPbD Lifecycle Integration",
+          "procedureRefs": ["DPB-01", "DPB-02"],
+          "pbcItems": ["11.1", "11.2", "11.3", "11.4"],
+          "relatedProvisions": ["s5", "s6", "s7", "s9"]
+        },
+        {
+          "controlSlug": "dpbd-default-and-data-minimisation",
+          "controlName": "Privacy as Default and Data Minimisation",
+          "procedureRefs": ["DPB-03"],
+          "pbcItems": ["11.5", "11.6"],
+          "relatedProvisions": ["s6", "s7", "s10"]
+        },
+        {
+          "controlSlug": "dpbd-childrens-data-protection",
+          "controlName": "Children's Data Protection by Design",
+          "procedureRefs": ["DPB-04"],
+          "pbcItems": ["11.7", "11.8", "11.9"],
+          "relatedProvisions": ["s5", "s6", "s7"]
+        }
+      ]
+    },
+    {
+      "domainSlug": "automated-decisions-profiling",
+      "domainName": "Automated Decision-Making and Profiling (ADMP)",
+      "techAuditPrefix": "ADM",
+      "workProgramFile": "Tech-Audit/Regulatory/PDPA/Work-Program/PDPA-Audit-Program.md",
+      "pbcFile": "Tech-Audit/Regulatory/PDPA/Document-Requests/PBC-Request-List.md",
+      "ratingFile": "Tech-Audit/Regulatory/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md",
+      "findingTemplateFile": "Tech-Audit/Regulatory/PDPA/Templates/Finding-Template.md",
+      "guidelineRef": "JPDP ADMP Guideline issued 30 April 2026 (PCP No. 3/2025)",
+      "controlMappings": [
+        {
+          "controlSlug": "admp-trigger-and-scoping",
+          "controlName": "ADMP Trigger Identification and Scoping",
+          "procedureRefs": ["ADM-01"],
+          "pbcItems": ["12.1", "12.2"],
+          "relatedProvisions": ["s5", "s6"]
+        },
+        {
+          "controlSlug": "admp-transparency-and-information",
+          "controlName": "ADMP Transparency and Right to Information",
+          "procedureRefs": ["ADM-02"],
+          "pbcItems": ["12.3", "12.4"],
+          "relatedProvisions": ["s7"]
+        },
+        {
+          "controlSlug": "admp-human-review-mechanism",
+          "controlName": "ADMP Human Review Mechanism",
+          "procedureRefs": ["ADM-03"],
+          "pbcItems": ["12.5", "12.6"],
+          "relatedProvisions": ["s5", "s9"]
+        },
+        {
+          "controlSlug": "admp-refusal-and-alternatives",
+          "controlName": "ADMP Right to Refuse and Alternative Pathways",
+          "procedureRefs": ["ADM-04"],
+          "pbcItems": ["12.7", "12.8"],
+          "relatedProvisions": ["s5", "s6", "s17"]
+        },
+        {
+          "controlSlug": "admp-bias-monitoring-and-ai-safeguards",
+          "controlName": "ADMP Bias Monitoring and AI/Generative AI Safeguards",
+          "procedureRefs": ["ADM-05", "ADM-06"],
+          "pbcItems": ["12.9", "12.10", "12.11"],
+          "relatedProvisions": ["s5", "s9", "s11"]
         }
       ]
     }

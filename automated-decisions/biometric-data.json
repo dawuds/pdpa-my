@@ -1,0 +1,39 @@
+{
+  "sourceType": "official-aligned",
+  "title": "Biometric Data Measures (under ADMP Guideline)",
+  "description": "Biometric data is sensitive personal data under Section 4 of Act 709 (post-A1727). The ADMP Guideline imposes additional measures whether or not the ADM Restrictions are triggered. Source: JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "definitionCrossReference": "automated-decisions/definitions.json — biometric data definition and examples",
+  "additionalMeasures": [
+    {
+      "id": "BIO-1",
+      "name": "Transparency and control",
+      "rule": "Inform data subjects, among others, how their biometric data is used and provide control over their biometric information."
+    },
+    {
+      "id": "BIO-2",
+      "name": "Security and anti-spoofing",
+      "rule": "Impose appropriate security measures and technical safeguards (encryption). To prevent identity spoofing (synthetic fingerprints, 3D face models), implement anti-spoofing measures such as liveness detection within the system."
+    },
+    {
+      "id": "BIO-3",
+      "name": "Storage",
+      "rule": "Encrypt biometric data during storage. Separate storage of original biometric data and derived features. Keep biometric (and other personal) information only as long as necessary for its purposes."
+    },
+    {
+      "id": "BIO-4",
+      "name": "Accuracy",
+      "rule": "Have appropriate processes in place to check the accuracy of personal information collected and created."
+    },
+    {
+      "id": "BIO-5",
+      "name": "Disposal",
+      "rule": "When biometric data is no longer required, ensure the corresponding entries are permanently deleted from the system."
+    },
+    {
+      "id": "BIO-6",
+      "name": "Restricted secondary use",
+      "rule": "Restrict secondary disclosures of biometric data for secondary purposes unless the secondary purpose is directly related to the primary purpose of collection and within reasonable expectations of the data subject."
+    }
+  ],
+  "internationalContextNote": "Under the EU Digital Services Act, biometric data (as defined in EU GDPR) cannot be used for profiling. JPDP ADMP Guideline references this position but does not adopt an outright profiling ban for biometric data."
+}

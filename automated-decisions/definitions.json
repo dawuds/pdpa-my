@@ -1,0 +1,64 @@
+{
+  "sourceType": "official-aligned",
+  "title": "ADMP Definitions",
+  "description": "Definitions for automated decision-making, profiling, and biometric data. From the JPDP ADMP Guideline (PCP No. 3/2025 substantive content).",
+  "definitions": [
+    {
+      "term": "Automated decision-making",
+      "definition": "Process of making decisions by automated means without any human involvement.",
+      "explanation": "'Automated means' refers to automated data processing using technology where human influence is excluded or very minimal. Use of AI and machine learning for data processing is regarded as 'automated means'. May involve profiling but does not have to — automated decisions can be made with or without profiling.",
+      "internationalReference": {
+        "eu": "Solely automated decision-making is the ability to make decisions by technological means without human involvement.",
+        "uk": "Automated decision-making is the process of making a decision by automated means without any human involvement.",
+        "philippines": "Wholly or partially automated processing operation that can make decisions using technological means totally independent of human intervention; automated decision-making often involves profiling.",
+        "china": "Activities of automatically analysing and evaluating personal behaviours, hobbies, or economic, health, and credit status, among others, through computer programs, and making decisions."
+      }
+    },
+    {
+      "term": "Profiling",
+      "definition": "Any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a data subject, in particular to analyse or predict aspects concerning that data subject's performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.",
+      "internationalReference": {
+        "euUkPhilippines": "Same definition as above.",
+        "indonesia": "Any activity to identify an individual, including but not limited to work history, economic condition, medical records, personal preference, interest, talent, behaviour, location or movement of the data subject."
+      }
+    },
+    {
+      "term": "Biometric data",
+      "definition": "Any personal data resulting from technical processing relating to the physical, physiological or behavioural characteristics of a person.",
+      "section": "s4 (as amended by A1727)",
+      "categorisation": "Sensitive personal data under Section 4 of Act 709 (post-A1727). Subject to s17 conditions plus ADMP Guideline measures.",
+      "examples": [
+        "Fingerprint",
+        "Facial recognition",
+        "Iris and retina scans",
+        "Voice / voice recognition",
+        "DNA",
+        "Handwriting",
+        "Gait (manner of walking)"
+      ],
+      "examplesNote": "Categories are non-exhaustive. JPDP may add to this list in future."
+    }
+  ],
+  "useCaseExamples": [
+    {
+      "name": "Credit eligibility automated processing",
+      "description": "Financial institution conducts automated processing of credit card applications to determine eligibility without human assessment."
+    },
+    {
+      "name": "E-commerce personalisation",
+      "description": "E-commerce company monitors browsing/purchasing patterns and creates a profile to determine product marketing and discount eligibility."
+    },
+    {
+      "name": "HR candidate filtering",
+      "description": "HR department filters candidates for physical interview using an algorithm whose criteria may not be clear to the HR person — risk of discriminatory outcome."
+    },
+    {
+      "name": "Healthcare prediction",
+      "description": "Machine learning predicts patient health outcomes or treatment success based on group characteristics (age, history, lifestyle)."
+    },
+    {
+      "name": "Digital twins",
+      "description": "Virtual models simulating strategies/behaviours, providing risk-free testing and early-warning predictions for assets, people, or processes."
+    }
+  ]
+}

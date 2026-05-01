@@ -58,5 +58,17 @@
     "description": "Controls for maintaining and renewing the organization's data controller registration with the Personal Data Protection Commissioner, responding to regulatory inspections and enforcement actions, managing Commissioner correspondence, and monitoring regulatory developments including amendments, codes of practice, and guidelines",
     "relatedSections": ["s13", "s14", "s15", "s16", "s101", "s102", "s110", "s111"],
     "relatedPrinciples": []
+  },
+  "data-protection-by-design": {
+    "name": "Data Protection by Design (DPbD)",
+    "description": "Controls embedding data protection across the full processing lifecycle (design, development, deployment, operation, decommissioning) per the JPDP DPbD Guideline issued 30 April 2026. Operationalises the 7 foundational DPbD principles, default-privacy and data-minimisation requirements, and special protections for children's personal data. DPbD is not triggered by a threshold — it is a continuous obligation across all processing.",
+    "relatedSections": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
+    "relatedPrinciples": ["general", "notice-and-choice", "disclosure", "security", "retention", "data-integrity", "access"]
+  },
+  "automated-decisions-profiling": {
+    "name": "Automated Decision-Making and Profiling (ADMP)",
+    "description": "Controls regulating solely-automated decision-making and profiling that legally affect or significantly affect data subjects, per the JPDP ADMP Guideline issued 30 April 2026. Covers the regulatory trigger (legal effects / significantly affects), the three ADM Restrictions (Right to Refuse, Right to Information, Right to Human Review), Exceptions and Exemptions, AI/Generative AI as ADM tools, biometric data measures, and CCTV-based biometric processing.",
+    "relatedSections": ["s4", "s5", "s6", "s17", "s45"],
+    "relatedPrinciples": ["general", "notice-and-choice", "security"]
   }
 }

@@ -1,0 +1,71 @@
+{
+  "sourceType": "official-aligned",
+  "title": "Children's Privacy under DPbD",
+  "description": "Special protections for processing personal data of children, as proposed in the JPDP DPbD Guideline (issued 30 April 2026; PCP No. 2/2025 substantive content). Children merit specific protection due to lower awareness of risks, consequences, safeguards, and rights.",
+  "scope": {
+    "appliesTo": "Providers of products or services directed at, intended for, or likely to be accessed by children — including offline (educational, sports, social clubs, health/social support) and digital (websites, apps, IoT, social media, gaming, entertainment, advocacy).",
+    "scopeNote": "Covers services that a significant number of children use in reality, even if not primarily intended for children."
+  },
+  "bestInterestsOfChild": {
+    "principle": "Data controllers must take into account the best interests of children as a primary consideration where any conflict arises. Source: Article 3 of the UN Convention on the Rights of the Child.",
+    "considerations": [
+      "Keep children safe from exploitation (commercial, sexual, abuse)",
+      "Protect and support health and wellbeing",
+      "Protect and support physical, psychological, emotional development",
+      "Protect children's need to develop their own views and identity",
+      "Protect freedom of association and play",
+      "Support the needs of children with disabilities",
+      "Recognise the role of parents in protecting and promoting children's best interests",
+      "Recognise the evolving capacity of the child to form their own view"
+    ]
+  },
+  "ageVerification": {
+    "obligation": "Data controllers must make reasonable efforts to verify they have received consent to process children's personal data; in certain circumstances this entails establishing age verification mechanisms. Approach should be proportionate and risk-based — greater stringency where processing carries higher risk.",
+    "mechanisms": [
+      {
+        "type": "Self-declaration",
+        "note": "Most common but easily bypassed; suitable only for low-risk processing or as one of several techniques."
+      },
+      {
+        "type": "Credit card verification",
+        "note": "Used by e-commerce sites for adult products. Cannot ascertain card user is owner; minimum credit card age varies by country."
+      },
+      {
+        "type": "Biometrics (e.g., facial recognition)",
+        "note": "AI-powered. Accuracy issues, privacy concerns due to sensitive data use, risk of profiling."
+      },
+      {
+        "type": "Inferential age verification",
+        "note": "Browsing history, maturity questionnaires, online content/purchase analysis."
+      },
+      {
+        "type": "Offline verification",
+        "note": "Scratch cards or in-situ ID checks at retail outlets."
+      },
+      {
+        "type": "Verification of parental consent",
+        "note": "Traditional ID document checks; for higher-risk: proof of ID; for lower-risk: confirmation email."
+      },
+      {
+        "type": "Vouching",
+        "note": "Third party (not parent) confirms child's age."
+      },
+      {
+        "type": "Digital ID",
+        "note": "State-issued tools (China, Canada, Australia, EU digital identity wallet)."
+      }
+    ],
+    "antiLockoutPrinciple": "Compliance does not justify locking children out of services or providing inferior two-tier offerings. Doing so risks driving children to lie about their age and access services without child-appropriate protections."
+  },
+  "dpbdElementsForChildren": {
+    "language": "Clear, concise, child-friendly language explaining what is done with their personal data.",
+    "accessibility": "Information in obvious, easy-to-find places. Not in tiny writing. Not designed to nudge acceptance. Consider device used (phone, computer, IoT, toys), use of cartoons/videos, layered/hover/pop-up notices.",
+    "context": "Not only at sign-up. Just-in-time notifications when data is shared (e.g., before posting, before changing default privacy settings).",
+    "parentalDashboard": "Where appropriate, provide parents with overall view of activity and settings.",
+    "rightsExercise": "Dedicated, clear, child-friendly user flows. For automated tools handling DSARs, design for circumstances requiring individual (non-automated) assessment for child subjects."
+  },
+  "prohibitionOnProfiling": {
+    "rule": "Data controllers must not profile children, engage in automated decision-making concerning children, or use their personal data for advertising/marketing purposes — unless they can clearly demonstrate how and why it is in the best interests of children to do so.",
+    "crossReference": "automated-decisions/index.json — ADMP module covers the general rule on automated decision-making and profiling; this section adds the children-specific prohibition."
+  }
+}
