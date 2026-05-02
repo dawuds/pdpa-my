@@ -61,6 +61,13 @@
     "admp-refusal-and-alternatives",
     "admp-bias-monitoring-and-ai-safeguards"
   ],
+  "evidenceExpectations": [
+    "ADMP Threshold Assessment (Ambang ADMP) documentation",
+    "DPO Design-Engagement Records (§5.1 mandatory earliest involvement)",
+    "Transparency Disclosure Log (including Trade Secret/IP carve-out rationales)",
+    "AI Operator Training Registry (records of mandatory staff training)",
+    "DPIA Report for ADMP (regardless of subject count)"
+  ],
   "crossRepoLinks": {
     "AI-Governance": "Cross-link AI/Gen-AI controls — ADMP triggers AI accountability obligations",
     "dpia": "DPIA quantitative threshold of >10,000 subjects for ADM means most regulated ADMP also requires DPIA",
