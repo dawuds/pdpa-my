@@ -1,7 +1,7 @@
 {
   "sourceType": "official-aligned",
   "title": "Data Protection by Design (DPbD)",
-  "description": "Personal data protection integrated into the entire lifecycle of a processing activity, from design through development, deployment to decommissioning. Aligned with the JPDP DPbD Guideline issued 30 April 2026 (PCP No. 2/2025 substantive content).",
+  "description": "Personal data protection integrated into the entire lifecycle of a processing activity, from design through development, deployment to decommissioning. Aligned with the JPDP DPbD Guideline issued 30 April 2026 (BM-only). The issued guideline restructured DPbD around 4 elements (NOT the 7 Cavoukian foundational principles in PCP No. 2/2025); the standalone children's privacy chapter from the PCP was removed. See `childrens-privacy.json` and `principles.json` for the issued-vs-PCP split.",
   "guidelineStatus": {
     "issued": "2026-04-30",
     "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",

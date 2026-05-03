@@ -1,7 +1,7 @@
 {
   "sourceType": "official-aligned",
   "title": "Automated Decision-Making and Profiling (ADMP)",
-  "description": "Regulatory regime for automated decision-making and profiling (including AI / Generative AI use), data subject rights, exceptions, and special protections for biometric data and CCTV. Aligned with the JPDP ADMP Guideline issued 30 April 2026 (PCP No. 3/2025 substantive content).",
+  "description": "Regulatory regime for automated decision-making and profiling under the JPDP ADMP Guideline issued 30 April 2026 (BM-only). Anchored in Section 7 (notice — mandatory FACT of ADM disclosure), Section 38 (withdrawal of consent), and Section 40 (sensitive personal data conditions). The issued guideline is materially narrower than PCP No. 3/2025 — biometric and CCTV measures are deferred to a separate forthcoming guideline; the three PCP-named ADM Restrictions (Refuse/Information/Human Review) are NOT carried as named rights. See `removedFromPCP` for the full divergence list.",
   "guidelineStatus": {
     "issued": "2026-04-30",
     "issuingAuthority": "Personal Data Protection Commissioner Shariffah Rashidah Syed Othman",
@@ -14,13 +14,13 @@
     "description": "Act 709 does not yet specifically address automated decision-making and profiling. The ADMP Guideline introduces the regulatory regime under the Commissioner's authority. Cross-references s4 (definition of biometric data, included in sensitive personal data per A1727), s5 (mandatory PDP Principles compliance), s6 (consent), s17 (sensitive personal data conditions), s45 (general exemptions, replicated for ADMP exemptions)."
   },
   "structure": {
-    "definitions": "automated-decisions/definitions.json — automated decision-making, profiling, biometric data",
-    "triggers": "automated-decisions/triggers.json — when ADMP regulation applies (legal effects / significantly affects)",
-    "rights": "automated-decisions/data-subject-rights.json — Right to Refuse, Right to Information, Right to Human Review",
-    "exceptions": "automated-decisions/exceptions.json — Exceptions and Exemptions",
-    "ai": "automated-decisions/ai-generative-ai.json — AI/Generative AI as ADM tool",
-    "biometric": "automated-decisions/biometric-data.json — biometric data measures",
-    "cctv": "automated-decisions/cctv.json — CCTV use for biometric processing"
+    "definitions": "automated-decisions/definitions.json — automated decision-making, profiling, biometric data; predictive vs inference distinguishing elements (§4.2)",
+    "triggers": "automated-decisions/triggers.json — Ambang ADMP (legal effects / significantly affects); DPO earliest engagement; DPIA regardless of subject count",
+    "rights": "automated-decisions/data-subject-rights.json — issuedRequirements (Section 7 notice + Section 38 withdrawal + Section 40 sensitive PD); pcpDerivedRightsForReference (Right to Refuse, Right to Information, Right to Human Review — flagged as NOT in issued)",
+    "exceptions": "automated-decisions/exceptions.json — §9.9 Exceptions (Kekecualian) — contract / legal compliance / consent (NOT explicit consent); §9.12 Section 45 Exemptions (cross-reference)",
+    "ai": "automated-decisions/ai-generative-ai.json — 7 AI best practices (§10.2.1–10.2.7), permissive verb 'boleh menerapkan'; PCP no-manipulation safeguard flagged as removed",
+    "biometric": "automated-decisions/biometric-data.json — PCP-derived measures retained for analyst reference; NOT in issued ADMP Guideline (sourceType: pcp-derived-pending-issuance)",
+    "cctv": "automated-decisions/cctv.json — PCP-derived measures retained for analyst reference; NOT in issued ADMP Guideline (sourceType: pcp-derived-pending-issuance)"
   },
   "coreObligations": [
     "Identify which processing operations constitute automated decision-making or profiling (Ambang ADMP — §7.1)",
@@ -45,14 +45,15 @@
       "Children/minors-in-ADMP discussion — no equivalent in issued text"
     ]
   },
-  "internationalAlignment": {
-    "gdpr": "Article 22 (right not to be subject to a decision based solely on automated processing); Article 4(4) (definition of profiling)",
-    "uk": "UK GDPR Article 22 + ICO guidance",
-    "philippines": "NPC Circular on automated decision-making",
-    "indonesia": "Personal Data Protection Law profiling provisions",
-    "china": "Personal Information Protection Law (PIPL) automated decision-making provisions",
-    "euAiAct": "Risk-based AI regulation overlapping where AI systems make decisions affecting individuals",
-    "euDsa": "Digital Services Act — bans profiling-based ads for special category data; bans targeted ads to minors"
+  "internationalAlignmentNote": "The issued JPDP ADMP Guideline does NOT explicitly cite GDPR, UK GDPR, NPC Circular, PIPL, EU AI Act, or EU DSA. Cross-references below are analyst-supplied for cross-jurisdictional comparison only — they are NOT issued JPDP requirements and must NOT be cited as such in audit findings.",
+  "internationalAlignmentAnalyst": {
+    "gdpr": "Article 22 (right not to be subject to a decision based solely on automated processing); Article 4(4) (definition of profiling) — analyst reference",
+    "uk": "UK GDPR Article 22 + ICO guidance — analyst reference",
+    "philippines": "NPC Circular on automated decision-making — analyst reference",
+    "indonesia": "Personal Data Protection Law profiling provisions — analyst reference",
+    "china": "Personal Information Protection Law (PIPL) automated decision-making provisions — analyst reference",
+    "euAiAct": "Risk-based AI regulation overlapping where AI systems make decisions affecting individuals — analyst reference",
+    "euDsa": "Digital Services Act — bans profiling-based ads for special category data; bans targeted ads to minors — analyst reference (relevant to children's-ADMP best practice since PCP §2.57 prohibition was dropped from issued JPDP guidelines)"
   },
   "relatedControls": [
     "admp-trigger-and-scoping",
@@ -69,8 +70,21 @@
     "DPIA Report for ADMP (regardless of subject count)"
   ],
   "crossRepoLinks": {
-    "AI-Governance": "Cross-link AI/Gen-AI controls — ADMP triggers AI accountability obligations",
-    "dpia": "DPIA quantitative threshold of >10,000 subjects for ADM means most regulated ADMP also requires DPIA",
-    "dpbd": "DPbD principles for sensitive data and children's processing apply to ADMP design"
+    "AI-Governance": "Cross-link AI/Gen-AI controls — ADMP triggers AI accountability obligations; ADMP §10.2 best practices align with NIST AI RMF and EU AI Act analyst references in AI-Governance repo",
+    "dpia": "ADMP §6.1 mandates DPIA for any in-scope ADMP regardless of subject count. The PCP >10,000-ADM-subjects quantitative threshold was REMOVED from the issued DPIA Guideline (Q7 qualitative factor instead). See dpia/thresholds.json for the current 2-quantitative + 7-qualitative framework.",
+    "dpbd": "DPbD's 4 issued elements (Sifat Proaktif / Perlindungan Hujung-ke-hujung / Ketelusan / Berpusatkan Pengguna) apply to ADMP design. NOTE: PCP §2.57 prohibition on profiling/marketing of children was NOT carried into either the DPbD or ADMP issued guidelines — children's-ADMP rules now rest only on DPbD §5.3 parental consent for under-18 subjects."
+  },
+  "newRequirementsAdded": {
+    "note": "Issued requirements that are NEW vs PCP. Auditors should verify these specifically — they are the most likely points where existing programmes fall short.",
+    "items": [
+      "§5.1 — DPO must be engaged from the earliest design stage of any ADMP (not deferred to fieldwork or pre-launch review)",
+      "§6.1 — DPIA mandatory for any in-scope ADMP regardless of nature or extent (subject count is no longer gating)",
+      "§6 flowchart — explicit assessment path including 2-yearly DPIA refresh for ADMP-related processing",
+      "§9.3 — Mandatory s7 notice that ADM/profiling is occurring (the FACT must be disclosed; logic explanation under §9.4 is permissive)",
+      "§9.4 — Permissive logic explanation with explicit carve-outs for confidential information, trade secrets, intellectual property, proprietary rights",
+      "§10.2.3 — NEW: Privacy notice must disclose AI use (where AI is involved in ADMP); not required by PCP",
+      "§4.2 — Predictive (ramalan) and inference (inferens) distinguishing elements are now formally adopted as part of the profiling test",
+      "§3.2 — Partially-automated processing is explicitly in scope (PCP framing was 'solely automated')"
+    ]
   }
 }
