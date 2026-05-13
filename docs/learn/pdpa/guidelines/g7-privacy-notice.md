@@ -156,7 +156,7 @@ GDPR Articles 13 / 14 are the equivalents but more prescriptive:
 | Controller identity + contact | Implicit | GDPR explicit |
 | DPO contact | (added by Quick Guide) | PDPA evolving via guideline |
 | Purpose + lawful basis | s7(1)(b) | GDPR adds lawful-basis citation |
-| Legitimate interest pursued (where Art 6(1)(f)) | (no PDPA equivalent) | PDPA has no legitimate-interests basis |
+| Legitimate interest pursued (where Art 6(1)(f) or PDPA s6(2)(g)) | Implicit in s7(1)(c) purpose | Both regimes codify legitimate interests; GDPR requires explicit disclosure of the interest pursued, PDPA does not codify the disclosure requirement but the Privacy Notice Guides recommend it |
 | Recipients categories | s7(1)(e) | Direct equivalent |
 | Third-country transfers + safeguards | (implicit) | GDPR explicit |
 | Retention period | (no PDPA equivalent in s7(1)) | PDPA expected via Guides but not s7(1) |

@@ -178,11 +178,153 @@ function updateNav() {
 // browsers display as plain text — UX failure). The github.com blob URL renders
 // via GitHub's own markdown parser. Note: this takes the user OUT of the SPA;
 // the proper fix is inline rendering — flagged for the UX expert review.
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/dawuds/pdpa-my/main/';
 const GITHUB_BLOB_BASE = 'https://github.com/dawuds/pdpa-my/blob/main/';
-
 function blobUrl(path) { return GITHUB_BLOB_BASE + path; }
 
+async function loadText(path) {
+  try {
+    const res = await fetch(path, { cache: 'no-cache' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return await res.text();
+  } catch (e) {
+    console.error('Failed to load text', path, e);
+    return null;
+  }
+}
+
+// Tiny markdown renderer — handles headings, paragraphs, lists, tables, code,
+// blockquotes, hr, bold/italic/code-spans, links. Adapted from OT-Security pattern.
+function mdToHtml(src) {
+  if (!src) return '';
+  src = src.replace(/\r\n?/g, '\n');
+
+  // Strip YAML frontmatter if present
+  src = src.replace(/^---\n[\s\S]*?\n---\n/, '');
+
+  const codeBlocks = [];
+  src = src.replace(/```([a-zA-Z0-9_-]*)\n([\s\S]*?)```/g, function(_, lang, body) {
+    codeBlocks.push('<pre class="md-code"><code>' + esc(body) + '</code></pre>');
+    return ' CODE' + (codeBlocks.length - 1) + ' ';
+  });
+
+  const lines = src.split('\n');
+  const out = [];
+  let i = 0;
+
+  function inlineFmt(s) {
+    s = esc(s);
+    s = s.replace(/`([^`]+)`/g, '<code class="md-inline-code">$1</code>');
+    s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(_, txt, url) {
+      const safeUrl = url.replace(/"/g, '&quot;');
+      const isExternal = /^https?:\/\//.test(url);
+      const attrs = isExternal ? ' target="_blank" rel="noopener"' : '';
+      return '<a href="' + safeUrl + '"' + attrs + '>' + txt + '</a>';
+    });
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    return s;
+  }
+
+  while (i < lines.length) {
+    const line = lines[i];
+    if (line.indexOf(' CODE') === 0) { out.push(line); i++; continue; }
+    if (/^\s*$/.test(line)) { i++; continue; }
+
+    const hm = line.match(/^(#{1,6})\s+(.*)$/);
+    if (hm) {
+      const lvl = hm[1].length;
+      out.push('<h' + lvl + ' class="md-h">' + inlineFmt(hm[2].trim()) + '</h' + lvl + '>');
+      i++; continue;
+    }
+
+    if (/^---+\s*$/.test(line) || /^\*\*\*+\s*$/.test(line)) { out.push('<hr class="md-hr">'); i++; continue; }
+
+    if (/^>\s?/.test(line)) {
+      const bq = [];
+      while (i < lines.length && /^>\s?/.test(lines[i])) { bq.push(lines[i].replace(/^>\s?/, '')); i++; }
+      out.push('<blockquote class="md-bq">' + inlineFmt(bq.join(' ')) + '</blockquote>');
+      continue;
+    }
+
+    if (/^\|.*\|\s*$/.test(line) && i + 1 < lines.length && /^\|[\s:|-]+\|\s*$/.test(lines[i + 1])) {
+      const headerCells = line.replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+      i += 2;
+      const rows = [];
+      while (i < lines.length && /^\|.*\|\s*$/.test(lines[i])) {
+        rows.push(lines[i].replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
+        i++;
+      }
+      const thead = '<thead><tr>' + headerCells.map(c => '<th>' + inlineFmt(c) + '</th>').join('') + '</tr></thead>';
+      const tbody = '<tbody>' + rows.map(r => '<tr>' + r.map(c => '<td>' + inlineFmt(c) + '</td>').join('') + '</tr>').join('') + '</tbody>';
+      out.push('<div class="md-table-wrap"><table class="md-table">' + thead + tbody + '</table></div>');
+      continue;
+    }
+
+    if (/^[-*]\s+/.test(line)) {
+      const ul = [];
+      while (i < lines.length && /^[-*]\s+/.test(lines[i])) {
+        ul.push('<li>' + inlineFmt(lines[i].replace(/^[-*]\s+/, '')) + '</li>');
+        i++;
+      }
+      out.push('<ul class="md-ul">' + ul.join('') + '</ul>');
+      continue;
+    }
+
+    if (/^\d+\.\s+/.test(line)) {
+      const ol = [];
+      while (i < lines.length && /^\d+\.\s+/.test(lines[i])) {
+        ol.push('<li>' + inlineFmt(lines[i].replace(/^\d+\.\s+/, '')) + '</li>');
+        i++;
+      }
+      out.push('<ol class="md-ol">' + ol.join('') + '</ol>');
+      continue;
+    }
+
+    const p = [line];
+    i++;
+    while (i < lines.length && lines[i].trim() && !/^(#{1,6}\s|>|---|\*\*\*|\|.*\|\s*$|[-*]\s+|\d+\.\s+| CODE)/.test(lines[i])) {
+      p.push(lines[i]);
+      i++;
+    }
+    out.push('<p class="md-p">' + inlineFmt(p.join(' ')) + '</p>');
+  }
+
+  let html = out.join('\n');
+  html = html.replace(/ CODE(\d+) /g, function(_, n) { return codeBlocks[parseInt(n, 10)]; });
+  return html;
+}
+
+// Learn view dispatcher. Routes:
+//   #learn                                      → landing (callout + index)
+//   #learn/pdpa/tier:<tierId>                   → tier list
+//   #learn/gdpr/tier:<tierId>                   → tier list
+//   #learn/pdpa/lesson:<tierId>:<lessonId>      → in-app lesson reader
+//   #learn/gdpr/lesson:<tierId>:<lessonId>      → in-app lesson reader
+//   #learn/guideline:<id>                       → JPDP guideline deep-dive
+//   #learn/article:<id>                         → GDPR article deep-dive
+//   #learn/crossref:<slug>                      → cross-reference doc
 async function renderLearn(el, sub) {
+  if (sub) {
+    if (sub.indexOf('guideline:') === 0) return renderGuidelineDeepDive(el, sub.slice(10));
+    if (sub.indexOf('article:') === 0)   return renderGdprArticle(el, sub.slice(8));
+    if (sub.indexOf('crossref:') === 0)  return renderCrossRefDoc(el, sub.slice(9));
+    const trackMatch = sub.match(/^(pdpa|gdpr)\/(tier|lesson):(.+)$/);
+    if (trackMatch) {
+      const trackId = trackMatch[1];
+      const kind = trackMatch[2];
+      const rest = trackMatch[3];
+      if (kind === 'tier') return renderLearnTier(el, trackId, rest);
+      if (kind === 'lesson') {
+        const parts = rest.split(':');
+        return renderLearnLesson(el, trackId, parts[0], parts[1]);
+      }
+    }
+  }
+  return renderLearnLanding(el);
+}
+
+async function renderLearnLanding(el) {
   el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading learning curriculum…</span></div>`;
   try {
     const topIndex = await fetchJSON('docs/learn/index.json');
@@ -195,118 +337,262 @@ async function renderLearn(el, sub) {
       fetchJSON('docs/learn/gdpr/index.json'),
     ]);
 
-    // Recently issued (30 April 2026) — prominent callout
     const recentGuidelines = pdpaCurr && pdpaCurr.guidelineDeepDives
       ? pdpaCurr.guidelineDeepDives.deepDives.filter(g => ['g1-dpia','g2-dpbd','g3-admp'].includes(g.id))
       : [];
 
     el.innerHTML = `
-      <div class="disclaimer">
-        ${esc(topIndex.verificationCaveat || 'Educational scaffold for the consulting team. Material is illustrative only — never legal advice.')}
-      </div>
+      <div class="disclaimer">${esc(topIndex.verificationCaveat || 'Educational scaffold for the consulting team. Material is illustrative only — never legal advice.')}</div>
 
-      <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">PDPA Learning Curriculum — Consulting Team</h2>
+      <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">PDPA + GDPR Learning Curriculum — Consulting Team</h2>
       <p style="color:var(--text-secondary);margin-bottom:0.5rem;">${esc(topIndex.description || '')}</p>
-      <p style="margin-bottom:1.5rem;font-size:0.875rem;">Last updated: <strong>${esc(topIndex.lastUpdated || '')}</strong> &middot; <a href="${blobUrl('docs/learn/README.md')}" target="_blank">README</a></p>
+      <p style="margin-bottom:1.5rem;font-size:0.875rem;">Last updated: <strong>${esc(topIndex.lastUpdated || '')}</strong></p>
 
       ${recentGuidelines.length ? `
-      <div style="border:2px solid var(--accent, #2563eb); border-radius:8px; padding:1rem 1.25rem; margin-bottom:2rem; background:rgba(37,99,235,0.04);">
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 0.5rem;color:var(--accent, #2563eb);">⚡ Most Recent Issuances — 30 April 2026</h3>
-        <p style="font-size:0.875rem;margin:0 0 1rem;color:var(--text-secondary);">JPDP issued three new guidelines simultaneously. <strong>Privacy by Design (DPbD)</strong> is the second of the three. These are the most-cited deep-dives for current consulting engagements.</p>
+      <div class="issued-callout">
+        <div class="issued-callout-head">
+          <span class="badge-issued">ISSUED 30 APR 2026 · BM</span>
+          <h3>Most Recent Issuances — JPDP April 2026 Guidelines</h3>
+        </div>
+        <p style="font-size:0.875rem;margin:0.5rem 0 1rem;color:var(--text-secondary);">JPDP issued three new guidelines simultaneously on 30 April 2026 (Commissioner Shariffah Rashidah Syed Othman). <strong>Privacy by Design (DPbD)</strong> is the second of the three. Click any card for the in-app deep-dive reader.</p>
         <div class="control-grid">
           ${recentGuidelines.map(g => `
-            <a href="${blobUrl('docs/learn/pdpa/' + g.path)}" target="_blank" class="control-card" style="text-decoration:none;color:inherit;display:block;border-left:4px solid var(--accent, #2563eb);">
-              <div class="control-id" style="color:var(--accent, #2563eb);font-weight:700;">${esc(g.id.toUpperCase().replace('G1-','').replace('G2-','').replace('G3-',''))}</div>
-              <h4 class="control-card-title" style="margin-top:0.25rem;">${esc(g.title)}</h4>
-              <p style="font-size:0.8125rem;color:var(--text-secondary);margin-top:0.5rem;">${esc(g.summary).slice(0,180)}…</p>
+            <a href="#learn/guideline:${esc(g.id)}" class="guideline-card-issued">
+              <span class="badge-issued-small">${esc(g.id.replace(/^g\d-/, '').toUpperCase())}</span>
+              <h4>${esc(g.title)}</h4>
+              <p>${esc(g.summary)}</p>
+              <div class="card-meta">Read deep-dive →</div>
             </a>
           `).join('')}
         </div>
       </div>
       ` : ''}
 
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">All JPDP Guideline Deep-Dives</h3>
-      <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem;">Section-by-section reference for each of the seven currently-issued JPDP guidelines. Use when you need detail beyond the tiered lessons.</p>
+      <h3 class="learn-section-title">All JPDP Guideline Deep-Dives</h3>
+      <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem;">Section-by-section reference for each of the seven currently-issued JPDP guidelines.</p>
       ${pdpaCurr && pdpaCurr.guidelineDeepDives ? `
       <div class="control-grid" style="margin-bottom:2rem;">
         ${pdpaCurr.guidelineDeepDives.deepDives.map(g => `
-          <a href="${blobUrl('docs/learn/pdpa/' + g.path)}" target="_blank" class="control-card" style="text-decoration:none;color:inherit;display:block;border-left:4px solid var(--accent);">
+          <a href="#learn/guideline:${esc(g.id)}" class="control-card control-card-link">
             <div class="control-id">${esc(g.id.toUpperCase())}</div>
             <h4 class="control-card-title">${esc(g.title)}</h4>
-            <p style="font-size:0.8125rem;color:var(--text-secondary);margin-top:0.5rem;">${esc(g.summary).slice(0,180)}…</p>
+            <p class="control-card-desc">${esc(g.summary)}</p>
           </a>
         `).join('')}
       </div>
       ` : ''}
 
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">Cross-Reference (PDPA vs GDPR)</h3>
+      <h3 class="learn-section-title">Cross-Reference (PDPA ↔ GDPR)</h3>
       <div class="control-grid" style="margin-bottom:2rem;">
-        <a href="${blobUrl('docs/learn/cross-reference/pdpa-vs-gdpr.md')}" target="_blank" class="control-card" style="text-decoration:none;color:inherit;display:block;">
-          <h4 class="control-card-title">📑 PDPA vs GDPR — Side-by-side</h4>
-          <p style="font-size:0.8125rem;color:var(--text-secondary);">15-section obligation comparator covering scope, penalties, principles, basis, rights, sensitive PD, DPO, breach, cross-border, DPIA, DPbD vs Art 25, ADMP vs Art 22, RoPA.</p>
+        <a href="#learn/crossref:pdpa-vs-gdpr" class="control-card control-card-link">
+          <h4 class="control-card-title">PDPA vs GDPR — Side-by-side</h4>
+          <p class="control-card-desc">15-section obligation comparator covering scope, penalties, principles, basis, rights, sensitive PD, DPO, breach, cross-border, DPIA, DPbD vs Art 25, ADMP vs Art 22, RoPA.</p>
         </a>
-        <a href="${blobUrl('docs/learn/cross-reference/concepts.md')}" target="_blank" class="control-card" style="text-decoration:none;color:inherit;display:block;">
-          <h4 class="control-card-title">🔤 Concept Equivalence</h4>
-          <p style="font-size:0.8125rem;color:var(--text-secondary);">Terminology mapping (data controller / processor / subject / DPO / SA equivalents).</p>
+        <a href="#learn/crossref:concepts" class="control-card control-card-link">
+          <h4 class="control-card-title">Concept Equivalence</h4>
+          <p class="control-card-desc">Terminology mapping (data controller / processor / subject / DPO / SA equivalents).</p>
         </a>
-        <a href="${blobUrl('docs/learn/cross-reference/obligations.md')}" target="_blank" class="control-card" style="text-decoration:none;color:inherit;display:block;">
-          <h4 class="control-card-title">📋 Obligations Grid</h4>
-          <p style="font-size:0.8125rem;color:var(--text-secondary);">42-row operational obligation grid with citations to both regimes.</p>
+        <a href="#learn/crossref:obligations" class="control-card control-card-link">
+          <h4 class="control-card-title">Obligations Grid</h4>
+          <p class="control-card-desc">42-row operational obligation grid with citations to both regimes.</p>
         </a>
       </div>
 
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">PDPA Curriculum — 4 Tiers</h3>
-      <div style="margin-bottom:2rem;">${renderTrackTiers(pdpaCurr, 'pdpa')}</div>
+      <h3 class="learn-section-title">PDPA Curriculum — 4 Tiers</h3>
+      <div class="learn-tier-grid">${renderLearnTrackCards(pdpaCurr, 'pdpa')}</div>
 
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">GDPR Curriculum — 4 Tiers (parallel)</h3>
-      <div style="margin-bottom:2rem;">${renderTrackTiers(gdprCurr, 'gdpr')}</div>
+      <h3 class="learn-section-title">GDPR Curriculum — 4 Tiers (parallel)</h3>
+      <div class="learn-tier-grid">${renderLearnTrackCards(gdprCurr, 'gdpr')}</div>
 
       ${gdprCurr && gdprCurr.articleDeepDives ? `
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">GDPR Article Deep-Dives</h3>
+      <h3 class="learn-section-title">GDPR Article Deep-Dives</h3>
       <div class="control-grid" style="margin-bottom:2rem;">
         ${gdprCurr.articleDeepDives.deepDives.map(a => `
-          <a href="${blobUrl('docs/learn/gdpr/' + a.path)}" target="_blank" class="control-card" style="text-decoration:none;color:inherit;display:block;border-left:4px solid var(--accent-alt, #4a90e2);">
+          <a href="#learn/article:${esc(a.id)}" class="control-card control-card-link" style="border-left:4px solid var(--accent-alt, #4a90e2);">
             <div class="control-id">${esc(a.id.toUpperCase())}</div>
             <h4 class="control-card-title">${esc(a.title)}</h4>
-            <p style="font-size:0.8125rem;color:var(--text-secondary);margin-top:0.5rem;">${esc(a.summary).slice(0,180)}…</p>
+            <p class="control-card-desc">${esc(a.summary)}</p>
           </a>
         `).join('')}
       </div>
       ` : ''}
-
-      <div style="border-top:1px solid var(--border); margin-top:2rem; padding-top:1rem; font-size:0.8125rem; color:var(--text-secondary);">
-        <strong>UX note:</strong> Lesson and deep-dive links open in GitHub's rendered view (new tab). Inline rendering inside the SPA is on the UX-review roadmap — see <a href="${blobUrl('docs/learn/README.md')}" target="_blank">docs/learn/README.md</a>.
-      </div>
     `;
   } catch (err) {
     el.innerHTML = `<div class="empty-state"><h3>Learn view error</h3><p>${esc(err.message)}</p></div>`;
   }
 }
 
-function renderTrackTiers(curr, trackPath) {
+function renderLearnTrackCards(curr, trackId) {
   if (!curr || !curr.tiers) return `<p>Curriculum not available.</p>`;
-  return `
-    <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem;">${esc(curr.description || '')}</p>
-    ${curr.tiers.map(tier => `
-      <details style="margin-bottom:0.75rem;border:1px solid var(--border);border-radius:6px;padding:0.75rem;">
-        <summary style="cursor:pointer;font-weight:600;">${esc(tier.tier)} — ${esc(tier.name)} <span style="font-weight:400;color:var(--text-secondary);font-size:0.875rem;">(${esc(tier.duration || '')})</span></summary>
-        <div style="margin-top:0.75rem;">
-          <p style="font-size:0.875rem;margin-bottom:0.5rem;"><strong>Audience:</strong> ${esc(tier.audience || '')}</p>
-          <p style="font-size:0.875rem;margin-bottom:0.75rem;"><strong>Outcome:</strong> ${esc(tier.outcome || '')}</p>
-          <ul style="list-style:none;padding:0;">
-            ${tier.lessons.map(l => `
-              <li style="margin-bottom:0.5rem;padding:0.5rem;border-left:3px solid var(--accent);background:var(--bg-secondary, transparent);">
-                <a href="${blobUrl('docs/learn/' + trackPath + '/' + l.path)}" target="_blank" style="font-weight:500;text-decoration:none;color:inherit;">
-                  ${l.checkpoint ? '✓ ' : ''}${esc(l.title)}
-                </a>
-                <span style="font-size:0.75rem;color:var(--text-secondary);margin-left:0.5rem;">(${esc(l.estimatedTime || '')})</span>
-                <p style="font-size:0.875rem;color:var(--text-secondary);margin:0.25rem 0 0;">${esc(l.summary || '')}</p>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      </details>
-    `).join('')}
+  return curr.tiers.map(tier => `
+    <a href="#learn/${trackId}/tier:${esc(tier.id)}" class="learn-tier">
+      <div class="learn-tier-head">
+        <span class="learn-tier-num">${esc(tier.tier)}</span>
+        <span class="learn-tier-title">${esc(tier.name)}</span>
+        <span class="learn-tier-meta">${esc(tier.duration || '')} · ${esc(tier.audience || '').slice(0, 60)}${(tier.audience || '').length > 60 ? '…' : ''}</span>
+      </div>
+      <div class="learn-tier-desc">${esc(tier.outcome || '')}</div>
+      <div class="learn-tier-foot">${tier.lessons ? tier.lessons.length : 0} lessons →</div>
+    </a>
+  `).join('');
+}
+
+async function renderLearnTier(el, trackId, tierId) {
+  el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading tier…</span></div>`;
+  const curr = await fetchJSON('docs/learn/' + trackId + '/index.json');
+  if (!curr) { el.innerHTML = `<div class="error-state"><h2>Curriculum not found</h2><a href="#learn">← Back to Learn</a></div>`; return; }
+  const tier = (curr.tiers || []).find(t => t.id === tierId);
+  if (!tier) { el.innerHTML = `<div class="error-state"><h2>Tier not found</h2><a href="#learn">← Back to Learn</a></div>`; return; }
+
+  const lessonsHtml = (tier.lessons || []).map((l, i) => `
+    <a class="control-card control-card-link" href="#learn/${trackId}/lesson:${esc(tier.id)}:${esc(l.id)}">
+      <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.35rem;">
+        <span class="learn-tier-num" style="width:1.6rem;height:1.6rem;font-size:0.7rem;background:var(--text-muted);">${i + 1}</span>
+        <h4 class="control-card-title" style="margin:0;">${l.checkpoint ? '✓ ' : ''}${esc(l.title)}</h4>
+      </div>
+      <p class="control-card-desc">${esc(l.summary || '')}</p>
+      <div class="card-meta">${esc(l.estimatedTime || '')}${l.deliverable ? ' · Deliverable: ' + esc(l.deliverable).slice(0, 60) + '…' : ''}</div>
+    </a>
+  `).join('');
+
+  el.innerHTML = `
+    <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">${esc(trackId.toUpperCase())} — ${esc(tier.name)}</span></nav>
+    <div class="learn-tier-detail">
+      <div class="learn-tier-head">
+        <span class="learn-tier-num">${esc(tier.tier)}</span>
+        <span class="learn-tier-title">${esc(tier.name)}</span>
+        <span class="learn-tier-meta">${esc(tier.duration || '')}</span>
+      </div>
+      <p style="margin:0.5rem 0;"><strong>Audience:</strong> ${esc(tier.audience || '')}</p>
+      <p style="margin:0.5rem 0 1rem;"><strong>Outcome:</strong> ${esc(tier.outcome || '')}</p>
+    </div>
+    <h3 class="learn-section-title">Lessons</h3>
+    <div class="control-grid">${lessonsHtml}</div>
+  `;
+}
+
+async function renderLearnLesson(el, trackId, tierId, lessonId) {
+  el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading lesson…</span></div>`;
+  const curr = await fetchJSON('docs/learn/' + trackId + '/index.json');
+  if (!curr) { el.innerHTML = `<div class="error-state"><h2>Curriculum not found</h2><a href="#learn">← Back</a></div>`; return; }
+  const tier = (curr.tiers || []).find(t => t.id === tierId);
+  if (!tier) { el.innerHTML = `<div class="error-state"><h2>Tier not found</h2><a href="#learn">← Back</a></div>`; return; }
+  const lesson = (tier.lessons || []).find(l => l.id === lessonId);
+  if (!lesson) { el.innerHTML = `<div class="error-state"><h2>Lesson not found</h2><a href="#learn/${trackId}/tier:${tierId}">← Back to tier</a></div>`; return; }
+
+  const fullPath = 'docs/learn/' + trackId + '/' + lesson.path;
+  const md = await loadText(fullPath);
+  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Lesson content not found at <code>${esc(fullPath)}</code>.</p></div>`;
+
+  const lessons = tier.lessons || [];
+  const idxL = lessons.findIndex(l => l.id === lessonId);
+  const prev = idxL > 0 ? lessons[idxL - 1] : null;
+  const next = idxL < lessons.length - 1 ? lessons[idxL + 1] : null;
+
+  const objectivesBlock = (lesson.learningObjectives && lesson.learningObjectives.length) ? `
+    <div class="lesson-objectives">
+      <strong>Learning objectives.</strong> By the end of this lesson you can:
+      <ul>${lesson.learningObjectives.map(o => `<li>${esc(o)}</li>`).join('')}</ul>
+    </div>
+  ` : '';
+
+  const citationsBlock = (lesson.citations && lesson.citations.length) ? `
+    <div class="lesson-citations"><strong>Citations:</strong> ${lesson.citations.map(c => `<code>${esc(c)}</code>`).join(' · ')}</div>
+  ` : '';
+
+  const parallelBlock = lesson.gdprParallel ? `
+    <div class="lesson-parallel"><strong>GDPR parallel:</strong> <a href="#learn/gdpr/lesson:${esc(lesson.gdprParallel.split('/')[1])}:${esc(lesson.gdprParallel.split('/')[2].replace('.md',''))}">${esc(lesson.gdprParallel)}</a></div>
+  ` : (lesson.pdpaParallel ? `
+    <div class="lesson-parallel"><strong>PDPA parallel:</strong> <a href="#learn/pdpa/lesson:${esc(lesson.pdpaParallel.split('/')[1])}:${esc(lesson.pdpaParallel.split('/')[2].replace('.md',''))}">${esc(lesson.pdpaParallel)}</a></div>
+  ` : '');
+
+  el.innerHTML = `
+    <nav class="breadcrumbs">
+      <a href="#learn">Learn</a><span class="sep">/</span>
+      <a href="#learn/${trackId}/tier:${esc(tierId)}">${esc(trackId.toUpperCase())} — ${esc(tier.name)}</a><span class="sep">/</span>
+      <span class="current">${esc(lesson.title)}</span>
+    </nav>
+    <header style="margin-bottom:1rem;">
+      <h2 style="margin-bottom:0.25rem;">${esc(lesson.title)}</h2>
+      <div style="font-size:0.8rem;color:var(--text-muted);">${esc(lesson.estimatedTime || '')}${lesson.deliverable ? ' · Deliverable: ' + esc(lesson.deliverable) : ''}</div>
+    </header>
+    ${objectivesBlock}
+    <article class="md-body">${bodyHtml}</article>
+    ${citationsBlock}
+    ${parallelBlock}
+    <div class="lesson-nav">
+      ${prev ? `<a class="fw-chip" href="#learn/${trackId}/lesson:${esc(tierId)}:${esc(prev.id)}">← ${esc(prev.title)}</a>` : `<span></span>`}
+      ${next ? `<a class="fw-chip" href="#learn/${trackId}/lesson:${esc(tierId)}:${esc(next.id)}">${esc(next.title)} →</a>` : `<a class="fw-chip" href="#learn/${trackId}/tier:${esc(tierId)}">Back to tier ↑</a>`}
+    </div>
+    <div class="lesson-source">
+      <a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a>
+    </div>
+  `;
+}
+
+async function renderGuidelineDeepDive(el, guidelineId) {
+  el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading guideline deep-dive…</span></div>`;
+  const curr = await fetchJSON('docs/learn/pdpa/index.json');
+  if (!curr || !curr.guidelineDeepDives) { el.innerHTML = `<div class="error-state"><h2>Index not found</h2><a href="#learn">← Back</a></div>`; return; }
+  const g = curr.guidelineDeepDives.deepDives.find(x => x.id === guidelineId);
+  if (!g) { el.innerHTML = `<div class="error-state"><h2>Guideline not found</h2><a href="#learn">← Back to Learn</a></div>`; return; }
+
+  const fullPath = 'docs/learn/pdpa/' + g.path;
+  const md = await loadText(fullPath);
+  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Deep-dive not found at <code>${esc(fullPath)}</code>.</p></div>`;
+
+  el.innerHTML = `
+    <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">JPDP Guideline — ${esc(g.id.toUpperCase())}</span></nav>
+    <header style="margin-bottom:1rem;">
+      <h2 style="margin-bottom:0.25rem;">${esc(g.title)}</h2>
+      <div style="font-size:0.8rem;color:var(--text-muted);">${(g.citations || []).map(c => esc(c)).join(' · ')}</div>
+    </header>
+    <article class="md-body">${bodyHtml}</article>
+    ${g.gdprParallel ? `<div class="lesson-parallel"><strong>GDPR parallel:</strong> <a href="#learn/article:${esc(g.gdprParallel.split('/')[1].replace('.md',''))}">${esc(g.gdprParallel)}</a></div>` : ''}
+    <div class="lesson-source"><a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+  `;
+}
+
+async function renderGdprArticle(el, articleId) {
+  el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading article deep-dive…</span></div>`;
+  const curr = await fetchJSON('docs/learn/gdpr/index.json');
+  if (!curr || !curr.articleDeepDives) { el.innerHTML = `<div class="error-state"><h2>Index not found</h2><a href="#learn">← Back</a></div>`; return; }
+  const a = curr.articleDeepDives.deepDives.find(x => x.id === articleId);
+  if (!a) { el.innerHTML = `<div class="error-state"><h2>Article not found</h2><a href="#learn">← Back to Learn</a></div>`; return; }
+
+  const fullPath = 'docs/learn/gdpr/' + a.path;
+  const md = await loadText(fullPath);
+  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Deep-dive not found at <code>${esc(fullPath)}</code>.</p></div>`;
+
+  el.innerHTML = `
+    <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">GDPR — ${esc(a.id.toUpperCase())}</span></nav>
+    <header style="margin-bottom:1rem;">
+      <h2 style="margin-bottom:0.25rem;">${esc(a.title)}</h2>
+      <div style="font-size:0.8rem;color:var(--text-muted);">${(a.citations || []).map(c => esc(c)).join(' · ')}</div>
+    </header>
+    <article class="md-body">${bodyHtml}</article>
+    <div class="lesson-source"><a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+  `;
+}
+
+async function renderCrossRefDoc(el, slug) {
+  const map = {
+    'pdpa-vs-gdpr': { title: 'PDPA vs GDPR — Side-by-side', path: 'docs/learn/cross-reference/pdpa-vs-gdpr.md' },
+    'concepts':     { title: 'Concept Equivalence',         path: 'docs/learn/cross-reference/concepts.md' },
+    'obligations':  { title: 'Obligations Grid',            path: 'docs/learn/cross-reference/obligations.md' },
+  };
+  const doc = map[slug];
+  if (!doc) { el.innerHTML = `<div class="error-state"><h2>Document not found</h2><a href="#learn">← Back to Learn</a></div>`; return; }
+
+  el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading cross-reference doc…</span></div>`;
+  const md = await loadText(doc.path);
+  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Document not found at <code>${esc(doc.path)}</code>.</p></div>`;
+
+  el.innerHTML = `
+    <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">Cross-Reference — ${esc(doc.title)}</span></nav>
+    <header style="margin-bottom:1rem;"><h2 style="margin-bottom:0.25rem;">${esc(doc.title)}</h2></header>
+    <article class="md-body">${bodyHtml}</article>
+    <div class="lesson-source"><a href="${blobUrl(doc.path)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
   `;
 }
 
@@ -1388,7 +1674,7 @@ async function renderSectors(el) {
 
   el.innerHTML = `
     <div class="page-title">Data Controller Classes</div>
-    <div class="page-subtitle">${classes.length} registered classes of data users under the Personal Data Protection (Class of Data Users) Order</div>
+    <div class="page-subtitle">${classes.length} registered classes of data controllers (formerly "data users" pre-A1727) under the Personal Data Protection (Class of Data Users) Order 2013</div>
     <div class="control-grid">
       ${classes.map((c, i) => `
         <div class="control-card" onclick="navigate('sector/${i}')" style="cursor:pointer;border-left:4px solid var(--accent);">

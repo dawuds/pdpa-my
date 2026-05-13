@@ -46,13 +46,16 @@ Companion to [`pdpa-vs-gdpr.md`](pdpa-vs-gdpr.md) (the obligation comparator). T
 
 | Concept | PDPA term | GDPR term | Note |
 |---|---|---|---|
-| Subject's permission | Consent (s6(2)(a)) | Consent (Art 6(1)(a), Art 7) | Direct equivalent |
+| Subject's permission | Consent (s6(1) — the default rule) | Consent (Art 6(1)(a), Art 7) | Direct equivalent |
 | Heightened consent for sensitive | Explicit consent — persetujuan secara nyata (s40(1)(a)) | Explicit consent (Art 9(2)(a)) | Direct equivalent |
-| Required for contract | s6(2)(b) | Art 6(1)(b) | Direct equivalent |
+| Performance of contract | s6(2)(a) | Art 6(1)(b) | Direct equivalent |
+| Pre-contractual steps at subject's request | s6(2)(b) | Art 6(1)(b) | GDPR rolls (a)+(b) into single Art 6(1)(b) |
 | Statutory obligation | s6(2)(c) | Art 6(1)(c) | Direct equivalent |
-| Life-threatening | s6(2)(d) | Art 6(1)(d) | Direct equivalent |
-| Public task | s6(2)(e), s6(2)(f) | Art 6(1)(e) | PDPA splits across two grounds |
-| Balanced interest of controller | (no direct equivalent; closest: s6(2)(d) necessary for legitimate interests of the data user) | Legitimate interests (Art 6(1)(f)) | **The largest basis-level difference** |
+| Vital interests | s6(2)(d) | Art 6(1)(d) | Direct equivalent |
+| Public task — administration of justice | s6(2)(e) | Art 6(1)(e) | PDPA narrower; codes "administration of justice" specifically |
+| Public task — statutory functions | s6(2)(f) | Art 6(1)(e) | PDPA splits administration-of-justice and statutory-function across (e)+(f) |
+| Legitimate interests | s6(2)(g) (with override where unwarranted by reason of prejudice to subject) | Art 6(1)(f) (with override where overridden by subject's rights) | Direct structural equivalent. PDPA practice rarely relies on this basis — most controllers default to consent — but the statutory ground exists |
+| Minister-specified other | s6(2)(h) | (Member-State law in GDPR) | PDPA-only Ministerial extension |
 
 ## 5. Rights concepts
 
@@ -130,7 +133,7 @@ Companion to [`pdpa-vs-gdpr.md`](pdpa-vs-gdpr.md) (the obligation comparator). T
 The largest structural differences:
 
 1. **Accountability over-principle** — GDPR Art 5(2); no PDPA equivalent
-2. **Legitimate interests basis** — GDPR Art 6(1)(f); no direct PDPA equivalent
+2. **Legitimate interests basis** — both regimes codify it (GDPR Art 6(1)(f); PDPA s6(2)(g)). The structural test is similar (balancing against subject's rights), but PDPA practice rarely relies on it — consultants should not advise "use legitimate interests" without checking the client's appetite for novel basis selection
 3. **Article 22 standalone right** — GDPR codified; PDPA anchors in s7 + s38
 4. **Civil damages** — GDPR Art 82 codified; PDPA not codified the same way
 5. **DPO mandatory scope** — PDPA universal (all controllers + processors); GDPR activity-based

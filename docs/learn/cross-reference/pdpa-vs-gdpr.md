@@ -46,12 +46,13 @@ The mapping is at concept level — translation is not always 1:1. Specific diff
 
 | GDPR Article 6(1) | PDPA equivalent | Notes |
 |---|---|---|
-| (a) Consent | s6(1) consent + s6(2)(a) consent | PDPA consent + GDPR consent are similar; both require freely-given, specific, informed |
-| (b) Contract | s6(2)(b) | Direct equivalent |
+| (a) Consent | s6(1) (the default rule — consent is required unless s6(2) applies) | PDPA consent + GDPR consent are similar; both require freely-given, specific, informed |
+| (b) Contract | s6(2)(a) (performance) + s6(2)(b) (pre-contractual steps at subject's request) | PDPA splits performance and pre-contractual into two grounds; GDPR rolls them into Art 6(1)(b) |
 | (c) Legal obligation | s6(2)(c) | Direct equivalent |
 | (d) Vital interests | s6(2)(d) | Direct equivalent |
-| (e) Public task | s6(2)(e), s6(2)(f) | PDPA splits this across two grounds; narrower than GDPR's public-task |
-| (f) Legitimate interests | (no direct equivalent) | **PDPA has no legitimate-interests basis**. The closest is s6(2)(d) (necessary for legitimate interests of the data user). This is the single most important basis-level difference |
+| (e) Public task | s6(2)(e) (administration of justice) + s6(2)(f) (exercise of functions conferred by/under written law) | PDPA splits public-task into administration-of-justice and statutory-function across (e)+(f) |
+| (f) Legitimate interests | s6(2)(g) — "legitimate interests pursued by the data controller … except where the processing is unwarranted in any particular case by reason of prejudice to the rights and freedoms or legitimate interests of the data subject" | Direct structural equivalent. Both regimes include a balancing test (PDPA's is "unwarranted by reason of prejudice"; GDPR's is overridden by data subject's interests). The practical difference is cultural, not statutory: PDPA practice almost always defaults to consent, while GDPR controllers routinely rely on Art 6(1)(f) for marketing analytics, fraud prevention, and security |
+| (h) Other | s6(2)(h) Minister-specified | PDPA Ministerial extension power; GDPR equivalent is Member-State law under Art 6(2) |
 
 ## 5. Data subject rights
 
@@ -168,7 +169,7 @@ The structure is similar enough that a controller defensible under one regime is
 For consulting team scoping, the divergences that warrant explicit attention:
 
 1. **Government carve-out** — PDPA does not bind government; GDPR does
-2. **Legitimate interests basis** — PDPA does not have an Article 6(1)(f) equivalent
+2. **Legitimate interests basis** — both regimes codify it (PDPA s6(2)(g); GDPR Art 6(1)(f)). Practice diverges: GDPR controllers routinely rely on Art 6(1)(f) for marketing analytics, fraud prevention, security; PDPA practice defaults to consent. The statutory ground exists in PDPA — the appetite to use it does not
 3. **Article 22 vs ADMP** — GDPR right to human review is codified; PDPA ADMP does not codify it
 4. **Children's protection** — GDPR (Article 8 + Recital 38) is broader; PDPA reduced PCP children's content to three short paragraphs
 5. **Accountability over-principle** — GDPR Article 5(2); no PDPA equivalent

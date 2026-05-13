@@ -10,7 +10,7 @@ First: PDPA does **not** bind federal or state government as a data controller i
 
 Second: a foreign organisation processing Malaysian personal data in connection with a Malaysian commercial transaction is in scope. There is no "physical presence in Malaysia" carve-out for the controller obligation.
 
-The line that matters for consulting work: **is there a commercial transaction in scope?** If yes, the client is in scope. If no, the client is probably not — but verify against the Class of Data Users Order (P.U.(A) 339/2013 as amended).
+The line that matters for consulting work: **is there a commercial transaction in scope?** If yes, the client is in scope. If no, the client is probably not — but verify against the Class of Data Users Order (P.U.(A) 336/2013, gazetted 14 November 2013, in force 15 November 2013, empowered by Act 709 s14; as amended by P.U.(A) 7/2016).
 
 ## The penalty regime — what's actually on the table
 

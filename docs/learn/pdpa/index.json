@@ -55,7 +55,7 @@
           "learningObjectives": [
             "List the A1727 commencement phases (Feb 2025 / April 2025 / June 2025)",
             "State the s12B timing (72h Commissioner / 7d subjects)",
-            "Recite the four new rights and their statutory sections",
+            "Recite the three new rights (erasure s43, portability s43A, restriction s44) and the two refined rights (access s30, correction s34)",
             "Explain the data controller terminology change and why it matters"
           ],
           "citations": ["A1727 ss12A, 12B, 40, 43, 43A, 44, 129A, 130, 133A"],
@@ -143,7 +143,7 @@
           "summary": "The Class of Data Users check (three-step). The eight sectoral CoPs catalogued. Where sectoral and General CoP conflict, sectoral prevails (s23).",
           "estimatedTime": "60 min",
           "deliverable": "Class of Data Users determination for 3 worked clients (bank, hospital, telco)",
-          "citations": ["Act 709 s23", "Class of Data Users Order P.U.(A) 339/2013", "Tech-Audit/Regulatory/PDPA/Work-Program/Citation-Discipline-Common-Errors.md §4"],
+          "citations": ["Act 709 s23", "Class of Data Users Order P.U.(A) 336/2013 (as amended by P.U.(A) 7/2016)", "Tech-Audit/Regulatory/PDPA/Work-Program/Citation-Discipline-Common-Errors.md §4"],
           "gdprParallel": "gdpr/t2-practitioner/05-codes-of-conduct-article40.md",
           "path": "t2-practitioner/05-sectoral-cop.md"
         },

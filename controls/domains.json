@@ -61,7 +61,7 @@
   },
   "data-protection-by-design": {
     "name": "Data Protection by Design (DPbD)",
-    "description": "Controls embedding data protection across the full processing lifecycle (design, development, deployment, operation, decommissioning) per the JPDP DPbD Guideline issued 30 April 2026. Operationalises the 7 foundational DPbD principles, default-privacy and data-minimisation requirements, and special protections for children's personal data. DPbD is not triggered by a threshold — it is a continuous obligation across all processing.",
+    "description": "Controls embedding data protection across the full processing lifecycle (design, development, deployment, operation, decommissioning) per the JPDP DPbD Guideline issued 30 April 2026. Operationalises the 4 DPbD elements (Sifat Proaktif / Perlindungan Hujung-ke-hujung / Ketelusan / Berpusatkan Pengguna), default-privacy and data-minimisation requirements, Section 13 governance practices, and the children's-consent / parental-access provisions at §5.3, §10.2, §11.2 (the standalone children's-privacy chapter from PCP No.2/2025 was not carried into the issued text). DPbD is not triggered by a threshold — it is a continuous obligation across all processing.",
     "relatedSections": ["s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12"],
     "relatedPrinciples": ["general", "notice-and-choice", "disclosure", "security", "retention", "data-integrity", "access"]
   },

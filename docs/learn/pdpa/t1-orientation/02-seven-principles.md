@@ -61,4 +61,4 @@ Parallel reading: [GDPR T1 Lesson 2 — Article 5 in 15 minutes](../../gdpr/t1-o
 
 ## What's next
 
-[Lesson 3 — A1727 in 15 minutes](03-a1727.md). A1727 is the most important PDPA change since the original Act; this is where the four new rights, breach notification, DPO, and cross-border reforms live.
+[Lesson 3 — A1727 in 15 minutes](03-a1727.md). A1727 is the most important PDPA change since the original Act; this is where the three new rights (erasure / portability / restriction), breach notification, DPO, and cross-border reforms live.
