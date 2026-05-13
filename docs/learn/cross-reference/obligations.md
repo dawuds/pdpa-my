@@ -18,7 +18,7 @@ Each row is an obligation. The columns map the obligation to PDPA and GDPR sourc
 | 3 | Obtain explicit consent for sensitive PD | s40(1)(a) | Art 9(2)(a) | Separate explicit consent flow |
 | 4 | Inform data subjects about processing | s7 (six particulars) | Arts 13-14 (more elements) | Privacy notice (BM + EN for PDPA; appropriate languages for GDPR) |
 | 5 | Disclose automated decision-making | ADMP §9.3 | Art 13(2)(f) / 14(2)(g) | ADMP disclosure in privacy notice |
-| 6 | Maintain Records of Processing | s138 (A1727) | Art 30 | RoPA |
+| 6 | Maintain Records of Processing | s138 (A1727; modelled on GDPR Art 30) | Art 30 (origin of obligation; in force 25 May 2018) | RoPA (BM: *Rekod Pemprosesan Data Peribadi*) |
 | 7 | Maintain RoPA for processor activities (where applicable) | Implicit | Art 30(2) | Processor RoPA |
 | 8 | Conduct DPIA for high-risk processing | s137 + DPIA Guideline (DEICA) | Art 35 + EDPB DPIA Guidelines | DPIA report |
 | 9 | Conduct DPIA for ADMP regardless of scale | ADMP §6.1 | Art 35(3)(a) trigger | DPIA cross-link from ADM register |

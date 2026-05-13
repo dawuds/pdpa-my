@@ -39,7 +39,7 @@ Companion to [`pdpa-vs-gdpr.md`](pdpa-vs-gdpr.md) (the obligation comparator). T
 | Specific processing of profiling | Pemprofilan (ADMP Guideline) | Profiling (Art 4(4)) | Direct equivalent in substance |
 | Automated decisions | ADM (ADMP Guideline) | Automated individual decision-making (Art 22) | PDPA narrower scope |
 | Transfer outside the jurisdiction | Cross-border data transfer (s129/s129A) | Transfer to third country (Chapter V) | Direct equivalent |
-| Documentation of processing | RoPA (s138 — A1727) | Records of Processing (Art 30) | Direct equivalent |
+| Documentation of processing | RoPA (s138 — introduced by A1727, modelled on GDPR Art 30) | Records of Processing (Art 30 — origin of the obligation; replaced 1995 Directive Art 18 notification regime in 2018) | Direct equivalent. BM authoritative term: *Rekod Pemprosesan Data Peribadi* |
 | Risk assessment | DPIA (DPIA Guideline; s137) | DPIA (Art 35) | Direct equivalent |
 
 ## 4. Basis concepts

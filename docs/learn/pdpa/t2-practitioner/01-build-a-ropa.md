@@ -10,6 +10,14 @@ Post-A1727, s138 makes RoPA mandatory for data controllers. Failure to maintain 
 
 The DPO Guideline 2025 confirms the DPO has direct responsibility for RoPA maintenance — typically the first artefact the DPO produces after appointment.
 
+## Where the obligation came from
+
+**The term and the obligation originate in GDPR Article 30** (in force 25 May 2018). Pre-GDPR, the 1995 EU Directive (95/46/EC Article 18) had a heavier *notification* regime where controllers filed with the supervisory authority on creation; Article 30 replaced that with self-maintained internal records, available to the regulator on request.
+
+**PDPA s138, introduced by A1727 (in force 1 June 2025), is the Malaysian equivalent — deliberately modelled on Art 30.** Pre-A1727 Act 709 had no RoPA-style obligation; controllers maintained at most a registration record under the Class of Data Users regime. The s138 elements (purposes, categories of subjects + data, recipients, cross-border transfers, retention, security measures) track Art 30(1) almost element-for-element. The processor-side obligation in PDPA is implicit in s9 (security duty cascades) rather than codified separately like Art 30(2) — see the obligations grid in cross-reference for the side-by-side.
+
+**Terminology caveat.** "RoPA" is GDPR-flavoured industry shorthand the consultancy market adopted globally. JPDP's own materials use *Rekod Pemprosesan Data Peribadi* (records of personal data processing) in the BM authoritative text. In client-facing work — especially with a Malaysian board or counsel — use the JPDP terminology; in internal workpapers and engagement teams familiar with GDPR, "RoPA" is fine.
+
 ## The s138 required elements
 
 Section 138 (post-A1727) specifies the RoPA must record, for each processing activity:

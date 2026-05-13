@@ -141,11 +141,15 @@ The mapping is at concept level — translation is not always 1:1. Specific diff
 
 ## 13. RoPA / records of processing
 
+**Provenance.** The obligation originates in GDPR Article 30, in force 25 May 2018. Art 30 replaced the heavier *notification* regime of the 1995 Directive (95/46/EC Art 18), under which controllers filed with the supervisory authority on creation. The shift from notify-on-creation to maintain-and-make-available-on-request became the global template. PDPA s138 (introduced by A1727, in force 1 June 2025) is the Malaysian implementation — deliberately modelled on Art 30 and tracking its elements almost line-for-line. The BM authoritative term is *Rekod Pemprosesan Data Peribadi*; "RoPA" is GDPR-flavoured industry shorthand.
+
 | Dimension | PDPA (s138 post-A1727) | GDPR (Art 30) | Notes |
 |---|---|---|---|
 | Mandatory trigger | All controllers / processors | All with caveats (Art 30(5) micro-enterprise exception almost never applies) | PDPA is broader |
-| Required elements | A1727 s138 specifies elements | Art 30(1) for controllers + 30(2) for processors specifies elements | Similar |
+| Required elements | A1727 s138 specifies elements | Art 30(1) for controllers + 30(2) for processors specifies elements | s138 tracks Art 30(1) almost element-for-element |
+| Processor-side obligation | Implicit in s9 (security cascades) | Codified separately in Art 30(2) | GDPR more prescriptive |
 | SA access | On request | Article 30(4) — make available on request | Direct equivalent |
+| Origin | Introduced by A1727 (no Act 709 equivalent pre-2025) | Introduced by GDPR (replaced 1995 Directive Art 18 notification) | Both jurisdictions shifted from notify-on-creation to maintain-and-make-available |
 
 ## 14. Documentation summary — the controller's "must-have" set
 
