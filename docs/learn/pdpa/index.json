@@ -1,0 +1,359 @@
+{
+  "$schema": "pdpa-learn-v2",
+  "track": "pdpa",
+  "title": "PDPA Learning Track — Malaysia",
+  "sourceType": "constructed-educational",
+  "verificationNote": "Educational scaffold for the consulting team. Lessons cite Act 709, A1727, the Personal Data Protection Regulations 2013, the PDP Standards 2015, and the JPDP guidelines (DPO 2025, DBN 2025, CBPDT 2025, DPIA/DPbD/ADMP April 2026). Material is illustrative only — never legal or regulatory advice. Verify any operational decision against the BM source PDFs in Tech-Audit/Regulatory/PDPA/References/. No lesson substitutes for sector-specific guidance from a qualified DPO or counsel.",
+  "description": "Four-tier learning path plus deep-dives on the seven currently-issued JPDP guidelines. Each tier ends with a checkpoint. Every lesson cross-references this repo's data layer (controls, provisions, dpia/, dpbd/, automated-decisions/, principles/), the Tech-Audit audit programme, and the parallel GDPR lesson in ../gdpr/.",
+  "howToUse": "Read tiers in order. Use guideline deep-dives as reference when you need detail beyond what the tiered lessons cover. Every claim that names a control slug, section number, guideline section, or sectoral CoP is clickable.",
+  "lastUpdated": "2026-05-13",
+  "tiers": [
+    {
+      "id": "t1-orientation",
+      "tier": "T1",
+      "name": "Orientation",
+      "duration": "≈ 1 hour",
+      "audience": "Anyone new to PDPA — engineers, GRC professionals, executives, lawyers from adjacent practice areas.",
+      "outcome": "Can name the 7 PDP Principles and 4 A1727 rights, explain the data controller / data processor distinction, articulate the issued-vs-PCP trap, identify when a sectoral Code of Practice applies, and quote post-A1727 penalty exposure for the major offence categories.",
+      "prerequisites": [],
+      "lessons": [
+        {
+          "id": "01-why-pdpa-matters",
+          "title": "Why PDPA matters and who it applies to",
+          "summary": "Act 709 scope (commercial transactions; government carve-out; foreign controllers in scope), post-A1727 penalty exposure (RM1M / 3y individual; 10% turnover corporate; officer liability), the dual-regulation problem (PDPA + NACSA / BNM / SC), and JPDP's education-first posture.",
+          "estimatedTime": "10 min",
+          "learningObjectives": [
+            "State who Act 709 binds and the major carve-outs",
+            "Quote the top-line penalty exposures post-A1727",
+            "Identify dual-regulation patterns for at least three sector types",
+            "Explain why education-first is enforcement appetite, not legal status"
+          ],
+          "citations": ["Act 709 s2 (commercial transaction)", "A1727 s130 (corporate penalty)", "A1727 s133A (officer liability)"],
+          "gdprParallel": "gdpr/t1-orientation/01-why-gdpr-matters.md",
+          "path": "t1-orientation/01-why-pdpa-matters.md"
+        },
+        {
+          "id": "02-seven-principles",
+          "title": "The 7 PDP Principles in 15 minutes",
+          "summary": "General (s6), Notice and Choice (s7), Disclosure (s8), Security (s9), Retention (s10), Data Integrity (s11), Access (s12). What each one obliges and where it bites in practice.",
+          "estimatedTime": "15 min",
+          "learningObjectives": [
+            "Name all 7 principles and their statutory section",
+            "Distinguish General Principle lawful bases (consent vs other)",
+            "Identify the post-A1727 expansion of s9 to processors",
+            "List the s7(1)(a)-(f) mandatory notice particulars"
+          ],
+          "citations": ["Act 709 ss6-12", "A1727 amendments to s9"],
+          "gdprParallel": "gdpr/t1-orientation/02-seven-principles-gdpr-art5.md",
+          "path": "t1-orientation/02-seven-principles.md"
+        },
+        {
+          "id": "03-a1727",
+          "title": "A1727 in 15 minutes — what actually changed",
+          "summary": "DPO under s12A (mandatory for controllers AND processors), breach notification s12B (72 hours to Commissioner / 7 days to subjects per DBN Guideline), new rights (data portability s43A, erasure s43, restriction s44), cross-border reforms s129A, biometric data into sensitive PD s4, the Data User → Data Controller relabel.",
+          "estimatedTime": "15 min",
+          "learningObjectives": [
+            "List the A1727 commencement phases (Feb 2025 / April 2025 / June 2025)",
+            "State the s12B timing (72h Commissioner / 7d subjects)",
+            "Recite the four new rights and their statutory sections",
+            "Explain the data controller terminology change and why it matters"
+          ],
+          "citations": ["A1727 ss12A, 12B, 40, 43, 43A, 44, 129A, 130, 133A"],
+          "gdprParallel": "gdpr/t1-orientation/03-gdpr-vs-pre-gdpr.md",
+          "path": "t1-orientation/03-a1727.md"
+        },
+        {
+          "id": "04-issued-vs-pcp",
+          "title": "Issued vs PCP — the trap every junior consultant falls into",
+          "summary": "The April 2026 JPDP Guidelines (DPIA / DPbD / ADMP) are materially narrower than the March 2025 Public Consultation Papers. A finding citing the JPDP guideline for a non-existent obligation will not survive partner review. The 11 most common errors and the citation-discipline gate that catches them.",
+          "estimatedTime": "15 min",
+          "learningObjectives": [
+            "Explain why PCP-derived material is not authoritative",
+            "Identify at least 5 of the 11 common citation errors",
+            "Apply the issued-vs-leading-practice distinction to a sample finding",
+            "Locate the BM source PDFs as the authoritative text"
+          ],
+          "citations": ["Tech-Audit/Regulatory/PDPA/Work-Program/Citation-Discipline-Common-Errors.md v2.0", "JPDP issued DPIA/DPbD/ADMP April 2026 (BM)"],
+          "gdprParallel": "gdpr/t1-orientation/04-gdpr-edpb-guideline-discipline.md",
+          "path": "t1-orientation/04-issued-vs-pcp.md"
+        },
+        {
+          "id": "05-checkpoint",
+          "title": "Checkpoint — orientation self-test",
+          "summary": "Ten questions. If you can't answer eight, re-read the relevant lesson before moving to T2.",
+          "estimatedTime": "10 min",
+          "checkpoint": true,
+          "deliverable": "10/10 self-test or identified gaps with the lesson to revisit",
+          "path": "t1-orientation/05-checkpoint.md"
+        }
+      ]
+    },
+    {
+      "id": "t2-practitioner",
+      "tier": "T2",
+      "name": "Practitioner",
+      "duration": "≈ 1 week",
+      "audience": "New DPO or privacy professional taking operational responsibility for a PDPA programme — including consultants supporting a client through implementation.",
+      "outcome": "Can build a defensible RoPA, draft an s7-compliant privacy notice, conduct a DEICA DPIA on a worked example, draft a s12B breach notification within the 72-hour window, and identify the applicable sectoral CoP for any Class of Data Users.",
+      "prerequisites": ["t1-orientation"],
+      "lessons": [
+        {
+          "id": "01-build-a-ropa",
+          "title": "Exercise — build a RoPA from scratch",
+          "summary": "The s138 elements, common gaps, what to include for cross-border transfers and processors. Walk through a 4-processing-activity scenario.",
+          "estimatedTime": "90 min",
+          "deliverable": "Completed RoPA covering 4 processing activities with all s138 elements",
+          "citations": ["A1727 s138", "JPDP DPO Guideline 2025 §[ROPA section]"],
+          "gdprParallel": "gdpr/t2-practitioner/01-build-a-ropa-article30.md",
+          "path": "t2-practitioner/01-build-a-ropa.md"
+        },
+        {
+          "id": "02-privacy-notice-draft",
+          "title": "Exercise — draft a privacy notice that survives s7 scrutiny",
+          "summary": "The six s7(1) mandatory particulars; BM + EN minimum; notice timing (before or at collection); the six deceptive design patterns the DPbD Guideline §6.4 prohibits.",
+          "estimatedTime": "90 min",
+          "deliverable": "Privacy notice draft for a B2C platform covering all s7(1) elements with BM and EN variants",
+          "citations": ["Act 709 s7(1)(a)-(f)", "JPDP DPbD Guideline §6.4", "JPDP Privacy Notice Guides (2022, 2025 Quick Guide)"],
+          "gdprParallel": "gdpr/t2-practitioner/02-privacy-notice-article13-14.md",
+          "path": "t2-practitioner/02-privacy-notice-draft.md"
+        },
+        {
+          "id": "03-deica-dpia",
+          "title": "Exercise — conduct a DPIA using DEICA on a worked example",
+          "summary": "Run the 5-step DEICA methodology on an e-KYC scenario (50K subjects, biometric). Apply the 2 quantitative + 7 qualitative threshold framework. Report HIGH residual risk to senior management — not the Commissioner portal.",
+          "estimatedTime": "120 min",
+          "deliverable": "Completed DPIA using the JPDP-aligned 35-question Lampiran A template",
+          "citations": ["JPDP DPIA Guideline April 2026 §7-§12 + Lampiran A", "pdpa-my/dpia/methodology.json", "pdpa-my/dpia/thresholds.json"],
+          "gdprParallel": "gdpr/t2-practitioner/03-dpia-article35.md",
+          "path": "t2-practitioner/03-deica-dpia.md"
+        },
+        {
+          "id": "04-breach-notification",
+          "title": "Exercise — draft a s12B breach notification",
+          "summary": "72 hours to Commissioner, 7 days to data subjects (per JPDP DBN Guideline 2025). The information required, the form of notification, the tabletop scenario. Includes the NACSA 6h clash for NCII clients.",
+          "estimatedTime": "90 min",
+          "deliverable": "Drafted Commissioner notification + data subject notification for a worked ransomware scenario",
+          "citations": ["A1727 s12B", "JPDP DBN Guideline 2025"],
+          "gdprParallel": "gdpr/t2-practitioner/04-breach-article33-34.md",
+          "path": "t2-practitioner/04-breach-notification.md"
+        },
+        {
+          "id": "05-sectoral-cop",
+          "title": "When a sectoral Code of Practice applies",
+          "summary": "The Class of Data Users check (three-step). The eight sectoral CoPs catalogued. Where sectoral and General CoP conflict, sectoral prevails (s23).",
+          "estimatedTime": "60 min",
+          "deliverable": "Class of Data Users determination for 3 worked clients (bank, hospital, telco)",
+          "citations": ["Act 709 s23", "Class of Data Users Order P.U.(A) 339/2013", "Tech-Audit/Regulatory/PDPA/Work-Program/Citation-Discipline-Common-Errors.md §4"],
+          "gdprParallel": "gdpr/t2-practitioner/05-codes-of-conduct-article40.md",
+          "path": "t2-practitioner/05-sectoral-cop.md"
+        },
+        {
+          "id": "06-checkpoint",
+          "title": "Checkpoint — practitioner deliverables review",
+          "summary": "Five artefacts you should now own (RoPA, privacy notice, DPIA, breach notification, sectoral CoP determination). If any are missing or incomplete the gap is real and worth closing before T3.",
+          "estimatedTime": "60 min",
+          "checkpoint": true,
+          "deliverable": "All 5 T2 deliverables reviewed against the rubric in this checkpoint",
+          "path": "t2-practitioner/06-checkpoint.md"
+        }
+      ]
+    },
+    {
+      "id": "t3-programme",
+      "tier": "T3",
+      "name": "Programme Builder",
+      "duration": "≈ 1–3 months at programme cadence",
+      "audience": "DPO standing up a PDPA programme from scratch, or consultant leading a client's A1727 readiness project.",
+      "outcome": "Can stand up all 12 domain capabilities, produce the A1727-required artefacts, run a privacy tabletop covering the dual-regulation NACSA / JPDP timing clash, and produce a board-pack defensible in a JPDP inspection.",
+      "prerequisites": ["t2-practitioner"],
+      "lessons": [
+        {
+          "id": "01-twelve-domain-scaffold",
+          "title": "The 12 domains as programme scaffold — sequencing and dependencies",
+          "summary": "Why Governance and Notice come first. Why DPbD and ADMP sit late but cannot wait. The 28 critical-tier control list.",
+          "estimatedTime": "45 min",
+          "deliverable": "12-domain heat-map for a client + 90-day sequencing plan",
+          "citations": ["pdpa-my/controls/library.json v3.1 (57 controls)", "pdpa-my/controls/domains.json"],
+          "gdprParallel": "gdpr/t3-programme/01-controller-programme-scaffold.md",
+          "path": "t3-programme/01-twelve-domain-scaffold.md"
+        },
+        {
+          "id": "02-dpo-under-a1727",
+          "title": "DPO appointment under A1727 — what s12A actually requires",
+          "summary": "Mandatory for controllers AND processors. Reporting line, independence, resources, Commissioner notification. The Aug 2025 DPO Guideline as the operational manual.",
+          "estimatedTime": "60 min",
+          "deliverable": "DPO appointment memo + Commissioner notification record + DPO role description aligned to s12A and the 2025 DPO Guideline",
+          "citations": ["A1727 s12A", "JPDP DPO Guideline 2025 (Feb + Aug versions)"],
+          "gdprParallel": "gdpr/t3-programme/02-dpo-articles-37-39.md",
+          "path": "t3-programme/02-dpo-under-a1727.md"
+        },
+        {
+          "id": "03-dpia-dpbd-admp-triad",
+          "title": "DPIA, DPbD, and ADMP as a programme triad",
+          "summary": "Engagement triggers, documentation chain (DPIA → DPbD checklist → ADM register), Section 13 governance practices. Where the three guidelines reinforce each other and where they create overlapping obligations.",
+          "estimatedTime": "90 min",
+          "deliverable": "Programme runbook integrating DPIA / DPbD / ADMP for a SaaS client using ML for risk scoring",
+          "citations": ["JPDP DPIA / DPbD / ADMP Guidelines April 2026", "pdpa-my/dpbd/governance-best-practices.json"],
+          "gdprParallel": "gdpr/t3-programme/03-dpia-pbd-art22-triad.md",
+          "path": "t3-programme/03-dpia-dpbd-admp-triad.md"
+        },
+        {
+          "id": "04-cross-border-reforms",
+          "title": "Cross-border transfer reforms (s129 / s129A) and the CBPDT Guideline 2025",
+          "summary": "From Ministerial whitelist to SCC / BCR / certification. The Transfer Impact Assessment integration with DPIA. Common patterns for SaaS-heavy clients.",
+          "estimatedTime": "60 min",
+          "deliverable": "Cross-border transfer register + TIA + mechanism selection for a client with 5 SaaS vendors across 3 jurisdictions",
+          "citations": ["Act 709 s129, A1727 s129A", "JPDP CBPDT Guideline 2025 (BM + EN)"],
+          "gdprParallel": "gdpr/t3-programme/04-cross-border-chapter-v.md",
+          "path": "t3-programme/04-cross-border-reforms.md"
+        },
+        {
+          "id": "05-privacy-tabletop",
+          "title": "Running a privacy tabletop — including the NACSA 6h / JPDP 72h clash",
+          "summary": "Scenario design (ransomware affecting PII; cross-border exfiltration; vendor breach); engineering injects; decision-points for IT/OT severance; AAR template.",
+          "estimatedTime": "90 min",
+          "deliverable": "Tabletop scenario package + facilitator script + AAR template for a Malaysian NCII bank scenario",
+          "citations": ["NACSA Act 854 s26 (6h)", "A1727 s12B (72h)"],
+          "gdprParallel": "gdpr/t3-programme/05-breach-tabletop-art33.md",
+          "path": "t3-programme/05-privacy-tabletop.md"
+        },
+        {
+          "id": "06-checkpoint",
+          "title": "Checkpoint — programme readiness review",
+          "summary": "Board-pack contents. 12 domain capabilities evidenced. The artefacts a JPDP inspection would ask for in the first 24 hours.",
+          "estimatedTime": "90 min",
+          "checkpoint": true,
+          "deliverable": "Defensible 24h JPDP inspection pack: DPO appointment, RoPA, DPIA register, breach response plan, privacy notice, training records, ADM register",
+          "path": "t3-programme/06-checkpoint.md"
+        }
+      ]
+    },
+    {
+      "id": "t4-auditor",
+      "tier": "T4",
+      "name": "Auditor / Assessor",
+      "duration": "Continuous — per engagement",
+      "audience": "PDPA auditor, internal auditor leading a PDPA audit cycle, or IESP assessor with a PDPA scope.",
+      "outcome": "Can perform a PDPA audit using the 12-domain work program, write findings that pass the citation-discipline check, and produce an audit pack that maps each finding to its s-number and the issued April 2026 guideline section.",
+      "prerequisites": ["t3-programme"],
+      "lessons": [
+        {
+          "id": "01-audit-pack-anatomy",
+          "title": "Anatomy of a PDPA audit pack",
+          "summary": "Work program, PBC list, finding template, rating methodology, engagement kickoff checklist. The Tech-Audit/Regulatory/PDPA cross-reference and what lives where.",
+          "estimatedTime": "45 min",
+          "citations": ["Tech-Audit/Regulatory/PDPA/Work-Program/PDPA-Audit-Program.md", "Tech-Audit/Regulatory/PDPA/Document-Requests/PBC-Request-List.md (108 items)", "Tech-Audit/Regulatory/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md v2.3"],
+          "gdprParallel": "gdpr/t4-auditor/01-audit-pack-gdpr.md",
+          "path": "t4-auditor/01-audit-pack-anatomy.md"
+        },
+        {
+          "id": "02-domains-as-scope",
+          "title": "The 12 domains as test scope — critical-tier sequencing",
+          "summary": "Why the 28 critical-tier controls get tested first. IOIR test methods. AICPA sampling (60 items at 95%/5% for large populations). The DPB and ADM domains as the post-April-2026 additions.",
+          "estimatedTime": "60 min",
+          "citations": ["pdpa-my/controls/library.json (v3.1, 57 controls, 28 critical-tier)", "pdpa-my/audit-integration.json v1.1.0"],
+          "gdprParallel": "gdpr/t4-auditor/02-articles-as-scope.md",
+          "path": "t4-auditor/02-domains-as-scope.md"
+        },
+        {
+          "id": "03-citation-discipline",
+          "title": "Citation discipline — the issued-vs-leading-practice gate",
+          "summary": "Cross-link to the Citation Discipline Guide v2.0+. Why 'JPDP DPbD Guideline §5.3' is a defensible citation and 'the JPDP DPbD Guideline' is not. The 11 common errors. BM authoritative text. Internal workpaper vs external report citation form.",
+          "estimatedTime": "60 min",
+          "citations": ["Tech-Audit/Regulatory/PDPA/Work-Program/Citation-Discipline-Common-Errors.md v2.0+"],
+          "gdprParallel": "gdpr/t4-auditor/03-edpb-guideline-discipline.md",
+          "path": "t4-auditor/03-citation-discipline.md"
+        },
+        {
+          "id": "04-finding-craft",
+          "title": "Writing a finding that maps to s-number + issued §-number",
+          "summary": "The 5 C's template (Condition, Criteria, Cause, Consequence, Corrective Action). Internal workpaper citation vs external report citation. A good DPbD finding vs a bad one. The verified module trail check.",
+          "estimatedTime": "60 min",
+          "deliverable": "A fully-formed finding on a sample DPbD §5.3 children's-consent gap, passing the partner-review gate",
+          "citations": ["Tech-Audit/Regulatory/PDPA/Templates/Finding-Template.md", "Tech-Audit/Regulatory/PDPA/Work-Program/Rating-and-Conclusion-Methodology.md §3.2"],
+          "gdprParallel": "gdpr/t4-auditor/04-finding-craft-gdpr.md",
+          "path": "t4-auditor/04-finding-craft.md"
+        },
+        {
+          "id": "05-checkpoint",
+          "title": "Checkpoint — produce a sample finding and pass the partner-review gate",
+          "summary": "Pick a control. Walk it through to a fully-formed finding. Self-grade against the rubric in the Citation Discipline Guide. If your finding falls into any of the 11 common errors, redo it.",
+          "estimatedTime": "120 min",
+          "checkpoint": true,
+          "deliverable": "Sample finding passing the partner-review gate per Citation Discipline Guide §1 (10-item self-check)",
+          "path": "t4-auditor/05-checkpoint.md"
+        }
+      ]
+    }
+  ],
+  "guidelineDeepDives": {
+    "description": "Reference deep-dives on each currently-issued JPDP guideline. Use these when you need detail beyond what the tiered lessons cover — e.g., when drafting a finding under a specific section, or when a client asks for guidance on a niche provision. Each deep-dive includes scope, structure walkthrough, key obligations, common implementation patterns, and the GDPR / international parallel.",
+    "deepDives": [
+      {
+        "id": "g1-dpia",
+        "title": "JPDP DPIA Guideline (April 2026) — section-by-section",
+        "summary": "DEICA methodology, 2 quantitative + 7 qualitative threshold framework, Ketua Pelaksana DPIA role, senior-management reporting (not Commissioner portal), 2-year validity, retention from cessation of processing.",
+        "citations": ["JPDP DPIA Guideline April 2026 (BM, 1742 lines)"],
+        "gdprParallel": "gdpr/articles/article-35-dpia.md",
+        "path": "guidelines/g1-dpia.md"
+      },
+      {
+        "id": "g2-dpbd",
+        "title": "JPDP DPbD Guideline (April 2026) — section-by-section",
+        "summary": "Four elements (Sifat Proaktif / Perlindungan Hujung-ke-hujung / Ketelusan / Berpusatkan Pengguna), application across the 7 PDP Principles, six prohibited deceptive design patterns, Section 13 governance practices, children's privacy (§5.3 / §10.2 / §11.2 only).",
+        "citations": ["JPDP DPbD Guideline April 2026 (BM, 1715 lines)"],
+        "gdprParallel": "gdpr/articles/article-25-data-protection-by-design.md",
+        "path": "guidelines/g2-dpbd.md"
+      },
+      {
+        "id": "g3-admp",
+        "title": "JPDP ADMP Guideline (April 2026) — section-by-section",
+        "summary": "Ambang ADMP trigger (legal effects / significantly affects), s7 notice + s38 withdrawal anchoring, six §9.9 Exceptions, six s45 Exemptions, seven §10.2 AI best practices, biometric and CCTV deferred.",
+        "citations": ["JPDP ADMP Guideline April 2026 (BM, 731 lines)"],
+        "gdprParallel": "gdpr/articles/article-22-automated-decisions.md",
+        "path": "guidelines/g3-admp.md"
+      },
+      {
+        "id": "g4-dpo",
+        "title": "JPDP DPO Appointment Guideline (2025) — section-by-section",
+        "summary": "s12A scope, when DPO is mandatory, qualifications, independence, reporting line, Commissioner notification, DPO Training Service Provider regime.",
+        "citations": ["JPDP DPO Appointment Guideline (Aug 2025; Feb 2025 earlier version)", "JPDP DPO Training Service Providers Management Guideline"],
+        "gdprParallel": "gdpr/articles/articles-37-38-39-dpo.md",
+        "path": "guidelines/g4-dpo.md"
+      },
+      {
+        "id": "g5-dbn",
+        "title": "JPDP Data Breach Notification Guideline (2025) — section-by-section",
+        "summary": "s12B implementation: 72-hour Commissioner notification + 7-day data subject notification; what is a notifiable breach; harm-likelihood assessment; multi-breach aggregation; the NACSA 6h clash.",
+        "citations": ["JPDP DBN Guideline (Aug 2025; Feb 2025 earlier version)"],
+        "gdprParallel": "gdpr/articles/articles-33-34-breach.md",
+        "path": "guidelines/g5-dbn.md"
+      },
+      {
+        "id": "g6-cbpdt",
+        "title": "JPDP CBPDT (Cross-Border Personal Data Transfer) Guideline (2025) — section-by-section",
+        "summary": "From Ministerial whitelist to SCC / BCR / certification; adequacy assessment factors; Transfer Impact Assessment; SaaS / cloud common patterns.",
+        "citations": ["JPDP CBPDT Guideline 2025 (BM + EN)"],
+        "gdprParallel": "gdpr/articles/chapter-v-international-transfers.md",
+        "path": "guidelines/g6-cbpdt.md"
+      },
+      {
+        "id": "g7-privacy-notice",
+        "title": "JPDP Privacy Notice Guides (2022 + 2025 Quick Guide) — section-by-section",
+        "summary": "The 2022 Privacy Notice Preparation Guide + the 2025 Quick Guide. s7(1) particulars expanded, layered-notice patterns, multilingual delivery, sectoral variants.",
+        "citations": ["JPDP Privacy Notice Preparation Guide 2022", "JPDP Quick Guide to Privacy Notice 2025"],
+        "gdprParallel": "gdpr/articles/articles-13-14-information.md",
+        "path": "guidelines/g7-privacy-notice.md"
+      }
+    ]
+  },
+  "crossReferences": {
+    "primaryData": "../..",
+    "auditProgramme": "../../../Tech-Audit/Regulatory/PDPA/",
+    "citationGuide": "../../../Tech-Audit/Regulatory/PDPA/Work-Program/Citation-Discipline-Common-Errors.md",
+    "references": "../../../Tech-Audit/Regulatory/PDPA/References/",
+    "articles": "https://github.com/dawuds/articles/tree/main/PDPA-Guidelines",
+    "gdprTrack": "../gdpr/index.json",
+    "comparativeReference": "../cross-reference/"
+  }
+}

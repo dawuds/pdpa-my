@@ -1,0 +1,35 @@
+{
+  "$schema": "pdpa-learn-toplevel-v1",
+  "sourceType": "constructed-educational",
+  "description": "Top-level learning index for the consulting team. Points at two parallel tracks (PDPA and GDPR) plus a cross-reference module. Each track is independently versioned and refreshed as the underlying regime evolves.",
+  "tracks": [
+    {
+      "id": "pdpa",
+      "name": "PDPA (Malaysia — Act 709 + A1727 + April 2026 Guidelines)",
+      "indexFile": "pdpa/index.json",
+      "tierCount": 4,
+      "lessonCount": 22,
+      "guidelineDeepDives": 7,
+      "status": "verified-against-issued-april-2026"
+    },
+    {
+      "id": "gdpr",
+      "name": "GDPR (EU — Regulation (EU) 2016/679 + EDPB Guidelines)",
+      "indexFile": "gdpr/index.json",
+      "tierCount": 4,
+      "lessonCount": 22,
+      "articleDeepDives": 8,
+      "status": "comparative-reference-only"
+    }
+  ],
+  "crossReference": {
+    "directory": "cross-reference/",
+    "documents": [
+      "pdpa-vs-gdpr.md — side-by-side obligation map",
+      "concepts.md — concept-by-concept equivalence (data subject vs data subject; data controller vs controller; sensitive PD vs special category; ...)",
+      "obligations.md — controller obligations grid"
+    ]
+  },
+  "lastUpdated": "2026-05-13",
+  "verificationCaveat": "Material is illustrative only. Never legal or regulatory advice. For client-facing work verify against the BM source PDFs in Tech-Audit/Regulatory/PDPA/References/Guidelines/ (PDPA) and the EUR-Lex consolidated text + EDPB Guidelines (GDPR)."
+}

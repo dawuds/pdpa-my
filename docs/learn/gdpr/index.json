@@ -1,0 +1,311 @@
+{
+  "$schema": "gdpr-learn-v1",
+  "track": "gdpr",
+  "title": "GDPR Learning Track — EU (Regulation (EU) 2016/679)",
+  "sourceType": "constructed-educational",
+  "verificationNote": "Educational scaffold for the consulting team. Lessons cite Regulation (EU) 2016/679 (consolidated text from EUR-Lex), the EDPB Guidelines and Opinions, and the EDPS / national supervisory authority guidance where applicable. Material is comparative reference for cross-jurisdictional consulting work and is NEVER legal advice on EU obligations. For client-facing work involving EU exposure, engage EU-qualified counsel.",
+  "description": "GDPR track mirroring the PDPA track structure (4 tiers + article deep-dives) so a consultant trained on one regime can pick up the other quickly. Each lesson cross-references the parallel PDPA lesson in ../pdpa/.",
+  "howToUse": "Read tiers in order. Use article deep-dives when you need detail beyond what the tiered lessons cover. The cross-reference/pdpa-vs-gdpr.md document is the canonical side-by-side and should be read alongside T1.",
+  "lastUpdated": "2026-05-13",
+  "tiers": [
+    {
+      "id": "t1-orientation",
+      "tier": "T1",
+      "name": "Orientation",
+      "duration": "≈ 1 hour",
+      "audience": "Anyone new to GDPR — engineers, GRC professionals, executives, lawyers from adjacent practice areas.",
+      "outcome": "Can name the 6 GDPR principles (Article 5) and the 8 data subject rights (Articles 15-22), explain the controller / processor / joint-controller distinction, articulate the lawful-basis hierarchy (Article 6), identify when an EU SA has jurisdiction, and quote GDPR penalty exposure (20M EUR / 4% global turnover).",
+      "prerequisites": [],
+      "lessons": [
+        {
+          "id": "01-why-gdpr-matters",
+          "title": "Why GDPR matters and who it applies to",
+          "summary": "GDPR territorial scope (Article 3 — establishment vs targeting), penalty exposure (Article 83 — 10M EUR / 2% or 20M EUR / 4%), the joint-controller and processor liability regime, the one-stop-shop mechanism and lead supervisory authority.",
+          "estimatedTime": "10 min",
+          "learningObjectives": [
+            "State who Regulation 2016/679 binds (Article 3 — establishment + targeting + monitoring)",
+            "Quote the two penalty tiers (Article 83(4) and 83(5))",
+            "Explain controller / processor / joint controller (Articles 4, 26, 28)",
+            "Identify the lead supervisory authority concept and OSS"
+          ],
+          "citations": ["GDPR Articles 3, 4, 26, 28, 83"],
+          "pdpaParallel": "../pdpa/t1-orientation/01-why-pdpa-matters.md",
+          "path": "t1-orientation/01-why-gdpr-matters.md"
+        },
+        {
+          "id": "02-six-principles",
+          "title": "GDPR Article 5 — the 6 principles in 15 minutes",
+          "summary": "Lawfulness / fairness / transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity and confidentiality. Plus the accountability over-principle.",
+          "estimatedTime": "15 min",
+          "learningObjectives": [
+            "Name all six Article 5(1) principles plus accountability (5(2))",
+            "Distinguish purpose limitation from compatibility assessment (5(1)(b) + 6(4))",
+            "State what accountability adds that PDPA's 7 Principles do not formally codify",
+            "Identify where each principle has a corresponding PDPA principle (cross-reference)"
+          ],
+          "citations": ["GDPR Article 5"],
+          "pdpaParallel": "../pdpa/t1-orientation/02-seven-principles.md",
+          "path": "t1-orientation/02-six-principles.md"
+        },
+        {
+          "id": "03-lawful-basis-and-rights",
+          "title": "Article 6 lawful bases and Articles 15-22 data subject rights",
+          "summary": "The six lawful bases (consent, contract, legal obligation, vital interests, public task, legitimate interests), the legitimate-interests three-part test, the eight data subject rights, and Article 22 (solely automated decisions).",
+          "estimatedTime": "15 min",
+          "learningObjectives": [
+            "Recite the six Article 6(1) lawful bases",
+            "Apply the legitimate-interests three-part test",
+            "Distinguish Article 22 from general right to object (Article 21)",
+            "Map GDPR rights to PDPA equivalents (cross-reference)"
+          ],
+          "citations": ["GDPR Articles 6, 9, 15-22"],
+          "pdpaParallel": "../pdpa/t1-orientation/03-a1727.md",
+          "path": "t1-orientation/03-lawful-basis-and-rights.md"
+        },
+        {
+          "id": "04-edpb-guideline-discipline",
+          "title": "EDPB Guidelines, EDPS Opinions, and CJEU case law — the citation hierarchy",
+          "summary": "The hierarchy of GDPR authority: Regulation text > implementing acts > EDPB Guidelines > national SA guidance > CJEU case law > commentary. When to cite each. Why a finding citing a blog post will not survive review.",
+          "estimatedTime": "15 min",
+          "learningObjectives": [
+            "Rank GDPR authority sources",
+            "Identify when CJEU case law overrides EDPB guidance (Schrems II as the canonical example)",
+            "Apply the issued-vs-draft distinction to EDPB Guidelines under consultation",
+            "Cite EDPB Guideline number + version when referencing"
+          ],
+          "citations": ["EDPB Rules of Procedure", "CJEU C-311/18 (Schrems II)", "Article 70 GDPR (EDPB tasks)"],
+          "pdpaParallel": "../pdpa/t1-orientation/04-issued-vs-pcp.md",
+          "path": "t1-orientation/04-edpb-guideline-discipline.md"
+        },
+        {
+          "id": "05-checkpoint",
+          "title": "Checkpoint — GDPR orientation self-test",
+          "summary": "Ten questions. If you can't answer eight, re-read the relevant lesson before moving to T2.",
+          "estimatedTime": "10 min",
+          "checkpoint": true,
+          "deliverable": "10/10 self-test or identified gaps",
+          "path": "t1-orientation/05-checkpoint.md"
+        }
+      ]
+    },
+    {
+      "id": "t2-practitioner",
+      "tier": "T2",
+      "name": "Practitioner",
+      "duration": "≈ 1 week",
+      "audience": "New DPO or privacy professional taking operational responsibility for a GDPR programme.",
+      "outcome": "Can build an Article 30 RoPA, draft Article 13/14 information notices, conduct an Article 35 DPIA, draft Article 33 / 34 breach notifications, and assess applicability of an Article 40 Code of Conduct.",
+      "prerequisites": ["t1-orientation"],
+      "lessons": [
+        {
+          "id": "01-build-a-ropa-article30",
+          "title": "Exercise — build an Article 30 RoPA from scratch",
+          "summary": "Article 30(1) controller elements vs Article 30(2) processor elements. The micro-enterprise exception (Article 30(5)) and why it almost never applies. Common gaps.",
+          "estimatedTime": "90 min",
+          "deliverable": "Article 30 RoPA covering 4 processing activities with both controller and processor entries",
+          "citations": ["GDPR Article 30", "EDPB Guidelines on Article 30"],
+          "pdpaParallel": "../pdpa/t2-practitioner/01-build-a-ropa.md",
+          "path": "t2-practitioner/01-build-a-ropa-article30.md"
+        },
+        {
+          "id": "02-privacy-notice-article13-14",
+          "title": "Exercise — draft Article 13 / 14 information notices",
+          "summary": "Article 13 (direct collection) vs Article 14 (indirect collection); mandatory information elements; layered-notice patterns; EDPB transparency guidelines.",
+          "estimatedTime": "90 min",
+          "deliverable": "Article 13 notice + Article 14 notice for a worked B2C platform",
+          "citations": ["GDPR Articles 12-14", "EDPB Guidelines on Transparency"],
+          "pdpaParallel": "../pdpa/t2-practitioner/02-privacy-notice-draft.md",
+          "path": "t2-practitioner/02-privacy-notice-article13-14.md"
+        },
+        {
+          "id": "03-dpia-article35",
+          "title": "Exercise — Article 35 DPIA on a worked example",
+          "summary": "When DPIA is mandatory (Article 35(3) + SA blacklists); the EDPB 9-criteria threshold; consultation with the SA under Article 36 where high residual risk remains.",
+          "estimatedTime": "120 min",
+          "deliverable": "Article 35-compliant DPIA on an e-KYC scenario including Article 36 prior-consultation assessment",
+          "citations": ["GDPR Articles 35, 36", "WP29/EDPB DPIA Guidelines", "national SA blacklists"],
+          "pdpaParallel": "../pdpa/t2-practitioner/03-deica-dpia.md",
+          "path": "t2-practitioner/03-dpia-article35.md"
+        },
+        {
+          "id": "04-breach-article33-34",
+          "title": "Exercise — Article 33 / 34 breach notifications",
+          "summary": "Article 33: 72 hours to SA without undue delay; Article 34: high-risk-to-subject communication; the SA's expectation on harm-likelihood assessment.",
+          "estimatedTime": "90 min",
+          "deliverable": "Article 33 SA notification + Article 34 subject communication for a worked ransomware scenario",
+          "citations": ["GDPR Articles 33, 34", "EDPB Guidelines on Personal Data Breach Notification"],
+          "pdpaParallel": "../pdpa/t2-practitioner/04-breach-notification.md",
+          "path": "t2-practitioner/04-breach-article33-34.md"
+        },
+        {
+          "id": "05-codes-of-conduct-article40",
+          "title": "Article 40 Codes of Conduct and Article 42 Certification",
+          "summary": "When sector codes apply; approval mechanism via SA / EDPB; certification as a transfer safeguard (Article 46(2)(f)) and as accountability evidence.",
+          "estimatedTime": "60 min",
+          "deliverable": "Applicability assessment for 3 worked clients (cloud, AdTech, health)",
+          "citations": ["GDPR Articles 40-43"],
+          "pdpaParallel": "../pdpa/t2-practitioner/05-sectoral-cop.md",
+          "path": "t2-practitioner/05-codes-of-conduct-article40.md"
+        },
+        {
+          "id": "06-checkpoint",
+          "title": "Checkpoint — GDPR practitioner deliverables review",
+          "summary": "Five GDPR artefacts you should now own. Compare side-by-side with the PDPA T2 outputs to see the structural difference between the two regimes.",
+          "estimatedTime": "60 min",
+          "checkpoint": true,
+          "deliverable": "All 5 GDPR T2 deliverables reviewed; comparison memo against the PDPA T2 outputs",
+          "path": "t2-practitioner/06-checkpoint.md"
+        }
+      ]
+    },
+    {
+      "id": "t3-programme",
+      "tier": "T3",
+      "name": "Programme Builder",
+      "duration": "≈ 1–3 months at programme cadence",
+      "audience": "DPO standing up a GDPR programme or consultant leading client readiness.",
+      "outcome": "Can stand up a GDPR programme across all controller obligations, design Chapter V cross-border architecture, and produce documentation defensible in a SA inspection.",
+      "prerequisites": ["t2-practitioner"],
+      "lessons": [
+        {
+          "id": "01-controller-programme-scaffold",
+          "title": "GDPR programme scaffold — what every controller needs",
+          "summary": "The controller obligation set: lawful basis register, RoPA, DPIA programme, breach response, DSAR programme, vendor / processor management, training, governance.",
+          "estimatedTime": "45 min",
+          "deliverable": "8-pillar programme plan with a 90-day sequencing for a B2C SaaS client",
+          "citations": ["GDPR Articles 24-32"],
+          "pdpaParallel": "../pdpa/t3-programme/01-twelve-domain-scaffold.md",
+          "path": "t3-programme/01-controller-programme-scaffold.md"
+        },
+        {
+          "id": "02-dpo-articles-37-39",
+          "title": "DPO under Articles 37-39 — when mandatory, what they do, who they report to",
+          "summary": "Article 37 mandatory triggers; Article 38 position; Article 39 tasks; EDPB Guideline on DPOs; conflict-of-interest framework.",
+          "estimatedTime": "60 min",
+          "deliverable": "DPO appointment memo + tasking + reporting line for a worked client",
+          "citations": ["GDPR Articles 37-39", "EDPB Guidelines on DPOs"],
+          "pdpaParallel": "../pdpa/t3-programme/02-dpo-under-a1727.md",
+          "path": "t3-programme/02-dpo-articles-37-39.md"
+        },
+        {
+          "id": "03-dpia-pbd-art22-triad",
+          "title": "DPIA + Privacy by Design + Article 22 as a programme triad",
+          "summary": "Article 35 DPIA + Article 25 Privacy by Design and by Default + Article 22 automated decisions. Documentation chain and overlap.",
+          "estimatedTime": "90 min",
+          "deliverable": "Programme runbook integrating DPIA / PbD / Article 22 for a SaaS client using ML for risk scoring",
+          "citations": ["GDPR Articles 22, 25, 35"],
+          "pdpaParallel": "../pdpa/t3-programme/03-dpia-dpbd-admp-triad.md",
+          "path": "t3-programme/03-dpia-pbd-art22-triad.md"
+        },
+        {
+          "id": "04-cross-border-chapter-v",
+          "title": "GDPR Chapter V — cross-border transfer architecture",
+          "summary": "Adequacy decisions; SCCs (2021 modular); BCRs; derogations (Article 49); Transfer Impact Assessments post-Schrems II; UK adequacy; pan-jurisdictional patterns.",
+          "estimatedTime": "60 min",
+          "deliverable": "Cross-border transfer register + TIA + mechanism selection for a client transferring data to US / UK / Singapore / Malaysia",
+          "citations": ["GDPR Chapter V (Articles 44-50)", "C-311/18 Schrems II", "EDPB Recommendations 01/2020 supplementary measures"],
+          "pdpaParallel": "../pdpa/t3-programme/04-cross-border-reforms.md",
+          "path": "t3-programme/04-cross-border-chapter-v.md"
+        },
+        {
+          "id": "05-breach-tabletop-art33",
+          "title": "GDPR breach tabletop — Article 33 / 34 timing under pressure",
+          "summary": "Scenario design; risk-of-harm assessment; the 72-hour clock starting point (awareness, not detection); communication-to-subject template; SA notification template per jurisdiction.",
+          "estimatedTime": "90 min",
+          "deliverable": "Tabletop package + facilitator script + AAR template for a worked SaaS breach",
+          "citations": ["GDPR Articles 33, 34", "EDPB Guidelines 9/2022 on Personal Data Breach Notification"],
+          "pdpaParallel": "../pdpa/t3-programme/05-privacy-tabletop.md",
+          "path": "t3-programme/05-breach-tabletop-art33.md"
+        },
+        {
+          "id": "06-checkpoint",
+          "title": "Checkpoint — GDPR programme readiness review",
+          "summary": "Board-pack contents. Documentation set a SA inspection would ask for. Comparison against PDPA T3 board-pack.",
+          "estimatedTime": "90 min",
+          "checkpoint": true,
+          "deliverable": "Defensible SA inspection pack + comparison memo with the PDPA T3 pack",
+          "path": "t3-programme/06-checkpoint.md"
+        }
+      ]
+    },
+    {
+      "id": "t4-auditor",
+      "tier": "T4",
+      "name": "Auditor / Assessor",
+      "duration": "Continuous — per engagement",
+      "audience": "GDPR auditor, internal auditor leading a GDPR audit cycle.",
+      "outcome": "Can perform a GDPR audit, write findings citing Article + section, and produce an audit pack defensible to the lead SA.",
+      "prerequisites": ["t3-programme"],
+      "lessons": [
+        {
+          "id": "01-audit-pack-gdpr",
+          "title": "Anatomy of a GDPR audit pack",
+          "summary": "Work programme structure; ISO 27701 as the controller / processor assurance reference; SOC 2 + Article 28 overlap.",
+          "estimatedTime": "45 min",
+          "citations": ["ISO/IEC 27701:2019", "GDPR Article 28"],
+          "pdpaParallel": "../pdpa/t4-auditor/01-audit-pack-anatomy.md",
+          "path": "t4-auditor/01-audit-pack-gdpr.md"
+        },
+        {
+          "id": "02-articles-as-scope",
+          "title": "Mapping articles to audit scope",
+          "summary": "Controller obligations (Articles 5-25 + Chapter IV) as the test scope. Article 32 security as the largest single test surface. Article 24 accountability as the override.",
+          "estimatedTime": "60 min",
+          "citations": ["GDPR Chapter II (principles) + Chapter IV (controller/processor)"],
+          "pdpaParallel": "../pdpa/t4-auditor/02-domains-as-scope.md",
+          "path": "t4-auditor/02-articles-as-scope.md"
+        },
+        {
+          "id": "03-edpb-guideline-discipline",
+          "title": "EDPB Guidelines and CJEU case law — citation discipline",
+          "summary": "Hierarchy of authority. CJEU > EDPB > national SA > commentary. Guideline version pinning. Schrems II as the canonical example of CJEU overriding established practice.",
+          "estimatedTime": "60 min",
+          "citations": ["GDPR Article 70 (EDPB)", "CJEU C-311/18 Schrems II"],
+          "pdpaParallel": "../pdpa/t4-auditor/03-citation-discipline.md",
+          "path": "t4-auditor/03-edpb-guideline-discipline.md"
+        },
+        {
+          "id": "04-finding-craft-gdpr",
+          "title": "Writing a finding that maps to GDPR Article + EDPB Guideline",
+          "summary": "Finding template; Article + sub-paragraph citation; EDPB Guideline cross-reference; the controller's accountability burden (Article 5(2)) as the residual finding category.",
+          "estimatedTime": "60 min",
+          "deliverable": "Sample finding on an Article 13 information-notice gap, fully cited",
+          "citations": ["GDPR Articles 5, 13", "EDPB Guidelines on Transparency"],
+          "pdpaParallel": "../pdpa/t4-auditor/04-finding-craft.md",
+          "path": "t4-auditor/04-finding-craft-gdpr.md"
+        },
+        {
+          "id": "05-checkpoint",
+          "title": "Checkpoint — produce a GDPR finding",
+          "summary": "Pick an Article. Walk through to a fully-formed finding. Self-grade against rubric and compare side-by-side with the parallel PDPA finding.",
+          "estimatedTime": "120 min",
+          "checkpoint": true,
+          "deliverable": "Sample GDPR finding + side-by-side PDPA finding on the equivalent obligation",
+          "path": "t4-auditor/05-checkpoint.md"
+        }
+      ]
+    }
+  ],
+  "articleDeepDives": {
+    "description": "Reference deep-dives on each key GDPR Article. Use when you need detail beyond the tiered lessons. Each deep-dive includes scope, structure, common implementation patterns, EDPB / CJEU position, and the PDPA parallel.",
+    "deepDives": [
+      { "id": "article-5-principles", "title": "Article 5 — the six principles + accountability", "summary": "Lawfulness/fairness/transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity and confidentiality + accountability.", "pdpaParallel": "../../pdpa/t1-orientation/02-seven-principles.md", "path": "articles/article-5-principles.md" },
+      { "id": "articles-13-14-information", "title": "Articles 13 / 14 — information to be provided", "summary": "Direct vs indirect collection; mandatory elements; layered notices; EDPB transparency guidelines.", "pdpaParallel": "../../pdpa/guidelines/g7-privacy-notice.md", "path": "articles/articles-13-14-information.md" },
+      { "id": "article-22-automated-decisions", "title": "Article 22 — automated individual decision-making and profiling", "summary": "The right not to be subject to solely-automated decisions; three exceptions; safeguards; sensitive-data overlay; WP29 Guidelines on Automated Individual Decision-Making.", "pdpaParallel": "../../pdpa/guidelines/g3-admp.md", "path": "articles/article-22-automated-decisions.md" },
+      { "id": "article-25-data-protection-by-design", "title": "Article 25 — data protection by design and by default", "summary": "PbD obligation, default-privacy obligation, EDPB Guidelines 4/2019.", "pdpaParallel": "../../pdpa/guidelines/g2-dpbd.md", "path": "articles/article-25-data-protection-by-design.md" },
+      { "id": "article-30-ropa", "title": "Article 30 — Records of Processing Activities", "summary": "Controller vs processor elements; the micro-enterprise exception; common patterns.", "pdpaParallel": "../../pdpa/t2-practitioner/01-build-a-ropa.md", "path": "articles/article-30-ropa.md" },
+      { "id": "articles-33-34-breach", "title": "Articles 33 / 34 — breach notification", "summary": "72-hour SA notification + high-risk-to-subject communication; EDPB Guidelines 9/2022.", "pdpaParallel": "../../pdpa/guidelines/g5-dbn.md", "path": "articles/articles-33-34-breach.md" },
+      { "id": "article-35-dpia", "title": "Article 35 — Data Protection Impact Assessment", "summary": "Mandatory triggers (Article 35(3)); EDPB 9-criteria threshold; SA blacklists; Article 36 prior consultation.", "pdpaParallel": "../../pdpa/guidelines/g1-dpia.md", "path": "articles/article-35-dpia.md" },
+      { "id": "articles-37-38-39-dpo", "title": "Articles 37 / 38 / 39 — DPO appointment, position, tasks", "summary": "Mandatory triggers; independence; tasks list; EDPB DPO Guidelines.", "pdpaParallel": "../../pdpa/guidelines/g4-dpo.md", "path": "articles/articles-37-38-39-dpo.md" },
+      { "id": "chapter-v-international-transfers", "title": "Chapter V — international transfers (Articles 44-50)", "summary": "Adequacy / SCCs (2021 modular) / BCRs / derogations; Schrems II; supplementary measures.", "pdpaParallel": "../../pdpa/guidelines/g6-cbpdt.md", "path": "articles/chapter-v-international-transfers.md" }
+    ]
+  },
+  "crossReferences": {
+    "pdpaTrack": "../pdpa/index.json",
+    "comparativeReference": "../cross-reference/",
+    "primarySources": {
+      "regulation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "edpbGuidelines": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+    }
+  }
+}
