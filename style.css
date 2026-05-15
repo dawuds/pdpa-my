@@ -1119,6 +1119,101 @@
 }
 .fw-chip:hover { background: var(--accent, #2563eb); color: white; border-color: var(--accent, #2563eb); }
 
+/* Lesson page 2-col grid (TOC sticky-left, body 1fr). Inspired by
+   ~/claude/design-templates/patterns/07-research/feature-explainer.md */
+.lesson-page {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.lesson-main { min-width: 0; }  /* prevent grid blowout from wide tables/code */
+
+.lesson-toc {
+  position: sticky;
+  top: 110px;          /* clears sticky header (≈64px) + sticky nav (≈44px) */
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  font-size: 0.825rem;
+  padding-right: 0.5rem;
+}
+.lesson-toc-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.toc-link {
+  display: block;
+  padding: 0.3rem 0.6rem;
+  border-left: 2px solid var(--border);
+  color: var(--text-secondary);
+  text-decoration: none;
+  line-height: 1.35;
+  transition: border-color 0.1s ease, color 0.1s ease, background 0.1s ease;
+}
+.toc-link:hover {
+  border-left-color: var(--text-primary);
+  color: var(--text-primary);
+}
+.toc-link.active {
+  border-left-color: var(--accent, #2563eb);
+  color: var(--accent, #2563eb);
+  font-weight: 600;
+  background: rgba(37, 99, 235, 0.04);
+}
+.toc-l3 {
+  padding-left: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Checkpoint answer-key collapsibles (passthrough <details> in markdown) */
+.md-body details {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  background: var(--bg-card, #fff);
+}
+.md-body details > summary {
+  cursor: pointer;
+  padding: 0.55rem 0.85rem;
+  font-weight: 500;
+  list-style: none;
+  position: relative;
+  padding-left: 1.6rem;
+}
+.md-body details > summary::-webkit-details-marker { display: none; }
+.md-body details > summary::before {
+  content: '▸';
+  position: absolute;
+  left: 0.7rem;
+  top: 0.55rem;
+  color: var(--accent, #2563eb);
+  transition: transform 0.15s ease;
+  display: inline-block;
+}
+.md-body details[open] > summary::before { transform: rotate(90deg); }
+.md-body details > *:not(summary) {
+  margin-left: 1.6rem;
+  margin-right: 0.85rem;
+}
+.md-body details > :last-child { padding-bottom: 0.5rem; }
+
+@media (max-width: 920px) {
+  .lesson-page { grid-template-columns: 1fr; }
+  .lesson-toc {
+    position: static;
+    max-height: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
 /* Mobile-specific tweaks for nav (visible row + horizontal scroll affordance) */
 @media (max-width: 768px) {
   .nav-inner {

@@ -193,10 +193,26 @@ async function loadText(path) {
   }
 }
 
+// Slugify for stable heading anchors. Lowercase, ASCII-safe, dash-separated.
+function slugify(s) {
+  return String(s)
+    .toLowerCase()
+    .replace(/<[^>]+>/g, '')      // strip any inline HTML left over from inlineFmt
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .slice(0, 64) || 'section';
+}
+
 // Tiny markdown renderer — handles headings, paragraphs, lists, tables, code,
 // blockquotes, hr, bold/italic/code-spans, links. Adapted from OT-Security pattern.
+//
+// Returns { html, headings } so callers can build a TOC. headings is an array of
+// { level: 2|3, text, id } for h2/h3 only (h1 excluded — that's the page title).
+// Also passes <details>/<summary>/<div> raw HTML blocks through unescaped, enabling
+// collapsible answer keys on checkpoint markdown.
 function mdToHtml(src) {
-  if (!src) return '';
+  if (!src) return { html: '', headings: [] };
   src = src.replace(/\r\n?/g, '\n');
 
   // Strip YAML frontmatter if present
@@ -210,6 +226,8 @@ function mdToHtml(src) {
 
   const lines = src.split('\n');
   const out = [];
+  const headings = [];
+  const idCounts = {};
   let i = 0;
 
   function inlineFmt(s) {
@@ -231,10 +249,31 @@ function mdToHtml(src) {
     if (line.indexOf(' CODE') === 0) { out.push(line); i++; continue; }
     if (/^\s*$/.test(line)) { i++; continue; }
 
+    // Pass-through raw HTML for <details>, </details>, <summary>...</summary>, <div>, </div>
+    if (/^\s*<\/?(details|summary|div)\b[^>]*>\s*$/i.test(line)) {
+      out.push(line);
+      i++;
+      continue;
+    }
+    // <summary>...</summary> on a single line — pass through; inner content may have
+    // markdown-style **bold** / *italic* — apply inline formatting to the inner.
+    const sumOneLine = line.match(/^\s*<summary([^>]*)>([\s\S]*?)<\/summary>\s*$/i);
+    if (sumOneLine) {
+      out.push('<summary' + sumOneLine[1] + '>' + inlineFmt(sumOneLine[2]) + '</summary>');
+      i++;
+      continue;
+    }
+
     const hm = line.match(/^(#{1,6})\s+(.*)$/);
     if (hm) {
       const lvl = hm[1].length;
-      out.push('<h' + lvl + ' class="md-h">' + inlineFmt(hm[2].trim()) + '</h' + lvl + '>');
+      const text = hm[2].trim();
+      let id = slugify(text);
+      // de-duplicate IDs in case the same heading appears twice
+      if (idCounts[id] !== undefined) { idCounts[id]++; id = id + '-' + idCounts[id]; }
+      else { idCounts[id] = 0; }
+      if (lvl === 2 || lvl === 3) headings.push({ level: lvl, text, id });
+      out.push('<h' + lvl + ' class="md-h" id="' + id + '">' + inlineFmt(text) + '</h' + lvl + '>');
       i++; continue;
     }
 
@@ -283,7 +322,7 @@ function mdToHtml(src) {
 
     const p = [line];
     i++;
-    while (i < lines.length && lines[i].trim() && !/^(#{1,6}\s|>|---|\*\*\*|\|.*\|\s*$|[-*]\s+|\d+\.\s+| CODE)/.test(lines[i])) {
+    while (i < lines.length && lines[i].trim() && !/^(#{1,6}\s|>|---|\*\*\*|\|.*\|\s*$|[-*]\s+|\d+\.\s+| CODE|<\/?(?:details|summary|div)\b)/.test(lines[i])) {
       p.push(lines[i]);
       i++;
     }
@@ -292,7 +331,52 @@ function mdToHtml(src) {
 
   let html = out.join('\n');
   html = html.replace(/ CODE(\d+) /g, function(_, n) { return codeBlocks[parseInt(n, 10)]; });
-  return html;
+  return { html, headings };
+}
+
+// Build a sticky TOC nav from the headings array returned by mdToHtml.
+// href="#" + preventDefault + scrollIntoView keeps the route stable while
+// scrolling to the section. Anchor id used by IntersectionObserver wiring below.
+function buildToc(headings) {
+  if (!headings || !headings.length) return '';
+  const items = headings.map(h => {
+    const cls = h.level === 3 ? 'toc-link toc-l3' : 'toc-link';
+    return '<a class="' + cls + '" href="#" data-anchor="' + esc(h.id) + '">' + esc(h.text) + '</a>';
+  }).join('');
+  return '<nav class="lesson-toc"><div class="lesson-toc-label">On this page</div>' + items + '</nav>';
+}
+
+// IntersectionObserver to highlight the current section in the TOC.
+function wireTocObserver() {
+  const tocLinks = document.querySelectorAll('.lesson-toc .toc-link');
+  if (!tocLinks.length) return;
+
+  // Smooth-scroll on click without changing the hash route.
+  tocLinks.forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = a.getAttribute('data-anchor');
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  const headings = Array.from(document.querySelectorAll('.md-body h2[id], .md-body h3[id]'));
+  if (!headings.length) return;
+  const linkById = {};
+  tocLinks.forEach(a => { linkById[a.getAttribute('data-anchor')] = a; });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.remove('active'));
+        const link = linkById[e.target.id];
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px', threshold: 0 });
+
+  headings.forEach(h => observer.observe(h));
 }
 
 // Learn view dispatcher. Routes:
@@ -482,7 +566,9 @@ async function renderLearnLesson(el, trackId, tierId, lessonId) {
 
   const fullPath = 'docs/learn/' + trackId + '/' + lesson.path;
   const md = await loadText(fullPath);
-  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Lesson content not found at <code>${esc(fullPath)}</code>.</p></div>`;
+  const rendered = md ? mdToHtml(md) : { html: `<div class="empty-state"><p>Lesson content not found at <code>${esc(fullPath)}</code>.</p></div>`, headings: [] };
+  const bodyHtml = rendered.html;
+  const tocHtml = buildToc(rendered.headings);
 
   const lessons = tier.lessons || [];
   const idxL = lessons.findIndex(l => l.id === lessonId);
@@ -512,22 +598,28 @@ async function renderLearnLesson(el, trackId, tierId, lessonId) {
       <a href="#learn/${trackId}/tier:${esc(tierId)}">${esc(trackId.toUpperCase())} — ${esc(tier.name)}</a><span class="sep">/</span>
       <span class="current">${esc(lesson.title)}</span>
     </nav>
-    <header style="margin-bottom:1rem;">
-      <h2 style="margin-bottom:0.25rem;">${esc(lesson.title)}</h2>
-      <div style="font-size:0.8rem;color:var(--text-muted);">${esc(lesson.estimatedTime || '')}${lesson.deliverable ? ' · Deliverable: ' + esc(lesson.deliverable) : ''}</div>
-    </header>
-    ${objectivesBlock}
-    <article class="md-body">${bodyHtml}</article>
-    ${citationsBlock}
-    ${parallelBlock}
-    <div class="lesson-nav">
-      ${prev ? `<a class="fw-chip" href="#learn/${trackId}/lesson:${esc(tierId)}:${esc(prev.id)}">← ${esc(prev.title)}</a>` : `<span></span>`}
-      ${next ? `<a class="fw-chip" href="#learn/${trackId}/lesson:${esc(tierId)}:${esc(next.id)}">${esc(next.title)} →</a>` : `<a class="fw-chip" href="#learn/${trackId}/tier:${esc(tierId)}">Back to tier ↑</a>`}
-    </div>
-    <div class="lesson-source">
-      <a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a>
+    <div class="lesson-page">
+      ${tocHtml}
+      <div class="lesson-main">
+        <header style="margin-bottom:1rem;">
+          <h2 style="margin-bottom:0.25rem;">${esc(lesson.title)}</h2>
+          <div style="font-size:0.8rem;color:var(--text-muted);">${esc(lesson.estimatedTime || '')}${lesson.deliverable ? ' · Deliverable: ' + esc(lesson.deliverable) : ''}</div>
+        </header>
+        ${objectivesBlock}
+        <article class="md-body">${bodyHtml}</article>
+        ${citationsBlock}
+        ${parallelBlock}
+        <div class="lesson-nav">
+          ${prev ? `<a class="fw-chip" href="#learn/${trackId}/lesson:${esc(tierId)}:${esc(prev.id)}">← ${esc(prev.title)}</a>` : `<span></span>`}
+          ${next ? `<a class="fw-chip" href="#learn/${trackId}/lesson:${esc(tierId)}:${esc(next.id)}">${esc(next.title)} →</a>` : `<a class="fw-chip" href="#learn/${trackId}/tier:${esc(tierId)}">Back to tier ↑</a>`}
+        </div>
+        <div class="lesson-source">
+          <a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a>
+        </div>
+      </div>
     </div>
   `;
+  wireTocObserver();
 }
 
 async function renderGuidelineDeepDive(el, guidelineId) {
@@ -539,18 +631,26 @@ async function renderGuidelineDeepDive(el, guidelineId) {
 
   const fullPath = 'docs/learn/pdpa/' + g.path;
   const md = await loadText(fullPath);
-  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Deep-dive not found at <code>${esc(fullPath)}</code>.</p></div>`;
+  const rendered = md ? mdToHtml(md) : { html: `<div class="empty-state"><p>Deep-dive not found at <code>${esc(fullPath)}</code>.</p></div>`, headings: [] };
+  const bodyHtml = rendered.html;
+  const tocHtml = buildToc(rendered.headings);
 
   el.innerHTML = `
     <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">JPDP Guideline — ${esc(g.id.toUpperCase())}</span></nav>
-    <header style="margin-bottom:1rem;">
-      <h2 style="margin-bottom:0.25rem;">${esc(g.title)}</h2>
-      <div style="font-size:0.8rem;color:var(--text-muted);">${(g.citations || []).map(c => esc(c)).join(' · ')}</div>
-    </header>
-    <article class="md-body">${bodyHtml}</article>
-    ${g.gdprParallel ? `<div class="lesson-parallel"><strong>GDPR parallel:</strong> <a href="#learn/article:${esc(g.gdprParallel.split('/')[1].replace('.md',''))}">${esc(g.gdprParallel)}</a></div>` : ''}
-    <div class="lesson-source"><a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+    <div class="lesson-page">
+      ${tocHtml}
+      <div class="lesson-main">
+        <header style="margin-bottom:1rem;">
+          <h2 style="margin-bottom:0.25rem;">${esc(g.title)}</h2>
+          <div style="font-size:0.8rem;color:var(--text-muted);">${(g.citations || []).map(c => esc(c)).join(' · ')}</div>
+        </header>
+        <article class="md-body">${bodyHtml}</article>
+        ${g.gdprParallel ? `<div class="lesson-parallel"><strong>GDPR parallel:</strong> <a href="#learn/article:${esc(g.gdprParallel.split('/')[1].replace('.md',''))}">${esc(g.gdprParallel)}</a></div>` : ''}
+        <div class="lesson-source"><a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+      </div>
+    </div>
   `;
+  wireTocObserver();
 }
 
 async function renderGdprArticle(el, articleId) {
@@ -562,17 +662,25 @@ async function renderGdprArticle(el, articleId) {
 
   const fullPath = 'docs/learn/gdpr/' + a.path;
   const md = await loadText(fullPath);
-  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Deep-dive not found at <code>${esc(fullPath)}</code>.</p></div>`;
+  const rendered = md ? mdToHtml(md) : { html: `<div class="empty-state"><p>Deep-dive not found at <code>${esc(fullPath)}</code>.</p></div>`, headings: [] };
+  const bodyHtml = rendered.html;
+  const tocHtml = buildToc(rendered.headings);
 
   el.innerHTML = `
     <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">GDPR — ${esc(a.id.toUpperCase())}</span></nav>
-    <header style="margin-bottom:1rem;">
-      <h2 style="margin-bottom:0.25rem;">${esc(a.title)}</h2>
-      <div style="font-size:0.8rem;color:var(--text-muted);">${(a.citations || []).map(c => esc(c)).join(' · ')}</div>
-    </header>
-    <article class="md-body">${bodyHtml}</article>
-    <div class="lesson-source"><a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+    <div class="lesson-page">
+      ${tocHtml}
+      <div class="lesson-main">
+        <header style="margin-bottom:1rem;">
+          <h2 style="margin-bottom:0.25rem;">${esc(a.title)}</h2>
+          <div style="font-size:0.8rem;color:var(--text-muted);">${(a.citations || []).map(c => esc(c)).join(' · ')}</div>
+        </header>
+        <article class="md-body">${bodyHtml}</article>
+        <div class="lesson-source"><a href="${blobUrl(fullPath)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+      </div>
+    </div>
   `;
+  wireTocObserver();
 }
 
 async function renderCrossRefDoc(el, slug) {
@@ -586,14 +694,22 @@ async function renderCrossRefDoc(el, slug) {
 
   el.innerHTML = `<div class="loading"><div class="spinner"></div><span>Loading cross-reference doc…</span></div>`;
   const md = await loadText(doc.path);
-  const bodyHtml = md ? mdToHtml(md) : `<div class="empty-state"><p>Document not found at <code>${esc(doc.path)}</code>.</p></div>`;
+  const rendered = md ? mdToHtml(md) : { html: `<div class="empty-state"><p>Document not found at <code>${esc(doc.path)}</code>.</p></div>`, headings: [] };
+  const bodyHtml = rendered.html;
+  const tocHtml = buildToc(rendered.headings);
 
   el.innerHTML = `
     <nav class="breadcrumbs"><a href="#learn">Learn</a><span class="sep">/</span><span class="current">Cross-Reference — ${esc(doc.title)}</span></nav>
-    <header style="margin-bottom:1rem;"><h2 style="margin-bottom:0.25rem;">${esc(doc.title)}</h2></header>
-    <article class="md-body">${bodyHtml}</article>
-    <div class="lesson-source"><a href="${blobUrl(doc.path)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+    <div class="lesson-page">
+      ${tocHtml}
+      <div class="lesson-main">
+        <header style="margin-bottom:1rem;"><h2 style="margin-bottom:0.25rem;">${esc(doc.title)}</h2></header>
+        <article class="md-body">${bodyHtml}</article>
+        <div class="lesson-source"><a href="${blobUrl(doc.path)}" target="_blank" rel="noopener">View raw on GitHub ↗</a></div>
+      </div>
+    </div>
   `;
+  wireTocObserver();
 }
 
 /* ===== OVERVIEW ===== */
