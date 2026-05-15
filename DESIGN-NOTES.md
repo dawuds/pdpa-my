@@ -135,23 +135,122 @@ Second round of two parallel agent reviews (UX + ID), both scoped against `~/cla
 3. **The right way to add `<details>` to a custom markdown parser is to make it permeable to raw HTML, not to invent a new sigil.** Trying to invent a `???` or `:::collapsible` syntax would have been one more thing for content authors to learn. Author writes plain HTML; renderer passes it through. Lower cognitive load for the corpus.
 4. **CSP+href interaction:** `href="javascript:void(0)"` IS blocked by our CSP even with `unsafe-inline` because the directive applies to inline scripts in HTML attributes only via `'unsafe-inline'` — but Chrome's CSP enforcement of `javascript:` URIs varies by browser version. **Use `href="#"` + `preventDefault()`** for in-app anchor links. Safer across browsers, cleaner CSP semantics, no surprise behaviour from agent CSP rules.
 
-## Roadmap — next iteration (round 3)
+## Roadmap — round 3 (next iteration, ≈2 weeks)
 
-Updated after iteration 2. Items 1 and 2 (in-lesson TOC, checkpoint collapsibles) are done — removed.
+Six items sized to land in one focused iteration. Convergent picks from the UX + ID agents that are concrete, low-medium effort, and unblock other work.
 
-1. **Apply checkpoint collapsibles to T2/06, T3/06, T4/05** (scriptable; mechanical port of the T1 pattern).
-2. **localStorage progress tracking** — `state.progress[tierId+lessonId] = true` on lesson-reader page-load. Tier cards show `3/5 complete`. Overview shows current tier. Label "read-state memory" not "progress" (ID agent's framing — avoids the gamification trap).
-3. **Foundation-refresher blocks in T2/T3/T4 checkpoints** — pull 2-3 questions from earlier-tier checkpoints. Combats forgetting curve.
-4. **Per-lesson "scope of this lesson" boundary block** (ID agent's anchoring primitive #2). Add `outOfScope: string[]` to lessons in `index.json`; render alongside `lesson-objectives`. Currently only 3 of 22 PDPA lessons have scope-boundary prose; the other 19 leak.
-5. **Per-lesson `prerequisites` chips** (ID agent's anchoring primitive #3). Add `prerequisites: ["t1:02-seven-principles"]` to each T2/T3/T4 lesson; render as chip row.
-6. **Controls view enhancement** (UX agent #3) — step-numbered domain badges + `.hot` class on dpbd/admp + sticky right-sidebar with critical-tier (28 control) list. Module-map-flavoured.
-7. **Lesson `.tldr` card** (UX agent #4) — one-sentence-per-lesson backfill, render above objectives block, clay-accent left-border.
-8. **Mobile hamburger nav.** Below 768px, collapse the nav strip into a button that toggles a slide-over.
-9. **Overview rebuild as briefing dashboard** (UX agent #1, deferred from round 2). Replace "Browse by Part" duplication. Lead with: "What changed 30 April 2026" + 3-card jump-to + breach-clock comparator + audit-work-program pointer + `status-report`-style risk-dotted recently-issued table.
-10. **Search index expansion.** Include the Learn corpus, the `dpbd/` + `dpia/` + `automated-decisions/` data layers, and synonym maps ("Privacy by Design" → DPbD).
-11. **Wire guideline deep-dives to comparator anchors** (ID agent #4). The `pdpa-vs-gdpr.md` doc has 15 numbered sections; add stable anchors and link from each guideline deep-dive's "GDPR parallel" row to the matching section.
-12. **Worked-example artefacts for T2 deliverables** — finished RoPA, privacy notice, DPIA, breach notice, sectoral-CoP determination.
-13. **Inline retrieval prompts in lessons** (ID agent round 1 #1, deferred again). Now genuinely unblocked by the raw-HTML passthrough — could land any time. Lower priority than anchoring primitives 4–5.
+1. **Apply checkpoint collapsibles to T2/06, T3/06, T4/05.** Scriptable; mechanical port of the T1 pattern landed in iteration 2. Effort: low.
+2. **Per-lesson "Scope of this lesson" boundary blocks** (ID agent's strongest anchoring primitive). Add `outOfScope: string[]` to lessons in `index.json`; render between header and objectives. Currently only 3 of 22 PDPA lessons have scope-boundary prose; the other 19 leak. Effort: low-medium (mostly JSON authoring).
+3. **Per-lesson `prerequisites` chips** (anchoring primitive #2). Add `prerequisites: ["t1:02-seven-principles"]` to each T2/T3/T4 lesson; render as chip row above objectives. Today tier-level prerequisites are invisible from a lesson-direct deep-link. Effort: low.
+4. **Wire guideline deep-dives to comparator anchors.** The `pdpa-vs-gdpr.md` doc has 15 numbered sections; add stable anchors (the iteration-2 slugify pass mostly did this) and link from each guideline deep-dive's "GDPR parallel" row to the matching section. Effort: low.
+5. **Mobile hamburger nav.** Below 768px, collapse the nav strip into a button that toggles a slide-over. P1 from the live tester. Effort: medium.
+6. **Search index expansion.** Include the Learn corpus, the `dpbd/` + `dpia/` + `automated-decisions/` data layers, and synonym maps ("Privacy by Design" → DPbD). Effort: medium.
+
+## Roadmap — round 4+ (parked, ≈1–3 months)
+
+Larger or lower-priority items waiting for a second cycle. Each is genuinely worth doing — just not first.
+
+- **Overview rebuild as briefing dashboard** (UX agent #1, deferred twice now). Replace "Browse by Part" duplication. Lead with: "What changed 30 April 2026" + 3-card jump-to + breach-clock comparator + audit-work-program pointer + `status-report`-style risk-dotted recently-issued table.
+- **localStorage read-state memory.** `state.readState[trackId/tierId/lessonId] = timestamp` on lesson-reader page-load. Tier cards show `3/5 read`. Label "read-state" not "progress" — avoids gamification framing.
+- **Foundation-refresher blocks in T2/T3/T4 checkpoints.** Pull 2-3 questions from earlier-tier checkpoints. Combats forgetting curve.
+- **Controls view step-trail enhancement** (UX agent #3) — step-numbered domain badges + `.hot` class on dpbd/admp + sticky right-sidebar with critical-tier (28 control) list. Module-map-flavoured.
+- **Lesson `.tldr` card** (UX agent #4) — one-sentence-per-lesson backfill, render above objectives block, accent left-border.
+- **Worked-example artefacts for T2 deliverables** — finished RoPA, privacy notice, DPIA, breach notice, sectoral-CoP determination as standalone reference artefacts under `docs/learn/pdpa/t2-practitioner/worked-examples/`.
+- **Inline retrieval prompts in lessons.** Now genuinely unblocked by the iteration-2 raw-HTML passthrough — could land any time but lower priority than anchoring primitives.
+- **Compare-table colouring on cross-reference docs** — extend `mdToHtml` to flag `td` cells whose text starts with ✗ / "no equivalent" / "diverges" with a left-bar. Concept-explainer sub-pattern.
+- **Print stylesheet.** The nav has PDF/CSV buttons but the underlying `window.print()` produces a poor artefact. `@media print` rules for the Reference + Penalties views specifically, so the print is usable as a client deliverable.
+
+## Future considerations — 1 year horizon (strategic, not committed)
+
+These are direction-of-travel items. They become roadmap items only when a specific engagement, client need, or regulatory event makes them concrete. Listed so the next reviewer doesn't waste time re-inventing them.
+
+### 1. Sister-repo synchronisation via a portable learn-renderer
+
+The lesson-reader pattern now exists in two repos (`OT-Security`, `pdpa-my`) and would be useful in three more (`nacsa`, `IESP`, `AI-Governance`, possibly `sc-gtrm` and `Tech-Audit`). Each one has its own `app.js` with a hand-ported markdown renderer.
+
+The right end-state: extract `mdToHtml`, `buildToc`, `wireTocObserver`, `loadText`, plus the `.lesson-page` / `.md-body` styles into a small **vendored** `learn-renderer.js` + `learn-renderer.css` that each repo copies into its own tree. Not an npm package — too much ceremony for a 200-LOC dependency and a static-site target. A single source-of-truth file under `~/claude/_shared/` with documented "how to update" instructions per repo.
+
+Improvements then propagate by copy-paste from one canonical version. Same maintenance model the design-templates folder already uses.
+
+### 2. BM-first content strand
+
+The April 2026 JPDP Guidelines (DPIA, DPbD, ADMP) are **BM-only authoritative**. The current corpus is EN-primary with BM section citations interspersed. A consultant briefing a Malaysian board, a JPDP inspector, or a Bahasa-first counsel cannot use the corpus directly — they have to translate as they go.
+
+Two paths:
+- **(a) Parallel BM tracks**: author `docs/learn/pdpa-bm/` mirroring the EN structure. Highest fidelity; highest authoring cost (≈ 22 lessons × 2-4 hours = 44-88 hours of expert translation).
+- **(b) Inline BM badges**: keep the EN corpus, add per-paragraph BM-equivalent text in collapsible badges for high-stakes claims (statutory citations, defined terms). Cheaper, less complete.
+
+Decision deferred until a Malaysian engagement requires it. Track which clients ask.
+
+### 3. Curriculum versioning + freshness signals
+
+JPDP will issue more guidelines. The current "Last verified: 2026-05-13" footers degrade silently — there is no mechanism to detect when a document is stale.
+
+Build:
+- Per-doc `verifiedAgainstVersion: { "DPbD": "2026-04", "ADMP": "2026-04" }` frontmatter
+- A surface-wide "verification freshness" badge that turns yellow when the most-recently-issued JPDP guideline version differs from any cited version
+- `tools/check-freshness.js` script that queries JPDP's published-guidelines list (or a manually-maintained `references/issued-versions.json`) and flags stale references
+
+Becomes load-bearing the first time JPDP reissues a guideline (probably DPO Appointment, given the August 2025 / February 2025 dual versions).
+
+### 4. Audit-AWP integration (gated)
+
+The audit work programme, PBC list, finding templates, and rating methodology live in `~/claude/Tech-Audit/Regulatory/PDPA/` — a **separate private repo**. Currently the public SPA doesn't reference these by name (the original CLAUDE.md says "AWP artifacts are private").
+
+Useful next step: add `aw-program-section` references on control cards in the SPA — `AWP §9.4 / PBC item 67` — that **don't link to private content** but signal where the cross-reference lives. A consultant with access to Tech-Audit can navigate; one without access sees a "this is in the private engagement toolkit" placeholder explaining the split.
+
+Pre-requisite: `audit-integration.json` (already exists, v1.1.0) is the right data layer. Just needs to be surfaced in the Controls view.
+
+### 5. Multi-jurisdiction PDPA tracks
+
+PDPA-MY is one of several ASEAN regimes. PDPA-SG (Singapore), PDPA-TH (Thailand), PDPA-PH (Philippines) all share family-resemblance with Malaysia's framework but diverge on specific points (consent thresholds, breach timing, sensitive-PD categories, sectoral coverage).
+
+The cross-reference module today does PDPA-MY vs GDPR. Same machinery could do PDPA-MY vs PDPA-SG or three-way. The route schema (`#learn/crossref:<slug>`) already supports it without app.js changes. Authoring is the bottleneck — a credible PDPA-SG comparator is 15-20 hours of expert work and needs ongoing maintenance as SG amends.
+
+Trigger: a regional engagement that needs this. Don't pre-build.
+
+### 6. Regulatory-update tracking ("What changed since I last looked")
+
+A consultant returning to the corpus monthly needs to know what changed. Today they have to read git log. Build a **"Recently updated"** feed driven from `git log` + file modification timestamps, surfaced on the Overview as a small panel ("3 lessons updated in the last 14 days · 1 guideline deep-dive · 2 cross-ref docs").
+
+Pure read-side feature; no schema change. ~30 LOC. Roadmap promotion when Overview rebuild lands (round 4+).
+
+### 7. Inspection-pack export
+
+T3 checkpoint deliverable is "13-document 24-hour inspection pack" — what the JPDP would ask for in an inspection's first 24 hours. Today this is a list, not a packageable artefact.
+
+A "Generate inspection-pack scaffold" feature that bundles the listed templates (RoPA blank, privacy notice template, DPIA template, breach plan skeleton, training-records template) into a single downloadable folder or zip. Pure static-asset packaging; no backend.
+
+### 8. Accessibility — WCAG AA pass
+
+Currently unmeasured. Known gaps:
+- Disclaimer banner contrast (live tester flagged the placeholder text in header search input)
+- `<details>` markers and `.fw-chip` focus rings not tested for keyboard navigation
+- Tab transitions in the Risk view lack `aria-live` announcements
+- "AI Generated" hover badge fails on mobile (no hover state) — content-only fallback exists, but not tested with NVDA/VoiceOver
+
+Becomes load-bearing if the consultancy targets public-sector clients, where WCAG conformance is contractual.
+
+### 9. Performance budget
+
+Today: unmeasured but probably acceptable. Inter + JetBrains Mono fonts add ~200KB (cached on subsequent loads). app.js + style.css ≈ 100KB unminified. No build step, no bundle.
+
+Set a hard budget: **first-paint under 1.5s on 3G, full-load under 3s, JSON data layers cached aggressively**. If the corpus grows or we add the AI assistant (point 10), this needs structure.
+
+### 10. AI assistant over the corpus
+
+The corpus is structured data + long-form markdown. A retrieval-augmented assistant ("ask the PDPA-MY corpus") would let a consultant query partner-level questions without remembering which lesson covers what.
+
+Out of scope this year — privacy implications (queries are sensitive), hosting cost, model-update treadmill. **But** the corpus is being structured (verified citations, per-document metadata, freshness signals from point 3) in a way that makes this *easy* in a year. The right artefact to build first is the retrieval-friendly metadata; the assistant follows.
+
+## Explicitly out of scope (don't waste time re-proposing)
+
+- **Video / audio lesson summaries.** Reading speed > playback speed for reference content. Maintenance cost compounds with every JPDP reissue. (ID agent's argument, re-confirmed.)
+- **Gamification / streaks / badges / completion counters.** Wrong incentive — comprehension survives partner review, completion does not. localStorage read-state in the round-4+ roadmap is the careful version of this and is explicitly framed as memory, not gamification.
+- **Warm-paper palette swap.** Brand coherence with NACSA / OT-Security / IESP / AI-Governance sibling repos requires Inter + blue. Borrow the *shape* (3-4px accent left-borders, no shadows, mono labels) without the colour swap.
+- **Real-time collaboration / multi-user state.** The corpus is a reference, not a workspace. Engagement workspaces live in Tech-Audit (private) or in client tooling. PDPA-MY is read-mostly.
+- **Submission / grading workflows on checkpoints.** Checkpoints are self-grade by design — that is the pedagogical contract, not a missing feature.
+- **Built-in PDF generation for lessons** (beyond the existing print stylesheet). Lessons are linkable, citable, and version-controlled — that is more durable than a snapshot PDF. The Reference + Penalties views getting print stylesheets is different (those are deliverables); the lessons are not.
 
 ## Changelog
 
@@ -159,3 +258,4 @@ Updated after iteration 2. Items 1 and 2 (in-lesson TOC, checkpoint collapsibles
 |---|---|---|
 | 1.0 | 2026-05-13 | Initial release. Captures the OT-Security pattern adoption, the design-templates references considered, the May 2026 review-agent findings, and the deferred roadmap. |
 | 2.0 | 2026-05-15 | Iteration 2 — sticky in-lesson TOC + collapsible answer-key support shipped. Captures the UX↔ID agent disagreement on Overview vs anchoring, the design-templates pattern dispositions, and lessons learnt on markdown-renderer API design. |
+| 2.1 | 2026-05-15 | Restructured roadmap into Round 3 (6 items, next iteration) + Round 4+ (parked). Added Future considerations section covering 10 strategic items on the 1-year horizon (sister-repo sync, BM-first content, curriculum versioning, audit-AWP integration, multi-jurisdiction, regulatory-update tracking, inspection-pack export, accessibility, performance, AI assistant). Added Explicitly-out-of-scope section to capture rejected proposals so they aren't re-litigated. |
