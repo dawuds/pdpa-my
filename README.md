@@ -6,18 +6,18 @@ A structured, machine-readable compliance database for Malaysia's **Personal Dat
 
 | Layer | Directory | Description | Count |
 |-------|-----------|-------------|-------|
-| 1 | `provisions/` | Act sections — verbatim text + plain-language translation | 151 sections |
+| 1 | `provisions/` | Act sections — verbatim text + plain-language translation | 154 sections |
 | 2 | `principles/` | Deep dive into the 7 PDPA Principles + 4 new A1727 rights | 11 principles |
 | 3 | `requirements/` | Three-perspective obligation breakdowns with source tracking | 208 requirements across 21 sections |
-| 4 | `evidence/` | Compliance evidence guidance | 40 evidence items across 19 sections |
-| 5 | `artifacts/` | Compliance document inventory | 60 artifacts in 7 categories |
-| 6 | `controls/` | Common controls with framework mappings + supplement links | 49 controls across 10 domains |
+| 4 | `evidence/` | Compliance evidence guidance | 43 evidence items across 22 sections |
+| 5 | `artifacts/` | Compliance document inventory | 73 artifacts in 7 categories |
+| 6 | `controls/` | Common controls with framework mappings + supplement links | 57 controls across 12 domains |
 | 7 | `penalties/` | Offences and penalties (original + 2024 amended) | 22 offences in 10 categories |
 | 8 | `cross-references/` | Act ↔ regulations, guidelines, codes, GDPR, ISO 27701 | 31 framework mappings |
 | — | `supplements/` | Subsidiary instruments (regulations, guidelines, standards, COPs) | 22 instruments |
 | — | `dpia/` | Data Protection Impact Assessment — methodology, screening, examples, templates | 4 files |
 
-**83 JSON data files** across all layers.
+**113 JSON data files** across all layers.
 
 > **Disclaimer**: This is an indicative/educational resource. It does not constitute legal advice. Always refer to the official gazette text and seek professional counsel for compliance decisions. See [LEARNINGS.md](LEARNINGS.md) for data quality audit history.
 
@@ -30,9 +30,9 @@ Data is structured to maintain a strict bidirectional mapping:
 `PDPA Section (Act A1727)` $\leftrightarrow$ `Data Protection Control` $\leftrightarrow$ `Audit Evidence` $\leftrightarrow$ `Artifact Template`
 
 ### Data Layers
-- **Controls (`/controls/library.json`):** 49 controls re-aligned to Act A1727 (Data Controller terminology) using the unified schema.
-- **Evidence (`/evidence/index.json`):** 161 items covering all 10 control domains and the new 2024/2025 requirements (s12A, s12B, s43A).
-- **Templates (`/templates/`):** 60+ Markdown artifacts including new specialized sectoral COPs (Banking, Insurance, etc.).
+- **Controls (`/controls/library.json`):** 57 controls re-aligned to Act A1727 (Data Controller terminology) using the unified schema.
+- **Evidence (`/evidence/index.json`):** 43 items covering all 12 control domains and the new 2024/2025 requirements (s12A, s12B, s43A).
+- **Templates (`/templates/`):** 71 Markdown artifacts including new specialized sectoral COPs (Banking, Insurance, etc.).
 
 ### Consistency & Style
 - **Naming:** Kebab-case slugs; global migration from "Data User" to "Data Controller".
@@ -51,7 +51,7 @@ pdpa-my/
 ├── app.js                              # Explorer application
 ├── style.css                           # Explorer styling
 │
-├── templates/                          # Compliance document templates (60 files)
+├── templates/                          # Compliance document templates (71 files)
 │   ├── contracts/                     # 5 contract templates
 │   ├── notices/                       # 6 data protection notices
 │   ├── policies/                      # 12 policy templates
@@ -96,7 +96,7 @@ pdpa-my/
 │       ├── P08-inspection-complaint-investigation.json
 │       └── P10-miscellaneous.json
 │
-├── evidence/                           # LAYER 4: Compliance evidence (19 sections, 40 items)
+├── evidence/                           # LAYER 4: Compliance evidence (22 sections, 43 items)
 │   ├── index.json
 │   └── by-part/
 │       ├── P02-personal-data-protection.json
@@ -104,11 +104,11 @@ pdpa-my/
 │       ├── P09-enforcement.json
 │       └── P10-miscellaneous.json
 │
-├── artifacts/                          # LAYER 5: Compliance artifacts (60 artifacts)
+├── artifacts/                          # LAYER 5: Compliance artifacts (73 artifacts)
 │   ├── inventory.json                  # All artifacts grouped by category
 │   └── provision-map.json              # Bidirectional section ↔ artifact map
 │
-├── controls/                           # LAYER 6: Common controls (49 controls, 10 domains)
+├── controls/                           # LAYER 6: Common controls (57 controls, 12 domains)
 │   ├── library.json                    # All controls grouped by domain
 │   ├── domains.json                    # Domain definitions
 │   └── provision-map.json              # Bidirectional section ↔ control map
@@ -178,7 +178,7 @@ The PDPA compliance database implements a **compliance chain** that traces requi
 ### Source Hierarchy
 
 ```
-Tier 1: Act 709 ─────────────── Primary legislation (151 sections)        → sourceType: "act"
+Tier 1: Act 709 ─────────────── Primary legislation (154 sections)        → sourceType: "act"
 Tier 2: Standards 2015 ──────── Mandatory technical minimums (s9, s10, s11) → sourceType: "standard"
 Tier 3: Guidelines ──────────── Procedural guidance (DBN, DPO, CBPDT, DPN) → sourceType: "guideline"
 Tier 4: General Code 2022 ───── Implementation baseline (all sectors)      → sourceType: "general-code"
@@ -192,9 +192,9 @@ Each tier adds increasingly specific requirements. Sector codes don't replace hi
 ```
 Sources (Act + Standards + Guidelines + General Code + Sector Codes)
   → Requirements (~277 obligations with source tracking)
-    → Controls (49 controls with supplement links + sector variants)
-      → Evidence (40 evidence items)
-        → Artifacts (60 compliance documents)
+    → Controls (57 controls with supplement links + sector variants)
+      → Evidence (43 evidence items)
+        → Artifacts (73 compliance documents)
 ```
 
 ### Source Types
@@ -341,7 +341,7 @@ Each evidence item:
 
 ### Layer 6: Controls
 
-`controls/library.json` is grouped by domain key (10 domains):
+`controls/library.json` is grouped by domain key (12 domains):
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -452,9 +452,9 @@ Open `index.html` in a browser to interactively explore:
 - **Principles** — Deep dive into each of the 7 principles with obligations, exceptions, guidance
 - **Requirements** — Three-perspective obligation breakdowns (legal, technical, governance)
 - **Evidence** — Compliance readiness guidance with auditor focus and audit tips
-- **Artifacts** — 60 compliance documents across 7 categories with provision mappings
+- **Artifacts** — 73 compliance documents across 7 categories with provision mappings
 - **Framework** — Compliance chain flow, 5-tier source hierarchy, worked s9 trace example, 8-layer summary grid
-- **Controls** — 49 controls across 10 domains with maturity levels, supplement links, and sector variants
+- **Controls** — 57 controls across 12 domains with maturity levels, supplement links, and sector variants
 - **Penalties** — 22 offences with original vs amended penalties, compounding info
 - **Cross-References** — Section → regulations, guidelines, codes, standards; GDPR/ISO 27701/APEC CBPR mappings
 - **Supplements** — Browse 22 subsidiary instruments (regulations, guidelines, standards, codes)
@@ -569,5 +569,5 @@ CC-BY-4.0 — see [LICENSE](LICENSE).
 
 This database is a structured representation of publicly available Malaysian legislation and regulatory guidance. The original texts are copyright of the Government of Malaysia. This structured compilation is provided for informational and compliance purposes.
 
-<!-- last-deploy: 2026-03-19 -->
+<!-- last-deploy: 2026-07-12 -->
 

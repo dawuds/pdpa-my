@@ -1,3 +1,10 @@
+<!-- estate-status
+status: reference
+category: grc-explorer
+role: asset
+last-reviewed: 2026-07-12
+-->
+
 # PDPA-MY — Personal Data Protection Act 2010
 
 **Last updated:** 2026-05-01 (JPDP April 2026 Guidelines verified against issued PDFs)
