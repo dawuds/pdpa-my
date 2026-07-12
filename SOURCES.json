@@ -1,0 +1,63 @@
+{
+  "standard": "grc-v1",
+  "repo": "pdpa-my",
+  "generated": "2026-07-12",
+  "sources": [
+    {
+      "document": "Personal Data Protection Act 2010",
+      "publisher": "JPDP",
+      "instrument_id": "Act 709",
+      "edition": "2022 consolidated bilingual PDF (as gazetted; effective 2013-11-15)",
+      "effective_date": "2013-11-15",
+      "library_path": "JPDP/Act/PDPA-Act-709-2010-Malay-and-English-V2022.pdf",
+      "role": "primary"
+    },
+    {
+      "document": "Personal Data Protection (Amendment) Act 2024",
+      "publisher": "JPDP",
+      "instrument_id": "Act A1727",
+      "edition": "2024 gazette text",
+      "effective_date": "2025-01-01 (phase 1 of 3; phase 2 2025-04-01, phase 3 2025-06-01)",
+      "library_path": "JPDP/Act/PDPA-Amendment-Act-A1727-2024.pdf",
+      "role": "primary"
+    },
+    {
+      "document": "JPDP Guideline on Data Protection Impact Assessment (DPIA)",
+      "publisher": "JPDP",
+      "instrument_id": "JPDP Guideline (BM-only), issued by Commissioner Shariffah Rashidah Syed Othman",
+      "edition": "Issued 30 April 2026 (supersedes PCP No. 1/2025 consultation draft)",
+      "effective_date": "2026-04-30",
+      "library_path": "JPDP/Guidelines/JPDP-Guideline-DPIA-2026-04.pdf",
+      "role": "primary"
+    },
+    {
+      "document": "JPDP Guideline on Data Protection by Design (DPbD)",
+      "publisher": "JPDP",
+      "instrument_id": "JPDP Guideline (BM-only)",
+      "edition": "Issued 30 April 2026 (supersedes PCP No. 2/2025)",
+      "effective_date": "2026-04-30",
+      "library_path": "JPDP/Guidelines/JPDP-Guideline-DPbD-2026-04.pdf",
+      "role": "primary"
+    },
+    {
+      "document": "JPDP Guideline on Automated Decision-Making and Profiling (ADMP)",
+      "publisher": "JPDP",
+      "instrument_id": "JPDP Guideline (BM-only)",
+      "edition": "Issued 30 April 2026 (supersedes PCP No. 3/2025)",
+      "effective_date": "2026-04-30",
+      "library_path": "JPDP/Guidelines/JPDP-Guideline-ADMP-2026-04.pdf",
+      "role": "primary"
+    },
+    {
+      "document": "PCP No. 1/2025, No. 2/2025, No. 3/2025 (DPIA/DPbD/ADMP consultation papers)",
+      "publisher": "JPDP",
+      "instrument_id": "Public Consultation Papers 20 Mar - 19 May 2025",
+      "edition": "consultation draft (superseded by issued guidelines above)",
+      "effective_date": "N/A (consultation only)",
+      "library_path": "JPDP/ConsultationPapers/JPDP-PCP-No-01-2025-DPIA.pdf",
+      "role": "superseded"
+    }
+  ],
+  "verification": "partially-verified",
+  "notes": "LEARNINGS.md documents a formal QA audit: 12 findings, most critical a fabricated amendment instrument number (A1699 for the real A1727) that had propagated across 35+ files \u2014 since corrected, and CLAUDE.md/amendment-tracker.json now consistently show A1727. Other fixed issues: collapsed three-phase A1727 commencement dates, 23 missing bidirectional provision-map entries, hardcoded stale stats in app.js, malformed cross-reference IDs (5 of 7 critical findings fixed correctly per LEARNINGS.md summary, with 2 regressions introduced during fixing \u2014 worth spot-checking those regressions if this repo is relied on for client work). The JPDP DPIA/DPbD/ADMP guidelines are BM-only as issued; repo content is an English paraphrase/alignment, explicitly tagged \"official-aligned\"/\"official-paraphrase\" "
+}
